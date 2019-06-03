@@ -1,0 +1,352 @@
+
+<html>
+<head>
+<link rel="icon" 
+      type="image/png" 
+      href="icon.png">
+<style>
+body {
+  margin: 80px;
+  font-family: ,Georgia,Cambria,"Times New Roman";
+  font-size: 20px;
+  font-weight: 400;
+  width: 700px;
+  line-height: 150%;
+}
+
+h4 {
+  margin-bottom: 20px;
+  line-height: normal;
+}
+
+h1 {
+  margin-bottom: 20px;
+  line-height: normal;
+}
+
+h2 {
+  margin-top: 60px;
+}
+
+h3 {
+  margin-top: 30px;
+}
+
+img {
+  border: 1px solid #ddd;
+}
+
+.caption {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  color: #888;
+  font-family: Helvetica;
+  font-size: 12pt;
+  line-height: 120%;
+  /*white-space: nowrap;
+  overflow: visible;*/
+}
+
+.definition {
+  font-weight: 700;
+  color: #000;
+}
+
+.image-div-wrap {
+  display:inline-block;
+  float: left;
+  margin-top: 20px;
+  margin-right: 30px;
+}
+
+.image-div {
+  display:inline-block;
+  float: left;
+  margin-top: 20px;
+  margin-right: 30px;
+  margin-bottom: 20px;
+  width: 700px;
+}
+
+.proof {
+  margin-top: 20px;
+  font-style: italic;
+}
+
+.theorem {
+  font-weight: 700;
+  color: #000;
+}
+
+.theorem-body {
+  font-style: italic;
+}
+
+.tk {
+  color: #c00;
+}
+
+.side-note {
+  position: absolute;
+  left: 850px;
+  width: 250px;
+  font-size:14pt;
+  color:"#666";
+  font-style: italic;
+}
+
+.note {
+  font-weight: 700;
+  color: #c00;
+}
+
+
+.note-link {
+  color: #c00;
+}
+
+</style>
+
+<title>Language, trees, neural nets, and geometry</title>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+</head>
+
+<body>
+<h1>Language, trees, neural nets, and geometry</h1>
+<br><br>
+
+
+  <i>
+Part I of a series of expository notes accompanying <a href="">this paper</a> [ADD REAL LINK], by Andy Coenen, Emily Reif, Ann Yuan, Been Kim, Adam Pearce, Fernanda Viegas, and Martin Wattenberg. These notes are designed as a casual, leisurely walk through some of the main results. Please see the paper for full references and details.
+</i>
+<p>
+
+
+Language is made of discrete symbols, yet neural networks operate on continuous data: vectors in high-dimensional space. A successful network must translate its discrete input into some kind of geometric representation&mdash;but in what form? Word embeddings provide two well-known examples: distance encodes semantic similarity, while certain directions correspond to polarities (e.g. male vs. female). 
+
+<p>
+A recent, fascinating discovery points to an entirely new type of representation. One of the key pieces of linguistic information about a sentence is its syntactic structure. This structure can be represented as a tree whose nodes correspond to words of the sentence. Hewitt and Manning, in <a href="https://nlp.stanford.edu/pubs/hewitt2019structural.pdf">A structural probe for finding syntax in word representations</a>, show that several language-processing networks construct geometric copies of such syntax trees. Words are given locations in a high-dimensional space, and (following a certain transformation) Euclidean distance between these locations maps to tree distance.  
+
+<p>
+But an intriguing puzzle accompanies this discovery. The mapping between tree distance and Euclidean distance isn't linear. Instead, tree distance corresponds to the <i>square</i> of Euclidean distance. Hewitt and Manning ask why squaring distance is necessary, and whether there are other possible mappings.
+
+<p>
+This note provides some potential answers to the puzzle. We show that from a mathematical point of view, squared-distance mappings of trees are particularly natural. They have an easy explicit description and enjoy a variety of nice properties. In fact, even a certain random tree embedding will obey an approximate squared-distance law. Meanwhile, other mappings that seem equally natural just don't work mathematically.
+
+<p>
+We complement these geometric arguments with analysis and visualizations of real-world embeddings in one network (BERT) and how they systematically differ from their mathematical idealizations. These empirical findings suggest new, quantitative ways to think about representations of syntax in neural networks. (If you're only here for empirical results and visualizations, <a href="#empirical">skip right to that section</a>.)
+
+
+<h2>Tree embeddings in theory</h2>
+
+
+If you're going to embed a tree into Euclidean space, why not just have tree distance correspond directly to Euclidean distance? There's a good reason: if the tree has branches, it's  impossible. 
+
+<div class="image-div-wrap" style="width:250px">
+<img src="tree4.png" style="width:250px;height:250px">
+<div class="caption">Figure 1. You can't isometrically embed this tree in Euclidean space.</div>
+</div>
+<p>
+In fact, the tree in Figure 1 is one of the standard examples to show that not all metric spaces can be embedded in $\mathbb{R}^n$ isometrically. Since $d(A, B) = d(A, X) + d(X, B)$, in any embedding $A$, $X$, and $B$ will be collinear. The same logic says $A$, $X$, and $C$ will be collinear. But that means $B = C$, a contradiction.
+
+
+<p>
+If a tree has any branches at all, it contains a copy of this configuration, and can't be embedded isometrically either. 
+
+<h3>Pythagorean embeddings</h3>
+<p>
+<div class="side-note">
+We believe the arguments here are new, but would be grateful for further references.
+</div>
+By contrast, squared-distance embeddings turn out to be much nicer&mdash;so nice that we'll give them a name. The reasons behind the name will soon become clear.
+
+<p>
+<div class="definition">Definition: Pythagorean embedding</div>
+Let $M$ be a metric space, with metric $d$. We say $f: M \to \mathbb{R}^n$ is a <i>Pythagorean embedding</i> if for all $x, y \in M$, we have $d(x, y) = \|f(x) - f(y)\|^2$.
+
+<p>
+
+Does the tree in Figure 1 have a Pythagorean embedding? Yes: as seen in Figure 2, we can assign points to neighboring vertices of a unit cube, and the Pythagorean theorem gives us what we want.
+
+<div class="image-div">
+<img src="tree-cube.png" style="width:750px;height:250px">
+<div class="caption">Figure 2. A simple Pythagorean embedding into the vertices of a unit cube.</div>
+</div><p>
+
+What about other small trees, like a chain of four vertices? That too has a tidy Pythagorean embedding into the vertices of a cube.
+
+<div class="image-div">
+<img src="chain4.png" style="width:750px;height:250px">
+<div class="caption">Figure 3. A chain of four points also has a Pythagorean embedding into the vertices of a unit cube.</div>
+</div>
+
+
+<p>
+
+These two examples aren't flukes. It's actually straightforward to write down an explicit Pythagorean embedding for any tree into vertices of a unit hypercube.
+
+<div class="theorem">Theorem 1.1</div>
+<span class="theorem-body">Any tree with $n$ nodes has a Pythagorean embedding into $\mathbb{R}^{n-1}$.</span>
+<div class="proof">Proof.</div>
+Let the nodes of the tree $T$ be $t_0, ..., t_{n-1}$, with $t_0$ being the root node. Let $\{e_1, ..., e_{n-1}\}$ be orthogonal unit basis vectors for $\mathbb{R}^{n-1}$. Inductively, define an embedding $\, f: T \rightarrow \mathbb{R}^{n-1}$ by:
+
+$$f(t_0) = 0$$
+$$f(t_i) = e_i + f(parent(t_i))$$
+
+
+Given two distinct tree nodes $x$ and $y$, where $m$ is the tree distance $d(x, y)$, it follows that we can move from $f(x)$ to $f(y)$ using $m$ mutually perpendicular unit steps. Thus 
+$$\|f(x) - f(y)\|^2 = m = d(x, y)$$
+
+QED.
+
+<p>
+One way to view this construction is that we've assigned a basis vector to each edge. To figure out the embedding for a node, we walk back to the root and add up all the vectors for the edges we pass. See figure below.
+
+ <div class="image-div">
+<img src="embedding-explanation.png" style="width:1100px;height:475px">
+<div class="caption" style="width:1100px">Figure 4. Left: Assigning basis vectors to edges. Middle: two example embeddings. Right: Distance squared equals tree distance.</div>
+</div>
+
+
+<b>Remarks</b>.
+<p> It's easy to see the specific embedding constructed in the proof is a tree isometry in the $l^1$ metric, although this depends strongly on the axis alignment.
+
+<p> The embedding in Theorem 1.1 has a clean informal description: at each embedded vertex of the graph, all line segments to neighboring vertices are unit-distance segments, orthogonal to each other and to every other edge segment. If you look at Figures 1 and 2, you'll see they fit this description. That shouldn't be a surprise: any two Pythagorean embeddings of the same tree are isometric, since distances between all pairs of points are the same in both. So we may speak of <i>the</i> Pythagorean embedding of a tree. 
+
+<p>
+We can also make a slight generalization of this theorem. Consider trees where edges have weights, and the distance between two nodes is the sum of weights of the edges on the shortest path between them. In this case, too, we can always create a Pythagorean embedding. 
+
+<div class="theorem">Theorem 1.2.</div>
+<span class="theorem-body">Any weighted tree with $n$ nodes has a Pythagorean embedding into $\mathbb{R}^{n-1}$.</span>
+<div class="proof">Proof.</div>
+As before, let the nodes of the tree be $t_0, ..., t_{n-1}$, with $t_0$ being the root node.  Let $\{e_1, ..., e_{n-1}\}$ be orthogonal unit basis vectors for $\mathbb{R}^{n-1}$. Now let $w_i = d(t_i, parent(t_i))$. Inductively, define an embedding $f$ such that:
+
+$$f(t_0) = 0$$
+$$f(t_i) = {w_i}^{1/2} e_i + f(parent(t_i))$$
+
+  <div class="side-note"> 
+The embedding in Theorem 1.2 no longer lives on the unit hypercube, but rather in a squashed version of it: a rectangular solid whose sides are $\{w_i^{1/2}\}$. 
+</div>
+We can index the edges of the tree, with each edge having the same index as the child node on that edge. Let $P$ be the set of indices of edges on the shortest path between $x$ and $y$. Then $$\|f(x) - f(y)\|^2 =
+ \sum_{i \in P}{w_i} = d(x, y)$$
+
+QED.
+<p>
+The embedding in Theorem 1.2, despite being axis-aligned, is no longer an isometry with respect to the $l^1$ metric. However, if we use vectors $w_i e_i$ rather than ${w_i}^{1/2} e_i$ we can recover an $l^1$ isometry.
+
+<p>
+<h3>Alternative embeddings, and lack thereof</h3>
+
+Hewitt and Manning ask whether there might be other effective types of tree embeddings, perhaps based on other powers of the Euclidean metric. We can provide some partial conclusions about such embeddings.
+
+  <div class="definition">Definition</div>
+Let $M$ be a metric space, with metric $d$. We say $f: M \to \mathbb{R}^n$ is a power-$p$ embedding if for all $x, y \in M$, we have $$\|f(x) - f(y)\|^p = d(x, y)$$
+
+<p>
+It turns out that power-$p$ embeddings will not necessarily even exist when $p < 2$. 
+<div class="side-note"> 
+There is a line of work dating back many decades on Euclidean embeddings of finite metric spaces. For a numerical embeddability criterion, see 7.1 (Schoenberg's theorem) in <a href="https://arxiv.org/pdf/1502.02816.pdf">this beautiful survey</a>. See also <a href="http://www.csun.edu/~ctoth/Handbook/chap8.pdf">this book chapter</a>. 
+</div>
+<div class="Theorem">Theorem 2.</div>
+For any $p < 2$, there is a tree which has no power-$p$ embedding.
+<p>
+
+See our paper for the proof. To summarize the idea, for any given $p < 2$, there is not enough &ldquo;room&rdquo; to embed a node with sufficiently many children.
+
+<p>
+It is unclear whether there is a $p > 2$ such that all trees have a power-$p$ embedding. We spent some time experimenting with simple examples (chains and binary trees of various sizes) and numerical evidence suggests that this may be possible.
+
+
+<p>
+<h3>Randomized tree embeddings</h3>
+<p>
+ The Pythagorean embedding property is surprisingly robust, at least in spaces whose dimension is much larger than the size of the tree. (This is the case in our motivating example of language-processing neural networks, for instance.) In the proofs above, instead of using the basis $e_1, \ldots, e_{n-1} \in \mathbb{R}^{n-1}$ we could have chosen $n$ vectors <i>completely at random</i> from a unit Gaussian distribution in $\mathbb{R}^{m}$. If $m \gg n$, with high probability the result would be an approximate Pythagorean embedding.
+<p>
+  The reason is that in high dimensions, (1) vectors drawn from a unit Gaussian distribution have length very close to 1 with high probability; and (2) when $m \gg n$, a set of $n$ unit Gaussian vectors will likely be close to mutually orthogonal.
+<p>
+This means that in space that is sufficiently high-dimensional (compared to the size of the tree) it is possible to construct an approximate Pythagorean embedding with essentially &ldquo;local&rdquo; information. We can connect a tree node to its parent via a random Gaussian vector, knowing nothing about the rest of the embedding. This could even be done by an iterative process. Initialize with a completely random tree embedding, and in addition pick a special random vector for each vertex; then at each step, move each child node so that it is closer to its parent's location plus the child's special vector. The result will be an approximate Pythagorean embedding. 
+
+<div class="side-note"> A good reference for hyperbolic tree representations is Nickel &amp; Kiela,
+<a href="https://arxiv.org/abs/1705.08039">Poincaré Embeddings for Learning Hierarchical Representations</a>
+</div>
+
+<p>
+The simplicity of Pythagorean embeddings, as well as the fact that they may be approximated by a localized random model, suggests they may be generally useful for representing trees. With the caveat that tree size is controlled by the ambient dimension, they may be a low-tech alternative to approaches based on hyperbolic geometry.
+
+
+
+<p>
+<a name="empirical"></a> 
+<h2>Tree embeddings in practice</h2>
+
+Having described a mathematical idealization of tree embeddings, let's return to the world of neural networks.
+
+<p>
+<div class="side-note"> 
+BERT background: a <a href="https://ai.googleblog.com/2018/11/open-sourcing-bert-state-of-art-pre.html">Google blog</a>; <a href="https://towardsdatascience.com/bert-explained-state-of-the-art-language-model-for-nlp-f8b21a9b6270">a nice summary</a>. Many papers analyze these networks, e.g., <a href="https://arxiv.org/abs/1905.05950">BERT Rediscovers the Classical NLP Pipeline</a>. Our paper has further references!
+</div>
+
+Our object of study is the <a href="https://arxiv.org/pdf/1810.04805.pdf">BERT model</a>, a recent, successful model aimed at natural language processing. One reason we're interested in this model is that it performs well for many different tasks, suggesting it is extracting generally useful linguistic features. BERT is an example of a <a href="https://arxiv.org/abs/1706.03762">Transformer</a> architecture.
+
+<p>
+We won't describe the model architecture here, but roughly speaking the network takes as input a sequences of words, and across a series of layers produces a series of embeddings for each of these words. Because these embeddings take context into account, they're often referred to as <i>context embeddings</i>.
+
+<p>
+  <div class="side-note" style="padding-top:30px"> 
+People have proposed many ways to define syntactic structure. In <a href="https://en.wikipedia.org/wiki/Dependency_grammar">dependency grammar</a> each word is a node of the tree.
+<img src="parse-tree-example.png" style="width:234px;height:209px">
+</div>
+Many people have studied these embeddings to see what sort of information they might contain. To recapitulate the introduction, the motivation for our study of tree embeddings was a recent result from Hewitt and Manning. 
+In <a href="https://nlp.stanford.edu/pubs/hewitt2019structural.pdf">A structural probe for finding syntax in word representations</a>, they showed that context embeddings seem to geometrically encode dependency parse trees.
+<p>
+This encoding is not direct: first you need to transform the context embeddings by a certain matrix $B$, which Hewitt and Manning call a <i>structural probe</i>. But following that, the square of the Euclidean distance between two words' context embeddings seems to approximate the parse tree distance between the two words. In the terminology of the previous section, the context embeddings approximate a Pythagorean embedding of a sentence's dependency parse tree.
+<p>
+
+<h3>Visualizing and measuring parse tree representations</h3>
+
+How do parse tree embeddings in BERT compare to exact Pythagorean embeddings? One reason to investigate is that systematic differences between empirical embeddings and their mathematical idealization may provide further clues to how BERT processes language.
+<p>
+  <div class="side-note">
+PCA produced better results than t-SNE and UMAP. One reason may be that these nonlinear methods do best when points are highly clustered or distributed on a low-dimensional manifold, pretty much the opposite of vertices of an $n$-cube.
+</div>
+To explore this question, we created a simple visualization tool. Our paper has full details, so we'll provide just a broad description here. As input, the tool takes a sentence with associated dependency parse tree. We then extracted context embeddings from BERT, transformed by the Hewitt and Manning’s “structural probe” matrix $B$, yielding a set of points in 1,024-dimensional space. We used PCA to project to two dimensions.
+
+<p>
+
+  To visualize the tree structure, we connected pairs of points representing words with a dependency relation. The color of each edge indicates the deviation from true tree distance. We also connected, with a dotted line, pairs of words without a dependency relation but whose positions (before PCA) were far closer than expected. The resulting image lets us see both the overall shape of the tree embedding, and fine-grained information on deviation from a true Pythagorean embedding. Two example visualizations are shown in Figure 5, next to traditional diagrams of their underlying parse trees. These are typical cases, illustrating some common patterns; for instance, prepositions are embedded unexpectedly close to words they relate to. (Figure 7, at the end of this article, shows additional examples.)
+
+<div class="image-div">
+<img src="parse-tree-bert.png" style="width:1084px;height:442px">
+<div class="caption"  style="width:1084px">Figure 5.  Visualizing embeddings of two sentences after applying the Hewitt-Manning probe. Left image in each pair, a traditional parse tree view, but the vertical length of each branch represents embedding distance. Right images: PCA projection of context embeddings, where color shows deviation from expected distance. </div>
+</div><p>
+
+ A natural question is whether the difference between these projected trees and the canonical ones is merely noise, or a more interesting pattern. One way to answer this question is to take a large set of sentences and see whether the average distance between pairs of words has any correlation with their syntactic relation. See Figure 6 for the results of this analysis.
+
+<div class="image-div">
+<img src="mean-relation-distances.png" style="width:862px;height:166px;border:0">
+<div class="caption"  style="width:862px">Figure 6.  The average squared edge length between two words with a given dependency</div>
+</div><p>
+
+The average embedding distances of each dependency relation vary widely: from around 1.2 (compound : prt, advcl) to 2.5 (mwe, parataxis, auxpass). It is interesting to speculate on what these systematic differences mean. It is possible that we are seeing effects of non-syntactic features, such as word distance within a sentence. Or perhaps BERT’s syntactic representation have additional quantitative aspects beyond traditional dependency grammar.
+
+
+<h2>Conclusion</h2>
+
+As we
+
+<p>
+<i>For more details, and results related to semantics as well as syntax, please read <a href="">our full paper!</a> [ADD REAL LINK HERE]</i>
+
+<div class="image-div">
+<img src="small-multiples-parse-trees.png" style="width:1110px;height:1548px">
+<div class="caption"  style="width:1110px">Figure 7. Additional parse tree examples; see caption for Figure 5 for details.</div>
+</div><p>
+
+</body>
+</html>
