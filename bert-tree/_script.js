@@ -400,6 +400,12 @@ d3.loadData('data-selected.json', (err, res) => {
 
   var abcdSentence = sentences[4]
 
+  abcdSentence.nodes.forEach(d => {
+    // d.posManning[1] = 1 - d.posManning[1]
+    d.posManning[0] = 1 - d.posManning[0]
+  })
+
+
   // TODO: use PCA of random embedding
   abcdSentence.nodes.forEach(d => d.fullRand = [Math.random(), Math.random()])
 
@@ -622,6 +628,9 @@ function drawPCADash(sel, sentence, posType, size=400, isGrey=false) {
 
   sentence.nodes.forEach(d => {
     d.pos = d[posType]
+
+    d.pos[1] = 1 - d.pos[1]
+
   })
 
   c.x.domain(d3.extent(sentence.nodes, d => d.pos[0]))
