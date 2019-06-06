@@ -628,9 +628,6 @@ function drawPCADash(sel, sentence, posType, size=400, isGrey=false) {
 
   sentence.nodes.forEach(d => {
     d.pos = d[posType]
-
-    d.pos[1] = 1 - d.pos[1]
-
   })
 
   c.x.domain(d3.extent(sentence.nodes, d => d.pos[0]))
