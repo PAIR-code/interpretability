@@ -261,6 +261,7 @@ We then project these points to two dimensions via PCA. To show the underlying t
   The PCA projection is already interesting&mdash;there's a clear resemblance between the BERT embedding and the idealization. But we can go one step further. and show how the embedding differs from an idealized model. In Figure 6 below, the color of each edge indicates the difference between Euclidean distance and tree distance. We also connect, with a dotted line, pairs of words without a dependency relation but whose positions (before PCA) were much closer than expected. 
 
 
+<div id='parse-tree'></div>
 <div class="image-div">
 <img src="parse-tree-bert.png" style="width:1084px;height:442px">
 <div class="caption"  style="width:1084px">Figure 6.  Visualizing embeddings of two sentences after applying the Hewitt-Manning probe. Left image in each pair, a traditional parse tree view, but the vertical length of each branch represents embedding distance. Right images: PCA projection of context embeddings, where color shows deviation from expected distance. </div>

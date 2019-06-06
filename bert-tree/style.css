@@ -196,15 +196,14 @@ path.active{
 
 
 
-
-
-
-
-
-
-
-
-
+.duel-tree > div{
+  display: inline-block;
+  width: 49%;
+}
+.duel-tree .title{
+  width: 100%;
+  font-size: 14px;
+}
 
 
 

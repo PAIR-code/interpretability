@@ -445,8 +445,29 @@ d3.loadData('data-selected.json', (err, res) => {
       .selectAll('g.node')
       .transition().duration(500)
       .translate(d => d.pcaPos)
-
   }, 2500)
+
+
+
+  var treeSel = d3.select('#parse-tree')
+    .html('')
+
+  sentences[5].nodes.forEach(d => {
+    d.posManning[1] = 1 - d.posManning[1]
+    d.posManning[0] = 1 - d.posManning[0]
+  })
+  drawDuelTree(treeSel.append('div.sentence'), sentences[5], 280)
+  drawDuelTree(treeSel.append('div.sentence'), sentences[6], 350)
+
+  function drawDuelTree(sel, sentence, width){
+    sel.classed('duel-tree', true)
+    sel.append('div.title').text('“' + sentence.text.replace(' .', '.') + '”')
+
+    drawParseTree(sel.append('div'), sentence, width)
+    drawPCADash(sel.append('div'), sentence, 'posManning', width)
+  }
+
+  
 
 
 
@@ -518,9 +539,8 @@ function keyPCADash() {
   })
 }
 
-function drawParseTree(sel, data) {
-  const width = 320
-  const height = 400
+function drawParseTree(sel, data, width=320) {
+  const height = width
 
   const treeData = constructTree(data)
   const { predictedDepth } = getDepth(treeData)
@@ -529,8 +549,8 @@ function drawParseTree(sel, data) {
 
   c = d3.conventions({
     sel: sel,
-    totalWidth: 400,
-    totalHeight: 400,
+    totalWidth: width,
+    totalHeight: height,
     margin: {}
   })
 
@@ -555,6 +575,8 @@ function drawParseTree(sel, data) {
   nodes.forEach(d => {
     d.x += 0
     d.y = d.data.cumulativeDistance * rowHeight
+
+    d.uuid = d.data.uuid
   })
 
   c.svg.appendMany('path', links).at({
@@ -565,13 +587,14 @@ function drawParseTree(sel, data) {
   })
 
   c.svg
-    .appendMany('g', nodes)
+    .appendMany('g.node', nodes)
+    .call(d3.attachTooltip)
     .translate(d => [d.x, d.y])
-    .append('g')
-    .at({
-      class: 'node'
-    })
-    .parent()
+    // .append('g')
+    // .at({
+    //   class: 'node'
+    // })
+    // .parent()
     .append('circle')
     .at({
       r: 2,
@@ -711,6 +734,7 @@ const makeNodeFn = (data, rootIndex) => (index, parent = null) => {
     distanceFromParent,
     cumulativeDistance,
     token: data.sentence_tokens[index],
+    uuid: data.nodes[index].uuid,
     children: [],
     parent
   }
