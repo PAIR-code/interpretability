@@ -1,6 +1,7 @@
 body {
   margin: 80px;
   font-family: Georgia,Cambria,"Times New Roman";
+  margin-top: 20px;
   font-size: 20px;
   font-weight: 400;
   width: 700px;
@@ -98,11 +99,22 @@ img {
   color: #c00;
 }
 
+.qed{
+  height: 0px;
+  margin: 0px;
+  float: right;
+  position: relative;
+  top: -70px;
+  font-size: 40px;
+}
+.qed-low{
+  top: -45px;
+}
+
 
 @media (max-width: 1100px){
   body{
     margin: 10px;
-    margin-top: 80px;
     max-width: 700px;
     width: calc(100% - 20px);
     overflow-x: hidden;
@@ -133,4 +145,74 @@ img {
 
 
 }
+
+
+
+
+
+svg{
+  overflow: visible;
+}
+
+
+.sentence{
+  font-family: menlo, Consolas, "Lucida Console", monospace;
+  over
+}
+
+#header-container{
+}
+#header{
+  position: relative;
+  height: 300px;
+}
+
+#header .sentence{
+  pointer-events: none;
+}
+
+.tooltip{
+  display: none;
+}
+
+text{
+  cursor: default;
+  text-shadow: 0 2px 0 #fff, 2px 0 0 #fff, 0 -2px 0 #fff, -2px 0 0 #fff;
+
+}
+
+.node.active text{
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.node.active circle{
+  stroke: #444;
+}
+
+path.active{
+  stroke-width: 10px !important;
+}
+
+
+
+.duel-tree > div{
+  display: inline-block;
+  width: 49%;
+}
+.duel-tree .title{
+  width: 100%;
+  font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
 
