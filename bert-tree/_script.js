@@ -402,7 +402,8 @@ d3.loadData('data-selected.json', (err, res) => {
 
   abcdSentence.nodes.forEach(d => {
     // d.posManning[1] = 1 - d.posManning[1]
-    d.posManning[0] = 1 - d.posManning[0]
+    d.posCanonical[0] = 1 - d.posCanonical[0]
+    d.posRand[0] = 1 - d.posRand[0]
   })
 
 
