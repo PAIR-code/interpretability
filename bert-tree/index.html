@@ -30,10 +30,19 @@ limitations under the License.
 </script>
 
 </head>
-<img src="header.png" style="width:1051px;height:280px">
+
+<!-- <img src="header.png" style="width:1051px;height:280px"> -->
+
+
+<body>
+<div id='header'></div>
 <div >
-  <h1 style="margin-top:50px; margin-bottom:20px">Representing trees in neural networks</h1>
+  <h1 style="margin-top:20px; margin-bottom:20px">Representing trees in neural networks</h1>
 </div>
+
+
+
+
 
 <span style="color:#999;font-style:italic">
 Part I of a series of expository notes accompanying <a href="">this paper</a> [ADD REAL LINK], by Andy Coenen, Emily Reif, Ann Yuan, Been Kim, Adam Pearce, Fernanda Vi&eacute;gas, and Martin Wattenberg. These notes are designed as an expository walk through some of the main results. Please see the paper for full references and details.
@@ -118,7 +127,8 @@ $$f(t_i) = e_i + f(parent(t_i))$$
 Given two distinct tree nodes $x$ and $y$, where $m$ is the tree distance $d(x, y)$, it follows that we can move from $f(x)$ to $f(y)$ using $m$ mutually perpendicular unit steps. Thus 
 $$\|f(x) - f(y)\|^2 = m = d(x, y)$$
 
-QED.
+<div class='qed qed-low'>□</div>
+
 
 <p>
 One way to view this construction is that we've assigned a basis vector to each edge. To figure out the embedding for a node, we walk back to the root and add up all the vectors for the edges we pass. See figure below.
@@ -153,7 +163,8 @@ The embedding in Theorem 1.2 no longer lives on the unit hypercube, but rather i
 We can index the edges of the tree, with each edge having the same index as the child node on that edge. Let $P$ be the set of indices of edges on the shortest path between $x$ and $y$. Then $$\|f(x) - f(y)\|^2 =
  \sum_{i \in P}{w_i} = d(x, y)$$
 
-QED.
+<div class='qed'>□</div>
+
 <p>
 The embedding in Theorem 1.2, despite being axis-aligned, is no longer an isometry with respect to the $\ell^1$ metric. However, if we use vectors $w_i e_i$ rather than ${w_i}^{1/2} e_i$ we can recover an $\ell^1$ isometry.
 
@@ -217,7 +228,7 @@ We won't describe the BERT architecture here, but roughly speaking the network t
 <p>
   <div class="side-note" style="padding-top:30px"> 
 People have proposed many ways to define syntactic structure. In <a href="https://en.wikipedia.org/wiki/Dependency_grammar">dependency grammar</a> each word is a node of the tree.
-<img src="parse-tree-example.png" style="width:234px;height:209px">
+<img src="parse-tree-example.png" style="width:234px;height:209px;max-width:234px;">
 </div>
 Many people have studied these embeddings to see what sort of information they might contain. To recapitulate the introduction, the motivation for our study of tree embeddings was a recent result from Hewitt and Manning. 
 Their paper <a href="https://nlp.stanford.edu/pubs/hewitt2019structural.pdf">A structural probe for finding syntax in word representations</a>, suggests that context embeddings seem to geometrically encode dependency parse trees.
@@ -237,8 +248,11 @@ Of course, we don't know the shape exactly, because the embedding is only approx
 To investigate these differences, we created a visualization tool. Our paper has details, but we'll provide a broad description here. As input, the tool takes a sentence with associated dependency parse tree. We then extracted context embeddings from BERT, transformed by the Hewitt and Manning’s “structural probe” matrix, yielding a set of points in 1,024-dimensional space. 
 <p>
 We then project these points to two dimensions via PCA. To show the underlying tree structure, we connect pairs of points representing words that have a dependency relation. Figure 5, below, shows the result for a sample sentence and, for comparison, PCA projections for the same data of an exact Pythagorean embedding; a randomly branched embeddings; and an embedding where node coordinates are completely random. 
+
+<div id='real-ideal'></div>
+
 <div class="image-div">
-<img src="real-vs-ideal.png" style="width:1050px;height:314px">
+<!-- <img src="real-vs-ideal.png" style="width:1050px;height:314px"> -->
 <div class="caption"  style="width:1050px">Figure 5.  Left: PCA view of a BERT parse tree embedding. Middle: an exact Pythagorean embedding and a random-branch embedding. (Note their high degree of similarity.) At right: a completely random embedding. </div>
 </div>
 
@@ -247,6 +261,7 @@ We then project these points to two dimensions via PCA. To show the underlying t
   The PCA projection is already interesting&mdash;there's a clear resemblance between the BERT embedding and the idealization. But we can go one step further. and show how the embedding differs from an idealized model. In Figure 6 below, the color of each edge indicates the difference between Euclidean distance and tree distance. We also connect, with a dotted line, pairs of words without a dependency relation but whose positions (before PCA) were much closer than expected. 
 
 
+<div id='parse-tree'></div>
 <div class="image-div">
 <img src="parse-tree-bert.png" style="width:1084px;height:442px">
 <div class="caption"  style="width:1084px">Figure 6.  Visualizing embeddings of two sentences after applying the Hewitt-Manning probe. Left image in each pair, a traditional parse tree view, but the vertical length of each branch represents embedding distance. Right images: PCA projection of context embeddings, where color shows deviation from expected distance. </div>
@@ -283,4 +298,9 @@ Exactly how neural nets represent linguistic information remains mysterious. But
 </div><p>
 
 </body>
+
+<script src='https://bl.ocks.org/1wheel/raw/73c41fa484b30107514ef39188e7bccb/d3_.js'></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script src='_script.js'></script>
+
 </html>
