@@ -17,7 +17,8 @@ function colorLog(d) {
   return d3.interpolateRdYlBu(logScale(d))
 }
 
-
+var isMobile = innerWidth < 1100
+var bodyLeftMargin = isMobile ? 10 : 80
 
 d3.loadData('data-selected.json', (err, res) => {
   globalRes = res[0]
@@ -61,7 +62,6 @@ d3.loadData('data-selected.json', (err, res) => {
 
   d3.select('#pca-dash')
     .html('')
-    // .appendMany('div.sentence', _.sortBy(sentences, d => d.nodes.length))
     .appendMany('div.sentence', sentences)
     .st({
       display: 'inline-block',
@@ -87,6 +87,30 @@ d3.loadData('data-selected.json', (err, res) => {
     })
     .each(function(d) {
       drawPCADash(d3.select(this).append('div'), d, 'posRand')
+    })
+
+  var numHeader = 4
+  var headerWidth = 300
+
+  var totalWidth = innerWidth - bodyLeftMargin*2
+
+  numHeader = Math.floor(totalWidth/headerWidth)
+
+  numHeader = d3.clamp(1, numHeader, 4)
+
+  headerWidth = Math.min(totalWidth/numHeader, 350)
+
+  d3.select('#header')
+    .html('')
+    .st({height: headerWidth})
+    .appendMany('div.sentence', sentences.slice(0, numHeader))
+    .st({
+      position: 'absolute',
+      left: (d, i) => i*(headerWidth + 10),
+      width: headerWidth,
+    })
+    .each(function(d) {
+      drawPCADash(d3.select(this).append('div'), d, 'posManning', headerWidth)
     })
 
   keyPCADash()
@@ -226,11 +250,11 @@ function drawParseTree(sel, data) {
     })
 }
 
-function drawPCADash(sel, sentence, posType) {
+function drawPCADash(sel, sentence, posType, size=400) {
   c = d3.conventions({
     sel: sel,
-    totalWidth: 400,
-    totalHeight: 400,
+    totalWidth: size,
+    totalHeight: size,
     margin: {}
   })
 

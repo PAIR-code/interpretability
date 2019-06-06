@@ -1,5 +1,6 @@
 body {
   margin: 80px;
+  margin-top: 20px;
   font-family: ,Georgia,Cambria,"Times New Roman";
   font-size: 20px;
   font-weight: 400;
@@ -102,7 +103,6 @@ img {
 @media (max-width: 1100px){
   body{
     margin: 10px;
-    margin-top: 80px;
     max-width: 700px;
     width: calc(100% - 20px);
     overflow-x: hidden;
@@ -133,4 +133,31 @@ img {
 
 
 }
+
+svg{
+  overflow: visible;
+}
+
+
+.sentence{
+  font-family: menlo, Consolas, "Lucida Console", monospace;
+  over
+}
+
+#header-container{
+}
+#header{
+  position: relative;
+}
+
+#header .sentence{
+}
+
+
+
+
+
+
+
+
 
