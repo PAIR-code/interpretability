@@ -127,7 +127,8 @@ $$f(t_i) = e_i + f(parent(t_i))$$
 Given two distinct tree nodes $x$ and $y$, where $m$ is the tree distance $d(x, y)$, it follows that we can move from $f(x)$ to $f(y)$ using $m$ mutually perpendicular unit steps. Thus 
 $$\|f(x) - f(y)\|^2 = m = d(x, y)$$
 
-QED.
+<div class='qed qed-low'>□</div>
+
 
 <p>
 One way to view this construction is that we've assigned a basis vector to each edge. To figure out the embedding for a node, we walk back to the root and add up all the vectors for the edges we pass. See figure below.
@@ -162,7 +163,8 @@ The embedding in Theorem 1.2 no longer lives on the unit hypercube, but rather i
 We can index the edges of the tree, with each edge having the same index as the child node on that edge. Let $P$ be the set of indices of edges on the shortest path between $x$ and $y$. Then $$\|f(x) - f(y)\|^2 =
  \sum_{i \in P}{w_i} = d(x, y)$$
 
-QED.
+<div class='qed'>□</div>
+
 <p>
 The embedding in Theorem 1.2, despite being axis-aligned, is no longer an isometry with respect to the $\ell^1$ metric. However, if we use vectors $w_i e_i$ rather than ${w_i}^{1/2} e_i$ we can recover an $\ell^1$ isometry.
 

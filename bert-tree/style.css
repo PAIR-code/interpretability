@@ -99,6 +99,18 @@ img {
   color: #c00;
 }
 
+.qed{
+  height: 0px;
+  margin: 0px;
+  float: right;
+  position: relative;
+  top: -70px;
+  font-size: 40px;
+}
+.qed-low{
+  top: -45px;
+}
+
 
 @media (max-width: 1100px){
   body{
@@ -133,6 +145,10 @@ img {
 
 
 }
+
+
+
+
 
 svg{
   overflow: visible;
