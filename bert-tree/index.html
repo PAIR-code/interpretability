@@ -248,8 +248,11 @@ Of course, we don't know the shape exactly, because the embedding is only approx
 To investigate these differences, we created a visualization tool. Our paper has details, but we'll provide a broad description here. As input, the tool takes a sentence with associated dependency parse tree. We then extracted context embeddings from BERT, transformed by the Hewitt and Manning’s “structural probe” matrix, yielding a set of points in 1,024-dimensional space. 
 <p>
 We then project these points to two dimensions via PCA. To show the underlying tree structure, we connect pairs of points representing words that have a dependency relation. Figure 5, below, shows the result for a sample sentence and, for comparison, PCA projections for the same data of an exact Pythagorean embedding; a randomly branched embeddings; and an embedding where node coordinates are completely random. 
+
+<div id='real-ideal'></div>
+
 <div class="image-div">
-<img src="real-vs-ideal.png" style="width:1050px;height:314px">
+<!-- <img src="real-vs-ideal.png" style="width:1050px;height:314px"> -->
 <div class="caption"  style="width:1050px">Figure 5.  Left: PCA view of a BERT parse tree embedding. Middle: an exact Pythagorean embedding and a random-branch embedding. (Note their high degree of similarity.) At right: a completely random embedding. </div>
 </div>
 

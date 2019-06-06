@@ -27,7 +27,7 @@ var posOverride = {
   'posManning 0 ,': [0, -2],
   'posManning 0 imposed': [0, 15],
   'posManning 0 a': [0, 12],
-  'posManning 0 on': [0, 12],
+  'posManning 0 on': [0, 16],
   'posManning 0 all': [-5, 8],
   'posManning 0 a': [0, 12],
   'posManning 0 ban': [3, 2],
@@ -35,6 +35,8 @@ var posOverride = {
   'posManning 0 of': [12, 0],
   'posManning 0 Protection': [3, 6],
   'posManning 0 the': [-12, -2],
+  'posManning 0 gradual': [3, 0],
+  'posManning 0 of': [17, 0],
 
 
   "posManning 1 succeeds": [0, 0],
@@ -353,49 +355,45 @@ d3.loadData('data-selected.json', (err, res) => {
     })
   })
 
-  allVals = _.flatten(sentences.map(d => d.links)).map(d => d.val)
 
-  medianDist = d3.median(allVals)
+  // d3.select('#pca-dash')
+  //   .html('')
+  //   .appendMany('div.sentence', sentences)
+  //   .st({
+  //     display: 'inline-block',
+  //     width: 1620,
+  //     border: '1px solid #eee',
+  //     marginRight: 5
+  //   })
+  //   .append('h3')
+  //   .text(d => '' + d3.format('03')(d.sentenceIndex))
+  //   // .text(d => d.text)
+  //   .parent()
+  //   .append('h5')
+  //   .text(d => `'${d.text}'`)
+  //   .parent()
+  //   .each(function(d) {
+  //     drawParseTree(d3.select(this).append('div'), d)
+  //   })
+  //   .each(function(d) {
+  //     drawPCADash(d3.select(this).append('div'), d, 'posManning')
+  //   })
+  //   .each(function(d) {
+  //     drawPCADash(d3.select(this).append('div'), d, 'posCanonical')
+  //   })
+  //   .each(function(d) {
+  //     drawPCADash(d3.select(this).append('div'), d, 'posRand')
+  //   })
 
-  d3.select('#pca-dash')
-    .html('')
-    .appendMany('div.sentence', sentences)
-    .st({
-      display: 'inline-block',
-      width: 1620,
-      border: '1px solid #eee',
-      marginRight: 5
-    })
-    .append('h3')
-    .text(d => '' + d3.format('03')(d.sentenceIndex))
-    // .text(d => d.text)
-    .parent()
-    .append('h5')
-    .text(d => `'${d.text}'`)
-    .parent()
-    .each(function(d) {
-      drawParseTree(d3.select(this).append('div'), d)
-    })
-    .each(function(d) {
-      drawPCADash(d3.select(this).append('div'), d, 'posManning')
-    })
-    .each(function(d) {
-      drawPCADash(d3.select(this).append('div'), d, 'posCanonical')
-    })
-    .each(function(d) {
-      drawPCADash(d3.select(this).append('div'), d, 'posRand')
-    })
+  // keyPCADash()
 
-  var numHeader = 4
-  var headerWidth = 300
+
 
   var totalWidth = innerWidth - bodyLeftMargin*2
 
-  numHeader = Math.floor(totalWidth/headerWidth)
-
-  numHeader = d3.clamp(1, numHeader, 4)
-
-  headerWidth = Math.min(totalWidth/numHeader, 350)
+  // header code
+  var numHeader = d3.clamp(1, Math.floor(totalWidth/300), 4)
+  var headerWidth = Math.min(totalWidth/numHeader, 350)
 
   d3.select('#header')
     .html('')
@@ -410,7 +408,64 @@ d3.loadData('data-selected.json', (err, res) => {
       drawPCADash(d3.select(this).append('div'), d, 'posManning', headerWidth)
     })
 
-  keyPCADash()
+
+  var abcdSentence = sentences[4]
+
+  // TODO: use PCA of random embedding
+  abcdSentence.nodes.forEach(d => d.fullRand = [Math.random(), Math.random()])
+
+  abcdWidth = Math.min(isMobile ? 700 : 1100, totalWidth)/(isMobile ? 2 : 4)
+
+  var blocks = [
+    {type: 'posManning', text: 'a) Hewitt & Manning projection'},
+    {type: 'posCanonical', text: 'b) Canonical power-2 projection'},
+    {type: 'posRand', text: 'c) Random branch projection'},
+    {type: 'fullRand', text: 'd) Fully random projection'},
+  ]
+
+  var abcdSel = d3.select('#real-ideal')
+    .html('')
+    .st({width: isMobile ? '' : 1200, marginLeft: isMobile ? 0 : -20})
+    .appendMany('div.sentence', blocks)
+    .append('div').text(d => d.text)
+    .st({fontSize: 12, lineHeight: 15, maxWidth: isMobile ? 160 : 1000, fontWeight: 800, marginLeft: isMobile ? 0 : 20})
+    .parent()
+    .st({
+      display: 'inline-block',
+      width: abcdWidth,
+    })
+    .each(function(d) {
+      drawPCADash(d3.select(this).append('div'), abcdSentence, d.type, abcdWidth, true)
+    })
+
+
+  if (window.__randInterval) window.__randInterval.stop()
+  window.__randInterval = d3.interval(() => {
+    abcdSentence.nodes.forEach(d => {
+      d.pcaPos = [Math.random()*abcdWidth, Math.random()*abcdWidth]
+    })
+
+    console.log('hi')
+
+    abcdSel
+      .filter(d => d.type == 'fullRand')
+      .selectAll('path')
+      .transition().duration(500)
+      .at({ d: d => 'M' + d.sn.pcaPos + 'L' + d.tn.pcaPos })
+
+    abcdSel
+      .filter(d => d.type == 'fullRand')
+      .selectAll('g.node')
+      .transition().duration(500)
+      .translate(d => d.pcaPos)
+
+  }, 2500)
+
+
+
+
+
+
 })
 
 function keyPCADash() {
@@ -547,7 +602,7 @@ function drawParseTree(sel, data) {
     })
 }
 
-function drawPCADash(sel, sentence, posType, size=400) {
+function drawPCADash(sel, sentence, posType, size=400, isGrey=false) {
   c = d3.conventions({
     sel: sel,
     totalWidth: size,
@@ -576,7 +631,7 @@ function drawPCADash(sel, sentence, posType, size=400) {
     .appendMany('path', sentence.links.filter(d => d.actual == 1))
     .at({
       d: d => 'M' + d.sn.pcaPos + 'L' + d.tn.pcaPos,
-      stroke: d => d.color,
+      stroke: d => isGrey ? '#ddd' : d.color,
       strokeWidth: 4
     })
     .call(d3.attachTooltip)
@@ -585,7 +640,7 @@ function drawPCADash(sel, sentence, posType, size=400) {
     .appendMany('path', sentence.links.filter(d => d.approx == 1 && d.isUpper))
     .at({
       d: d => 'M' + d.sn.pcaPos + 'L' + d.tn.pcaPos,
-      stroke: d => d.color,
+      stroke: d => isGrey ? 'rgba(0,0,0,0)' : d.color,
       strokeWidth: 4,
       strokeDasharray: '5 5',
       opacity: isCanon ? 0 : 1
@@ -593,14 +648,15 @@ function drawPCADash(sel, sentence, posType, size=400) {
     .call(d3.attachTooltip)
 
   c.svg
-    .appendMany('g', sentence.nodes)
+    .appendMany('g.node', sentence.nodes)
     .translate(d => d.pcaPos)
     .call(d3.attachTooltip)
     .append('circle')
     .at({
-      r: 2,
+      r: 3,
       fill: '#fff',
-      stroke: '#ccc'
+      stroke: '#ccc',
+      strokeWidth: 2,
     })
     .parent()
     .append('text')
