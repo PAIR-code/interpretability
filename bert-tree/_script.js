@@ -407,7 +407,7 @@ d3.loadData('data-selected.json', (err, res) => {
 
   var blocks = [
     {type: 'posManning', text: 'a) Hewitt & Manning projection'},
-    {type: 'posCanonical', text: 'b) Canonical power-2 projection'},
+    {type: 'posCanonical', text: 'b) Pythagorean embedding'},
     {type: 'posRand', text: 'c) Random branch projection'},
     {type: 'fullRand', text: 'd) Fully random projection'},
   ]
