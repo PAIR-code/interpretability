@@ -62,7 +62,7 @@ But an intriguing puzzle accompanies this discovery. The mapping between tree di
 This note provides some potential answers to the puzzle. We show that from a mathematical point of view, squared-distance mappings of trees are particularly natural. Even certain randomized tree embeddings will obey an approximate squared-distance law. Moreover, just knowing the squared-distance relationship allows us to give a simple, explicit description of the overall shape of a tree embedding.
 
 <p>
-We complement these geometric arguments with analysis and visualizations of real-world embeddings in one network (BERT) and how they systematically differ from their mathematical idealizations. These empirical findings suggest new, quantitative ways to think about representations of syntax in neural networks. (If you're only here for empirical results and visualizations, <a href="#empirical">skip right to that section</a>.)
+We complement these geometric arguments with analysis and visualizations of real-world embeddings in one network (<a href="https://arxiv.org/pdf/1810.04805.pdf">BERT</a>) and how they systematically differ from their mathematical idealizations. These empirical findings suggest new, quantitative ways to think about representations of syntax in neural networks. (If you're only here for empirical results and visualizations, <a href="#empirical">skip right to that section</a>.)
 
 
 <h2>Tree embeddings in theory</h2>
@@ -141,7 +141,10 @@ One way to view this construction is that we've assigned a basis vector to each 
 
 <b>Remarks</b>.
 
-<p> The value of this proof is not just the existence result, but in the explicit geometric construction. Any two Pythagorean embeddings of the same tree are isometric&mdash;and related by a rotation or reflection&mdash;since distances between all pairs of points are the same in both. So we may speak of <i>the</i> Pythagorean embedding of a tree, and this theorem tells us exactly what it looks like. Moreover, the embedding in Theorem 1.1 has a clean informal description: at each embedded vertex of the graph, all line segments to neighboring vertices are unit-distance segments, orthogonal to each other and to every other edge segment. If you look at Figures 1 and 2, you'll see they fit this description.
+<p> The value of this proof is not just the existence result, but in the explicit geometric construction. Any two Pythagorean embeddings of the same tree are isometric&mdash;and related by a rotation or reflection&mdash;since distances between all pairs of points are the same in both. So we may speak of <i>the</i> Pythagorean embedding of a tree, and this theorem tells us exactly what it looks like. 
+
+<p>
+  Moreover, the embedding in Theorem 1.1 has a clean informal description: at each embedded vertex of the graph, all line segments to neighboring vertices are unit-distance segments, orthogonal to each other and to every other edge segment. If you look at Figures 1 and 2, you'll see they fit this description.
 
 <p> It's also easy to see the specific embedding constructed in the proof is a tree isometry in the $\ell^1$ metric, although this depends strongly on the axis alignment.
 
@@ -197,7 +200,7 @@ See our paper for a proof (and an alternative proof may be found <a href="https:
 <p>
   The reason is that in high dimensions, (1) vectors drawn from a unit Gaussian distribution have length very close to 1 with high probability; and (2) when $m \gg n$, a set of $n$ unit Gaussian vectors will likely be close to mutually orthogonal.
 <p>
-In other words, in a space that is sufficiently high-dimensional, a <b>randomly branching embedding</b> of a tree, where each child is connected to its parent via a random Gaussian vector, will be approximately Pythagorean. 
+In other words, in a space that is sufficiently high-dimensional, a <b>randomly branching embedding</b> of a tree, where each child is offset from its parent by a random unit Gaussian vector, will be approximately Pythagorean. 
 <p>
 This construction could even be done by an iterative process, requiring only &ldquo;local&rdquo; information. Initialize with a completely random tree embedding, and in addition pick a special random vector for each vertex; then at each step, move each child node so that it is closer to its parent's location plus the child's special vector. The result will be an approximate Pythagorean embedding. 
 
@@ -256,7 +259,7 @@ We then project these points to two dimensions via PCA. To show the underlying t
 
 <div class="image-div">
 <!-- <img src="real-vs-ideal.png" style="width:1050px;height:314px"> -->
-<div class="caption"  style="width:1050px">Figure 5.  Left: PCA view of a BERT parse tree embedding. Middle: an exact Pythagorean embedding and a random-branch embedding. (Note their high degree of similarity.) At right: a completely random embedding. </div>
+<div class="caption"  style="width:1050px">Figure 5.  Left: PCA view of a BERT parse tree embedding. Middle: an exact Pythagorean embedding and a random-branch embedding. (Note their high degree of similarity.) At right: an embedding where each node position is chosen independently from a random distribution; we cycle through different random choices. Mouse over nodes in any image to compare across embeddings.  </div>
 </div>
 
 
