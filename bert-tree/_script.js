@@ -415,8 +415,8 @@ d3.loadData('data-selected.json', (err, res) => {
   var blocks = [
     {type: 'posManning', text: 'a) BERT embedding'},
     {type: 'posCanonical', text: 'b) Exact Pythagorean embedding'},
-    {type: 'posRand', text: 'c) Random branch model'},
-    {type: 'fullRand', text: 'd) Completely random'},
+    {type: 'posRand', text: 'c) Randomly branching embedding'},
+    {type: 'fullRand', text: 'd) Independent random positions'},
   ]
 
   var abcdSel = d3.select('#real-ideal')

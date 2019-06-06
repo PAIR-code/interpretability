@@ -197,7 +197,7 @@ See our paper for a proof (and an alternative proof may be found <a href="https:
 <p>
   The reason is that in high dimensions, (1) vectors drawn from a unit Gaussian distribution have length very close to 1 with high probability; and (2) when $m \gg n$, a set of $n$ unit Gaussian vectors will likely be close to mutually orthogonal.
 <p>
-In other words, in a space that is sufficiently high-dimensional, a <b>randomly branching embedding</b> of a tree, where each child is connected to its parent via a random Gaussian vector, will be approximately Pythagorean. 
+In other words, in a space that is sufficiently high-dimensional, a <b>randomly branching embedding</b> of a tree, where each child is offset from its parent by a random unit Gaussian vector, will be approximately Pythagorean. 
 <p>
 This construction could even be done by an iterative process, requiring only &ldquo;local&rdquo; information. Initialize with a completely random tree embedding, and in addition pick a special random vector for each vertex; then at each step, move each child node so that it is closer to its parent's location plus the child's special vector. The result will be an approximate Pythagorean embedding. 
 
@@ -256,7 +256,7 @@ We then project these points to two dimensions via PCA. To show the underlying t
 
 <div class="image-div">
 <!-- <img src="real-vs-ideal.png" style="width:1050px;height:314px"> -->
-<div class="caption"  style="width:1050px">Figure 5.  Left: PCA view of a BERT parse tree embedding. Middle: an exact Pythagorean embedding and a random-branch embedding. (Note their high degree of similarity.) At right: a completely random embedding. </div>
+<div class="caption"  style="width:1050px">Figure 5.  Left: PCA view of a BERT parse tree embedding. Middle: an exact Pythagorean embedding and a random-branch embedding. (Note their high degree of similarity.) At right: an embedding where each node position is chosen independently from a random distribution. We cycle through different random choices. </div>
 </div>
 
 
