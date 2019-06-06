@@ -412,10 +412,10 @@ d3.loadData('data-selected.json', (err, res) => {
   abcdWidth = Math.min(isMobile ? 700 : 1100, totalWidth)/(isMobile ? 2 : 4)
 
   var blocks = [
-    {type: 'posManning', text: 'a) Hewitt & Manning projection'},
-    {type: 'posCanonical', text: 'b) Pythagorean embedding'},
-    {type: 'posRand', text: 'c) Random branch projection'},
-    {type: 'fullRand', text: 'd) Fully random projection'},
+    {type: 'posManning', text: 'a) BERT embedding'},
+    {type: 'posCanonical', text: 'b) Exact Pythagorean embedding'},
+    {type: 'posRand', text: 'c) Random branch model'},
+    {type: 'fullRand', text: 'd) Completely random'},
   ]
 
   var abcdSel = d3.select('#real-ideal')
