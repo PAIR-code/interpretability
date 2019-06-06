@@ -98,33 +98,20 @@ var posOverride = {
   "posManning 3 .": [0, 0],
 
   "posManning 4 The": [0, 0],
-  "posManning 4 asbestos": [0, 0],
-  "posManning 4 fiber": [0, 0],
-  "posManning 4 ,": [0, 0],
-  "posManning 4 crocidolite": [0, 0],
-  "posManning 4 is": [0, 0],
-  "posManning 4 unusually": [0, 0],
-  "posManning 4 resilient": [0, 0],
-  "posManning 4 once": [0, 0],
-  "posManning 4 it": [0, 0],
-  "posManning 4 enters": [0, 0],
-  "posManning 4 the": [0, 0],
-  "posManning 4 lungs": [0, 0],
-  "posManning 4 with": [0, 0],
-  "posManning 4 even": [0, 0],
-  "posManning 4 brief": [0, 0],
-  "posManning 4 exposures": [0, 0],
-  "posManning 4 to": [0, 0],
-  "posManning 4 causing": [0, 0],
-  "posManning 4 symptoms": [0, 0],
-  "posManning 4 that": [0, 0],
-  "posManning 4 show": [0, 0],
-  "posManning 4 up": [0, 0],
-  "posManning 4 decades": [0, 0],
-  "posManning 4 later": [0, 0],
-  "posManning 4 researchers": [0, 0],
-  "posManning 4 said": [0, 0],
+  "posManning 4 field": [0, 0],
+  "posManning 4 has": [-25, 0],
+  "posManning 4 reserves": [0, 16],
+  "posManning 4 of": [0, 16],
+  "posManning 4 21": [0, 0],
+  "posManning 4 million": [0, 0],
+  "posManning 4 barrels": [0, 16],
   "posManning 4 .": [0, 0],
+
+  "posCanonical 4 reserves": [0, 16],
+  "posRand 4 reserves": [0, 16],
+  "posCanonical 4 has": [6, 6],
+  "posRand 4 has": [6, 6],
+
 
   "posManning 5 The": [0, 0],
   "posManning 5 sale": [0, 0],
@@ -330,7 +317,9 @@ d3.loadData('data-selected.json', (err, res) => {
       var posManning = sentence.pca_projection[id]
       var posCanonical = sentence.canonical_pca_projection[id]
       var posRand = sentence.random_unit_pca_projection[id]
-      return { id, word, posManning, posCanonical, posRand }
+      var uuid = id + word
+
+      return { id, word, posManning, posCanonical, posRand, uuid }
     })
 
     sentence.links = []
@@ -444,8 +433,6 @@ d3.loadData('data-selected.json', (err, res) => {
     abcdSentence.nodes.forEach(d => {
       d.pcaPos = [Math.random()*abcdWidth, Math.random()*abcdWidth]
     })
-
-    console.log('hi')
 
     abcdSel
       .filter(d => d.type == 'fullRand')
@@ -649,6 +636,13 @@ function drawPCADash(sel, sentence, posType, size=400, isGrey=false) {
 
   c.svg
     .appendMany('g.node', sentence.nodes)
+    .on('mouseover', d => {
+      sel.parent().parent().selectAll('g.node')
+        .classed('active', e => e.uuid == d.uuid)
+
+      sel.parent().parent().selectAll('path')
+        .classed('active', e => e.sn.uuid == d.uuid || e.tn.uuid == d.uuid)
+    })
     .translate(d => d.pcaPos)
     .call(d3.attachTooltip)
     .append('circle')
@@ -674,6 +668,7 @@ function drawPCADash(sel, sentence, posType, size=400, isGrey=false) {
 
       return posOverride[key] || [0, 0]
     })
+
 }
 
 function constructTree(data) {
