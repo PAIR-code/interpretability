@@ -187,7 +187,9 @@ See our paper for a proof (and an alternative proof may be found <a href="https:
 <p>
   The reason is that in high dimensions, (1) vectors drawn from a unit Gaussian distribution have length very close to 1 with high probability; and (2) when $m \gg n$, a set of $n$ unit Gaussian vectors will likely be close to mutually orthogonal.
 <p>
-This means that in space that is sufficiently high-dimensional (compared to the size of the tree) it is possible to construct an approximate Pythagorean embedding with essentially &ldquo;local&rdquo; information. We can connect a tree node to its parent via a random Gaussian vector, knowing nothing about the rest of the embedding. This could even be done by an iterative process. Initialize with a completely random tree embedding, and in addition pick a special random vector for each vertex; then at each step, move each child node so that it is closer to its parent's location plus the child's special vector. The result will be an approximate Pythagorean embedding. 
+In other words, in a space that is sufficiently high-dimensional, a <b>randomly branching embedding</b> of a tree, where each child is connected to its parent via a random Gaussian vector, will be approximately Pythagorean. 
+<p>
+This construction could even be done by an iterative process, requiring only &ldquo;local&rdquo; information. Initialize with a completely random tree embedding, and in addition pick a special random vector for each vertex; then at each step, move each child node so that it is closer to its parent's location plus the child's special vector. The result will be an approximate Pythagorean embedding. 
 
 <div class="side-note"> For more on hyperbolic tree representations, see <a href="https://dawn.cs.stanford.edu/2018/03/19/hyperbolics/">Hyperbolic Embeddings with a Hopefully Right Amount of Hyperbole</a>, or Nickel &amp; Kiela,
 <a href="https://arxiv.org/abs/1705.08039">Poincaré Embeddings for Learning Hierarchical Representations</a>
@@ -216,7 +218,7 @@ We won't describe the BERT architecture here, but roughly speaking the network t
 
 <p>
   <div class="side-note" style="padding-top:30px"> 
-People have proposed many ways to define syntactic structure. In <a href="https://en.wikipedia.org/wiki/Dependency_grammar">dependency grammar</a> each word is a node of the tree.
+People have proposed many ways to describe syntactic structure. In <a href="https://en.wikipedia.org/wiki/Dependency_grammar">dependency grammar</a> each word is a node of the tree.
 <img src="parse-tree-example.png" style="width:234px;height:209px">
 </div>
 Many people have studied these embeddings to see what sort of information they might contain. To recapitulate the introduction, the motivation for our study of tree embeddings was a recent result from Hewitt and Manning. 
