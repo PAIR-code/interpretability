@@ -306,8 +306,9 @@ var posOverride = {
 
 
 
-d3.loadData('data-selected.json', (err, res) => {
-  globalRes = res[0]
+d3.loadData('data-selected.json', 'extra-random-pca.json', (err, res) => {
+  globalRes = res
+  extraEmbeds = res[1]
 
   globalRes.forEach((d, i) => (d.sentenceIndex = i))
   sentences = res[0]
@@ -434,6 +435,7 @@ d3.loadData('data-selected.json', (err, res) => {
       drawPCADash(d3.select(this).append('div'), abcdSentence, d.type, abcdWidth, true)
     })
 
+  var lastIndex = 3
 
   if (window.__randInterval) window.__randInterval.stop()
   window.__randInterval = d3.interval(() => {
@@ -452,12 +454,58 @@ d3.loadData('data-selected.json', (err, res) => {
       .selectAll('g.node')
       .transition().duration(500)
       .translate(d => d.pcaPos)
+
+
+    lastIndex++
+    lastIndex = lastIndex % 100
+    var embed = extraEmbeds.pcaUnit[lastIndex]
+
+    if (embed[0][0] > embed[5][0]){
+      embed.forEach(d => {
+        d[0] = 1 - d[0]
+      })
+    }
+
+    if (embed[0][1] < embed[3][1]){
+      embed.forEach(d => {
+        d[1] = 1 - d[1]
+      })
+    }
+
+    abcdSentence.nodes.forEach((d, i) => {
+      d.pos = embed[i]
+    })
+
+    var c = abcdSentence.c
+    c.x.domain(d3.extent(abcdSentence.nodes, d => d.pos[0]))
+    c.y.domain(d3.extent(abcdSentence.nodes, d => d.pos[1]))
+
+    abcdSentence.nodes.forEach(d => {
+      d.pcaPos = [c.x(d.pos[0]), c.y(d.pos[1])]
+    })
+
+
+    abcdSel
+      .filter(d => d.type == 'posRand')
+      .selectAll('path')
+      .transition().duration(500)
+      .at({ d: d => 'M' + d.sn.pcaPos + 'L' + d.tn.pcaPos })
+
+    abcdSel
+      .filter(d => d.type == 'posRand')
+      .selectAll('g.node')
+      .transition().duration(500)
+      .translate(d => d.pcaPos)
+
+
+
   }, 2500)
 
 
 
   var treeSel = d3.select('#parse-tree')
     .html('')
+    .st({display: 'none'})
 
   sentences[5].nodes.forEach(d => {
     d.posManning[1] = 1 - d.posManning[1]
@@ -630,6 +678,8 @@ function drawPCADash(sel, sentence, posType, size=400, isGrey=false) {
   sentence.nodes.forEach(d => {
     d.pos = d[posType]
   })
+
+  sentence.c = c
 
   c.x.domain(d3.extent(sentence.nodes, d => d.pos[0]))
   c.y.domain(d3.extent(sentence.nodes, d => d.pos[1]))
