@@ -101,10 +101,10 @@ var posOverride = {
   "posManning 4 field": [0, 0],
   "posManning 4 has": [-25, 0],
   "posManning 4 reserves": [0, 16],
-  "posManning 4 of": [0, 16],
+  "posManning 4 of": [0, 18],
   "posManning 4 21": [0, 0],
   "posManning 4 million": [0, 0],
-  "posManning 4 barrels": [0, 16],
+  "posManning 4 barrels": [0, 0],
   "posManning 4 .": [0, 0],
 
   "posCanonical 4 reserves": [0, 16],
@@ -112,31 +112,33 @@ var posOverride = {
   "posCanonical 4 has": [6, 6],
   "posRand 4 has": [6, 6],
 
-
   "posManning 5 The": [0, 0],
-  "posManning 5 sale": [0, 0],
-  "posManning 5 of": [0, 0],
-  "posManning 5 Southern": [0, 0],
-  "posManning 5 Optical": [0, 0],
-  "posManning 5 is": [0, 0],
+  "posManning 5 sale": [3, 15],
+  "posManning 5 of": [-2, 14],
+  "posManning 5 Southern": [3, 15],
+  "posManning 5 Optical": [3, 15],
+  "posManning 5 is": [-14, 0],
   "posManning 5 a": [0, 0],
-  "posManning 5 part": [0, 0],
+  "posManning 5 part": [35, 0],
   "posManning 5 the": [0, 0],
-  "posManning 5 program": [0, 0],
-  "posManning 5 .": [0, 0],
+  "posManning 5 program": [-5, 2],
+  "posManning 5 .": [-10, 0],
 
-  "posManning 6 Factories": [0, 0],
-  "posManning 6 booked": [0, 0],
+  "tree 5 .": [0, 0],
+
+
+  "posManning 6 Factories": [-30, 0],
+  "posManning 6 booked": [-45, 15],
   "posManning 6 $": [0, 0],
   "posManning 6 236.74": [0, 0],
   "posManning 6 billion": [0, 0],
-  "posManning 6 in": [0, 0],
-  "posManning 6 orders": [0, 0],
+  "posManning 6 in": [-5, -2],
+  "posManning 6 orders": [-29, -4],
   "posManning 6 September": [0, 0],
   "posManning 6 ,": [0, 0],
-  "posManning 6 nearly": [0, 0],
-  "posManning 6 the": [0, 0],
-  "posManning 6 same": [0, 0],
+  "posManning 6 nearly": [0, 16],
+  "posManning 6 the": [0, 16],
+  "posManning 6 same": [0, -3],
   "posManning 6 as": [0, 0],
   "posManning 6 236.79": [0, 0],
   "posManning 6 August": [0, 0],
@@ -144,6 +146,26 @@ var posOverride = {
   "posManning 6 Department": [0, 0],
   "posManning 6 said": [0, 0],
   "posManning 6 .": [0, 0],
+
+  "tree 6 Factories": [0, -4],
+  "tree 6 booked": [0, 0],
+  "tree 6 $": [0, 0],
+  "tree 6 236.74": [0, 0],
+  "tree 6 billion": [0, 12],
+  "tree 6 in": [0, 0],
+  "tree 6 orders": [0, 0],
+  "tree 6 September": [0, 0],
+  "tree 6 ,": [0, 5],
+  "tree 6 nearly": [-5, 15],
+  "tree 6 the": [0, 10],
+  "tree 6 same": [0, 0],
+  "tree 6 as": [0, 0],
+  "tree 6 236.79": [0, 0],
+  "tree 6 August": [0, 0],
+  "tree 6 Commerce": [0, -5],
+  "tree 6 Department": [-5, -5],
+  "tree 6 said": [0, 0],
+  "tree 6 .": [0, 0],
 
   "posManning 7 A": [0, 0],
   "posManning 7 spokesman": [0, 0],
@@ -310,8 +332,8 @@ d3.loadData('data-selected.json', 'extra-random-pca.json', (err, res) => {
   globalRes = res
   extraEmbeds = res[1]
 
-  globalRes.forEach((d, i) => (d.sentenceIndex = i))
   sentences = res[0]
+  sentences.forEach((d, i) => (d.sentenceIndex = i))
 
   sentences.forEach(sentence => {
     sentence.nodes = sentence.sentence_tokens.map((word, id) => {
@@ -501,6 +523,8 @@ d3.loadData('data-selected.json', 'extra-random-pca.json', (err, res) => {
 
   }, 2500)
 
+
+  var duelWidth = Math.min(isMobile ? 700 : 1100, totalWidth)/2
   
   sentences.forEach(d => {
     d.displayText = d.text
@@ -520,13 +544,13 @@ d3.loadData('data-selected.json', 'extra-random-pca.json', (err, res) => {
     d.posManning[1] = 1 - d.posManning[1]
     d.posManning[0] = 1 - d.posManning[0]
   })
-  drawDuelTree(treeSel.append('div.sentence'), sentences[5], 260)
-  drawDuelTree(treeSel.append('div.sentence'), sentences[6], 300)
+  drawDuelTree(treeSel.append('div.sentence'), sentences[5], isMobile ? duelWidth : 260)
+  drawDuelTree(treeSel.append('div.sentence'), sentences[6], isMobile ? duelWidth : 300)
 
   function drawDuelTree(sel, sentence, width){
     sel.classed('duel-tree', true)
     sel.append('div.title').text(sentence.displayText).st({lineHeight: 18})
-
+    sel.append('div').st({width: '100%'})
     drawParseTree(sel.append('div'), sentence, width)
     drawPCADash(sel.append('div'), sentence, 'posManning', width)
   }
@@ -620,9 +644,17 @@ function drawParseTree(sel, data, width=320) {
     .at({
       dy: 0,
       fontSize: 11,
-      dx: d => (d.x > 200 ? -4 : 4),
-      textAnchor: d => (d.x > 300 ? 'end' : '')
+      dx: d => (d.x/c.width > 1.5 ? -4 : 4),
+      textAnchor: d => (d.x/c.width > 1.5 ? 'end' : '')
     })
+    .translate(d => {
+      var key = ['tree', data.sentenceIndex, d.data.token].join(' ')
+      d.key = key
+      d.override =posOverride[key]
+
+      return posOverride[key] || [0, 0]
+    })
+
 }
 
 function drawPCADash(sel, sentence, posType, size=400, isGrey=false) {
@@ -705,8 +737,8 @@ function drawPCADash(sel, sentence, posType, size=400, isGrey=false) {
     .at({
       dy: -4,
       fontSize: 11,
-      dx: d => (d.pcaPos[0] > 200 ? -2 : 2),
-      textAnchor: d => (d.pcaPos[0] > 200 ? 'end' : '')
+      dx: d => (d.pcaPos[0]/c.width > .5 ? -2 : 2),
+      textAnchor: d => (d.pcaPos[0]/c.width > .5 ? 'end' : '')
     })
     .translate(d => {
       var key = [posType, sentence.sentenceIndex, d.word].join(' ')

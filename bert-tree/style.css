@@ -241,6 +241,51 @@ path.active{
   margin-left: -40px;
 }
 
+.title{
+  max-width: 700px;
+}
+
+@media (max-width: 1100px){
+  #parse-tree{
+    width: 100%;
+  }
+
+  #parse-tree > div{
+    width: 100% !important;
+  }
+
+  #parse-tree > div:first-child{
+    margin-bottom: 20px;
+  }
+
+  #parse-tree > div:last-child svg{
+    margin-top: 20px; 
+  }
+
+  #parse-tree > div:last-child > div:last-child svg{
+    margin-left: 10px; 
+  }
+
+
+  #parse-tree div{
+    margin-left: 0px !important;
+  }
+
+  #parse-tree line{
+    display: none;
+  }
+
+  .parse-tree-caption img{
+    margin-top: 15px !important;
+  }
+}
+
+@media (max-width: 800px){
+  #parse-tree svg text{
+    font-size: 9px;
+  }
+
+}
 
 
 
