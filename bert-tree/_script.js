@@ -517,6 +517,17 @@ d3.loadData('data-selected.json', 'extra-random-pca.json', (err, res) => {
       .replace(/g \$/, ',')
 
     d.displayText = '“' + d.displayText + '”'
+
+    sentences.forEach(sentence => {
+      sentence.nodes.forEach((d, i) => {
+        d.space = ' '
+      })
+      sentence.nodes.forEach((d, i) => {
+        if (d.word == '.' || d.word == ',') sentence.nodes[i - 1].space = ''
+        if (d.word == '$') d.space = ''
+        if (d.word == '.') d.space = ''
+      })
+    })
   })
 
   var treeSel = d3.select('#parse-tree')
@@ -531,7 +542,18 @@ d3.loadData('data-selected.json', 'extra-random-pca.json', (err, res) => {
 
   function drawDuelTree(sel, sentence, width){
     sel.classed('duel-tree', true)
-    sel.append('div.title').text(sentence.displayText).st({lineHeight: 18})
+    sel.append('div.title')
+      .st({lineHeight: 18})
+      .appendMany('span.node', sentence.nodes)
+      .text(d => d.word + d.space)
+      .on('mouseover', d => {
+        sel.parent().parent().selectAll('g.node,span.node')
+          .classed('active', e => e.uuid == d.uuid)
+
+        sel.parent().parent().selectAll('path')
+          .classed('active', e => e.sn.uuid == d.uuid || e.tn.uuid == d.uuid)
+      })
+
     sel.append('div').st({width: '100%'})
     drawParseTree(sel.append('div'), sentence, width)
     drawPCADash(sel.append('div'), sentence, 'posManning', width)
@@ -570,7 +592,18 @@ d3.loadData('data-selected.json', 'extra-random-pca.json', (err, res) => {
 
   function drawDuelTreeSm(sel, sentence, width){
     sel.classed('duel-tree', true)
-    sel.append('div.title').text(sentence.displayText).st({lineHeight: 18})
+    sel.append('div.title')
+      .st({lineHeight: 18})
+      .appendMany('span.node', sentence.nodes)
+      .text(d => d.word + d.space)
+      .on('mouseover', d => {
+        sel.parent().parent().selectAll('g.node,span.node')
+          .classed('active', e => e.uuid == d.uuid)
+
+        sel.parent().parent().selectAll('path')
+          .classed('active', e => e.sn.uuid == d.uuid || e.tn.uuid == d.uuid)
+      })
+
     sel.append('div').st({width: '100%'})
     drawParseTree(sel.append('div'), sentence, width)
     drawPCADash(sel.append('div.right'), sentence, 'posManning', width)
@@ -635,7 +668,7 @@ function drawParseTree(sel, data, width=320) {
   c.svg
     .appendMany('g.node', nodes)
     .on('mouseover', d => {
-      sel.parent().parent().selectAll('g.node')
+      sel.parent().parent().selectAll('g.node,span.node')
         .classed('active', e => e.uuid == d.uuid)
 
       sel.parent().parent().selectAll('path')
@@ -728,7 +761,7 @@ function drawPCADash(sel, sentence, posType, size=400, isGrey=false) {
   c.svg
     .appendMany('g.node', sentence.nodes)
     .on('mouseover', d => {
-      sel.parent().parent().selectAll('g.node')
+      sel.parent().parent().selectAll('g.node,span.node')
         .classed('active', e => e.uuid == d.uuid)
 
       sel.parent().parent().selectAll('path')
@@ -905,4 +938,6 @@ function keyPCADash() {
       .translate([45, 5])
   })
 }
+
+
 

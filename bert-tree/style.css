@@ -245,6 +245,13 @@ path.active{
 
 .title{
   max-width: 700px;
+  cursor: default;
+}
+.title::before{
+  content: '“';
+}
+.title::after{
+  content: '”';
 }
 
 @media (max-width: 1100px){
@@ -321,6 +328,8 @@ path.active{
 }
 
 
-
+.active.node{
+  font-weight: 600;
+}
 
 
