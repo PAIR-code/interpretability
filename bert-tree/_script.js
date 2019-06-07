@@ -78,7 +78,7 @@ var posOverride = {
   "posManning 2 board": [0, 14],
   "posManning 2 as": [0, 0],
   "posManning 2 a": [0, 14],
-  "posManning 2 nonexecutive": [0, 14],
+  "posManning 2 nonexecutive": [-40,0],
   "posManning 2 director": [0, 15],
   "posManning 2 Nov.": [0, 0],
   "posManning 2 29": [0, 0],
@@ -472,7 +472,7 @@ d3.loadData('data-selected.json', 'extra-random-pca.json', (err, res) => {
   var lastIndex = 3
 
   if (window.__randInterval) window.__randInterval.stop()
-  window.__randInterval = d3.interval(() => {
+  window.__randInterval = d3interval(() => {
     lastIndex++
     lastIndex = lastIndex % 100
 
