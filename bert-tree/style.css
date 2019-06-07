@@ -158,7 +158,6 @@ svg{
 
 .sentence{
   font-family: menlo, Consolas, "Lucida Console", monospace;
-  over
 }
 
 #header-container{
@@ -208,6 +207,8 @@ path.active{
   width: 100%;
   font-size: 14px;
 }
+
+
 
 
 #parse-tree{
@@ -290,6 +291,34 @@ path.active{
 
 
 
+#small-multiple{
+  width: 1110px;
+}
+
+#small-multiple > div{
+  margin-bottom: 20px;
+}
+
+#small-multiple > div svg{
+  margin-left: -60px;
+}
+
+
+#small-multiple .right{
+  position: relative;
+  margin-left: 50px;
+}
+
+@media (max-width: 1100px){
+  #small-multiple{
+    width: 100%;
+  }
+
+  #small-multiple > div svg{
+    margin: 0px auto !important;
+  }
+
+}
 
 
 

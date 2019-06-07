@@ -461,64 +461,46 @@ d3.loadData('data-selected.json', 'extra-random-pca.json', (err, res) => {
 
   if (window.__randInterval) window.__randInterval.stop()
   window.__randInterval = d3.interval(() => {
-    abcdSentence.nodes.forEach(d => {
-      d.pcaPos = [Math.random()*abcdWidth, Math.random()*abcdWidth]
-    })
-
-    abcdSel
-      .filter(d => d.type == 'fullRand')
-      .selectAll('path')
-      .transition().duration(500)
-      .at({ d: d => 'M' + d.sn.pcaPos + 'L' + d.tn.pcaPos })
-
-    abcdSel
-      .filter(d => d.type == 'fullRand')
-      .selectAll('g.node')
-      .transition().duration(500)
-      .translate(d => d.pcaPos)
-
-
     lastIndex++
     lastIndex = lastIndex % 100
-    var embed = extraEmbeds.pcaUnit[lastIndex]
 
-    if (embed[0][0] > embed[5][0]){
-      embed.forEach(d => {
-        d[0] = 1 - d[0]
+    setEmbed('posRand', 'pcaUnit')
+    setEmbed('fullRand', 'pcaRandom')
+    function setEmbed(type, embedKey){
+      var embed = extraEmbeds[embedKey][lastIndex]
+
+      if (embed[0][0] > embed[5][0]){
+        embed.forEach(d => d[0] = 1 - d[0])
+      }
+      if (embed[0][1] < embed[3][1]){
+        embed.forEach(d => d[1] = 1 - d[1])
+      }
+
+      abcdSentence.nodes.forEach((d, i) => {
+        d.pos = embed[i]
       })
-    }
 
-    if (embed[0][1] < embed[3][1]){
-      embed.forEach(d => {
-        d[1] = 1 - d[1]
+      var c = abcdSentence.c
+      c.x.domain(d3.extent(abcdSentence.nodes, d => d.pos[0]))
+      c.y.domain(d3.extent(abcdSentence.nodes, d => d.pos[1]))
+
+      abcdSentence.nodes.forEach(d => {
+        d.pcaPos = [c.x(d.pos[0]), c.y(d.pos[1])]
       })
+
+
+      abcdSel
+        .filter(d => d.type == type)
+        .selectAll('path')
+        .transition().duration(500)
+        .at({ d: d => 'M' + d.sn.pcaPos + 'L' + d.tn.pcaPos })
+
+      abcdSel
+        .filter(d => d.type == type)
+        .selectAll('g.node')
+        .transition().duration(500)
+        .translate(d => d.pcaPos)
     }
-
-    abcdSentence.nodes.forEach((d, i) => {
-      d.pos = embed[i]
-    })
-
-    var c = abcdSentence.c
-    c.x.domain(d3.extent(abcdSentence.nodes, d => d.pos[0]))
-    c.y.domain(d3.extent(abcdSentence.nodes, d => d.pos[1]))
-
-    abcdSentence.nodes.forEach(d => {
-      d.pcaPos = [c.x(d.pos[0]), c.y(d.pos[1])]
-    })
-
-
-    abcdSel
-      .filter(d => d.type == 'posRand')
-      .selectAll('path')
-      .transition().duration(500)
-      .at({ d: d => 'M' + d.sn.pcaPos + 'L' + d.tn.pcaPos })
-
-    abcdSel
-      .filter(d => d.type == 'posRand')
-      .selectAll('g.node')
-      .transition().duration(500)
-      .translate(d => d.pcaPos)
-
 
 
   }, 2500)
@@ -566,6 +548,36 @@ d3.loadData('data-selected.json', 'extra-random-pca.json', (err, res) => {
     })
 
   
+
+
+  var smWidth = isMobile ? Math.min(300, totalWidth) : 400
+
+  var smSel = d3.select('#small-multiple')
+    .html('')
+
+  sentences[5].nodes.forEach(d => {
+    d.posManning[1] = 1 - d.posManning[1]
+    d.posManning[0] = 1 - d.posManning[0]
+  })
+  drawDuelTreeSm(smSel.append('div.sentence'), sentences[7], smWidth)
+  drawDuelTreeSm(smSel.append('div.sentence'), sentences[8], smWidth)
+  drawDuelTreeSm(smSel.append('div.sentence'), sentences[9], smWidth)
+  drawDuelTreeSm(smSel.append('div.sentence'), sentences[10], smWidth)
+  drawDuelTreeSm(smSel.append('div.sentence'), sentences[11], smWidth)
+  drawDuelTreeSm(smSel.append('div.sentence'), sentences[12], smWidth)
+  // drawDuelTreeSm(smSel.append('div.sentence'), sentences[13], smWidth)
+  drawDuelTreeSm(smSel.append('div.sentence'), sentences[14], smWidth)
+
+  function drawDuelTreeSm(sel, sentence, width){
+    sel.classed('duel-tree', true)
+    sel.append('div.title').text(sentence.displayText).st({lineHeight: 18})
+    sel.append('div').st({width: '100%'})
+    drawParseTree(sel.append('div'), sentence, width)
+    drawPCADash(sel.append('div.right'), sentence, 'posManning', width)
+  }
+
+
+
 
 
 
