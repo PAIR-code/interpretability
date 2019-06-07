@@ -193,6 +193,9 @@ text{
 path.active{
   stroke-width: 10px !important;
 }
+.tree path.active{
+  stroke-width: 8px !important;
+}
 
 
 
@@ -206,7 +209,37 @@ path.active{
 }
 
 
+#parse-tree{
+  width: 1200px;
+  overflow-x: visible;
+}
 
+#parse-tree .title{
+  height: 40px;
+}
+
+#parse-tree > div{
+  display: inline-block;
+  text-align: top;
+  vertical-align: top;
+}
+
+#parse-tree > div:first-child{
+  width: 550px;
+}
+#parse-tree > div:first-child svg{
+  margin-left: -60px;
+}
+
+
+#parse-tree > div:last-child{
+  width: 610px;
+  margin-left: -40px;
+
+}
+#parse-tree > div:last-child svg{
+  margin-left: -40px;
+}
 
 
 

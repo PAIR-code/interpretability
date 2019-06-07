@@ -501,98 +501,52 @@ d3.loadData('data-selected.json', 'extra-random-pca.json', (err, res) => {
 
   }, 2500)
 
+  
+  sentences.forEach(d => {
+    d.displayText = d.text
+      .replace(' .', '.')
+      .replace(/ ,/g, ',')
+      .replace(/\$ /g, '$')
+      // .replace(' ,', ',').replace(' ,', ',').replace(' ,', ',')
+      .replace(/g \$/, ',')
 
+    d.displayText = '“' + d.displayText + '”'
+  })
 
   var treeSel = d3.select('#parse-tree')
     .html('')
-    .st({display: 'none'})
 
   sentences[5].nodes.forEach(d => {
     d.posManning[1] = 1 - d.posManning[1]
     d.posManning[0] = 1 - d.posManning[0]
   })
-  drawDuelTree(treeSel.append('div.sentence'), sentences[5], 280)
-  drawDuelTree(treeSel.append('div.sentence'), sentences[6], 350)
+  drawDuelTree(treeSel.append('div.sentence'), sentences[5], 260)
+  drawDuelTree(treeSel.append('div.sentence'), sentences[6], 300)
 
   function drawDuelTree(sel, sentence, width){
     sel.classed('duel-tree', true)
-    sel.append('div.title').text('“' + sentence.text.replace(' .', '.') + '”')
+    sel.append('div.title').text(sentence.displayText).st({lineHeight: 18})
 
     drawParseTree(sel.append('div'), sentence, width)
     drawPCADash(sel.append('div'), sentence, 'posManning', width)
   }
 
+  d3.select('#parse-tree').selectAll('svg')
+    .filter((d, i) => i == 2)
+    .append('line')
+    .translate(20.5, 0)
+    .at({
+      y1: 20,
+      y2: 280,
+      stroke: '#999',
+    })
+
   
-
-
-
 
 
 
 })
 
-function keyPCADash() {
-  var sel = d3
-    .select('#pca-dash-key')
-    .html('')
-    .append('svg')
-    .at({ width: 300, height: 80 })
-
-  var ticks = 300
-
-  var x = d3
-    .scaleLog()
-    .domain([1 / 4, 4])
-    .range([0, 300])
-
-  bandSel = sel.append('g').translate([20, 60])
-  bandSel.appendMany('rect', d3.range(0, 300)).at({
-    x: (d, i) => i,
-    fill: d => colorLog(x.invert(d)),
-    height: 20,
-    width: 1
-  })
-
-  bandSel
-    .appendMany('text', [1 / 4, 1 / 2, 1, 2, 4])
-    .at({
-      x: x,
-      fill: d => colorLog(d),
-      y: 40,
-      textAnchor: 'middle'
-    })
-    .st({
-      textShadow: d =>
-        d == 1 ? '0 1px 0 #000, 1px 0 0 #000, 0 -1px 0 #000, -1px 0 0 #000' : 0
-    })
-    .text(d => d)
-
-  var lineHeight = 30
-  colors.slice(0, 2).forEach((color, i) => {
-    var text = 'Ground Truth Dependency'
-    if (!i) {
-      text = 'No Ground Truth Dependency, Manning Distance < 1.5'
-    }
-    if (i == 4) {
-      text = text.replace('~4', '>3')
-    }
-
-    sel
-      .append('g')
-      .translate([20, lineHeight * i])
-      .append('path')
-      .at({
-        d: d => 'M' + [0, 0] + 'L' + [40, 0],
-        stroke: colors[2],
-        strokeWidth: 4,
-        strokeDasharray: i ? '' : '5 5'
-      })
-      .parent()
-      .append('text')
-      .text(text)
-      .translate([45, 5])
-  })
-}
 
 function drawParseTree(sel, data, width=320) {
   const height = width
@@ -608,6 +562,7 @@ function drawParseTree(sel, data, width=320) {
     totalHeight: height,
     margin: {}
   })
+  sel.classed('sentences', 1).classed('tree', 1)
 
   var treeLayout = d3.tree()
   treeLayout.size([width, height])
@@ -643,18 +598,21 @@ function drawParseTree(sel, data, width=320) {
 
   c.svg
     .appendMany('g.node', nodes)
+    .on('mouseover', d => {
+      sel.parent().parent().selectAll('g.node')
+        .classed('active', e => e.uuid == d.uuid)
+
+      sel.parent().parent().selectAll('path')
+        .classed('active', e => e.sn.uuid == d.uuid || e.tn.uuid == d.uuid)
+    })
     .call(d3.attachTooltip)
     .translate(d => [d.x, d.y])
-    // .append('g')
-    // .at({
-    //   class: 'node'
-    // })
-    // .parent()
     .append('circle')
     .at({
-      r: 2,
+      r: 3,
       fill: '#fff',
-      stroke: '#ccc'
+      stroke: '#ccc',
+      strokeWidth: 2,
     })
     .parent()
     .append('text')
@@ -694,14 +652,23 @@ function drawPCADash(sel, sentence, posType, size=400, isGrey=false) {
     if (isCanon) d.color = colorLog(1)
   })
 
-  c.svg
-    .appendMany('path', sentence.links.filter(d => d.actual == 1))
-    .at({
+  var pathG = c.svg.appendMany('g', sentence.links.filter(d => d.actual == 1))
+
+  if (isGrey){
+    pathG.append('path')
+      .at({
+        d: d => 'M' + d.sn.pcaPos + 'L' + d.tn.pcaPos,
+        stroke: '#fff',
+        strokeWidth: 7
+      })
+  }
+
+  pathG.append('path')    
+  .at({
       d: d => 'M' + d.sn.pcaPos + 'L' + d.tn.pcaPos,
       stroke: d => isGrey ? '#ddd' : d.color,
       strokeWidth: 4
     })
-    .call(d3.attachTooltip)
 
   c.svg
     .appendMany('path', sentence.links.filter(d => d.approx == 1 && d.isUpper))
@@ -802,6 +769,9 @@ const makeNodeFn = (data, rootIndex) => (index, parent = null) => {
 function diagonal(d) {
   // return 'M' + [d.source.x, d.source.y] + 'L' + [d.target.x, d.target.y]
 
+  d.sn = d.source
+  d.tn = d.target
+
   const sx = d.source.x
   const sy = d.source.y
   const tx = d.target.x
@@ -828,3 +798,67 @@ const traverseTree = (node, fn) => {
     traverseTree(child, fn)
   }
 }
+
+function keyPCADash() {
+  var sel = d3
+    .select('#pca-dash-key')
+    .html('')
+    .append('svg')
+    .at({ width: 300, height: 80 })
+
+  var ticks = 300
+
+  var x = d3
+    .scaleLog()
+    .domain([1 / 4, 4])
+    .range([0, 300])
+
+  bandSel = sel.append('g').translate([20, 60])
+  bandSel.appendMany('rect', d3.range(0, 300)).at({
+    x: (d, i) => i,
+    fill: d => colorLog(x.invert(d)),
+    height: 20,
+    width: 1
+  })
+
+  bandSel
+    .appendMany('text', [1 / 4, 1 / 2, 1, 2, 4])
+    .at({
+      x: x,
+      fill: d => colorLog(d),
+      y: 40,
+      textAnchor: 'middle'
+    })
+    .st({
+      textShadow: d =>
+        d == 1 ? '0 1px 0 #000, 1px 0 0 #000, 0 -1px 0 #000, -1px 0 0 #000' : 0
+    })
+    .text(d => d)
+
+  var lineHeight = 30
+  colors.slice(0, 2).forEach((color, i) => {
+    var text = 'Ground Truth Dependency'
+    if (!i) {
+      text = 'No Ground Truth Dependency, Manning Distance < 1.5'
+    }
+    if (i == 4) {
+      text = text.replace('~4', '>3')
+    }
+
+    sel
+      .append('g')
+      .translate([20, lineHeight * i])
+      .append('path')
+      .at({
+        d: d => 'M' + [0, 0] + 'L' + [40, 0],
+        stroke: colors[2],
+        strokeWidth: 4,
+        strokeDasharray: i ? '' : '5 5'
+      })
+      .parent()
+      .append('text')
+      .text(text)
+      .translate([45, 5])
+  })
+}
+
