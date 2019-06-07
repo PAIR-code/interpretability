@@ -237,9 +237,9 @@ People have proposed many ways to describe syntactic structure. In <a href="http
 
 </div>
 Many people have studied these embeddings to see what sort of information they might contain. To recapitulate the introduction, the motivation for our study of tree embeddings was a recent result from Hewitt and Manning. 
-Their paper <a href="https://nlp.stanford.edu/pubs/hewitt2019structural.pdf">A structural probe for finding syntax in word representations</a>, suggests that context embeddings seem to geometrically encode dependency parse trees.
+Their paper <a href="https://nlp.stanford.edu/pubs/hewitt2019structural.pdf">A structural probe for finding syntax in word representations</a> suggests that context embeddings seem to geometrically encode dependency parse trees.
 <p>
-There is one twist to their encoding: first you need to transform the context embeddings by a certain matrix $B$, a so-called <i>structural probe</i>. But following that, the square of the Euclidean distance between two words' context embeddings approximates the parse tree distance between the two words.
+There is one twist: first you need to transform the context embeddings by a certain matrix $B$, a so-called <i>structural probe</i>. But following that, the square of the Euclidean distance between two words' context embeddings approximates the parse tree distance between the two words.
 <p>
 Here is where the math in the previous section pays off. In our terminology, the context embeddings approximate a Pythagorean embedding of a sentence's dependency parse tree. That means we have a good idea&mdash;simply from the squared-distance property and Theorem 1.1&mdash;of the overall shape of the tree embedding.
 <p>
@@ -264,7 +264,7 @@ We then project these points to two dimensions via PCA. To show the underlying t
 
 
 <p>
-  The PCA projection is already interesting&mdash;there's a definite resemblance between the BERT embedding and the idealization. It's certainly not an exact match, but comparison with a truly random embedding, at right, makes the similarity clear.
+  The PCA projection is already interesting&mdash;there's a definite resemblance between the BERT embedding and the idealization. Figure 5c shows a series of randomly branching embeddings, which also resemble the BERT embedding. As a baseline, Figure 5d shows a series of embeddings where words are placed independently at random.
 
   <p>
     But we can go one step further, and show how the embedding differs from an idealized model. In Figure 6 below, the color of each edge indicates the difference between Euclidean distance and tree distance. We also connect, with a dotted line, pairs of words without a dependency relation but whose positions (before PCA) were much closer than expected. 
