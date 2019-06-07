@@ -327,6 +327,10 @@ path.active{
 
 }
 
+#small-multiple, #parse-tree, #real-ideal{
+  margin-top: 40px;
+}
+
 
 .active.node{
   font-weight: 600;
@@ -345,5 +349,5 @@ path.active{
   height: 27px;
   position: absolute;
   left: -51px;
-  top: -5px;
+  top: 15px;
 }
