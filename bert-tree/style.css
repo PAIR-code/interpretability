@@ -333,3 +333,17 @@ path.active{
 }
 
 
+.pointer{
+  height: 0px;
+  position: relative;
+}
+.pointer div {
+  overflow: visible;
+  content: "";
+  background-image: url(pointer.svg);
+  width: 27px;
+  height: 27px;
+  position: absolute;
+  left: -51px;
+  top: -5px;
+}
