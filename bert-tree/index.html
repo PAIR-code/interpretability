@@ -45,7 +45,7 @@ limitations under the License.
 
 
 <span style="color:#999;font-style:italic">
-Part I of a series of expository notes accompanying <a href="">this paper</a> [ADD REAL LINK], by Andy Coenen, Emily Reif, Ann Yuan, Been Kim, Adam Pearce, Fernanda Vi&eacute;gas, and Martin Wattenberg. These notes are designed as an expository walk through some of the main results. Please see the paper for full references and details.
+Part I of a series of expository notes accompanying <a href="">this paper</a> [ADD REAL LINK - ALSO ADD TO END OF ARTICLE AS WELL!], by Andy Coenen, Emily Reif, Ann Yuan, Been Kim, Adam Pearce, Fernanda Vi&eacute;gas, and Martin Wattenberg. These notes are designed as an expository walk through some of the main results. Please see the paper for full references and details.
 </span>
 <p>
 
@@ -251,15 +251,15 @@ Of course, we don't know the shape exactly, because the embedding is only approx
   <div class="side-note">
 <a href="https://en.wikipedia.org/wiki/Principal_component_analysis">PCA</a> produced more readable visualizations than <a href="https://lvdmaaten.github.io/tsne/">t-SNE</a> or <a href="https://github.com/lmcinnes/umap">UMAP</a>. Nonlinear methods may do best when points are  clustered or distributed on a low-dimensional manifold&mdash;pretty much the opposite of vertices of an $n$-cube.
 </div>
-To investigate these differences, we created a visualization tool. Our paper has details, but we'll provide a broad description here. As input, the tool takes a sentence with associated dependency parse tree. We then extracted context embeddings from BERT, transformed by the Hewitt and Manning’s “structural probe” matrix, yielding a set of points in 1,024-dimensional space. 
+To investigate these differences, we created a visualization tool. Our paper has details, but we'll provide a broad description here. As input, the tool takes a sentence with associated dependency parse tree. The software extracts context embeddings for this sentence from BERT, transformed by the Hewitt and Manning’s “structural probe” matrix, yielding a set of points in 1,024-dimensional space. 
 <p>
-We then project these points to two dimensions via PCA. To show the underlying tree structure, we connect pairs of points representing words that have a dependency relation. Figure 5, below, shows the result for a sample sentence and, for comparison, PCA projections for the same data of an exact Pythagorean embedding; a randomly branched embeddings; and an embedding where node coordinates are completely random. 
+We then project these points to two dimensions via PCA. To show the underlying tree structure, we connect pairs of points representing words that have a dependency relation. Figure 5, below, shows the result for a sample sentence and, for comparison, PCA projections for the same data of an exact Pythagorean embedding; randomly branched embeddings; and embeddings where node coordinates are completely random. 
 
 <div id='real-ideal'></div>
 
 <div class="image-div">
 <!-- <img src="real-vs-ideal.png" style="width:1050px;height:314px"> -->
-<div class="caption"  style="width:1050px">Figure 5.  Left: PCA view of a BERT parse tree embedding. Middle: an exact Pythagorean embedding and a random-branch embedding. (Note their high degree of similarity.) At right: an embedding where each node position is chosen independently from a random distribution; we cycle through different random choices. Mouse over nodes in any image to compare across embeddings.  </div>
+<div class="caption"  style="width:1050px">Figure 5.  a) PCA view of a BERT parse tree embedding. b) an exact Pythagorean embedding. c} different random-branch embeddings. d) different embeddings where node positions are chosen independently at random. Mouse over nodes in any image to compare across embeddings.  </div>
 </div>
 
 
@@ -299,7 +299,7 @@ Exactly how neural nets represent linguistic information remains mysterious. But
 
 <p>
   <span style="color:#999;font-style:italic">
-    Many thanks to James Wexler for help with this note. And thanks to David Belanger, Tolga Bolukbasi, Dilip Krishnan, D. Sculley, Jasper Snoek, and Ian Tenney for helpful feedback and discussions about this research. For more details, and results related to semantics as well as syntax, please read <a href="">our full paper!</a> [ADD REAL LINK WHEN READY!] And look for future notes in this series.</i>
+    Many thanks to James Wexler for help with this note. And thanks to David Belanger, Tolga Bolukbasi, Dilip Krishnan, D. Sculley, Jasper Snoek, and Ian Tenney for helpful feedback and discussions about this research. For more details, and results related to semantics as well as syntax, please read <a href="">our full paper!</a> [ADD REAL LINK WHEN READY - ALSO ADD TO BEGINNING OF ARTICLE!] And look for future notes in this series.</i>
 </span>
 <div class="image-div">
 <img src="small-multiples-parse-trees.png" style="width:1110px;height:1548px">
