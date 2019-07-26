@@ -1,0 +1,13 @@
+dist
+node_modules
+.cache
+*.log
+.DS_Store
+variables/
+static/*.js
+static/*.html
+static/*.map
+static/*.css
+static/jsons
+.vscode
+ereif

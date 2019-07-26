@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Word Senses in BERT</title>
+
+<head>
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet"
+        href="https://code.getmdl.io/1.3.0/material.indigo-amber.min.css">
+  <script defer=""
+          src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <link rel="stylesheet"
+        href="./index.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/5.10.3/math.js"></script>
+</head>
+
+<body>
+  <div id="top-bar"> BERT Word Sense Visualization<i class="material-icons info-icon"
+       title="In transformer models like BERT, a word's embedding is defined by its linguistic context
+
+    Type in a word to see it in different sentence contexts from Wikipedia (licensed under CC-BY-SA-3.0). Each point is the query word's embedding at the selected layer, projected into two dimensions using umap
+
+    For more info, see go/bert-vis-paper
+    Visualization by go/big-picture">
+      info
+    </i>
+  </div>
+
+  <div id="inputs">
+
+    <!-- Input for word -->
+    <div id='words-selector'></div>
+
+    <div id='toggles'
+         class='hidden'>
+      <!-- Dropdown for layer -->
+      <div class='toggle'> Layer
+        <select id="dropdown"
+                name="layer">
+          <option value="11">11 (Last) </option>
+          <option value="10">10</option>
+          <option value="9">9</option>
+          <option value="8">8</option>
+          <option value="7">7</option>
+          <option value="6">6</option>
+          <option value="5">5</option>
+          <option value="4">4</option>
+          <option value="3">3</option>
+          <option value="2">2</option>
+          <option value="1">1</option>
+          <option value="0">0 (First) </option>
+        </select>
+      </div>
+
+      <!-- Switch for whether to show POS.-->
+      <div class='toggle'>
+        <div style='width: 200px; display: flex;'>
+          <div>Show POS</div>
+          <i class="material-icons info-icon"
+             title="Tagged using the Natural Language Toolkit API www.nltk.org.">
+            help_outline
+          </i>
+        </div>
+        <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect"
+               for="pos-switch">
+          <input type="checkbox"
+                 id="pos-switch"
+                 class="mdl-switch__input">
+          <span class="mdl-switch__label"></span>
+        </label>
+      </div>
+      <div class='toggle'
+           id='search-in-sentences'></div>
+    </div>
+  </div>
+  <div id="legend"
+       class="hidden"></div>
+  <div id="diagram">
+  </div>
+
+  <script src="./index.ts"></script>
+</body>

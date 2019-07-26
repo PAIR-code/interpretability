@@ -1,0 +1,44 @@
+{
+  "name": "tfjs-examples-mnist",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "license": "Apache-2.0",
+  "private": true,
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "dependencies": {
+    "@tensorflow/tfjs": "^1.2.2",
+    "@types/d3": "^5.7.0",
+    "@types/mathjs": "^6.0.0",
+    "autogen": "0.0.1",
+    "d3": "^5.9.1",
+    "d3-jetpack": "^2.0.20",
+    "d3-scale": "^3.0.0",
+    "d3-zoom": "^1.7.3",
+    "material-design-lite": "^1.3.0",
+    "math": "^0.0.3",
+    "mathjs": "^6.0.3",
+    "tensorflow": "^0.7.0",
+    "trie-prefix-tree": "^1.5.1",
+    "umap-js": "^1.0.3"
+  },
+  "scripts": {
+    "watch": "cross-env NODE_ENV=development parcel index.html --no-hmr --out-dir=./static",
+    "watch-hmr": "cross-env NODE_ENV=development parcel index.html --out-dir=./static",
+    "build": "cross-env NODE_ENV=production parcel build index.html --no-minify --public-url ./ --out-dir=./static",
+    "link-local": "yalc link"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-runtime": "~6.23.0",
+    "babel-polyfill": "~6.26.0",
+    "babel-preset-env": "~1.6.1",
+    "clang-format": "~1.2.2",
+    "cross-env": "~5.1.6",
+    "dexie": "^2.0.4",
+    "parcel-bundler": "~1.8.1",
+    "typescript": "^3.0.3",
+    "yalc": "~1.0.0-pre.22"
+  }
+}
