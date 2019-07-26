@@ -42,14 +42,11 @@ The demo can then be accessed at http://localhost:1234/
 ```
 ./deploy.sh
 ```
-Which will deploy it to https://ereif.users.x20web.corp.google.com/BERT/wsd/static/index.html
+Which will deploy it to https://storage.googleapis.com/bert-wsd-vis/demo/index.html?#
 
-If you want to deploy it elsewhere, run
+To also update the jsons with local ones, run:
 ```
-yarn
-yarn build
-
-parallel_sync.par static <desired location>
+./deploy.sh --upload_jsons
 ```
 
 NB: This is not an official Google product.

@@ -17,12 +17,25 @@
 # =============================================================================
 
 # This script deploys the demo to GCP.
+# Add --upload_jsons to copy the json files as well.
+
 
 echo "Building..."
 yarn
 yarn build
 
 echo "Deploying..."
-parallel_sync.par static /x20/users/er/ereif/BERT/wsd/static
+gsutil mkdir -p gs://bert-wsd-vis/demo
+gsutil -m cp static/* gs://bert-wsd-vis/demo
 
-echo "The demo is now available at go/bert-wsd-vis"
+gsutil -m setmeta -h "Cache-Control:private" "gs://bert-wsd-vis/**.html"
+gsutil -m setmeta -h "Cache-Control:private" "gs://bert-wsd-vis/**.css"
+gsutil -m setmeta -h "Cache-Control:private" "gs://bert-wsd-vis/**.js"
+
+if [[ $* == *--upload_jsons* ]]; then
+  echo 'Uploading jsons data'
+  gsutil mkdir -p gs://bert-wsd-vis/demo/jsons
+  gsutil -m cp static/jsons/* gs://bert-wsd-vis/demo/jsons
+fi
+
+echo "The demo is now available at https://storage.googleapis.com/bert-wsd-vis/demo/index.html?#"
