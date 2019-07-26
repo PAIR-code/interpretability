@@ -1,0 +1,176 @@
+body {
+  font-family: Helvetica Neue, sans-serif;
+  margin: 0px;
+}
+
+#top-bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  /* background-color: rgb(42, 53, 117); */
+  background-color: rgb(63, 81, 181);
+
+
+  color: white;
+  padding: 20px;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+#inputs {
+  display: flex;
+  /* padding: 0vw 50vw 0vw 1vw; */
+  padding: 0vw 1vw;
+  border-bottom: 1px solid gainsboro;
+  align-items: center;
+  background-color: #efefef;
+}
+
+#diagram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#dropdown {
+  border: 0px;
+  padding: 7px;
+  margin: 5px;
+  outline: none !important;
+}
+
+input:focus {
+  outline: none;
+}
+
+.bootstrap-select .btn:focus {
+  outline: none !important;
+}
+
+#loading {
+  margin-top: 100px;
+}
+
+.autosuggest {
+  position: absolute;
+  width: 300px;
+  background-color: white;
+  border-radius: 3px;
+  filter: drop-shadow(0px 3px 3px #ccc);
+}
+
+.word-option {
+  padding: 6px;
+}
+
+.word-option:hover {
+  background-color: #eee;
+}
+
+.description {
+  text-shadow: 3px 3px 4px gray;
+}
+
+#legend {
+  position: absolute;
+  right: 0;
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid gainsboro;
+}
+
+#legend.hidden {
+  display: none;
+}
+
+.legend-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.legend-dot {
+  width: 15px;
+  height: 15px;
+  margin: 0px 10px;
+  border-radius: 50%;
+  opacity: .5;
+}
+
+.word {
+  /* color: #ff8f00; */
+  color: black;
+  font-weight: bold;
+}
+
+.info-icon {
+  padding-left: 5px;
+}
+
+.info-icon:hover {
+  cursor: default;
+}
+
+
+.option.disabled {
+  color: gray;
+}
+
+
+mark {
+  /* color: rgb(63, 81, 181);
+  background-color: rgba(255, 255, 255, .7); */
+
+  color: white;
+  background-color: rgba(63, 81, 181, .7);
+}
+
+#toggles {
+  display: flex;
+}
+
+#toggles.hidden {
+  display: none;
+}
+
+.toggle {
+  padding: 0vw 1vw;
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+.tooltip {
+  top: -1000px;
+  position: fixed;
+  padding: 5px;
+  background: rgba(255, 255, 255, .90);
+  border: 1px solid lightgray;
+  pointer-events: none;
+  max-width: 350px;
+}
+
+.tooltip-hidden {
+  opacity: 0;
+  transition: all .3s;
+  transition-delay: .1s;
+}
+
+@media (max-width: 590px) {
+  div.tooltip {
+    bottom: -1px;
+    width: calc(100%);
+    left: -1px !important;
+    right: -1px !important;
+    top: auto !important;
+    width: auto !important;
+  }
+}
+
+.tooltip b {
+  padding-left: 2px;
+  padding-right: 2px;
+}
