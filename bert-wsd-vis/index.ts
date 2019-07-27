@@ -39,6 +39,7 @@ export interface Point {
   color?: string;
   highlight?: boolean;
   currLabelWord?: string;
+  wordHash: {[word: string]: boolean};
 }
 
 export interface Label {
@@ -88,7 +89,7 @@ export class BertVis {
   async start() {
     this.addHandlers();
     await this.loadWords();
-    this.getData('dice');
+    this.getData('lie');
   }
 
   private addHandlers() {
@@ -206,7 +207,7 @@ export class BertVis {
     // Add a dropdown to search within the sentences.
     const callback = (word: string) => {
       this.subsearchWord = word;
-      this.highlightDotsWWord(word)
+      this.highlightDotsWWord(word, true)
     };
     const subsearch = new WordSelectorDropdown(
         Object.keys(this.labelWordCoords), d3.select('#search-in-sentences'),
@@ -361,7 +362,7 @@ export class BertVis {
   /**
    * Highlight the dots whose labels include the word.
    */
-  private highlightDotsWWord(word: string) {
+  private highlightDotsWWord(word: string, alsoSelect = false) {
     // If the word includes the search string, highlight it.
     this.data.forEach((d) => {
       const words = util.labelToWordsSet(d.sentenceLabel, this.word, false);
@@ -369,6 +370,9 @@ export class BertVis {
           this.subsearchWord != '' && (words.includes(this.subsearchWord));
       const isHighlighted = word != '' && words.includes(word);
       d.highlight = isSubsearched || isHighlighted;
+      if (alsoSelect) {
+        d.isSelected = isSubsearched || isHighlighted;
+      }
     });
     this.refresh();
   }
@@ -381,8 +385,9 @@ export class BertVis {
     this.data.forEach((d) => {
       // cache word tokenization
       if (!d.wordHash) {
-        d.wordHash = {} util.labelToWordsSet(d.sentenceLabel, this.word, false)
-                         .forEach(word => d.wordHash[word] = true)
+        d.wordHash = {};
+        util.labelToWordsSet(d.sentenceLabel, this.word, false)
+            .forEach(word => d.wordHash[word] = true)
       }
 
       if (d.wordHash[word]) {
@@ -492,7 +497,7 @@ export class BertVis {
     this.updatePOSLegend();
     this.dotsSVG.attr('fill', (d: any) => this.color(d))
         .attr('opacity', this.showPOS ? .5 : .8)
-        .attr('r', 4)
+        .attr('r', (d: any) => d.isSelected ? 6 : 4)
         .attr(
             'stroke-width', (d: any) => d.isSelected ? 2 : d.highlight ? 1 : .5)
         .attr('stroke', (d: any) => d.highlight ? '#000' : '#777');
