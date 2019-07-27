@@ -1,5 +1,5 @@
 {
-  "name": "tfjs-examples-mnist",
+  "name": "bert-wsd-vis",
   "version": "0.1.0",
   "description": "",
   "main": "index.js",
@@ -9,7 +9,6 @@
     "node": ">=8.9.0"
   },
   "dependencies": {
-    "@tensorflow/tfjs": "^1.2.2",
     "@types/d3": "^5.7.0",
     "@types/mathjs": "^6.0.0",
     "autogen": "0.0.1",
