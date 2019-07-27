@@ -1,14 +1,14 @@
 ### Word clustering for BERT
-[Demo](https://storage.googleapis.com/bert-wsd-vis/demo/index.html?#) for [Visualizing and Measuring the Geometry of BERT
+[Demo](https://storage.googleapis.com/bert-wsd-vis/demo/index.html?#)
+
+This visualization is a demo for [Visualizing and Measuring the Geometry of BERT
 ](https://arxiv.org/abs/1906.02715) by [Big Picture](https://research.google.com/bigpicture/)
 
 In transformer models like BERT, a word's embedding is defined by its linguistic context
 
 This demo visualizes the embeddings of the same word in different sentence contexts from (licensed under CC-BY-SA-3.0). Each point is the query word's embedding at the selected layer, projected into two dimensions using umap
 
-For more info, see the paper: [Visualizing and Measuring the Geometry of BERT
-](https://arxiv.org/abs/1906.02715). Visualization by [Big Picture](https://research.google.com/bigpicture/).
-
+For more info, see the [paper](https://arxiv.org/abs/1906.02715).
 ### To get the data
 For each word, there is a single json file.
 These json files contain the context sentence, part of speech, and umap-projected embeddings of the word various sentences (note: if the word appears multiple times in the sentence, the first instance is used.) There are 200-1000 sentences per word.
