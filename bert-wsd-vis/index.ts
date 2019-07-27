@@ -114,7 +114,7 @@ export class BertVis {
     expandButton.on('click', () => {
       closed = !closed;
       infoText.classed('closed', closed);
-      expandButton.html(closed ? 'expand_more' : 'expand_less')
+      expandButton.html(closed ? 'expand_less' : 'expand_more')
     });
   }
 

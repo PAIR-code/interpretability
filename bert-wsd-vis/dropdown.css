@@ -41,14 +41,6 @@ CSS styling for dropdown.
   font-size: 12px;
 }
 
-#dropdown {
-  border: 0px;
-  padding: 7px;
-  margin: 5px;
-  outline: none !important;
-  background-color: rgba(30, 30, 30, .13);
-  font-size: 12px;
-}
 
 .dropdown-holder {
   display: flex;
