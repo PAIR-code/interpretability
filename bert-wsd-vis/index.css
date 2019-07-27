@@ -86,9 +86,12 @@ body {
 #legend {
   position: absolute;
   right: 0;
-  padding: 20px;
+  padding: 10px;
   margin: 20px;
   border: 1px solid gainsboro;
+  background-color: rgba(240, 240, 240, .8);
+  font-size: 12px;
+  line-height: 14px;
 }
 
 
@@ -111,9 +114,9 @@ body {
 }
 
 .legend-dot {
-  width: 15px;
-  height: 15px;
-  margin: 0px 10px;
+  width: 10px;
+  height: 10px;
+  margin: 0px 5px;
   border-radius: 50%;
   opacity: .5;
 }
@@ -146,6 +149,7 @@ body {
   max-height: 200px;
   overflow: hidden;
   transition: max-height 0.2s linear, padding 0.2s linear;
+  width: 252px;
 }
 
 #info.closed {

@@ -525,7 +525,7 @@ export class BertVis {
   private posColor(pos: string) {
     const posIdx = this.posKeys.indexOf(pos);
     const percentageOffset = .9;
-    return d3.interpolateInferno(
+    return d3.interpolateViridis(
         (posIdx / this.posKeys.length) * percentageOffset);
   }
 
