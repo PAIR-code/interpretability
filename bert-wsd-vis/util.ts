@@ -167,9 +167,10 @@ export function boldifyWords(
  * Given a collection of datapoint 2d locations, center these onscreen.
  * @param data points to be centered.
  */
-export function centerFrame(data: number[][][], width: number, height: number) {
+export function centerFrame(
+    data: number[][][], width: number, height: number, offset: number) {
   const margin = 40;
-  const centerx = d3.scaleLinear().range([margin, width - margin * 10]);
+  const centerx = d3.scaleLinear().range([margin + offset, width - margin * 5]);
   const centery = d3.scaleLinear().range([margin, height - margin]);
 
   for (let layer = 0; layer < 12; layer++) {

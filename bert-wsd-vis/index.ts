@@ -1,3 +1,21 @@
+
+/**
+ * @license
+ * Copyright 2018 Google LLC. All Rights Reserved.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * =============================================================================
+ */
+
 import * as d3 from 'd3';
 import * as jp from 'd3-jetpack';
 
@@ -39,8 +57,9 @@ interface KNN {
 
 export class BertVis {
   // Height and width of the display.
+  private rightOffset = 200;
   private width = window.innerWidth;
-  private height = window.innerHeight - 200;
+  private height = window.innerHeight;
 
   // UI elements.
   private layerDropdown = d3.select('#dropdown');
@@ -65,14 +84,11 @@ export class BertVis {
   private subsearchWord: string;
 
 
-  constructor() {
+  constructor() {}
+  async start() {
     this.addHandlers();
-    this.loadWords();
-
-    // TODO:
-    // - do this an a not jenky way
-    // - populate text field
-    setTimeout(() => this.getData('dice'), 1000);
+    await this.loadWords();
+    this.getData('dice');
   }
 
   private addHandlers() {
@@ -88,6 +104,16 @@ export class BertVis {
     this.posSwitch.on('change', () => {
       this.showPOS = (this.posSwitch.node() as HTMLInputElement).checked;
       this.refresh();
+    });
+
+    // Expand or hide info text.
+    const infoText = d3.select('#info');
+    const expandButton = d3.select('#expand');
+    let closed = false;
+    expandButton.on('click', () => {
+      closed = !closed;
+      infoText.classed('closed', closed);
+      expandButton.html(closed ? 'expand_more' : 'expand_less')
     });
   }
 
@@ -140,7 +166,8 @@ export class BertVis {
     const res = await util.loadJson(url, errorMessage) as KNN;
     this.data = [];
 
-    res.data = util.centerFrame(res.data, this.width, this.height);
+    res.data =
+        util.centerFrame(res.data, this.width, this.height, this.rightOffset);
 
     // Transpose the data to be by point rather than by layer.
     const coordsByPoint = util.transpose(res.data);
@@ -387,10 +414,12 @@ export class BertVis {
   /**
    * When the user pans or zooms, apply the transforms to the objects.
    */
-  private pointLocationsChanged() {
-    this.dotsSVG.attr('transform', (d) => {
+  private pointLocationsChanged(transition = false) {
+    const dots = transition ? this.dotsSVG.transition() : this.dotsSVG;
+    dots.attr('transform', (d) => {
       return this.applyCurrTransform(d);
     });
+
     this.labelsSVG.attr('transform', (d) => {
       return this.applyCurrTransform(d);
     });
@@ -461,8 +490,7 @@ export class BertVis {
    */
   private refresh() {
     this.updatePOSLegend();
-    this.dotsSVG  //.transition()
-        .attr('fill', (d: any) => this.color(d))
+    this.dotsSVG.attr('fill', (d: any) => this.color(d))
         .attr('opacity', this.showPOS ? .5 : .8)
         .attr('r', 4)
         .attr(
@@ -512,10 +540,8 @@ export class BertVis {
    * @param d Datapoint to get location for
    * @param isLabel Whether this is a label.
    */
-  private x(d: any, isLabel = false) {
-    const xPos = d.coords[this.currLayer][0];
-    const labelOffset = 12;
-    return isLabel ? xPos + labelOffset : xPos;
+  private x(d: any) {
+    return d.coords[this.currLayer][0];
   }
 
   /**
@@ -523,10 +549,8 @@ export class BertVis {
    * @param d Datapoint to get location for.
    * @param isLabel Whether this is a label.
    */
-  private y(d: any, isLabel = false) {
-    const yPos = d.coords[this.currLayer][1];
-    const labelOffset = -12;
-    return isLabel ? yPos + labelOffset : yPos;
+  private y(d: any) {
+    return d.coords[this.currLayer][1];
   }
 
   /**
@@ -540,7 +564,7 @@ export class BertVis {
     this.determineDescriptionLabels();
     this.showDescriptionLabels();
     this.refresh();
-    this.pointLocationsChanged();
+    this.pointLocationsChanged(true);
   }
 
   private resetTransform() {
@@ -582,4 +606,4 @@ export class BertVis {
   }
 }
 
-new BertVis();
+new BertVis().start();

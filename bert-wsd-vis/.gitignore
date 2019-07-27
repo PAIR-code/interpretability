@@ -4,10 +4,8 @@ node_modules
 *.log
 .DS_Store
 variables/
-static/*.js
-static/*.html
-static/*.map
-static/*.css
-static/jsons
+static/
+!static/filtered_words.json
+!static/words.json
 .vscode
 ereif

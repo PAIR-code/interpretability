@@ -1,3 +1,20 @@
+/**
+ * @license
+ * Copyright 2018 Google LLC. All Rights Reserved.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * =============================================================================
+ */
+
 import trie from 'trie-prefix-tree';
 
 export class WordSelectorDropdown {
@@ -10,14 +27,14 @@ export class WordSelectorDropdown {
       dictionary: string[], parentContainer: any,
       private onSelected: ((word: string) => void) = null,
       private onKeystroke: ((word: string) => void) = null,
-      placeholderText = 'Enter a word.', buttonText = 'Go') {
+      placeholderText = 'Enter a word.') {
     // Default handlers.
     this.onKeystroke = this.onKeystroke || (() => {});
     this.onSelected = this.onSelected || (() => {});
 
     // Make the prefix tree from the dictionary.
     this.prefixTrie = trie(dictionary);
-    this.makeUI(parentContainer, placeholderText, buttonText);
+    this.makeUI(parentContainer, placeholderText);
     this.addHandlers();
   }
 
@@ -90,15 +107,19 @@ export class WordSelectorDropdown {
     return (this.wordElt.node() as HTMLInputElement).value.toLowerCase();
   }
 
+  public setEltVal(value: string) {
+    return (this.wordElt.node() as HTMLInputElement).value = value;
+  }
+
+
 
   /**
    * Make the UI: a dropdown and an "enter" button.
    * @param parentContainer Container to put all this.
    */
-  private makeUI(
-      parentContainer: any, placeholderText: string, buttonText: string) {
+  private makeUI(parentContainer: any, placeholderText: string) {
     parentContainer.node().innerHTML = `
-    <div style= "display: flex; align-items: center;">
+    <div class='dropdown-holder'>
       <div>
         <form action="#">
           <div class="mdl-textfield mdl-js-textfield">
@@ -113,10 +134,12 @@ export class WordSelectorDropdown {
       </div>
 
       <!-- Go -->
-      <div style= "padding: 10px;">
-        <button class="go mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored"
+      <div>
+        <button class="go mdl-button mdl-js-button mdl-button--icon"
                 disabled="true">
-          ${buttonText}
+          <i class='material-icons'>
+          search
+          </i>
         </button>
       </div>
     </div>

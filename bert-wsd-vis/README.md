@@ -3,7 +3,7 @@
 
 In transformer models like BERT, a word's embedding is defined by its linguistic context
 
-This demo visualizes the embeddings of the same word in different sentence contexts from Wikipedia. Each point is the query word's embedding at the selected layer, projected into two dimensions using umap
+This demo visualizes the embeddings of the same word in different sentence contexts from (licensed under CC-BY-SA-3.0). Each point is the query word's embedding at the selected layer, projected into two dimensions using umap
 
 For more info, see [go/bert-vis-paper](go/bert-vis-paper). Visualization by [go/big-picture](go/big-picture).
 

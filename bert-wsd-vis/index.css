@@ -1,3 +1,21 @@
+/*
+Copyright 2018 Google LLC. All Rights Reserved.
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+    http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+==============================================================================
+*/
+
+/*
+CSS styling for demo.
+*/
+
 body {
   font-family: Helvetica Neue, sans-serif;
   margin: 0px;
@@ -6,24 +24,44 @@ body {
 #top-bar {
   width: 100%;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  /* background-color: rgb(42, 53, 117); */
-  background-color: rgb(63, 81, 181);
-
-
+  background-color: #00695C;
   color: white;
-  padding: 20px;
-  font-size: 15px;
+  padding: 10px;
+  font-size: 16px;
   box-sizing: border-box;
+}
+
+#top-bar i {
+  font-size: 16px;
+}
+
+#top-bar a {
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+}
+
+#top-bar a:hover {
+  color: #34A853;
+}
+
+#info-bar {
+  position: absolute;
+  margin: 20px;
+  border: 1px solid gainsboro;
+  width: min-content;
 }
 
 #inputs {
   display: flex;
-  /* padding: 0vw 50vw 0vw 1vw; */
-  padding: 0vw 1vw;
-  border-bottom: 1px solid gainsboro;
-  align-items: center;
-  background-color: #efefef;
+  flex-direction: column;
+  background-color: rgba(240, 240, 240, .8);
+  font-size: 12px;
+  line-height: 12px;
+  padding: 10px;
+  padding-top: 0px
 }
 
 #diagram {
@@ -33,39 +71,12 @@ body {
   flex-direction: column;
 }
 
-#dropdown {
-  border: 0px;
-  padding: 7px;
-  margin: 5px;
-  outline: none !important;
-}
-
-input:focus {
-  outline: none;
-}
-
 .bootstrap-select .btn:focus {
   outline: none !important;
 }
 
 #loading {
   margin-top: 100px;
-}
-
-.autosuggest {
-  position: absolute;
-  width: 300px;
-  background-color: white;
-  border-radius: 3px;
-  filter: drop-shadow(0px 3px 3px #ccc);
-}
-
-.word-option {
-  padding: 6px;
-}
-
-.word-option:hover {
-  background-color: #eee;
 }
 
 .description {
@@ -78,6 +89,15 @@ input:focus {
   padding: 20px;
   margin: 20px;
   border: 1px solid gainsboro;
+}
+
+
+#words-selector {
+  border-radius: 3px;
+  background-color: white;
+  padding: 0px 10px;
+  box-shadow: 0px 0px 4px rgba(100, 100, 100, .4);
+  margin-bottom: 10px;
 }
 
 #legend.hidden {
@@ -105,7 +125,7 @@ input:focus {
 }
 
 .info-icon {
-  padding-left: 5px;
+  font-size: 12px;
 }
 
 .info-icon:hover {
@@ -117,6 +137,30 @@ input:focus {
   color: gray;
 }
 
+#logo {
+  height: 12px;
+}
+
+#info {
+  padding-top: 10px;
+  max-height: 200px;
+  overflow: hidden;
+  transition: max-height 0.2s linear, padding 0.2s linear;
+}
+
+#info.closed {
+  max-height: 0px;
+  padding-top: 0px;
+}
+
+#info a {
+  color: black;
+}
+
+#expand:hover {
+  color: gray;
+  cursor: pointer;
+}
 
 mark {
   /* color: rgb(63, 81, 181);
@@ -128,6 +172,7 @@ mark {
 
 #toggles {
   display: flex;
+  flex-direction: column;
 }
 
 #toggles.hidden {
@@ -135,13 +180,15 @@ mark {
 }
 
 .toggle {
-  padding: 0vw 1vw;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
-
-
+#pos {
+  display: flex;
+  padding: 5px;
+}
 
 .tooltip {
   top: -1000px;
