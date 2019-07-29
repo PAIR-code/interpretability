@@ -1,5 +1,4 @@
 ### Word clustering for BERT
-[Demo](https://storage.googleapis.com/bert-wsd-vis/demo/index.html?#)
 
 This visualization is a demo for [Visualizing and Measuring the Geometry of BERT
 ](https://arxiv.org/abs/1906.02715) by [Big Picture](https://research.google.com/bigpicture/)
@@ -42,7 +41,6 @@ The demo can then be accessed at http://localhost:1234/
 ```
 sh ./deploy.sh
 ```
-Which will deploy it to https://storage.googleapis.com/bert-wsd-vis/demo/index.html?#
 
 To also update the jsons with local ones, run:
 ```

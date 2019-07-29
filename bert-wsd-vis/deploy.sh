@@ -38,4 +38,3 @@ if [[ $* == *--upload_jsons* ]]; then
   gsutil -m cp static/jsons/* gs://bert-wsd-vis/demo/jsons
 fi
 
-echo "The demo is now available at https://storage.googleapis.com/bert-wsd-vis/demo/index.html?#"
