@@ -84,12 +84,12 @@ export class BertVis {
   private currLayer = 11;
   private subsearchWord: string;
 
-
   constructor() {}
   async start() {
     this.addHandlers();
     await this.loadWords();
-    this.getData('lie');
+    const urlWord = util.getURLWord();
+    this.getData(urlWord ? urlWord : 'lie');
   }
 
   private addHandlers() {
@@ -116,6 +116,12 @@ export class BertVis {
       infoText.classed('closed', closed);
       expandButton.html(closed ? 'expand_less' : 'expand_more')
     });
+
+    // Also start out with infotext closed, if on mobile.
+    if (util.isMobile()) {
+      closed = true;
+      infoText.classed('closed', true);
+    }
   }
 
   /**
@@ -165,6 +171,7 @@ export class BertVis {
     const errorMessage =
         'Whoops! An error occurred. If you entered a word, it may not be in the dictionary.';
     const res = await util.loadJson(url, errorMessage) as KNN;
+    util.setURLWord(word);
     this.data = [];
 
     res.data =

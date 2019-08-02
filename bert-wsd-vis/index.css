@@ -167,9 +167,6 @@ body {
 }
 
 mark {
-  /* color: rgb(63, 81, 181);
-  background-color: rgba(255, 255, 255, .7); */
-
   color: white;
   background-color: rgba(63, 81, 181, .7);
 }
@@ -219,6 +216,25 @@ mark {
   opacity: 0;
   transition: all .3s;
   transition-delay: .1s;
+}
+
+@media only screen and (max-width: 590px) {
+  #info-bar {
+    margin: 0px;
+    width: 100%;
+  }
+
+  #inputs {
+    padding-bottom: 0px;
+  }
+
+  #info {
+    width: 100%;
+  }
+
+  #legend {
+    bottom: 0;
+  }
 }
 
 @media (max-width: 590px) {

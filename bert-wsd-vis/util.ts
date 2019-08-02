@@ -194,7 +194,32 @@ export function centerFrame(
   return data;
 }
 
-
+/**
+ * Transpose a 2D array.
+ */
 export function transpose(array: any[]) {
   return array[0].map((_: any, i: number) => array.map(row => row[i]));
+}
+
+
+/**
+ * Get the URL word parameter.
+ */
+export function getURLWord() {
+  // D3.json adds the subsearch hash to the url; this is a workaround.
+  const urlParams = new URLSearchParams(window.location.hash.substring(1));
+  return urlParams.get('word');
+}
+
+/**
+ * Set the URL word parameter.
+ */
+export function setURLWord(word: string) {
+  const urlParams = new URLSearchParams(window.location.search);
+  urlParams.set('word', word);
+  window.history.replaceState({}, '', `${location.pathname}?#${urlParams}`);
+}
+
+export function isMobile() {
+  return screen.width <= 590;
 }
