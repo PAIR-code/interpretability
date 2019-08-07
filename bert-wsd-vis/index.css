@@ -159,6 +159,12 @@ body {
 
 #info a {
   color: black;
+  background-color: rgba(0, 105, 92, .2);
+  text-decoration: none;
+}
+
+#info a:hover {
+  background-color: rgba(0, 105, 92, .5);
 }
 
 #expand:hover {

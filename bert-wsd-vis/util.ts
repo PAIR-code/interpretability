@@ -16,9 +16,10 @@
  * =============================================================================
  */
 import * as d3 from 'd3';
+
 import {commonWords} from './commonWords';
 import {Label, Point, SentData} from './index';
-import {POS, POSTag} from './pos';
+import {POS, POSTag, SimplePOS} from './pos';
 
 export function letterColor(word: string) {
   const alphabet = [
@@ -36,10 +37,15 @@ export function letterColor(word: string) {
 export function getUsedPoses(data): POSTag[] {
   const posTags = new Set();
   data.forEach(
-      (d: SentData) => posTags.add(POS.find(posObj => posObj.tag == d.pos)));
+      (d: SentData) =>
+          posTags.add(SimplePOS.find(posObj => posObj.tag == d.pos)));
   return Array.from(posTags);
 }
 
+export function fullPOSToSimplePOS(pos: string) {
+  const posTag = POS.find(posObj => posObj.tag == pos);
+  return SimplePOS.find(posObj => posTag.dispPos == posObj.tag).tag;
+}
 /**
  * Given a string, return the words in that string (stripped.)
  */

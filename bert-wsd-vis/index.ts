@@ -20,7 +20,7 @@ import * as d3 from 'd3';
 import * as jp from 'd3-jetpack';
 
 import {WordSelectorDropdown} from './dropdown';
-import {POS, POSTag} from './pos';
+import {POSTag, SimplePOS} from './pos';
 import * as util from './util';
 
 declare var math: any;
@@ -75,7 +75,7 @@ export class BertVis {
   private labels: Label[];
   private labelWordCoords: {[word: string]: number[]};
   private data: Point[];
-  private posKeys: string[] = POS.map((pos: POSTag) => pos.tag);
+  private posKeys: string[] = SimplePOS.map((pos: POSTag) => pos.tag);
 
   // State variables.
   private word: string;
@@ -186,7 +186,8 @@ export class BertVis {
 
       sentenceLabel = sentenceLabel.replace(/\s\s+/g, ' ');
       sentenceLabel = sentenceLabel.toLowerCase();
-      const pos = res.labels[i].pos;
+      let pos = res.labels[i].pos;
+      pos = util.fullPOSToSimplePOS(pos);
       const coords = coordsByPoint[i];
       const isSelected = false;
       const currLabelWord = '';
@@ -454,6 +455,7 @@ export class BertVis {
                       this.transform = d3.event.transform;
                       if (zoomChanged) {
                         this.showDescriptionLabels();
+                        this.refresh();
                       }
                       this.pointLocationsChanged();
                     }));
@@ -531,9 +533,9 @@ export class BertVis {
    */
   private posColor(pos: string) {
     const posIdx = this.posKeys.indexOf(pos);
-    const percentageOffset = .9;
-    return d3.interpolateViridis(
-        (posIdx / this.posKeys.length) * percentageOffset);
+    return d3.schemeDark2[posIdx];
+    // return d3.interpolateViridis(
+    //     (posIdx / this.posKeys.length) * percentageOffset);
   }
 
   /**
