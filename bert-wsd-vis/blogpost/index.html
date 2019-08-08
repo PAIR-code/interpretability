@@ -84,12 +84,14 @@ limitations under the License.
        target='_blank'>Transformer
       architecture</a>, is
     designed in a way that may begin to address this
-    challenge. Our paper explores one particular example of this type of architecture, a network
+    challenge. Our <a href="https://arxiv.org/abs/1906.02715"
+       target='_blank'>paper</a> explores one particular example of this type of architecture, a
+    network
     called <a href='https://arxiv.org/abs/1810.04805'
        target='_blank'>BERT</a>.
   </p>
   <p>
-    One of the key tools for representing meaning is a so-called "<a
+    One of the key tools for representing meaning is a "<a
        href='https://towardsdatascience.com/introduction-to-word-embedding-and-word2vec-652d0c2060fa'
        target='_blank'>word
       embedding</a>," that is, a map of words into points in high-dimensional Euclidean space. This
@@ -100,10 +102,10 @@ limitations under the License.
   <p>
     The catch is that traditional word embeddings only capture a kind of "average" meaning of any
     given word--they have no way to take context into account. Transformer architectures are
-    designed to take in a series of words--encoding via context-free word embeddings--and, layer by
+    designed to take in a series of words--encoded via context-free word embeddings--and, layer by
     layer, transform them into "context embeddings." The hope is that these context embeddings will
     somehow represent useful information about the usage of those words in the particular sentence
-    they appear. In other words, in the input to BERT the word <b><i>hot</i></b> would be
+    they appear. In other words, in the input to BERT, the word <b><i>hot</i></b> would be
     represented by the
     same point in space, no matter whether it appears next to <b><i>dog</i></b>,
     <b><i>sauce</i></b>, or <b><i>day</i></b>. But in
@@ -195,7 +197,7 @@ limitations under the License.
     <a href='https://storage.googleapis.com/bert-wsd-vis/demo/index.html?#word=class'
        target='_blank'><i><b>Class</b></i></h3></a>
   <p>
-    The separation of clusters goes beyond parts-of-speech.. For the word <i><b>class</b></i>,
+    The separation of clusters goes beyond parts-of-speech. For the word <i><b>class</b></i>,
     below, the space is partitioned more subtly. To the top right, there is a cluster of
     sentences about working class, middle/upper/lower classes, etc. Below is the cluster for the
     educational sense of the word-- high school classes, students taking classes, etc. Still more
