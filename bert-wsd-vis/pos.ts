@@ -95,8 +95,8 @@ export const POS: POSTag[] =
 
     export const SimplePOS: POSTag[] = [
       {'tag': 'DT', 'description': 'Determiner'},
-      {'tag': 'NN', 'description': 'Noun'},
       {'tag': 'JJ', 'description': 'Adjective'},
+      {'tag': 'NN', 'description': 'Noun'},
       {'tag': 'CC', 'description': 'Preposition or conjunction'},
       {'tag': 'VB', 'description': 'Verb'},
       {'tag': 'PR', 'description': 'Pronoun'},

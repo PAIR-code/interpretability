@@ -374,8 +374,9 @@ export class BertVis {
     // If the word includes the search string, highlight it.
     this.data.forEach((d) => {
       const words = util.labelToWordsSet(d.sentenceLabel, this.word, false);
-      const isSubsearched =
-          this.subsearchWord != '' && (words.includes(this.subsearchWord));
+      const isSubsearched = this.subsearchWord != '' &&
+          (words.includes(this.subsearchWord) ||
+           d.sentenceLabel.includes(word));
       const isHighlighted = word != '' && words.includes(word);
       d.highlight = isSubsearched || isHighlighted;
       if (alsoSelect) {
@@ -534,8 +535,6 @@ export class BertVis {
   private posColor(pos: string) {
     const posIdx = this.posKeys.indexOf(pos);
     return d3.schemeDark2[posIdx];
-    // return d3.interpolateViridis(
-    //     (posIdx / this.posKeys.length) * percentageOffset);
   }
 
   /**

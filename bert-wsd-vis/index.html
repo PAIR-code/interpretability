@@ -16,7 +16,7 @@ limitations under the License.
 <meta name="viewport"
       content="width=device-width">
 
-<title>Word Senses in BERT</title>
+<title>Context Atlas</title>
 
 <head>
   <link rel="stylesheet"
@@ -35,7 +35,7 @@ limitations under the License.
 <body>
   <div id='info-bar'>
     <div id="top-bar">
-      <div id='title-words'>BERT Word Senses
+      <div id='title-words'>Context Atlas
         <!-- <a href="https://ai.google/research/teams/brain/pair"><img id='logo'
                src='./pair_logo_darkbg.png'></a> -->
       </div>
@@ -73,6 +73,13 @@ limitations under the License.
           <br>
           Each point is the
           query word's embedding at the selected layer, projected into two dimensions using umap.
+          <br>
+          <br>
+          The labels are words that are common between sentences in a cluster.
+          <i class="material-icons info-icon"
+             title="We highlight words that appear in many sentences clustered in a small area, as measured by the median distance between sentences containing those words. We also show only as many labels as can fit without overlapping.">
+            info
+          </i>
           <br>
           <br>
           Visualization created by <a href='https://ai.google/research/teams/brain/pair'

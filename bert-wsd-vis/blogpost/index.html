@@ -1,0 +1,453 @@
+<!--
+@license
+Copyright 2019 Google Inc.
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+    http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<html>
+
+<head>
+  <link rel="icon"
+        type="image/png"
+        href="imgs/icon.png" />
+  <link rel="stylesheet"
+        href="index.css">
+
+  <meta charset="utf-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+  <meta property="og:title"
+        content="Language, Context, and Geometry in Neural Networks">
+  <meta property="og:image"
+        content="imgs/hot-topbar.png">
+  <meta name="twitter:card"
+        content="imgs/hot.png">
+  <title>
+    Language, Context, and Geometry in Neural Networks
+  </title>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+  </script>
+  <script type="text/javascript"
+          src="../../third_party/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+
+</head>
+<!--
+<img src="imgs/hot-topbar.png"
+     id='topbar-img'> -->
+<div>
+  <img src="imgs/hot.gif"
+       id='topbar-img'>
+  <div class='caption'>
+  </div>
+</div>
+
+<body>
+  <h1 id='header'>Language, Context, and Geometry in Neural Networks</h1>
+  <!-- Intro -->
+  <span style="color:#999;font-style:italic">
+    Part II (see <a href="https://pair-code.github.io/interpretability/bert-tree/"
+       target='_blank'>Part I</a>) of a
+    series of expository
+    notes accompanying <a href="https://arxiv.org/abs/1906.02715"
+       target='_blank'>this paper</a>, by Andy Coenen,
+    Emily Reif, Ann Yuan,
+    Been Kim, Adam Pearce, Fernanda Vi&eacute;gas, and Martin Wattenberg. These notes are designed
+    as an expository walk through some of the main results. Please see the paper for full references
+    and details.
+
+    <br>
+    <br>
+    This is accompanied by the release of <a
+       href='https://storage.googleapis.com/bert-wsd-vis/demo/index.html?#word=lie'
+       target='_blank'>Context Atlas</a>, a word sense visualization tool (<a
+       href='https://github.com/PAIR-code/interpretability/tree/master/bert-wsd-vis'
+       target='_blank'>code</a>)
+  </span>
+  <p>
+    Have you ever eaten a hot dog with hot sauce on a hot day? Even if you have not, you still
+    understood the question—which is remarkable, since <b><i>hot</i></b> was used in three
+    completely different
+    senses. Humans effortlessly take context into account, disambiguating the multiple meanings.
+  </p>
+  <p>
+    Bringing this same skill to computers has been a longstanding open problem. A recently invented
+    technique, the <a href="https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf"
+       target='_blank'>Transformer
+      architecture</a>, is
+    designed in a way that may begin to address this
+    challenge. Our paper explores one particular example of this type of architecture, a network
+    called <a href='https://arxiv.org/abs/1810.04805'
+       target='_blank'>BERT</a>.
+  </p>
+  <p>
+    One of the key tools for representing meaning is a so-called "<a
+       href='https://towardsdatascience.com/introduction-to-word-embedding-and-word2vec-652d0c2060fa'
+       target='_blank'>word
+      embedding</a>," that is, a map of words into points in high-dimensional Euclidean space. This
+    kind of geometric representation can capture a surprisingly rich set of relationships between
+    words, and word embeddings have become a critical component of many modern language-processing
+    systems.
+  </p>
+  <p>
+    The catch is that traditional word embeddings only capture a kind of "average" meaning of any
+    given word--they have no way to take context into account. Transformer architectures are
+    designed to take in a series of words--encoding via context-free word embeddings--and, layer by
+    layer, transform them into "context embeddings." The hope is that these context embeddings will
+    somehow represent useful information about the usage of those words in the particular sentence
+    they appear. In other words, in the input to BERT the word <b><i>hot</i></b> would be
+    represented by the
+    same point in space, no matter whether it appears next to <b><i>dog</i></b>,
+    <b><i>sauce</i></b>, or <b><i>day</i></b>. But in
+    subsequent layers, each <b><i>hot</i></b> would occupy a different point in space.
+
+  </p>
+  <p>
+    In this blog, we describe visualizations that help us explore the geometry of these context
+    embeddings--and which suggest that context embeddings do indeed capture different word senses.
+    We then provide quantitative evidence for that hypothesis, showing that simple classifiers on
+    context embedding data may be used to achieve state-of-the-art results on standard word sense
+    disambiguation tasks. Finally, we show that there is strong evidence for a semantic
+    subspace within the embedding space, similar to the syntactic subspace described by <a
+       href='https://nlp.stanford.edu/pubs/hewitt2019structural.pdf'
+       target='_blank'>Hewitt and
+      Manning</a>, and discussed in the <a
+       href='https://pair-code.github.io/interpretability/bert-tree/'
+       target='_blank'>first post</a> of this series.
+  </p>
+
+  <!-- Vis intro -->
+  <h2>Part 1: <a href='https://storage.googleapis.com/bert-wsd-vis/demo/index.html?#word=lie'
+       target='_blank'>Context Atlas Visualization</a> </h2>
+  <div class='side-note'>See a similar, independently created visualization by David McClure <a
+       href='https://twitter.com/clured/status/1128723800391077888'
+       target='_blank'>here</a>!</div>
+  <p>
+    So, which subtleties are captured in these embeddings, and which are lost? To understand this,
+    we approach the question with a visualization which attempts to isolate the contextual
+    information of a single word across many instances. How does BERT understand the meaning of a
+    given word in each of these contexts?
+  </p>
+  <div class='side-note'>The BERT model comes in several sizes. Our visualization shows results for
+    "BERT-base"</div>
+  <p>
+    When a word (e.g., <b><i>hot</i></b>)is entered, the system retrieves 1,000 sentences from
+    wikipedia that contain <b><i>hot</i></b>. It sends these sentences to BERT as input, and
+    for each one it retrieves the context embedding for <b><i>hot</i></b> at each layer.
+  </p>
+  <div class=side-note>
+    UMAP is a technique for projecting high-dimensional data into a low-dimensional view.
+  </div>
+  <p>
+    The system then visualizes these 1,000 context embeddings using <a
+       href='https://umap-learn.readthedocs.io/en/latest/'
+       target='_blank'>UMAP</a>.
+    The UMAP projection generally shows clear clusters relating to word senses, for example
+    <b><i>hot</i></b> as in <b><i>hot day</i></b> or as in <b><i>hot dog</i></b>. Different senses
+    of a word are typically spatially separated, and within the clusters there is often further
+    structure related to fine shades of meaning.
+  </p>
+  <div class=side-note>
+    We highlight words that appear in many sentences clustered in a small area, as measured by the
+    median distance between sentences containing those words. We also show only as many labels as
+    can fit without overlapping.
+  </div>
+  <p>To make it easier to interpret the visualization without mousing over every point, we added
+    labels of words that are common between sentences in a cluster.</p>
+
+  <!-- Walk -->
+  <h3>Case study:
+    <a href='https://storage.googleapis.com/bert-wsd-vis/demo/index.html?#word=walk'
+       target='_blank'><i><b>Walk</b></i></h3></a>
+  <p>
+    A natural question is whether the space is partitioned by part of speech. Showing the parts of
+    speech can be enabled in the UI with the "show POS" toggle. The dots are then colored by the
+    part of speech of the query word, and the labels are then uncolored.
+  </p>
+  <img src='imgs/walk.png'>
+  <p>Indeed, this is the case. The words are partitioned into nouns and verbs.
+  </p>
+  <div class='row'
+       style='border: none;'>
+    <div><img class='sidegifs'
+           src='imgs/walk_noun.gif'>
+      <div class='caption'> One cluster with sentences using the word walk as a
+        noun, as in "take a walk."
+      </div>
+    </div>
+    <div><img class='sidegifs'
+           src='imgs/walk_verb.gif'>
+      <div class='caption'> The corresponding verb cluster, with sentences such as "they walk."
+      </div>
+    </div>
+  </div>
+
+  <!-- Class -->
+  <h3>Case study:
+    <a href='https://storage.googleapis.com/bert-wsd-vis/demo/index.html?#word=class'
+       target='_blank'><i><b>Class</b></i></h3></a>
+  <p>
+    The separation of clusters goes beyond parts-of-speech.. For the word <i><b>class</b></i>,
+    below, the space is partitioned more subtly. To the top right, there is a cluster of
+    sentences about working class, middle/upper/lower classes, etc. Below is the cluster for the
+    educational sense of the word-- high school classes, students taking classes, etc. Still more
+    clusters can be found for class-action lawsuits, equivalence classes in math, and more.
+  </p>
+  <img src='imgs/class.png'>
+
+
+  <!-- Early layers -->
+  <h3>Early Layers</h3>
+  <p>
+    The previous examples have all used embeddings from the last layer of BERT. But where do these
+    clusters arise, and what do the embeddings look like as they progress through the network?
+  </p>
+  <p>
+    For most words that only have one sense (e.g.,
+    <a href='https://storage.googleapis.com/bert-wsd-vis/demo/index.html?#word=mad'
+       target='_blank'><i><b>mad</b></i></h3></a>,
+    <a href='https://storage.googleapis.com/bert-wsd-vis/demo/index.html?#word=happy'
+       target='_blank'><i><b>happy</b></i></h3></a>, and
+    <a href='https://storage.googleapis.com/bert-wsd-vis/demo/index.html?#word=man'
+       target='_blank'><i><b>man</b></i></h3></a>), the earliest layer (token embeddings +
+    positional embeddings, with one transformer layer) has a canonical spiral pattern. This pattern
+    turns out to be based on the position of the word in the sentence, and reflects the way linear
+    order is encoded into the BERT input. For example, the sentences with <i><b>mad</b></i> as the
+    third word are clustered together, and are between the sentences with <i><b>mad</b></i> as the
+    second word, and those with <i><b>mad</b></i> as the fourth word.
+  </p>
+  <div class='row'>
+    <img class='small'
+         src='imgs/mad layer 0.png'>
+    <img class='small'
+         src='imgs/happy layer 0.png'>
+    <img class='small'
+         src='imgs/man layer 0.png'>
+  </div>
+
+  <div class='side-note'>We have not really explored the reason for this; it could be due either
+    to the vocabularies of different senses being dramatically different, or to the model learning
+    that some words, when combined with <i><b>class</b></i>, change the meaning of the word
+    <i><b>class</b></i> significantly (in contrast to happy, which has a similar meaning in any
+    context.) However, these are both pure conjectures, and more research is necessary.
+  </div>
+  <p>
+    Interestingly, many words (e.g.,
+    <a href='https://storage.googleapis.com/bert-wsd-vis/demo/index.html?#word=civil'
+       target='_blank'><i><b>civil</b></i></h3></a>,
+    <a href='https://storage.googleapis.com/bert-wsd-vis/demo/index.html?#word=class'
+       target='_blank'><i><b>class</b></i></h3></a>, and
+    <a href='https://storage.googleapis.com/bert-wsd-vis/demo/index.html?#word=state'
+       target='_blank'><i><b>state</b></i></h3></a>), do not have this pattern at the first
+    layer. Below are the embeddings for <i><b>class</b></i> at the first layer, which are already
+    semantically clustered.
+  </p>
+  <img src='imgs/class 0.png'>
+
+  <h3>Progression Through Layers</h3>
+  <p>
+    So what about the layers in between? Interestingly, there are often more disparate clusters in
+    the middle of the model. The reason for this is somewhat of an open question. We know from <a
+       href='https://iftenney.users.x20web.corp.google.com/www/papers/1905.05950.pdf'
+       target='_blank'>Tenney et al</a> that BERT performs better on some semantic and syntactic
+    tasks with embeddings from the middle of the model. Perhaps there is some information that is
+    lost towards the later layers in service of some higher level task, that causes the more merged
+    cluster.
+    <p>
+    </p>
+    Another observation is that, towards the end of the network, most of the attention is
+    paid to the CLS and SEP tokens. We’ve conjectured that this could make all clusters merge
+    together to
+    some degree.
+  </p>
+
+  <img src='imgs/happy_layers.gif'>
+
+  <p>
+    The apparent detail in the clusters we visualized raises two immediate questions: first, can we
+    quantitatively demonstrate that BERT embeddings capture word senses? Second, how can we resolve
+    the fact that we observe BERT embeddings capturing semantics, when previously we saw those same
+    embeddings capturing syntax?
+  </p>
+  <h2>Part 2: Quantitative Word Sense Analysis </h2>
+  <p>
+    The crisp clusters seen in the visualizations above suggest that BERT may create simple,
+    effective internal representations of word senses, putting different meanings in different
+    locations.
+  </p>
+  <p>
+    To test this out quantitatively, we trained a simple nearest-neighbor classifier on
+    these embeddings to perform word sense disambiguation (WSD).
+  </p>
+  <div class=side-note>
+    We used the data and evaluation from <a
+       href='http://wwwusers.di.uniroma1.it/~navigli/pubs/EACL_2017_Raganatoetal.pdf'
+       target='_blank'>Raganato et al</a>: the training data was <a
+       href='http://lcl.uniroma1.it/wsdeval/training-data'
+       target='_blank'>SemCor</a> (33,362
+    senses), and the testing data was the suite described by Raganato et al (3,669 senses).
+  </div>
+  <p>
+    We follow the procedure described by <a href='https://arxiv.org/abs/1802.05365'
+       target='_blank'>Peters et al</a>, who performed a similar experiment with the
+    ELMo model. For a given word with n senses, we make a nearest-neighbor classifier where each
+    neighbor is the centroid of a given word sense’s BERT-base embeddings in the training data. To
+    classify a new word we find the closest of these centroids, defaulting to the most commonly used
+    sense if the word was not present in the training data.
+  </p>
+  <p>
+    The simple nearest-neighbor classifier achieves an F1 score of 71.1, higher than the current
+    state of the art, with the accuracy monotonically increasing through the layers. This
+    is a strong signal that context embeddings are representing word-sense information.
+    Additionally, we got an higher score of 71.5 using the technique described in the
+    following section.
+  </p>
+
+  <div class='table'>
+    <div class='table-row header'>
+      <div><i><b>Method</b></i></div>
+      <div><i><b>F1 Score</b></i> </div>
+    </div>
+    <div class='table-row'>
+      <div> Baseline (most frequent case) </div>
+      <div> 64.8</div>
+    </div>
+    <div class='table-row'>
+      <div> ELMO </div>
+      <div>70.1</div>
+    </div>
+    <div class='table-row'>
+      <div> <b>BERT-base</b></div>
+      <div>71.1</div>
+    </div>
+    <div class='table-row'
+         style='border: none'>
+      <div> <b>BERT-base (with probe)</b> </div>
+      <div>71.5</div>
+    </div>
+  </div>
+
+
+  <h2>Part 3: A Subspace for Semantics? </h2>
+  <p>
+    <a href='https://nlp.stanford.edu/pubs/hewitt2019structural.pdf'
+       target='_blank'>Hewitt and
+      Manning</a> found that there was an embedding subspace that appeared to contain syntactic
+    information. We hypothesize that there
+    might also exist a subspace for semantics. That is, a linear transformation under which words of
+    the same sense would be closer together and words of different senses would be further apart.
+  </p>
+  <p>
+    To explore this hypothesis, we trained a probe following Hewitt and Manning’s methodology.
+  </p>
+  <div class=side-note>
+    Our training corpus was the same dataset described in part 2, filtered to include only words
+    with at least two senses, each with at least two occurrences (for 8,542 out of the original
+    33,362 senses).
+  </div>
+  <p>
+    We initialized a random matrix $B\in{R}^{k\times m}$, testing different values for $m$. Loss is,
+    roughly,
+    defined as the difference between the average cosine similarity between embeddings of words with
+    different senses, and that between embeddings of the same sense.
+  </p>
+
+  <div class='table'>
+    <div class='table-row header'>
+      <div style='width:20%'> <i><b>$m$</b></i></div>
+      <div> <i><b>Trained Probe</b></i></div>
+      <div> <i><b>Random Probe</b></i></div>
+    </div>
+
+    <div class='table-row'>
+      <div> 768</div>
+      <div> 71.26</div>
+      <div>70.74</div>
+    </div>
+
+    <div class='table-row'>
+      <div>512</div>
+      <div>71.52 </div>
+      <div>70.51</div>
+    </div>
+
+    <div class='table-row'>
+      <div>256</div>
+      <div>71.29</div>
+      <div>69.92 </div>
+    </div>
+
+    <div class='table-row'>
+      <div> 128</div>
+      <div>71.21</div>
+      <div>69.56</div>
+    </div>
+
+    <div class='table-row'>
+      <div>64</div>
+      <div>70.19</div>
+      <div> 68.00 </div>
+    </div>
+
+    <div class='table-row'>
+      <div> 32 </div>
+      <div> 68.01</div>
+      <div> 64.62</div>
+    </div>
+
+    <div class='table-row'
+         style='border: none'>
+      <div>16</div>
+      <div> 65.34</div>
+      <div> 61.01</div>
+    </div>
+  </div>
+
+  <p>
+    We evaluate our trained probes on the same dataset and WSD task used in part 2. As a control, we
+    compare each trained probe against a random probe of the same shape. As mentioned, untransformed
+    BERT embeddings achieve a state-of-the-art accuracy rate of 71.1%. We find that our trained
+    probes are able to achieve slightly improved accuracy down to $m$ = 128 dimensions.
+  </p>
+  <p>
+    Though our probe achieves only a modest improvement in accuracy for final-layer embeddings, we
+    note that we were able to more dramatically improve the performance of embeddings at earlier
+    layers (see the Appendix in our paper for details: Figure 10). This suggests there is more
+    semantic information in the geometry of earlier-layer embeddings than a first glance might
+    reveal. Our results also support the idea that word sense information may be contained in a
+    lower-dimensional space. This suggests a resolution to the question mentioned above: word
+    embeddings encode both syntax and semantics, but perhaps in separate complementary subspaces.
+  </p>
+  <h2>Conclusion</h2>
+  <p>
+    Since embeddings produced by transformer models depend on context, it is natural to speculate
+    that they capture the particular shade of meaning of a word as used in a particular sentence.
+    (E.g., is <b><i>bark</i></b> an animal noise or part of a tree?) It is still somewhat mysterious
+    how and where this happens, though. Through the explorations described above, we attempt to
+    answer this question both qualitatively and quantitatively with evidence of geometric
+    representations of word sense.
+  </p>
+
+  <span style="color:#999;font-style:italic">
+    Many thanks to David Belanger, Tolga Bolukbasi, Dilip Krishnan, D. Sculley, Jasper Snoek, and
+    Ian Tenney for helpful feedback and discussions about this research. For more details, and
+    results related to syntax as well as semantics, please read our <a
+       href="https://arxiv.org/abs/1906.02715"
+       target='_blank'>full paper</a>! And look for future
+    notes in this series.
+  </span>
+
+</body>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script src='https://unpkg.com/d3-jetpack@2.0.20/build/d3-jetpack.js'></script>
+
+</html>
