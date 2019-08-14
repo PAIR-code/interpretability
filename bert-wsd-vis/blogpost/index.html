@@ -72,6 +72,11 @@ limitations under the License.
        href='https://github.com/PAIR-code/interpretability/tree/master/bert-wsd-vis'
        target='_blank'>code</a>)
   </span>
+  <div class='side-note'>
+    In linguistics, a word sense is one of the meanings of a word (definition from <a
+       href='https://en.wikipedia.org/wiki/Word_sense'
+       target='_blank'>wikipedia</a>.)
+  </div>
   <p>
     Have you ever eaten a hot dog with hot sauce on a hot day? Even if you have not, you still
     understood the question—which is remarkable, since <b><i>hot</i></b> was used in three
@@ -175,6 +180,8 @@ limitations under the License.
     part of speech of the query word, and the labels are then uncolored.
   </p>
   <img src='imgs/walk.png'>
+  <div class='caption'> Visualization of "walk" in various contexts.
+  </div>
   <p>Indeed, this is the case. The words are partitioned into nouns and verbs.
   </p>
   <div class='row'
@@ -214,21 +221,18 @@ limitations under the License.
   </p>
   <p>
     For most words that only have one sense (e.g.,
-    <a href='https://storage.googleapis.com/bert-wsd-vis/demo/index.html?#word=mad'
-       target='_blank'><i><b>mad</b></i></h3></a>,
+
     <a href='https://storage.googleapis.com/bert-wsd-vis/demo/index.html?#word=happy'
-       target='_blank'><i><b>happy</b></i></h3></a>, and
+       target='_blank'><i><b>happy</b></i></h3></a> or
     <a href='https://storage.googleapis.com/bert-wsd-vis/demo/index.html?#word=man'
        target='_blank'><i><b>man</b></i></h3></a>), the earliest layer (token embeddings +
     positional embeddings, with one transformer layer) has a canonical spiral pattern. This pattern
     turns out to be based on the position of the word in the sentence, and reflects the way linear
-    order is encoded into the BERT input. For example, the sentences with <i><b>mad</b></i> as the
-    third word are clustered together, and are between the sentences with <i><b>mad</b></i> as the
-    second word, and those with <i><b>mad</b></i> as the fourth word.
+    order is encoded into the BERT input. For example, the sentences with <i><b>happy</b></i> as the
+    third word are clustered together, and are between the sentences with <i><b>happy</b></i> as the
+    second word, and those with <i><b>happy</b></i> as the fourth word.
   </p>
   <div class='row'>
-    <img class='small'
-         src='imgs/mad layer 0.png'>
     <img class='small'
          src='imgs/happy layer 0.png'>
     <img class='small'
@@ -266,13 +270,14 @@ limitations under the License.
     <p>
     </p>
     Another observation is that, towards the end of the network, most of the attention is
-    paid to the CLS and SEP tokens. We’ve conjectured that this could make all clusters merge
+    paid to the CLS and SEP tokens (special tokens at the beginning and end of the sentence.) We’ve
+    conjectured that this could make all clusters merge
     together to
     some degree.
   </p>
 
   <img src='imgs/happy_layers.gif'>
-
+  <div class='caption'>Embedding clusters change significantly through the layers.</div>
   <p>
     The apparent detail in the clusters we visualized raises two immediate questions: first, can we
     quantitatively demonstrate that BERT embeddings capture word senses? Second, how can we resolve
@@ -439,8 +444,9 @@ limitations under the License.
   </p>
 
   <span style="color:#999;font-style:italic">
-    Many thanks to David Belanger, Tolga Bolukbasi, Dilip Krishnan, D. Sculley, Jasper Snoek, and
-    Ian Tenney for helpful feedback and discussions about this research. For more details, and
+    Many thanks to David Belanger, Tolga Bolukbasi, Dilip Krishnan, D. Sculley, Jasper Snoek, Ian
+    Tenney, and John Hewitt for helpful feedback and discussions about this research. For more
+    details, and
     results related to syntax as well as semantics, please read our <a
        href="https://arxiv.org/abs/1906.02715"
        target='_blank'>full paper</a>! And look for future
