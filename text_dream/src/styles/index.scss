@@ -1,0 +1,107 @@
+// General Properties
+html,
+body {
+  height: 100%;
+  font-family: Roboto, sans-serif;
+}
+
+// Some Content Helpers
+.content {
+  padding: 64px 10px 0px 10px;
+  height: 100%;
+  background-color: #f5f5f5;
+}
+
+.appTitle {
+  flex-grow: 1;
+}
+
+.full {
+  width: 100%;
+  height: 100%;
+}
+
+.fullHeight {
+  height: 100%;
+}
+
+.fullWidth {
+  height: 100%;
+}
+
+.preferencesGrid {
+  height: 100%;
+  width: 300px;
+}
+
+.preferencesWrapper {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.preferencesItem {
+  padding-bottom: 8px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.dreamPaper {
+  padding-bottom: 8px;
+  padding-top: 8px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.inputElement {
+  width: 100%;
+}
+
+.preferencesHeading {
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
+.hiddenInput {
+  visibility: hidden;
+}
+
+div.MuiExpansionPanel-root:before {
+  content: none;
+}
+
+div.MuiPaper-elevation1 {
+  box-shadow: none;
+}
+
+.overflow {
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.headingPaper {
+  padding: 0 10px 0 24px;
+}
+
+.subHeadingPaper {
+  padding: 12px 10px 12px 24px;
+}
+
+// Classes for Styling of individual Elements
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+svg text {
+cursor: default;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
