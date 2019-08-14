@@ -21,9 +21,9 @@ img {
 }
 
 img.small {
-  border: none;
-  width: 30%;
-  flex: 0 0 30%;
+  /* border: none; */
+  width: 50%;
+  flex: 0 0 50%;
 }
 
 img.sidegifs {
