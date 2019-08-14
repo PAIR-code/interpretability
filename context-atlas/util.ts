@@ -56,11 +56,11 @@ export function labelToWordsSet(
 
   // Also add compounds that are the previous word + the query word (and next).
   const idx = words.indexOf(word);
-  if (!commonWords.includes(words[idx - 1])) {
+  if ((idx > 0) && !commonWords.includes(words[idx - 1])) {
     const prevWord = `${words[idx - 1]} ${word}`;
     words.push(prevWord);
   }
-  if (!commonWords.includes(words[idx + 1])) {
+  if ((idx < words.length - 1) && !commonWords.includes(words[idx + 1])) {
     const nextWord = `${word} ${words[idx + 1]}`;
     words.push(nextWord);
   }
