@@ -98,9 +98,11 @@ a:hover {
   position: absolute;
   left: 850px;
   width: 250px;
-  font-size: 14pt;
+  font-size: 12pt;
   color: #999;
   font-style: italic;
+  padding-left: 15px;
+  border-left: 1px solid rgba(255, 179, 68, 0.6);
 }
 
 .note {
