@@ -16,9 +16,9 @@ class ExplanationHead extends React.Component {
   render() {
     var keys = Object.keys(this.props.params);
     var filteredParams = {};
-    for (var i in keys) {
-      if (this.props.params[keys[i]] !== null) {
-        filteredParams[keys[i]] = this.props.params[keys[i]];
+    for (var key of keys) {
+      if (this.props.params[key] !== null) {
+        filteredParams[key] = this.props.params[key];
       }
     }
     keys = Object.keys(filteredParams);

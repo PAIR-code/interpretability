@@ -82,8 +82,7 @@ export function getClosestResult(changed_sentence, magnitudes) {
   var best_sentence = magnitudes[0].results.iterations[
       magnitudes[0].results.iterations.length - 1].sentence;
   var best_score = 0;
-  for (var magnitude in magnitudes) {
-    var mag = magnitudes[magnitude];
+  for (var mag of magnitudes) {
     var score = 0;
     for (var word in changed_sentence) {
       if (mag.results.iterations[mag.results.iterations.length - 1].tokens[

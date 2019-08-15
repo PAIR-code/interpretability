@@ -6,9 +6,6 @@ import * as d3 from "d3";
 const margin = {top: 50, right: 20, bottom: 40, left: 100};
 const width = 800 - margin.left - margin.right;
 const height = 800 - margin.top - margin.bottom;
-var yScale;
-var xScale;
-var mainGroup;
 
 class TopWordsBody extends React.Component {
   componentDidMount() {
@@ -22,16 +19,18 @@ class TopWordsBody extends React.Component {
   updateGraph() {
     let currentResults = this.props.dreamingElement.iterations[
         this.props.dreamingElement.iteration];
-    yScale.domain(currentResults.tokens.map(function(d) {
-      return d;
-    }));
+    var xScale = d3.scaleLinear().domain([0, 1]).range([0, width]);
+    var yScale = d3.scaleBand()
+      .range([0, height])
+      .padding(0.1)
+      .domain(currentResults.tokens.map(function(d) {
+        return d;
+      }));
     let yAxis = d3.axisLeft(yScale);
-
     // select all bars on the graph, take them out, and exit the
     // previous data set. then you can add/enter the new data set
-    var bars = mainGroup.selectAll('.bar').remove().exit().data(
-      currentResults.scores)
-
+    var bars = this.mainGroup.selectAll('.bar').remove().exit().data(
+        currentResults.scores)
     // now actually give each rectangle the corresponding data
     bars.enter()
         .append('rect')
@@ -50,7 +49,7 @@ class TopWordsBody extends React.Component {
             })
         .attr('height', yScale.bandwidth());
 
-    mainGroup.select('.yAxis')
+    this.mainGroup.select('.yAxis')
       .call(yAxis)
       .selectAll('text');
   }
@@ -61,21 +60,21 @@ class TopWordsBody extends React.Component {
       console.log(networkElement.getBoundingClientRect().width);
       console.log(networkElement.getBoundingClientRect().height);
     }
-
     return(
-      <svg width="100%" height="100%" id='topWordsSVG'
-          className='topWordsComponent'/>
+      <svg
+          width="100%"
+          height="100%"
+          className={'topWordsComponent' + this.props.elementIndex}/>
     )
   }
 
   drawChart() {
-    const svg = d3.select('.topWordsComponent');
+    const svg = d3.select('.topWordsComponent' + this.props.elementIndex);
     const currentResults = this.props.dreamingElement.iterations[
         this.props.dreamingElement.iteration];
-
     // Set up the scales and axes for the chart
-    xScale = d3.scaleLinear().domain([0, 1]).range([0, width]);
-    yScale = d3.scaleBand()
+    var xScale = d3.scaleLinear().domain([0, 1]).range([0, width]);
+    var yScale = d3.scaleBand()
       .range([0, height])
       .padding(0.1)
       .domain(currentResults.tokens.map(function(d) {
@@ -83,13 +82,11 @@ class TopWordsBody extends React.Component {
       }));
     let xAxis = d3.axisTop(xScale);
     let yAxis = d3.axisLeft(yScale);
-
     // The group where the chart content lives in
-    mainGroup = svg.append('g').attr(
+    this.mainGroup = svg.append('g').attr(
         'transform', 'translate(' + margin.left + ',' + margin.top + ')');
-
     // Add the bars to the chart
-    mainGroup.selectAll('bar')
+    this.mainGroup.selectAll('bar')
       .data(currentResults.scores)
       .enter()
       .append('rect')
@@ -104,15 +101,13 @@ class TopWordsBody extends React.Component {
           'y',
           function(_, i) { return yScale(currentResults.tokens[i]); })
       .attr('height', yScale.bandwidth());
-
     // Bottom axis of the bar chart
-    mainGroup.append('g')
+    this.mainGroup.append('g')
       .attr('class', 'xAxis')
       .call(xAxis)
       .selectAll('text');
-
     // Left axis of the bar chart
-    mainGroup.append('g')
+    this.mainGroup.append('g')
       .attr('class', 'yAxis')
       .call(yAxis)
       .selectAll('text');
@@ -121,6 +116,7 @@ class TopWordsBody extends React.Component {
 
 TopWordsBody.propTypes = {
   dreamingElement: PropTypes.object.isRequired,
+  elementIndex: PropTypes.number.isRequired,
 }
 
 export default TopWordsBody;

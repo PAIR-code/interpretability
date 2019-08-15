@@ -10,7 +10,7 @@ import ExplanationHead from '../heads/ExplanationHeadComponent';
 import ShiftedResemblingHead from '../heads/ShiftedResemblingHeadComponent';
 
 import * as sentences from '../../sentences';
-import { getMagnitudesProps } from '../../component_processing';
+import { getMagnitudesProps } from '../../cardcontentprocessing';
 
 class Magnitudes extends React.Component {
   render() {

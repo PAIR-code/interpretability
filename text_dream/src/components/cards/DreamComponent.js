@@ -25,7 +25,6 @@ class Dream extends React.Component {
             params={headParams}
             elementIndex={this.props.elementIndex}/>
         <DreamHead
-            results={this.props.results}
             params={this.props.params}
             sentenceParams={sentenceParams}/>
         <div className='overflow'>

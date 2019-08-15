@@ -33,7 +33,6 @@ class DreamHead extends React.Component {
 }
 
 DreamHead.propTypes = {
-  results: PropTypes.object.isRequired,
   params: PropTypes.object.isRequired,
   sentenceParams: PropTypes.object.isRequired
 }

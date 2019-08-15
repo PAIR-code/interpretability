@@ -9,7 +9,7 @@ import ResemblingSentence from '../resembling/ResemblingSentence';
 import ExplanationHead from '../heads/ExplanationHeadComponent';
 
 import { getDreamProps, getResembleProps,
-    getMagnitudesLayerProps } from '../../component_processing';
+    getMagnitudesLayerProps } from '../../cardcontentprocessing';
 
 class Layers extends React.Component {
   render() {

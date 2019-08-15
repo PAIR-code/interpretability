@@ -28,10 +28,10 @@ function iterationsToTypeParams(glyphsParams, iterations, type) {
     iterations: [],
     extremes: {max: 0, min: 0}
   }
-  for (var i in iterations) {
-    glyphsParams[type].iterations.push(iterations[i][type]);
-    if (glyphsParams[type].extremes.max < iterations[i][type]) {
-      glyphsParams[type].extremes.max = iterations[i][type];
+  for (var iteration of iterations) {
+    glyphsParams[type].iterations.push(iteration[type]);
+    if (glyphsParams[type].extremes.max < iteration[type]) {
+      glyphsParams[type].extremes.max = iteration[type];
     }
   }
 }
@@ -54,15 +54,13 @@ function magnitudesToTypeParams(glyphsParams, magnitudes, type) {
     magnitudes: [],
     extremes: {max: 0, min: 0}
   }
-  for (var i in magnitudes) {
-    var lastIteration = magnitudes[i].results.iterations[
-        magnitudes[i].results.iterations.length - 1]
+  for (var magnitude of magnitudes) {
+    var lastIteration = magnitude.results.iterations[
+        magnitude.results.iterations.length - 1]
     glyphsParams[type].magnitudes.push(lastIteration[type]);
-    for (var j in magnitudes[i].results.iterations) {
-      if (glyphsParams[type].extremes.max <
-            magnitudes[i].results.iterations[j][type]) {
-        glyphsParams[type].extremes.max =
-            magnitudes[i].results.iterations[j][type];
+    for (var iteration of magnitude.results.iterations) {
+      if (glyphsParams[type].extremes.max < iteration[type]) {
+        glyphsParams[type].extremes.max = iteration[type];
       }
     }
   }

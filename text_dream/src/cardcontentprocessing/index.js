@@ -30,16 +30,16 @@ export function getDreamProps(layers) {
       'WordID': layers[0].params.word_id,
       'NeuronID': layers[0].params.neuron_id
   }
-  for (var layer in layers) {
-    layerIDs.push(layers[layer].params.layer_id)
+  for (var layer of layers) {
+    layerIDs.push(layer.params.layer_id)
     bodies.push(
       <DreamBody
-          results={layers[layer].results}
-          params={layers[layer].params}
+          results={layer.results}
+          params={layer.params}
           sentenceParams={sentenceParams}/>
     );
-    sentences.push(layers[layer].results.iterations[
-        layers[layer].results.iterations.length - 1].tokens)
+    sentences.push(layer.results.iterations[
+        layer.results.iterations.length - 1].tokens)
   }
   var props = {
       'head': head,
@@ -71,16 +71,16 @@ export function getResembleProps(layers) {
       'WordID': layers[0].params.word_id,
       'NeuronID': layers[0].params.neuron_id
   }
-  for (var layer in layers) {
-    layerIDs.push(layers[layer].params.layer_id)
+  for (var layer of layers) {
+    layerIDs.push(layer.params.layer_id)
     bodies.push(
       <ResembleBody
-          results={layers[layer].results}
-          params={layers[layer].params}
+          results={layer.results}
+          params={layer.params}
           sentenceParams={sentenceParams}/>
     );
-    sentences.push(layers[layer].results.iterations[
-        layers[layer].results.iterations.length - 1].tokens)
+    sentences.push(layer.results.iterations[
+        layer.results.iterations.length - 1].tokens)
   }
   var props = {
       'head': head,
@@ -112,15 +112,15 @@ export function getMagnitudesLayerProps(layers) {
   var head = <ShiftedResemblingHead
       params={layers[0].magnitudes[0].params}
       sentenceParams={sentenceParams}/>
-  for (var layer in layers) {
-    layerIDs.push(layers[layer].magnitudes[0].params.layer_id)
+  for (var layer of layers) {
+    layerIDs.push(layer.magnitudes[0].params.layer_id)
     bodies.push(
       <MagnitudesBody
-          magnitudes={layers[layer].magnitudes}
+          magnitudes={layer.magnitudes}
           sentenceParams={sentenceParams}/>
     );
     sentences.push(getClosestResult(sentenceParams.changedSentence,
-        layers[layer].magnitudes));
+        layer.magnitudes));
   }
   var props = {
       'head': head,
@@ -152,16 +152,16 @@ export function getMagnitudesProps(magnitudes) {
   var head = <ShiftedResemblingHead
       params={magnitudes[0].params}
       sentenceParams={sentenceParams}/>
-  for (var magnitude in magnitudes) {
-    magnitudeValues.push(magnitudes[magnitude].params.shift_magnitude)
+  for (var magnitude of magnitudes) {
+    magnitudeValues.push(magnitude.params.shift_magnitude)
     bodies.push(
       <ShiftedResemblingBody
-          results={magnitudes[magnitude].results}
-          params={magnitudes[magnitude].params}
+          results={magnitude.results}
+          params={magnitude.params}
           sentenceParams={sentenceParams}/>
     );
-    sentences.push(magnitudes[magnitude].results.iterations[
-        magnitudes[magnitude].results.iterations.length - 1].tokens)
+    sentences.push(magnitude.results.iterations[
+        magnitude.results.iterations.length - 1].tokens)
   }
   var props = {
       'head': head,
