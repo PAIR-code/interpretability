@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Grid, ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails,
-    Typography } from '@material-ui/core';
+import {Grid, ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails,
+  Typography} from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 import ResemblingSentence from '../resembling/ResemblingSentence';
@@ -10,29 +10,36 @@ import ExplanationHead from '../heads/ExplanationHeadComponent';
 import ShiftedResemblingHead from '../heads/ShiftedResemblingHeadComponent';
 
 import * as sentences from '../../sentences';
-import { getMagnitudesProps } from '../../cardcontentprocessing';
+import {getMagnitudesProps} from '../../cardcontentprocessing';
 
+/**
+ * Provides a Card Component that Renders multiple Magnitues.
+ */
 class Magnitudes extends React.Component {
+  /**
+   * Renders all the magnitudes for this card.
+   *
+   * @return {jsx} the card to be rendered, containing all the magnitudes
+   */
   render() {
-    //console.log(this.props.magnitudes)
-    var headParams = {
+    const headParams = {
       'LayerID': this.props.magnitudes[0].params.layer_id,
       'WordID': this.props.magnitudes[0].params.word_id,
       'NeuronID': this.props.magnitudes[0].params.neuron_id,
-    }
-    var sentenceParams = sentences.getShiftSentenceParams(
+    };
+    const sentenceParams = sentences.getShiftSentenceParams(
         this.props.magnitudes[0].results,
-        this.props.magnitudes[0].params)
-    var props = getMagnitudesProps(this.props.magnitudes);
+        this.props.magnitudes[0].params);
+    const props = getMagnitudesProps(this.props.magnitudes);
     return (
       <Grid container direction='column' className='fullHeight' wrap='nowrap'>
         <ExplanationHead
-            topic="Shifted Resemble"
-            params={headParams}
-            elementIndex={this.props.elementIndex}/>
+          topic="Shifted Resemble"
+          params={headParams}
+          elementIndex={this.props.elementIndex}/>
         <ShiftedResemblingHead
-            params={this.props.magnitudes[0].params}
-            sentenceParams={sentenceParams}/>
+          params={this.props.magnitudes[0].params}
+          sentenceParams={sentenceParams}/>
         <div className='overflow'>
           {props.bodies.map((body, index) =>
             <ExpansionPanel key={index}>
@@ -65,7 +72,7 @@ class Magnitudes extends React.Component {
 
 Magnitudes.propTypes = {
   magnitudes: PropTypes.array.isRequired,
-  elementIndex: PropTypes.number.isRequired
-}
+  elementIndex: PropTypes.number.isRequired,
+};
 
 export default Magnitudes;

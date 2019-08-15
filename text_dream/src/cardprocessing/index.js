@@ -7,51 +7,59 @@ import Magnitudes from '../components/cards/MagnitudesComponent';
 import ShiftedResembling from '../components/cards/ShiftedResemblingComponent';
 import TopWordsComponent from '../components/cards/TopWordsComponent';
 import SimilarEmbeddingsComponent from
-    '../components/cards/SimilarEmbeddingsComponent';
+  '../components/cards/SimilarEmbeddingsComponent';
 
+/**
+ * Function to get the correct card Component for a dreamingElement.
+ *
+ * @param {object} dreamingElement - the element that should be rendered as a
+ * card.
+ * @param {number} elementIndex - the index of the current element.
+ * @return {object} the card to be rendered.
+ */
 export function getCard(dreamingElement, elementIndex) {
-  var dreamingCard;
+  let dreamingCard;
   switch (dreamingElement.type) {
-    case "dream":
+    case 'dream':
       dreamingCard = <Dream
-          results={dreamingElement.results}
-          params={dreamingElement.params}
-          elementIndex={elementIndex}/>
+        results={dreamingElement.results}
+        params={dreamingElement.params}
+        elementIndex={elementIndex}/>;
       break;
-    case "resemble":
+    case 'resemble':
       dreamingCard = <Resemble
-          results={dreamingElement.results}
-          params={dreamingElement.params}
-          elementIndex={elementIndex}/>
+        results={dreamingElement.results}
+        params={dreamingElement.params}
+        elementIndex={elementIndex}/>;
       break;
-    case "resemble_shifted":
+    case 'resemble_shifted':
       dreamingCard = <ShiftedResembling
-          results={dreamingElement.results}
-          params={dreamingElement.params}
-          elementIndex={elementIndex}/>
+        results={dreamingElement.results}
+        params={dreamingElement.params}
+        elementIndex={elementIndex}/>;
       break;
-    case "top_words":
+    case 'top_words':
       dreamingCard = <TopWordsComponent
-          dreamingElement={dreamingElement}
-          elementIndex={elementIndex}/>
+        dreamingElement={dreamingElement}
+        elementIndex={elementIndex}/>;
       break;
-    case "similar_embeddings":
+    case 'similar_embeddings':
       dreamingCard = <SimilarEmbeddingsComponent
-          dreamingElement={dreamingElement}
-          elementIndex={elementIndex}/>
+        dreamingElement={dreamingElement}
+        elementIndex={elementIndex}/>;
       break;
-    case "magnitudes":
+    case 'magnitudes':
       dreamingCard = <Magnitudes
-          magnitudes={dreamingElement.magnitudes}
-          elementIndex={elementIndex}/>
+        magnitudes={dreamingElement.magnitudes}
+        elementIndex={elementIndex}/>;
       break;
-    case "layers":
+    case 'layers':
       dreamingCard = <Layers
-          layers={dreamingElement.layers}
-          elementIndex={elementIndex}/>
+        layers={dreamingElement.layers}
+        elementIndex={elementIndex}/>;
       break;
     default:
-      dreamingCard = <div></div>
+      dreamingCard = <div></div>;
   }
   return dreamingCard;
 }

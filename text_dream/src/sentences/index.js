@@ -1,44 +1,46 @@
-export function truncate(text, length, end) {
-  if (isNaN(length))
-    length = 10;
-  if (end === undefined)
-    end = "...";
-  if (text.length <= length || text.length - end.length <= length) {
-    return text;
-  } else {
-    return String(text).substring(0, length - end.length) + end;
-  }
-};
-
+/**
+ * Get the params needed for rendering a dream sentence.
+ *
+ * @param {object} results - the results of the dreaming experiment.
+ * @param {object} params - the parameters for the experiment.
+ * @return {object} the parameters needed to render the dream sentence.
+ */
 export function getDreamSentenceParams(results, params) {
-  var iterations = results.iterations;
-  var itWidth = 8 * (iterations[
+  const iterations = results.iterations;
+  const itWidth = 8 * (iterations[
       iterations.length - 1].number.toString().length + 1);
-  var headWidth = itWidth + 24;
-  var sentenceColors = ['black', 'black', 'blue']
-  var target = [...params.tokens];
-  for (var i in target) {
-      if (params.dream_start <= i && params.dream_end >= i) {
-        target[i] = '';
-      }
+  const headWidth = itWidth + 24;
+  const sentenceColors = ['black', 'black', 'blue']
+  const target = [...params.tokens];
+  for (const i in target) {
+    if (params.dream_start <= i && params.dream_end >= i) {
+      target[i] = '';
+    }
   }
   return {
     'itWidth': itWidth,
     'headWidth': headWidth,
     'colors': sentenceColors,
     'target': target,
-    'original': [...params.tokens]
-  }
+    'original': [...params.tokens],
+  };
 }
 
+/**
+ * Get the params needed for rendering a resembling sentence.
+ *
+ * @param {object} results - the results of the resembling experiment.
+ * @param {object} params - the parameters for the experiment.
+ * @return {object} the parameters needed to render the resembling sentence.
+ */
 export function getResembleSentenceParams(results, params) {
-  var iterations = results.iterations;
-  var itWidth = 8 * (iterations[
+  const iterations = results.iterations;
+  const itWidth = 8 * (iterations[
       iterations.length - 1].number.toString().length + 1);
-  var headWidth = itWidth + 24;
-  var sentenceColors = ['green', 'black', 'red']
-  var target = [...params.tokens];
-  for (var i in target) {
+  const headWidth = itWidth + 24;
+  const sentenceColors = ['green', 'black', 'red']
+  const target = [...params.tokens];
+  for (const i in target) {
     if (params.dream_start > i || params.dream_end < i) {
       target[i] = '';
     }
@@ -48,19 +50,27 @@ export function getResembleSentenceParams(results, params) {
     'headWidth': headWidth,
     'colors': sentenceColors,
     'target': target,
-    'original': [...params.tokens]
-  }
+    'original': [...params.tokens],
+  };
 }
 
+/**
+ * Get the params needed for rendering a shifted resembling sentence.
+ *
+ * @param {object} results - the results of the shifted resembling experiment.
+ * @param {object} params - the parameters for the experiment.
+ * @return {object} the parameters needed to render the shifted resembling
+ * sentence.
+ */
 export function getShiftSentenceParams(results, params) {
-  var iterations = results.iterations;
-  var itWidth = 8 * (iterations[
+  const iterations = results.iterations;
+  const itWidth = 8 * (iterations[
       iterations.length - 1].number.toString().length + 1);
-  var headWidth = itWidth + 24;
-  var sentenceColors = ['green', 'black', 'red']
-  var target = [...params.tokens];
-  var changedSentence = [...params.tokens];
-  for (var i in target) {
+  const headWidth = itWidth + 24;
+  const sentenceColors = ['green', 'black', 'red']
+  const target = [...params.tokens];
+  const changedSentence = [...params.tokens];
+  for (const i in target) {
     if (params.shift_start >= i && params.shift_end <= i) {
       target[i] = params.target;
       changedSentence[i] = params.target;
@@ -74,27 +84,36 @@ export function getShiftSentenceParams(results, params) {
     'colors': sentenceColors,
     'target': target,
     'changedSentence': changedSentence,
-    'original': [...params.tokens]
-  }
+    'original': [...params.tokens],
+  };
 }
 
-export function getClosestResult(changed_sentence, magnitudes) {
-  var best_sentence = magnitudes[0].results.iterations[
+/**
+ * Used for getting the result of multiple magnitudes that comes closest to the
+ * target.
+ *
+ * @param {array} changedSentence - the sentence target with some tokens
+ * changed.
+ * @param {array} magnitudes - the results for all the different magnitudes.
+ * @return {array} the sentence that gets closest to the target.
+ */
+export function getClosestResult(changedSentence, magnitudes) {
+  let bestSentence = magnitudes[0].results.iterations[
       magnitudes[0].results.iterations.length - 1].sentence;
-  var best_score = 0;
-  for (var mag of magnitudes) {
-    var score = 0;
-    for (var word in changed_sentence) {
+  let bestScore = 0;
+  for (const mag of magnitudes) {
+    let score = 0;
+    for (const word in changedSentence) {
       if (mag.results.iterations[mag.results.iterations.length - 1].tokens[
-          word] === changed_sentence[word]) {
+          word] === changedSentence[word]) {
         score = score + 1;
       }
     }
-    if (score > best_score) {
-      best_score = score;
-      best_sentence = mag.results.iterations[
-          mag.results.iterations.length - 1].tokens
+    if (score > bestScore) {
+      bestScore = score;
+      bestSentence = mag.results.iterations[
+          mag.results.iterations.length - 1].tokens;
     }
   }
-  return best_sentence;
+  return bestSentence;
 }

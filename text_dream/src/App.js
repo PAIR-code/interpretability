@@ -1,26 +1,28 @@
 import React from 'react';
-import { createStore, applyMiddleware } from 'redux';
-import { Provider } from 'react-redux';
+import {createStore, applyMiddleware} from 'redux';
+import {Provider} from 'react-redux';
 import thunk from 'redux-thunk';
 
-import AppRouter from './AppRouter';
-import TopBar from './components/TopBarComponent'
-import combinedReducers from './reducers';
 import CssBaseline from '@material-ui/core/CssBaseline';
+import {MuiThemeProvider, createMuiTheme} from '@material-ui/core/styles';
+import {blue, red} from '@material-ui/core/colors';
 
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import {blue, red} from '@material-ui/core/colors'
+import AppRouter from './AppRouter';
+import TopBar from './components/TopBarComponent';
+
+import combinedReducers from './reducers';
 
 // Create the Store using all the Reducers and applying the Middleware
 const store = createStore(
-  combinedReducers,
-  applyMiddleware(thunk)
+    combinedReducers,
+    applyMiddleware(thunk)
 );
 
+// Application color theme
 const theme = createMuiTheme({
   palette: {
-    primary: { light: blue[300], main: blue[500], dark: blue[700] },
-    secondary: { light: red[300], main: red[500], dark: red[700] },
+    primary: {light: blue[300], main: blue[500], dark: blue[700]},
+    secondary: {light: red[300], main: red[500], dark: red[700]},
   },
   typography: {
     useNextVariants: true,

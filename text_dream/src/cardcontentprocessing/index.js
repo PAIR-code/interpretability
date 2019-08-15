@@ -4,173 +4,200 @@ import DreamHead from '../components/heads/DreamHeadComponent';
 import DreamBody from '../components/bodies/DreamBodyComponent';
 import ResembleHead from '../components/heads/ResembleHeadComponent';
 import ResembleBody from '../components/bodies/ResembleBodyComponent';
-
-import { getDreamSentenceParams,
-    getResembleSentenceParams,
-    getShiftSentenceParams,
-    getClosestResult} from '../sentences';
-import ShiftedResemblingHead from '../components/heads/ShiftedResemblingHeadComponent';
+import ShiftedResemblingHead from
+  '../components/heads/ShiftedResemblingHeadComponent';
 import MagnitudesBody from '../components/bodies/MagnitudesBodyComponent';
-import ShiftedResemblingBody from '../components/bodies/ShiftedResemblingBodyComponent';
+import ShiftedResemblingBody from
+  '../components/bodies/ShiftedResemblingBodyComponent';
 
+import {
+  getDreamSentenceParams,
+  getResembleSentenceParams,
+  getShiftSentenceParams,
+  getClosestResult} from '../sentences';
+
+/**
+ * Get the properties to be rendered for a dream layers card.
+ *
+ * @param {array} layers - the layers to be included in the card.
+ * @return {object} the properties to be rendered for this card.
+ */
 export function getDreamProps(layers) {
   layers.sort(function(a, b) {
     return a.params.layer_id - b.params.layer_id;
-  })
-  var bodies = [];
-  var sentences = [];
-  var layerIDs = [];
-  var sentenceParams = getDreamSentenceParams(
+  });
+  const bodies = [];
+  const sentences = [];
+  const layerIDs = [];
+  const sentenceParams = getDreamSentenceParams(
       layers[0].results, layers[0].params);
-  var head = <DreamHead
-      params={layers[0].params}
-      sentenceParams={sentenceParams}/>;
-  var topic = 'Dream'
-  var headParams = {
-      'WordID': layers[0].params.word_id,
-      'NeuronID': layers[0].params.neuron_id
-  }
-  for (var layer of layers) {
-    layerIDs.push(layer.params.layer_id)
+  const head = <DreamHead
+    params={layers[0].params}
+    sentenceParams={sentenceParams}/>;
+  const topic = 'Dream';
+  const headParams = {
+    'WordID': layers[0].params.word_id,
+    'NeuronID': layers[0].params.neuron_id,
+  };
+  for (const layer of layers) {
+    layerIDs.push(layer.params.layer_id);
     bodies.push(
-      <DreamBody
+        <DreamBody
           results={layer.results}
           params={layer.params}
           sentenceParams={sentenceParams}/>
     );
     sentences.push(layer.results.iterations[
-        layer.results.iterations.length - 1].tokens)
+        layer.results.iterations.length - 1].tokens);
   }
-  var props = {
-      'head': head,
-      'sentences': sentences,
-      'layerIDs': layerIDs,
-      'topic': topic,
-      'sentenceParams': sentenceParams,
-      'headParams': headParams,
-      'bodies': bodies
-  }
+  const props = {
+    'head': head,
+    'sentences': sentences,
+    'layerIDs': layerIDs,
+    'topic': topic,
+    'sentenceParams': sentenceParams,
+    'headParams': headParams,
+    'bodies': bodies,
+  };
   return props;
 }
 
+/**
+ * Get the properties to be rendered for a resembling layers card.
+ *
+ * @param {array} layers - the layers to be included in the card.
+ * @return {object} the properties to be rendered for this card.
+ */
 export function getResembleProps(layers) {
   layers.sort(function(a, b) {
     return a.params.layer_id - b.params.layer_id;
-  })
-  var bodies = [];
-  var sentences = [];
-  var layerIDs = [];
-  var sentenceParams = getResembleSentenceParams(
+  });
+  const bodies = [];
+  const sentences = [];
+  const layerIDs = [];
+  const sentenceParams = getResembleSentenceParams(
       layers[0].results, layers[0].params);
-  var head = <ResembleHead
-      results={layers[0].results}
-      params={layers[0].params}
-      sentenceParams={sentenceParams}/>;
-  var topic = 'Resemble'
-  var headParams = {
-      'WordID': layers[0].params.word_id,
-      'NeuronID': layers[0].params.neuron_id
-  }
-  for (var layer of layers) {
-    layerIDs.push(layer.params.layer_id)
+  const head = <ResembleHead
+    results={layers[0].results}
+    params={layers[0].params}
+    sentenceParams={sentenceParams}/>;
+  const topic = 'Resemble';
+  const headParams = {
+    'WordID': layers[0].params.word_id,
+    'NeuronID': layers[0].params.neuron_id,
+  };
+  for (const layer of layers) {
+    layerIDs.push(layer.params.layer_id);
     bodies.push(
-      <ResembleBody
+        <ResembleBody
           results={layer.results}
           params={layer.params}
           sentenceParams={sentenceParams}/>
     );
     sentences.push(layer.results.iterations[
-        layer.results.iterations.length - 1].tokens)
+        layer.results.iterations.length - 1].tokens);
   }
-  var props = {
-      'head': head,
-      'sentences': sentences,
-      'layerIDs': layerIDs,
-      'topic': topic,
-      'sentenceParams': sentenceParams,
-      'headParams': headParams,
-      'bodies': bodies
-  }
+  const props = {
+    'head': head,
+    'sentences': sentences,
+    'layerIDs': layerIDs,
+    'topic': topic,
+    'sentenceParams': sentenceParams,
+    'headParams': headParams,
+    'bodies': bodies,
+  };
   return props;
 }
 
+/**
+ * Get the properties to be rendered for a magnitudes layers card.
+ *
+ * @param {array} layers - the layers to be included in the card.
+ * @return {object} the properties to be rendered for this card.
+ */
 export function getMagnitudesLayerProps(layers) {
   layers.sort(function(a, b) {
     return a.magnitudes[0].params.layer_id - b.magnitudes[0].params.layer_id;
-  })
-  var bodies = [];
-  var sentences = [];
-  var layerIDs = [];
-  var sentenceParams = getShiftSentenceParams(
-    layers[0].magnitudes[0].results, layers[0].magnitudes[0].params);
+  });
+  const bodies = [];
+  const sentences = [];
+  const layerIDs = [];
+  const sentenceParams = getShiftSentenceParams(
+      layers[0].magnitudes[0].results, layers[0].magnitudes[0].params);
   sentenceParams.headWidth = sentenceParams.headWidth - 10;
-  var headParams = {
-      'WordID': layers[0].magnitudes[0].params.word_id,
-      'NeuronID': layers[0].magnitudes[0].params.neuron_id
+  const headParams = {
+    'WordID': layers[0].magnitudes[0].params.word_id,
+    'NeuronID': layers[0].magnitudes[0].params.neuron_id,
   };
-  var topic = 'Shift';
-  var head = <ShiftedResemblingHead
-      params={layers[0].magnitudes[0].params}
-      sentenceParams={sentenceParams}/>
-  for (var layer of layers) {
-    layerIDs.push(layer.magnitudes[0].params.layer_id)
+  const topic = 'Shift';
+  const head = <ShiftedResemblingHead
+    params={layers[0].magnitudes[0].params}
+    sentenceParams={sentenceParams}/>
+  for (const layer of layers) {
+    layerIDs.push(layer.magnitudes[0].params.layer_id);
     bodies.push(
-      <MagnitudesBody
+        <MagnitudesBody
           magnitudes={layer.magnitudes}
           sentenceParams={sentenceParams}/>
     );
     sentences.push(getClosestResult(sentenceParams.changedSentence,
         layer.magnitudes));
   }
-  var props = {
-      'head': head,
-      'sentences': sentences,
-      'layerIDs': layerIDs,
-      'topic': topic,
-      'sentenceParams': sentenceParams,
-      'headParams': headParams,
-      'bodies': bodies
-  }
+  const props = {
+    'head': head,
+    'sentences': sentences,
+    'layerIDs': layerIDs,
+    'topic': topic,
+    'sentenceParams': sentenceParams,
+    'headParams': headParams,
+    'bodies': bodies,
+  };
   return props;
 }
 
+/**
+ * Get the properties to be rendered for a shifted resembling magnitudes card.
+ *
+ * @param {array} magnitudes - the magnitudes to be included in the card.
+ * @return {object} the properties to be rendered for this card.
+ */
 export function getMagnitudesProps(magnitudes) {
   magnitudes.sort(function(a, b) {
     return a.params.shift_magnitude - b.params.shift_magnitude;
-  })
-  var bodies = [];
-  var sentences = [];
-  var magnitudeValues = [];
-  var sentenceParams = getShiftSentenceParams(
-    magnitudes[0].results, magnitudes[0].params);
-  var headParams = {
-      'LayerID': magnitudes[0].params.layer_id,
-      'WordID': magnitudes[0].params.word_id,
-      'NeuronID': magnitudes[0].params.neuron_id
+  });
+  const bodies = [];
+  const sentences = [];
+  const magnitudeValues = [];
+  const sentenceParams = getShiftSentenceParams(
+      magnitudes[0].results, magnitudes[0].params);
+  const headParams = {
+    'LayerID': magnitudes[0].params.layer_id,
+    'WordID': magnitudes[0].params.word_id,
+    'NeuronID': magnitudes[0].params.neuron_id,
   };
-  var topic = 'Shift';
-  var head = <ShiftedResemblingHead
-      params={magnitudes[0].params}
-      sentenceParams={sentenceParams}/>
-  for (var magnitude of magnitudes) {
-    magnitudeValues.push(magnitude.params.shift_magnitude)
+  const topic = 'Shift';
+  const head = <ShiftedResemblingHead
+    params={magnitudes[0].params}
+    sentenceParams={sentenceParams}/>;
+  for (const magnitude of magnitudes) {
+    magnitudeValues.push(magnitude.params.shift_magnitude);
     bodies.push(
-      <ShiftedResemblingBody
+        <ShiftedResemblingBody
           results={magnitude.results}
           params={magnitude.params}
           sentenceParams={sentenceParams}/>
     );
     sentences.push(magnitude.results.iterations[
-        magnitude.results.iterations.length - 1].tokens)
+        magnitude.results.iterations.length - 1].tokens);
   }
-  var props = {
-      'head': head,
-      'sentences': sentences,
-      'magnitudeValues': magnitudeValues,
-      'topic': topic,
-      'sentenceParams': sentenceParams,
-      'headParams': headParams,
-      'bodies': bodies
-  }
+  const props = {
+    'head': head,
+    'sentences': sentences,
+    'magnitudeValues': magnitudeValues,
+    'topic': topic,
+    'sentenceParams': sentenceParams,
+    'headParams': headParams,
+    'bodies': bodies,
+  };
   return props;
 }

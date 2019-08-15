@@ -3,16 +3,24 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {bindActionCreators} from 'redux';
 
-import { Grid } from '@material-ui/core';
+import {Grid} from '@material-ui/core';
 
-import * as actions from '../actions'
+import * as actions from '../actions';
 
-import { getCard } from '../cardprocessing';
+import {getCard} from '../cardprocessing';
 
+/**
+ * Component to render Cards of different types.
+ */
 class Card extends React.Component {
+  /**
+   * Renders a card of a specific type.
+   *
+   * @return {jsx} the card component to be rendered.
+   */
   render() {
-    var dreamingCard = getCard(this.props.dreamingElement,
-        this.props.elementIndex)
+    const dreamingCard = getCard(this.props.dreamingElement,
+        this.props.elementIndex);
     return (
       <Grid item xs className='fullHeight'>
         {dreamingCard}
@@ -23,16 +31,29 @@ class Card extends React.Component {
 
 Card.propTypes = {
   dreamingElement: PropTypes.object.isRequired,
-  elementIndex: PropTypes.number.isRequired
-}
+  elementIndex: PropTypes.number.isRequired,
+};
 
-function mapStateToProps(state, _) {
+/**
+ * Mapping the state that this component needs to its props.
+ *
+ * @param {object} state - the application state from where to get needed props.
+ * @param {object} ownProps - optional own properties needed to acess state.
+ * @return {object} the props for this component.
+ */
+function mapStateToProps(state, ownProps) {
   return {
   };
 }
 
+/**
+ * Mapping the actions of redux to this component.
+ *
+ * @param {function} dispatch - called whenever an action is to be dispatched.
+ * @return {object} all the actions bound to this component.
+ */
 function mapDispatchToProps(dispatch) {
-  return {actions: bindActionCreators(actions, dispatch)}
+  return {actions: bindActionCreators(actions, dispatch)};
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Card);
