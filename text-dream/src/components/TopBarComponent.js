@@ -20,15 +20,16 @@ class TopBar extends React.Component {
    * the file pointers.
    */
   addElement = (event) => {
-    const file = event.target.files[0];
-    if (file) {
-      const reader = new window.FileReader();
-      reader.onload = (function(action) {
-        return function(e) {
-          action(JSON.parse(e.target.result));
-        };
-      })(this.props.actions.addDreamingElement);
-      reader.readAsText(file);
+    for (const file of event.target.files) {
+      if (file) {
+        const reader = new window.FileReader();
+        reader.onload = (function(action) {
+          return function(e) {
+            action(JSON.parse(e.target.result));
+          };
+        })(this.props.actions.addDreamingElement);
+        reader.readAsText(file);
+      }
     }
   };
 
@@ -64,7 +65,8 @@ class TopBar extends React.Component {
                 id="icon-button-file"
                 type="file"
                 onChange={this.addElement}
-                onClick={this.onInputClick}/>
+                onClick={this.onInputClick}
+                multiple/>
               <label htmlFor="icon-button-file">
                 <IconButton
                   aria-label="add card"

@@ -5,7 +5,7 @@ import thunk from 'redux-thunk';
 
 import CssBaseline from '@material-ui/core/CssBaseline';
 import {MuiThemeProvider, createMuiTheme} from '@material-ui/core/styles';
-import {blue, red, grey} from '@material-ui/core/colors';
+import {red, grey} from '@material-ui/core/colors';
 
 import AppRouter from './AppRouter';
 import TopBar from './components/TopBarComponent';

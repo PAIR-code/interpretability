@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 
 import * as d3 from 'd3';
-import { getColor } from '../../colors';
+import {getColor} from '../../colors';
 
 const margin = {top: 20, right: 20, bottom: 20, left: 100};
 
