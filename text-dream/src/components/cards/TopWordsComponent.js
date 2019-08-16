@@ -10,7 +10,7 @@ import TopWordsBody from '../bodies/TopWordsBodyComponent';
 /**
  * Providing a Card Component for the TopWords chart in different experiments.
  */
-class TopWords extends React.Component {
+class TopWords extends React.PureComponent {
   /**
    * Rendering the chart card.
    *

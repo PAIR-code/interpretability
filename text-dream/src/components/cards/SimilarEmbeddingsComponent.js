@@ -16,7 +16,7 @@ import * as actions from '../../actions';
  * Provides a Card Component for rendering a chart with similar embedding
  * activations.
  */
-class SimilarEmbeddings extends React.Component {
+class SimilarEmbeddings extends React.PureComponent {
   /**
    * Render the chart with similar embedding activations.
    *

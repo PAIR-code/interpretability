@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import {bindActionCreators} from 'redux';
 
 import {Grid, Typography, Tooltip, Paper, Slider} from '@material-ui/core';
-import { sizing } from '@material-ui/system';
 
 import Input from '@material-ui/core/Input';
 

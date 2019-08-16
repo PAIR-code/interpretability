@@ -12,7 +12,7 @@ import * as sentences from '../../sentences';
 /**
  * Provides a Card Component for resembling results.
  */
-class Resemble extends React.Component {
+class Resemble extends React.PureComponent {
   /**
    * Render the component with the reuslts.
    *

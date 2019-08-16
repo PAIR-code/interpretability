@@ -15,7 +15,7 @@ import {getMagnitudesProps} from '../../cardcontentprocessing';
 /**
  * Provides a Card Component that Renders multiple Magnitues.
  */
-class Magnitudes extends React.Component {
+class Magnitudes extends React.PureComponent {
   /**
    * Renders all the magnitudes for this card.
    *

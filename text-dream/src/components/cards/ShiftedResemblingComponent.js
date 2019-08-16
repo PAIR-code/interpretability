@@ -12,7 +12,7 @@ import * as sentences from '../../sentences';
 /**
  * Provides a Card Component to display shifted resembling results.
  */
-class ShiftedResembling extends React.Component {
+class ShiftedResembling extends React.PureComponent {
   /**
    * Render the results of the shifted resembling run.
    *

@@ -12,14 +12,13 @@ import * as sentences from '../../sentences';
 /**
  * Provides the Dream Card Component.
  */
-class Dream extends React.Component {
+class Dream extends React.PureComponent {
   /**
    * Renders the Dream Card.
    *
    * @return {jsx} the dream card to be rendered
    */
   render() {
-    console.log('test')
     const sentenceParams = sentences.getDreamSentenceParams(
         this.props.results, this.props.params);
     const headParams = {
@@ -50,8 +49,8 @@ class Dream extends React.Component {
 }
 
 Dream.propTypes = {
-  results: PropTypes.object.isRequired,
   params: PropTypes.object.isRequired,
+  results: PropTypes.object.isRequired,
   elementIndex: PropTypes.number.isRequired,
 };
 

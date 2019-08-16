@@ -19,7 +19,7 @@ import {getCardColors} from '../../colors';
 /**
  * Provides a Card Component to render multiple Layers.
  */
-class Layers extends React.Component {
+class Layers extends React.PureComponent {
   /**
    * Called after the component mounted to one-time add the colors this card
    * needs.
@@ -37,6 +37,7 @@ class Layers extends React.Component {
    * @return {jsx} the card with the layers to be rendered
    */
   render() {
+    console.log('test');
     let props;
     switch (this.props.layers[0].type) {
       case 'dream':
