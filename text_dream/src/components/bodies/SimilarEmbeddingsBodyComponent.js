@@ -1,11 +1,10 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 
 import * as d3 from 'd3';
 
-const margin = {top: 50, right: 20, bottom: 40, left: 100};
-const width = 800 - margin.left - margin.right;
-const height = 800 - margin.top - margin.bottom;
+const margin = {top: 20, right: 20, bottom: 20, left: 100};
 
 /**
  * Provides a Body Component for the Similar Embeddings Card.
@@ -15,6 +14,14 @@ class SimilarEmbeddingsBodyComponent extends React.Component {
    * Draws the chart once the component has mounted.
    */
   componentDidMount() {
+    this.drawChart();
+  }
+
+  /**
+   * When this component updates, probably the dimensions have changed,
+   * therefore, redraw the chart.
+   */
+  componentDidUpdate() {
     this.drawChart();
   }
 
@@ -36,59 +43,101 @@ class SimilarEmbeddingsBodyComponent extends React.Component {
    * Draw the chart into the svg.
    */
   drawChart() {
+    // Calculate the dimensions of the chart
+    const sideSubstitute = 20 + margin.right + margin.left;
+    const vertSubstitute = 120 + margin.top + margin.bottom;
+    const width = this.props.cardDimensions.width > sideSubstitute ?
+      this.props.cardDimensions.width - sideSubstitute : 20;
+    const height = this.props.cardDimensions.height > vertSubstitute ?
+      this.props.cardDimensions.height - vertSubstitute : 20;
     const svg = d3.select('.similarEmbeddingsComponent' +
         this.props.elementIndex);
+    // Remove any old chart
+    svg.select('g').remove();
     // Set up the scales and axes for the chart
     const tops = this.props.dreamingElement.tops;
     const maxActivation = tops[0].activation;
-    const maxDistance = tops[tops.length - 1];
-    const xScaleActivation = d3.scaleLinear().domain([0, maxActivation]).range([
-        0, width]);
-    const xScaleDistance = d3.scaleLinear().domain([0, maxDistance]).range([
-        0, width]);
-    // var yScale = d3.scaleBand()
-    //   .range([0, height])
-    //   .padding(0.1)
-    //   .domain(currentResults.tokens.map(function(d) {
-    //     return d;
-    //   }));
-    // let xAxis = d3.axisTop(xScale);
-    // let yAxis = d3.axisLeft(yScale);
-    // // The group where the chart content lives in
-    // this.mainGroup = svg.append('g').attr(
-    //     'transform', 'translate(' + margin.left + ',' + margin.top + ')');
-    // // Add the bars to the chart
-    // this.mainGroup.selectAll('bar')
-    //   .data(currentResults.scores)
-    //   .enter()
-    //   .append('rect')
-    //   .style('fill', 'steelblue')
-    //   .attr('x', 0)
-    //   .attr(
-    //       'width',
-    //       function(d) {
-    //         return xScale(d)
-    //       })
-    //   .attr(
-    //       'y',
-    //       function(_, i) { return yScale(currentResults.tokens[i]); })
-    //   .attr('height', yScale.bandwidth());
-    // // Bottom axis of the bar chart
-    // this.mainGroup.append('g')
-    //   .attr('class', 'xAxis')
-    //   .call(xAxis)
-    //   .selectAll('text');
-    // // Left axis of the bar chart
-    // this.mainGroup.append('g')
-    //   .attr('class', 'yAxis')
-    //   .call(yAxis)
-    //   .selectAll('text');
+    let minActivation = 0;
+    for (const top of tops) {
+      minActivation = top.activation < minActivation ? top.activation :
+          minActivation;
+    }
+    const xScaleActivation = d3.scaleLinear().domain([minActivation,
+      maxActivation]).range([0, width]);
+    const xScaleDistance = d3.scaleLinear().domain([0,
+      this.props.dreamingElement.furthest]).range([
+      0, width]);
+    const yScale = d3.scaleBand()
+        .range([0, height])
+        .padding(0.1)
+        .domain(tops.map(function(d) {
+          return d.token;
+        }));
+    const yAxis = d3.axisLeft(yScale);
+    // The group where the chart content lives in
+    this.mainGroup = svg.append('g').attr(
+        'transform', 'translate(' + margin.left + ',' + margin.top + ')');
+    // Add the activation bars to the chart
+    this.mainGroup.selectAll('bar')
+        .data(tops)
+        .enter()
+        .append('rect')
+        .style('fill', 'steelblue')
+        .attr('x', 0)
+        .attr(
+            'width',
+            function(d) {
+              return xScaleActivation(d.activation);
+            })
+        .attr(
+            'y',
+            function(d) {
+              return yScale(d.token);
+            })
+        .attr('height', yScale.bandwidth()/2.0);
+    // Add the distance bars to the chart
+    this.mainGroup.selectAll('bar')
+        .data(tops)
+        .enter()
+        .append('rect')
+        .style('fill', 'red')
+        .attr('x', 0)
+        .attr(
+            'width',
+            function(d) {
+              return xScaleDistance(d.distance);
+            })
+        .attr(
+            'y',
+            function(d) {
+              return yScale(d.token)+yScale.bandwidth()/2.0;
+            })
+        .attr('height', yScale.bandwidth()/2.0);
+    // Left axis of the bar chart
+    this.mainGroup.append('g')
+        .attr('class', 'yAxis')
+        .call(yAxis)
+        .selectAll('text');
   }
 }
 
 SimilarEmbeddingsBodyComponent.propTypes = {
   dreamingElement: PropTypes.object.isRequired,
   elementIndex: PropTypes.number.isRequired,
+  cardDimensions: PropTypes.object.isRequired,
 };
 
-export default SimilarEmbeddingsBodyComponent;
+/**
+ * Mapping the state that this component needs to its props.
+ *
+ * @param {object} state - the application state from where to get needed props.
+ * @param {object} ownProps - optional own properties needed to acess state.
+ * @return {object} the props for this component.
+ */
+function mapStateToProps(state, ownProps) {
+  return {
+    cardDimensions: state.cardDimensions,
+  };
+}
+
+export default connect(mapStateToProps)(SimilarEmbeddingsBodyComponent);

@@ -83,18 +83,6 @@ TopBar.propTypes = {
 };
 
 /**
- * Mapping the state that this component needs to its props.
- *
- * @param {object} state - the application state from where to get needed props.
- * @param {object} ownProps - optional own properties needed to acess state.
- * @return {object} the props for this component.
- */
-function mapStateToProps(state, ownProps) {
-  return {
-  };
-}
-
-/**
  * Mapping the actions of redux to this component.
  *
  * @param {function} dispatch - called whenever an action is to be dispatched.
@@ -104,4 +92,4 @@ function mapDispatchToProps(dispatch) {
   return {actions: bindActionCreators(actions, dispatch)};
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(TopBar);
+export default connect(null, mapDispatchToProps)(TopBar);

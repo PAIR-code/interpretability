@@ -44,3 +44,13 @@ export function removeDreamingElement(index) {
 export function changeDreamingElementIteration(iteration, index) {
   return {type: types.CHANGE_DREAMING_ELEMENT_ITERATION, iteration, index};
 }
+
+/**
+ * Triggers the change of the dimension property for cards displayed.
+ *
+ * @param {object} dimensions - the new card dimensions to write to the state.
+ * @return {object} the action to be dispatched for this change.
+ */
+export function changeCardDimensions(dimensions) {
+  return {type: types.CHANGE_CARD_DIMENSIONS, dimensions};
+}

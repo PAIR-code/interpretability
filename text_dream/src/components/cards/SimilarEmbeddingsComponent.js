@@ -27,7 +27,6 @@ class SimilarEmbeddings extends React.Component {
       'LayerID': this.props.dreamingElement.layer_id,
       'WordID': this.props.dreamingElement.word_id,
       'NeuronID': this.props.dreamingElement.neuron_id,
-      'ChangeID': this.props.dreamingElement.change_word,
     };
     const target = [...this.props.dreamingElement.tokens];
     for (const tokenID in this.props.dreamingElement.tokens) {
@@ -46,7 +45,7 @@ class SimilarEmbeddings extends React.Component {
     return (
       <Grid container direction='column' className='fullHeight' wrap='nowrap'>
         <ExplanationHead
-          topic="Top Words"
+          topic="Similar Embeddings"
           params={headParams}
           elementIndex={this.props.elementIndex}/>
         <DreamHead
@@ -70,18 +69,6 @@ SimilarEmbeddings.propTypes = {
 };
 
 /**
- * Mapping the state that this component needs to its props.
- *
- * @param {object} state - the application state from where to get needed props.
- * @param {object} ownProps - optional own properties needed to acess state.
- * @return {object} the props for this component.
- */
-function mapStateToProps(state, ownProps) {
-  return {
-  };
-}
-
-/**
  * Mapping the actions of redux to this component.
  *
  * @param {function} dispatch - called whenever an action is to be dispatched.
@@ -91,4 +78,4 @@ function mapDispatchToProps(dispatch) {
   return {actions: bindActionCreators(actions, dispatch)};
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(SimilarEmbeddings);
+export default connect(null, mapDispatchToProps)(SimilarEmbeddings);

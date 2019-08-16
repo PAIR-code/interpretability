@@ -132,7 +132,7 @@ export function getMagnitudesLayerProps(layers) {
   const topic = 'Shift';
   const head = <ShiftedResemblingHead
     params={layers[0].magnitudes[0].params}
-    sentenceParams={sentenceParams}/>
+    sentenceParams={sentenceParams}/>;
   for (const layer of layers) {
     layerIDs.push(layer.magnitudes[0].params.layer_id);
     bodies.push(

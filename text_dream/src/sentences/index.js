@@ -10,7 +10,7 @@ export function getDreamSentenceParams(results, params) {
   const itWidth = 8 * (iterations[
       iterations.length - 1].number.toString().length + 1);
   const headWidth = itWidth + 24;
-  const sentenceColors = ['black', 'black', 'blue']
+  const sentenceColors = ['black', 'black', 'blue'];
   const target = [...params.tokens];
   for (const i in target) {
     if (params.dream_start <= i && params.dream_end >= i) {
@@ -38,7 +38,7 @@ export function getResembleSentenceParams(results, params) {
   const itWidth = 8 * (iterations[
       iterations.length - 1].number.toString().length + 1);
   const headWidth = itWidth + 24;
-  const sentenceColors = ['green', 'black', 'red']
+  const sentenceColors = ['green', 'black', 'red'];
   const target = [...params.tokens];
   for (const i in target) {
     if (params.dream_start > i || params.dream_end < i) {
@@ -67,7 +67,7 @@ export function getShiftSentenceParams(results, params) {
   const itWidth = 8 * (iterations[
       iterations.length - 1].number.toString().length + 1);
   const headWidth = itWidth + 24;
-  const sentenceColors = ['green', 'black', 'red']
+  const sentenceColors = ['green', 'black', 'red'];
   const target = [...params.tokens];
   const changedSentence = [...params.tokens];
   for (const i in target) {

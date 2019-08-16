@@ -3,9 +3,9 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {bindActionCreators} from 'redux';
 
-import {Grid} from '@material-ui/core';
-
 import * as actions from '../actions';
+
+import {Grid} from '@material-ui/core';
 
 import CardComponent from './CardComponent';
 
@@ -13,6 +13,22 @@ import CardComponent from './CardComponent';
  * The Main Component holding all the cards of the visualization.
  */
 class Main extends React.Component {
+  /**
+   * Called whenever this component updates its state to set the card
+   * dimensions.
+   */
+  componentDidUpdate() {
+    if (this.props.dreamingElements.length > 0) {
+      const cardElement = document.getElementById('cardItem');
+      if (cardElement != null) {
+        this.props.actions.changeCardDimensions({
+          'width': cardElement.getBoundingClientRect().width,
+          'height': cardElement.getBoundingClientRect().height,
+        });
+      }
+    }
+  }
+
   /**
    * Renders the main component containing all the cards.
    *
@@ -38,6 +54,7 @@ class Main extends React.Component {
 
 Main.propTypes = {
   dreamingElements: PropTypes.array.isRequired,
+  actions: PropTypes.object.isRequired,
 };
 
 /**
