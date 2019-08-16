@@ -8,11 +8,16 @@ import * as types from '../actions/types';
  * @param {object} action - the action that is issued to manipulate the state.
  * @return {object} the state after handling the actiton.
  */
-export default function cardDimensionsReducer(
-    state = initialState.cardDimensions, action) {
+export default function activeColorsReducer(
+    state = initialState.activeColors, action) {
   switch (action.type) {
-    case types.CHANGE_CARD_DIMENSIONS:
-      return action.dimensions;
+    case types.ADD_ACTIVE_COLORS:
+      return state.concat([action.colors]);
+    case types.REMOVE_ACTIVE_COLORS: {
+      const removedColorsState = [...state];
+      removedColorsState.splice(action.index, 1);
+      return removedColorsState;
+    }
     default:
       return state;
   }

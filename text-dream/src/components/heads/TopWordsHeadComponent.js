@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import {bindActionCreators} from 'redux';
 
 import {Grid, Typography, Tooltip, Paper, Slider} from '@material-ui/core';
+import { sizing } from '@material-ui/system';
+
 import Input from '@material-ui/core/Input';
 
 import * as actions from '../../actions';
@@ -47,7 +49,7 @@ class TopWordsHead extends React.Component {
           style={{backgroundColor: '#DDDDDD'}} square>
           <Grid container direction='row' spacing={1} alignItems="center">
             <Tooltip title="Input Sentence" placement="top">
-              <Grid item>
+              <Grid item style={{paddingRight: 10}}>
                 <Typography variant="body1" color="inherit">
                   Iteration:
                 </Typography>
@@ -59,10 +61,9 @@ class TopWordsHead extends React.Component {
                 onChange={this.handleSliderChange}
                 max={this.props.maxIterations}
                 aria-labelledby="input-slider"
-                className='inputElement'
               />
             </Grid>
-            <Grid item>
+            <Grid item style={{paddingLeft: 10}}>
               <Input
                 value={this.props.dreamingElement.iteration}
                 margin="dense"

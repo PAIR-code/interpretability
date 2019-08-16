@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 
 import * as d3 from 'd3';
+import { getColor } from '../../colors';
 
 const margin = {top: 50, right: 20, bottom: 40, left: 100};
 
@@ -64,7 +65,7 @@ class TopWordsBody extends React.Component {
     bars.enter()
         .append('rect')
         .attr('class', 'bar')
-        .style('fill', 'steelblue')
+        .style('fill', getColor('distribution'))
         .attr('x', 0)
         .attr(
             'width',
@@ -132,7 +133,7 @@ class TopWordsBody extends React.Component {
         .data(currentResults.scores)
         .enter()
         .append('rect')
-        .style('fill', 'steelblue')
+        .style('fill', getColor('distribution'))
         .attr('x', 0)
         .attr(
             'width',

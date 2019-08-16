@@ -41,7 +41,6 @@ class Main extends React.Component {
           <Grid container direction='row' className='fullHeight' spacing={1}>
             {this.props.dreamingElements.map((element, index) =>
               <CardComponent
-                dreamingElement={element}
                 elementIndex={index}
                 key={index}/>
             )}

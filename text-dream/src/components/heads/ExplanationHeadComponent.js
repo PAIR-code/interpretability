@@ -19,6 +19,7 @@ class ExplanationHead extends React.Component {
    */
   closeButtonClicked = () => {
     this.props.actions.removeDreamingElement(this.props.elementIndex);
+    this.props.actions.removeActiveColors(this.props.elementIndex);
   }
 
   /**

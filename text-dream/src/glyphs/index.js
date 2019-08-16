@@ -1,3 +1,5 @@
+import {getColor} from '../colors';
+
 /**
  * Converts iteration results to glyph parameters.
  *
@@ -8,23 +10,23 @@ export function iterationsToGlyphsParams(iterations) {
   const glyphsParams = {};
   if (Object.prototype.hasOwnProperty.call(iterations[0], 'temperature')) {
     iterationsToTypeParams(glyphsParams, iterations, 'temperature');
-    glyphsParams['temperature'].color = '#3f51b5';
+    glyphsParams['temperature'].color = getColor('temperature');
   }
   if (Object.prototype.hasOwnProperty.call(iterations[0], 'loss')) {
     iterationsToTypeParams(glyphsParams, iterations, 'loss');
-    glyphsParams['loss'].color = '#795548';
+    glyphsParams['loss'].color = getColor('loss');
   }
   if (Object.prototype.hasOwnProperty.call(iterations[0], 'ids_loss')) {
     iterationsToTypeParams(glyphsParams, iterations, 'ids_loss');
-    glyphsParams['ids_loss'].color = '#9c27b0';
+    glyphsParams['ids_loss'].color = getColor('ids_loss');
   }
   if (Object.prototype.hasOwnProperty.call(iterations[0], 'activation')) {
     iterationsToTypeParams(glyphsParams, iterations, 'activation');
-    glyphsParams['activation'].color = '#795548';
+    glyphsParams['activation'].color = getColor('activation');
   }
   if (Object.prototype.hasOwnProperty.call(iterations[0], 'ids_activation')) {
     iterationsToTypeParams(glyphsParams, iterations, 'ids_activation');
-    glyphsParams['ids_activation'].color = '#9c27b0';
+    glyphsParams['ids_activation'].color = getColor('ids_activation');
   }
   return glyphsParams;
 }
@@ -61,11 +63,11 @@ export function magnitudesToGlyphsParams(magnitudes) {
   const firstIteration = magnitudes[0].results.iterations[0];
   if (Object.prototype.hasOwnProperty.call(firstIteration, 'loss')) {
     magnitudesToTypeParams(glyphsParams, magnitudes, 'loss');
-    glyphsParams['loss'].color = '#795548';
+    glyphsParams['loss'].color = getColor('loss');
   }
   if (Object.prototype.hasOwnProperty.call(firstIteration, 'ids_loss')) {
     magnitudesToTypeParams(glyphsParams, magnitudes, 'ids_loss');
-    glyphsParams['ids_loss'].color = '#9c27b0';
+    glyphsParams['ids_loss'].color = getColor('ids_loss');
   }
   return glyphsParams;
 }

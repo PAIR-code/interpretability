@@ -1,5 +1,9 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
+import {bindActionCreators} from 'redux';
+
+import * as actions from '../../actions';
 
 import {Grid, ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails,
   Typography} from '@material-ui/core';
@@ -10,11 +14,23 @@ import ExplanationHead from '../heads/ExplanationHeadComponent';
 
 import {getDreamProps, getResembleProps,
   getMagnitudesLayerProps} from '../../cardcontentprocessing';
+import {getCardColors} from '../../colors';
 
 /**
  * Provides a Card Component to render multiple Layers.
  */
 class Layers extends React.Component {
+  /**
+   * Called after the component mounted to one-time add the colors this card
+   * needs.
+   */
+  componentDidMount() {
+    const cardType = this.props.layers[0].type;
+    const colors = cardType === 'magnitudes' ?
+        getCardColors('layerMagnitudes') : getCardColors(cardType);
+    this.props.actions.addActiveColors(colors);
+  }
+
   /**
    * Renders all the layers of this Card.
    *
@@ -76,6 +92,17 @@ class Layers extends React.Component {
 Layers.propTypes = {
   layers: PropTypes.array.isRequired,
   elementIndex: PropTypes.number.isRequired,
+  actions: PropTypes.object.isRequired,
 };
 
-export default Layers;
+/**
+ * Mapping the actions of redux to this component.
+ *
+ * @param {function} dispatch - called whenever an action is to be dispatched.
+ * @return {object} all the actions bound to this component.
+ */
+function mapDispatchToProps(dispatch) {
+  return {actions: bindActionCreators(actions, dispatch)};
+}
+
+export default connect(null, mapDispatchToProps)(Layers);

@@ -7,6 +7,7 @@ import {Typography, Toolbar, AppBar, IconButton} from '@material-ui/core';
 import Add from '@material-ui/icons/Add';
 
 import * as actions from '../actions';
+import Legend from './legend/LegendComponent';
 
 /**
  * Providing a TopBar for the application with some controls.
@@ -54,23 +55,28 @@ class TopBar extends React.Component {
           <Typography variant="h6" color="inherit" className="appTitle">
             TextDreams
           </Typography>
-          <input
-            accept="text/json"
-            className="hiddenInput"
-            id="icon-button-file"
-            type="file"
-            onChange={this.addElement}
-            onClick={this.onInputClick}/>
-          <label htmlFor="icon-button-file">
-            <IconButton
-              aria-label="add card"
-              component="span"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              color="inherit">
-              <Add />
-            </IconButton>
-          </label>
+          <div className='wrapper'>
+            <Legend/>
+            <div>
+              <input
+                accept="text/json"
+                className="hiddenInput"
+                id="icon-button-file"
+                type="file"
+                onChange={this.addElement}
+                onClick={this.onInputClick}/>
+              <label htmlFor="icon-button-file">
+                <IconButton
+                  aria-label="add card"
+                  component="span"
+                  aria-controls="menu-appbar"
+                  aria-haspopup="true"
+                  color="inherit">
+                  <Add />
+                </IconButton>
+              </label>
+            </div>
+          </div>
         </Toolbar>
       </AppBar>
     );

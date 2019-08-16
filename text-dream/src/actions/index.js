@@ -54,3 +54,23 @@ export function changeDreamingElementIteration(iteration, index) {
 export function changeCardDimensions(dimensions) {
   return {type: types.CHANGE_CARD_DIMENSIONS, dimensions};
 }
+
+/**
+ * Triggers the addition of a active colors used in the visualization.
+ *
+ * @param {object} colors - the colors to be added to the state.
+ * @return {object} the action to be dispatched for this change.
+ */
+export function addActiveColors(colors) {
+  return {type: types.ADD_ACTIVE_COLORS, colors};
+}
+
+/**
+ * Triggers the removal of active colors from the state.
+ *
+ * @param {number} index - the index of the colors to be removed.
+ * @return {object} the action to be dispatched for this change.
+ */
+export function removeActiveColors(index) {
+  return {type: types.REMOVE_ACTIVE_COLORS, index};
+}

@@ -19,6 +19,7 @@ class Dream extends React.Component {
    * @return {jsx} the dream card to be rendered
    */
   render() {
+    console.log('test')
     const sentenceParams = sentences.getDreamSentenceParams(
         this.props.results, this.props.params);
     const headParams = {

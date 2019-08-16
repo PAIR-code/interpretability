@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 
 import * as d3 from 'd3';
+import { getColor } from '../../colors';
 
 const margin = {top: 20, right: 20, bottom: 20, left: 100};
 
@@ -82,7 +83,7 @@ class SimilarEmbeddingsBodyComponent extends React.Component {
         .data(tops)
         .enter()
         .append('rect')
-        .style('fill', 'steelblue')
+        .style('fill', getColor('activation'))
         .attr('x', 0)
         .attr(
             'width',
@@ -101,7 +102,7 @@ class SimilarEmbeddingsBodyComponent extends React.Component {
         .data(tops)
         .enter()
         .append('rect')
-        .style('fill', 'red')
+        .style('fill', getColor('distance'))
         .attr('x', 0)
         .attr(
             'width',
