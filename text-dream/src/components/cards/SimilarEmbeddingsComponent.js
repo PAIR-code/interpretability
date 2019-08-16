@@ -23,6 +23,7 @@ class SimilarEmbeddings extends React.PureComponent {
    * @return {jsx} the component to be rendered.
    */
   render() {
+    console.log(this.props.dreamingElement);
     const headParams = {
       'LayerID': this.props.dreamingElement.layer_id,
       'WordID': this.props.dreamingElement.word_id,

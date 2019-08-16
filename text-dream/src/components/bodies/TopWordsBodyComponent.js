@@ -38,7 +38,7 @@ class TopWordsBody extends React.Component {
   updateGraph() {
     // Calculate the dimensions of the chart
     const sideSubstitute = 20 + margin.right + margin.left;
-    const vertSubstitute = 120 + margin.top + margin.bottom;
+    const vertSubstitute = 170 + margin.top + margin.bottom;
     const width = this.props.cardDimensions.width > sideSubstitute ?
       this.props.cardDimensions.width - sideSubstitute : 20;
     const height = this.props.cardDimensions.height > vertSubstitute ?
@@ -104,7 +104,7 @@ class TopWordsBody extends React.Component {
   drawChart() {
     // Calculate the dimensions of the chart
     const sideSubstitute = 20 + margin.right + margin.left;
-    const vertSubstitute = 120 + margin.top + margin.bottom;
+    const vertSubstitute = 170 + margin.top + margin.bottom;
     const width = this.props.cardDimensions.width > sideSubstitute ?
       this.props.cardDimensions.width - sideSubstitute : 20;
     const height = this.props.cardDimensions.height > vertSubstitute ?
