@@ -54,9 +54,11 @@ class TopWordsBody extends React.Component {
           return d;
         }));
     const yAxis = d3.axisLeft(yScale);
+    const svg = d3.select('.topWordsComponent' + this.props.elementIndex);
+    const mainGroup = svg.select('g');
     // select all bars on the graph, take them out, and exit the
     // previous data set. then you can add/enter the new data set
-    const bars = this.mainGroup.selectAll('.bar').remove().exit().data(
+    const bars = mainGroup.selectAll('.bar').remove().exit().data(
         currentResults.scores);
     // now actually give each rectangle the corresponding data
     bars.enter()
@@ -76,7 +78,7 @@ class TopWordsBody extends React.Component {
             })
         .attr('height', yScale.bandwidth());
 
-    this.mainGroup.select('.yAxis')
+    mainGroup.select('.yAxis')
         .call(yAxis)
         .selectAll('text');
   }
@@ -123,10 +125,10 @@ class TopWordsBody extends React.Component {
     const xAxis = d3.axisTop(xScale);
     const yAxis = d3.axisLeft(yScale);
     // The group where the chart content lives in
-    this.mainGroup = svg.append('g').attr(
+    const mainGroup = svg.append('g').attr(
         'transform', 'translate(' + margin.left + ',' + margin.top + ')');
     // Add the bars to the chart
-    this.mainGroup.selectAll('bar')
+    mainGroup.selectAll('bar')
         .data(currentResults.scores)
         .enter()
         .append('rect')
@@ -144,12 +146,12 @@ class TopWordsBody extends React.Component {
             })
         .attr('height', yScale.bandwidth());
     // Bottom axis of the bar chart
-    this.mainGroup.append('g')
+    mainGroup.append('g')
         .attr('class', 'xAxis')
         .call(xAxis)
         .selectAll('text');
     // Left axis of the bar chart
-    this.mainGroup.append('g')
+    mainGroup.append('g')
         .attr('class', 'yAxis')
         .call(yAxis)
         .selectAll('text');

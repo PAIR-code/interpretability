@@ -75,10 +75,10 @@ class SimilarEmbeddingsBodyComponent extends React.Component {
         }));
     const yAxis = d3.axisLeft(yScale);
     // The group where the chart content lives in
-    this.mainGroup = svg.append('g').attr(
+    const mainGroup = svg.append('g').attr(
         'transform', 'translate(' + margin.left + ',' + margin.top + ')');
     // Add the activation bars to the chart
-    this.mainGroup.selectAll('bar')
+    mainGroup.selectAll('bar')
         .data(tops)
         .enter()
         .append('rect')
@@ -95,8 +95,9 @@ class SimilarEmbeddingsBodyComponent extends React.Component {
               return yScale(d.token);
             })
         .attr('height', yScale.bandwidth()/2.0);
+
     // Add the distance bars to the chart
-    this.mainGroup.selectAll('bar')
+    mainGroup.selectAll('bar')
         .data(tops)
         .enter()
         .append('rect')
@@ -114,7 +115,7 @@ class SimilarEmbeddingsBodyComponent extends React.Component {
             })
         .attr('height', yScale.bandwidth()/2.0);
     // Left axis of the bar chart
-    this.mainGroup.append('g')
+    mainGroup.append('g')
         .attr('class', 'yAxis')
         .call(yAxis)
         .selectAll('text');
