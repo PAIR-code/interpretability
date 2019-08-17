@@ -90,12 +90,27 @@ class TokenSearchBodyComponent extends React.Component {
             function(d) {
               return yScale(d.token);
             })
-        .attr('height', yScale.bandwidth()/2.0);
+        .attr('height', yScale.bandwidth());
+    // Add a label to each of the bars
+    mainGroup.selectAll('text')
+        .data(tops)
+        .enter()
+        .append('text')
+        .attr('y', function(d) {
+          return yScale(d.token) + yScale.bandwidth() / 2 + 5;
+        })
+        .attr('x', function(d) {
+          return 3;
+        })
+        .text(function(d) {
+          return d.activation.toFixed(4);
+        });
     // Left axis of the bar chart
     mainGroup.append('g')
         .attr('class', 'yAxis')
         .call(yAxis)
-        .selectAll('text');
+        .selectAll('text')
+        .style('font-size', '0.875rem');
   }
 }
 

@@ -150,12 +150,14 @@ class TopWordsBody extends React.Component {
     mainGroup.append('g')
         .attr('class', 'xAxis')
         .call(xAxis)
-        .selectAll('text');
+        .selectAll('text')
+        .style('font-size', '0.875rem');
     // Left axis of the bar chart
     mainGroup.append('g')
         .attr('class', 'yAxis')
         .call(yAxis)
-        .selectAll('text');
+        .selectAll('text')
+        .style('font-size', '0.875rem');
   }
 }
 

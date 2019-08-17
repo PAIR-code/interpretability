@@ -15,18 +15,26 @@ export function iterationsToGlyphsParams(iterations) {
   if (Object.prototype.hasOwnProperty.call(iterations[0], 'loss')) {
     iterationsToTypeParams(glyphsParams, iterations, 'loss');
     glyphsParams['loss'].color = getColor('loss');
-  }
-  if (Object.prototype.hasOwnProperty.call(iterations[0], 'ids_loss')) {
-    iterationsToTypeParams(glyphsParams, iterations, 'ids_loss');
-    glyphsParams['ids_loss'].color = getColor('ids_loss');
+    if (Object.prototype.hasOwnProperty.call(iterations[0], 'ids_loss')) {
+      iterationsToTypeParams(glyphsParams, iterations, 'ids_loss');
+      glyphsParams['ids_loss'].color = getColor('ids_loss');
+      const maxLoss = Math.max(glyphsParams['loss'].extremes.max,
+          glyphsParams['ids_loss'].extremes.max);
+      glyphsParams['loss'].extremes.max = maxLoss;
+      glyphsParams['ids_loss'].extremes.max = maxLoss;
+    }
   }
   if (Object.prototype.hasOwnProperty.call(iterations[0], 'activation')) {
     iterationsToTypeParams(glyphsParams, iterations, 'activation');
     glyphsParams['activation'].color = getColor('activation');
-  }
-  if (Object.prototype.hasOwnProperty.call(iterations[0], 'ids_activation')) {
-    iterationsToTypeParams(glyphsParams, iterations, 'ids_activation');
-    glyphsParams['ids_activation'].color = getColor('ids_activation');
+    if (Object.prototype.hasOwnProperty.call(iterations[0], 'ids_activation')) {
+      iterationsToTypeParams(glyphsParams, iterations, 'ids_activation');
+      glyphsParams['ids_activation'].color = getColor('ids_activation');
+      const maxActivation = Math.max(glyphsParams['activation'].extremes.max,
+          glyphsParams['ids_activation'].extremes.max);
+      glyphsParams['activation'].extremes.max = maxActivation;
+      glyphsParams['ids_activation'].extremes.max = maxActivation;
+    }
   }
   return glyphsParams;
 }

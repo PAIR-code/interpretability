@@ -96,6 +96,20 @@ class SimilarEmbeddingsBodyComponent extends React.Component {
               return yScale(d.token);
             })
         .attr('height', yScale.bandwidth()/2.0);
+    // Add a label to each of the distance bars
+    mainGroup.selectAll('txt')
+        .data(tops)
+        .enter()
+        .append('text')
+        .attr('y', function(d) {
+          return yScale(d.token) + yScale.bandwidth() / 2 - 2;
+        })
+        .attr('x', function(d) {
+          return 3;
+        })
+        .text(function(d) {
+          return d.activation.toFixed(4);
+        });
 
     // Add the distance bars to the chart
     mainGroup.selectAll('bar')
@@ -115,11 +129,26 @@ class SimilarEmbeddingsBodyComponent extends React.Component {
               return yScale(d.token)+yScale.bandwidth()/2.0;
             })
         .attr('height', yScale.bandwidth()/2.0);
+    // Add a label to each of the distance bars
+    mainGroup.selectAll('txt')
+        .data(tops)
+        .enter()
+        .append('text')
+        .attr('y', function(d) {
+          return yScale(d.token) + yScale.bandwidth() - 2;
+        })
+        .attr('x', function(d) {
+          return 3;
+        })
+        .text(function(d) {
+          return d.distance.toFixed(2);
+        });
     // Left axis of the bar chart
     mainGroup.append('g')
         .attr('class', 'yAxis')
         .call(yAxis)
-        .selectAll('text');
+        .selectAll('text')
+        .style('font-size', '0.875rem');
   }
 }
 
