@@ -5,14 +5,13 @@ import {Grid, Paper} from '@material-ui/core';
 
 import DreamHead from '../heads/DreamHeadComponent';
 import ExplanationHead from '../heads/ExplanationHeadComponent';
-import SimilarEmbeddingsBody from '../bodies/SimilarEmbeddingsBodyComponent';
-
+import TokenSearchBody from '../bodies/TokenSearchBodyComponent';
 
 /**
  * Provides a Card Component for rendering a chart with similar embedding
  * activations.
  */
-class SimilarEmbeddings extends React.PureComponent {
+class TokenSearch extends React.PureComponent {
   /**
    * Render the chart with similar embedding activations.
    *
@@ -41,7 +40,7 @@ class SimilarEmbeddings extends React.PureComponent {
     return (
       <Grid container direction='column' className='fullHeight' wrap='nowrap'>
         <ExplanationHead
-          topic="Similar Embeddings"
+          topic="Token Search"
           params={headParams}
           elementIndex={this.props.elementIndex}/>
         <DreamHead
@@ -49,7 +48,7 @@ class SimilarEmbeddings extends React.PureComponent {
           sentenceParams={sentenceParams}/>
         <Grid item xs>
           <Paper id='topWordsPaper' className={'dreamPaper fullHeight'}>
-            <SimilarEmbeddingsBody
+            <TokenSearchBody
               dreamingElement={this.props.dreamingElement}
               elementIndex={this.props.elementIndex}/>
           </Paper>
@@ -59,9 +58,10 @@ class SimilarEmbeddings extends React.PureComponent {
   }
 }
 
-SimilarEmbeddings.propTypes = {
+
+TokenSearch.propTypes = {
   dreamingElement: PropTypes.object.isRequired,
   elementIndex: PropTypes.number.isRequired,
 };
 
-export default SimilarEmbeddings;
+export default TokenSearch;

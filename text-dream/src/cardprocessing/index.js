@@ -6,8 +6,9 @@ import Layers from '../components/cards/LayersComponent';
 import Magnitudes from '../components/cards/MagnitudesComponent';
 import ShiftedResembling from '../components/cards/ShiftedResemblingComponent';
 import TopWordsComponent from '../components/cards/TopWordsComponent';
-import SimilarEmbeddingsComponent from
+import SimilarEmbeddings from
   '../components/cards/SimilarEmbeddingsComponent';
+import TokenSearch from '../components/cards/TokenSearchComponent';
 
 /**
  * Function to get the correct card Component for a dreamingElement.
@@ -44,7 +45,12 @@ export function getCard(dreamingElement, elementIndex) {
         elementIndex={elementIndex}/>;
       break;
     case 'similar_embeddings':
-      dreamingCard = <SimilarEmbeddingsComponent
+      dreamingCard = <SimilarEmbeddings
+        dreamingElement={dreamingElement}
+        elementIndex={elementIndex}/>;
+      break;
+    case 'token_search':
+      dreamingCard = <TokenSearch
         dreamingElement={dreamingElement}
         elementIndex={elementIndex}/>;
       break;
