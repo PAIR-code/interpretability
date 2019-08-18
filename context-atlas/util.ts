@@ -229,3 +229,24 @@ export function setURLWord(word: string) {
 export function isMobile() {
   return screen.width <= 590;
 }
+
+// Minimal poylfill, for more on browser support see:
+// https://bugs.chromium.org/p/chromium/issues/detail?id=370012
+// https://bugzilla.mozilla.org/show_bug.cgi?id=501421
+// https://bugzilla.mozilla.org/show_bug.cgi?id=501421
+function checkIntersectionPolyfill(node, otherBox) {
+  const nodeBox = node.getBBox();
+  return !(
+    (nodeBox.left > otherBox.right) || 
+    (nodeBox.right < otherBox.left) || 
+    (nodeBox.top > otherBox.bottom) ||
+    (nodeBox.bottom < otherBox.top)
+  );
+}
+
+// Add the polyfill
+export function polyfillCheckIntersection() {
+  if (!SVGSVGElement.prototype.checkIntersection) {
+    SVGSVGElement.prototype.checkIntersection = checkIntersectionPolyfill;
+  }
+}
