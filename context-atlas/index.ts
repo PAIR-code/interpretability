@@ -25,7 +25,6 @@ import * as util from './util';
 
 declare var math: any;
 
-
 export interface SentData {
   sentence: string;
   pos: string;
@@ -83,6 +82,9 @@ export class BertVis {
   private showPOS: boolean;
   private currLayer = 11;
   private subsearchWord: string;
+
+  // To test with local data, change to ''
+  private datapath = 'https://storage.googleapis.com/bert-wsd-vis/demo/'
 
   constructor() {}
   async start() {
@@ -152,7 +154,9 @@ export class BertVis {
    * Loads the words that are used in the dropdown.
    */
   private async loadWords() {
-    const url = 'filtered_words.json';
+    const url = this.datapath + 'filtered_words.json';
+    console.log(url)
+    console.log('https://storage.googleapis.com/bert-wsd-vis/demo/filtered_words.json')
     const errorMessage = 'Could not load word dictionary.';
     const words = await util.loadJson(url, errorMessage) as string[];
     const parent = d3.select('#words-selector');
@@ -168,7 +172,7 @@ export class BertVis {
   private async getData(word: string) {
     this.setLoadingState();
     this.word = word;
-    const url = `jsons/${word}.json`;
+    const url = `${this.datapath}jsons/${word}.json`;
     const errorMessage =
         'Whoops! An error occurred. If you entered a word, it may not be in the dictionary.';
     const res = await util.loadJson(url, errorMessage) as KNN;
