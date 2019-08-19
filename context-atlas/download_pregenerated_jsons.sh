@@ -20,5 +20,6 @@
 # This script downloads the pre-generated jsons from the google cloud bucket.
 
 echo "Downloading..."
-mkdir static
+mkdir -p static/jsons
+curl https://storage.googleapis.com/bert-wsd-vis/demo/filtered_words.json > static/filtered_words.json
 gsutil -m cp gs://bert-wsd-vis/demo/jsons/* static/jsons

@@ -1,0 +1,8 @@
+.DS_Store
+node_modules
+static
+.cache
+tmp
+
+# too big for source
+enwiki-20170820.db

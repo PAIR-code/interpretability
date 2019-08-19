@@ -32,7 +32,10 @@ import json
 from tqdm import tqdm
 import nltk
 
-DB_PATH = '../enwiki-20170820.db'
+
+RANDOM_SEED=42
+np.random.seed(RANDOM_SEED)
+DB_PATH = './enwiki-20170820.db'
 nltk.download('averaged_perceptron_tagger')
 
 
@@ -47,13 +50,13 @@ def neighbors(word, sentences):
   # Use UMAP to project down to 3 dimnsions.
   points_transformed = project_umap(points)
 
-  return {'labels': sent_data, 'data': points_transformed}
+  return {'labels': sent_data, 'data': points_transformed, 'points': points}
 
 def project_umap(points):
   """Project the words (by layer) into 3 dimensions using umap."""
   points_transformed = []
   for layer in points:
-    transformed = umap.UMAP().fit_transform(layer).tolist()
+    transformed = umap.UMAP(random_state=RANDOM_SEED, transform_seed=RANDOM_SEED).fit_transform(layer).tolist()
     points_transformed.append(transformed)
   return points_transformed
 
