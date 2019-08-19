@@ -129,6 +129,10 @@ body {
 
 .info-icon {
   font-size: 12px;
+  line-height: 0px;
+  position: relative;
+  top: 2px;
+  left: -2px;
 }
 
 .info-icon:hover {

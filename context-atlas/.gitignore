@@ -1,8 +1,15 @@
-.DS_Store
+dist
 node_modules
-static
 .cache
-tmp
+*.log
+.DS_Store
+variables/
+static/
+!static/filtered_words.json
+!static/words.json
+.vscode
+.cache
+static
 
 # too big for source
 enwiki-20170820.db
