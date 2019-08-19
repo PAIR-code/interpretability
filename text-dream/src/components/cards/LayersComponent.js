@@ -37,7 +37,6 @@ class Layers extends React.PureComponent {
    * @return {jsx} the card with the layers to be rendered
    */
   render() {
-    console.log('test');
     let props;
     switch (this.props.layers[0].type) {
       case 'dream':

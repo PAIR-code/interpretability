@@ -14,7 +14,7 @@ class TokenSearchBodyComponent extends React.Component {
    * Draws the chart once the component has mounted.
    */
   componentDidMount() {
-    this.drawChart();
+    this.drawGraph();
   }
 
   /**
@@ -22,7 +22,7 @@ class TokenSearchBodyComponent extends React.Component {
    * therefore, redraw the chart.
    */
   componentDidUpdate() {
-    this.drawChart();
+    this.drawGraph();
   }
 
   /**
@@ -42,7 +42,7 @@ class TokenSearchBodyComponent extends React.Component {
   /**
    * Draw the chart into the svg.
    */
-  drawChart() {
+  drawGraph() {
     // Calculate the dimensions of the chart
     const sideSubstitute = 20 + margin.right + margin.left;
     const vertSubstitute = 120 + margin.top + margin.bottom;

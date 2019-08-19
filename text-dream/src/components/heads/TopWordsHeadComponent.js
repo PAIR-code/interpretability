@@ -42,6 +42,9 @@ class TopWordsHead extends React.Component {
    * @return {jsx} the component to be rendered.
    */
   render() {
+    // Check if the current iteration value is valid
+    const iteration = this.props.dreamingElement.iteration ?
+        this.props.dreamingElement.iteration : 0;
     return (
       <Grid item>
         <Paper className='subHeadingPaper'
@@ -56,7 +59,7 @@ class TopWordsHead extends React.Component {
             </Tooltip>
             <Grid item xs>
               <Slider
-                value={this.props.dreamingElement.iteration}
+                value={iteration}
                 onChange={this.handleSliderChange}
                 max={this.props.maxIterations}
                 aria-labelledby="input-slider"

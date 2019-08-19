@@ -18,12 +18,14 @@ class TopWords extends React.PureComponent {
    * @return {jsx} the component to be rendered.
    */
   render() {
+    const iteration = this.props.dreamingElement.iteration ?
+        this.props.dreamingElement.iteration : 0;
     const headParams = {
       'LayerID': this.props.dreamingElement.params.layer_id,
       'WordID': this.props.dreamingElement.params.word_id,
       'NeuronID': this.props.dreamingElement.params.neuron_id,
       'Activation': this.props.dreamingElement.iterations[
-          this.props.dreamingElement.iteration].activation.toFixed(4),
+          iteration].activation.toFixed(4),
     };
     const target = [...this.props.dreamingElement.params.tokens];
     for (const tokenID in this.props.dreamingElement.params.tokens) {
