@@ -1,15 +1,19 @@
+*.log
+
+.cache
+.DS_Store
+.vscode
+
 dist
 node_modules
-.cache
-*.log
-.DS_Store
-variables/
-static/
+variables
+
+# keep folder for scripts, but not most contents
+static/*.*
+static/jsons/*.json
 !static/filtered_words.json
 !static/words.json
-.vscode
-.cache
-static
+
 
 # too big for source
 enwiki-20170820.db
