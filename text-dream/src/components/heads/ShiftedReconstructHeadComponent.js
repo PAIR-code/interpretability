@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 
 import {Grid, Typography, Tooltip, Paper} from '@material-ui/core';
 
-import ResemblingSentence from '../resembling/ResemblingSentence';
+import ReconstructSentence from '../reconstruct/ReconstructSentence';
 
 /**
- * Providing a header component for shifted resembling results.
+ * Providing a header component for shifted Reconstruct results.
  */
-class ShiftedResemblingHead extends React.Component {
+class ShiftedReconstructHead extends React.Component {
   /**
    * Render the header component.
    *
@@ -20,7 +20,7 @@ class ShiftedResemblingHead extends React.Component {
         <Paper className='subHeadingPaper' style={{backgroundColor: '#DDDDDD'}}
           square>
           <Grid container direction='row' spacing={1} alignItems="center">
-            <Tooltip title="Resembling Input" placement="top">
+            <Tooltip title="Reconstruct Input" placement="top">
               <Grid item style={{width: this.props.sentenceParams.headWidth}}>
                 <Typography variant="body1" color="inherit">
                   I
@@ -28,7 +28,7 @@ class ShiftedResemblingHead extends React.Component {
               </Grid>
             </Tooltip>
             <Grid item>
-              <ResemblingSentence
+              <ReconstructSentence
                 sentence={this.props.params.tokens}
                 target={this.props.sentenceParams.target}
                 original={this.props.params.tokens}
@@ -39,7 +39,7 @@ class ShiftedResemblingHead extends React.Component {
         <Paper className='subHeadingPaper' style={{backgroundColor: '#DDDDDD'}}
           square>
           <Grid container direction='row' spacing={1} alignItems="center">
-            <Tooltip title="Resembling Target" placement="top">
+            <Tooltip title="Reconstruct Target" placement="top">
               <Grid item style={{width: this.props.sentenceParams.headWidth}}>
                 <Typography variant="body1" color="inherit">
                   T
@@ -47,7 +47,7 @@ class ShiftedResemblingHead extends React.Component {
               </Grid>
             </Tooltip>
             <Grid item>
-              <ResemblingSentence
+              <ReconstructSentence
                 sentence={this.props.sentenceParams.changedSentence}
                 target={this.props.sentenceParams.target}
                 original={this.props.params.tokens}
@@ -60,9 +60,9 @@ class ShiftedResemblingHead extends React.Component {
   }
 }
 
-ShiftedResemblingHead.propTypes = {
+ShiftedReconstructHead.propTypes = {
   params: PropTypes.object.isRequired,
   sentenceParams: PropTypes.object.isRequired,
 };
 
-export default ShiftedResemblingHead;
+export default ShiftedReconstructHead;

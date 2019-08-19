@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 
 import {Grid, Typography, Tooltip, Paper} from '@material-ui/core';
 
-import ResemblingSentence from '../resembling/ResemblingSentence';
+import ReconstructSentence from '../reconstruct/ReconstructSentence';
 
 /**
- * Providing a header component for resembling experiments.
+ * Providing a header component for Reconstruct experiments.
  */
-class ResembleHead extends React.Component {
+class ReconstructHead extends React.Component {
   /**
-   * Rendering the resembling header.
+   * Rendering the Reconstruct header.
    *
    * @return {jsx} the component to be rendered.
    */
@@ -20,7 +20,7 @@ class ResembleHead extends React.Component {
         <Paper className='subHeadingPaper' style={{backgroundColor: '#DDDDDD'}}
           square>
           <Grid container direction='row' spacing={1} alignItems="center">
-            <Tooltip title="Resembling Target" placement="top">
+            <Tooltip title="Reconstruct Target" placement="top">
               <Grid item style={{width: this.props.sentenceParams.headWidth}}>
                 <Typography variant="body1" color="inherit">
                   T
@@ -28,7 +28,7 @@ class ResembleHead extends React.Component {
               </Grid>
             </Tooltip>
             <Grid item>
-              <ResemblingSentence
+              <ReconstructSentence
                 sentence={this.props.params.tokens}
                 target={this.props.sentenceParams.target}
                 original={this.props.params.tokens}
@@ -41,9 +41,9 @@ class ResembleHead extends React.Component {
   }
 }
 
-ResembleHead.propTypes = {
+ReconstructHead.propTypes = {
   params: PropTypes.object.isRequired,
   sentenceParams: PropTypes.object.isRequired,
 };
 
-export default ResembleHead;
+export default ReconstructHead;

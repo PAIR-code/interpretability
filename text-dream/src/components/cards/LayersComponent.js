@@ -9,10 +9,10 @@ import {Grid, ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails,
   Typography} from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
-import ResemblingSentence from '../resembling/ResemblingSentence';
+import ReconstructSentence from '../reconstruct/ReconstructSentence';
 import ExplanationHead from '../heads/ExplanationHeadComponent';
 
-import {getDreamProps, getResembleProps,
+import {getDreamProps, getReconstructProps,
   getMagnitudesLayerProps} from '../../cardcontentprocessing';
 import {getCardColors} from '../../colors';
 
@@ -42,8 +42,8 @@ class Layers extends React.PureComponent {
       case 'dream':
         props = getDreamProps(this.props.layers);
         break;
-      case 'resemble':
-        props = getResembleProps(this.props.layers);
+      case 'reconstruct':
+        props = getReconstructProps(this.props.layers);
         break;
       case 'magnitudes':
         props = getMagnitudesLayerProps(this.props.layers);
@@ -70,7 +70,7 @@ class Layers extends React.PureComponent {
                     </Typography>
                   </Grid>
                   <Grid item>
-                    <ResemblingSentence
+                    <ReconstructSentence
                       sentence={props.sentences[index]}
                       target={props.sentenceParams.target}
                       original={props.sentenceParams.original}

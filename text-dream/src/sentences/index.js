@@ -27,13 +27,13 @@ export function getDreamSentenceParams(results, params) {
 }
 
 /**
- * Get the params needed for rendering a resembling sentence.
+ * Get the params needed for rendering a reconstruct sentence.
  *
- * @param {object} results - the results of the resembling experiment.
+ * @param {object} results - the results of the reconstruct experiment.
  * @param {object} params - the parameters for the experiment.
- * @return {object} the parameters needed to render the resembling sentence.
+ * @return {object} the parameters needed to render the reconstruct sentence.
  */
-export function getResembleSentenceParams(results, params) {
+export function getReconstructSentenceParams(results, params) {
   const iterations = results.iterations;
   const itWidth = 8 * (iterations[
       iterations.length - 1].number.toString().length + 1);
@@ -55,11 +55,11 @@ export function getResembleSentenceParams(results, params) {
 }
 
 /**
- * Get the params needed for rendering a shifted resembling sentence.
+ * Get the params needed for rendering a shifted reconstruct sentence.
  *
- * @param {object} results - the results of the shifted resembling experiment.
+ * @param {object} results - the results of the shifted reconstruct experiment.
  * @param {object} params - the parameters for the experiment.
- * @return {object} the parameters needed to render the shifted resembling
+ * @return {object} the parameters needed to render the shifted reconstruct
  * sentence.
  */
 export function getShiftSentenceParams(results, params) {

@@ -5,9 +5,10 @@ import {Grid, ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails,
   Typography} from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
-import ResemblingSentence from '../resembling/ResemblingSentence';
+import ReconstructSentence from '../reconstruct/ReconstructSentence';
 import ExplanationHead from '../heads/ExplanationHeadComponent';
-import ShiftedResemblingHead from '../heads/ShiftedResemblingHeadComponent';
+import ShiftedReconstructHead from
+  '../heads/ShiftedReconstructHeadComponent';
 
 import * as sentences from '../../sentences';
 import {getMagnitudesProps} from '../../cardcontentprocessing';
@@ -34,10 +35,10 @@ class Magnitudes extends React.PureComponent {
     return (
       <Grid container direction='column' className='fullHeight' wrap='nowrap'>
         <ExplanationHead
-          topic="Shifted Resemble"
+          topic="Shifted Reconstruct"
           params={headParams}
           elementIndex={this.props.elementIndex}/>
-        <ShiftedResemblingHead
+        <ShiftedReconstructHead
           params={this.props.magnitudes[0].params}
           sentenceParams={sentenceParams}/>
         <div className='overflow'>
@@ -51,7 +52,7 @@ class Magnitudes extends React.PureComponent {
                     </Typography>
                   </Grid>
                   <Grid item>
-                    <ResemblingSentence
+                    <ReconstructSentence
                       sentence={props.sentences[index]}
                       target={props.sentenceParams.target}
                       original={props.sentenceParams.original}

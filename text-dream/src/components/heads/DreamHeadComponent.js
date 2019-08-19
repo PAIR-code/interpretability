@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import {Grid, Typography, Tooltip, Paper} from '@material-ui/core';
 
-import ResemblingSentence from '../resembling/ResemblingSentence';
+import ReconstructSentence from '../reconstruct/ReconstructSentence';
 
 /**
  * Providing a Heading Component for Dreaming Cards.
@@ -28,7 +28,7 @@ class DreamHead extends React.Component {
               </Grid>
             </Tooltip>
             <Grid item>
-              <ResemblingSentence
+              <ReconstructSentence
                 sentence={this.props.params.tokens}
                 target={this.props.sentenceParams.target}
                 original={this.props.sentenceParams.target}

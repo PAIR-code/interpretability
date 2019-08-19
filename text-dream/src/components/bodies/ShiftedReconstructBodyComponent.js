@@ -3,17 +3,17 @@ import PropTypes from 'prop-types';
 
 import {Grid, Typography, Tooltip} from '@material-ui/core';
 
-import ResemblingSentence from '../resembling/ResemblingSentence';
+import ReconstructSentence from '../reconstruct/ReconstructSentence';
 import GlyphComponent from '../glyph/GlyphComponent';
 
 import * as glyphs from '../../glyphs';
 
 /**
- * Provides a Body Component for the Resembling Card.
+ * Component that provides a body for the Shifted Reconstruct Card.
  */
-class ResembleBody extends React.Component {
+class ShiftedReconstructBody extends React.Component {
   /**
-   * Renders the component.
+   * Renders the body of this component with all its iterations.
    *
    * @return {jsx} the component to be rendered.
    */
@@ -51,7 +51,8 @@ class ResembleBody extends React.Component {
                 </Grid>
               </Grid>
               <Grid item>
-                <ResemblingSentence sentence={iteration.tokens}
+                <ReconstructSentence
+                  sentence={iteration.tokens}
                   target={this.props.sentenceParams.target}
                   original={this.props.params.tokens}
                   colors={this.props.sentenceParams.colors}/>
@@ -64,10 +65,10 @@ class ResembleBody extends React.Component {
   }
 }
 
-ResembleBody.propTypes = {
+ShiftedReconstructBody.propTypes = {
   results: PropTypes.object.isRequired,
   params: PropTypes.object.isRequired,
   sentenceParams: PropTypes.object.isRequired,
 };
 
-export default ResembleBody;
+export default ShiftedReconstructBody;

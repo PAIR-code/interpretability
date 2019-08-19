@@ -6,7 +6,7 @@ import {Grid, Typography} from '@material-ui/core';
 /**
  * Provides a component for displaying sentences in other Components.
  */
-class ResemblingSentence extends React.Component {
+class ReconstructSentence extends React.Component {
   /**
    * Renders a component to display sentences in other components.
    *
@@ -40,11 +40,11 @@ class ResemblingSentence extends React.Component {
   }
 }
 
-ResemblingSentence.propTypes = {
+ReconstructSentence.propTypes = {
   sentence: PropTypes.array.isRequired,
   target: PropTypes.array.isRequired,
   original: PropTypes.array.isRequired,
   colors: PropTypes.array.isRequired,
 };
 
-export default ResemblingSentence;
+export default ReconstructSentence;

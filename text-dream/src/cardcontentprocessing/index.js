@@ -2,17 +2,17 @@ import React from 'react';
 
 import DreamHead from '../components/heads/DreamHeadComponent';
 import DreamBody from '../components/bodies/DreamBodyComponent';
-import ResembleHead from '../components/heads/ResembleHeadComponent';
-import ResembleBody from '../components/bodies/ResembleBodyComponent';
-import ShiftedResemblingHead from
-  '../components/heads/ShiftedResemblingHeadComponent';
+import ReconstructHead from '../components/heads/ReconstructHeadComponent';
+import ReconstructBody from '../components/bodies/ReconstructBodyComponent';
+import ShiftedReconstructHead from
+  '../components/heads/ShiftedReconstructHeadComponent';
 import MagnitudesBody from '../components/bodies/MagnitudesBodyComponent';
-import ShiftedResemblingBody from
-  '../components/bodies/ShiftedResemblingBodyComponent';
+import ShiftedReconstructBody from
+  '../components/bodies/ShiftedReconstructBodyComponent';
 
 import {
   getDreamSentenceParams,
-  getResembleSentenceParams,
+  getReconstructSentenceParams,
   getShiftSentenceParams,
   getClosestResult} from '../sentences';
 
@@ -63,25 +63,25 @@ export function getDreamProps(layers) {
 }
 
 /**
- * Get the properties to be rendered for a resembling layers card.
+ * Get the properties to be rendered for a reconstruct layers card.
  *
  * @param {array} layers - the layers to be included in the card.
  * @return {object} the properties to be rendered for this card.
  */
-export function getResembleProps(layers) {
+export function getReconstructProps(layers) {
   layers.sort(function(a, b) {
     return a.params.layer_id - b.params.layer_id;
   });
   const bodies = [];
   const sentences = [];
   const layerIDs = [];
-  const sentenceParams = getResembleSentenceParams(
+  const sentenceParams = getReconstructSentenceParams(
       layers[0].results, layers[0].params);
-  const head = <ResembleHead
+  const head = <ReconstructHead
     results={layers[0].results}
     params={layers[0].params}
     sentenceParams={sentenceParams}/>;
-  const topic = 'Resemble';
+  const topic = 'Reconstruct';
   const headParams = {
     'WordID': layers[0].params.word_id,
     'NeuronID': layers[0].params.neuron_id,
@@ -89,7 +89,7 @@ export function getResembleProps(layers) {
   for (const layer of layers) {
     layerIDs.push(layer.params.layer_id);
     bodies.push(
-        <ResembleBody
+        <ReconstructBody
           results={layer.results}
           params={layer.params}
           sentenceParams={sentenceParams}/>
@@ -130,7 +130,7 @@ export function getMagnitudesLayerProps(layers) {
     'NeuronID': layers[0].magnitudes[0].params.neuron_id,
   };
   const topic = 'Shift';
-  const head = <ShiftedResemblingHead
+  const head = <ShiftedReconstructHead
     params={layers[0].magnitudes[0].params}
     sentenceParams={sentenceParams}/>;
   for (const layer of layers) {
@@ -156,7 +156,8 @@ export function getMagnitudesLayerProps(layers) {
 }
 
 /**
- * Get the properties to be rendered for a shifted resembling magnitudes card.
+ * Get the properties to be rendered for a shifted Reconstruct magnitudes
+ * card.
  *
  * @param {array} magnitudes - the magnitudes to be included in the card.
  * @return {object} the properties to be rendered for this card.
@@ -176,13 +177,13 @@ export function getMagnitudesProps(magnitudes) {
     'NeuronID': magnitudes[0].params.neuron_id,
   };
   const topic = 'Shift';
-  const head = <ShiftedResemblingHead
+  const head = <ShiftedReconstructHead
     params={magnitudes[0].params}
     sentenceParams={sentenceParams}/>;
   for (const magnitude of magnitudes) {
     magnitudeValues.push(magnitude.params.shift_magnitude);
     bodies.push(
-        <ShiftedResemblingBody
+        <ShiftedReconstructBody
           results={magnitude.results}
           params={magnitude.params}
           sentenceParams={sentenceParams}/>

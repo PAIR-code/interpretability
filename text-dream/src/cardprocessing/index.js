@@ -1,10 +1,11 @@
 import React from 'react';
 
 import Dream from '../components/cards/DreamComponent';
-import Resemble from '../components/cards/ResembleComponent';
+import Reconstruct from '../components/cards/ReconstructComponent';
 import Layers from '../components/cards/LayersComponent';
 import Magnitudes from '../components/cards/MagnitudesComponent';
-import ShiftedResembling from '../components/cards/ShiftedResemblingComponent';
+import ShiftedReconstruct from
+  '../components/cards/ShiftedReconstructComponent';
 import TopWordsComponent from '../components/cards/TopWordsComponent';
 import SimilarEmbeddings from
   '../components/cards/SimilarEmbeddingsComponent';
@@ -27,14 +28,14 @@ export function getCard(dreamingElement, elementIndex) {
         params={dreamingElement.params}
         elementIndex={elementIndex}/>;
       break;
-    case 'resemble':
-      dreamingCard = <Resemble
+    case 'reconstruct':
+      dreamingCard = <Reconstruct
         results={dreamingElement.results}
         params={dreamingElement.params}
         elementIndex={elementIndex}/>;
       break;
-    case 'resemble_shifted':
-      dreamingCard = <ShiftedResembling
+    case 'reconstruct_shifted':
+      dreamingCard = <ShiftedReconstruct
         results={dreamingElement.results}
         params={dreamingElement.params}
         elementIndex={elementIndex}/>;

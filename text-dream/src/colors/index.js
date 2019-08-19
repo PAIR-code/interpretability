@@ -31,9 +31,9 @@ export function getCardColors(type) {
   switch (type) {
     case 'dream':
       return ['temperature', 'activation', 'ids_activation'];
-    case 'resemble':
+    case 'reconstruct':
       return ['temperature', 'loss', 'ids_loss'];
-    case 'resemble_shifted':
+    case 'reconstruct_shifted':
       return ['temperature', 'loss', 'ids_loss'];
     case 'magnitudes':
       return ['temperature', 'loss', 'ids_loss'];

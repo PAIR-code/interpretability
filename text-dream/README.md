@@ -78,10 +78,10 @@ This visualization shows these tokens alongside their activation values.
 Another application of this is to see if neurons are actually only looking for a
 few, very specific tokens.
 
-### Resembling Activation
+### Reconstruct Activation
 
 It can also be interesting to see, if, and how, the model is able to use deep
-dreaming to resemble activation values.
+dreaming to reconstruct activation values.
 Here, one would get the activation value for a specific sentence, and try to
 use deep dream to recreate this sentence.
 We noticed that, for BERT, this is easier for earlier layers, while in later
@@ -90,7 +90,7 @@ Another interesting aspect of this was, that one can use this to reason about
 which words the model finds more important, and which one tend to get swapped
 out.
 
-### Resembling Changed Activation
+### Reconstruct Changed Activation
 
 One can also experiment with changing the activation of single tokens to another
 target activation.
@@ -194,18 +194,18 @@ All the data should be saved as `.json` files.
 }
 ```
 
-### Resembling Activation
+### Reconstruct Activation
 
 ```
 {
-  "type": "resemble",
+  "type": "reconstruct",
   "params": {
     "layer_id": number, optional: id of the layer to dream for,
     "word_id":  number, optional: id of the word to dream for,
     "neuron_id": number, optional: id of the neuron to dream for,
     "dream_start": number: id of the first token to be changed,
     "dream_end": number: id of the last token to be changed,
-    "tokens": string array: the target tokens to be resembled,
+    "tokens": string array: the target tokens to be resconstructed,
   },
   "results": {
     "iterations": [
@@ -222,11 +222,11 @@ All the data should be saved as `.json` files.
 }
 ```
 
-### Resembling Changed Activation
+### Reconstruct Changed Activation
 
 ```
 {
-  "type": "resemble",
+  "type": "reconstruct_shifted",
   "params": {
     "layer_id": number, optional: id of the layer to dream for,
     "word_id":  number, optional: id of the word to dream for,
@@ -236,7 +236,7 @@ All the data should be saved as `.json` files.
     "shift_start": number: id of the first token activation to be changed,
     "shift_end": number: id of the last token activation to be changed,
     "magnitude": number: how much the target activation is to be changed,
-    "tokens": string array: the target tokens to be resembled,
+    "tokens": string array: the target tokens to be reconstructed,
     "target": string: what token the changed activation should optimally be,
   },
   "results": {
@@ -257,7 +257,7 @@ All the data should be saved as `.json` files.
 ### Wrapping Magnitudes
 
 It is also possible to display muliple magnitudes for
-**Resemble Changed Activation** in a list.
+**Reconstruct Changed Activation** in a list.
 To do this, simply wrap those results in:
 
 ```
@@ -271,7 +271,7 @@ To do this, simply wrap those results in:
 
 ### Wrapping Layers
 
-**Dream**, **Resemble Activation**, **Resemble Changed Activation**, and
+**Dream**, **Reconstruct Activation**, **Reconstruct Changed Activation**, and
 **Magnitudes** can all be wrapped and displayed in a layer
 list.
 To do this, simply wrap those results in:

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import {Grid, Typography, Tooltip} from '@material-ui/core';
 
-import ResemblingSentence from '../resembling/ResemblingSentence';
+import ReconstructSentence from '../reconstruct/ReconstructSentence';
 import GlyphComponent from '../glyph/GlyphComponent';
 
 import * as glyphs from '../../glyphs';
@@ -51,7 +51,7 @@ class DreamBody extends React.Component {
                 </Grid>
               </Grid>
               <Grid item>
-                <ResemblingSentence sentence={iteration.tokens}
+                <ReconstructSentence sentence={iteration.tokens}
                   target={this.props.sentenceParams.target}
                   original={this.props.sentenceParams.target}
                   colors={this.props.sentenceParams.colors}/>

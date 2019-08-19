@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import {Grid, Typography, Tooltip} from '@material-ui/core';
 
-import ResemblingSentence from '../resembling/ResemblingSentence';
+import ReconstructSentence from '../reconstruct/ReconstructSentence';
 import GlyphComponent from '../glyph/GlyphComponent';
 
 import * as glyphs from '../../glyphs';
@@ -54,7 +54,7 @@ class MagnitudesBody extends React.Component {
                 </Grid>
               </Grid>
               <Grid item>
-                <ResemblingSentence
+                <ReconstructSentence
                   sentence={magnitude.results.iterations[
                       magnitude.results.iterations.length - 1].tokens}
                   target={this.props.sentenceParams.target}
