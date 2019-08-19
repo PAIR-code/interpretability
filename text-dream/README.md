@@ -104,7 +104,7 @@ All the data should be saved as `.json` files.
 
 ### Dreaming
 
-```json
+```
 {
   "type": "dream",
   "params": {
@@ -132,7 +132,7 @@ All the data should be saved as `.json` files.
 
 ### Top Words
 
-```json
+```
 {
   "type": "top_words",
   "params": {
@@ -155,7 +155,7 @@ All the data should be saved as `.json` files.
 
 ### Similar Embeddings
 
-```json
+```
 {
   "type": "similar_embeddings",
   "layer_id": number, optional: id of the layer to dream for,
@@ -176,7 +176,7 @@ All the data should be saved as `.json` files.
 
 ### Token Search
 
-```json
+```
 {
   "type": "token_search",
   "layer_id": number, optional: id of the layer to dream for,
@@ -196,7 +196,7 @@ All the data should be saved as `.json` files.
 
 ### Resembling Activation
 
-```json
+```
 {
   "type": "resemble",
   "params": {
@@ -224,7 +224,7 @@ All the data should be saved as `.json` files.
 
 ### Resembling Changed Activation
 
-```json
+```
 {
   "type": "resemble",
   "params": {
@@ -257,10 +257,10 @@ All the data should be saved as `.json` files.
 ### Wrapping Magnitudes
 
 It is also possible to display muliple magnitudes for
-[Resemble Changed Activation](#resemble-changed-activation) in a list.
+**Resemble Changed Activation** in a list.
 To do this, simply wrap those results in:
 
-```json
+```
 {
   "type": "magnitues",
   "magnitudes": [
@@ -271,14 +271,12 @@ To do this, simply wrap those results in:
 
 ### Wrapping Layers
 
-[Dream](#dreaming),
-[Resemble Activation](#resembling-activation),
-[Resemble Changed Activation](#resembling-changed-activation), and
-[Magnitudes](#wrapping-magnitudes) can all be wrapped and displayed in a layer
+**Dream**, **Resemble Activation**, **Resemble Changed Activation**, and
+**Magnitudes** can all be wrapped and displayed in a layer
 list.
 To do this, simply wrap those results in:
 
-```json
+```
 {
   "type": "layers",
   "layers": [
