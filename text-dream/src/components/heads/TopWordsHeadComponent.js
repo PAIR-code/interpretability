@@ -43,8 +43,10 @@ class TopWordsHead extends React.Component {
    */
   render() {
     // Check if the current iteration value is valid
-    const iteration = this.props.dreamingElement.iteration ?
+    let iteration = this.props.dreamingElement.iteration ?
         this.props.dreamingElement.iteration : 0;
+    iteration = iteration < this.props.dreamingElement.iterations.length ?
+        iteration : this.props.dreamingElement.iterations.length - 1;
     return (
       <Grid item>
         <Paper className='subHeadingPaper'

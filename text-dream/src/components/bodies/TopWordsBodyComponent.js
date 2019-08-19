@@ -46,8 +46,10 @@ class TopWordsBody extends React.Component {
     const height = this.props.cardDimensions.height > vertSubstitute ?
       this.props.cardDimensions.height - vertSubstitute : 20;
     // Check if the current iteration value is valid
-    const iteration = this.props.dreamingElement.iteration ?
+    let iteration = this.props.dreamingElement.iteration ?
         this.props.dreamingElement.iteration : 0;
+    iteration = iteration < this.props.dreamingElement.iterations.length ?
+        iteration : this.props.dreamingElement.iterations.length - 1;
     // Get the current selected iteration results
     const currentResults = this.props.dreamingElement.iterations[iteration];
     // Set up the scales and axes
