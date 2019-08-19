@@ -9,3 +9,4 @@ static/
 !static/words.json
 .vscode
 .cache
+static
