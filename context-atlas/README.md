@@ -26,7 +26,7 @@ The demo can then be accessed at http://localhost:1234/
 ### To get the data
 
 For each word, there is a single json file.
-These json files contain the context sentence, part of speech, and umap-projected embeddings of the word various sentences (note: if the word appears multiple times in the sentence, the first instance is used.) There are 200-1000 sentences per word; their are 20k+ words and the dataset is 8.3GB.
+These json files contain the context sentence, part of speech, and umap-projected embeddings of the word various sentences (note: if the word appears multiple times in the sentence, the first instance is used.) There are 200-1000 sentences per word; there are 20k+ words and the dataset is 8.3GB.
 
 To get this data, ether:
 1. Run the following, which will download the pregenerated data on google cloud with [gsutil](https://cloud.google.com/sdk/docs/) to```static/jsons/<word>.json```

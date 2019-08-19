@@ -155,7 +155,6 @@ export class BertVis {
    */
   private async loadWords() {
     const url = this.datapath + 'filtered_words.json';
-    console.log(url)
     console.log('https://storage.googleapis.com/bert-wsd-vis/demo/filtered_words.json')
     const errorMessage = 'Could not load word dictionary.';
     const words = await util.loadJson(url, errorMessage) as string[];
