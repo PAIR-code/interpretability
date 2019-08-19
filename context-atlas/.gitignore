@@ -1,3 +1,11 @@
-.cache
-static
+dist
 node_modules
+.cache
+*.log
+.DS_Store
+variables/
+static/
+!static/filtered_words.json
+!static/words.json
+.vscode
+.cache
