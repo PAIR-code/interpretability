@@ -211,7 +211,7 @@ tqdm==4.28.1
 traitlets==4.3.2
 truffleHog==2.0.98
 truffleHogRegexes==0.0.7
-umap==0.1.1
+umap-learn==0.3.10
 unicodecsv==0.14.1
 urllib3==1.24.1
 virtualenv==16.4.0
