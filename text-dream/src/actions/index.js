@@ -15,6 +15,7 @@
  * =============================================================================
 */
 import * as types from './types';
+import {elementTypes} from '../cardprocessing';
 
 /**
  * Triggers the addition of a new dreaming element.
@@ -23,7 +24,7 @@ import * as types from './types';
  * @return {object} the action to be dispatched for this change.
  */
 export function addDreamingElement(element) {
-  if (element.type === 'top_words') {
+  if (element.type === elementTypes.top_words) {
     element['iteration'] = 0;
   }
   return {type: types.ADD_DREAMING_ELEMENT, element};

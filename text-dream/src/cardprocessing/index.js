@@ -27,6 +27,18 @@ import SimilarEmbeddings from
   '../components/cards/SimilarEmbeddingsComponent';
 import TokenSearch from '../components/cards/TokenSearchComponent';
 
+export const elementTypes = {
+  dream: 'dream',
+  reconstruct: 'reconstruct',
+  reconstruct_shifted: 'reconstruct_shifted',
+  top_words: 'top_words',
+  similar_embeddings: 'similar_embeddings',
+  token_search: 'token_search',
+  magnitudes: 'magnitudes',
+  layer_magnitudes: 'layer_magnitudes',
+  layers: 'layers',
+};
+
 /**
  * Function to get the correct card Component for a dreamingElement.
  *
@@ -38,45 +50,45 @@ import TokenSearch from '../components/cards/TokenSearchComponent';
 export function getCard(dreamingElement, elementIndex) {
   let dreamingCard;
   switch (dreamingElement.type) {
-    case 'dream':
+    case elementTypes.dream:
       dreamingCard = <Dream
         results={dreamingElement.results}
         params={dreamingElement.params}
         elementIndex={elementIndex}/>;
       break;
-    case 'reconstruct':
+    case elementTypes.reconstruct:
       dreamingCard = <Reconstruct
         results={dreamingElement.results}
         params={dreamingElement.params}
         elementIndex={elementIndex}/>;
       break;
-    case 'reconstruct_shifted':
+    case elementTypes.reconstruct_shifted:
       dreamingCard = <ShiftedReconstruct
         results={dreamingElement.results}
         params={dreamingElement.params}
         elementIndex={elementIndex}/>;
       break;
-    case 'top_words':
+    case elementTypes.top_words:
       dreamingCard = <TopWordsComponent
         dreamingElement={dreamingElement}
         elementIndex={elementIndex}/>;
       break;
-    case 'similar_embeddings':
+    case elementTypes.similar_embeddings:
       dreamingCard = <SimilarEmbeddings
         dreamingElement={dreamingElement}
         elementIndex={elementIndex}/>;
       break;
-    case 'token_search':
+    case elementTypes.token_search:
       dreamingCard = <TokenSearch
         dreamingElement={dreamingElement}
         elementIndex={elementIndex}/>;
       break;
-    case 'magnitudes':
+    case elementTypes.magnitudes:
       dreamingCard = <Magnitudes
         magnitudes={dreamingElement.magnitudes}
         elementIndex={elementIndex}/>;
       break;
-    case 'layers':
+    case elementTypes.layers:
       dreamingCard = <Layers
         layers={dreamingElement.layers}
         elementIndex={elementIndex}/>;
