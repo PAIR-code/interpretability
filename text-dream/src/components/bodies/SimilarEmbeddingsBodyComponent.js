@@ -142,7 +142,7 @@ class SimilarEmbeddingsBodyComponent extends React.Component {
         .attr(
             'y',
             function(d) {
-              return yScale(d.token)+yScale.bandwidth()/2.0;
+              return yScale(d.token) + yScale.bandwidth()/2.0;
             })
         .attr('height', yScale.bandwidth()/2.0);
     // Add a label to each of the distance bars
