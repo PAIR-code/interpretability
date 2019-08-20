@@ -32,6 +32,12 @@ To then start it, simply use:
 npm start
 ```
 
+If you want to run the tests for this application, use:
+
+```
+npm test
+```
+
 We provide some example data ready for you to be used.
 It can be found in the folder `example_data`.
 
