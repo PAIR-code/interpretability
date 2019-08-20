@@ -32,9 +32,10 @@ import json
 from tqdm import tqdm
 import nltk
 
-DB_PATH = '../enwiki-20170820.db'
-nltk.download('averaged_perceptron_tagger')
 
+DB_PATH = './enwiki-20170820.db'
+nltk.download('averaged_perceptron_tagger')
+nltk.download('punkt')
 
 def neighbors(word, sentences):
   """Get the info and (umap-projected) embeddings about a word."""
