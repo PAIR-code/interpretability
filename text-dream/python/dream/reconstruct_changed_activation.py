@@ -2,22 +2,22 @@
 import json
 import os
 from absl import app
+from absl import flags
 import numpy as np
 import torch
 import torch.nn.functional as F
-from google3.learning.deepmind.xmanager2.client import google as xm  # pylint: disable=unused-import
-from google3.learning.vis.bert_dream.helpers import activation_helper
-from google3.learning.vis.bert_dream.helpers import attention_mask_helper
-from google3.learning.vis.bert_dream.helpers import embeddings_helper
-from google3.learning.vis.bert_dream.helpers import folder_helper
-from google3.learning.vis.bert_dream.helpers import inference_helper
-from google3.learning.vis.bert_dream.helpers import one_hots_helper
-from google3.learning.vis.bert_dream.helpers import optimization_helper
-from google3.learning.vis.bert_dream.helpers import output_helper
-from google3.learning.vis.bert_dream.helpers import setup_helper
-from google3.learning.vis.bert_dream.helpers import tokenization_helper
-from google3.pyglib import flags
-from google3.pyglib import gfile
+import sys
+sys.path.insert(1, 'helpers')
+import activation_helper
+import attention_mask_helper
+import embeddings_helper
+import folder_helper
+import inference_helper
+import one_hots_helper
+import optimization_helper
+import output_helper
+import setup_helper
+import tokenization_helper
 
 # Command Line Arguments
 FLAGS = flags.FLAGS
@@ -69,7 +69,7 @@ def change_target_activation(target_activation, device):
   """
   change_path = os.path.join(FLAGS.change_activation_dir, str(FLAGS.layer_id),
                              FLAGS.change_activation_file)
-  change_file = gfile.Open(change_path, 'rb')
+  change_file = open(change_path, 'rb')
   change_np = np.load(change_file)
   change_tensor = torch.tensor(change_np)
   change_tensor = change_tensor.to(device)
@@ -213,7 +213,7 @@ def reconstruct_changed_activation(device, tokenizer, emb_map, model):
   if FLAGS.write_top_k:
     for i in range(len(data)):
       top_k_path = os.path.join(layer_dir, 'top_k' + str(i) + '.json')
-      top_k_file = gfile.Open(top_k_path, 'w')
+      top_k_file = open(top_k_path, 'w')
       json.dump(data[i], top_k_file)
       top_k_file.close()
   output_helper.write_results(layer_dir, results, params,

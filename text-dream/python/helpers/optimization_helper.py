@@ -1,10 +1,10 @@
 """Used for optimization steps during dreaming."""
 import torch
 import torch.nn.functional as F
-from google3.learning.vis.bert_dream.helpers import activation_helper
-from google3.learning.vis.bert_dream.helpers import inference_helper
-from google3.learning.vis.bert_dream.helpers import one_hots_helper
-from google3.learning.vis.bert_dream.helpers import output_helper
+import activation_helper
+import inference_helper
+import one_hots_helper
+import output_helper
 
 
 def step_towards_activation(optimizer, before, modify, after, pos_embeddings,

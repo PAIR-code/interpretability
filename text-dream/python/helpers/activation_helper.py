@@ -1,7 +1,7 @@
 """Handles activations for a given model result."""
 import torch
-from google3.learning.vis.bert_dream.helpers import inference_helper
-from google3.learning.vis.bert_dream.helpers import one_hots_helper
+import inference_helper
+import one_hots_helper
 
 
 def get_activation(activations, word_id, neuron_id, layer_id, normalize,

@@ -2,7 +2,7 @@
 from pytorch_pretrained_bert import modeling
 from pytorch_pretrained_bert import tokenization
 import torch
-from google3.learning.vis.bert_dream.helpers import embeddings_helper
+import embeddings_helper
 
 
 def setup_uncased(model_config):

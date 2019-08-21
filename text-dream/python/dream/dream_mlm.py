@@ -1,16 +1,17 @@
 """Maximally activate the prediction of a masked token."""
 from absl import app
+from absl import flags
 import torch
-from google3.learning.deepmind.xmanager2.client import google as xm  # pylint: disable=unused-import
-from google3.learning.vis.bert_dream.helpers import attention_mask_helper
-from google3.learning.vis.bert_dream.helpers import embeddings_helper
-from google3.learning.vis.bert_dream.helpers import folder_helper
-from google3.learning.vis.bert_dream.helpers import inference_helper
-from google3.learning.vis.bert_dream.helpers import one_hots_helper
-from google3.learning.vis.bert_dream.helpers import output_helper
-from google3.learning.vis.bert_dream.helpers import setup_helper
-from google3.learning.vis.bert_dream.helpers import tokenization_helper
-from google3.pyglib import flags
+import sys
+sys.path.insert(1, 'helpers')
+import attention_mask_helper
+import embeddings_helper
+import folder_helper
+import inference_helper
+import one_hots_helper
+import output_helper
+import setup_helper
+import tokenization_helper
 
 # Command Line Arguments
 FLAGS = flags.FLAGS

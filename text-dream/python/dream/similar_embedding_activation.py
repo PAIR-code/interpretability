@@ -2,16 +2,17 @@
 import json
 import os
 from absl import app
+from absl import flags
 from pytorch_pretrained_bert import modeling
 from pytorch_pretrained_bert import tokenization
 import torch
-from google3.learning.vis.bert_dream.helpers import activation_helper
-from google3.learning.vis.bert_dream.helpers import embeddings_helper
-from google3.learning.vis.bert_dream.helpers import inference_helper
-from google3.learning.vis.bert_dream.helpers import one_hots_helper
-from google3.learning.vis.bert_dream.helpers import tokenization_helper
-from google3.pyglib import flags
-from google3.pyglib import gfile
+import sys
+sys.path.insert(1, 'helpers')
+import activation_helper
+import embeddings_helper
+import inference_helper
+import one_hots_helper
+import tokenization_helper
 
 # Command Line Arguments
 FLAGS = flags.FLAGS
@@ -66,7 +67,7 @@ def write_closest_activations(closest, distances, activations, tokenizer,
   results_path = os.path.join(FLAGS.output_dir,
                               'closest_to_{}_{}.json'.format(FLAGS.sentence,
                                                              FLAGS.change_word))
-  results_file = gfile.Open(results_path, 'w')
+  results_file = open(results_path, 'w')
   json.dump(results, results_file)
 
 

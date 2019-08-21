@@ -1,9 +1,4 @@
 """Train a linear classifier on the activations of BERT."""
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import google_type_annotations
-from __future__ import print_function
-
 import json
 import os
 import time
@@ -12,10 +7,9 @@ from absl import flags
 import numpy as np
 import torch
 import torch.utils.data
-from google3.learning.deepmind.xmanager2.client import google as xm  # pylint: disable=unused-import
-from google3.learning.vis.bert_dream.helpers import folder_helper
-from google3.pyglib import gfile
-from google3.sstable.python import sstable
+import sys
+sys.path.insert(1, 'helpers')
+import folder_helper
 
 FLAGS = flags.FLAGS
 flags.DEFINE_string('output_dir', None,
@@ -34,7 +28,6 @@ flags.DEFINE_bool('mae', True, 'use mean absolute error, otherwise uses mean'
                   'squared error')
 flags.DEFINE_bool('adam', True, 'use adam instead of sgd')
 flags.DEFINE_bool('sigmoid', True, 'use adam instead of sgd')
-flags.DEFINE_bool('sstable', False, 'use sstable instead of individual files')
 
 
 def write_params(parent_dir):
@@ -43,7 +36,7 @@ def write_params(parent_dir):
   Args:
     parent_dir: The directory to save the new file to.
   """
-  params_file = gfile.Open(os.path.join(parent_dir, 'params.json'), 'w')
+  params_file = open(os.path.join(parent_dir, 'params.json'), 'w')
   params = {
       'num_epochs': FLAGS.num_epochs,
       'layer_id': FLAGS.layer_id,
@@ -69,7 +62,7 @@ def write_iteration(parent_dir, y, y_truth, loss):
     y_truth: Ground truth for the classification.
     loss: The loss of the current run.
   """
-  iteration_file = gfile.Open(os.path.join(parent_dir, 'training.txt'), 'a')
+  iteration_file = open(os.path.join(parent_dir, 'training.txt'), 'a')
   iteration_file.write('Y: {}'.format(y.data.cpu().numpy()))
   iteration_file.write('\n')
   iteration_file.write('Y_Truth: {}'.format(y_truth.data.cpu().numpy()))
@@ -87,7 +80,7 @@ def write_epoch(parent_dir, accuracy, epoch):
     accuracy: The accuracy for this epoch on the test data.
     epoch: The current epoch number.
   """
-  iteration_file = gfile.Open(os.path.join(parent_dir, 'epochs.txt'), 'a')
+  iteration_file = open(os.path.join(parent_dir, 'epochs.txt'), 'a')
   epoch_result = 'Epoch {}, Accuracy {}'.format(epoch, accuracy)
   iteration_file.write(epoch_result)
   if FLAGS.verbose:
@@ -100,10 +93,7 @@ class Data(torch.utils.data.Dataset):
 
   def __init__(self):
     start_setup = time.time()
-    if FLAGS.sstable:
-      self.init_with_sstables()
-    else:
-      self.init_with_files()
+    self.init_with_files()
     print('Setup Time: {}'.format(time.time() - start_setup))
 
   def __len__(self):
@@ -111,12 +101,9 @@ class Data(torch.utils.data.Dataset):
 
   def __getitem__(self, index):
     get_start = time.time()
-    if FLAGS.sstable:
-      np_item = np.fromstring(self.items[index], sep=',')
-    else:
-      # Get the file from the path that this dataset refers to for a concept
-      embeddings_file = gfile.Open(self.items[index], 'r')
-      np_item = np.load(embeddings_file)
+    # Get the file from the path that this dataset refers to for a concept
+    embeddings_file = open(self.items[index], 'r')
+    np_item = np.load(embeddings_file)
     # Convert the training elements to tensors
     torch_item = torch.tensor(np_item, dtype=torch.float)
     torch_class = torch.tensor(self.concept_classes[index])
@@ -125,33 +112,18 @@ class Data(torch.utils.data.Dataset):
 
   def init_with_files(self):
     # Get all files belonging to concept 1
-    paths_concept1 = gfile.ListDir(
+    paths_concept1 = os.listdir(
         os.path.join(FLAGS.train_dir, FLAGS.concept1, str(FLAGS.layer_id)))
     paths_concept1 = [os.path.join(
         FLAGS.train_dir, FLAGS.concept1, str(FLAGS.layer_id),
         x) for x in paths_concept1]
     # Get all files belonging to concept 2
-    paths_concept2 = gfile.ListDir(
+    paths_concept2 = os.listdir(
         os.path.join(FLAGS.train_dir, FLAGS.concept2, str(FLAGS.layer_id)))
     paths_concept2 = [os.path.join(
         FLAGS.train_dir, FLAGS.concept2, str(FLAGS.layer_id),
         x) for x in paths_concept2]
     self.setup_classes_and_items(paths_concept1, paths_concept2)
-
-  def init_with_sstables(self):
-    path_concept1 = os.path.join(FLAGS.train_dir, FLAGS.concept1,
-                                 str(FLAGS.layer_id))
-    table_concept1 = sstable.SSTable(path_concept1)
-    concept_1_items = []
-    for _, v in table_concept1.iteritems():
-      concept_1_items.append(v)
-    path_concept2 = os.path.join(FLAGS.train_dir, FLAGS.concept2,
-                                 str(FLAGS.layer_id))
-    table_concept2 = sstable.SSTable(path_concept2)
-    concept_2_items = []
-    for _, v in table_concept2.iteritems():
-      concept_2_items.append(v)
-    self.setup_classes_and_items(concept_1_items, concept_2_items)
 
   def setup_classes_and_items(self, concept_1_items, concept_2_items):
     # Set up the classes belonging to the concepts
@@ -217,7 +189,7 @@ def train_classifier(train_data, device, parent_dir):
       optimizer.zero_grad()
       y = x.matmul(weights)
       if FLAGS.sigmoid:
-        y = torch.nn.functional.sigmoid(y)
+        y = torch.sigmoid(y)
       y = y.reshape(-1)
       if FLAGS.mae:
         loss = torch.mean(torch.abs(y - y_truth))
@@ -238,7 +210,7 @@ def train_classifier(train_data, device, parent_dir):
         x, y_truth = x.to(device), y_truth.to(device)
         y = x.matmul(weights)
         if FLAGS.sigmoid:
-          y = torch.nn.functional.sigmoid(y)
+          y = torch.sigmoid(y)
         y = y.reshape(-1)
         y = torch.where(y > 0.5, torch.ones_like(y), torch.zeros_like(y))
         acc = y - y_truth
@@ -248,7 +220,7 @@ def train_classifier(train_data, device, parent_dir):
     accuracy = 1.0 - (acc_value / num_acc)
     write_epoch(parent_dir, accuracy, epoch)
     # Write the final classification vector
-    weights_file = gfile.Open(os.path.join(parent_dir, 'final_weights.np'), 'w')
+    weights_file = open(os.path.join(parent_dir, 'final_weights.np'), 'w')
     np.save(weights_file, weights.data.cpu().numpy())
   print('Iteration Time: {}'.format(np.average(it_times)))
   print('Item Time: {}'.format(np.average(get_times)))

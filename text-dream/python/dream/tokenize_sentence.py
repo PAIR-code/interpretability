@@ -1,13 +1,10 @@
 """Used to tokenize a sentence."""
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import google_type_annotations
-from __future__ import print_function
-
 from absl import app
+from absl import flags
 from pytorch_pretrained_bert import tokenization
-from google3.pyglib import flags
-from google3.learning.vis.bert_dream.helpers import tokenization_helper
+import sys
+sys.path.insert(1, 'helpers')
+import tokenization_helper
 
 # Command Line Arguments
 FLAGS = flags.FLAGS

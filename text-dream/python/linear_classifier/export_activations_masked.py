@@ -1,19 +1,14 @@
 """Exports activations for all MASK tokens to CNS."""
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import google_type_annotations
-from __future__ import print_function
-
 import json
 from absl import app
 from absl import flags
-from google3.learning.deepmind.xmanager2.client import google as xm  # pylint: disable=unused-import
-from google3.learning.vis.bert_dream.helpers import embeddings_helper
-from google3.learning.vis.bert_dream.helpers import folder_helper
-from google3.learning.vis.bert_dream.helpers import inference_helper
-from google3.learning.vis.bert_dream.helpers import setup_helper
-from google3.learning.vis.bert_dream.helpers import tokenization_helper
-from google3.pyglib import gfile
+import sys
+sys.path.insert(1, 'helpers')
+import embeddings_helper
+import folder_helper
+import inference_helper
+import setup_helper
+import tokenization_helper
 
 FLAGS = flags.FLAGS
 flags.DEFINE_string('output_dir', None,
@@ -26,7 +21,7 @@ flags.DEFINE_string('model_config', 'bert-base-uncased', 'name of the model'
 
 def get_concepts_and_data_from_file():
   """Get the concepts and the sentences from a file."""
-  input_file = gfile.Open(FLAGS.input_file, 'r')
+  input_file = open(FLAGS.input_file, 'r')
   concepts = []
   data = []
   line = input_file.readline()

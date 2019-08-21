@@ -26,9 +26,7 @@ def run_inference(before, within, after, position_embeddings,
   embeddings = words_embeddings + position_embeddings + sentence_embeddings
   embeddings = model.embeddings.LayerNorm(embeddings)
   # Get the prediction by the model
-  head_mask = [None, None, None, None, None, None, None, None, None, None, None,
-               None]
-  layers = model.encoder(embeddings, attention_mask, head_mask=head_mask)
+  layers = model.encoder(embeddings, attention_mask)
   # Reorder to get more intuitive ordering of batches, layers, words, neurons
   layers = torch.stack(layers).permute(1, 0, 2, 3)
   return layers
@@ -73,9 +71,7 @@ def run_inference_mlm(one_hots, position_embeddings, sentence_embeddings,
   embeddings = words_embeddings + position_embeddings + sentence_embeddings
   embeddings = model.bert.embeddings.LayerNorm(embeddings)
   # Get the prediction by the model
-  head_mask = [None, None, None, None, None, None, None, None, None, None, None,
-               None]
-  layers = model.bert.encoder(embeddings, attention_mask, head_mask=head_mask)
+  layers = model.bert.encoder(embeddings, attention_mask)
   encoded_layers = layers[-1]
   prediction_scores = model.cls(encoded_layers)
   return prediction_scores

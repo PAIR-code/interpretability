@@ -1,15 +1,12 @@
 """Computes the top predictions for a masked token using pretrained BERT."""
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import google_type_annotations
-from __future__ import print_function
-
 from absl import app
+from absl import flags
 from pytorch_pretrained_bert import modeling
 from pytorch_pretrained_bert import tokenization
 import torch
-from google3.learning.vis.bert_dream.helpers import tokenization_helper
-from google3.pyglib import flags
+import sys
+sys.path.insert(1, 'helpers')
+import tokenization_helper
 
 # Command Line Arguments
 FLAGS = flags.FLAGS

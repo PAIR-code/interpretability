@@ -1,12 +1,13 @@
 """Export the embedding of a token for each layer given a sentence."""
 from absl import app
 from absl import flags
-from google3.learning.deepmind.xmanager2.client import google as xm  # pylint: disable=unused-import
-from google3.learning.vis.bert_dream.helpers import embeddings_helper
-from google3.learning.vis.bert_dream.helpers import folder_helper
-from google3.learning.vis.bert_dream.helpers import inference_helper
-from google3.learning.vis.bert_dream.helpers import setup_helper
-from google3.learning.vis.bert_dream.helpers import tokenization_helper
+import sys
+sys.path.insert(1, 'helpers')
+import embeddings_helper
+import folder_helper
+import inference_helper
+import setup_helper
+import tokenization_helper
 
 FLAGS = flags.FLAGS
 flags.DEFINE_string('sentence', None,

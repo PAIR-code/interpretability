@@ -2,7 +2,6 @@
 import json
 import os
 import torch
-from google3.pyglib import gfile
 
 
 def init_results(results):
@@ -24,7 +23,7 @@ def write_results(base_path, results, params, experiment_type):
     experiment_type: The type of experiment that has been conducted.
   """
   results_path = os.path.join(base_path, "results.json")
-  results_file = gfile.Open(results_path, "w")
+  results_file = open(results_path, "w")
   output = {
       "params": params,
       "results": results,
@@ -131,7 +130,7 @@ def write_top_ks(base_path, data, dream_start, params):
     data[i]["type"] = "top_words"
     top_k_path = os.path.join(base_path,
                               "top_k" + str(i + dream_start) + ".json")
-    top_k_file = gfile.Open(top_k_path, "w")
+    top_k_file = open(top_k_path, "w")
     json.dump(data[i], top_k_file)
     top_k_file.close()
 

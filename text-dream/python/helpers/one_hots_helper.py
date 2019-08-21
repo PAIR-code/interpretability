@@ -1,7 +1,7 @@
 """Provides functions related to one-hot handling and conversion of tokens."""
 import numpy as np
 import torch
-from google3.learning.vis.bert_dream.helpers import embeddings_config
+import embeddings_config
 
 
 def get_one_hots(indices, modify_start, modify_end, device, grad=True):

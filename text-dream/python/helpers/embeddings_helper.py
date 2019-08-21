@@ -1,15 +1,9 @@
 """Handles all functionality related to embeddings."""
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import google_type_annotations
-from __future__ import print_function
-
 import os
 import numpy as np
 import torch
-from google3.pyglib import gfile
-from google3.learning.vis.bert_dream.helpers import activation_helper
-from google3.learning.vis.bert_dream.helpers import embeddings_config
+import activation_helper
+import embeddings_config
 
 
 class EmbeddingMap(object):
@@ -165,15 +159,15 @@ def write_embedding(layers_act, emb_pos, tokens, folder):
     folder: Where to write the activations to.
   """
   sent = u'_'.join(tokens)
-  for layer in range(layers_act.shape[2]):
+  for layer in range(layers_act.shape[1]):
     file_name = str(emb_pos) + u'_V_' + str(len(tokens)) + u'_' + sent + u'.np'
     file_name = file_name.replace('[', '')
     file_name = file_name.replace(']', '')
     file_name = file_name.replace('/', '')
     path = os.path.join(folder, str(layer), file_name)
     try:
-      activation_file = gfile.Open(path, 'w')
+      activation_file = open(path, 'wb')
       np.save(activation_file,
               layers_act[0][layer][emb_pos].data.cpu().numpy())
-    except np.FileError:
+    except:
       print('Path invalid: {}'.format(path.encode('utf8')))

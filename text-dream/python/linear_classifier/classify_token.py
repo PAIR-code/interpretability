@@ -1,15 +1,13 @@
 """Classify a single token in a sentence using a trained classifier."""
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-
 from absl import app
+from absl import flags
 import torch
-from google3.learning.vis.bert_dream.helpers import classifier_helper
-from google3.learning.vis.bert_dream.helpers import inference_helper
-from google3.learning.vis.bert_dream.helpers import setup_helper
-from google3.learning.vis.bert_dream.helpers import tokenization_helper
-from google3.pyglib import flags
+import sys
+sys.path.insert(1, 'helpers')
+import classifier_helper
+import inference_helper
+import setup_helper
+import tokenization_helper
 
 # Command Line Arguments
 FLAGS = flags.FLAGS
@@ -41,7 +39,7 @@ def classify_token(device, tokenizer, model):
   classification_head = classifier_helper.get_classification_head(
       device, FLAGS.layer_id, FLAGS.trained_variables_dir)
   y = token_act.matmul(classification_head)
-  y = torch.nn.functional.sigmoid(y)
+  y = torch.sigmoid(y)
   print('Prediction: {}'.format(y.item()))
 
 

@@ -2,14 +2,15 @@
 import json
 import os
 from absl import app
+from absl import flags
 from pytorch_pretrained_bert import modeling
 from pytorch_pretrained_bert import tokenization
 import torch
-from google3.learning.vis.bert_dream.helpers import activation_helper
-from google3.learning.vis.bert_dream.helpers import embeddings_config
-from google3.learning.vis.bert_dream.helpers import tokenization_helper
-from google3.pyglib import flags
-from google3.pyglib import gfile
+import sys
+sys.path.insert(1, 'helpers')
+import activation_helper
+import embeddings_config
+import tokenization_helper
 
 # Command Line Arguments
 FLAGS = flags.FLAGS
@@ -53,7 +54,7 @@ def write_best_tokens(ids, activations, tokenizer, tokens):
   results_path = os.path.join(FLAGS.output_dir,
                               'top_tokens_in_{}_{}.json'.format(
                                   FLAGS.sentence, FLAGS.change_word))
-  results_file = gfile.Open(results_path, 'w')
+  results_file = open(results_path, 'w')
   json.dump(results, results_file)
 
 
@@ -114,7 +115,6 @@ def main(_):
   # Load pre-trained model (weights)
   # Set up the device in use
   device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
-  print('device: ', device)
   model = model.to(device)
   try_tokens(tokenizer, device, model)
 
