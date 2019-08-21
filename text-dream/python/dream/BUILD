@@ -1,0 +1,220 @@
+py_binary(
+    name = "combine_magnitudes_json",
+    srcs = ["combine_magnitudes_json.py"],
+    python_version = "PY3",
+    srcs_version = "PY2AND3",
+    deps = [
+        "//file/colossus/public:cns",
+        "//pyglib:gfile",
+        "//third_party/py/absl:app",
+        "//third_party/py/absl/flags",
+    ],
+)
+
+py_binary(
+    name = "combine_layers_json",
+    srcs = ["combine_layers_json.py"],
+    python_version = "PY3",
+    srcs_version = "PY2AND3",
+    deps = [
+        "//file/colossus/public:cns",
+        "//pyglib:gfile",
+        "//third_party/py/absl:app",
+        "//third_party/py/absl/flags",
+    ],
+)
+
+py_binary(
+    name = "dream_mlm",
+    srcs = ["dream_mlm.py"],
+    python_version = "PY3",
+    srcs_version = "PY2AND3",
+    deps = [
+        "//file/colossus/public:cns",
+        "//learning/deepmind/xmanager2/client/google",
+        "//learning/vis/bert_dream/helpers:attention_mask_helper",
+        "//learning/vis/bert_dream/helpers:embeddings_helper",
+        "//learning/vis/bert_dream/helpers:folder_helper",
+        "//learning/vis/bert_dream/helpers:inference_helper",
+        "//learning/vis/bert_dream/helpers:one_hots_helper",
+        "//learning/vis/bert_dream/helpers:output_helper",
+        "//learning/vis/bert_dream/helpers:setup_helper",
+        "//learning/vis/bert_dream/helpers:tokenization_helper",
+        "//third_party/py/absl:app",
+        "//third_party/py/absl/flags",
+        "//third_party/py/numpy",
+        "//third_party/py/pytorch_pretrained_bert",
+        "//third_party/py/torch:pytorch",
+    ],
+)
+
+py_binary(
+    name = "dream",
+    srcs = ["dream.py"],
+    python_version = "PY3",
+    srcs_version = "PY2AND3",
+    deps = [
+        "//file/colossus/public:cns",
+        "//learning/deepmind/xmanager2/client/google",
+        "//learning/vis/bert_dream/helpers:activation_helper",
+        "//learning/vis/bert_dream/helpers:attention_mask_helper",
+        "//learning/vis/bert_dream/helpers:embeddings_helper",
+        "//learning/vis/bert_dream/helpers:folder_helper",
+        "//learning/vis/bert_dream/helpers:inference_helper",
+        "//learning/vis/bert_dream/helpers:one_hots_helper",
+        "//learning/vis/bert_dream/helpers:output_helper",
+        "//learning/vis/bert_dream/helpers:setup_helper",
+        "//learning/vis/bert_dream/helpers:tokenization_helper",
+        "//third_party/py/absl:app",
+        "//third_party/py/absl/flags",
+        "//third_party/py/numpy",
+        "//third_party/py/pytorch_pretrained_bert",
+        "//third_party/py/torch:pytorch",
+    ],
+)
+
+py_binary(
+    name = "mlm",
+    srcs = ["mlm.py"],
+    python_version = "PY3",
+    srcs_version = "PY2AND3",
+    deps = [
+        "//learning/vis/bert_dream/helpers:tokenization_helper",
+        "//third_party/py/absl:app",
+        "//third_party/py/absl/flags",
+        "//third_party/py/pytorch_pretrained_bert",
+        "//third_party/py/torch:pytorch",
+    ],
+)
+
+py_binary(
+    name = "reconstruct_activation",
+    srcs = ["reconstruct_activation.py"],
+    python_version = "PY3",
+    srcs_version = "PY2AND3",
+    deps = [
+        "//file/colossus/public:cns",
+        "//learning/deepmind/xmanager2/client/google",
+        "//learning/vis/bert_dream/helpers:activation_helper",
+        "//learning/vis/bert_dream/helpers:attention_mask_helper",
+        "//learning/vis/bert_dream/helpers:embeddings_helper",
+        "//learning/vis/bert_dream/helpers:folder_helper",
+        "//learning/vis/bert_dream/helpers:inference_helper",
+        "//learning/vis/bert_dream/helpers:one_hots_helper",
+        "//learning/vis/bert_dream/helpers:optimization_helper",
+        "//learning/vis/bert_dream/helpers:output_helper",
+        "//learning/vis/bert_dream/helpers:setup_helper",
+        "//learning/vis/bert_dream/helpers:tokenization_helper",
+        "//third_party/py/absl:app",
+        "//third_party/py/absl/flags",
+        "//third_party/py/numpy",
+        "//third_party/py/pytorch_pretrained_bert",
+        "//third_party/py/torch:pytorch",
+    ],
+)
+
+py_binary(
+    name = "similar_embedding_activation",
+    srcs = ["similar_embedding_activation.py"],
+    python_version = "PY3",
+    srcs_version = "PY2AND3",
+    deps = [
+        "//file/colossus/public:cns",
+        "//learning/vis/bert_dream/helpers:activation_helper",
+        "//learning/vis/bert_dream/helpers:embeddings_helper",
+        "//learning/vis/bert_dream/helpers:inference_helper",
+        "//learning/vis/bert_dream/helpers:one_hots_helper",
+        "//learning/vis/bert_dream/helpers:tokenization_helper",
+        "//pyglib:gfile",
+        "//third_party/py/absl:app",
+        "//third_party/py/absl/flags",
+        "//third_party/py/numpy",
+        "//third_party/py/pytorch_pretrained_bert",
+        "//third_party/py/torch:pytorch",
+    ],
+)
+
+py_binary(
+    name = "reconstruct_changed_activation",
+    srcs = ["reconstruct_changed_activation.py"],
+    python_version = "PY3",
+    srcs_version = "PY2AND3",
+    deps = [
+        "//file/colossus/public:cns",
+        "//learning/deepmind/xmanager2/client/google",
+        "//learning/vis/bert_dream/helpers:activation_helper",
+        "//learning/vis/bert_dream/helpers:attention_mask_helper",
+        "//learning/vis/bert_dream/helpers:embeddings_helper",
+        "//learning/vis/bert_dream/helpers:folder_helper",
+        "//learning/vis/bert_dream/helpers:inference_helper",
+        "//learning/vis/bert_dream/helpers:one_hots_helper",
+        "//learning/vis/bert_dream/helpers:optimization_helper",
+        "//learning/vis/bert_dream/helpers:output_helper",
+        "//learning/vis/bert_dream/helpers:setup_helper",
+        "//learning/vis/bert_dream/helpers:tokenization_helper",
+        "//pyglib:gfile",
+        "//third_party/py/absl:app",
+        "//third_party/py/absl/flags",
+        "//third_party/py/numpy",
+        "//third_party/py/pytorch_pretrained_bert",
+        "//third_party/py/torch:pytorch",
+    ],
+)
+
+py_binary(
+    name = "reconstruct_shifted_activation",
+    srcs = ["reconstruct_shifted_activation.py"],
+    python_version = "PY3",
+    srcs_version = "PY2AND3",
+    deps = [
+        "//file/colossus/public:cns",
+        "//learning/deepmind/xmanager2/client/google",
+        "//learning/vis/bert_dream/helpers:activation_helper",
+        "//learning/vis/bert_dream/helpers:attention_mask_helper",
+        "//learning/vis/bert_dream/helpers:embeddings_helper",
+        "//learning/vis/bert_dream/helpers:folder_helper",
+        "//learning/vis/bert_dream/helpers:inference_helper",
+        "//learning/vis/bert_dream/helpers:one_hots_helper",
+        "//learning/vis/bert_dream/helpers:optimization_helper",
+        "//learning/vis/bert_dream/helpers:output_helper",
+        "//learning/vis/bert_dream/helpers:setup_helper",
+        "//learning/vis/bert_dream/helpers:tokenization_helper",
+        "//pyglib:gfile",
+        "//third_party/py/absl:app",
+        "//third_party/py/absl/flags",
+        "//third_party/py/numpy",
+        "//third_party/py/pytorch_pretrained_bert",
+        "//third_party/py/torch:pytorch",
+    ],
+)
+
+py_binary(
+    name = "token_search",
+    srcs = ["token_search.py"],
+    python_version = "PY3",
+    srcs_version = "PY2AND3",
+    deps = [
+        "//file/colossus/public:cns",
+        "//learning/vis/bert_dream/helpers:activation_helper",
+        "//learning/vis/bert_dream/helpers:embeddings_config",
+        "//learning/vis/bert_dream/helpers:tokenization_helper",
+        "//pyglib:gfile",
+        "//third_party/py/absl:app",
+        "//third_party/py/absl/flags",
+        "//third_party/py/pytorch_pretrained_bert",
+        "//third_party/py/torch:pytorch",
+    ],
+)
+
+py_binary(
+    name = "tokenize_sentence",
+    srcs = ["tokenize_sentence.py"],
+    python_version = "PY3",
+    srcs_version = "PY2AND3",
+    deps = [
+        "//learning/vis/bert_dream/helpers:tokenization_helper",
+        "//third_party/py/absl:app",
+        "//third_party/py/absl/flags",
+        "//third_party/py/pytorch_pretrained_bert",
+    ],
+)
