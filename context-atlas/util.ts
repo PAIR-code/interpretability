@@ -237,10 +237,10 @@ export function isMobile() {
 function checkIntersectionPolyfill(node, otherBox) {
   const nodeBox = node.getBBox();
   return !(
-    (nodeBox.left > otherBox.right) || 
-    (nodeBox.right < otherBox.left) || 
-    (nodeBox.top > otherBox.bottom) ||
-    (nodeBox.bottom < otherBox.top)
+    (nodeBox.x > (otherBox.x + otherBox.width)) || 
+    ((nodeBox.x + nodeBox.width) < otherBox.x) || 
+    (nodeBox.y > (otherBox.y + otherBox.height)) ||
+    ((nodeBox.y + nodeBox.height) < otherBox.y)
   );
 }
 

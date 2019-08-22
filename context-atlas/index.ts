@@ -325,14 +325,19 @@ export class BertVis {
 
       // Check whether this new box intersects with anything.
       let intersects = false;
-      renderedWordBboxes.forEach((bbox) => {
+      for (let j = 0; j < renderedWordBboxes.length; j++) {
+        const bbox = renderedWordBboxes[j];
         const intersectsThisBox =
             (svgNode.checkIntersection(text.node(), bbox));
         intersects = intersects || intersectsThisBox;
+        if (intersects) {
+          break;
+        }
       });
-      renderedWordBboxes.push(text.node().getBBox());
       if (intersects) {
         text.remove();
+      } else {
+        renderedWordBboxes.push(text.node().getBBox());
       }
       d.visible = !intersects;
     }
