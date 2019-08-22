@@ -22,7 +22,7 @@ smooth one-hot encoded input vector.
 This vector is fed through a softmax layer.
 To force this vector to get close to real tokens, we use temperature annealing.
 
-Example: `python dream/dream.py -output_dir ~/Downloads
+Example: `python3 dream/dream.py -output_dir ~/Downloads
 -sentence "i hate kickshaws ." -layer_id 5 -neuron_id 414 -word_id 2
 -dream_end 2 -dream_start 2 -num_iterations 2`
 
