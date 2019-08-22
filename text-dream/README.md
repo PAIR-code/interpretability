@@ -15,7 +15,3 @@ Contains data that can be used in the visualizations.
 ## Python
 
 The python folder provides scripts to experiment with deep dreaming for BERT.
-
-## Blogpost
-
-The blogpost folder contains a blogpost showcasing our results.
