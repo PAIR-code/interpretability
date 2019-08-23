@@ -23,7 +23,6 @@ from __future__ import print_function
 import os
 import torch
 from pytorch_pretrained_bert import BertTokenizer, BertModel, BertForMaskedLM
-from sklearn.neighbors import NearestNeighbors
 import sqlite3 as sql
 import re
 import numpy as np
