@@ -166,7 +166,7 @@ python-dateutil==2.7.5
 pytorch-pretrained-bert==0.6.2
 pytz==2018.7
 PyWavelets==1.0.1
-PyYAML==3.13
+PyYAML==5.1
 pyzmq==17.1.2
 QtAwesome==0.5.3
 qtconsole==4.4.3
