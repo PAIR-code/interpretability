@@ -19,6 +19,7 @@
 import * as d3 from 'd3';
 import * as jp from 'd3-jetpack';
 
+import {ColorSchemeBright, ColorSchemeDeep} from './colorSchemes';
 import {WordSelectorDropdown} from './dropdown';
 import {POSTag, SimplePOS} from './pos';
 import * as util from './util';
@@ -39,7 +40,7 @@ export interface Point {
   color?: string;
   highlight?: boolean;
   currLabelWord?: string;
-  wordHash: {[word: string]: boolean};
+  wordHash?: {[word: string]: boolean};
 }
 
 export interface Label {
@@ -83,6 +84,10 @@ export class BertVis {
   private showPOS: boolean;
   private currLayer = 11;
   private subsearchWord: string;
+
+  // Color scheme
+  private colorSchemeDots = ColorSchemeBright;
+  private colorScheme = ColorSchemeDeep;
 
   constructor() {}
   async start() {
@@ -540,7 +545,7 @@ export class BertVis {
    */
   private posColor(pos: string) {
     const posIdx = this.posKeys.indexOf(pos);
-    return d3.schemeDark2[posIdx];
+    return this.colorScheme[posIdx % 7];
   }
 
   /**
@@ -549,8 +554,8 @@ export class BertVis {
   private descColor(word: string, isLabel = true) {
     const wordObj = this.labels.find(obj => obj.word == word);
     const wordIdx = this.labels.indexOf(wordObj);
-    const color =
-        isLabel ? d3.schemeDark2[wordIdx % 8] : d3.schemeSet2[wordIdx % 8];
+    const color = isLabel ? this.colorScheme[wordIdx % 7] :
+                            this.colorSchemeDots[wordIdx % 7];
     return isLabel ? (this.showPOS ? 'black' : color) : color;
   }
 
