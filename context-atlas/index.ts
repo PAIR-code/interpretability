@@ -19,7 +19,7 @@
 import * as d3 from 'd3';
 import * as jp from 'd3-jetpack';
 
-import {ColorSchemeDeep, ColorSchemePastel} from './colorSchemes';
+import {ColorSchemeBright, ColorSchemeDeep} from './colorSchemes';
 import {WordSelectorDropdown} from './dropdown';
 import {POSTag, SimplePOS} from './pos';
 import * as util from './util';
@@ -86,7 +86,7 @@ export class BertVis {
   private subsearchWord: string;
 
   // Color scheme
-  private colorSchemeDots = ColorSchemePastel;
+  private colorSchemeDots = ColorSchemeBright;
   private colorScheme = ColorSchemeDeep;
 
   constructor() {}
