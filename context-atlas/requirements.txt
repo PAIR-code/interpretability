@@ -213,7 +213,7 @@ truffleHog==2.0.98
 truffleHogRegexes==0.0.7
 umap-learn==0.3.10
 unicodecsv==0.14.1
-urllib3==1.24.1
+urllib3==1.24.2
 virtualenv==16.4.0
 wcwidth==0.1.7
 webencodings==0.5.1
