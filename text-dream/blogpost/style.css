@@ -1,16 +1,11 @@
 body {
   margin: 80px;
-  font-family: Georgia,Cambria,"Times New Roman";
+  font-family: Roboto,Georgia,"Times New Roman";
   margin-top: 20px;
   font-size: 20px;
   font-weight: 400;
   width: 700px;
   line-height: 150%;
-}
-
-h4 {
-  margin-bottom: 20px;
-  line-height: normal;
 }
 
 h1 {
@@ -26,8 +21,17 @@ h3 {
   margin-top: 30px;
 }
 
+h4 {
+  margin-bottom: 20px;
+  line-height: normal;
+}
+
 img {
   border: 1px solid #ddd;
+}
+
+p {
+  text-align: justify;
 }
 
 .caption {
@@ -37,47 +41,14 @@ img {
   font-family: Helvetica;
   font-size: 12pt;
   line-height: 120%;
-  /*white-space: nowrap;
-  overflow: visible;*/
-}
-
-.definition {
-  font-weight: 700;
-  color: #000;
-}
-
-.image-div-wrap {
-  display:inline-block;
-  float: left;
-  margin-top: 20px;
-  margin-right: 30px;
 }
 
 .image-div {
   display:inline-block;
-  float: left;
   margin-top: 20px;
   margin-right: 30px;
   margin-bottom: 20px;
   width: 700px;
-}
-
-.proof {
-  margin-top: 20px;
-  font-style: italic;
-}
-
-.theorem {
-  font-weight: 700;
-  color: #000;
-}
-
-.theorem-body {
-  font-style: italic;
-}
-
-.tk {
-  color: #c00;
 }
 
 .side-note {
@@ -89,271 +60,34 @@ img {
   font-style: italic;
 }
 
-.note {
-  font-weight: 700;
-  color: #c00;
-}
-
-
-.note-link {
-  color: #c00;
-}
-
-.qed{
-  height: 0px;
-  margin: 0px;
-  float: right;
-  position: relative;
-  top: -70px;
-  font-size: 40px;
-}
-.qed-low{
-  top: -45px;
-}
-
-
-@media (max-width: 1100px){
-  body{
-    margin: 10px;
-    max-width: 700px;
-    width: calc(100% - 20px);
-    overflow-x: hidden;
-    font-size: 20px;
-  }
-
-  .side-note {
-    position: relative;
-    left: -5px;
-    width: 100%;
-    margin-bottom: 20px;
-    background: #e6e6e6;
-    border: 1px solid #aeaeae;
-    background: #fbf6ed;
-    border: 1px solid #e5ca8e;
-    border-radius: 5px;
-    padding: 5px !important;
-  }
-
-  img{
-    overflow-x: hidden;
-    width: 100% !important;
-    height: auto !important;
-  }
-
-  .image-div, .caption {
-    width: 100% !important;
-  }
-
-
-}
-
-
-
-
-
-svg{
-  overflow: visible;
-}
-
-
-.sentence{
-  font-family: menlo, Consolas, "Lucida Console", monospace;
-}
-
-#header-container{
-}
-#header{
-  position: relative;
-  height: 300px;
-}
-
-#header .sentence{
-  pointer-events: none;
-}
-
-.tooltip{
-  display: none;
-}
-
-text{
-  cursor: default;
-  text-shadow: 0 2px 0 #fff, 2px 0 0 #fff, 0 -2px 0 #fff, -2px 0 0 #fff;
-
-}
-
-.node.active text{
-  font-weight: 700;
-  font-size: 16px;
-}
-
-.node.active circle{
-  stroke: #444;
-}
-
-path.active{
-  stroke-width: 10px !important;
-}
-.tree path.active{
-  stroke-width: 8px !important;
-}
-
-
-
-.duel-tree > div{
-  display: inline-block;
-  width: 49%;
-}
-.duel-tree .title{
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
   width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0 18px;
+  background-color: #eee;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.smallText {
   font-size: 14px;
-}
-
-
-
-
-#parse-tree{
-  width: 1200px;
-  overflow-x: visible;
-}
-
-#parse-tree .title{
-  height: 40px;
-}
-
-#parse-tree > div{
-  display: inline-block;
-  text-align: top;
-  vertical-align: top;
-}
-
-#parse-tree > div:first-child{
-  width: 550px;
-}
-#parse-tree > div:first-child svg{
-  margin-left: -60px;
-}
-
-
-#parse-tree > div:last-child{
-  width: 610px;
-  margin-left: -40px;
-
-}
-#parse-tree > div:last-child svg{
-  margin-left: -40px;
-}
-
-.title{
-  max-width: 700px;
-  cursor: default;
-}
-.title::before{
-  content: '“';
-}
-.title::after{
-  content: '”';
-}
-
-@media (max-width: 1100px){
-  #parse-tree{
-    width: 100%;
-  }
-
-  #parse-tree > div{
-    width: 100% !important;
-  }
-
-  #parse-tree > div:first-child{
-    margin-bottom: 20px;
-  }
-
-  #parse-tree > div:last-child svg{
-    margin-top: 20px; 
-  }
-
-  #parse-tree > div:last-child > div:last-child svg{
-    margin-left: 10px; 
-  }
-
-
-  #parse-tree div{
-    margin-left: 0px !important;
-  }
-
-  #parse-tree line{
-    display: none;
-  }
-
-  .parse-tree-caption img{
-    margin-top: 15px !important;
-  }
-}
-
-@media (max-width: 800px){
-  #parse-tree svg text{
-    font-size: 9px;
-  }
-
-}
-
-
-
-#small-multiple{
-  width: 1110px;
-}
-
-#small-multiple > div{
-  margin-bottom: 20px;
-}
-
-#small-multiple > div svg{
-  margin-left: -60px;
-}
-
-
-#small-multiple .right{
-  position: relative;
-  margin-left: 50px;
-}
-
-@media (max-width: 1100px){
-  #small-multiple{
-    width: 100%;
-  }
-
-  #small-multiple > div svg{
-    margin: 0px auto !important;
-  }
-
-}
-
-#small-multiple, #parse-tree, #real-ideal{
-  margin-top: 40px;
-}
-
-
-.active.node{
-  font-weight: 600;
-}
-
-
-.pointer{
-  height: 0px;
-  position: relative;
-}
-.pointer div {
-  overflow: visible;
-  content: "";
-  background-image: url(pointer.svg);
-  width: 27px;
-  height: 27px;
-  position: absolute;
-  left: -51px;
-  top: 15px;
-}
-
-@media (max-width: 1100px){
-  .pointer{
-    display: none;
-  }
+  line-height: 150%;
 }
