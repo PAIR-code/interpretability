@@ -13,9 +13,7 @@ limitations under the License.
 -->
 <html>
 <head>
-<link rel="icon"
-      type="image/png"
-      href="./icon.png"/>
+<link rel="icon" type="image/png" href="./imgs/icon.png"/>
 <link rel="stylesheet" href="style.css">
 
 <meta charset="utf-8">
@@ -47,10 +45,18 @@ limitations under the License.
     it?</h1>
 </div>
 <span style="color:#999;font-style:italic">
-A visual investigation of nightmares in sesame street, by Alex Bäuerle, James Wexler,
-and Martin Wattenberg.
+A visual investigation of nightmares in sesame street, by Alex Bäuerle, James Wexler, and Martin Wattenberg.
 </span>
 
+<p align='justify'>
+BERT has brought a big change to language modeling with neural networks.
+Whenever such breakthroughs in deep learning happen, people wonder how the network manages achieves such impressive results, and what it actually learned.
+A common way of looking into neural networks is <a href="https://distill.pub/2017/feature-visualization/">feature visualization</a>.
+Through this method, we can obtain inputs that excite the network by maximizing the activation of neurons, channels, or layers of the network.
+Feature visualization works well for image-based models, but has not yet been widely explored for language models.
+This blogpost will guide you through experiments we conducted with feature visualization for text models.
+We show how we managed to get BERT to dream of highly activating inputs, provide <a href="https://github.com/PAIR-code/interpretability/tree/master/text-dream/webapp">visual insights</a> of why this did not work out as well as we hoped, and publish <a href="https://github.com/PAIR-code/interpretability/tree/master/text-dream/python">tools</a> to explore this research direction further
+</p>
 
 <p align='justify'>
 <a href="https://ai.googleblog.com/2015/06/inceptionism-going-deeper-into-neural.html">DeepDream</a>, which has been intensively studied for neural networks for image data, aims at providing explanations for what individual neurons react to.
@@ -136,7 +142,7 @@ The visualization of this process can be seen in Figure 1.
 </p>
 
 <div class="image-div">
-  <img src="sentence_dream.png" style="width:1100px;">
+  <img src="imgs/sentence_dream.png" style="width:1100px;">
   <div class="caption" style="width:700px">
     <p align='justify'>
     Figure 1. Visualization of the dreaming result over iterations. We skipped some iterations in the middle for simplicity. In the beginning, the model can use linear combinations of embeddings to get a high activation value (dark green). As the temperature (blue) loweres, the model has to stick more to real tokens and the activation and activation of actual token ids (light green) gets closer. In this run, the model succeeds in dreaming to a higher activation (0.0436 vs. 0.0570).
@@ -183,7 +189,7 @@ If we went on, we could see that the model rules out more tokens and in the end 
 </p>
 
 <div class="image-div">
-  <img src="top_words.png" style="width:700px;">
+  <img src="imgs/top_words.png" style="width:700px;">
   <div class="caption" style="width:700px">
     <p align='justify'>
     Figure 2. Visualization of the softmax diftribution that is used for getting a linear combination of embeddings to feed into the model.
@@ -202,7 +208,7 @@ This shows one possible problem with this training method.
 </p>
 
 <div class="image-div">
-  <img src="token_search.png" style="width:700px;">
+  <img src="imgs/token_search.png" style="width:700px;">
   <div class="caption" style="width:700px">
     <p align='justify'>
     Figure 3. Showing the words that most highly activate the neuron. The word that is swapped for these is marked in blue in the sentence.
@@ -227,7 +233,7 @@ This could be an indication that some neurons are so specialized, that it gets e
 </p>
 
 <div class="image-div">
-  <img src="similar.png" style="width:700px;">
+  <img src="imgs/similar.png" style="width:700px;">
   <div class="caption" style="width:700px">
     <p align='justify'>
     Figure 4. Tokens that are most similar to the token highlighted in blue.
@@ -258,7 +264,7 @@ What is even more interesting, this does not only indicate that our approach has
 </p>
 
 <div class="image-div">
-  <img src="reconstruct.png" style="width:1100px;">
+  <img src="imgs/reconstruct.png" style="width:1100px;">
   <div class="caption" style="width:700px">
     <p align='justify'>
     Figure 5. Reconstruction visualization.
@@ -328,7 +334,7 @@ These results might also be an indication for those important tokens being capab
 </p>
 
 <div class="image-div">
-  <img src="shift.png" style="width:700px;">
+  <img src="imgs/shift.png" style="width:700px;">
   <div class="caption" style="width:700px">
     <p align='justify'>
     Figure 5. Visualization of the reconstruction of a changed activation.
@@ -359,7 +365,7 @@ This is in line with findings from other approaches, such as (ians work) and (be
 
 <p align='justify'>
   <span style="color:#999;font-style:italic">
-    Many thanks to (think about whom to thank) Nina Poerner, and Ian Tenney for helpful feedback and discussions about this research.</i>
+    Many thanks to Nina Poerner, and Ian Tenney for helpful feedback and discussions about this research.</i>
 </span>
 
 </body>
