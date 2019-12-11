@@ -12,5 +12,5 @@ This repo contains code and articles on [PAIR](https://ai.google/pair) interpret
 
 
 ### Deep dreaming on text
-[text-drean](https://github.com/PAIR-code/interpretability/tree/master/text-dream) contains different experiments and tools to work with deep dreaming
+[text-dream](https://github.com/PAIR-code/interpretability/tree/master/text-dream) contains different experiments and tools to work with deep dreaming
 for text.
