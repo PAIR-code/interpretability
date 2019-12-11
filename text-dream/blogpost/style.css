@@ -126,3 +126,38 @@ a:hover {
   font-size: 14px;
   line-height: 150%;
 }
+
+@media (max-width: 1100px) {
+  body {
+    margin: 10px;
+    max-width: 700px;
+    width: calc(100% - 20px);
+    overflow-x: hidden;
+    font-size: 20px;
+  }
+
+  .side-note {
+    position: relative;
+    left: -5px;
+    width: 100%;
+    margin-bottom: 20px;
+    background: #e6e6e6;
+    border: 1px solid #aeaeae;
+    background: #fbf6ed;
+    border: 1px solid #e5ca8e;
+    border-radius: 5px;
+    padding: 5px !important;
+  }
+
+  img {
+    width: 100%;
+  }
+  
+  .image-div {
+    width: 100%;
+  }
+
+  .wide {
+    width: 100%;
+  }
+}
