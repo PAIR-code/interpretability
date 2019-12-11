@@ -56,11 +56,11 @@ export function labelToWordsSet(
 
   // Also add compounds that are the previous word + the query word (and next).
   const idx = words.indexOf(word);
-  if (!commonWords.includes(words[idx - 1])) {
+  if ((idx > 0) && !commonWords.includes(words[idx - 1])) {
     const prevWord = `${words[idx - 1]} ${word}`;
     words.push(prevWord);
   }
-  if (!commonWords.includes(words[idx + 1])) {
+  if ((idx < words.length - 1) && !commonWords.includes(words[idx + 1])) {
     const nextWord = `${word} ${words[idx + 1]}`;
     words.push(nextWord);
   }
@@ -228,4 +228,25 @@ export function setURLWord(word: string) {
 
 export function isMobile() {
   return screen.width <= 590;
+}
+
+// Minimal poylfill, for more on browser support see:
+// https://bugs.chromium.org/p/chromium/issues/detail?id=370012
+// https://bugzilla.mozilla.org/show_bug.cgi?id=501421
+// https://bugzilla.mozilla.org/show_bug.cgi?id=501421
+function checkIntersectionPolyfill(node, otherBox) {
+  const nodeBox = node.getBBox();
+  return !(
+    (nodeBox.x > (otherBox.x + otherBox.width)) || 
+    ((nodeBox.x + nodeBox.width) < otherBox.x) || 
+    (nodeBox.y > (otherBox.y + otherBox.height)) ||
+    ((nodeBox.y + nodeBox.height) < otherBox.y)
+  );
+}
+
+// Add the polyfill
+export function polyfillCheckIntersection() {
+  if (!SVGSVGElement.prototype.checkIntersection) {
+    SVGSVGElement.prototype.checkIntersection = checkIntersectionPolyfill;
+  }
 }

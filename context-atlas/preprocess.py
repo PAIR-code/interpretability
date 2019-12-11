@@ -23,7 +23,6 @@ from __future__ import print_function
 import os
 import torch
 from pytorch_pretrained_bert import BertTokenizer, BertModel, BertForMaskedLM
-from sklearn.neighbors import NearestNeighbors
 import sqlite3 as sql
 import re
 import numpy as np
@@ -32,9 +31,10 @@ import json
 from tqdm import tqdm
 import nltk
 
-DB_PATH = '../enwiki-20170820.db'
-nltk.download('averaged_perceptron_tagger')
 
+DB_PATH = './enwiki-20170820.db'
+nltk.download('averaged_perceptron_tagger')
+nltk.download('punkt')
 
 def neighbors(word, sentences):
   """Get the info and (umap-projected) embeddings about a word."""

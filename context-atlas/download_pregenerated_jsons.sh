@@ -20,5 +20,5 @@
 # This script downloads the pre-generated jsons from the google cloud bucket.
 
 echo "Downloading..."
-mkdir static
+mkdir -p static/jsons
 gsutil -m cp gs://bert-wsd-vis/demo/jsons/* static/jsons
