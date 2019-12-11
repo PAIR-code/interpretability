@@ -102,6 +102,17 @@ a:hover {
   background-color: rgba(255, 179, 68, 0.6);
 }
 
+.collapsible:after {
+  content: '\002B';
+  color: #202124;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
 /* Style the collapsible content. Note: hidden by default */
 .content {
   padding: 0 18px;
