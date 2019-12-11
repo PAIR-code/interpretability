@@ -1,11 +1,12 @@
 body {
   margin: 80px;
-  font-family: Roboto,Georgia,"Times New Roman";
+  font-family: Roboto,sans-serif;
   margin-top: 20px;
-  font-size: 20px;
-  font-weight: 400;
+  font-size: 18px;
+  font-weight: 300;
   width: 700px;
   line-height: 150%;
+  color: #202124;
 }
 
 h1 {
@@ -28,10 +29,27 @@ h4 {
 
 img {
   border: 1px solid #ddd;
+  width: 700px;
 }
 
 p {
   text-align: justify;
+}
+
+span {
+  color: #999;
+  font-style: italic;
+}
+
+a {
+  background: rgba(255, 179, 68, 0.2);
+  color: #3C4043;
+  padding: 2px 2px 2px 2px;
+  text-decoration: none;
+}
+
+a:hover {
+  background: rgba(255, 179, 68, 0.6);
 }
 
 .caption {
@@ -55,33 +73,39 @@ p {
   position: absolute;
   left: 850px;
   width: 250px;
-  font-size:14pt;
-  color:"#666";
+  font-size: 12pt;
+  color: #999;
   font-style: italic;
+  padding-left: 15px;
+  border-left: 1px solid rgba(255, 179, 68, 0.6);
+}
+
+.wide {
+  width: 1100px;
 }
 
 /* Style the button that is used to open and close the collapsible content */
 .collapsible {
-  background-color: #eee;
-  color: #444;
+  background-color: #f8f8f8;
+  color: #202124;
   cursor: pointer;
   padding: 18px;
   width: 100%;
   border: none;
   text-align: left;
   outline: none;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active, .collapsible:hover {
-  background-color: #ccc;
+  background-color: rgba(255, 179, 68, 0.6);
 }
 
 /* Style the collapsible content. Note: hidden by default */
 .content {
   padding: 0 18px;
-  background-color: #eee;
+  background-color: #f8f8f8;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
