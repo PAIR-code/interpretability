@@ -54,7 +54,7 @@ limitations under the License.
     <button type="button" class="collapsible">Deep Dream</button>
     <div class="content">
       <p class="smallText">
-        In Deep Dream, inputs are changed through gradient decent, with the goal of maximizing activation values.
+        In Deep Dream, inputs are changed through gradient descent to maximize activation values.
         This can be thought of as similar to the initial training process, where through many iterations, we try to optimize a mathematical equation.
         But instead of updating network parameters, DeepDream updates the input sample.
         What this leads to is somewhat psychedelic but very interesting images, that can reveal to what kind of input these neurons react.
@@ -84,12 +84,22 @@ limitations under the License.
       Thus, there is no such gradual change to be made.
     </p>
 
+    <button type="button" class="collapsible">Word embeddings</button>
+    <div class="content">
+      <p class="smallText">
+        Language models operate on embeddings of words. Using these embeddings, words are converted into high-dimensional vectors of continuous numbers.
+        In this embedding space, words with similar meanings are closer together than words with different meanings.
+        You might ask: "Why can't we use these embeddings to dream to?" The answer is that there is often no mapping from unconstrained embedding vectors back to real tokens.
+        With Deep Dream changing the embeddings rather than input tokens, we can end up with embeddings that are nowhere close to any token.
+      </p>
+    </div>
+
     <p>
-      To still be able to use Deep Dreaming, we have to use the so called softmax-trick, which has already been employed in a <a href="https://www.aclweb.org/anthology/W18-5437">paper by Poerner et. al.</a>.
+      To still be able to use Deep Dreaming, we have to utilize the so-called softmax-trick, which has already been employed in a <a href="https://www.aclweb.org/anthology/W18-5437">paper by Poerner et. al.</a>.
       This trick allows us to soften the requirement for discrete inputs, and instead use a linear combination of tokens as input to the model.
       To assure that we do not end up with something crazy, it uses two mechanisms.
       First, it constrains this linear combination so that the linear weights sum up to one.
-      This, however, still leaves the problem that we can end up with any linear combination of such tokens, including such one that is far from real tokens.
+      This, however, still leaves the problem that we can end up with any linear combination of such tokens, including ones that are not close to real tokens in the embedding space.
       Therefore, we also make use of a temperature parameter, which controls the sparsity of this linear combination.
       By slowly decreasing this temperature value, we can make the model first explore different linear combinations of tokens, before deciding on one token.
     </p>
@@ -100,7 +110,7 @@ limitations under the License.
         The trick does two things.
         To ensure that we sum up to one for the linear combination of tokens, it takes the softmax function over the smooth input token distribution.
         However, before applying the softmax function, we divide our token distribution vector by a temperature value, i.e. $softmax(token\_distribution / t)$.
-        Dividing by large temperature values means that the softmax result will be smooth, whereas dividing by very low temperature values results in a more spiky softmax function.
+        Dividing by large temperature values means that the softmax result will be smooth, whereas dividing by small temperature values results in a more spiky softmax function.
       </p>
     </div>
 
@@ -116,28 +126,28 @@ limitations under the License.
     </div>
 
     <p>
-      Now that we know how DeepDream can be used in combination with text models, how do those results look like?
+      Now that we know how Deep Dream can be used in combination with text models, how do those results look like?
       Well, very unpredictable.
-      Fore some neurons, it was possible to produce sentences that highly activated them, however, other neurons did not give us these results at all.
+      For some neurons, it was possible to produce sentences that highly activated them, however, other neurons did not give us these results at all.
       When changing single words, the model sometimes found one that led to a high activation, but not always.
-      For whole sentences, the sucess rate was reduced even more.
+      For whole sentences, the success rate was reduced even more.
       This meant that our idea of feature visualization for text was not working.
     </p>
 
     <button type="button" class="collapsible">Changing words with BERT</button>
     <div class="content">
       <p class="smallText">
-        There are different options of which words to change usind Deep Dream.
+        There are different options of which words to change using Deep Dream.
         We always kept the CLS and SEP tokens static.
-        CLS is a spectial classification token used by BERT for some downstream tasks, while SEP marks the end of a sentence.
+        CLS is a special classification token used by BERT for some downstream tasks, while SEP marks the end of a sentence.
         When we allowed the model to change these tokens as well, it seemed to be even more confused and the approach completely failed.
         In between those special tokens, one can change anything from one word to the whole sentence, albeit with mixed results.
       </p>
     </div>
   
     <p>
-      In the first place, this was surprising to us.
-      This method uses gradient decent and seemed to work for other models (<a href="https://www.aclweb.org/anthology/W18-5437">see Poerner et. al. 2018</a>).
+      The lack of success in dreaming words to highly activate specific neurons was surprising to us.
+      This method uses gradient descent and seemed to work for other models (<a href="https://www.aclweb.org/anthology/W18-5437">see Poerner et. al. 2018</a>).
       However, BERT is a complex model, arguably much more complex than the models that have been previously investigated with this method.
     </p>
 
@@ -155,10 +165,10 @@ limitations under the License.
     <h3>Visualizing the dreaming process</h3>
   
     <p>
-      The first question we wanted to answer for these dreaming processes is how the input representation evolves over time.
+      The first question we wanted to answer for these dreaming processes is how the input representation evolves.
       Here, it is interesting to look at when and how the model replaces certain words in the input.
-      At the same time, we wanted to see how the activation value of the neuron we are trying to maximize was evolving alongside the change of temperature.
-      Additionally, we compare the evolvement of this activation value to the activation we would get if we were to ignore the linear combination of tokens that we obtain using the softmax-trick, and insted snap our input to the top ranked tokens of the softmax function.
+      At the same time, we wanted to see how the activation value of the neuron we are trying to maximize was evolving alongside the change of temperature which we use to force the model to pick real tokens.
+      Additionally, we compare the evolution of this activation value to the activation we would get if we were to ignore the linear combination of tokens that we obtain using the softmax-trick and instead snap our input to the top-ranked tokens of the softmax function.
       The visualization of this process can be seen in Figure 1.
     </p>
   
@@ -169,17 +179,17 @@ limitations under the License.
           Figure 1. Visualization of the dreaming result over iterations.
           We skipped some iterations in the middle for simplicity.
           In the beginning, the model can use linear combinations of embeddings to get a high activation value (dark green).
-          As the temperature (blue) loweres, the model has to use more sparse combinations of tokens through which the activation of this linear combination and the activation of actual token ids (light green) gets closer.
-          In this run, the model succeeds in dreaming to a higher activation (0.0436 vs. 0.0570).
+          As the temperature (blue) decreases, the model has to use more sparse combinations of tokens through which the activation of this linear combination and the activation of actual token ids (light green) gets closer.
+          In this run, the model succeeds in dreaming to a higher activation (0.0436 before vs. 0.0570 after optimization, as seen on the bottom).
         </p>
       </div>
     </div>
 
     <p>
-      As can be seen, at the end of the dreaming process, this was not a valid english sentence anymore.
-      What was more concerning, however, is that while this is an example for a successful run, we were not able to consistently get back to the same or a higher activation than what we started with.
-      This is something we wanted to investigate further.
-      We had some ideas why this might not always work as expected:
+      As can be seen, at the end of the dreaming process, this was not a valid English sentence anymore.
+      What was more concerning, however, is that while this is an example of a successful run, we were not able to consistently get back to the same or a higher activation than what we started with.
+      As this approach has a lot more freedom to change words, it should be able to lead us to higher activations than the top sentences from a corpus search. This is something we wanted to investigate further.
+      We had some ideas on why this might not always work as expected:
     </p>
 
     <ol>
@@ -212,18 +222,18 @@ limitations under the License.
   
     <p>
       To investigate our first idea for why BERT might have problems with getting good sleep, we wanted to see how the annealing progresses.
-      Here, we were interested in how the softmax token-distribution changes throughout the process.
+      Here, we were interested in how the softmax token-distribution changed throughout the process.
       A visualization of this change can be seen in Figure 2.
       Interestingly, the token "hands" has a very low weight.
-      If we went on, we could see that the model rules out more tokens and in the end is unable to swap back to "hands" to get a high activation.
-      In the end, it can only choose between tokens "##pile", "##gas", and "##gles", which all do not highly activate the neuron.
+      If we went on, we could see that the model ruled out more tokens and was unable to swap back to "hands" to get a higher activation.
+      In the end, it could only choose between tokens "##pile", "##gas", and "##gles", which all did not highly activate the neuron.
     </p>
-  
+
     <div class="image-div">
       <img src="imgs/top_words.png">
       <div class="caption">
         <p>
-        Figure 2. Visualization of the softmax diftribution that is used for getting a linear combination of embeddings to feed into the model.
+        Figure 2. Visualization of the softmax distribution that is used for getting a linear combination of embeddings to feed into the model.
         The length of the orange bar indicates the weight assigned to the token to obtain a linear combination of embeddings.
         </p>
       </div>
@@ -233,7 +243,7 @@ limitations under the License.
       It is also interesting to look at this in combination with the top activations for a specific word position.
       We can do that by checking the activation for each word in the vocabulary.
       You can see a visualization of this in Figure 3.
-      One thing that this reveals is that "hands" is indeed the most activating word in for the investigated neuron, given this sentence.
+      One thing that this reveals is that "hands" is indeed the most activating word for the investigated neuron, given this sentence.
       Interestingly, none of the tokens that have high weights in the linear combination of tokens to input into the model can be found in these top activating ones.
       This shows one possible problem with this method and supports our theory that sometimes, the annealing process removes highly activating tokens from the set of tokens that can be selected by the dreaming process.
     </p>
@@ -251,14 +261,14 @@ limitations under the License.
     <h3>Visualizing similar embeddings</h3>
 
     <p>
-      Another concern for why this method is not always leading to desired results is, that the optimization problem is hard.
-      A reason for this could be, that the models neurons are highly specialized on certrain tokens, while all the tokens around it might not activate the neuron much.
-      To get an idea about that, we developed another visualization that allows us to look at activations for tokens that are close to the token we know higly activates the neuron.
-      In Figure 5, you can see an example for this visualization.
+      Another concern for why this method is not always leading to desired results is that the optimization problem is hard.
+      A reason for this could be, that the models' neurons are highly specialized on certain tokens, while all the tokens around it might not activate the neuron much.
+      To get an idea about that, we developed another visualization that allows us to look at activations for tokens that are close to the token we know highly activates the neuron.
+      In Figure 5, you can see an example of this visualization.
       We see that words that are close in the high-dimensional embedding to the word "for", which we know produces a high activation, do not also activate the neuron that much.
-      This could be an indication that some neurons are so specialized, that it gets extremely hard to find optima using gradient decent, and might indeed be another reason for why these dreaming approaches sometimes fail to produce the expected results.
+      This could be an indication that some neurons are so specialized, that it gets extremely hard to find optima using gradient descent, and might indeed be another reason for why these dreaming approaches sometimes fail to produce the expected results.
     </p>
-  
+
     <div class="side-note">
       In fact, none of the words in this visualization except "for" would be in the top-thirty most activating words if we were to look at the token search visualization for this example.
     </div>
@@ -280,7 +290,7 @@ limitations under the License.
     </h2>
   
     <p>
-      To test the general applicability of this approach in a simpler setting, we tried to reconstruct activations insted of maximizing them.
+      To test the general applicability of this approach in a simpler setting, we tried to reconstruct activations instead of maximizing them.
       For this experiment, we fed a sentence into the network, saved the activation for a specific layer, and then tried to get back to this initial sentence using Deep Dream.
     </p>
 
@@ -297,7 +307,7 @@ limitations under the License.
   
     <p>
       The results for such an experiment can be seen in Figure 5.
-      Surprinsingly, these experiments seem to work comparably well.
+      Surprisingly, these experiments seem to work comparably well.
       What is even more interesting: this does not only indicate that our approach has no conceptual flaws, but reveals additional insight into the workings of BERT.
     </p>
   
@@ -306,7 +316,7 @@ limitations under the License.
       <div class="caption">
         <p class="wide">
           Figure 5. Reconstruction visualization.
-          Green indicates correctly reconstructed tokens, while red sybmolizes tokens that could not be correctly reconstructed.
+          Green indicates correctly reconstructed tokens, while red symbolizes tokens that could not be correctly reconstructed.
           The topmost sentence is the sentence with which the target activation was obtained.
           All the other sentences are results of the layers in BERT.
         </p>
@@ -314,7 +324,7 @@ limitations under the License.
     </div>
   
     <p>
-      One such insight is that is seems to be easier to completely reconstruct the activation for earlier layers.
+      One such insight is that it seems to be easier to completely reconstruct the activation for earlier layers.
       Layers that take on later processing steps are consistently harder to reconstruct.
       Another interesting analyzation is too look at which words get replaced in each of the layers.
       While some words cannot be reconstructed relatively early, which indicates that they might not be as important, others are replaced by conceptually similar words, which shows how the model is able to abstract upon language.
@@ -331,12 +341,12 @@ limitations under the License.
         This is in line with the general assumption that such models first look for fine-grained structures and details in the input, before moving to the recognition of more general concepts.
         Interestingly, some words are consistently reconstructed across all layers.
         It seems like these words are especially important for the network to understand the sentence.
-        This indicates that for some tokens, the exact representation is of great importance for understanding the sentence, while other can be replaced without as much loss of information.
+        This indicates that for some tokens, the exact representation is of great importance for understanding the sentence, while others can be replaced without as much loss of information.
       </p>
     </div>
 
     <p>
-      All in all, this experiment provided more insight than we initially expected, which led us to build on this, and try something similar.
+      All in all, this experiment provided more insight than we initially expected, which led us to build on this and try something similar.
     </p>
   
     <!------------------------------------------------------------------------->
@@ -347,7 +357,7 @@ limitations under the License.
     <p>
       If reconstructing activations works, what happens if we change some activations?
       To investigate potential bias in such models, we wanted to make meaningful changes to the activations and look into what the model makes off these changes during reconstruction.
-      We, thus, changed activations of gender specific words in the directions of their counterparts, e.g. "he" in the direction of "she".
+      We, thus, changed activations of gender-specific words in the directions of their counterparts, e.g. "he" in the direction of "she".
     </p>
 
     <button type="button" class="collapsible">Technical details</button>
@@ -355,8 +365,8 @@ limitations under the License.
       <p class="smallText">
         Performing such changes can be done with some preprocessing.
         First, we gathered sentences for two concepts we want to test bias for.
-        Then, we fed all these sentences through the network, and saved the activation value for the concept-word in each layer.
-        This gave us representation of both concepts per layer.
+        Then, we fed all these sentences through the network and saved the activation value for the concept-word in each layer.
+        This gave us a representation of both concepts per layer.
         To then find a direction to reasonably change the activation towards, we used <a href="https://arxiv.org/pdf/1711.11279.pdf">Concept Activation Vectors (CAV)</a>.
         Thus, we trained linear classifiers between activations for both concepts.
         The vector that is orthogonal to the classification boundary could then be used as the direction to shift the activation by simply adding it to the original activation value.
@@ -370,8 +380,8 @@ limitations under the License.
       
     <p>
       One can see the results of such an experiment in Figure 6.
-      Remarkably, in this case not only the token we shifted the activation for changed, but also tokens that we did not touch at all.
-      Even more exiting was that the token "her" actually changed to "his", which matches the direction we shift the pronoun token into.
+      Remarkably, in this case not only the token we shifted the activation for changed but also tokens that we did not touch at all.
+      Even more exciting was that the token "her" actually changed to "his", which matches the direction we shift the pronoun token into.
       Thus, even though we only change the pronoun, this is so important for the model, that other tokens can be changed on this basis.
       On the other hand, we were not able to find even stronger indications of bias, where for example, the model would change the word "baseball" so something it understands as more female.
       Also, as with all the other experiments we conducted, the results were neither reproducible nor predictable.
@@ -386,8 +396,8 @@ limitations under the License.
         The first line depicts the target, while the second line shows the original input.
         Red stands for words that changed, but not according to the intended concept shift of the pronoun.
         Green words indicate that the concept change was successful for a token.
-        Black sybolizes that no change compared to the input happened.
-        The numbers besides the results singnal the magnitude of the change, as the shift vector points into the female concept direction, these have to be negative.
+        Black symbolizes that no change compared to the input happened.
+        The numbers beside the results signal the magnitude of the change, as the shift vector points into the female concept direction, these have to be negative.
         </p>
       </div>
     </div>
