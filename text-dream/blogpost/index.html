@@ -34,7 +34,7 @@ limitations under the License.
     </div>
     <p>
       <span>
-        A visual investigation of nightmares in sesame street by Alex Bäuerle, James Wexler, and Martin Wattenberg on <a href="https://ai.google/research/teams/brain/pair">PAIR</a>.
+        A visual investigation of nightmares in sesame street by Alex Bäuerle (<a href="https://twitter.com/a13xba">@a13xba</a>) and James Wexler (<a href="https://twitter.com/bengiswex">@bengiswex</a>) on <a href="https://ai.google/research/teams/brain/pair">PAIR</a>.
       </span>
     </p>
   
@@ -55,6 +55,19 @@ limitations under the License.
         This can be thought of as similar to the initial training process, where through many iterations, we try to optimize a mathematical equation.
         But instead of updating network parameters, DeepDream updates the input sample.
         What this leads to is somewhat psychedelic but very interesting images, that can reveal to what kind of input these neurons react.
+        <div class="image-div-hidden">
+          <img src="https://2.bp.blogspot.com/-17ajatawCW4/VYITTA1NkDI/AAAAAAAAAlM/eZmy5_Uu9TQ/s1600/classvis.png" class='slim'>
+          <div class="caption-slim">
+            <p>
+              Examples for deep dream processes with images from the original Deep Dream <a href="https://ai.googleblog.com/2015/06/inceptionism-going-deeper-into-neural.html">blogpost</a>.
+              Here, they take a randomly initialized image and use Deep Dream to transform the image by maximizing the activation of the corresponding output neuron.
+              This can show what a network has learned about different classes or for individual neurons.
+            </p>
+          </div>
+        </div>
+
+
+
       </p>
     </div>
 
@@ -119,11 +132,11 @@ limitations under the License.
     <div class="side-note">
       As a baseline for all experiments, we used results from corpus search.
       Here, we searched through a large corpus of sentences and looked into which one activates the neuron of interest most.
-      We always started the process with one of the top 10 sentences from this corpus, as this approach has a lot more freedom to change words and thus should be able to get to higher activations.
+      We always started the process with one of the top 10 sentences from this corpus, as this approach has a lot more freedom to change words and thus should be able to get to higher activations than corpus search alone.
     </div>
 
     <p>
-      Now that we know how Deep Dream can be used in combination with text models, how do those results look like?
+      Now that we know how Deep Dream can be used in combination with text models, what do those results look like?
       Well, very unpredictable.
       For some neurons, it was possible to produce sentences that highly activated them, however, other neurons did not give us these results at all.
       When changing single words, the model sometimes found one that led to a high activation, but not always.
@@ -259,7 +272,7 @@ limitations under the License.
 
     <p>
       Another concern for why this method is not always leading to desired results is that the optimization problem is hard.
-      A reason for this could be, that the models' neurons are highly specialized on certain tokens, while all the tokens around it might not activate the neuron much.
+      A reason for this could be that the model's neurons are highly specialized on certain tokens, while all the tokens around it might not activate the neuron as much.
       To get an idea about that, we developed another visualization that allows us to look at activations for tokens that are close to the token we know highly activates the neuron.
       In Figure 5, you can see an example of this visualization.
       We see that words that are close in the high-dimensional embedding to the word "for", which we know produces a high activation, do not also activate the neuron that much.
@@ -323,7 +336,7 @@ limitations under the License.
     <p>
       One such insight is that it seems to be easier to completely reconstruct the activation for earlier layers.
       Layers that take on later processing steps are consistently harder to reconstruct.
-      Another interesting analyzation is too look at which words get replaced in each of the layers.
+      Another interesting analysis is too look at which words get replaced in each of the layers.
       While some words cannot be reconstructed relatively early, which indicates that they might not be as important, others are replaced by conceptually similar words, which shows how the model is able to abstract upon language.
       Other, seemingly important words are consistently reconstructed across all layers.
     </p>
@@ -353,8 +366,8 @@ limitations under the License.
   
     <p>
       If reconstructing activations works, what happens if we change some activations?
-      To investigate potential bias in such models, we wanted to make meaningful changes to the activations and look into what the model makes off these changes during reconstruction.
-      We, thus, changed activations of gender-specific words in the directions of their counterparts, e.g. "he" in the direction of "she".
+      To investigate potential bias in such models, we wanted to make meaningful changes to the activations and look into what the model makes of these changes during reconstruction.
+      Thus, we changed activations of gender-specific words in the directions of their counterparts, e.g. "he" in the direction of "she".
     </p>
 
     <button type="button" class="collapsible">Technical details</button>
@@ -370,18 +383,18 @@ limitations under the License.
         To follow this idea, we used a corpus of sentences containing male and female pronouns, namely "he" and "she".
         After obtaining the CAV for these concepts, we use the same approach of reconstructing activations as before.
         The only difference here is, that the activation that is to be reconstructed gets changed before the reconstruction process.
-        To be more precise, we change the activation that re retrieved for a sentence at the position of a pronoun.
+        To be more precise, we change the activation that we retrieved for a sentence at the position of a pronoun.
         The activations of all the other tokens are kept the same.
       </p>
     </div>
       
     <p>
       One can see the results of such an experiment in Figure 6.
-      Remarkably, in this case not only the token we shifted the activation for changed but also tokens that we did not touch at all.
-      Even more exciting was that the token "her" actually changed to "his", which matches the direction we shift the pronoun token into.
-      Thus, even though we only change the pronoun, this is so important for the model, that other tokens can be changed on this basis.
-      On the other hand, we were not able to find even stronger indications of bias, where for example, the model would change the word "baseball" so something it understands as more female.
-      Also, as with all the other experiments we conducted, the results were neither reproducible nor predictable.
+      Interestingly, not only did a change occur during reconstruction of the token we shifted the activation for, but also for some of the tokens for which the activations were untouched.
+      Most exciting was that the token "her" changed to "his", which matches the direction we shifted the pronoun token.
+      Thus, even though we only changed the pronoun, this was so important for the model, that other tokens could be changed on this basis.
+      On the other hand, we were not able to find even stronger indications of bias, where for example, the model would change the word "baseball" so something it understands as more "female".
+      Also, as with all the other experiments we conducted, the results were neither completely reproducible nor predictable.
     </p>
   
     <div class="image-div">
@@ -403,7 +416,7 @@ limitations under the License.
     <h2>Conclusion</h2>
   
     <p>
-      This article shows experiments aimed at looking into what a deep language model has learned.
+      This article shows experiments aimed at looking into what a deep transformer language model, namely BERT, has learned.
       Sadly, most of what we tried did not lead to the results and insights we hoped for.
       However, we also got some interesting insights into how a language model builds up its understanding of text using these methods.
       Thus, we are not giving up, and hope that one day we can understand what individual components of text models have learned through approaches like these.
@@ -412,7 +425,7 @@ limitations under the License.
   
     <p>
       <span>
-        Many thanks to Nina Poerner, and Ian Tenney for helpful feedback and discussions about this research.
+        Many thanks to Martin Wattenberg, Nina Poerner, and Ian Tenney for helpful feedback and discussions about this research.
       </span>
     </p>
 
