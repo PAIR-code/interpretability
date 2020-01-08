@@ -34,7 +34,7 @@ limitations under the License.
     </div>
     <p>
       <span>
-        A visual investigation of nightmares in sesame street by Alex Bäuerle (<a href="https://twitter.com/a13xba">@a13xba</a>) and James Wexler (<a href="https://twitter.com/bengiswex">@bengiswex</a>) on <a href="https://ai.google/research/teams/brain/pair">PAIR</a>.
+        A visual investigation of nightmares in sesame street by Alex Bäuerle (<a href="https://twitter.com/a13xba">@a13xba</a>) and James Wexler (<a href="https://twitter.com/bengiswex">@bengiswex</a>) of <a href="https://ai.google/research/teams/brain/pair">PAIR</a>.
       </span>
     </p>
   
@@ -138,7 +138,7 @@ limitations under the License.
     <p>
       Now that we know how Deep Dream can be used in combination with text models, what do those results look like?
       Well, very unpredictable.
-      For some neurons, it was possible to produce sentences that highly activated them, however, other neurons did not give us these results at all.
+      For some neurons it was possible to produce sentences that highly activated them, however, for other neurons we weren't able to dream such sentences.
       When changing single words, the model sometimes found one that led to a high activation, but not always.
       For whole sentences, the success rate was reduced even more.
       This meant that our idea of feature visualization for text was not working.
@@ -176,7 +176,7 @@ limitations under the License.
   
     <p>
       The first question we wanted to answer for these dreaming processes is how the input representation evolves.
-      Here, it is interesting to look at when and how the model replaces certain words in the input.
+      Here it is interesting to look at when and how the model replaces certain words in the input.
       At the same time, we wanted to see how the activation value of the neuron we are trying to maximize was evolving alongside the change of temperature which we use to force the model to pick real tokens.
       Additionally, we compare the evolution of this activation value to the activation we would get if we were to ignore the linear combination of tokens that we obtain using the softmax-trick and instead snap our input to the top-ranked tokens of the softmax function.
       The visualization of this process can be seen in Figure 1.
@@ -236,7 +236,7 @@ limitations under the License.
       A visualization of this change can be seen in Figure 2.
       Interestingly, the token "hands" has a very low weight.
       If we went on, we could see that the model ruled out more tokens and was unable to swap back to "hands" to get a higher activation.
-      In the end, it could only choose between tokens "##pile", "##gas", and "##gles", which all did not highly activate the neuron.
+      In the end, it could only choose between tokens "##pile", "##gas", and "##gles", none of which highly activated the neuron.
     </p>
 
     <div class="image-div">
@@ -255,7 +255,7 @@ limitations under the License.
       You can see a visualization of this in Figure 3.
       One thing that this reveals is that "hands" is indeed the most activating word for the investigated neuron, given this sentence.
       Interestingly, none of the tokens that have high weights in the linear combination of tokens to input into the model can be found in these top activating ones.
-      This shows one possible problem with this method and supports our theory that sometimes, the annealing process removes highly activating tokens from the set of tokens that can be selected by the dreaming process.
+      This shows one possible problem with this method and supports our theory that sometimes the annealing process removes highly activating tokens from the set of tokens that can be selected by the dreaming process.
     </p>
   
     <div class="image-div">
@@ -271,9 +271,9 @@ limitations under the License.
     <h3>Visualizing similar embeddings</h3>
 
     <p>
-      Another concern for why this method is not always leading to desired results is that the optimization problem is hard.
+      Another possible reasons this method doesn't always lead to the desired results is that the optimization problem is hard.
       A reason for this could be that the model's neurons are highly specialized on certain tokens, while all the tokens around it might not activate the neuron as much.
-      To get an idea about that, we developed another visualization that allows us to look at activations for tokens that are close to the token we know highly activates the neuron.
+      To explore this possibility, we developed another visualization that allows us to look at activations for tokens that are close to the token we know highly activates the neuron.
       In Figure 5, you can see an example of this visualization.
       We see that words that are close in the high-dimensional embedding to the word "for", which we know produces a high activation, do not also activate the neuron that much.
       This could be an indication that some neurons are so specialized, that it gets extremely hard to find optima using gradient descent, and might indeed be another reason for why these dreaming approaches sometimes fail to produce the expected results.
@@ -316,9 +316,9 @@ limitations under the License.
     </div>
   
     <p>
-      The results for such an experiment can be seen in Figure 5.
+      The results of this experiment can be seen in Figure 5.
       Surprisingly, these experiments seem to work comparably well.
-      What is even more interesting: this does not only indicate that our approach has no conceptual flaws, but reveals additional insight into the workings of BERT.
+      Even more interesting: this indicates not only that our approach has no major conceptual flaws, but reveals additional insight into the workings of BERT.
     </p>
   
     <div class="image-div">
@@ -337,7 +337,7 @@ limitations under the License.
       One such insight is that it seems to be easier to completely reconstruct the activation for earlier layers.
       Layers that take on later processing steps are consistently harder to reconstruct.
       Another interesting analysis is too look at which words get replaced in each of the layers.
-      While some words cannot be reconstructed relatively early, which indicates that they might not be as important, others are replaced by conceptually similar words, which shows how the model is able to abstract upon language.
+      While some words cannot be reconstructed relatively early, which indicates that they might not be as important, others are replaced by conceptually similar words, which hints at how the model is able to reason about language.
       Other, seemingly important words are consistently reconstructed across all layers.
     </p>
 
@@ -425,7 +425,7 @@ limitations under the License.
   
     <p>
       <span>
-        Many thanks to Martin Wattenberg, Nina Poerner, and Ian Tenney for helpful feedback and discussions about this research.
+        Many thanks to Martin Wattenberg, Nina Poerner, and Ian Tenney for helpful feedback and discussions about this research, and to David Weinberger for editorial input.
       </span>
     </p>
 
