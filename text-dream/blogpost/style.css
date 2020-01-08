@@ -1,0 +1,183 @@
+body {
+  margin: 80px;
+  font-family: Roboto,sans-serif;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 300;
+  width: 700px;
+  line-height: 150%;
+  color: #202124;
+}
+
+h1 {
+  margin-bottom: 20px;
+  line-height: normal;
+}
+
+h2 {
+  margin-top: 60px;
+}
+
+h3 {
+  margin-top: 30px;
+}
+
+h4 {
+  margin-bottom: 20px;
+  line-height: normal;
+}
+
+img {
+  border: 1px solid #ddd;
+  width: 700px;
+}
+
+p {
+  text-align: justify;
+}
+
+span {
+  color: #999;
+  font-style: italic;
+}
+
+a {
+  background: rgba(255, 179, 68, 0.2);
+  color: #3C4043;
+  padding: 2px 2px 2px 2px;
+  text-decoration: none;
+}
+
+a:hover {
+  background: rgba(255, 179, 68, 0.6);
+}
+
+.caption {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  color: #888;
+  font-family: Helvetica;
+  font-size: 12pt;
+  line-height: 120%;
+}
+
+.caption-slim {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  color: #888;
+  font-family: Helvetica;
+  font-size: 10pt;
+  line-height: 120%;
+}
+
+.image-div {
+  display:inline-block;
+  margin-top: 20px;
+  margin-right: 30px;
+  margin-bottom: 20px;
+  width: 700px;
+}
+
+.image-div-hidden {
+  display:inline-block;
+  margin-top: 20px;
+  margin-right: 30px;
+  width: 664px;
+}
+
+.side-note {
+  position: absolute;
+  left: 850px;
+  width: 250px;
+  font-size: 12pt;
+  color: #999;
+  font-style: italic;
+  padding-left: 15px;
+  border-left: 1px solid rgba(255, 179, 68, 0.6);
+}
+
+.wide {
+  width: 1100px;
+}
+
+.slim {
+  width: 664px;
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: #f8f8f8;
+  color: #202124;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 14px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: rgba(255, 179, 68, 0.6);
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: #202124;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0 18px;
+  background-color: #f8f8f8;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.smallText {
+  font-size: 14px;
+  line-height: 150%;
+}
+
+@media (max-width: 1100px) {
+  body {
+    margin: 10px;
+    max-width: 700px;
+    width: calc(100% - 20px);
+    overflow-x: hidden;
+    font-size: 20px;
+  }
+
+  .side-note {
+    position: relative;
+    left: -5px;
+    width: 100%;
+    margin-bottom: 20px;
+    background: #e6e6e6;
+    border: 1px solid #aeaeae;
+    background: #fbf6ed;
+    border: 1px solid #e5ca8e;
+    border-radius: 5px;
+    padding: 5px !important;
+  }
+
+  img {
+    width: 100%;
+  }
+  
+  .image-div {
+    width: 100%;
+  }
+
+  .wide {
+    width: 100%;
+  }
+}
