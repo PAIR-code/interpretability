@@ -196,8 +196,8 @@ limitations under the License.
     </div>
 
     <p>
-      As can be seen, at the end of the dreaming process, this was not a valid English sentence anymore.
-      What was more concerning, however, is that while this is an example of a successful run, we were not able to consistently get back to the same or a higher activation than what we started with.
+      As can be seen, as the dreaming process progresses, the sentence quickly becomes gibberish.
+      What was more interesting, however, is that while this is an example of a successful run, we were not able to consistently get back to the same or a higher activation than what we started with.
       As this approach has a lot more freedom to change words, it should be able to lead us to higher activations than the top sentences from a corpus search. This is something we wanted to investigate further.
       We had some ideas on why this might not always work as expected:
     </p>
@@ -231,7 +231,7 @@ limitations under the License.
     </h3>
   
     <p>
-      To investigate our first idea for why BERT might have problems with getting good sleep, we wanted to see how the annealing progresses.
+      To investigate our first idea for why BERT might have problems with dreaming, we wanted to see how the annealing progresses.
       Here, we were interested in how the softmax token-distribution changed throughout the process.
       A visualization of this change can be seen in Figure 2.
       Interestingly, the token "hands" has a very low weight.
@@ -417,8 +417,7 @@ limitations under the License.
   
     <p>
       This article shows experiments aimed at looking into what a deep transformer language model, namely BERT, has learned.
-      Sadly, most of what we tried did not lead to the results and insights we hoped for.
-      However, we also got some interesting insights into how a language model builds up its understanding of text using these methods.
+      Although our attempts didn't work as well as we were hoping, we got some interesting insights into how a language model builds up its understanding of text using these methods.
       Thus, we are not giving up, and hope that one day we can understand what individual components of text models have learned through approaches like these.
       To support further research in this direction, we open-sourced all our <a href="https://github.com/PAIR-code/interpretability/tree/master/text-dream/python">code</a> and <a href="https://github.com/PAIR-code/interpretability/tree/master/text-dream/webapp">visualizations</a>.
     </p>
