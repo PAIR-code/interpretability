@@ -50,10 +50,10 @@ limitations under the License.
     <p>
       <a href="https://arxiv.org/pdf/1810.04805.pdf">BERT</a>, a neural network published by Google in 2018, excels in natural language understanding.
       It can be used for multiple different tasks, such as sentiment analysis or next sentence prediction, and has <a href="https://www.blog.google/products/search/search-language-understanding-bert/">recently been integrated into Google Search.</a>
-      This novel model has brought a big change to language modeling as it outperformed all is predecessors on multiple different tasks.
+      This novel model has brought a big change to language modeling as it outperformed all its predecessors on multiple different tasks.
       Whenever such breakthroughs in deep learning happen, people wonder how the network manages to achieve such impressive results, and what it actually learned.
       A common way of looking into neural networks is <a href="https://distill.pub/2017/feature-visualization/">feature visualization</a>.
-      The ideas of feature visualization are borrowed from <a href="https://ai.googleblog.com/2015/06/inceptionism-going-deeper-into-neural.html">DeepDream</a>, where we can obtain inputs that excite the network by maximizing the activation of neurons, channels, or layers of the network.
+      The ideas of feature visualization are borrowed from <a href="https://ai.googleblog.com/2015/06/inceptionism-going-deeper-into-neural.html">Deep Dream</a>, where we can obtain inputs that excite the network by maximizing the activation of neurons, channels, or layers of the network.
       This way, we get an idea about which part of the network is looking for what kind of input.
     </p>
   
@@ -62,13 +62,13 @@ limitations under the License.
       <p class="smallText">
         In Deep Dream, inputs are changed through gradient descent to maximize activation values.
         This can be thought of as similar to the initial training process, where through many iterations, we try to optimize a mathematical equation.
-        But instead of updating network parameters, DeepDream updates the input sample.
+        But instead of updating network parameters, Deep Dream updates the input sample.
         What this leads to is somewhat psychedelic but very interesting images, that can reveal to what kind of input these neurons react.
         <div class="image-div-hidden">
           <img src="https://2.bp.blogspot.com/-17ajatawCW4/VYITTA1NkDI/AAAAAAAAAlM/eZmy5_Uu9TQ/s1600/classvis.png" class='slim'>
           <div class="caption-slim">
             <p>
-              Examples for deep dream processes with images from the original Deep Dream <a href="https://ai.googleblog.com/2015/06/inceptionism-going-deeper-into-neural.html">blogpost</a>.
+              Examples for Deep Dream processes with images from the original Deep Dream <a href="https://ai.googleblog.com/2015/06/inceptionism-going-deeper-into-neural.html">blogpost</a>.
               Here, they take a randomly initialized image and use Deep Dream to transform the image by maximizing the activation of the corresponding output neuron.
               This can show what a network has learned about different classes or for individual neurons.
             </p>
@@ -88,7 +88,7 @@ limitations under the License.
   
     <!------------------------------------------------------------------------->
     <h2>
-      Deep dreaming with text
+      Deep Dream with text
     </h2>
   
     <div class="side-note">
@@ -114,7 +114,7 @@ limitations under the License.
     </div>
 
     <p>
-      To still be able to use Deep Dreaming, we have to utilize the so-called softmax-trick, which has already been employed in a <a href="https://www.aclweb.org/anthology/W18-5437">paper by Poerner et. al.</a>.
+      To still be able to use Deep Dream, we have to utilize the so-called softmax-trick, which has already been employed in a <a href="https://www.aclweb.org/anthology/W18-5437">paper by Poerner et. al.</a>.
       This trick was introduced by <a href="https://arxiv.org/pdf/1611.01144.pdf">Jang et. al.</a> and <a href="https://arxiv.org/pdf/1611.00712.pdf">Maddison et. al.</a>.
       It allows us to soften the requirement for discrete inputs, and instead use a linear combination of tokens as input to the model.
       To assure that we do not end up with something crazy, it uses two mechanisms.
