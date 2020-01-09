@@ -106,7 +106,8 @@ limitations under the License.
 
     <p>
       To still be able to use Deep Dreaming, we have to utilize the so-called softmax-trick, which has already been employed in a <a href="https://www.aclweb.org/anthology/W18-5437">paper by Poerner et. al.</a>.
-      This trick allows us to soften the requirement for discrete inputs, and instead use a linear combination of tokens as input to the model.
+      This trick was introduced by <a href="https://arxiv.org/pdf/1611.01144.pdf">Jang et. al.</a> and <a href="https://arxiv.org/pdf/1611.00712.pdf">Maddison et. al.</a>.
+      It allows us to soften the requirement for discrete inputs, and instead use a linear combination of tokens as input to the model.
       To assure that we do not end up with something crazy, it uses two mechanisms.
       First, it constrains this linear combination so that the linear weights sum up to one.
       This, however, still leaves the problem that we can end up with any linear combination of such tokens, including ones that are not close to real tokens in the embedding space.
