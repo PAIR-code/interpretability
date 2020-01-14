@@ -43,7 +43,7 @@ limitations under the License.
     </div>
     <p>
       <span>
-        A visual investigation of nightmares in sesame street by Alex Bäuerle (<a href="https://twitter.com/a13xba">@a13xba</a>) and James Wexler (<a href="https://twitter.com/bengiswex">@bengiswex</a>) of <a href="https://ai.google/research/teams/brain/pair">PAIR</a>.
+        A visual investigation of nightmares in Sesame Street by Alex Bäuerle (<a href="https://twitter.com/a13xba">@a13xba</a>) and James Wexler (<a href="https://twitter.com/bengiswex">@bengiswex</a>) of <a href="https://ai.google/research/teams/brain/pair">PAIR</a>.
       </span>
     </p>
   
@@ -114,7 +114,7 @@ limitations under the License.
     </div>
 
     <p>
-      To still be able to use Deep Dream, we have to utilize the so-called softmax-trick, which has already been employed in a <a href="https://www.aclweb.org/anthology/W18-5437">paper by Poerner et. al.</a>.
+      To still be able to use Deep Dream, we have to utilize the so-called Gumbel-Softmax trick, which has already been employed in a <a href="https://www.aclweb.org/anthology/W18-5437">paper by Poerner et. al.</a>.
       This trick was introduced by <a href="https://arxiv.org/pdf/1611.01144.pdf">Jang et. al.</a> and <a href="https://arxiv.org/pdf/1611.00712.pdf">Maddison et. al.</a>.
       It allows us to soften the requirement for discrete inputs, and instead use a linear combination of tokens as input to the model.
       To assure that we do not end up with something crazy, it uses two mechanisms.
@@ -124,7 +124,7 @@ limitations under the License.
       By slowly decreasing this temperature value, we can make the model first explore different linear combinations of tokens, before deciding on one token.
     </p>
 
-    <button type="button" class="collapsible">Softmax Trick</button>
+    <button type="button" class="collapsible">Gumbel-Softmax Trick</button>
     <div class="content">
       <p class="smallText">
         The trick does two things.
@@ -188,7 +188,7 @@ limitations under the License.
       The first question we wanted to answer for these dreaming processes is how the input representation evolves.
       Here it is interesting to look at when and how the model replaces certain words in the input.
       At the same time, we wanted to see how the activation value of the neuron we are trying to maximize was evolving alongside the change of temperature which we use to force the model to pick real tokens.
-      Additionally, we compare the evolution of this activation value to the activation we would get if we were to ignore the linear combination of tokens that we obtain using the softmax-trick and instead snap our input to the top-ranked tokens of the softmax function.
+      Additionally, we compare the evolution of this activation value to the activation we would get if we were to ignore the linear combination of tokens that we obtain using the Gumbel-Softmax trick and instead snap our input to the top-ranked tokens of the softmax function.
       The visualization of this process can be seen in Figure 1.
     </p>
   
