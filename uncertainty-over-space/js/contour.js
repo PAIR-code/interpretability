@@ -308,10 +308,10 @@ function initContour(){
 if (window.tidy) initContour()
 
 
+// Misc DOM manipulation
 
 addVec()
 
-// MISC
 function addVec(){
   d3.selectAll('vec').each(function(){
     var sel = d3.select(this)
@@ -372,6 +372,20 @@ d3.select('.city-image')
   .lower()
   .st({left: -980/2 - 20, position: 'relative'})
   .append('div')
+
+
+function setFullWidthSize(){
+  d3.selectAll('.full-width')
+    .st({
+      width: Math.max(innerWidth, 980),
+      marginLeft: Math.min(-innerWidth/2, 490),
+      marginRight: Math.min(-innerWidth/2, 490),
+    })
+}
+d3.select(window).on('resize', setFullWidthSize)
+setFullWidthSize()
+
+
 
 
 
