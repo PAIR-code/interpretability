@@ -94,12 +94,12 @@ var isIframe = self != top
   var linkSel = buttonSel.append('div')
   if (!isIframe){
     linkSel.append('div')
-      .html('New York Neighborhoods<br> Drawn By New Yorkers')
-      .st({marginBottom: 20, marginLeft: '1em'})
+      .html('New York Neighborhoods<br> Drawn by New Yorkers')
+      .st({marginBottom: 20, marginLeft: 21})
   }
   linkSel.append('a.button')
     .at({href: isIframe ? 'index.html' : '../index.html'})
-    .text(isIframe ? 'Full Screen →' : isMobile ? '← Uncertainty Over Space' : '← Uncertainty Over Space')
+    .html(isIframe ? 'Full Screen →' : '<span>←</span> Uncertainty Over Space')
     .on('click', () => {
       if (!isIframe) return 
       d3.event.preventDefault()
