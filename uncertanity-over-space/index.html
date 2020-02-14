@@ -1,0 +1,263 @@
+<!--
+@license
+Copyright 2020 Google. All Rights Reserved.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, min-width=980"/>
+
+  <title>Communicating Model Uncertainty Over Space </title>
+  <meta property="og:title" content="Communicating Model Uncertainty Over Space ">
+
+  <meta name="og:description" content="How can we show a pathologist an AI model's predictions?  ">
+  <meta property="og:image" content="https://i.imgur.com/PiCK42n.png">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <meta name="keywords" content="model certainty, uncertainty, model confidence, model predictions, model explainability, model comparison, cancer detection, cancer grading, deep learning, image models, geospatial data">
+	<link rel="stylesheet" type="text/css" href="js/layout.css">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:700,500' rel='stylesheet' type='text/css'>  
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-46457317-14"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-46457317-14');
+  </script>
+
+
+
+</head>
+<body>
+  <div class='header'>
+    <div class='header-left'>
+      <a href='https://research.google/teams/brain/pair/'>
+        <img src='images/pair_logo_full.png' style='width: 100px'></img>
+      </a>
+    </div>
+    <div class='header-right'>
+
+    </div>
+  </div>
+  
+  <h1>Communicating Model Uncertainty Over Space </h1>
+  <!-- <time>2019-02-20</time> -->
+
+  <div class="post-summary">How can we show a pathologist an AI model's predictions?  </div>
+  <!-- <div class="post-tags">model certainty, uncertainty, model confidence, model predictions, model explainability, model comparison, cancer detection, cancer grading, deep learning, image models, geospatial data</div> -->
+
+  <div class='grid-gallery simulated-gallery'></div>
+
+<p>Researchers at Google have built a <a href="https://ai.googleblog.com/2018/11/improved-grading-of-prostate-cancer.html">model</a> that takes a high resolution image of prostate tissue and predicts the severity of cancer present. It does this by splitting the image into thousands of tiny square patches and assigning each a <a href="https://en.wikipedia.org/wiki/Gleason_grading_system#Histologic_patterns">Gleason pattern</a>: <gp class='gpb'>benign</gp>, <gp class='gp3'>pattern 3</gp> (cancerous, but might not require intervention), and the more advanced <gp class='gp4'>pattern 4</gp> and <gp class='gp5'>pattern 5</gp>. </p>
+<p>To explore the use of model assistance in pathology, pathologists use a fullscreen version of this interface while grading tissue slides. Patches with the same pattern are grouped together and given a colored outline.</p>
+<!-- <div class='sandbox-graph' sandboxFn='secondLargeTOP'></div>  -->
+<div class='sandbox-graph' sandboxFn='topRegion'></div>
+
+<p>This works well for pathologists; seeing the tissue is crucial and the region outlines don’t obscure the underlying histology too much. But it’s missing a key piece of information: how confident the model is in its predictions in different areas of the slide. </p>
+<p>Underlying the Gleason pattern prediction for each patch are the model softmax value outputs. Each of the four patterns has a softmax value, representing the probability that the patch is that pattern. A patch with softmax values <vec>[.01, .02, .01, .96]</vec> and one with <vec>[.01, .02, .36, .61]</vec> will both be marked by the model as <gp class='gp5'>pattern 5</gp>, but the model is much more confident in the former. </p>
+<p>The machine learning models make different kinds of mistakes than humans. If pathologists know when to override the model and when to trust it, the human-model combination will be more accurate than either acting alone. This blog post describes the iterative process of designing an interface to show uncertainty—the tradeoffs between information density and legibility; the gap between the design and experience of use; and the impact small adjustments can have on the effectiveness of a visualization. </p>
+<h2 id="communicating-confidence-with-color-and-area">Showing Confidence with Color and Area</h2>
+<div class='full-width px980'><div class='pair'>
+<div class='argmax-size'></div>
+<div class='argmax-tint'></div>
+</div></div>
+
+<p>Here, each patch is colored based on the class of its argmax (the highest softmax value and the model’s prediction for that patch). On the left, the magnitude of the argmax determines the <strong>size</strong> of each patch; smaller squares surrounded by more white space indicate more uncertainty. On the right example, patches where the magnitude of the argmax is lower and uncertainty is higher are <strong>tinted</strong> white. </p>
+<p>To see the tissue, pathologists could press a button to toggle the confidence overlay. They found the tinted squares easier to read; zooming changes the white space between the sized squares and adds aliasing artifacts.   </p>
+<div class='full-width px750'><div class='argmax-flicker'></div></div>
+
+<p>One disadvantage of tinting is that comparing uncertainty between classes is difficult. A legend and non-RGB color space would alleviate some of this, but size is always going to be a more exact channel. </p>
+<h2 id="layering-in-more-information">Layering in More Information</h2>
+<p>Along with the model’s certainty in its top prediction, the softmax values also tell us the model’s second best guess. In areas where the model wasn’t confident, pathologists were especially interested in what alternatives the model was considering. If the model’s second guess matched their initial read of the slide, they trusted the model when reading subsequent slides. </p>
+<div class='full-width px980'><div class='pair'>
+<div class='top-two-color'></div>
+<div class='top-two-size'></div>
+</div></div>
+
+<p>The two most likely classes are now shown. In the left example, patches are colored by interpolating between the <strong>top two class colors</strong> using the ratio of their softmax values. On the right, the top classes are shown as <strong>two overlaid squares</strong>. The color of the argmax is used as the background and a square with the color of the second class, sized proportional to the ratio, is overlaid.</p>
+<p>I initially preferred interpolating between colors—smoother transitions between classes more closely match my intuition for how tissue transitions between Gleason patterns—but there’s a problem in the bottom right of the slide.</p>
+<div class='full-width px980'><div class='top-two-color-zoom'></div></div>
+
+<p>In areas where there are three classes close in probability, color interpolation creates discontinuities that are difficult to reason about. <gp class='gp3'>pattern 3</gp>/<gp class='gp5'>pattern 5</gp> is much darker than <gp class='gp3'>pattern 3</gp>/<gp class='gp4'>pattern 4</gp>; we’re mapping two points nearby in the data space to distant points in the visual space. </p>
+<div class='full-width px980'><div class='top-two-size-zoom'></div></div>
+
+<p>There’s still a discontinuity with two overlaid squares, but it’s easier to understand than mixed colors, which get read by our visual system in a single channel.   </p>
+<div class='full-width px750'><div class='four-slider'></div></div>
+
+<p>Not all discontinuities are bad. The model counts the number of patches with each argmax to grade the entire slide; in this context swapping the order of the squares usefully demarcates the top prediction. 
+
+<h2 id="adding-all-the-information">Adding All the Information</h2>
+<p>We also have the probabilities for the model’s third and fourth choices.  </p>
+<div class='full-width px750'><div class='stacked'></div></div>
+
+<p>Each patch has a small <strong>stacked bar</strong> chart drawn in it, with the height of each class color showing its softmax value. </p>
+<p>Zoomed in, this creates a nice effect; you can see there’s a spot that the model thinks is <gp class='gp5'>pattern 5</gp>, but isn’t exactly sure about the boundaries. </p>
+<div class='full-width px750'><img src='images/image37.png'></img></div>
+
+<p>Pathologists were overwhelmed. Zoomed out, there are aliasing artifacts and zoomed in, there’s almost too much information to parse. One pathologist described it as “nauseating”; they’re looking at these slides all day and want something more visually appealing. Model builders, who spend less of their day staring at slides and often focus on smaller regions in isolation, were excited and wanted a version to compare different iterations of the model. </p>
+<div class='full-width px750 top-pad'><img src='images/image-20190421102023610.png'></img></div>
+
+<p>I loaded two versions of the model and drew two bar charts in each patch. The bars on the left side of the patch show an earlier run of the model. </p>
+<div class='full-width px750 top-pad'><img src='images/image-20190421102307510.png'></img></div>
+
+<p>Using opacity to highlight places where the argmax differs between the models pulls out the most important information. On the left side of the slide, for example, it’s easy to see that the model switched from predicting <gp class='gpb'>benign</gp> to <gp class='gp5'>pattern 5</gp>—a huge change. </p>
+<div class='full-width px750 top-pad'><img src='images/image-20190421104625894.png'></img></div>
+
+<p>Like highlighting, showing less information can increase clarity. Above, each patch has a slope chart showing the change in percent chance of tumor between two runs of the model. Color also encodes change (purple shows places where the model now thinks tumorous cells are more likely), so it’s readable at multiple zoom levels.</p>
+<div class='full-width px750 top-pad'><img src='images/diag-groundtruth.png'></img></div>
+
+<p>An even simpler approach is also useful–the tinted argmax overlaid with an expert pathologist’s annotations. This helps verify the model is working and highlights regions for improvement. </p>
+<h2 id="more-information-less-noise">More Information, Less Noise</h2>
+<p>After interviewing pathologists, it seemed like showing the top two classes as overlaid squares struck the best balance between providing useful information without being overwhelming. Wanting to squeeze just a little bit more information in (the top two squares only encode the ratio between the top two classes, so <vec>[.50, .48, .01, .01]</vec> looks identical to <vec>[.34, .33, .31, .01]</vec>; mapping distant points to the same visual encoding is also bad), I tried a variation on two squares, leaving white space along their edges proportional to the softmax values of the two lowest classes.</p>
+<p>The idea seemed elegant in my head, but created lots of visually noisy “L” shapes in practice. </p>
+<div class='full-width px750'><div class='top-two-l-zoom2'></div></div>
+
+<p>I tried simplifying by only stacking bars instead of boxes, but that ended up being basically equivalent to the stacked bars showing all four classes.</p>
+<div class='full-width px750'><div class='stacked2'></div></div>
+
+<p>To keep everything in a uniform grid while displaying more than one bit of information per patch, I <strong>rounded</strong> the softmax values off to quarters and drew four tiny squares on each patch. </p>
+<div class='full-width px750'><div class='rounded'></div></div>
+
+<p>This shows about as much model information as is useful for pathologists while avoiding the overload that comes with showing every 5% or 8% prediction.</p>
+<p>Using the sort order of the four squares in each patch to encode the argmax—it’s always upper left—brings small shifts in probabilities into focus, but the banding is overwhelming. </p>
+<div class='full-width px750'><div class='rounded-sorted'></div></div>
+
+<h2 id="revealing-tissue">Revealing Tissue</h2>
+<p>Pathologists like playing around with these interfaces to get a sense of how the model thinks, but were skeptical they’d use them in their daily work. Grading a slide requires looking at tissue, which is covered up by the confidence overlay. </p>
+<p>To show tissue and uncertainty at the same time, I experimented with contours. These topographical map-style outlines leave most of the tissue exposed. </p>
+<div class='full-width px980 contour'></div>
+
+<p>Unfortunately, they get unreadable when different classes overlap with each other. </p>
+<div class='full-width px980 contour-zoom'></div>
+
+<p>Separate contours for each class could work, but I don’t think it would improve much on a simpler small multiple display showing the softmax for each pattern. </p>
+<div class='full-width px980 contour-sm'></div>
+
+<p>Replacing contour outlines with filled shapes clears up the messy overlaps. </p>
+<div class='full-width px980 contour-fill'></div>
+
+<p>Pathologists also liked the appearance of the filled contours (they matched their mental model of smooth transitions between patterns. And turning down the opacity of <gp class='gpb'>benign</gp> regions lets some tissue to peek out!), but I don’t think brute forcing the problem with more color mixing works. It’s very difficult to definitively say, “This is where the model thinks tumor is more likely than not” based on the cloudy blobs. </p>
+<h2 id="semantic-zooming">Semantic Zooming</h2>
+<p>There aren’t enough pixels to show each patch’s softmax values and maintain tissue visibility while zoomed out. By aggregating patches based on the zoom level within circles, the uncertainty of different sections of the slide is shown while not totally obscuring the tissue.  </p>
+<div class='sandbox-graph' sandboxFn='crossFourDonut'></div>
+
+<p>I was initially optimistic about this display: it could replace the argmax outlines of the model’s predictions! But the pies don’t nicely cohere in the same way an outline does and reading the slide requires lots of conscious effort.</p>
+<p>Pathologists were also confused about the space between the circles. I tried converting the pies to squares and rounding off the aggregated uncertainty to quarters. This made the concept less confusing, but there was even less of a Gestalt effect.</p>
+<div class='sandbox-graph' sandboxFn='crossFourSquare'></div>
+
+<h2 id="passive-interaction">Passive Interaction</h2>
+<p>In addition to the zoom level, the visible extent also provides valuable information. While pathologists read the slide like they normally do, the confidence display could update without explicit interaction. </p>
+<p>The size of each circle below shows the number of currently visible patches with approximately that softmax value (a half red / half yellow circle represents patches that are about  50% / 50% <gp class='gp4'>pattern 4</gp> / <gp class='gp5'>pattern 5</gp>). Circles are pulled to different corners of the chart based on their composition with a force layout preventing overlaps. On a big screen you could always leave this open, detecting discordant areas with your peripheral vision</p>
+<div class='sandbox-graph' sandboxFn='bubbleHoverTOP'></div>
+
+<p>Pathologists were confused by this view, frequently asking why circles in the lower left didn’t match the tissue of the lower left of the slide. The force-directed pies might work as part of a triage workflow, helping pick out the most difficult case to grade first. </p>
+<div class='full-width px980'><img src='images/sm-bubble-tri.png'></img></div>
+
+<p>Each of these provides a nifty thumbprint about the model’s understanding of the slide.  </p>
+<p>There’s also the position of the pathologist’s mouse. Instead of covering up the whole slide with the top two overlay, an inset shows confidence in the region around the mouse.</p>
+<div class='sandbox-graph' sandboxFn='cornerTooltipTOP'></div>
+
+<p>Quickly toggling the whole slide confidence overlay is easier to read for experienced users than the inset—you don’t have to look back and forth quite as much—but it is an additional step to perform. Always present in the corner and not requiring intentional interaction, the inset was more approachable for pathologists using the interface for the first time. </p>
+<h2 id="outlined-confidence">Outlined Confidence</h2>
+<p>Pathologists don’t mind reading slides with region outlines. Can confidence be shown as an outline?</p>
+<p>I started by adding a new region type representing <gp class='gpu'>uncertainty</gp>. It contains all patches where the likelihood of the argmax is lower than an adjustable cutoff.</p>
+<div class='sandbox-graph' sandboxFn='uncertainRegionsAdjust'></div>
+
+<p>Pathologists missed seeing the model’s second best guess and weren’t sure how to use uncertain areas. I had hoped to try out a workflow where the model graded the “easy” regions and left the unconfident regions for the pathologists to grade, but the uncertain areas weren’t contiguous enough.  </p>
+<p>For a binary classification task, like marking tissue as either <gp class='gpt'>tumorous</gp> or  <gp class='gpb'>benign</gp>, I think there’s potential. You essentially get to pick two operating points for the model: you can aggressively mark regions as potentially having a tumor so the model very rarely misses a bit of tumor without losing trust when the model calls benign cells tumorous.  </p>
+<div class='sandbox-graph' sandboxFn='tumorRegion'></div>
+
+<p>To show the model’s second best guess, I also tried drawing regions where the model was having trouble deciding between two classes as outlines with two alternating colors.  </p>
+<div class='sandbox-graph' sandboxFn='twoRegion'></div>
+
+<p>Again, the noisiness of patch level predictions makes this hard to read. </p>
+<h2 id="animation">Animation</h2>
+<p>Instead of trying to cram all this information into a static set of pixels, I tried using animation. </p>
+<p>This chart spawns particles based on the softmax values at each patch. Different classes move in different directions, providing some preattentive texture. </p>
+<div class='full-width px750'><div class='particle'></div></div>
+
+<p>Zoomed out, it isn’t immediately apparent that some of the areas in the <gp class='gp4'>pattern 4</gp>/<gp class='gp5'>pattern 5</gp> blob are very confident while others aren’t; the rounded quarters does a better job showing almost the same information without being incredibly distracting.  </p>
+<p><a href='http://idl.cs.washington.edu/papers/hops/'>Hypothetical outcome plots</a> are another popular way of showing uncertainty. Below, a random class is drawn from the softmax distribution at each patch every frame.</p>
+<div class='full-width px750'><div class='hop'></div></div>
+
+<p>Unfortunately, this isn’t a real hypothetical outcome plot; if a given patch is benign, its neighbors are more likely to be <gp class='gpb'>benign</gp>. </p>
+<h2 id="probing-the-model">Probing the Model</h2>
+<p>The current design of the model only outputs softmax values for individual patches without indicating their correlation, making it difficult to sample from the distribution of possible patches. Why not let the pathologists do the sampling themselves?</p>
+<div class='full-width px980 img'><div class='grid'></div></div>
+
+<p>Mousing over the heatmap reweights the softmax values. Moving <gp class='gp5'>pattern 5</gp> to 4×, for example, shows a version of the model that looks for <gp class='gp5'>pattern 5</gp> much more aggressively.  The color of the heatmap shows how the <a href='https://www.cancer.org/treatment/understanding-your-diagnosis/tests/understanding-your-pathology-report/prostate-pathology/prostate-cancer-pathology.html'>Gleason grade</a>, a measure of the cancer’s severity across the whole slide, changes with different weights. It provides unique information that none of the other designs do, but pathologists were totally overwhelmed. </p>
+
+<p>To ease them into this idea of slide-wide uncertainty, I broke the continuous space into nine separate calibrations and asked each pathologist to think of them as nine expert opinions. They’re used to dealing with differing diagnoses; even getting concordant grading from experts to train and evaluate the model on is surprisingly difficult! </p>
+<p>Each of the calibration weights are represented by a small bar chart showing the percent of tissue covered by each pattern.  </p>
+<div class='sandbox-graph' sandboxFn='quantationSm'></div>
+
+<p>Grouping the calibrations by their Gleason grade gives a good sense of slide-wide uncertainty. Here the model predicts more <gp class='gp5'>pattern 5</gp> than <gp class='gp4'>pattern 4</gp>, which gives the slide a Gleason grade of 5 + 4. But there’s also a chance of the slide being 4 + 5, a lower grade that could lead to a different treatment plan. </p>
+<div class='sandbox-graph' sandboxFn='quantationGrade'></div>
+
+<p>There’s also a static version of this idea, overlaying sketchy versions of the calibration weights. </p>
+<div class='sandbox-graph' sandboxFn='sketchy'></div>
+
+<p>Non-blocky shapes were a positive, but it was hard to read the slide underneath all the lines. The most interesting places, where the model is uncertain and adjusting the calibration moves the argmax boundaries, are the hardest to read because they’re covered in squiggles. </p>
+<h2 id="applications-to-mapping">Applications to Mapping</h2>
+<p>Do these techniques work with other data? In 2015, <a href='https://www.dnainfo.com/new-york/20150928/inwood/we-asked-you-draw-your-own-neighborhood-map-heres-what-you-did'>DNAInfoNYC</a> asked thousands of readers to draw the outline of their neighborhood. As with the prostate slide, there are uncertain boundaries and underlying tissue/streets.   </p>
+<p>The sketchy outlines work naturally; here each outline is one person’s drawing of a neighborhood. </p>
+<!-- <div class='full-width px980 city-image'><img src='../images/sketchy-nyc.png'></img></div> -->
+<div class='full-width px980 city-image'><iframe width=980 height=680 frameBorder="0" src='neighborhood/index.html'></iframe></div>
+
+<div style='height: 15px'></div>
+I thought some of the patch-based techniques might help answer where, exactly, the line between <gp class='gp-ast'>Astoria</gp> and <gp class='gp-lic'>Long Island City</gp> is. 
+
+<div class='grid-gallery nyc-draw-it'></div>
+
+<p>But they’re not that compelling compared to outlines. Neighborhoods are more contiguous than potential tumors. They usually have well defined centers (the borders of Astoria are fuzzy, but everyone agrees on the middle bit) and don’t manifest as chunks that have a 20% chance of existing. The loss of resolution also hurts more; streets are meaningful and don’t align with the grid. </p>
+<h2 id="future-pathology-work">Future Pathology Work</h2>
+<p>The patch-level uncertainty is noisy and emphasizes the borders between argmax regions. This accurately represents the model’s output, but the exact location of the switch between <gp class='gp3'>pattern 3</gp> and <gp class='gpb'>benign</gp> isn’t nearly as important as not missing a region of poorly formed glands that upgrades the diagnosis. </p>
+<p>Currently, our designs have explored patch-level uncertainty and slide-wide uncertainty. When pathologists talk about uncertainty, though, they refer to regions and glands: “That area looks like it could be <gp class='gp4'>pattern 4</gp> or <gp class='gp5'>pattern 5</gp>.” However, this requires additional information from the model beyond patch-level softmax values.  To address this issue, a second-stage segmentation model running on the patch embeddings might be able to flag similar contiguous chunks of patches that don’t match the argmax.  </p>
+<p>Generating confidence visualizations for such a model or for other types of tissue will require tweaks to the techniques presented here. Small differences change the effectiveness of visualizations in unexpected ways. Switching from four classes to two classes made <gp class='gpu'>uncertain</gp> regions less frustrating to use; model builders wanted much more information density than pathologists; and the distribution of the neighborhood data removed the need for the patch techniques.</p>
+<p><i>Adam Pearce // February 2020</i></p>
+<p style='font-size: 14px'><a href='https://github.com/PAIR-code/interpretability/tree/master/uncertanity-over-space'>chart code</a></p>
+<link rel="stylesheet" href="js/style.css">
+
+<script src='js/third_party/openseadragon-2.4.1.js'></script>
+<script src='js/third_party/topojson-server.js'></script>
+<script src='js/third_party/topojson-client.js'></script>
+<script src='js/third_party/topojson-simplify.js'></script>
+<script src='js/third_party/d3-contour.js'></script>
+<script src='js/third_party/d3_.js'></script>
+<script src='js/third_party/d3-scale-chromatic.v1.min.js '></script>
+
+<script src='js/cell-render.js'></script>
+
+<script src='js/grid.js'></script>
+<script src='js/four-slider.js'></script>
+<script src='js/contour.js'></script>
+<script src='js/animation.js'></script>
+
+<script src='js/draw-functions.js'></script>
+<script src='js/sandbox-init.js'></script>
+
+
+
+
+
+</body>
+</html>

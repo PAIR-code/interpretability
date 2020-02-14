@@ -1,0 +1,307 @@
+/* Copyright 2020 Google LLC. All Rights Reserved.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+==============================================================================*/
+
+
+
+html{
+  min-width: 980px;
+}
+
+body{
+  /*min-width: 1000px;*/
+}
+
+/*top grid css*/
+
+
+.grid-gallery{
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.grid-gallery > div{
+  max-width: 925px !important;
+  margin: 0px auto;
+}
+.grid-gallery.nyc-draw-it > div{
+  width: 1200px !important;
+  margin: 0px auto;
+  margin-left: -75px;
+}
+.nyc-draw-it{
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+.thumbnail-caption{
+  margin-top: -40px;
+  margin-bottom: 40px;
+}
+
+.render-container{
+  margin: 2px !important;
+  margin-top: -4px !important;
+  display: inline-block !important;
+  position: relative;
+  margin-bottom: 4px;
+}
+
+.render-container b{
+  position: absolute;
+  z-index: 100;
+  right: 4px;
+  bottom: 4px;
+  text-shadow: 0 1px 0 rgba(255,255,255,.6), 1px 0 0 rgba(255,255,255,.6), 0 -1px 0 rgba(255,255,255,.6), -1px 0 0 rgba(255,255,255,.6);
+/*  background: #fff;
+  padding: 3px;
+*/
+}
+
+.grid-gallery i {
+  margin-left: 10px;
+} 
+
+.grid > div {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.grid svg{
+  overflow: visible;
+}
+
+.grid{
+  font-family: monospace;
+}
+
+
+
+.pair > div{
+  display: inline-block;
+  width: 49% !important;
+}
+
+
+
+
+
+/*sandbox css*/
+
+
+.sandbox-graph{
+  width: 750px;
+  height: 400px;
+  position: relative;
+  background: #eee;
+}
+
+.openseadragon1{
+  width: 100%;
+  height: 100%;
+}
+
+.openseadragon-container > div{
+  display: none;
+}
+
+.openseadragon-canvas{
+  display: block !important;
+}
+
+.canvas-overlay{
+  position: absolute !important;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
+
+
+
+
+.pointer{
+  height: 0px;
+  position: relative;
+}
+.pointer div {
+  overflow: visible;
+  content: "";
+  background-image: url(../images/pointer.svg);
+  width: 27px;
+  height: 27px;
+  position: absolute;
+  right: -31px;
+  left: -31px;
+  top: 0px;
+}
+
+.city-image .pointer{
+  top: 6px;
+}
+
+
+
+
+
+.tooltip {
+  top: -1000px;
+  position: fixed;
+  padding: 10px;
+  background: rgba(255, 255, 255, .90);
+  border: 1px solid lightgray;
+  pointer-events: none;
+}
+.tooltip-hidden{
+  opacity: 0;
+  transition: all .3s;
+  transition-delay: .1s;
+}
+
+@media (max-width: 590px){
+  div.tooltip{
+    bottom: -1px;
+    width: calc(100%);
+    left: -1px !important;
+    right: -1px !important;
+    top: auto !important;
+    width: auto !important;
+  }
+}
+
+
+gp{
+  display: inline;
+  padding: 3px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  border-radius: 3px;
+}
+gp.gpb{ background: #ccc; }
+gp.gp3{ background: #4CAF50; }
+gp.gp4{ background: #FF9800; }
+gp.gp5{ background: #F44336; }
+gp.gpu{ background: steelblue; color: #fff;}
+gp.gpt{ background: #000; color: #fff;}
+gp.gp-lic{ background: #A9159C; color: #fff;}
+gp.gp-ast{ background: #012394; color: #fff;}
+
+
+vec, .vec-container{
+  font-family: monospace;
+}
+
+.sandbox-graph{
+  font-family: monospace;
+}
+
+
+
+.four-slider, .four-slider > div{
+  width: 750px !important;
+  max-width: 750px !important;
+}
+
+.patch-types{
+  margin-left: -10px;
+}
+
+.patch-types > div {
+  width: 180px;
+  display: inline-block;
+  text-align: center;
+
+}
+
+.patch-types canvas{
+  border: 1px solid #000;
+  left: 37px;
+}
+
+.four-slider > div > div {
+  display: inline-block;
+}
+
+.vec-container{
+  width: 200px;
+  vertical-align: top;
+}
+.vec-container span{
+  cursor: ns-resize;
+}
+.patch-types{
+  width: 540px;
+}
+
+
+
+
+
+
+
+.argmax-flicker > div{
+  animation: zoomin 3s ease-in-out 1s infinite alternate;
+}
+
+@keyframes zoomin {
+  0%  { transform: scale(.6); }
+  /*80%   { transform: scale(.4); }*/
+  100%   { transform: scale(.3); }
+}
+
+.argmax-flicker canvas{
+  animation: pan 4s ease-in 1s infinite alternate;
+
+}
+
+@keyframes panx {
+  from { transform: translateX(0px); }
+  to   { transform: translateX(10px); }
+}
+
+
+
+.header{
+  /*display: none;*/
+}
+
+
+.notes{
+  font-size: 12px;
+}
+
+
+canvas{
+  /*display: none;*/
+}
+
+
+
+.patch-types, .grid-gallery{
+  font-family: Consolas, "Andale Mono WT",  monospace;
+}
+
+.grid-gallery i{
+  font-family: 'Roboto Slab', serif;
+  margin-left: 0px;
+}
+
+.top-pad{
+  margin-top: 30px;
+}
+
+.button:hover{
+  opacity: .7;
+}
+
