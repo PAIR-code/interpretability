@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "d3-delaunay": "^5.2.1",
+    "scrape-stl": "^1.0.3"
+  }
+}

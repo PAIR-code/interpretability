@@ -1,0 +1,303 @@
+/* Copyright 2020 Google LLC. All Rights Reserved.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+==============================================================================*/
+
+
+
+html{
+	background-color: #fff;
+	font-weight: normal;
+}
+
+body{
+	max-width: 750px;
+	margin: 0px auto;
+	font-family: 'Roboto Slab', serif;
+	line-height: 1.55em;
+	font-size: 16px;
+	margin-top: 5px;
+	margin-bottom: 80px;
+}
+
+@media (max-width: 760px){
+	body{
+		padding: 5px;
+	}
+}
+
+p{
+	line-height: 1.55em;
+}
+
+a{
+	color: black;
+}
+
+.header{
+  position: relative;
+  color: black;
+  font-size: 16px;
+  height: 40px;
+  overflow: visible;
+  /*font-family: Consolas, monaco, 'Lucida Console', monospace; */
+  /*font-family: 'Roboto', serif;*/
+  font-family: 'Roboto Slab', serif;
+}
+.header-left{
+	float: left;
+  margin-top: 10px;
+}
+.header-right{
+	float: right;
+}
+.header span{
+	/*opacity: .5;*/
+}
+@media (max-width: 760px){
+  .header-right span{
+    opacity: 0;
+  }
+}
+.header a{
+	/*opacity: .5;*/
+	text-decoration: none;
+}
+.header a:hover{
+	opacity: 1
+}
+.header img{
+	width: 16px;
+  margin-right: 2px;
+	position: relative;
+	top: 2px;
+}
+
+
+h1,h2,h3,h4,h5{
+	font-family: 'Roboto', sans-serif;
+	margin-top: 1.5em;
+	margin-bottom: .5em;
+}
+h1{
+	font-weight: 500;
+	font-size: 34px;
+	margin-bottom: 1.2em;
+  line-height: 1.3em;
+  margin-top: 1.2em;
+}
+h2,h3,h4,h5{
+	font-size: 22px;
+}
+
+:not(pre) > code{
+	background: #dedede;
+	padding: .05em;
+	padding-left: .2em;
+	padding-right: .2em;
+	border-radius: 2px;
+  font-family: monospace; 
+}
+
+strong{
+	font-weight: bold;
+}
+
+/*wp classes*/
+img.aligncenter {
+  display: block;
+  margin: auto;
+  max-width: 750px;
+}
+
+
+/*
+highlight css
+github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+*/
+
+pre > code {
+  display: block;
+  overflow-x: visable;
+  color: #333;
+  -webkit-text-size-adjust: none;
+  border-left: 2px solid #ccc;
+  padding-left: 18px;
+  margin-left: -18px;
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+
+.hljs-comment,
+.diff .hljs-header {
+  color: #998;
+  font-style: italic;
+}
+
+.hljs-keyword,
+.css .rule .hljs-keyword,
+.hljs-winutils,
+.nginx .hljs-title,
+.hljs-subst,
+.hljs-request,
+.hljs-status {
+  color: #333;
+  font-weight: bold;
+}
+
+.hljs-number,
+.hljs-hexcolor,
+.ruby .hljs-constant {
+  color: #008080;
+}
+
+.hljs-string,
+.hljs-tag .hljs-value,
+.hljs-doctag,
+.tex .hljs-formula {
+  color: #d14;
+}
+
+.hljs-title,
+.hljs-id,
+.scss .hljs-preprocessor {
+  color: #900;
+  font-weight: bold;
+}
+
+.hljs-list .hljs-keyword,
+.hljs-subst {
+  font-weight: normal;
+}
+
+.hljs-class .hljs-title,
+.hljs-type,
+.vhdl .hljs-literal,
+.tex .hljs-command {
+  color: #458;
+  font-weight: bold;
+}
+
+.hljs-tag,
+.hljs-tag .hljs-title,
+.hljs-rule .hljs-property,
+.django .hljs-tag .hljs-keyword {
+  color: #000080;
+  font-weight: normal;
+}
+
+.hljs-attribute,
+.hljs-variable,
+.lisp .hljs-body,
+.hljs-name {
+  color: #008080;
+}
+
+.hljs-regexp {
+  color: #009926;
+}
+
+.hljs-symbol,
+.ruby .hljs-symbol .hljs-string,
+.lisp .hljs-keyword,
+.clojure .hljs-keyword,
+.scheme .hljs-keyword,
+.tex .hljs-special,
+.hljs-prompt {
+  color: #990073;
+}
+
+.hljs-built_in {
+  color: #0086b3;
+}
+
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-pi,
+.hljs-doctype,
+.hljs-shebang,
+.hljs-cdata {
+  color: #999;
+  font-weight: bold;
+}
+
+.hljs-deletion {
+  background: #fdd;
+}
+
+.hljs-addition {
+  background: #dfd;
+}
+
+.diff .hljs-change {
+  background: #0086b3;
+}
+
+.hljs-chunk {
+  color: #aaa;
+}
+
+html{
+  overflow-x: hidden;
+}
+
+.full-width{
+  width: max(980px, 100vw);
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: min(-490px, -50vw);
+  margin-right: min(-490px, -50vw);
+  overflow: hidden;
+}
+
+.full-width img{
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.full-width.px980 img, .full-width.px980 div{
+  max-width: 980px;
+}
+.full-width > div, .full-width > div > div{
+  margin: 0px auto;
+}
+.full-width.px750 img, .full-width.px750 div{
+  max-width: 750px;
+}
+
+.full-width iframe{
+  width: 980px;
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+
+.post-summary{
+  font-size: 19px;
+  margin-bottom: 40px;
+}
+
+.post-tags{
+  line-height: 1.55em;
+  font-style: italic;
+}
+
+.thumbnail-caption{
+  font-style: italic;
+}
+
+
