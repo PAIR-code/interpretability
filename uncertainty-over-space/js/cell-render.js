@@ -48,7 +48,7 @@ function calcFlatData(data){
 }
 
 
-function renderCells(flatData, sel, s, cellRender, layers='c', colors=gleasonColors){
+function renderCells(flatData, sel, s, cellRender, layers='cs', colors=gleasonColors, title=''){
   var c = d3.conventions({
     sel,
     width:  (d3.max(flatData, d => d.i) + 1)*s,
@@ -58,6 +58,12 @@ function renderCells(flatData, sel, s, cellRender, layers='c', colors=gleasonCol
   })
   c.flatData = flatData
   c.s = s
+
+  if (title){
+    c.svg.append('text.cell-title').text(title)
+      .translate([c.width/2 + 5, c.height])
+      .at({textAnchor: 'middle', dy: -5})
+  }
 
   flatData.forEach(d => cellRender(d, c.layers[0], s, colors))
 

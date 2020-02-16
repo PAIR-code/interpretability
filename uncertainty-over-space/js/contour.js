@@ -126,14 +126,15 @@ function drawProstatectomyStatic(){
       })
   }
 
+
   drawFns.argmaxTint = () => {
     var sel = d3.select('.argmax-tint').html('').append('div')
-    renderCells(tidy, sel, 5, cellRenders.argmaxColor)
+    renderCells(tidy, sel, 5, cellRenders.argmaxColor, 'cs', gleasonColors, 'Argmax Tint')
   }
 
   drawFns.argmaxSize = () => {
     var sel = d3.select('.argmax-size').html('').append('div')
-    var c = renderCells(tidy, sel, 5, cellRenders.argmaxSize, 'cs')
+    var c = renderCells(tidy, sel, 5, cellRenders.argmaxSize, 'cs', gleasonColors, 'Argmax Size')
     addPatchHighlight(c)
 
   }
@@ -154,12 +155,12 @@ function drawProstatectomyStatic(){
 
   drawFns.topTwoColor = () => {
     var sel = d3.select('.top-two-size').html('').append('div')
-    renderCells(tidy, sel, 5, cellRenders.topTwoColor)
+    renderCells(tidy, sel, 5, cellRenders.topTwoColor, 'cs', gleasonColors, 'Top Two Color')
   }
 
   drawFns.topTwoSize = () => {
     var sel = d3.select('.top-two-color').html('').append('div')
-    var c = renderCells(tidy, sel, 5, cellRenders.topTwoSize, 'cs')
+    var c = renderCells(tidy, sel, 5, cellRenders.topTwoSize, 'cs', gleasonColors, 'Top Two Size')
   }
 
   function addPatchHighlight(c){
@@ -179,14 +180,12 @@ function drawProstatectomyStatic(){
       .append('text').text('A single patch')
       .translate([23, 3])
       .st({fontSize: 12, fontFamily: 'monospace'})
-
-
   }
   
   drawFns.topTwoColorZoom = () => {
     var sel = d3.select('.top-two-color-zoom').html('').append('div')
     var offsetData = offsetTidy([[40, 40], [80, 80]])
-    var c = renderCells(offsetData, sel, 10, cellRenders.topTwoColor, 'csd')
+    var c = renderCells(offsetData, sel, 10, cellRenders.topTwoColor, 'csd', gleasonColors, 'Top Two Color')
     c.type = 'topTwoColor'
     addHighlight(c)
   }
@@ -194,7 +193,7 @@ function drawProstatectomyStatic(){
   drawFns.topTwoSizeZoom = () => {
     var sel = d3.select('.top-two-size-zoom').html('').append('div')
     var offsetData = offsetTidy([[40, 40], [80, 80]])
-    var c = renderCells(offsetData, sel, 10, cellRenders.topTwoSize, 'csd')
+    var c = renderCells(offsetData, sel, 10, cellRenders.topTwoSize, 'csd', gleasonColors, 'Top Two Size')
     c.type = 'topTwoSize'
     addHighlight(c)
   }
@@ -272,7 +271,7 @@ function drawProstatectomyStatic(){
 
   drawFns.stacked = () => {
     var sel = d3.select('.stacked').html('').append('div')
-    renderCells(tidy, sel, 5, cellRenders.stacked)
+    renderCells(tidy, sel, 5, cellRenders.stacked, 'cs', gleasonColors, 'Stacked Bar')
   }
 
   drawFns.stacked2 = () => {
@@ -282,7 +281,7 @@ function drawProstatectomyStatic(){
 
   drawFns.rounded = () => {
     var sel = d3.select('.rounded').html('').append('div')
-    renderCells(offsetTidy([[40,40], [80, 80]]), sel, 10, cellRenders.rounded)
+    renderCells(offsetTidy([[40,40], [80, 80]]), sel, 10, cellRenders.rounded, 'cs', gleasonColors, 'Rounded')
   }
 
   drawFns.roundedSorted = () => {
