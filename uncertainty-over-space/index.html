@@ -105,15 +105,22 @@ limitations under the License.
 
 <p>Not all discontinuities are bad. The model counts the number of patches with each argmax to grade the entire slide; in this context swapping the order of the squares usefully demarcates the top prediction. 
 
-<h2 id="adding-all-the-information">Adding All the Information</h2>
+<h2 id="adding-all-the-information">Stacked Bars With All the Information</h2>
 <p>We also have the probabilities for the model’s third and fourth choices.  </p>
+
 <div class='full-width px750'><div class='stacked'></div></div>
 
 <p>Each patch has a small <strong>stacked bar</strong> chart drawn in it, with the height of each class color showing its softmax value. </p>
-<p>Zoomed in, this creates a nice effect; you can see there’s a spot that the model thinks is <gp class='gp5'>pattern 5</gp>, but isn’t exactly sure about the boundaries. </p>
+
 <div class='full-width px750'><img src='images/image37.png'></img></div>
 
-<p>Pathologists were overwhelmed. Zoomed out, there are aliasing artifacts and zoomed in, there’s almost too much information to parse. One pathologist described it as “nauseating”; they’re looking at these slides all day and want something more visually appealing. Model builders, who spend less of their day staring at slides and often focus on smaller regions in isolation, were excited and wanted a version to compare different iterations of the model. </p>
+<p>Zoomed in, this creates a nice effect; you can see there’s a spot that the model thinks is <gp class='gp5'>pattern 5</gp>, but isn’t exactly sure about the boundaries. </p>
+
+<p>But pathologists weren't impressed. Zoomed out, there are aliasing artifacts and zoomed in, there’s almost too much information to parse. One pathologist described it as “nauseating”; they’re looking at these slides all day and want something more visually appealing. 
+
+<h2 id="comparing-models">Multiple Models</h2>
+
+Model builders, who spend less of their day staring at slides and often focus on smaller regions in isolation, were intrigued by the stacked bars and wanted a version to compare different iterations of the model. </p>
 <div class='full-width px750 top-pad'><img src='images/image-20190421102023610.png'></img></div>
 
 <p>I loaded two versions of the model and drew two bar charts in each patch. The bars on the left side of the patch show an earlier run of the model. </p>
@@ -128,18 +135,18 @@ limitations under the License.
 <p>An even simpler approach is also useful–the tinted argmax overlaid with an expert pathologist’s annotations. This helps verify the model is working and highlights regions for improvement. </p>
 <h2 id="more-information-less-noise">More Information, Less Noise</h2>
 <p>After interviewing pathologists, it seemed like showing the top two classes as overlaid squares struck the best balance between providing useful information without being overwhelming. Wanting to squeeze just a little bit more information in (the top two squares only encode the ratio between the top two classes, so <vec>[.50, .48, .01, .01]</vec> looks identical to <vec>[.34, .33, .31, .01]</vec>; mapping distant points to the same visual encoding is also bad), I tried a variation on two squares, leaving white space along their edges proportional to the softmax values of the two lowest classes.</p>
+<div class='full-width px750 top-pad'><div class='top-two-l-zoom2'></div></div>
 <p>The idea seemed elegant in my head, but created lots of visually noisy “L” shapes in practice. </p>
-<div class='full-width px750'><div class='top-two-l-zoom2'></div></div>
 
+<div class='full-width px750 top-pad'><div class='stacked2'></div></div>
 <p>I tried simplifying by only stacking bars instead of boxes, but that ended up being basically equivalent to the stacked bars showing all four classes.</p>
-<div class='full-width px750'><div class='stacked2'></div></div>
 
+<div class='full-width px750 top-pad'><div class='rounded'></div></div>
 <p>To keep everything in a uniform grid while displaying more than one bit of information per patch, I <strong>rounded</strong> the softmax values off to quarters and drew four tiny squares on each patch. </p>
-<div class='full-width px750'><div class='rounded'></div></div>
 
+<div class='full-width px750 top-pad'><div class='rounded-sorted'></div></div>
 <p>This shows about as much model information as is useful for pathologists while avoiding the overload that comes with showing every 5% or 8% prediction.</p>
 <p>Using the sort order of the four squares in each patch to encode the argmax—it’s always upper left—brings small shifts in probabilities into focus, but the banding is overwhelming. </p>
-<div class='full-width px750'><div class='rounded-sorted'></div></div>
 
 <h2 id="revealing-tissue">Revealing Tissue</h2>
 <p>Pathologists like playing around with these interfaces to get a sense of how the model thinks, but were skeptical they’d use them in their daily work. Grading a slide requires looking at tissue, which is covered up by the confidence overlay. </p>
@@ -155,7 +162,8 @@ limitations under the License.
 <p>Replacing contour outlines with filled shapes clears up the messy overlaps. </p>
 <div class='full-width px980 contour-fill'></div>
 
-<p>Pathologists also liked the appearance of the filled contours (they matched their mental model of smooth transitions between patterns. And turning down the opacity of <gp class='gpb'>benign</gp> regions lets some tissue to peek out!), but I don’t think brute forcing the problem with more color mixing works. It’s very difficult to definitively say, “This is where the model thinks tumor is more likely than not” based on the cloudy blobs. </p>
+<p>Pathologists also liked the appearance of the filled contours (they matched their mental model of smooth transitions between patterns. And turning down the opacity of <gp class='gpb'>benign</gp> regions lets some tissue to peek out!), but I don’t think brute forcing the problem with more color mixing works. It’s very difficult to definitively say, “This is where the model thinks tumor is more likely than not” based on the cloudy blobs. Figuring out the correct blending and ordering of contours was also difficult; several plausible alternatives looked quite different. </p>
+
 <h2 id="semantic-zooming">Semantic Zooming</h2>
 <p>There aren’t enough pixels to show each patch’s softmax values and maintain tissue visibility while zoomed out. By aggregating patches based on the zoom level within circles, the uncertainty of different sections of the slide is shown while not totally obscuring the tissue.  </p>
 <div class='sandbox-graph' sandboxFn='crossFourDonut'></div>
