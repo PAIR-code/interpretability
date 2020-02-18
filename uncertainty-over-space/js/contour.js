@@ -154,12 +154,12 @@ function drawProstatectomyStatic(){
   }
 
   drawFns.topTwoColor = () => {
-    var sel = d3.select('.top-two-size').html('').append('div')
+    var sel = d3.select('.top-two-color').html('').append('div')
     renderCells(tidy, sel, 5, cellRenders.topTwoColor, 'cs', gleasonColors, 'Top Two Color')
   }
 
   drawFns.topTwoSize = () => {
-    var sel = d3.select('.top-two-color').html('').append('div')
+    var sel = d3.select('.top-two-size').html('').append('div')
     var c = renderCells(tidy, sel, 5, cellRenders.topTwoSize, 'cs', gleasonColors, 'Top Two Size')
   }
 
