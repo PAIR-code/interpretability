@@ -242,7 +242,8 @@ I thought some of the patch-based techniques might help answer where, exactly, t
 <p>Currently, our designs have explored patch-level uncertainty and slide-wide uncertainty. When pathologists talk about uncertainty, though, they refer to regions and glands: “That area looks like it could be <gp class='gp4'>pattern 4</gp> or <gp class='gp5'>pattern 5</gp>.” However, this requires additional information from the model beyond patch-level softmax values.  To address this issue, a <a href='https://arxiv.org/pdf/1806.05034.pdf'>second-stage segmentation model</a> running on the patch embeddings might be able to flag similar contiguous chunks of patches that don’t match the argmax.  </p>
 <p>Generating confidence visualizations for such a model or for other types of tissue will require tweaks to the techniques presented here. Small differences change the effectiveness of visualizations in unexpected ways. Switching from four classes to two classes made <gp class='gpu'>uncertain</gp> regions less frustrating to use; model builders wanted much more information density than pathologists; and the distribution of the neighborhood data removed the need for the patch techniques.</p>
 <p><i>Adam Pearce // February 2020</i></p>
-<p style='font-size: 14px'><a href='https://github.com/PAIR-code/interpretability/tree/master/uncertainty-over-space'>chart code</a></p>
+<p><i>Ben Wedin, Carrie Cai, Davis Foote, Dave Steiner, Emily Reif, Jimbo Wilson, Kunal Nagpal, Fernanda Viegas, Martin Wattenberg, Michael Terry, Pan-Pan Jiang, Rory Sayres, Samantha Winter and Zan Armstrong made this work possible and had many helpful comments. </i></p>
+<p><a href='https://github.com/PAIR-code/interpretability/tree/master/uncertainty-over-space'>chart code</a></p>
 <link rel="stylesheet" href="js/style.css">
 
 <script src='js/third_party/openseadragon-2.4.1.js'></script>
@@ -262,10 +263,6 @@ I thought some of the patch-based techniques might help answer where, exactly, t
 
 <script src='js/draw-functions.js'></script>
 <script src='js/sandbox-init.js'></script>
-
-
-
-
 
 </body>
 </html>
