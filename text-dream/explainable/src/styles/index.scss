@@ -1,0 +1,264 @@
+// General Properties
+html,
+body {
+  height: 100%;
+  font-family: Roboto, sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+header {
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 50px;
+  }
+
+  .legend {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+// Properties for HTML Items
+h1 {
+  line-height: normal;
+}
+
+p {
+  text-align: justify;
+}
+
+a {
+  text-decoration: none;
+}
+
+p > a {
+  background: rgba(255, 179, 68, 0.2);
+  color: #3C4043;
+  padding: 2px 2px 2px 2px;
+}
+
+p > a:hover {
+  background: rgba(255, 179, 68, 0.6);
+}
+
+p > span {
+  color: #999;
+  font-style: italic;
+}
+
+// Class-based Properties
+.explanationItem {
+  margin-left: 30px !important;
+  margin-right: 30px !important;
+}
+
+.content {
+  padding: 64px 10px 0px 10px;
+  height: 100%;
+  background-color: #ffffff;
+}
+
+.appTitle {
+  flex-grow: 1;
+  a {
+    background: rgba(255, 179, 68, 0.2);
+    color: #ffffff;
+    padding: 2px 2px 2px 2px;
+  }
+
+  a:hover {
+    background: rgba(255, 179, 68, 0.6);
+  }
+}
+
+.full {
+  width: 100%;
+  height: 100%;
+}
+
+.fullHeight {
+  height: 100%;
+}
+
+.fullWidth {
+  height: 100% !important;
+}
+
+.preferencesGrid {
+  height: 100%;
+  width: 300px;
+}
+
+.preferencesWrapper {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.preferencesItem {
+  padding-bottom: 8px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.dreamPaper {
+  padding-bottom: 8px;
+  padding-top: 8px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.inputElement {
+  width: 100%;
+}
+
+.preferencesHeading {
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
+.hiddenInput {
+  visibility: hidden;
+}
+
+div.MuiExpansionPanel-root:before {
+  content: none;
+}
+
+div.MuiPaper-elevation1 {
+  box-shadow: none;
+}
+
+.overflow {
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.headingPaper {
+  padding: 0 10px 0 24px;
+}
+
+.subHeadingPaper {
+  padding: 12px 10px 12px 24px;
+}
+
+.caption-slim {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  color: #888;
+  font-family: Helvetica;
+  font-size: 10pt;
+  line-height: 120%;
+}
+
+.normalText {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 150%;
+  color: #202124;
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.MuiExpansionPanelSummary-root {
+  background-color: #f8f8f8 !important;
+  color: #202124 !important;
+  font-size: 14px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.MuiExpansionPanelSummary-root:hover {
+  background-color: rgba(255, 179, 68, 0.6) !important;
+}
+
+.MuiExpansionPanelSummary-root.expandedPanel {
+  background-color: rgba(255, 179, 68, 0.6) !important;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.MuiCollapse-wrapperInner {
+  background-color: #f8f8f8 !important;
+}
+
+.MuiExpansionPanelDetails-root {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.smallText {
+  font-size: 14px;
+  line-height: 150%;
+  font-weight: 300;
+  color: #202124;
+}
+
+// Classes for Styling of individual Elements
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+svg text {
+  cursor: default;
+}
+
+.page-enter {
+  opacity: 0;
+}
+
+.page-enter-active {
+  opacity: 1;
+  transition: opacity 500ms;
+}
+
+.page-exit {
+  opacity: 1;
+}
+
+.page-exit-active {
+  opacity: 0;
+  transition: opacity 500ms;
+}
+
+img {
+  width: 100%;
+}
+
+// Superpositioned text and associated tooltips
+sup {
+  background-color: rgba(255, 179, 68, 0.2) !important;
+}
+
+sup:hover {
+  background-color: rgba(255, 179, 68, 0.6) !important;
+  cursor: default;
+}
+
+.styledTooltip {
+  font-size: 14px;
+  line-height: 120%;
+  font-weight: 300;
+}
+
+.MuiTooltip-tooltip {
+  background-color: #212121 !important;
+}
+
+// Progress Bar
+.progress {
+  position: absolute !important;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 100;
+}
