@@ -28,7 +28,6 @@ import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 import {getCard} from '../../cardprocessing';
-import data from '../../data/dream_layer.json';
 import * as actions from '../../actions';
 
 /**
@@ -40,6 +39,7 @@ class DreamVis extends React.Component {
    */
   componentDidMount() {
     this.props.actions.changeProgressPage(4);
+    this.props.actions.loadDream(this.props.dreamID)
   }
 
   /**
@@ -48,15 +48,17 @@ class DreamVis extends React.Component {
    * @return {jsx} the component to be rendered.
    */
   render() {
-    const dreamingCard = getCard(data, 0);
+    const dreamingCard = getCard(this.props.dreamVisJSON, 0);
     return (
       <Grid container alignItems='center' spacing={2} className='fullHeight'>
-        <Grid item xs container direction='column' alignItems='center'
-          spacing={2}>
+        <Grid item xs container direction='column' spacing={2}
+          className='fullHeight'>
           <Grid item className='explanationItem'>
             <h1>
               Visualized Dreams
             </h1>
+          </Grid>
+          <Grid item xs className='explanationItem overflow'>
             <p className='normalText'>
               The first question we wanted to answer for these dreaming
               processes is how the input representation evolves. Here it is
@@ -146,6 +148,8 @@ class DreamVis extends React.Component {
 
 DreamVis.propTypes = {
   actions: PropTypes.object.isRequired,
+  dreamID: PropTypes.number.isRequired,
+  dreamVisJSON: PropTypes.object.isRequired,
 };
 
 /**
@@ -157,7 +161,8 @@ DreamVis.propTypes = {
  */
 function mapStateToProps(state, ownProps) {
   return {
-    softmaxStatus: state.softmaxStatus,
+    dreamID: state.dreamID,
+    dreamVisJSON: state.dreamVisJSON,
   };
 }
 

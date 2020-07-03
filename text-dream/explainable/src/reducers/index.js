@@ -21,6 +21,8 @@ import activeColors from './ActiveColorsReducer';
 import softmaxStatus from './SoftmaxReducer';
 import progress from './ProgressReducer';
 import topWordsIteration from './TopWordsIterationReducer';
+import dreamID from './DreamIDReducer';
+import dreamVisJSON from './DreamJSONReducer';
 
 // Combine all Reducers
 export default combineReducers({
@@ -29,4 +31,6 @@ export default combineReducers({
   softmaxStatus,
   progress,
   topWordsIteration,
+  dreamID,
+  dreamVisJSON,
 });

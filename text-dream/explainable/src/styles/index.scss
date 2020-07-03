@@ -159,10 +159,11 @@ div.MuiPaper-elevation1 {
 }
 
 .normalText {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 300;
   line-height: 150%;
   color: #202124;
+  margin-top: 0;
 }
 
 /* Style the button that is used to open and close the collapsible content */
@@ -261,4 +262,12 @@ sup:hover {
   left: 0px;
   right: 0px;
   z-index: 100;
+}
+
+.selectionHead {
+  padding-bottom: 10px;
+}
+
+.runButton {
+  min-width: 0px !important;
 }

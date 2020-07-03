@@ -15,15 +15,19 @@
  * =============================================================================
 */
 import React from 'react';
+import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
+import {bindActionCreators} from 'redux';
 
 import {Grid, Paper} from '@material-ui/core';
 
 import DreamBody from './bodies/DreamBodyComponent';
 import DreamHead from './heads/DreamHeadComponent';
 import ExplanationHead from './heads/ExplanationHeadComponent';
+import SelectionHead from './heads/SelectionHeadComponent';
 
 import * as sentences from '../../sentences';
+import * as actions from '../../actions';
 
 /**
  * Provides the Dream Card Component.
@@ -59,8 +63,15 @@ class Dream extends React.PureComponent {
               sentenceParams={sentenceParams}/>
           </Paper>
         </div>
+        <SelectionHead
+          options={5}
+          clickHandler={this.handleClick.bind(this)}/>
       </Grid>
     );
+  }
+
+  handleClick(index) {
+    this.props.actions.changeDream(index);
   }
 }
 
@@ -70,4 +81,14 @@ Dream.propTypes = {
   elementIndex: PropTypes.number.isRequired,
 };
 
-export default Dream;
+/**
+ * Mapping the actions of redux to this component.
+ *
+ * @param {function} dispatch - called whenever an action is to be dispatched.
+ * @return {object} all the actions bound to this component.
+ */
+function mapDispatchToProps(dispatch) {
+  return {actions: bindActionCreators(actions, dispatch)};
+}
+
+export default connect(null, mapDispatchToProps)(Dream);

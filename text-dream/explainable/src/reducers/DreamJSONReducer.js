@@ -1,6 +1,6 @@
 /**
  * @license
- * Copyright 2018 Google LLC. All Rights Reserved.
+ * Copyright 2020 Google LLC. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -14,23 +14,22 @@
  * limitations under the License.
  * =============================================================================
 */
-// Set the initial State of the Application
-export default {
-  cardDimensions: {
-    width: 10,
-    height: 10,
-  },
-  activeColors: [],
-  softmaxStatus: {
-    values: [2.2, 0.8, 1.4, 1.0, 0.1],
-    labels: ['Dog', 'Cat', 'Monkey', 'Car', 'Truck'],
-    temperature: 1.0,
-  },
-  progress: {
-    page: 1,
-    of: 10,
-  },
-  topWordsIteration: 0,
-  dreamVisJSON: {},
-  dreamID: 1,
-};
+import initialState from './initialState';
+import * as types from '../actions/types';
+
+/**
+ * Reducer for updating the dimensions of displayed cards.
+ *
+ * @param {object} state - the current application state before any change.
+ * @param {object} action - the action that is issued to manipulate the state.
+ * @return {object} the state after handling the actiton.
+ */
+export default function dreamReducer(
+    state = initialState.dreamVisJSON, action) {
+  switch (action.type) {
+    case types.LOAD_DREAM_SUCCESS:
+      return action.results
+    default:
+      return state;
+  }
+}

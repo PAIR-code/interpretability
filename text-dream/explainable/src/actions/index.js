@@ -16,6 +16,7 @@
 */
 import * as types from './types';
 import {elementTypes} from '../cardprocessing';
+import DreamApi from '../api/DreamApi';
 
 /**
  * Triggers the addition of a new dreaming element.
@@ -121,3 +122,29 @@ export function changeProgressPage(page) {
 export function changeTopWordsIteration(iteration) {
   return {type: types.CHANGE_TOP_WORDS_ITERATION, iteration};
 }
+
+export function changeDreamID(id) {
+  return {type: types.CHANGE_DREAM_ID, id};
+}
+
+export function changeDreamSuccess(results) {
+  return {type: types.LOAD_DREAM_SUCCESS, results};
+}
+
+export function loadDream(id) {
+  return function(dispatch) {
+    return DreamApi.getDreamJSON(id).then(results => {
+      dispatch(changeDreamSuccess(results));
+    })
+  }
+}
+
+export function changeDream(id) {
+  return function(dispatch) {
+    return DreamApi.getDreamJSON(id).then(results => {
+      dispatch(changeDreamID(id));
+      dispatch(changeDreamSuccess(results));
+    })
+  }
+}
+
