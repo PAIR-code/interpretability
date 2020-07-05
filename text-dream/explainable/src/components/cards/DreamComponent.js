@@ -28,6 +28,7 @@ import SelectionHead from './heads/SelectionHeadComponent';
 
 import * as sentences from '../../sentences';
 import * as actions from '../../actions';
+import * as constants from '../../data/Constatnts';
 
 /**
  * Provides the Dream Card Component.
@@ -47,7 +48,8 @@ class Dream extends React.PureComponent {
       'NeuronID': this.props.params.neuron_id,
     };
     return (
-      <Grid container direction='column' className='fullHeight' wrap='nowrap'>
+      <Grid container direction='column' className='fullHeight' wrap='nowrap'
+        justify='center'>
         <ExplanationHead
           topic="Dream"
           params={headParams}
@@ -64,7 +66,7 @@ class Dream extends React.PureComponent {
           </Paper>
         </div>
         <SelectionHead
-          options={5}
+          options={constants.numOptions}
           clickHandler={this.handleClick.bind(this)}/>
       </Grid>
     );

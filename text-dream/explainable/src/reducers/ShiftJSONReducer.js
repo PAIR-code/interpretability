@@ -1,6 +1,6 @@
 /**
  * @license
- * Copyright 2018 Google LLC. All Rights Reserved.
+ * Copyright 2020 Google LLC. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -24,15 +24,11 @@ import * as types from '../actions/types';
  * @param {object} action - the action that is issued to manipulate the state.
  * @return {object} the state after handling the actiton.
  */
-export default function cardDimensionsReducer(
-    state = initialState.cardDimensions, action) {
+export default function shiftReducer(
+    state = initialState.shiftVisJSON, action) {
   switch (action.type) {
-    case types.CHANGE_CARD_DIMENSIONS:
-      let dims = {
-        width: action.dimensions.width,
-        height: action.dimensions.height - 50,
-      }
-      return dims;
+    case types.LOAD_SHIFTED_RECONSTRUCTION_SUCCESS:
+      return action.results
     default:
       return state;
   }

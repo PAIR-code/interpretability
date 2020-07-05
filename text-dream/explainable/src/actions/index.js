@@ -148,3 +148,107 @@ export function changeDream(id) {
   }
 }
 
+export function changeAnnealingSuccess(results) {
+  return {type: types.LOAD_ANNEALING_SUCCESS, results};
+}
+
+export function loadAnnealing(id) {
+  return function(dispatch) {
+    return DreamApi.getAnnealingJSON(id).then(results => {
+      dispatch(changeAnnealingSuccess(results));
+    })
+  }
+}
+
+export function changeAnnealing(id) {
+  return function(dispatch) {
+    return DreamApi.getAnnealingJSON(id).then(results => {
+      dispatch(changeDreamID(id));
+      dispatch(changeAnnealingSuccess(results));
+    })
+  }
+}
+
+export function changeTopWordsSuccess(results) {
+  return {type: types.LOAD_TOP_WORDS_SUCCESS, results};
+}
+
+export function loadTopWords(id) {
+  return function(dispatch) {
+    return DreamApi.getTopWordsJSON(id).then(results => {
+      dispatch(changeTopWordsSuccess(results));
+    })
+  }
+}
+
+export function changeTopWords(id) {
+  return function(dispatch) {
+    return DreamApi.getTopWordsJSON(id).then(results => {
+      dispatch(changeDreamID(id));
+      dispatch(changeTopWordsSuccess(results));
+    })
+  }
+}
+
+export function changeSimilarWordsSuccess(results) {
+  return {type: types.LOAD_SIMILAR_WORDS_SUCCESS, results};
+}
+
+export function loadSimilarWords(id) {
+  return function(dispatch) {
+    return DreamApi.getSimilarWordsJSON(id).then(results => {
+      dispatch(changeSimilarWordsSuccess(results));
+    })
+  }
+}
+
+export function changeSimilarWords(id) {
+  return function(dispatch) {
+    return DreamApi.getSimilarWordsJSON(id).then(results => {
+      dispatch(changeDreamID(id));
+      dispatch(changeSimilarWordsSuccess(results));
+    })
+  }
+}
+
+export function changeReconstructionSuccess(results) {
+  return {type: types.LOAD_RECONSTRUCTION_SUCCESS, results};
+}
+
+export function loadReconstruction(id) {
+  return function(dispatch) {
+    return DreamApi.getReconstructionJSON(id).then(results => {
+      dispatch(changeReconstructionSuccess(results));
+    })
+  }
+}
+
+export function changeReconstruction(id) {
+  return function(dispatch) {
+    return DreamApi.getReconstructionJSON(id).then(results => {
+      dispatch(changeDreamID(id));
+      dispatch(changeReconstructionSuccess(results));
+    })
+  }
+}
+
+export function changeShiftedReconstructionSuccess(results) {
+  return {type: types.LOAD_SHIFTED_RECONSTRUCTION_SUCCESS, results};
+}
+
+export function loadShiftedReconstruction(id) {
+  return function(dispatch) {
+    return DreamApi.getShiftedReconstructionJSON(id).then(results => {
+      dispatch(changeShiftedReconstructionSuccess(results));
+    })
+  }
+}
+
+export function changeShiftedReconstruction(id) {
+  return function(dispatch) {
+    return DreamApi.getShiftedReconstructionJSON(id).then(results => {
+      dispatch(changeDreamID(id));
+      dispatch(changeShiftedReconstructionSuccess(results));
+    })
+  }
+}

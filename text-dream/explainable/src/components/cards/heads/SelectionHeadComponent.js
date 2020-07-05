@@ -15,6 +15,7 @@
  * =============================================================================
 */
 import React from 'react';
+import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 
 import {Grid, Button} from '@material-ui/core';
@@ -33,7 +34,8 @@ class SelectionHead extends React.Component {
     for (let i = 0; i < this.props.options; i++) {
       buttons.push(
         <Grid item key={i}>
-          <Button variant='contained' color='secondary' className='runButton'
+          <Button variant='contained' className='runButton'
+            color={(i+1) === this.props.dreamID ? 'primary' : 'secondary'} 
             onClick={() => this.props.clickHandler(i+1)}>
             {i+1}
           </Button>
@@ -54,8 +56,22 @@ class SelectionHead extends React.Component {
 }
 
 SelectionHead.propTypes = {
+  dreamID: PropTypes.number.isRequired,
   options: PropTypes.number.isRequired,
   clickHandler: PropTypes.func.isRequired,
 };
 
-export default SelectionHead;
+/**
+ * Mapping the state that this component needs to its props.
+ *
+ * @param {object} state - the application state from where to get needed props.
+ * @param {object} ownProps - optional own properties needed to acess state.
+ * @return {object} the props for this component.
+ */
+function mapStateToProps(state, ownProps) {
+  return {
+    dreamID: state.dreamID,
+  };
+}
+
+export default connect(mapStateToProps, null)(SelectionHead);

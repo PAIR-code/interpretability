@@ -23,6 +23,11 @@ import progress from './ProgressReducer';
 import topWordsIteration from './TopWordsIterationReducer';
 import dreamID from './DreamIDReducer';
 import dreamVisJSON from './DreamJSONReducer';
+import annealingVisJSON from './AnnealingJSONReducer';
+import topWordsVisJSON from './TopWordsJSONReducer';
+import similarVisJSON from './SimilarWordsJSONReducer';
+import reconstructVisJSON from './ReconstructionJSONReducer';
+import shiftVisJSON from './ShiftJSONReducer';
 
 // Combine all Reducers
 export default combineReducers({
@@ -33,4 +38,9 @@ export default combineReducers({
   topWordsIteration,
   dreamID,
   dreamVisJSON,
+  annealingVisJSON,
+  topWordsVisJSON,
+  similarVisJSON,
+  reconstructVisJSON,
+  shiftVisJSON,
 });

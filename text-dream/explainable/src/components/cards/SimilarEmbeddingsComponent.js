@@ -16,13 +16,18 @@
 */
 import React from 'react';
 import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
 
 import {Grid, Paper} from '@material-ui/core';
 
 import DreamHead from './heads/DreamHeadComponent';
 import ExplanationHead from './heads/ExplanationHeadComponent';
 import SimilarEmbeddingsBody from './bodies/SimilarEmbeddingsBodyComponent';
+import SelectionHead from './heads/SelectionHeadComponent';
 
+import * as actions from '../../actions';
+import * as constants from '../../data/Constatnts';
 
 /**
  * Provides a Card Component for rendering a chart with similar embedding
@@ -70,8 +75,15 @@ class SimilarEmbeddings extends React.PureComponent {
               elementIndex={this.props.elementIndex}/>
           </Paper>
         </Grid>
+        <SelectionHead
+          options={constants.numOptions}
+          clickHandler={this.handleClick.bind(this)}/>
       </Grid>
     );
+  }
+
+  handleClick(index) {
+    this.props.actions.changeSimilarWords(index);
   }
 }
 
@@ -80,4 +92,14 @@ SimilarEmbeddings.propTypes = {
   elementIndex: PropTypes.number.isRequired,
 };
 
-export default SimilarEmbeddings;
+/**
+ * Mapping the actions of redux to this component.
+ *
+ * @param {function} dispatch - called whenever an action is to be dispatched.
+ * @return {object} all the actions bound to this component.
+ */
+function mapDispatchToProps(dispatch) {
+  return {actions: bindActionCreators(actions, dispatch)};
+}
+
+export default connect(null, mapDispatchToProps)(SimilarEmbeddings);

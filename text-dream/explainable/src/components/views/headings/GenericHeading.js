@@ -14,28 +14,33 @@
  * limitations under the License.
  * =============================================================================
 */
-// Set the initial State of the Application
-export default {
-  cardDimensions: {
-    width: 10,
-    height: 10,
-  },
-  activeColors: [],
-  softmaxStatus: {
-    values: [2.2, 0.8, 1.4, 1.0, 0.1],
-    labels: ['Dog', 'Cat', 'Monkey', 'Car', 'Truck'],
-    temperature: 1.0,
-  },
-  progress: {
-    page: 1,
-    of: 10,
-  },
-  topWordsIteration: 0,
-  dreamVisJSON: {},
-  dreamID: 1,
-  annealingVisJSON: {},
-  topWordsVisJSON: {},
-  similarVisJSON: {},
-  reconstructVisJSON: {},
-  shiftVisJSON: {},
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import {Grid} from '@material-ui/core';
+
+/**
+ * Displaying the heading for this step in the explainable.
+ */
+class GenericHeading extends React.Component {
+  /**
+   * Renders the heading.
+   *
+   * @return {jsx} the component to be rendered.
+   */
+  render() {
+    return (
+      <Grid item className='explanationItem'>
+        <h1>
+          {this.props.title}
+        </h1>
+      </Grid>
+    );
+  }
+}
+
+GenericHeading.propTypes = {
+  title: PropTypes.string.isRequired,
 };
+
+export default GenericHeading;

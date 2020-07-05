@@ -19,18 +19,19 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {bindActionCreators} from 'redux';
 
-import * as actions from '../../actions';
-
 import {Grid, ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails,
   Typography} from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 import ReconstructSentence from '../reconstruct/ReconstructSentence';
 import ExplanationHead from './heads/ExplanationHeadComponent';
+import SelectionHead from './heads/SelectionHeadComponent';
 
 import {getDreamProps, getReconstructProps,
   getMagnitudesLayerProps} from '../../cardcontentprocessing';
 import {getCardColors} from '../../colors';
+import * as actions from '../../actions';
+import * as constants from '../../data/Constatnts';
 
 /**
  * Provides a Card Component to render multiple Layers.
@@ -69,7 +70,8 @@ class Layers extends React.PureComponent {
     }
     props.sentenceParams.headWidth = props.sentenceParams.headWidth + 14;
     return (
-      <Grid container direction='column' className='fullHeight' wrap='nowrap'>
+      <Grid container direction='column' className='fullHeight' wrap='nowrap'
+        justify='center'>
         <ExplanationHead
           topic={props.topic}
           params={props.headParams}
@@ -100,8 +102,27 @@ class Layers extends React.PureComponent {
             </ExpansionPanel>
           )}
         </div>
+        <SelectionHead
+          options={constants.numOptions}
+          clickHandler={this.handleClick.bind(this)}/>
       </Grid>
     );
+  }
+
+  handleClick(index) {
+    switch (this.props.layers[0].type) {
+      case 'dream':
+        this.props.actions.changeDream(index);
+        break;
+      case 'reconstruct':
+        this.props.actions.changeReconstruction(index);
+        break;
+      case 'magnitudes':
+        this.props.actions.changeShiftedReconstruction(index);
+        break;
+      default:
+        break;
+    }
   }
 }
 

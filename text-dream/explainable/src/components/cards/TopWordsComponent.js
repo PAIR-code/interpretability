@@ -25,7 +25,10 @@ import ExplanationHead from './heads/ExplanationHeadComponent';
 import DreamHead from './heads/DreamHeadComponent';
 import TopWordsHead from './heads/TopWordsHeadComponent';
 import TopWordsBody from './bodies/TopWordsBodyComponent';
+import SelectionHead from './heads/SelectionHeadComponent';
+
 import * as actions from '../../actions';
+import * as constants from '../../data/Constatnts';
 
 /**
  * Providing a Card Component for the TopWords chart in different experiments.
@@ -85,8 +88,15 @@ class TopWords extends React.PureComponent {
               iteration={iteration}/>
           </Paper>
         </Grid>
+        <SelectionHead
+          options={constants.numOptions}
+          clickHandler={this.handleClick.bind(this)}/>
       </Grid>
     );
+  }
+
+  handleClick(index) {
+    this.props.actions.changeAnnealing(index);
   }
 }
 
@@ -118,6 +128,5 @@ function mapStateToProps(state, ownProps) {
 function mapDispatchToProps(dispatch) {
   return {actions: bindActionCreators(actions, dispatch)};
 }
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(TopWords);

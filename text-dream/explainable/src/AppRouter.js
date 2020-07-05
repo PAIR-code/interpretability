@@ -21,16 +21,7 @@ import {Grid} from '@material-ui/core';
 
 import TopBar from './components/TopBarComponent';
 import Progress from './components/ProgressComponent';
-import FeatureVis from './components/views/FeatureVisComponent';
-import TextSpecial from './components/views/TextSpecialityComponnent';
-import BERTResults from './components/views/BERTResultsComponent';
-import DreamVis from './components/views/DreamVisComponent';
-import AnnealingVis from './components/views/AnnealingVisComponent';
-import TopWordsVis from './components/views/TopWordsVisComponent';
-import SimilarVis from './components/views/SimilarVisComponent';
-import ReconstructVis from './components/views/ReconstructVisComponent';
-import ShiftVis from './components/views/ShiftVisComponent';
-import ConclusionVis from './components/views/ConclusionVisComponent';
+import ViewStep from './components/ViewStepComponent';
 
 /**
  * AppRouter Calling other Components dependant on Route
@@ -60,7 +51,7 @@ class AppRouter extends React.Component {
                       classNames="page"
                       unmountOnExit
                     >
-                      <FeatureVis />
+                      <ViewStep index={0}/>
                     </CSSTransition>
                   )}
                 </Route>
@@ -72,7 +63,7 @@ class AppRouter extends React.Component {
                       classNames="page"
                       unmountOnExit
                     >
-                      <FeatureVis />
+                      <ViewStep index={0}/>
                     </CSSTransition>
                   )}
                 </Route>
@@ -84,7 +75,7 @@ class AppRouter extends React.Component {
                       classNames="page"
                       unmountOnExit
                     >
-                      <TextSpecial />
+                      <ViewStep index={1}/>
                     </CSSTransition>
                   )}
                 </Route>
@@ -96,7 +87,7 @@ class AppRouter extends React.Component {
                       classNames="page"
                       unmountOnExit
                     >
-                      <BERTResults />
+                      <ViewStep index={2}/>
                     </CSSTransition>
                   )}
                 </Route>
@@ -108,7 +99,7 @@ class AppRouter extends React.Component {
                       classNames="page"
                       unmountOnExit
                     >
-                      <DreamVis />
+                      <ViewStep index={3}/>
                     </CSSTransition>
                   )}
                 </Route>
@@ -120,7 +111,7 @@ class AppRouter extends React.Component {
                       classNames="page"
                       unmountOnExit
                     >
-                      <AnnealingVis />
+                      <ViewStep index={4}/>
                     </CSSTransition>
                   )}
                 </Route>
@@ -132,7 +123,7 @@ class AppRouter extends React.Component {
                       classNames="page"
                       unmountOnExit
                     >
-                      <TopWordsVis />
+                      <ViewStep index={5}/>
                     </CSSTransition>
                   )}
                 </Route>
@@ -144,7 +135,7 @@ class AppRouter extends React.Component {
                       classNames="page"
                       unmountOnExit
                     >
-                      <SimilarVis />
+                      <ViewStep index={6}/>
                     </CSSTransition>
                   )}
                 </Route>
@@ -156,7 +147,7 @@ class AppRouter extends React.Component {
                       classNames="page"
                       unmountOnExit
                     >
-                      <ReconstructVis />
+                      <ViewStep index={7}/>
                     </CSSTransition>
                   )}
                 </Route>
@@ -168,7 +159,7 @@ class AppRouter extends React.Component {
                       classNames="page"
                       unmountOnExit
                     >
-                      <ShiftVis />
+                      <ViewStep index={8}/>
                     </CSSTransition>
                   )}
                 </Route>
@@ -180,7 +171,7 @@ class AppRouter extends React.Component {
                       classNames="page"
                       unmountOnExit
                     >
-                      <ConclusionVis />
+                      <ViewStep index={9}/>
                     </CSSTransition>
                   )}
                 </Route>
