@@ -95,6 +95,11 @@ class TopWords extends React.PureComponent {
     );
   }
 
+  /**
+   * Handles clicks on the run selection items.
+   *
+   * @param {number} index the index of the item that was clicked.
+   */
   handleClick(index) {
     this.props.actions.changeAnnealing(index);
   }
@@ -104,6 +109,7 @@ TopWords.propTypes = {
   dreamingElement: PropTypes.object.isRequired,
   elementIndex: PropTypes.number.isRequired,
   topWordsIteration: PropTypes.number.isRequired,
+  actions: PropTypes.object.isRequired,
 };
 
 /**

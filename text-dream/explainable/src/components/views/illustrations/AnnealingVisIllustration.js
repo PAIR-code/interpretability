@@ -33,7 +33,7 @@ class AnnealingVisIllustration extends React.Component {
   render() {
     const annealingCard = getCard(this.props.annealingVisJSON, 0);
     return (
-     <Grid item xs className='fullHeight' id='cardItem'>
+      <Grid item xs className='fullHeight' id='cardItem'>
         {annealingCard}
       </Grid>
     );
