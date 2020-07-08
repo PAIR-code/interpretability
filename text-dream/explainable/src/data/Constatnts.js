@@ -1,1 +1,0 @@
-export const numOptions = 1;

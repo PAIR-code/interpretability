@@ -28,7 +28,7 @@ import TopWordsBody from './bodies/TopWordsBodyComponent';
 import SelectionHead from './heads/SelectionHeadComponent';
 
 import * as actions from '../../actions';
-import * as constants from '../../data/Constatnts';
+import * as constants from '../../data/Constants';
 
 /**
  * Providing a Card Component for the TopWords chart in different experiments.

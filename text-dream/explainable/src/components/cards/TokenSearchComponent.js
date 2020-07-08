@@ -27,7 +27,7 @@ import TokenSearchBody from './bodies/TokenSearchBodyComponent';
 import SelectionHead from './heads/SelectionHeadComponent';
 
 import * as actions from '../../actions';
-import * as constants from '../../data/Constatnts';
+import * as constants from '../../data/Constants';
 
 /**
  * Provides a Card Component for rendering a chart with similar embedding

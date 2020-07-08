@@ -31,7 +31,7 @@ import {getDreamProps, getReconstructProps,
   getMagnitudesLayerProps} from '../../cardcontentprocessing';
 import {getCardColors} from '../../colors';
 import * as actions from '../../actions';
-import * as constants from '../../data/Constatnts';
+import * as constants from '../../data/Constants';
 
 /**
  * Provides a Card Component to render multiple Layers.

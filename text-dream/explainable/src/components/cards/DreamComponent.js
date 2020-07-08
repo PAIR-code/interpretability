@@ -28,7 +28,7 @@ import SelectionHead from './heads/SelectionHeadComponent';
 
 import * as sentences from '../../sentences';
 import * as actions from '../../actions';
-import * as constants from '../../data/Constatnts';
+import * as constants from '../../data/Constants';
 
 /**
  * Provides the Dream Card Component.
