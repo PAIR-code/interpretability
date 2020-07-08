@@ -116,6 +116,8 @@ def try_tokens(tokenizer, device, model):
       tensor = tensor.to(device)
     activation = run_inference(tensor, segments_tensor, model)
     activations.append(activation)
+    print(f'{i}/{embeddings_config.NUM_EMBEDDED_TOKENS}\r', end="")
+  print()
   activations_tensor = torch.stack(activations)
   token_activations, ids = torch.topk(activations_tensor, FLAGS.top_k)
   write_best_tokens(ids, token_activations, tokenizer, tokens)
