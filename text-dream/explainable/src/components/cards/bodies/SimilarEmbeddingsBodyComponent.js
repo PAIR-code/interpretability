@@ -72,7 +72,10 @@ class SimilarEmbeddingsBodyComponent extends React.Component {
     // Remove any old chart
     svg.select('g').remove();
     // Set up the scales and axes for the chart
-    const tops = this.props.dreamingElement.tops;
+    let tops = this.props.dreamingElement.tops;
+    if (tops.length > 20) {
+      tops = tops.splice(0, 20);
+    }
     const maxActivation = tops[0].activation;
     let minActivation = 0;
     for (const top of tops) {

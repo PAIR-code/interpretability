@@ -70,7 +70,10 @@ class TokenSearchBodyComponent extends React.Component {
     // Remove any old chart
     svg.select('g').remove();
     // Set up the scales and axes for the chart
-    const tops = this.props.dreamingElement.tops;
+    let tops = this.props.dreamingElement.tops;
+    if (tops.length > 30) {
+      tops = tops.slice(0, 30);
+    }
     const maxActivation = tops[0].activation;
     let minActivation = 0;
     for (const top of tops) {
