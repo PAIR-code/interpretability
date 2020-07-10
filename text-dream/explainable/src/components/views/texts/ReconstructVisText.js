@@ -45,7 +45,6 @@ class ReconstructVisTexts extends React.Component {
           </ExpansionPanelDetails>
         </ExpansionPanel>
         <p className='normalText'>
-          The results of this experiment can be seen in Figure 5.
           Surprisingly, these experiments seem to work comparably well. Even
           more interesting: this indicates not only that our approach has no
           major conceptual flaws, but reveals additional insight into the
@@ -70,7 +69,8 @@ class ReconstructVisTexts extends React.Component {
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <p className='smallText'>
-              We can see that connections such as the word "for", commas,
+              In example 1, we can see that connections such as the word "for",
+              commas,
               and the word "and" seem to get replaced with seemingly random
               words relatively early. As these words are not really
               important to understand the general meaning of the sentence,

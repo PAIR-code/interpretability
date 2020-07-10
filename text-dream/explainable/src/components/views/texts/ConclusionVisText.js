@@ -14,7 +14,7 @@ class ConclusionVisTexts extends React.Component {
     return (
       <Grid item className='explanationItem overflow'>
         <p className='normalText'>
-            This article shows experiments aimed at looking into what a deep
+            This explainable shows experiments aimed at looking into what a deep
             transformer language model, namely BERT, has learned. Although
             our attempts didn't work as well as we were hoping, we got some
             interesting insights into how a language model builds up its

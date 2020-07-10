@@ -21,9 +21,8 @@ class SimilarVisTexts extends React.Component {
           activate the neuron as much. To explore this possibility, we
           developed another visualization that allows us to look at
           activations for tokens that are close to the token we know highly
-          activates the neuron. In Figure 5, you can see an example of this
-          visualization. We see that words that are close in the
-          high-dimensional embedding to the word "for", which we know
+          activates the neuron. We see that sometimes words that are close in
+          the high-dimensional embedding to the word we know
           produces a high activation, do not also activate the neuron that
           much. This could be an indication that some neurons are so
           specialized, that it gets extremely hard to find optima using

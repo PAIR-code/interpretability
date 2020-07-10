@@ -17,12 +17,15 @@ class AnnealingVisTexts extends React.Component {
           To investigate our first idea for why BERT might have problems
           with dreaming, we wanted to see how the annealing progresses.
           Here, we were interested in how the softmax token-distribution
-          changed throughout the process. Interestingly, the token "hands"
-          has a very low weight. If we went on, we could see that the model
-          ruled out more tokens and was unable to swap back to "hands" to
-          get a higher activation. In the end, it could only choose between
-          tokens "##pile", "##gas", and "##gles", none of which highly
-          activated the neuron.
+          changed throughout the process.
+          We see how the model first uses a linear combination of many tokens to
+          get to activation values that could not be achieved with any single
+          token alone.
+          Then, the model is forced by the temperature value to reduce this bag
+          of tokens, whereas the number of tokens used for the linear
+          combination is reduced step-by-step.
+          In many cases, the model cannot switch back to a single, highly
+          activating token after this reduction.
         </p>
       </Grid>
     );

@@ -58,11 +58,10 @@ class ShiftVisTexts extends React.Component {
           </ExpansionPanelDetails>
         </ExpansionPanel>
         <p className='normalText'>
-          One can see the results of such an experiment in Figure 6.
           Interestingly, not only did a change occur during reconstruction
           of the token we shifted the activation for, but also for some of
           the tokens for which the activations were untouched. Most exciting
-          was that the token "her" changed to "his", which matches the
+          was that sometimes the token "her" changed to "his", which matches the
           direction we shifted the pronoun token. Thus, even though we only
           changed the pronoun, this was so important for the model, that
           other tokens could be changed on this basis. On the other hand, we

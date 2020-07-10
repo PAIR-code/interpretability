@@ -16,10 +16,8 @@ class TopWordsVisTexts extends React.Component {
         <p className='normalText'>
           It is also interesting to look at this in combination with the top
           activations for a specific word position. We can do that by
-          checking the activation for each word in the vocabulary. You can
-          see a visualization of this in Figure 3. One thing that this
-          reveals is that "hands" is indeed the most activating word for the
-          investigated neuron, given this sentence. Interestingly, none of
+          checking the activation for each word in the vocabulary.
+          Interestingly, often none of
           the tokens that have high weights in the linear combination of
           tokens to input into the model can be found in these top
           activating ones. This shows one possible problem with this method

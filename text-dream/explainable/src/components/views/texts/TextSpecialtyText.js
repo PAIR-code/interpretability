@@ -73,7 +73,8 @@ class TextSpecialtyTexts extends React.Component {
           parameter, which controls the sparsity of this linear combination.
           By slowly decreasing this temperature value, we can make the model
           first explore different linear combinations of tokens, before
-          deciding on one token.
+          deciding on one token. You can experiment with this mechanism in this
+          visualization.
         </p>
         <ExpansionPanel>
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}
