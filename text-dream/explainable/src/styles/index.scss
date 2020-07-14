@@ -143,6 +143,8 @@ div.MuiPaper-elevation1 {
 
 .headingPaper {
   padding: 0 10px 0 24px;
+  background-color: #dddddd !important;
+  padding-top: 10px;
 }
 
 .subHeadingPaper {
@@ -270,4 +272,14 @@ sup:hover {
 
 .runButton {
   min-width: 0px !important;
+}
+
+.tooltipIcon {
+  background-color: rgba(255, 179, 68, 0.2) !important;
+  border-radius: 12px;
+}
+
+.tooltipIcon:hover {
+  background-color: rgba(255, 179, 68, 0.6) !important;
+  border-radius: 12px;
 }

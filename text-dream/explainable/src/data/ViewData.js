@@ -17,15 +17,29 @@ import FeatureVisButtons from '../components/views/buttons/FeatureVisButtons';
 import BothButtons from '../components/views/buttons/BothButtons';
 import ConclusionButtons from '../components/views/buttons/ConclusionButtons';
 
-import FeatureVisIllustration from '../components/views/illustrations/FeatureVisIllustration';
-import TextSpecialtyIllustration from '../components/views/illustrations/TextSpecialtyIllustration';
-import DreamVisIllustration from '../components/views/illustrations/DreamVisIllustration';
-import AnnealingVisIllustration from '../components/views/illustrations/AnnealingVisIllustration';
-import TopWordsVisIllustration from '../components/views/illustrations/TopWordsVisIllustration';
-import SimilarVisIllustration from '../components/views/illustrations/SimilarVisIllustration';
-import ReconstructVisIllustration from '../components/views/illustrations/ReconstructVisIllustration';
-import ShiftVisIllustration from '../components/views/illustrations/ShiftVisIllustration';
+import FeatureVisIllustration from
+  '../components/views/illustrations/FeatureVisIllustration';
+import TextSpecialtyIllustration from
+  '../components/views/illustrations/TextSpecialtyIllustration';
+import DreamVisIllustration from
+  '../components/views/illustrations/DreamVisIllustration';
+import AnnealingVisIllustration from
+  '../components/views/illustrations/AnnealingVisIllustration';
+import TopWordsVisIllustration from
+  '../components/views/illustrations/TopWordsVisIllustration';
+import SimilarVisIllustration from
+  '../components/views/illustrations/SimilarVisIllustration';
+import ReconstructVisIllustration from
+  '../components/views/illustrations/ReconstructVisIllustration';
+import ShiftVisIllustration from
+  '../components/views/illustrations/ShiftVisIllustration';
 
+/**
+ * Returns the view for the given view index.
+ *
+ * @param {number} index the index of the view to be retreived.
+ * @return {object} the view elements that should be rendered for this index.
+ */
 export default function getViewData(index) {
   return viewData[index];
 }
@@ -91,4 +105,4 @@ const viewData = [
     buttons: <ConclusionButtons/>,
     illustration: null,
   },
-]
+];

@@ -19,9 +19,11 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {bindActionCreators} from 'redux';
 
-import {Grid, Typography, Paper} from '@material-ui/core';
+import {Grid, Typography, Paper, Tooltip} from '@material-ui/core';
+import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 
 import * as actions from '../../../actions';
+import getVisExplanation from '../../../data/VisExplanationTexts';
 
 /**
  * Providing a Header Component for any Card.
@@ -43,25 +45,30 @@ class ExplanationHead extends React.Component {
     keys = Object.keys(filteredParams);
     return (
       <Grid item>
-        <Paper className='headingPaper' style={{backgroundColor: '#DDDDDD'}}
-          square>
-          <Grid container direction='row' spacing={0} alignItems="center">
-            <Grid item xs>
-              <Grid container direction='row' spacing={1} alignItems="center"
-                style={{marginTop: '10px'}}>
-                <Grid item>
-                  <Typography variant="body1" color="inherit">
-                    {this.props.topic}
+        <Paper className='headingPaper' square>
+          <Grid container direction='row' spacing={0} alignItems="center"
+            wrap='nowrap'>
+            <Grid item container direction='row' spacing={1}
+              alignItems="center">
+              <Grid item>
+                <Typography variant="body1" color="inherit">
+                  {this.props.topic}
+                </Typography>
+              </Grid>
+              {keys.map((key, index) =>
+                <Grid item key={index}>
+                  <Typography variant="caption" color="inherit">
+                    {key}: {this.props.params[key]}
                   </Typography>
                 </Grid>
-                {keys.map((key, index) =>
-                  <Grid item key={index}>
-                    <Typography variant="caption" color="inherit">
-                      {key}: {this.props.params[key]}
-                    </Typography>
-                  </Grid>
-                )}
-              </Grid>
+              )}
+            </Grid>
+            <Grid item>
+              <Tooltip title={<span className='styledTooltip'>
+                {getVisExplanation(this.props.topic.replace(' ', ''))}
+              </span>}>
+                <HelpOutlineIcon className='tooltipIcon'/>
+              </Tooltip>.
             </Grid>
           </Grid>
         </Paper>
