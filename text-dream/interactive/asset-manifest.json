@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "//interpretability/text-dream/interactive/static/css/main.3100fe04.chunk.css",
+    "main.js": "//interpretability/text-dream/interactive/static/js/main.ae1c4065.chunk.js",
+    "main.js.map": "//interpretability/text-dream/interactive/static/js/main.ae1c4065.chunk.js.map",
+    "runtime-main.js": "//interpretability/text-dream/interactive/static/js/runtime-main.ab0d792c.js",
+    "runtime-main.js.map": "//interpretability/text-dream/interactive/static/js/runtime-main.ab0d792c.js.map",
+    "static/js/2.a3a15d5d.chunk.js": "//interpretability/text-dream/interactive/static/js/2.a3a15d5d.chunk.js",
+    "static/js/2.a3a15d5d.chunk.js.map": "//interpretability/text-dream/interactive/static/js/2.a3a15d5d.chunk.js.map",
+    "index.html": "//interpretability/text-dream/interactive/index.html",
+    "precache-manifest.171a1c37fff51277cb9c01a8d8709865.js": "//interpretability/text-dream/interactive/precache-manifest.171a1c37fff51277cb9c01a8d8709865.js",
+    "service-worker.js": "//interpretability/text-dream/interactive/service-worker.js",
+    "static/css/main.3100fe04.chunk.css.map": "//interpretability/text-dream/interactive/static/css/main.3100fe04.chunk.css.map",
+    "static/js/2.a3a15d5d.chunk.js.LICENSE.txt": "//interpretability/text-dream/interactive/static/js/2.a3a15d5d.chunk.js.LICENSE.txt",
+    "static/js/main.ae1c4065.chunk.js.LICENSE.txt": "//interpretability/text-dream/interactive/static/js/main.ae1c4065.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ab0d792c.js",
+    "static/js/2.a3a15d5d.chunk.js",
+    "static/css/main.3100fe04.chunk.css",
+    "static/js/main.ae1c4065.chunk.js"
+  ]
+}
