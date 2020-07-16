@@ -76,7 +76,7 @@ class TopBar extends React.Component {
             street by Alex Bäuerle (<a href="https://twitter.com/a13xba">
             @a13xba</a>) and James Wexler
             (<a href="https://twitter.com/bengiswex">@bengiswex</a>)
-            of <a href="https://ai.google/research/teams/brain/pair">PAIR</a>.
+            of <a href="https://pair.withgoogle.com/">PAIR</a>.
           </Typography>
           <IconButton aria-label="github" style={{color: 'white'}}
             href="https://github.com/PAIR-code/interpretability/tree/master/text-dream">

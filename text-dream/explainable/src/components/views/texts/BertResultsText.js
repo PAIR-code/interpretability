@@ -65,7 +65,7 @@ class BertResultsTexts extends React.Component {
         </p>
         <p className='normalText'>
           So, why is BERT such a bad dreamer? This is a question we tried to
-          answer <a href="https://ai.google/research/teams/brain/pair">
+          answer <a href="https://pair.withgoogle.com/">
           PAIR</a>-style, by providing explainability approaches to visually
           inspect those dreaming results
           <Tooltip title={<span className='styledTooltip'>
