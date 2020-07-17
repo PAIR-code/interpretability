@@ -73,9 +73,9 @@ class ReconstructVisTexts extends React.Component {
               commas,
               and the word "and" seem to get replaced with seemingly random
               words relatively early. As these words are not really
-              important to understand the general meaning of the sentence,
+              critical to understand the general meaning of the sentence,
               them being less important for the reconstruction of activation
-              results seems just natural. Other words, such as "duties",
+              results isn't surprising. Other words, such as "duties",
               "include", and "sites" are replaced by conceptually similar
               words, such as "interests", "reflect", and "venues" in some of
               the layers. These replacements could sometimes even be

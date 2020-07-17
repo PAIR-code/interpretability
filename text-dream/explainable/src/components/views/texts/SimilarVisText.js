@@ -21,11 +21,11 @@ class SimilarVisTexts extends React.Component {
           activate the neuron as much. To explore this possibility, we
           developed another visualization that allows us to look at
           activations for tokens that are close to the token we know highly
-          activates the neuron. We see that sometimes words that are close in
-          the high-dimensional embedding to the word we know
-          produces a high activation, do not also activate the neuron that
-          much. This could be an indication that some neurons are so
-          specialized, that it gets extremely hard to find optima using
+          activates the neuron. We see that just because a word is close in
+          the embedding-space to a word we know
+          produces a high activation, does not mean that it also highly activates
+          the neuron. This could be an indication that some neurons are so
+          specialized that it gets extremely hard to find optima using
           gradient descent, and might indeed be another reason for why these
           dreaming approaches sometimes fail to produce the expected
           results.

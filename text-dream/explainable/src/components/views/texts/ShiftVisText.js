@@ -19,7 +19,7 @@ class ShiftVisTexts extends React.Component {
       <Grid item className='explanationItem overflow'>
         <p className='normalText'>
           If reconstructing activations works, what happens if we change
-          some activations? To investigate potential bias in such models, we
+          some activations before reconstruction? To investigate potential bias in such models, we
           wanted to make meaningful changes to the activations and look into
           what the model makes of these changes during reconstruction. Thus,
           we changed activations of gender-specific words in the directions

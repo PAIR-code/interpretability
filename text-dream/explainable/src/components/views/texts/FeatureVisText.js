@@ -37,8 +37,8 @@ class FeatureVisTexts extends React.Component {
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <p className='smallText'>
-              In Deep Dream, inputs are changed through gradient descent
-              to maximize activation values.
+              In Deep Dream, inputs (pixels, when used on images) are changed
+              through gradient descent to maximize activation values.
               This can be thought of as similar to the initial training
               process, where through many iterations, we try to optimize a
               mathematical equation.

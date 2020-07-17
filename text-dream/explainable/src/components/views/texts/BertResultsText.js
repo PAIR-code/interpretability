@@ -21,7 +21,7 @@ class BertResultsTexts extends React.Component {
           Now that we know how Deep Dream can be used in combination with
           text models, what do those results look like? Well, very
           unpredictable. For some neurons it was possible to produce
-          sentences that highly activated them, however, for other neurons
+          sentences that highly activated them. However, for other neurons
           we weren&apos;t able to dream such sentences
           <Tooltip title={<span className='styledTooltip'>
             As a baseline for all experiments, we used results from corpus
