@@ -57,7 +57,7 @@ class Dream extends React.PureComponent {
         <DreamHead
           params={this.props.params}
           sentenceParams={sentenceParams}/>
-        <div className='overflow'>
+        <div className='overflow bottomMargin'>
           <Paper className={'dreamPaper'}>
             <DreamBody
               results={this.props.results}
@@ -72,6 +72,11 @@ class Dream extends React.PureComponent {
     );
   }
 
+  /**
+   * Handles the selection of a different dreaming experiment.
+   *
+   * @param {number} index The index of the selected item.
+   */
   handleClick(index) {
     this.props.actions.changeDream(index);
   }
@@ -81,6 +86,7 @@ Dream.propTypes = {
   params: PropTypes.object.isRequired,
   results: PropTypes.object.isRequired,
   elementIndex: PropTypes.number.isRequired,
+  actions: PropTypes.object.isRequired,
 };
 
 /**

@@ -35,7 +35,8 @@ class ReconstructHead extends React.Component {
       <Grid item>
         <Paper className='subHeadingPaper' style={{backgroundColor: '#DDDDDD'}}
           square>
-          <Grid container direction='row' spacing={1} alignItems="center">
+          <Grid container direction='row' spacing={1} alignItems="center"
+            wrap='nowrap'>
             <Tooltip title="Reconstruct Target" placement="top">
               <Grid item style={{width: this.props.sentenceParams.headWidth}}>
                 <Typography variant="body1" color="inherit">

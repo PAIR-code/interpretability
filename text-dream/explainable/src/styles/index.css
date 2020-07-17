@@ -205,7 +205,11 @@ sup:hover {
   font-weight: 300; }
 
 .MuiTooltip-tooltip {
-  background-color: #212121 !important; }
+  background-color: #212121 !important;
+  text-align: justify; }
+
+.tooltipDiv {
+  text-align: justify; }
 
 .progress {
   position: absolute !important;
@@ -227,3 +231,6 @@ sup:hover {
 .tooltipIcon:hover {
   background-color: rgba(255, 179, 68, 0.6) !important;
   border-radius: 12px; }
+
+.bottomMargin {
+  margin-bottom: 20px; }

@@ -43,6 +43,10 @@ class ExplanationHead extends React.Component {
       }
     }
     keys = Object.keys(filteredParams);
+    let topic = this.props.topic;
+    if (topic === 'Top Words') {
+      topic = 'Annealing';
+    }
     return (
       <Grid item>
         <Paper className='headingPaper' square>
@@ -52,7 +56,7 @@ class ExplanationHead extends React.Component {
               alignItems="center">
               <Grid item>
                 <Typography variant="body1" color="inherit">
-                  {this.props.topic}
+                  {topic}
                 </Typography>
               </Grid>
               {keys.map((key, index) =>

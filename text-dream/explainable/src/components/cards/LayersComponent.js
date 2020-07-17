@@ -77,11 +77,12 @@ class Layers extends React.PureComponent {
           params={props.headParams}
           elementIndex={this.props.elementIndex}/>
         {props.head}
-        <div className='overflow'>
+        <div className='overflow bottomMargin'>
           {props.bodies.map((body, index) =>
             <ExpansionPanel key={index}>
               <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-                <Grid container direction='row' spacing={1} alignItems="center">
+                <Grid container direction='row' spacing={1} alignItems="center"
+                  wrap='nowrap'>
                   <Grid item style={{width: props.sentenceParams.headWidth}}>
                     <Typography variant="body1" color="inherit">
                       {props.layerIDs[index]}
@@ -109,6 +110,11 @@ class Layers extends React.PureComponent {
     );
   }
 
+  /**
+   * Handles the selection of a different dreaming experiment.
+   *
+   * @param {number} index The index of the selected item.
+   */
   handleClick(index) {
     switch (this.props.layers[0].type) {
       case 'dream':

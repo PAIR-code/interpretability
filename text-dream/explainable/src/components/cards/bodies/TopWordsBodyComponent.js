@@ -21,7 +21,7 @@ import PropTypes from 'prop-types';
 import * as d3 from 'd3';
 import {getColor} from '../../../colors';
 
-const margin = {top: 50, right: 20, bottom: 40, left: 100};
+const margin = {top: 50, right: 40, bottom: 60, left: 100};
 
 /**
  * Component that provides a body for the TopWords Card.

@@ -20,7 +20,7 @@ import {connect} from 'react-redux'; import PropTypes from 'prop-types';
 import * as d3 from 'd3';
 import {getColor} from '../../../colors';
 
-const margin = {top: 20, right: 20, bottom: 20, left: 100};
+const margin = {top: 20, right: 20, bottom: 60, left: 100};
 
 /**
  * Provides a Body Component for the Similar Embeddings Card.
