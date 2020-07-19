@@ -68,6 +68,11 @@ class TopWords extends React.PureComponent {
         this.props.dreamingElement.iterations.length -1].number;
     return (
       <Grid container direction='column' className='fullHeight' wrap='nowrap'>
+        <Grid item className='explanationItem'>
+          <p className='normalText'>
+            <b>Experiment {this.props.dreamID}: </b>{this.props.explanation}
+          </p>
+        </Grid>
         <ExplanationHead
           topic="Top Words"
           params={headParams}
@@ -109,7 +114,9 @@ TopWords.propTypes = {
   dreamingElement: PropTypes.object.isRequired,
   elementIndex: PropTypes.number.isRequired,
   topWordsIteration: PropTypes.number.isRequired,
+  explanation: PropTypes.string.isRequired,
   actions: PropTypes.object.isRequired,
+  dreamID: PropTypes.number.isRequired,
 };
 
 /**
@@ -121,6 +128,7 @@ TopWords.propTypes = {
  */
 function mapStateToProps(state, ownProps) {
   return {
+    dreamID: state.dreamID,
     topWordsIteration: state.topWordsIteration,
   };
 }

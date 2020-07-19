@@ -72,6 +72,11 @@ class Layers extends React.PureComponent {
     return (
       <Grid container direction='column' className='fullHeight' wrap='nowrap'
         justify='center'>
+        <Grid item className='explanationItem'>
+          <p className='normalText'>
+            <b>Experiment {this.props.dreamID}: </b>{this.props.explanation}
+          </p>
+        </Grid>
         <ExplanationHead
           topic={props.topic}
           params={props.headParams}
@@ -135,8 +140,23 @@ class Layers extends React.PureComponent {
 Layers.propTypes = {
   layers: PropTypes.array.isRequired,
   elementIndex: PropTypes.number.isRequired,
+  explanation: PropTypes.string.isRequired,
   actions: PropTypes.object.isRequired,
+  dreamID: PropTypes.number.isRequired,
 };
+
+/**
+ * Mapping the state that this component needs to its props.
+ *
+ * @param {object} state - the application state from where to get needed props.
+ * @param {object} ownProps - optional own properties needed to acess state.
+ * @return {object} the props for this component.
+ */
+function mapStateToProps(state, ownProps) {
+  return {
+    dreamID: state.dreamID,
+  };
+}
 
 /**
  * Mapping the actions of redux to this component.
@@ -148,4 +168,4 @@ function mapDispatchToProps(dispatch) {
   return {actions: bindActionCreators(actions, dispatch)};
 }
 
-export default connect(null, mapDispatchToProps)(Layers);
+export default connect(mapStateToProps, mapDispatchToProps)(Layers);

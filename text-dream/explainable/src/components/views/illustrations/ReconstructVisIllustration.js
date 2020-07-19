@@ -6,6 +6,9 @@ import {bindActionCreators} from 'redux';
 
 import {getCard} from '../../../cardprocessing';
 import * as actions from '../../../actions';
+import {
+  getReconstructExperimentExplanation,
+} from '../../../data/ExperimentExplanationTexts';
 
 /**
  * Displaying the illustration for this step in the explainable.
@@ -31,9 +34,10 @@ class ReconstructVisIllustration extends React.Component {
    * @return {jsx} the component to be rendered.
    */
   render() {
-    const reconstructCard = getCard(this.props.reconstructVisJSON, 0);
+    const reconstructCard = getCard(this.props.reconstructVisJSON, 0,
+        getReconstructExperimentExplanation(this.props.dreamID));
     return (
-     <Grid item xs className='fullHeight' id='cardItem'>
+      <Grid item xs className='fullHeight' id='cardItem'>
         {reconstructCard}
       </Grid>
     );
@@ -70,4 +74,5 @@ function mapDispatchToProps(dispatch) {
   return {actions: bindActionCreators(actions, dispatch)};
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ReconstructVisIllustration);
+export default connect(mapStateToProps,
+    mapDispatchToProps)(ReconstructVisIllustration);

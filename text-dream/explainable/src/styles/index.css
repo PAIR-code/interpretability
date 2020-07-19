@@ -173,7 +173,9 @@ div.MuiPaper-elevation1 {
   /* Non-prefixed version, currently supported by Chrome and Opera */ }
 
 svg text {
-  cursor: default; }
+  cursor: default;
+  font: "Roboto";
+}
 
 .page-enter {
   opacity: 0; }

@@ -6,6 +6,9 @@ import {bindActionCreators} from 'redux';
 
 import {getCard} from '../../../cardprocessing';
 import * as actions from '../../../actions';
+import {
+  getDreamExperimentExplanation,
+} from '../../../data/ExperimentExplanationTexts';
 
 /**
  * Displaying the illustration for this step in the explainable.
@@ -15,7 +18,7 @@ class DreamVisIllustration extends React.Component {
    * Updating the page progress.
    */
   componentDidMount() {
-    this.props.actions.loadDream(this.props.dreamID)
+    this.props.actions.loadDream(this.props.dreamID);
   }
 
   /**
@@ -24,7 +27,8 @@ class DreamVisIllustration extends React.Component {
    * @return {jsx} the component to be rendered.
    */
   render() {
-    const dreamingCard = getCard(this.props.dreamVisJSON, 0);
+    const dreamingCard = getCard(this.props.dreamVisJSON, 0,
+        getDreamExperimentExplanation(this.props.dreamID));
     return (
       <Grid item xs className='fullHeight'>
         {dreamingCard}
@@ -63,4 +67,5 @@ function mapDispatchToProps(dispatch) {
   return {actions: bindActionCreators(actions, dispatch)};
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(DreamVisIllustration);
+export default connect(mapStateToProps,
+    mapDispatchToProps)(DreamVisIllustration);

@@ -120,6 +120,7 @@ class SimilarEmbeddingsBodyComponent extends React.Component {
         .data(tops)
         .enter()
         .append('text')
+        .style('font-size', '10px')
         .attr('y', function(d) {
           return yScale(d.token) + yScale.bandwidth() / 2 - 2;
         })
@@ -153,6 +154,7 @@ class SimilarEmbeddingsBodyComponent extends React.Component {
         .data(tops)
         .enter()
         .append('text')
+        .style('font-size', '10px')
         .attr('y', function(d) {
           return yScale(d.token) + yScale.bandwidth() - 2;
         })
@@ -167,7 +169,7 @@ class SimilarEmbeddingsBodyComponent extends React.Component {
         .attr('class', 'yAxis')
         .call(yAxis)
         .selectAll('text')
-        .style('font-size', '0.875rem');
+        .style('font', '0.875rem roboto');
   }
 }
 

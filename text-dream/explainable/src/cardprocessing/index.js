@@ -45,16 +45,18 @@ export const elementTypes = {
  * @param {object} dreamingElement - the element that should be rendered as a
  * card.
  * @param {number} elementIndex - the index of the current element.
+ * @param {string} explanation - the explanation for this card.
  * @return {object} the card to be rendered.
  */
-export function getCard(dreamingElement, elementIndex) {
+export function getCard(dreamingElement, elementIndex, explanation) {
   let dreamingCard;
   switch (dreamingElement.type) {
     case elementTypes.dream:
       dreamingCard = <Dream
         results={dreamingElement.results}
         params={dreamingElement.params}
-        elementIndex={elementIndex}/>;
+        elementIndex={elementIndex}
+        explanation={explanation}/>;
       break;
     case elementTypes.reconstruct:
       dreamingCard = <Reconstruct
@@ -71,17 +73,20 @@ export function getCard(dreamingElement, elementIndex) {
     case elementTypes.top_words:
       dreamingCard = <TopWordsComponent
         dreamingElement={dreamingElement}
-        elementIndex={elementIndex}/>;
+        elementIndex={elementIndex}
+        explanation={explanation}/>;
       break;
     case elementTypes.similar_embeddings:
       dreamingCard = <SimilarEmbeddings
         dreamingElement={dreamingElement}
-        elementIndex={elementIndex}/>;
+        elementIndex={elementIndex}
+        explanation={explanation}/>;
       break;
     case elementTypes.token_search:
       dreamingCard = <TokenSearch
         dreamingElement={dreamingElement}
-        elementIndex={elementIndex}/>;
+        elementIndex={elementIndex}
+        explanation={explanation}/>;
       break;
     case elementTypes.magnitudes:
       dreamingCard = <Magnitudes
@@ -91,7 +96,8 @@ export function getCard(dreamingElement, elementIndex) {
     case elementTypes.layers:
       dreamingCard = <Layers
         layers={dreamingElement.layers}
-        elementIndex={elementIndex}/>;
+        elementIndex={elementIndex}
+        explanation={explanation}/>;
       break;
     default:
       dreamingCard = <div></div>;

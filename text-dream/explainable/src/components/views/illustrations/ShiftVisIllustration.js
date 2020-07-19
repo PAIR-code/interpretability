@@ -6,6 +6,7 @@ import {bindActionCreators} from 'redux';
 
 import {getCard} from '../../../cardprocessing';
 import * as actions from '../../../actions';
+import {getShiftExperimentExplanation} from '../../../data/ExperimentExplanationTexts';
 
 /**
  * Displaying the illustration for this step in the explainable.
@@ -31,9 +32,10 @@ class ShiftVisIllustration extends React.Component {
    * @return {jsx} the component to be rendered.
    */
   render() {
-    const shiftCard = getCard(this.props.shiftVisJSON, 0);
+    const shiftCard = getCard(this.props.shiftVisJSON, 0,
+        getShiftExperimentExplanation(this.props.dreamID));
     return (
-     <Grid item xs className='fullHeight' id='cardItem'>
+      <Grid item xs className='fullHeight' id='cardItem'>
         {shiftCard}
       </Grid>
     );
@@ -70,4 +72,5 @@ function mapDispatchToProps(dispatch) {
   return {actions: bindActionCreators(actions, dispatch)};
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ShiftVisIllustration);
+export default connect(mapStateToProps,
+    mapDispatchToProps)(ShiftVisIllustration);

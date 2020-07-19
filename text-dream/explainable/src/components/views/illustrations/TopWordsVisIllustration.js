@@ -6,6 +6,9 @@ import {bindActionCreators} from 'redux';
 
 import {getCard} from '../../../cardprocessing';
 import * as actions from '../../../actions';
+import {
+  getTopWordsExperimentExplanation,
+} from '../../../data/ExperimentExplanationTexts';
 
 /**
  * Displaying the illustration for this step in the explainable.
@@ -15,7 +18,7 @@ class TopWordsVisIllustration extends React.Component {
    * Updating the page progress.
    */
   componentDidMount() {
-    console.log('topwords')
+    console.log('topwords');
     this.props.actions.loadTopWords(this.props.dreamID);
     const cardElement = document.getElementById('cardItem');
     if (cardElement != null) {
@@ -32,9 +35,10 @@ class TopWordsVisIllustration extends React.Component {
    * @return {jsx} the component to be rendered.
    */
   render() {
-    const topWordsCard = getCard(this.props.topWordsVisJSON, 0);
+    const topWordsCard = getCard(this.props.topWordsVisJSON, 0,
+        getTopWordsExperimentExplanation(this.props.dreamID));
     return (
-     <Grid item xs className='fullHeight' id='cardItem'>
+      <Grid item xs className='fullHeight' id='cardItem'>
         {topWordsCard}
       </Grid>
     );
@@ -71,4 +75,5 @@ function mapDispatchToProps(dispatch) {
   return {actions: bindActionCreators(actions, dispatch)};
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(TopWordsVisIllustration);
+export default connect(mapStateToProps,
+    mapDispatchToProps)(TopWordsVisIllustration);

@@ -112,13 +112,13 @@ class TopWordsBody extends React.Component {
         .attr('class', 'xAxis')
         .call(xAxis)
         .selectAll('text')
-        .style('font-size', '0.875rem');
+        .style('font', '0.875rem roboto');
     // Left axis of the bar chart
     mainGroup.append('g')
         .attr('class', 'yAxis')
         .call(graphParams.yAxis)
         .selectAll('text')
-        .style('font-size', '0.875rem');
+        .style('font', '0.875rem roboto');
   }
 
   /**
@@ -151,7 +151,8 @@ class TopWordsBody extends React.Component {
 
     mainGroup.select('.yAxis')
         .call(graphParams.yAxis)
-        .selectAll('text');
+        .selectAll('text')
+        .style('font', '0.875rem roboto');
   }
 
   /**

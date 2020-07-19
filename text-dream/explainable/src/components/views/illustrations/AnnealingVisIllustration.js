@@ -6,6 +6,9 @@ import {bindActionCreators} from 'redux';
 
 import {getCard} from '../../../cardprocessing';
 import * as actions from '../../../actions';
+import {
+  getAnnealExperimentExplanation,
+} from '../../../data/ExperimentExplanationTexts';
 
 /**
  * Displaying the illustration for this step in the explainable.
@@ -31,7 +34,8 @@ class AnnealingVisIllustration extends React.Component {
    * @return {jsx} the component to be rendered.
    */
   render() {
-    const annealingCard = getCard(this.props.annealingVisJSON, 0);
+    const annealingCard = getCard(this.props.annealingVisJSON, 0,
+        getAnnealExperimentExplanation(this.props.dreamID));
     return (
       <Grid item xs className='fullHeight' id='cardItem'>
         {annealingCard}
@@ -70,4 +74,5 @@ function mapDispatchToProps(dispatch) {
   return {actions: bindActionCreators(actions, dispatch)};
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(AnnealingVisIllustration);
+export default connect(mapStateToProps,
+    mapDispatchToProps)(AnnealingVisIllustration);

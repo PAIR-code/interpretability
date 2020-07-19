@@ -115,6 +115,7 @@ class TokenSearchBodyComponent extends React.Component {
         .data(tops)
         .enter()
         .append('text')
+        .style('font', '10px roboto')
         .attr('y', function(d) {
           return yScale(d.token) + yScale.bandwidth() / 2 + 5;
         })
@@ -127,9 +128,9 @@ class TokenSearchBodyComponent extends React.Component {
     // Left axis of the bar chart
     mainGroup.append('g')
         .attr('class', 'yAxis')
+        .style('font', '10px roboto')
         .call(yAxis)
-        .selectAll('text')
-        .style('font-size', '0.875rem');
+        .selectAll('text');
   }
 }
 

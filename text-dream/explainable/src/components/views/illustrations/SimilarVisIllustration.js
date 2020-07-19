@@ -6,6 +6,9 @@ import {bindActionCreators} from 'redux';
 
 import {getCard} from '../../../cardprocessing';
 import * as actions from '../../../actions';
+import {
+  getSimilarExperimentExplanation,
+} from '../../../data/ExperimentExplanationTexts';
 
 /**
  * Displaying the illustration for this step in the explainable.
@@ -31,9 +34,10 @@ class SimilarVisIllustration extends React.Component {
    * @return {jsx} the component to be rendered.
    */
   render() {
-    const similarCard = getCard(this.props.similarVisJSON, 0);
+    const similarCard = getCard(this.props.similarVisJSON, 0,
+        getSimilarExperimentExplanation(this.props.dreamID));
     return (
-     <Grid item xs className='fullHeight' id='cardItem'>
+      <Grid item xs className='fullHeight' id='cardItem'>
         {similarCard}
       </Grid>
     );

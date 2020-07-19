@@ -71,7 +71,7 @@ class ExplanationHead extends React.Component {
               <Tooltip title={
                 getVisExplanation(this.props.topic.replace(' ', ''))}>
                 <HelpOutlineIcon className='tooltipIcon'/>
-              </Tooltip>.
+              </Tooltip>
             </Grid>
           </Grid>
         </Paper>

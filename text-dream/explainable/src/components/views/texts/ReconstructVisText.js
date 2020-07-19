@@ -62,37 +62,6 @@ class ReconstructVisTexts extends React.Component {
           language. Other, seemingly important words are consistently
           reconstructed across all layers.
         </p>
-        <ExpansionPanel>
-          <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}
-            classes={{expanded: 'expandedPanel'}}>
-                Detailed Results
-          </ExpansionPanelSummary>
-          <ExpansionPanelDetails>
-            <p className='smallText'>
-              In example 1, we can see that connections such as the word "for",
-              commas,
-              and the word "and" seem to get replaced with seemingly random
-              words relatively early. As these words are not really
-              critical to understand the general meaning of the sentence,
-              them being less important for the reconstruction of activation
-              results isn't surprising. Other words, such as "duties",
-              "include", and "sites" are replaced by conceptually similar
-              words, such as "interests", "reflect", and "venues" in some of
-              the layers. These replacements could sometimes even be
-              considered drop-in replacements that preserve the overall
-              meaning of the sentence. This is in line with the general
-              assumption that such models first look for fine-grained
-              structures and details in the input, before moving to the
-              recognition of more general concepts. Interestingly, some
-              words are consistently reconstructed across all layers. It
-              seems like these words are especially important for the
-              network to understand the sentence. This indicates that for
-              some tokens, the exact representation is of great importance
-              for understanding the sentence, while others can be replaced
-              without as much loss of information.
-            </p>
-          </ExpansionPanelDetails>
-        </ExpansionPanel>
         <p className='normalText'>
           All in all, this experiment provided more insight than we
           initially expected, which led us to build on this and try
