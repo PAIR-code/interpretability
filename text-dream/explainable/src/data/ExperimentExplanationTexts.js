@@ -124,9 +124,9 @@ export function getShiftExperimentExplanation(index) {
     'While we can, again, bring the model to replace the pronoun, it does not' +
     'seem like there is enough bias to then also flip the unchanged word ' +
     '"doctor".',
-    'This model has gender dependencies in more than one place (wrt. what ' +
-    'the model has learned). This strongly gendered context even prevents ' +
-    'the pronoun flip which worded in both of the other experiments.',
+    'This sentence has gender dependencies in more than one place, which ' +
+    'even prevents ' +
+    'the targeted pronoun flip which worked in both of the other experiments.',
   ];
   return dreamExperimentExplanations[index - 1];
 }
