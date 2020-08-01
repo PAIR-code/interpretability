@@ -3,6 +3,14 @@
 This folder contains different experiments and tools to work with deep dreaming
 for text.
 
+## Explainable
+
+The explainable folder contains a web-based explainable that shows our experiments. It is acceessible [online](https://pair-code.github.io/interpretability/text-dream/explainable/).
+
+## Explainable Code
+
+Here lives the code that is used to generate the explainable that is described above.
+
 ## WebApp
 
 The folder webapp contains a web application that can be used to visually
