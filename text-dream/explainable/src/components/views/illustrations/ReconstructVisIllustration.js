@@ -35,7 +35,8 @@ class ReconstructVisIllustration extends React.Component {
    */
   render() {
     const reconstructCard = getCard(this.props.reconstructVisJSON, 0,
-        getReconstructExperimentExplanation(this.props.dreamID));
+        getReconstructExperimentExplanation(this.props.dreamID),
+        ['temperature', 'loss', 'ids_loss']);
     return (
       <Grid item xs className='fullHeight' id='cardItem'>
         {reconstructCard}

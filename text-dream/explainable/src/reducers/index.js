@@ -17,7 +17,6 @@
 // Import all Reducers
 import {combineReducers} from 'redux';
 import cardDimensions from './CardDimensionsReducer';
-import activeColors from './ActiveColorsReducer';
 import softmaxStatus from './SoftmaxReducer';
 import progress from './ProgressReducer';
 import topWordsIteration from './TopWordsIterationReducer';
@@ -32,7 +31,6 @@ import shiftVisJSON from './ShiftJSONReducer';
 // Combine all Reducers
 export default combineReducers({
   cardDimensions,
-  activeColors,
   softmaxStatus,
   progress,
   topWordsIteration,

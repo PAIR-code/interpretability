@@ -15,7 +15,6 @@
  * =============================================================================
 */
 import {red, green, blue, orange, grey} from '@material-ui/core/colors';
-import {elementTypes} from '../cardprocessing';
 
 const colors = {
   'activation': green[500],
@@ -24,7 +23,7 @@ const colors = {
   'ids_loss': red[300],
   'temperature': blue[500],
   'distance': grey[500],
-  'distribution': orange[500],
+  'softmax': orange[500],
 };
 
 /**
@@ -36,31 +35,4 @@ const colors = {
  */
 export function getColor(type) {
   return colors[type];
-}
-
-/**
- * Get the colors that the requested card type can use.
- *
- * @param {string} type - the type of card that we want to get colors for.
- * @return {array} the colors that this card type can use.
- */
-export function getCardColors(type) {
-  switch (type) {
-    case elementTypes.dream:
-      return ['temperature', 'activation', 'ids_activation'];
-    case elementTypes.reconstruct:
-      return ['temperature', 'loss', 'ids_loss'];
-    case elementTypes.reconstruct_shifted:
-      return ['temperature', 'loss', 'ids_loss'];
-    case elementTypes.magnitudes:
-      return ['temperature', 'loss', 'ids_loss'];
-    case elementTypes.layerMagnitudes:
-      return ['loss', 'ids_loss'];
-    case elementTypes.top_words:
-      return ['distribution'];
-    case elementTypes.similar_embeddings:
-      return ['distance', 'activation'];
-    default:
-      return [];
-  }
 }

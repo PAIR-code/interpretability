@@ -135,7 +135,7 @@ class TopWordsBody extends React.Component {
     bars.enter()
         .append('rect')
         .attr('class', 'bar')
-        .style('fill', getColor('distribution'))
+        .style('fill', getColor('softmax'))
         .attr('x', 0)
         .attr(
             'width',

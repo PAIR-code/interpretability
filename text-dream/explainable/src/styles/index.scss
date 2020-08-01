@@ -3,10 +3,6 @@ html,
 body {
   height: 100%;
   font-family: Roboto, sans-serif;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
 }
 
 header {
@@ -15,12 +11,6 @@ header {
     justify-content: space-between;
     width: 100%;
     margin-left: 50px;
-  }
-
-  .legend {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
   }
 }
 

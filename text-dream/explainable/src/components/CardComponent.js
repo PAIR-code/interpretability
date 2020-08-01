@@ -24,24 +24,11 @@ import * as actions from '../actions';
 import {Grid} from '@material-ui/core';
 
 import {getCard} from '../cardprocessing';
-import {getCardColors} from '../colors';
 
 /**
  * Component to render Cards of different types.
  */
 class Card extends React.Component {
-  /**
-   * Called after the component mounted to one-time add the colors this card
-   * needs.
-   */
-  componentDidMount() {
-    const cardType = this.props.dreamingElements[this.props.elementIndex].type;
-    if (cardType !== 'layers') { // If its layers, we need to add colors in it
-      const colors = getCardColors(cardType);
-      this.props.actions.addActiveColors(colors);
-    }
-  }
-
   /**
    * Renders a card of a specific type.
    *

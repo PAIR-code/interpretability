@@ -18,6 +18,8 @@ class DreamVisIllustration extends React.Component {
    * Updating the page progress.
    */
   componentDidMount() {
+    this.props.actions.setActiveColors(['temperature', 'activation',
+      'ids_activation']);
     this.props.actions.loadDream(this.props.dreamID);
   }
 
@@ -28,7 +30,8 @@ class DreamVisIllustration extends React.Component {
    */
   render() {
     const dreamingCard = getCard(this.props.dreamVisJSON, 0,
-        getDreamExperimentExplanation(this.props.dreamID));
+        getDreamExperimentExplanation(this.props.dreamID),
+        ['temperature', 'activation', 'ids_activation']);
     return (
       <Grid item xs className='fullHeight'>
         {dreamingCard}

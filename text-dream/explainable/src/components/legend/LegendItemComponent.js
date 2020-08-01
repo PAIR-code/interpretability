@@ -17,7 +17,7 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 
-import {Typography} from '@material-ui/core';
+import {Grid, Typography} from '@material-ui/core';
 
 import {getColor} from '../../colors';
 
@@ -32,14 +32,15 @@ class LegendItem extends React.Component {
    */
   render() {
     return (
-      <div className='legend' style={{paddingRight: '15px'}}>
+      <Grid item container alignItems='center' wrap='nowrap'
+        style={{paddingRight: '15px'}}>
         <svg width={10} height={10} id='glyphsSVG' style={{marginRight: '5px'}}>
           <rect width="10" height="10" fill={getColor(this.props.color)} />
         </svg>
-        <Typography variant="body2" color="inherit">
+        <Typography variant="caption" color="inherit">
           {this.props.color}
         </Typography>
-      </div>
+      </Grid>
     );
   }
 }

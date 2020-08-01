@@ -58,7 +58,8 @@ class Dream extends React.PureComponent {
         <ExplanationHead
           topic="Dream"
           params={headParams}
-          elementIndex={this.props.elementIndex}/>
+          elementIndex={this.props.elementIndex}
+          colors={this.props.colors}/>
         <DreamHead
           params={this.props.params}
           sentenceParams={sentenceParams}/>
@@ -92,6 +93,7 @@ Dream.propTypes = {
   results: PropTypes.object.isRequired,
   elementIndex: PropTypes.number.isRequired,
   explanation: PropTypes.string.isRequired,
+  colors: PropTypes.array.isRequired,
   actions: PropTypes.object.isRequired,
   dreamID: PropTypes.number.isRequired,
 };

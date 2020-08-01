@@ -47,7 +47,8 @@ class Reconstruct extends React.PureComponent {
         <ExplanationHead
           topic="Reconstruct"
           params={headParams}
-          elementIndex={this.props.elementIndex}/>
+          elementIndex={this.props.elementIndex}
+          colors={this.props.colors}/>
         <ReconstructHead
           results={this.props.results}
           params={this.props.params}
@@ -69,6 +70,7 @@ Reconstruct.propTypes = {
   results: PropTypes.object.isRequired,
   params: PropTypes.object.isRequired,
   elementIndex: PropTypes.number.isRequired,
+  colors: PropTypes.array.isRequired,
 };
 
 export default Reconstruct;

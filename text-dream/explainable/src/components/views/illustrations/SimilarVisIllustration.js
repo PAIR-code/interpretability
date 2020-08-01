@@ -35,7 +35,8 @@ class SimilarVisIllustration extends React.Component {
    */
   render() {
     const similarCard = getCard(this.props.similarVisJSON, 0,
-        getSimilarExperimentExplanation(this.props.dreamID));
+        getSimilarExperimentExplanation(this.props.dreamID), ['activation',
+          'distance']);
     return (
       <Grid item xs className='fullHeight' id='cardItem'>
         {similarCard}

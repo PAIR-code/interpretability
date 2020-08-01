@@ -33,7 +33,8 @@ class ShiftVisIllustration extends React.Component {
    */
   render() {
     const shiftCard = getCard(this.props.shiftVisJSON, 0,
-        getShiftExperimentExplanation(this.props.dreamID));
+        getShiftExperimentExplanation(this.props.dreamID),
+        ['loss', 'ids_loss']);
     return (
       <Grid item xs className='fullHeight' id='cardItem'>
         {shiftCard}

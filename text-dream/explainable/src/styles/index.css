@@ -1,22 +1,13 @@
 html,
 body {
   height: 100%;
-  font-family: Roboto, sans-serif;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none; }
+  font-family: Roboto, sans-serif; }
 
 header .wrapper {
   display: flex;
   justify-content: space-between;
   width: 100%;
   margin-left: 50px; }
-
-header .legend {
-  display: flex;
-  flex-direction: row;
-  align-items: center; }
 
 h1 {
   line-height: normal; }
@@ -173,9 +164,7 @@ div.MuiPaper-elevation1 {
   /* Non-prefixed version, currently supported by Chrome and Opera */ }
 
 svg text {
-  cursor: default;
-  font: "Roboto";
-}
+  cursor: default; }
 
 .page-enter {
   opacity: 0; }

@@ -69,7 +69,8 @@ class SimilarEmbeddings extends React.PureComponent {
         <ExplanationHead
           topic="Similar Embeddings"
           params={headParams}
-          elementIndex={this.props.elementIndex}/>
+          elementIndex={this.props.elementIndex}
+          colors={this.props.colors}/>
         <DreamHead
           params={params}
           sentenceParams={sentenceParams}/>
@@ -101,6 +102,7 @@ SimilarEmbeddings.propTypes = {
   dreamingElement: PropTypes.object.isRequired,
   elementIndex: PropTypes.number.isRequired,
   explanation: PropTypes.string.isRequired,
+  colors: PropTypes.array.isRequired,
   actions: PropTypes.object.isRequired,
   dreamID: PropTypes.number.isRequired,
 };

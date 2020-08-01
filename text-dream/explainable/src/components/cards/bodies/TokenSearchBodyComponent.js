@@ -138,6 +138,7 @@ TokenSearchBodyComponent.propTypes = {
   dreamingElement: PropTypes.object.isRequired,
   elementIndex: PropTypes.number.isRequired,
   cardDimensions: PropTypes.object.isRequired,
+  colors: PropTypes.array.isRequired,
 };
 
 /**

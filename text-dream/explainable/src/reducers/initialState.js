@@ -20,7 +20,6 @@ export default {
     width: 10,
     height: 10,
   },
-  activeColors: [],
   softmaxStatus: {
     values: [2.2, 0.8, 1.4, 1.0, 0.1],
     labels: ['Dog', 'Cat', 'Monkey', 'Car', 'Truck'],

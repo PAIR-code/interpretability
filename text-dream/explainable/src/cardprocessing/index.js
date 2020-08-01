@@ -46,9 +46,10 @@ export const elementTypes = {
  * card.
  * @param {number} elementIndex - the index of the current element.
  * @param {string} explanation - the explanation for this card.
+ * @param {array} colors - the colors for the legend of this card.
  * @return {object} the card to be rendered.
  */
-export function getCard(dreamingElement, elementIndex, explanation) {
+export function getCard(dreamingElement, elementIndex, explanation, colors) {
   let dreamingCard;
   switch (dreamingElement.type) {
     case elementTypes.dream:
@@ -56,13 +57,15 @@ export function getCard(dreamingElement, elementIndex, explanation) {
         results={dreamingElement.results}
         params={dreamingElement.params}
         elementIndex={elementIndex}
-        explanation={explanation}/>;
+        explanation={explanation}
+        colors={colors}/>;
       break;
     case elementTypes.reconstruct:
       dreamingCard = <Reconstruct
         results={dreamingElement.results}
         params={dreamingElement.params}
-        elementIndex={elementIndex}/>;
+        elementIndex={elementIndex}
+        colors={colors}/>;
       break;
     case elementTypes.reconstruct_shifted:
       dreamingCard = <ShiftedReconstruct
@@ -74,19 +77,22 @@ export function getCard(dreamingElement, elementIndex, explanation) {
       dreamingCard = <TopWordsComponent
         dreamingElement={dreamingElement}
         elementIndex={elementIndex}
-        explanation={explanation}/>;
+        explanation={explanation}
+        colors={colors}/>;
       break;
     case elementTypes.similar_embeddings:
       dreamingCard = <SimilarEmbeddings
         dreamingElement={dreamingElement}
         elementIndex={elementIndex}
-        explanation={explanation}/>;
+        explanation={explanation}
+        colors={colors}/>;
       break;
     case elementTypes.token_search:
       dreamingCard = <TokenSearch
         dreamingElement={dreamingElement}
         elementIndex={elementIndex}
-        explanation={explanation}/>;
+        explanation={explanation}
+        colors={colors}/>;
       break;
     case elementTypes.magnitudes:
       dreamingCard = <Magnitudes
@@ -97,7 +103,8 @@ export function getCard(dreamingElement, elementIndex, explanation) {
       dreamingCard = <Layers
         layers={dreamingElement.layers}
         elementIndex={elementIndex}
-        explanation={explanation}/>;
+        explanation={explanation}
+        colors={colors}/>;
       break;
     default:
       dreamingCard = <div></div>;

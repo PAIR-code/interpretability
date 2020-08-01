@@ -54,7 +54,7 @@ class ReconstructVisTexts extends React.Component {
           One such insight is that it seems to be easier to completely
           reconstruct the activation for earlier layers. Layers that take on
           later processing steps are consistently harder to reconstruct.
-          Another interesting analysis is too look at which words get
+          Another interesting analysis is to look at which words get
           replaced in each of the layers. While some words cannot be
           reconstructed relatively early, which indicates that they might
           not be as important, others are replaced by conceptually similar

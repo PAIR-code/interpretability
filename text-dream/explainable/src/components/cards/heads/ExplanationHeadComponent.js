@@ -24,6 +24,7 @@ import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 
 import * as actions from '../../../actions';
 import getVisExplanation from '../../../data/VisExplanationTexts';
+import Legend from '../../legend/LegendComponent';
 
 /**
  * Providing a Header Component for any Card.
@@ -67,6 +68,8 @@ class ExplanationHead extends React.Component {
                 </Grid>
               )}
             </Grid>
+            <Legend colors={this.props.colors ? this.props.colors : []}>
+            </Legend>
             <Grid item>
               <Tooltip title={
                 getVisExplanation(this.props.topic.replace(' ', ''))}>
@@ -84,6 +87,7 @@ ExplanationHead.propTypes = {
   topic: PropTypes.string.isRequired,
   params: PropTypes.object.isRequired,
   elementIndex: PropTypes.number.isRequired,
+  colors: PropTypes.array,
   actions: PropTypes.object.isRequired,
 };
 

@@ -29,7 +29,6 @@ import SelectionHead from './heads/SelectionHeadComponent';
 
 import {getDreamProps, getReconstructProps,
   getMagnitudesLayerProps} from '../../cardcontentprocessing';
-import {getCardColors} from '../../colors';
 import * as actions from '../../actions';
 import * as constants from '../../data/Constants';
 
@@ -37,17 +36,6 @@ import * as constants from '../../data/Constants';
  * Provides a Card Component to render multiple Layers.
  */
 class Layers extends React.PureComponent {
-  /**
-   * Called after the component mounted to one-time add the colors this card
-   * needs.
-   */
-  componentDidMount() {
-    const cardType = this.props.layers[0].type;
-    const colors = cardType === 'magnitudes' ?
-        getCardColors('layerMagnitudes') : getCardColors(cardType);
-    this.props.actions.addActiveColors(colors);
-  }
-
   /**
    * Renders all the layers of this Card.
    *
@@ -80,7 +68,8 @@ class Layers extends React.PureComponent {
         <ExplanationHead
           topic={props.topic}
           params={props.headParams}
-          elementIndex={this.props.elementIndex}/>
+          elementIndex={this.props.elementIndex}
+          colors={this.props.colors}/>
         {props.head}
         <div className='overflow bottomMargin'>
           {props.bodies.map((body, index) =>
@@ -143,6 +132,7 @@ Layers.propTypes = {
   explanation: PropTypes.string.isRequired,
   actions: PropTypes.object.isRequired,
   dreamID: PropTypes.number.isRequired,
+  colors: PropTypes.array.isRequired,
 };
 
 /**

@@ -35,7 +35,8 @@ class AnnealingVisIllustration extends React.Component {
    */
   render() {
     const annealingCard = getCard(this.props.annealingVisJSON, 0,
-        getAnnealExperimentExplanation(this.props.dreamID));
+        getAnnealExperimentExplanation(this.props.dreamID),
+        ['softmax']);
     return (
       <Grid item xs className='fullHeight' id='cardItem'>
         {annealingCard}

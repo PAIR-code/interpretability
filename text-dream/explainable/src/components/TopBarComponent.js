@@ -72,8 +72,7 @@ class TopBar extends React.Component {
             What does BERT dream of?
           </Typography>
           <Typography variant='caption' color="inherit" className="appTitle">
-            &nbsp;&nbsp;&nbsp;- A visual investigation of nightmares in sesame
-            street by Alex Bäuerle (<a href="https://twitter.com/a13xba">
+            &nbsp;&nbsp;&nbsp;- by Alex Bäuerle (<a href="https://twitter.com/a13xba">
             @a13xba</a>) and James Wexler
             (<a href="https://twitter.com/bengiswex">@bengiswex</a>)
             of <a href="https://pair.withgoogle.com/">PAIR</a>.

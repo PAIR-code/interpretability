@@ -18,7 +18,6 @@ class TopWordsVisIllustration extends React.Component {
    * Updating the page progress.
    */
   componentDidMount() {
-    console.log('topwords');
     this.props.actions.loadTopWords(this.props.dreamID);
     const cardElement = document.getElementById('cardItem');
     if (cardElement != null) {
@@ -36,7 +35,7 @@ class TopWordsVisIllustration extends React.Component {
    */
   render() {
     const topWordsCard = getCard(this.props.topWordsVisJSON, 0,
-        getTopWordsExperimentExplanation(this.props.dreamID));
+        getTopWordsExperimentExplanation(this.props.dreamID), ['activation']);
     return (
       <Grid item xs className='fullHeight' id='cardItem'>
         {topWordsCard}

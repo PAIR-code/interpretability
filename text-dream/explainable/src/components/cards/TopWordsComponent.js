@@ -76,7 +76,8 @@ class TopWords extends React.PureComponent {
         <ExplanationHead
           topic="Top Words"
           params={headParams}
-          elementIndex={this.props.elementIndex}/>
+          elementIndex={this.props.elementIndex}
+          colors={this.props.colors}/>
         <DreamHead
           params={params}
           sentenceParams={sentenceParams}/>
@@ -115,6 +116,7 @@ TopWords.propTypes = {
   elementIndex: PropTypes.number.isRequired,
   topWordsIteration: PropTypes.number.isRequired,
   explanation: PropTypes.string.isRequired,
+  colors: PropTypes.array.isRequired,
   actions: PropTypes.object.isRequired,
   dreamID: PropTypes.number.isRequired,
 };
