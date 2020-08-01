@@ -125,6 +125,9 @@ def try_similar_embeddings(tokenizer, model, device):
     activation = activation_helper.get_activation(
         layers_act, FLAGS.word_id, FLAGS.neuron_id, FLAGS.layer_id, True)
     activations.append(activation.item())
+    print(f'{i}/{len(closest)}\r', end="")
+  print()
+
   return closest, distances, activations, tokens, furthest
 
 
