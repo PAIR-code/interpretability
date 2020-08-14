@@ -18,8 +18,6 @@ class DreamVisIllustration extends React.Component {
    * Updating the page progress.
    */
   componentDidMount() {
-    this.props.actions.setActiveColors(['temperature', 'activation',
-      'ids_activation']);
     this.props.actions.loadDream(this.props.dreamID);
   }
 

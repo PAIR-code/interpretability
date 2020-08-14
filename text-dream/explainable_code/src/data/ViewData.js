@@ -96,7 +96,7 @@ const viewData = [
   {
     heading: <GenericHeading title={'Reconstructing changed Activations'}/>,
     texts: <ShiftVisTexts/>,
-    buttons: <BothButtons prev={'/reconstructvis'} next={'/conclusionvis'}/>,
+    buttons: <BothButtons prev={'/reconstructvis'} next={'/conclusion'}/>,
     illustration: <ShiftVisIllustration/>,
   },
   {

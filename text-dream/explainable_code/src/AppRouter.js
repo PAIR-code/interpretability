@@ -163,7 +163,7 @@ class AppRouter extends React.Component {
                     </CSSTransition>
                   )}
                 </Route>
-                <Route exact path="/conclusionvis">
+                <Route exact path="/conclusion">
                   {({match}) => (
                     <CSSTransition
                       in={match != null}
