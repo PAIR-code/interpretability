@@ -100,8 +100,10 @@ export function getReconstructExperimentExplanation(index) {
     'the layers that preserve the overall ' +
     'meaning of the sentence. Interestingly, some important ' +
     'words are consistently reconstructed across all layers.',
-    'Again, the first thing is the "." at the end of the sentence, which is ' +
-    'not important for a general understanding.',
+    'Again, the first thing getting replaced is the "." at the end of the ' +
+    'sentence, which is not important for a general understanding of the sentence. ' +
+    'Additionally "no" gets replaced with "nothing", "neither", and "nobody" ' +
+    'at different stages of the optimization, which are all similar to "no".',
     'The model first replaces irrelevant words such as "the" and "of", but  ' +
     'also "he", indicating that gender is not important here. Then, we again ' +
     'see replacements with similar words, before only the most important ' +
