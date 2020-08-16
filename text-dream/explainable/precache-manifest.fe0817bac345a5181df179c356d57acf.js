@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a4ba2d17fbe7ff5114a380eb040e186a",
+    "revision": "f07db28d7cde2f7e8981f6dd083d31b3",
     "url": "/interpretability/text-dream/explainable/index.html"
   },
   {
-    "revision": "79900e589404f7315362",
+    "revision": "d9b7d97290791aa0459a",
     "url": "/interpretability/text-dream/explainable/static/css/main.fab1a66b.chunk.css"
   },
   {
@@ -16,12 +16,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/interpretability/text-dream/explainable/static/js/2.aaa51b60.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "79900e589404f7315362",
-    "url": "/interpretability/text-dream/explainable/static/js/main.c295a875.chunk.js"
+    "revision": "d9b7d97290791aa0459a",
+    "url": "/interpretability/text-dream/explainable/static/js/main.c67c0c47.chunk.js"
   },
   {
     "revision": "26d371624dbf8e815638fc351a19ea5e",
-    "url": "/interpretability/text-dream/explainable/static/js/main.c295a875.chunk.js.LICENSE.txt"
+    "url": "/interpretability/text-dream/explainable/static/js/main.c67c0c47.chunk.js.LICENSE.txt"
   },
   {
     "revision": "b902ca723ad84213b215",
