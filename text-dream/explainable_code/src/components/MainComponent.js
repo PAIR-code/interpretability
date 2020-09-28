@@ -13,17 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * =============================================================================
-*/
-import React from 'react';
-import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
-import {bindActionCreators} from 'redux';
+ */
+import React from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { bindActionCreators } from "redux";
 
-import * as actions from '../actions';
+import * as actions from "../actions";
 
-import {Grid} from '@material-ui/core';
+import { Grid } from "@material-ui/core";
 
-import CardComponent from './CardComponent';
+import CardComponent from "./CardComponent";
 
 /**
  * The Main Component holding all the cards of the visualization.
@@ -35,11 +35,11 @@ class Main extends React.Component {
    */
   componentDidUpdate() {
     if (this.props.dreamingElements.length > 0) {
-      const cardElement = document.getElementById('cardItem');
+      const cardElement = document.getElementById("cardItem");
       if (cardElement != null) {
         this.props.actions.changeCardDimensions({
-          'width': cardElement.getBoundingClientRect().width,
-          'height': cardElement.getBoundingClientRect().height,
+          width: cardElement.getBoundingClientRect().width,
+          height: cardElement.getBoundingClientRect().height,
         });
       }
     }
@@ -52,14 +52,12 @@ class Main extends React.Component {
    */
   render() {
     return (
-      <Grid container direction='row' spacing={1} className='fullHeight'>
-        <Grid item xs className='fullHeight'>
-          <Grid container direction='row' className='fullHeight' spacing={1}>
-            {this.props.dreamingElements.map((element, index) =>
-              <CardComponent
-                elementIndex={index}
-                key={index}/>
-            )}
+      <Grid container direction="row" spacing={1} className="fullHeight">
+        <Grid item xs className="fullHeight">
+          <Grid container direction="row" className="fullHeight" spacing={1}>
+            {this.props.dreamingElements.map((element, index) => (
+              <CardComponent elementIndex={index} key={index} />
+            ))}
           </Grid>
         </Grid>
       </Grid>
@@ -92,7 +90,7 @@ function mapStateToProps(state, ownProps) {
  * @return {object} all the actions bound to this component.
  */
 function mapDispatchToProps(dispatch) {
-  return {actions: bindActionCreators(actions, dispatch)};
+  return { actions: bindActionCreators(actions, dispatch) };
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Main);

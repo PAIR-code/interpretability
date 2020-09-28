@@ -13,15 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * =============================================================================
-*/
-import React from 'react';
-import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
-import {bindActionCreators} from 'redux';
+ */
+import React from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { bindActionCreators } from "redux";
 
-import {Grid, TextField, Slider} from '@material-ui/core';
+import { Grid, TextField, Slider } from "@material-ui/core";
 
-import * as actions from '../../actions';
+import * as actions from "../../actions";
 
 /**
  * Providing a Card Component for the TopWords chart in different experiments.
@@ -36,9 +36,9 @@ class Softmax extends React.PureComponent {
    */
   softmaxTemp(arr, temp) {
     const C = Math.max(...arr);
-    const d = arr.map((y) => Math.exp((y / temp) - C)).reduce((a, b) => a + b);
+    const d = arr.map((y) => Math.exp(y / temp - C)).reduce((a, b) => a + b);
     return arr.map((value, index) => {
-      const result = Math.exp((value / temp) - C) / d;
+      const result = Math.exp(value / temp - C) / d;
       return Math.round((result + Number.EPSILON) * 100) / 100;
     });
   }
@@ -62,56 +62,74 @@ class Softmax extends React.PureComponent {
    */
   render() {
     const softmaxed = this.softmaxTemp(this.props.softmaxStatus.values, 1.0);
-    const tempered = this.softmaxTemp(this.props.softmaxStatus.values,
-        this.props.softmaxStatus.temperature);
+    const tempered = this.softmaxTemp(
+      this.props.softmaxStatus.values,
+      this.props.softmaxStatus.temperature
+    );
     return (
-      <Grid container direction='column' spacing={2}>
-        <Grid item container justify='center' spacing={2}>
+      <Grid container direction="column" spacing={2}>
+        <Grid item container justify="center" spacing={2}>
           <Grid item xs={2}>
-          Temperature:
+            Temperature:
           </Grid>
           <Grid item xs>
-            <Slider step={0.1} min={0.01} max={2}
+            <Slider
+              step={0.1}
+              min={0.01}
+              max={2}
               value={this.props.softmaxStatus.temperature}
-              valueLabelDisplay="on" onChange={this.handleChange}/>
+              valueLabelDisplay="on"
+              onChange={this.handleChange}
+            />
           </Grid>
         </Grid>
-        <Grid item container justify='center' spacing={2}>
+        <Grid item container justify="center" spacing={2}>
           <Grid item xs={2}>
             Word Score:
           </Grid>
-          { this.props.softmaxStatus.values.map((status, index) => {
-            return <Grid item xs={2} key={index}>
-              <TextField label={this.props.softmaxStatus.labels[index]}
-                value={status} onChange={(e) => {
-                  const softmaxStatus = JSON.parse(JSON.stringify(
-                      this.props.softmaxStatus));
-                  const newValue = isNaN(parseFloat(e.target.value)) ? 0.0 :
-                      parseFloat(e.target.value);
-                  softmaxStatus.values[index] = newValue;
-                  this.props.actions.changeSoftmaxStatus(softmaxStatus);
-                }}/>
-            </Grid>;
+          {this.props.softmaxStatus.values.map((status, index) => {
+            return (
+              <Grid item xs={2} key={index}>
+                <TextField
+                  label={this.props.softmaxStatus.labels[index]}
+                  value={status}
+                  onChange={(e) => {
+                    const softmaxStatus = JSON.parse(
+                      JSON.stringify(this.props.softmaxStatus)
+                    );
+                    const newValue = isNaN(parseFloat(e.target.value))
+                      ? 0.0
+                      : parseFloat(e.target.value);
+                    softmaxStatus.values[index] = newValue;
+                    this.props.actions.changeSoftmaxStatus(softmaxStatus);
+                  }}
+                />
+              </Grid>
+            );
           })}
         </Grid>
-        <Grid item container justify='center' spacing={2}>
+        <Grid item container justify="center" spacing={2}>
           <Grid item xs={2}>
             Softmax Score:
           </Grid>
-          { softmaxed.map((status, index) => {
-            return <Grid item xs={2} key={index}>
-              {status}
-            </Grid>;
+          {softmaxed.map((status, index) => {
+            return (
+              <Grid item xs={2} key={index}>
+                {status}
+              </Grid>
+            );
           })}
         </Grid>
-        <Grid item container justify='center' spacing={2}>
+        <Grid item container justify="center" spacing={2}>
           <Grid item xs={2}>
             With Temp.:
           </Grid>
-          { tempered.map((status, index) => {
-            return <Grid item xs={2} key={index}>
-              {status}
-            </Grid>;
+          {tempered.map((status, index) => {
+            return (
+              <Grid item xs={2} key={index}>
+                {status}
+              </Grid>
+            );
           })}
         </Grid>
       </Grid>
@@ -144,7 +162,7 @@ function mapStateToProps(state, ownProps) {
  * @return {object} all the actions bound to this component.
  */
 function mapDispatchToProps(dispatch) {
-  return {actions: bindActionCreators(actions, dispatch)};
+  return { actions: bindActionCreators(actions, dispatch) };
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Softmax);

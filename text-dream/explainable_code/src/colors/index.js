@@ -13,17 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * =============================================================================
-*/
-import {red, green, blue, orange, grey} from '@material-ui/core/colors';
+ */
+import { red, green, blue, orange, grey } from "@material-ui/core/colors";
 
 const colors = {
-  'activation': green[500],
-  'ids_activation': green[200],
-  'loss': red[500],
-  'ids_loss': red[300],
-  'temperature': blue[500],
-  'distance': grey[500],
-  'softmax': orange[500],
+  activation: green[500],
+  ids_activation: green[200],
+  loss: red[500],
+  ids_loss: red[300],
+  temperature: blue[500],
+  distance: grey[500],
+  softmax: orange[500],
 };
 
 /**

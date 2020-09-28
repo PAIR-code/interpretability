@@ -1,14 +1,12 @@
-import React from 'react';
-import {Grid} from '@material-ui/core';
-import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
-import {bindActionCreators} from 'redux';
+import React from "react";
+import { Grid } from "@material-ui/core";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { bindActionCreators } from "redux";
 
-import {getCard} from '../../../cardprocessing';
-import * as actions from '../../../actions';
-import {
-  getTopWordsExperimentExplanation,
-} from '../../../data/ExperimentExplanationTexts';
+import { getCard } from "../../../cardprocessing";
+import * as actions from "../../../actions";
+import { getTopWordsExperimentExplanation } from "../../../data/ExperimentExplanationTexts";
 
 /**
  * Displaying the illustration for this step in the explainable.
@@ -19,11 +17,11 @@ class TopWordsVisIllustration extends React.Component {
    */
   componentDidMount() {
     this.props.actions.loadTopWords(this.props.dreamID);
-    const cardElement = document.getElementById('cardItem');
+    const cardElement = document.getElementById("cardItem");
     if (cardElement != null) {
       this.props.actions.changeCardDimensions({
-        'width': cardElement.getBoundingClientRect().width,
-        'height': cardElement.getBoundingClientRect().height,
+        width: cardElement.getBoundingClientRect().width,
+        height: cardElement.getBoundingClientRect().height,
       });
     }
   }
@@ -34,10 +32,14 @@ class TopWordsVisIllustration extends React.Component {
    * @return {jsx} the component to be rendered.
    */
   render() {
-    const topWordsCard = getCard(this.props.topWordsVisJSON, 0,
-        getTopWordsExperimentExplanation(this.props.dreamID), ['activation']);
+    const topWordsCard = getCard(
+      this.props.topWordsVisJSON,
+      0,
+      getTopWordsExperimentExplanation(this.props.dreamID),
+      ["activation"]
+    );
     return (
-      <Grid item xs className='fullHeight' id='cardItem'>
+      <Grid item xs className="fullHeight" id="cardItem">
         {topWordsCard}
       </Grid>
     );
@@ -71,8 +73,10 @@ function mapStateToProps(state, ownProps) {
  * @return {object} all the actions bound to this component.
  */
 function mapDispatchToProps(dispatch) {
-  return {actions: bindActionCreators(actions, dispatch)};
+  return { actions: bindActionCreators(actions, dispatch) };
 }
 
-export default connect(mapStateToProps,
-    mapDispatchToProps)(TopWordsVisIllustration);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(TopWordsVisIllustration);

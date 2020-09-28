@@ -13,20 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * =============================================================================
-*/
+ */
 // Import all Reducers
-import {combineReducers} from 'redux';
-import cardDimensions from './CardDimensionsReducer';
-import softmaxStatus from './SoftmaxReducer';
-import progress from './ProgressReducer';
-import topWordsIteration from './TopWordsIterationReducer';
-import dreamID from './DreamIDReducer';
-import dreamVisJSON from './DreamJSONReducer';
-import annealingVisJSON from './AnnealingJSONReducer';
-import topWordsVisJSON from './TopWordsJSONReducer';
-import similarVisJSON from './SimilarWordsJSONReducer';
-import reconstructVisJSON from './ReconstructionJSONReducer';
-import shiftVisJSON from './ShiftJSONReducer';
+import { combineReducers } from "redux";
+import cardDimensions from "./CardDimensionsReducer";
+import softmaxStatus from "./SoftmaxReducer";
+import progress from "./ProgressReducer";
+import topWordsIteration from "./TopWordsIterationReducer";
+import dreamID from "./DreamIDReducer";
+import dreamVisJSON from "./DreamJSONReducer";
+import annealingVisJSON from "./AnnealingJSONReducer";
+import topWordsVisJSON from "./TopWordsJSONReducer";
+import similarVisJSON from "./SimilarWordsJSONReducer";
+import reconstructVisJSON from "./ReconstructionJSONReducer";
+import shiftVisJSON from "./ShiftJSONReducer";
 
 // Combine all Reducers
 export default combineReducers({

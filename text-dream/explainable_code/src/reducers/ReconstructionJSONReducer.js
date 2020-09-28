@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * =============================================================================
-*/
-import initialState from './initialState';
-import * as types from '../actions/types';
+ */
+import initialState from "./initialState";
+import * as types from "../actions/types";
 
 /**
  * Reducer for updating the dimensions of displayed cards.
@@ -25,10 +25,12 @@ import * as types from '../actions/types';
  * @return {object} the state after handling the actiton.
  */
 export default function reconstructionReducer(
-    state = initialState.reconstructVisJSON, action) {
+  state = initialState.reconstructVisJSON,
+  action
+) {
   switch (action.type) {
     case types.LOAD_RECONSTRUCTION_SUCCESS:
-      return action.results
+      return action.results;
     default:
       return state;
   }

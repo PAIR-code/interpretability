@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * =============================================================================
-*/
+ */
 /**
  * Get the params needed for rendering a dream sentence.
  *
@@ -23,22 +23,22 @@
  */
 export function getDreamSentenceParams(results, params) {
   const iterations = results.iterations;
-  const itWidth = 8 * (iterations[
-      iterations.length - 1].number.toString().length + 1);
+  const itWidth =
+    8 * (iterations[iterations.length - 1].number.toString().length + 1);
   const headWidth = itWidth + 24;
-  const sentenceColors = ['black', 'black', 'blue'];
+  const sentenceColors = ["black", "black", "blue"];
   const target = [...params.tokens];
   for (const i in target) {
     if (params.dream_start <= i && params.dream_end >= i) {
-      target[i] = '';
+      target[i] = "";
     }
   }
   return {
-    'itWidth': itWidth,
-    'headWidth': headWidth,
-    'colors': sentenceColors,
-    'target': target,
-    'original': [...params.tokens],
+    itWidth: itWidth,
+    headWidth: headWidth,
+    colors: sentenceColors,
+    target: target,
+    original: [...params.tokens],
   };
 }
 
@@ -51,22 +51,22 @@ export function getDreamSentenceParams(results, params) {
  */
 export function getReconstructSentenceParams(results, params) {
   const iterations = results.iterations;
-  const itWidth = 8 * (iterations[
-      iterations.length - 1].number.toString().length + 1);
+  const itWidth =
+    8 * (iterations[iterations.length - 1].number.toString().length + 1);
   const headWidth = itWidth + 24;
-  const sentenceColors = ['green', 'black', 'red'];
+  const sentenceColors = ["green", "black", "red"];
   const target = [...params.tokens];
   for (const i in target) {
     if (params.dream_start > i || params.dream_end < i) {
-      target[i] = '';
+      target[i] = "";
     }
   }
   return {
-    'itWidth': itWidth,
-    'headWidth': headWidth,
-    'colors': sentenceColors,
-    'target': target,
-    'original': [...params.tokens],
+    itWidth: itWidth,
+    headWidth: headWidth,
+    colors: sentenceColors,
+    target: target,
+    original: [...params.tokens],
   };
 }
 
@@ -80,10 +80,10 @@ export function getReconstructSentenceParams(results, params) {
  */
 export function getShiftSentenceParams(results, params) {
   const iterations = results.iterations;
-  const itWidth = 8 * (iterations[
-      iterations.length - 1].number.toString().length + 1);
+  const itWidth =
+    8 * (iterations[iterations.length - 1].number.toString().length + 1);
   const headWidth = itWidth + 24;
-  const sentenceColors = ['green', 'black', 'red'];
+  const sentenceColors = ["green", "black", "red"];
   const target = [...params.tokens];
   const changedSentence = [...params.tokens];
   for (const i in target) {
@@ -91,16 +91,16 @@ export function getShiftSentenceParams(results, params) {
       target[i] = params.target;
       changedSentence[i] = params.target;
     } else {
-      target[i] = '';
+      target[i] = "";
     }
   }
   return {
-    'itWidth': itWidth,
-    'headWidth': headWidth,
-    'colors': sentenceColors,
-    'target': target,
-    'changedSentence': changedSentence,
-    'original': [...params.tokens],
+    itWidth: itWidth,
+    headWidth: headWidth,
+    colors: sentenceColors,
+    target: target,
+    changedSentence: changedSentence,
+    original: [...params.tokens],
   };
 }
 
@@ -114,21 +114,26 @@ export function getShiftSentenceParams(results, params) {
  * @return {array} the sentence that gets closest to the target.
  */
 export function getClosestResult(changedSentence, magnitudes) {
-  let bestSentence = magnitudes[0].results.iterations[
-      magnitudes[0].results.iterations.length - 1].sentence;
+  let bestSentence =
+    magnitudes[0].results.iterations[
+      magnitudes[0].results.iterations.length - 1
+    ].sentence;
   let bestScore = 0;
   for (const mag of magnitudes) {
     let score = 0;
     for (const word in changedSentence) {
-      if (mag.results.iterations[mag.results.iterations.length - 1].tokens[
-          word] === changedSentence[word]) {
+      if (
+        mag.results.iterations[mag.results.iterations.length - 1].tokens[
+          word
+        ] === changedSentence[word]
+      ) {
         score = score + 1;
       }
     }
     if (score > bestScore) {
       bestScore = score;
-      bestSentence = mag.results.iterations[
-          mag.results.iterations.length - 1].tokens;
+      bestSentence =
+        mag.results.iterations[mag.results.iterations.length - 1].tokens;
     }
   }
   return bestSentence;

@@ -13,17 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * =============================================================================
-*/
-import React from 'react';
-import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
-import {bindActionCreators} from 'redux';
+ */
+import React from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { bindActionCreators } from "redux";
 
-import {Grid, Typography, Tooltip, Paper, Slider} from '@material-ui/core';
+import { Grid, Typography, Tooltip, Paper, Slider } from "@material-ui/core";
 
-import Input from '@material-ui/core/Input';
+import Input from "@material-ui/core/Input";
 
-import * as actions from '../../../actions';
+import * as actions from "../../../actions";
 
 /**
  * Providing a header for TopWords experiments.
@@ -46,7 +46,7 @@ class TopWordsHead extends React.Component {
    */
   handleInputChange = (event) => {
     const newValue =
-      event.target.value === '' ? '' : Number(event.target.value);
+      event.target.value === "" ? "" : Number(event.target.value);
     this.props.actions.changeTopWordsIteration(newValue);
   };
 
@@ -60,11 +60,14 @@ class TopWordsHead extends React.Component {
     const iteration = this.props.iteration;
     return (
       <Grid item>
-        <Paper className='subHeadingPaper'
-          style={{backgroundColor: '#DDDDDD'}} square>
-          <Grid container direction='row' spacing={1} alignItems="center">
+        <Paper
+          className="subHeadingPaper"
+          style={{ backgroundColor: "#DDDDDD" }}
+          square
+        >
+          <Grid container direction="row" spacing={1} alignItems="center">
             <Tooltip title="Input Sentence" placement="top">
-              <Grid item style={{paddingRight: 10}}>
+              <Grid item style={{ paddingRight: 10 }}>
                 <Typography variant="body1" color="inherit">
                   Iteration:
                 </Typography>
@@ -78,19 +81,19 @@ class TopWordsHead extends React.Component {
                 aria-labelledby="input-slider"
               />
             </Grid>
-            <Grid item style={{paddingLeft: 10}}>
+            <Grid item style={{ paddingLeft: 10 }}>
               <Input
                 value={iteration}
                 margin="dense"
                 onChange={this.handleInputChange}
                 inputProps={{
-                  'step': 1,
-                  'min': 0,
-                  'max': this.props.maxIterations,
-                  'type': 'number',
-                  'aria-labelledby': 'input-slider',
+                  step: 1,
+                  min: 0,
+                  max: this.props.maxIterations,
+                  type: "number",
+                  "aria-labelledby": "input-slider",
                 }}
-                className='inputElement'
+                className="inputElement"
               />
             </Grid>
           </Grid>
@@ -115,7 +118,7 @@ TopWordsHead.propTypes = {
  * @return {object} all the actions bound to this component.
  */
 function mapDispatchToProps(dispatch) {
-  return {actions: bindActionCreators(actions, dispatch)};
+  return { actions: bindActionCreators(actions, dispatch) };
 }
 
 export default connect(null, mapDispatchToProps)(TopWordsHead);

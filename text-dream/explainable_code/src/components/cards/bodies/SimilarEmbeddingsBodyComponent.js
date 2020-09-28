@@ -13,15 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * =============================================================================
-*/
-import React from 'react';
-import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
+ */
+import React from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
 
-import * as d3 from 'd3';
-import {getColor} from '../../../colors';
+import * as d3 from "d3";
+import { getColor } from "../../../colors";
 
-const margin = {top: 20, right: 20, bottom: 60, left: 100};
+const margin = { top: 20, right: 20, bottom: 60, left: 100 };
 
 /**
  * Provides a Body Component for the Similar Embeddings Card.
@@ -52,7 +52,8 @@ class SimilarEmbeddingsBodyComponent extends React.Component {
       <svg
         width="100%"
         height="100%"
-        className={'similarEmbeddingsComponent' + this.props.elementIndex}/>
+        className={"similarEmbeddingsComponent" + this.props.elementIndex}
+      />
     );
   }
 
@@ -63,14 +64,19 @@ class SimilarEmbeddingsBodyComponent extends React.Component {
     // Calculate the dimensions of the chart
     const sideSubstitute = 20 + margin.right + margin.left;
     const vertSubstitute = 120 + margin.top + margin.bottom;
-    const width = this.props.cardDimensions.width > sideSubstitute ?
-      this.props.cardDimensions.width - sideSubstitute : 20;
-    const height = this.props.cardDimensions.height > vertSubstitute ?
-      this.props.cardDimensions.height - vertSubstitute : 20;
-    const svg = d3.select('.similarEmbeddingsComponent' +
-        this.props.elementIndex);
+    const width =
+      this.props.cardDimensions.width > sideSubstitute
+        ? this.props.cardDimensions.width - sideSubstitute
+        : 20;
+    const height =
+      this.props.cardDimensions.height > vertSubstitute
+        ? this.props.cardDimensions.height - vertSubstitute
+        : 20;
+    const svg = d3.select(
+      ".similarEmbeddingsComponent" + this.props.elementIndex
+    );
     // Remove any old chart
-    svg.select('g').remove();
+    svg.select("g").remove();
     // Set up the scales and axes for the chart
     let tops = this.props.dreamingElement.tops;
     if (tops.length > 20) {
@@ -79,97 +85,101 @@ class SimilarEmbeddingsBodyComponent extends React.Component {
     const maxActivation = tops[0].activation;
     let minActivation = 0;
     for (const top of tops) {
-      minActivation = top.activation < minActivation ? top.activation :
-          minActivation;
+      minActivation =
+        top.activation < minActivation ? top.activation : minActivation;
     }
-    const xScaleActivation = d3.scaleLinear().domain([minActivation,
-      maxActivation]).range([0, width]);
-    const xScaleDistance = d3.scaleLinear().domain([0,
-      this.props.dreamingElement.furthest]).range([
-      0, width]);
-    const yScale = d3.scaleBand()
-        .range([0, height])
-        .padding(0.1)
-        .domain(tops.map(function(d) {
+    const xScaleActivation = d3
+      .scaleLinear()
+      .domain([minActivation, maxActivation])
+      .range([0, width]);
+    const xScaleDistance = d3
+      .scaleLinear()
+      .domain([0, this.props.dreamingElement.furthest])
+      .range([0, width]);
+    const yScale = d3
+      .scaleBand()
+      .range([0, height])
+      .padding(0.1)
+      .domain(
+        tops.map(function (d) {
           return d.token;
-        }));
+        })
+      );
     const yAxis = d3.axisLeft(yScale);
     // The group where the chart content lives in
-    const mainGroup = svg.append('g').attr(
-        'transform', 'translate(' + margin.left + ',' + margin.top + ')');
+    const mainGroup = svg
+      .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
     // Add the activation bars to the chart
-    mainGroup.selectAll('bar')
-        .data(tops)
-        .enter()
-        .append('rect')
-        .style('fill', getColor('activation'))
-        .attr('x', 0)
-        .attr(
-            'width',
-            function(d) {
-              return xScaleActivation(d.activation);
-            })
-        .attr(
-            'y',
-            function(d) {
-              return yScale(d.token);
-            })
-        .attr('height', yScale.bandwidth()/2.0);
+    mainGroup
+      .selectAll("bar")
+      .data(tops)
+      .enter()
+      .append("rect")
+      .style("fill", getColor("activation"))
+      .attr("x", 0)
+      .attr("width", function (d) {
+        return xScaleActivation(d.activation);
+      })
+      .attr("y", function (d) {
+        return yScale(d.token);
+      })
+      .attr("height", yScale.bandwidth() / 2.0);
     // Add a label to each of the distance bars
-    mainGroup.selectAll('txt')
-        .data(tops)
-        .enter()
-        .append('text')
-        .style('font-size', '10px')
-        .attr('y', function(d) {
-          return yScale(d.token) + yScale.bandwidth() / 2 - 2;
-        })
-        .attr('x', function(d) {
-          return 3;
-        })
-        .text(function(d) {
-          return d.activation.toFixed(4);
-        });
+    mainGroup
+      .selectAll("txt")
+      .data(tops)
+      .enter()
+      .append("text")
+      .style("font-size", "10px")
+      .attr("y", function (d) {
+        return yScale(d.token) + yScale.bandwidth() / 2 - 2;
+      })
+      .attr("x", function (d) {
+        return 3;
+      })
+      .text(function (d) {
+        return d.activation.toFixed(4);
+      });
 
     // Add the distance bars to the chart
-    mainGroup.selectAll('bar')
-        .data(tops)
-        .enter()
-        .append('rect')
-        .style('fill', getColor('distance'))
-        .attr('x', 0)
-        .attr(
-            'width',
-            function(d) {
-              return xScaleDistance(d.distance);
-            })
-        .attr(
-            'y',
-            function(d) {
-              return yScale(d.token) + yScale.bandwidth()/2.0;
-            })
-        .attr('height', yScale.bandwidth()/2.0);
+    mainGroup
+      .selectAll("bar")
+      .data(tops)
+      .enter()
+      .append("rect")
+      .style("fill", getColor("distance"))
+      .attr("x", 0)
+      .attr("width", function (d) {
+        return xScaleDistance(d.distance);
+      })
+      .attr("y", function (d) {
+        return yScale(d.token) + yScale.bandwidth() / 2.0;
+      })
+      .attr("height", yScale.bandwidth() / 2.0);
     // Add a label to each of the distance bars
-    mainGroup.selectAll('txt')
-        .data(tops)
-        .enter()
-        .append('text')
-        .style('font-size', '10px')
-        .attr('y', function(d) {
-          return yScale(d.token) + yScale.bandwidth() - 2;
-        })
-        .attr('x', function(d) {
-          return 3;
-        })
-        .text(function(d) {
-          return d.distance.toFixed(2);
-        });
+    mainGroup
+      .selectAll("txt")
+      .data(tops)
+      .enter()
+      .append("text")
+      .style("font-size", "10px")
+      .attr("y", function (d) {
+        return yScale(d.token) + yScale.bandwidth() - 2;
+      })
+      .attr("x", function (d) {
+        return 3;
+      })
+      .text(function (d) {
+        return d.distance.toFixed(2);
+      });
     // Left axis of the bar chart
-    mainGroup.append('g')
-        .attr('class', 'yAxis')
-        .call(yAxis)
-        .selectAll('text')
-        .style('font', '0.875rem roboto');
+    mainGroup
+      .append("g")
+      .attr("class", "yAxis")
+      .call(yAxis)
+      .selectAll("text")
+      .style("font", "0.875rem roboto");
   }
 }
 

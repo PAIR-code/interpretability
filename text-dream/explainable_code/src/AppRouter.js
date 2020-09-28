@@ -13,15 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * =============================================================================
-*/
-import * as React from 'react';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
-import {CSSTransition} from 'react-transition-group';
-import {Grid} from '@material-ui/core';
+ */
+import * as React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import { CSSTransition } from "react-transition-group";
+import { Grid } from "@material-ui/core";
 
-import TopBar from './components/TopBarComponent';
-import Progress from './components/ProgressComponent';
-import ViewStep from './components/ViewStepComponent';
+import TopBar from "./components/TopBarComponent";
+import Progress from "./components/ProgressComponent";
+import ViewStep from "./components/ViewStepComponent";
 
 /**
  * AppRouter Calling other Components dependant on Route
@@ -34,144 +34,144 @@ class AppRouter extends React.Component {
    */
   render() {
     return (
-      <div className='content'>
+      <div className="content">
         <Router basename="/interpretability/text-dream/explainable">
           <header>
-            <TopBar/>
+            <TopBar />
           </header>
-          <Grid container direction='column' className='fullHeight'>
+          <Grid container direction="column" className="fullHeight">
             <Progress />
-            <Grid item xs className='fullHeight'>
-              <div className='full'>
+            <Grid item xs className="fullHeight">
+              <div className="full">
                 <Route exact path="/">
-                  {({match}) => (
+                  {({ match }) => (
                     <CSSTransition
                       in={match != null}
                       timeout={300}
                       classNames="page"
                       unmountOnExit
                     >
-                      <ViewStep index={0}/>
+                      <ViewStep index={0} />
                     </CSSTransition>
                   )}
                 </Route>
                 <Route exact path="/featurevis">
-                  {({match}) => (
+                  {({ match }) => (
                     <CSSTransition
                       in={match != null}
                       timeout={300}
                       classNames="page"
                       unmountOnExit
                     >
-                      <ViewStep index={0}/>
+                      <ViewStep index={0} />
                     </CSSTransition>
                   )}
                 </Route>
                 <Route exact path="/textspecial">
-                  {({match}) => (
+                  {({ match }) => (
                     <CSSTransition
                       in={match != null}
                       timeout={300}
                       classNames="page"
                       unmountOnExit
                     >
-                      <ViewStep index={1}/>
+                      <ViewStep index={1} />
                     </CSSTransition>
                   )}
                 </Route>
                 <Route exact path="/bertresults">
-                  {({match}) => (
+                  {({ match }) => (
                     <CSSTransition
                       in={match != null}
                       timeout={300}
                       classNames="page"
                       unmountOnExit
                     >
-                      <ViewStep index={2}/>
+                      <ViewStep index={2} />
                     </CSSTransition>
                   )}
                 </Route>
                 <Route exact path="/dreamvis">
-                  {({match}) => (
+                  {({ match }) => (
                     <CSSTransition
                       in={match != null}
                       timeout={300}
                       classNames="page"
                       unmountOnExit
                     >
-                      <ViewStep index={3}/>
+                      <ViewStep index={3} />
                     </CSSTransition>
                   )}
                 </Route>
                 <Route exact path="/annealingvis">
-                  {({match}) => (
+                  {({ match }) => (
                     <CSSTransition
                       in={match != null}
                       timeout={300}
                       classNames="page"
                       unmountOnExit
                     >
-                      <ViewStep index={4}/>
+                      <ViewStep index={4} />
                     </CSSTransition>
                   )}
                 </Route>
                 <Route exact path="/topvis">
-                  {({match}) => (
+                  {({ match }) => (
                     <CSSTransition
                       in={match != null}
                       timeout={300}
                       classNames="page"
                       unmountOnExit
                     >
-                      <ViewStep index={5}/>
+                      <ViewStep index={5} />
                     </CSSTransition>
                   )}
                 </Route>
                 <Route exact path="/similarvis">
-                  {({match}) => (
+                  {({ match }) => (
                     <CSSTransition
                       in={match != null}
                       timeout={300}
                       classNames="page"
                       unmountOnExit
                     >
-                      <ViewStep index={6}/>
+                      <ViewStep index={6} />
                     </CSSTransition>
                   )}
                 </Route>
                 <Route exact path="/reconstructvis">
-                  {({match}) => (
+                  {({ match }) => (
                     <CSSTransition
                       in={match != null}
                       timeout={300}
                       classNames="page"
                       unmountOnExit
                     >
-                      <ViewStep index={7}/>
+                      <ViewStep index={7} />
                     </CSSTransition>
                   )}
                 </Route>
                 <Route exact path="/shiftvis">
-                  {({match}) => (
+                  {({ match }) => (
                     <CSSTransition
                       in={match != null}
                       timeout={300}
                       classNames="page"
                       unmountOnExit
                     >
-                      <ViewStep index={8}/>
+                      <ViewStep index={8} />
                     </CSSTransition>
                   )}
                 </Route>
                 <Route exact path="/conclusion">
-                  {({match}) => (
+                  {({ match }) => (
                     <CSSTransition
                       in={match != null}
                       timeout={300}
                       classNames="page"
                       unmountOnExit
                     >
-                      <ViewStep index={9}/>
+                      <ViewStep index={9} />
                     </CSSTransition>
                   )}
                 </Route>
@@ -185,4 +185,3 @@ class AppRouter extends React.Component {
 }
 
 export default AppRouter;
-

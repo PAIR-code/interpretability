@@ -1,7 +1,7 @@
-import React from 'react';
-import {Grid} from '@material-ui/core';
+import React from "react";
+import { Grid } from "@material-ui/core";
 
-import Softmax from '../../cards/SoftmaxComponent';
+import Softmax from "../../cards/SoftmaxComponent";
 
 /**
  * Displaying the illustration for this step in the explainable.
@@ -14,8 +14,8 @@ class TextSpecialtyIllustration extends React.Component {
    */
   render() {
     return (
-      <Grid item xs className='explanationItem'>
-        <Softmax/>
+      <Grid item xs className="explanationItem">
+        <Softmax />
       </Grid>
     );
   }

@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * =============================================================================
-*/
-import React from 'react';
-import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
+ */
+import React from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
 
-import {Grid, Paper} from '@material-ui/core';
+import { Grid, Paper } from "@material-ui/core";
 
-import DreamHead from './heads/DreamHeadComponent';
-import ExplanationHead from './heads/ExplanationHeadComponent';
-import SimilarEmbeddingsBody from './bodies/SimilarEmbeddingsBodyComponent';
-import SelectionHead from './heads/SelectionHeadComponent';
+import DreamHead from "./heads/DreamHeadComponent";
+import ExplanationHead from "./heads/ExplanationHeadComponent";
+import SimilarEmbeddingsBody from "./bodies/SimilarEmbeddingsBodyComponent";
+import SelectionHead from "./heads/SelectionHeadComponent";
 
-import * as actions from '../../actions';
-import * as constants from '../../data/Constants';
+import * as actions from "../../actions";
+import * as constants from "../../data/Constants";
 
 /**
  * Provides a Card Component for rendering a chart with similar embedding
@@ -41,49 +41,51 @@ class SimilarEmbeddings extends React.PureComponent {
    */
   render() {
     const headParams = {
-      'LayerID': this.props.dreamingElement.layer_id,
-      'WordID': this.props.dreamingElement.word_id,
-      'NeuronID': this.props.dreamingElement.neuron_id,
+      LayerID: this.props.dreamingElement.layer_id,
+      WordID: this.props.dreamingElement.word_id,
+      NeuronID: this.props.dreamingElement.neuron_id,
     };
     const target = [...this.props.dreamingElement.tokens];
     for (const tokenID in this.props.dreamingElement.tokens) {
       if (this.props.dreamingElement.change_word !== parseInt(tokenID)) {
-        target[tokenID] = '';
+        target[tokenID] = "";
       }
     }
     const sentenceParams = {
       headWidth: 30,
-      colors: ['blue', 'black', 'black'],
+      colors: ["blue", "black", "black"],
       target: target,
     };
     const params = {
       tokens: this.props.dreamingElement.tokens,
     };
     return (
-      <Grid container direction='column' className='fullHeight' wrap='nowrap'>
-        <Grid item className='explanationItem'>
-          <p className='normalText'>
-            <b>Experiment {this.props.dreamID}: </b>{this.props.explanation}
+      <Grid container direction="column" className="fullHeight" wrap="nowrap">
+        <Grid item className="explanationItem">
+          <p className="normalText">
+            <b>Experiment {this.props.dreamID}: </b>
+            {this.props.explanation}
           </p>
         </Grid>
         <ExplanationHead
           topic="Similar Embeddings"
           params={headParams}
           elementIndex={this.props.elementIndex}
-          colors={this.props.colors}/>
-        <DreamHead
-          params={params}
-          sentenceParams={sentenceParams}/>
+          colors={this.props.colors}
+        />
+        <DreamHead params={params} sentenceParams={sentenceParams} />
         <Grid item xs>
-          <Paper id='topWordsPaper' className={'dreamPaper fullHeight'}>
+          <Paper id="topWordsPaper" className={"dreamPaper fullHeight"}>
             <SimilarEmbeddingsBody
               dreamingElement={this.props.dreamingElement}
-              elementIndex={this.props.elementIndex}/>
+              elementIndex={this.props.elementIndex}
+            />
           </Paper>
         </Grid>
         <SelectionHead
           options={constants.numOptions}
-          clickHandler={this.handleClick.bind(this)}/>
+          clickHandler={this.handleClick.bind(this)}
+        />
       </Grid>
     );
   }
@@ -127,7 +129,7 @@ function mapStateToProps(state, ownProps) {
  * @return {object} all the actions bound to this component.
  */
 function mapDispatchToProps(dispatch) {
-  return {actions: bindActionCreators(actions, dispatch)};
+  return { actions: bindActionCreators(actions, dispatch) };
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(SimilarEmbeddings);

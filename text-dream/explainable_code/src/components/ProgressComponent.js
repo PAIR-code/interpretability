@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * =============================================================================
-*/
-import React from 'react';
-import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
+ */
+import React from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
 
-import {LinearProgress} from '@material-ui/core';
+import { LinearProgress } from "@material-ui/core";
 
 /**
  * Providing a Card Component for the TopWords chart in different experiments.
@@ -31,8 +31,11 @@ class Progress extends React.Component {
    */
   render() {
     return (
-      <LinearProgress variant='determinate' className='progress'
-        value={this.props.progress.page / this.props.progress.of * 100} />
+      <LinearProgress
+        variant="determinate"
+        className="progress"
+        value={(this.props.progress.page / this.props.progress.of) * 100}
+      />
     );
   }
 }

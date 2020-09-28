@@ -1,14 +1,12 @@
-import React from 'react';
-import {Grid} from '@material-ui/core';
-import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
-import {bindActionCreators} from 'redux';
+import React from "react";
+import { Grid } from "@material-ui/core";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { bindActionCreators } from "redux";
 
-import {getCard} from '../../../cardprocessing';
-import * as actions from '../../../actions';
-import {
-  getDreamExperimentExplanation,
-} from '../../../data/ExperimentExplanationTexts';
+import { getCard } from "../../../cardprocessing";
+import * as actions from "../../../actions";
+import { getDreamExperimentExplanation } from "../../../data/ExperimentExplanationTexts";
 
 /**
  * Displaying the illustration for this step in the explainable.
@@ -27,11 +25,14 @@ class DreamVisIllustration extends React.Component {
    * @return {jsx} the component to be rendered.
    */
   render() {
-    const dreamingCard = getCard(this.props.dreamVisJSON, 0,
-        getDreamExperimentExplanation(this.props.dreamID),
-        ['temperature', 'activation', 'ids_activation']);
+    const dreamingCard = getCard(
+      this.props.dreamVisJSON,
+      0,
+      getDreamExperimentExplanation(this.props.dreamID),
+      ["temperature", "activation", "ids_activation"]
+    );
     return (
-      <Grid item xs className='fullHeight'>
+      <Grid item xs className="fullHeight">
         {dreamingCard}
       </Grid>
     );
@@ -65,8 +66,10 @@ function mapStateToProps(state, ownProps) {
  * @return {object} all the actions bound to this component.
  */
 function mapDispatchToProps(dispatch) {
-  return {actions: bindActionCreators(actions, dispatch)};
+  return { actions: bindActionCreators(actions, dispatch) };
 }
 
-export default connect(mapStateToProps,
-    mapDispatchToProps)(DreamVisIllustration);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(DreamVisIllustration);

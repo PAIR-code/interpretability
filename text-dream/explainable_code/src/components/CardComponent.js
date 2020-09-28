@@ -13,17 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * =============================================================================
-*/
-import React from 'react';
-import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
-import {bindActionCreators} from 'redux';
+ */
+import React from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { bindActionCreators } from "redux";
 
-import * as actions from '../actions';
+import * as actions from "../actions";
 
-import {Grid} from '@material-ui/core';
+import { Grid } from "@material-ui/core";
 
-import {getCard} from '../cardprocessing';
+import { getCard } from "../cardprocessing";
 
 /**
  * Component to render Cards of different types.
@@ -36,10 +36,11 @@ class Card extends React.Component {
    */
   render() {
     const dreamingElement = this.props.dreamingElements[
-        this.props.elementIndex];
+      this.props.elementIndex
+    ];
     const dreamingCard = getCard(dreamingElement, this.props.elementIndex);
     return (
-      <Grid item xs className='fullHeight' id='cardItem'>
+      <Grid item xs className="fullHeight" id="cardItem">
         {dreamingCard}
       </Grid>
     );
@@ -72,7 +73,7 @@ function mapStateToProps(state, ownProps) {
  * @return {object} all the actions bound to this component.
  */
 function mapDispatchToProps(dispatch) {
-  return {actions: bindActionCreators(actions, dispatch)};
+  return { actions: bindActionCreators(actions, dispatch) };
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Card);

@@ -13,32 +13,31 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * =============================================================================
-*/
-import React from 'react';
-import {createStore, applyMiddleware} from 'redux';
-import {Provider} from 'react-redux';
-import thunk from 'redux-thunk';
+ */
+import React from "react";
+import { createStore, applyMiddleware } from "redux";
+import { Provider } from "react-redux";
+import thunk from "redux-thunk";
 
-import CssBaseline from '@material-ui/core/CssBaseline';
-import {MuiThemeProvider, createMuiTheme} from '@material-ui/core/styles';
-import {grey} from '@material-ui/core/colors';
+import CssBaseline from "@material-ui/core/CssBaseline";
+import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+import { grey } from "@material-ui/core/colors";
 
-import AppRouter from './AppRouter';
-import combinedReducers from './reducers';
+import AppRouter from "./AppRouter";
+import combinedReducers from "./reducers";
 
 // Create the Store using all the Reducers and applying the Middleware
-const store = createStore(
-    combinedReducers,
-    applyMiddleware(thunk),
-);
+const store = createStore(combinedReducers, applyMiddleware(thunk));
 
 // Application color theme
 const theme = createMuiTheme({
   palette: {
-    primary: {light: grey[300], main: grey[900], dark: grey[700]},
-    secondary: {light: 'rgba(255, 179, 68, 0.1)',
-      main: 'rgba(255, 179, 68, 0.2)',
-      dark: 'rgba(255, 179, 68, 0.6)'},
+    primary: { light: grey[300], main: grey[900], dark: grey[700] },
+    secondary: {
+      light: "rgba(255, 179, 68, 0.1)",
+      main: "rgba(255, 179, 68, 0.2)",
+      dark: "rgba(255, 179, 68, 0.6)",
+    },
   },
   typography: {
     useNextVariants: true,
@@ -52,7 +51,7 @@ const App = () => (
   <MuiThemeProvider theme={theme}>
     <Provider store={store}>
       <CssBaseline />
-      <AppRouter/>
+      <AppRouter />
     </Provider>
   </MuiThemeProvider>
 );

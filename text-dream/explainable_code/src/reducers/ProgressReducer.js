@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * =============================================================================
-*/
-import initialState from './initialState';
-import * as types from '../actions/types';
+ */
+import initialState from "./initialState";
+import * as types from "../actions/types";
 
 /**
  * Reducer for updating the progress bar state.
@@ -24,8 +24,7 @@ import * as types from '../actions/types';
  * @param {object} action - the action that is issued to manipulate the state.
  * @return {object} the state after handling the action.
  */
-export default function progressReducer(
-    state = initialState.progress, action) {
+export default function progressReducer(state = initialState.progress, action) {
   switch (action.type) {
     case types.CHANGE_PROGRESS_PAGE:
       return {

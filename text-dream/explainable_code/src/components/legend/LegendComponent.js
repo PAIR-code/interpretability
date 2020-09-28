@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * =============================================================================
-*/
-import * as React from 'react';
-import PropTypes from 'prop-types';
-import LegendItem from './LegendItemComponent';
-import {Grid} from '@material-ui/core';
+ */
+import * as React from "react";
+import PropTypes from "prop-types";
+import LegendItem from "./LegendItemComponent";
+import { Grid } from "@material-ui/core";
 
 /**
  * Providing a Legend to resolve the color scheme.
@@ -37,10 +37,10 @@ class Legend extends React.Component {
       }
     }
     return (
-      <Grid item container wrap='nowrap' style={{width: 'auto'}}>
-        {colors.map((element, index) =>
-          <LegendItem color={element} key={index}/>
-        )}
+      <Grid item container wrap="nowrap" style={{ width: "auto" }}>
+        {colors.map((element, index) => (
+          <LegendItem color={element} key={index} />
+        ))}
       </Grid>
     );
   }

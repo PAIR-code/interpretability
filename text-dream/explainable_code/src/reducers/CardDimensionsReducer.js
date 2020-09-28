@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * =============================================================================
-*/
-import initialState from './initialState';
-import * as types from '../actions/types';
+ */
+import initialState from "./initialState";
+import * as types from "../actions/types";
 
 /**
  * Reducer for updating the dimensions of displayed cards.
@@ -25,13 +25,15 @@ import * as types from '../actions/types';
  * @return {object} the state after handling the actiton.
  */
 export default function cardDimensionsReducer(
-    state = initialState.cardDimensions, action) {
+  state = initialState.cardDimensions,
+  action
+) {
   switch (action.type) {
     case types.CHANGE_CARD_DIMENSIONS:
       let dims = {
         width: action.dimensions.width,
         height: action.dimensions.height - 50,
-      }
+      };
       return dims;
     default:
       return state;

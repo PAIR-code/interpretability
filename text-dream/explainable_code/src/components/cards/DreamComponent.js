@@ -13,22 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * =============================================================================
-*/
-import React from 'react';
-import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
-import {bindActionCreators} from 'redux';
+ */
+import React from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { bindActionCreators } from "redux";
 
-import {Grid, Paper} from '@material-ui/core';
+import { Grid, Paper } from "@material-ui/core";
 
-import DreamBody from './bodies/DreamBodyComponent';
-import DreamHead from './heads/DreamHeadComponent';
-import ExplanationHead from './heads/ExplanationHeadComponent';
-import SelectionHead from './heads/SelectionHeadComponent';
+import DreamBody from "./bodies/DreamBodyComponent";
+import DreamHead from "./heads/DreamHeadComponent";
+import ExplanationHead from "./heads/ExplanationHeadComponent";
+import SelectionHead from "./heads/SelectionHeadComponent";
 
-import * as sentences from '../../sentences';
-import * as actions from '../../actions';
-import * as constants from '../../data/Constants';
+import * as sentences from "../../sentences";
+import * as actions from "../../actions";
+import * as constants from "../../data/Constants";
 
 /**
  * Provides the Dream Card Component.
@@ -41,39 +41,48 @@ class Dream extends React.PureComponent {
    */
   render() {
     const sentenceParams = sentences.getDreamSentenceParams(
-        this.props.results, this.props.params);
+      this.props.results,
+      this.props.params
+    );
     const headParams = {
-      'LayerID': this.props.params.layer_id,
-      'WordID': this.props.params.word_id,
-      'NeuronID': this.props.params.neuron_id,
+      LayerID: this.props.params.layer_id,
+      WordID: this.props.params.word_id,
+      NeuronID: this.props.params.neuron_id,
     };
     return (
-      <Grid container direction='column' className='fullHeight' wrap='nowrap'
-        justify='center'>
-        <Grid item className='explanationItem'>
-          <p className='normalText'>
-            <b>Experiment {this.props.dreamID}: </b>{this.props.explanation}
+      <Grid
+        container
+        direction="column"
+        className="fullHeight"
+        wrap="nowrap"
+        justify="center"
+      >
+        <Grid item className="explanationItem">
+          <p className="normalText">
+            <b>Experiment {this.props.dreamID}: </b>
+            {this.props.explanation}
           </p>
         </Grid>
         <ExplanationHead
           topic="Dream"
           params={headParams}
           elementIndex={this.props.elementIndex}
-          colors={this.props.colors}/>
-        <DreamHead
-          params={this.props.params}
-          sentenceParams={sentenceParams}/>
-        <div className='overflow bottomMargin'>
-          <Paper className={'dreamPaper'}>
+          colors={this.props.colors}
+        />
+        <DreamHead params={this.props.params} sentenceParams={sentenceParams} />
+        <div className="overflow bottomMargin">
+          <Paper className={"dreamPaper"}>
             <DreamBody
               results={this.props.results}
               params={this.props.params}
-              sentenceParams={sentenceParams}/>
+              sentenceParams={sentenceParams}
+            />
           </Paper>
         </div>
         <SelectionHead
           options={constants.numOptions}
-          clickHandler={this.handleClick.bind(this)}/>
+          clickHandler={this.handleClick.bind(this)}
+        />
       </Grid>
     );
   }
@@ -118,7 +127,7 @@ function mapStateToProps(state, ownProps) {
  * @return {object} all the actions bound to this component.
  */
 function mapDispatchToProps(dispatch) {
-  return {actions: bindActionCreators(actions, dispatch)};
+  return { actions: bindActionCreators(actions, dispatch) };
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Dream);

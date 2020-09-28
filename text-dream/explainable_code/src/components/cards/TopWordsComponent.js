@@ -13,22 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * =============================================================================
-*/
-import React from 'react';
-import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
+ */
+import React from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
 
-import {Grid, Paper} from '@material-ui/core';
+import { Grid, Paper } from "@material-ui/core";
 
-import ExplanationHead from './heads/ExplanationHeadComponent';
-import DreamHead from './heads/DreamHeadComponent';
-import TopWordsHead from './heads/TopWordsHeadComponent';
-import TopWordsBody from './bodies/TopWordsBodyComponent';
-import SelectionHead from './heads/SelectionHeadComponent';
+import ExplanationHead from "./heads/ExplanationHeadComponent";
+import DreamHead from "./heads/DreamHeadComponent";
+import TopWordsHead from "./heads/TopWordsHeadComponent";
+import TopWordsBody from "./bodies/TopWordsBodyComponent";
+import SelectionHead from "./heads/SelectionHeadComponent";
 
-import * as actions from '../../actions';
-import * as constants from '../../data/Constants';
+import * as actions from "../../actions";
+import * as constants from "../../data/Constants";
 
 /**
  * Providing a Card Component for the TopWords chart in different experiments.
@@ -41,62 +41,69 @@ class TopWords extends React.PureComponent {
    */
   render() {
     let iteration = this.props.topWordsIteration;
-    iteration = iteration < this.props.dreamingElement.iterations.length ?
-        iteration : this.props.dreamingElement.iterations.length - 1;
+    iteration =
+      iteration < this.props.dreamingElement.iterations.length
+        ? iteration
+        : this.props.dreamingElement.iterations.length - 1;
     const headParams = {
-      'LayerID': this.props.dreamingElement.params.layer_id,
-      'WordID': this.props.dreamingElement.params.word_id,
-      'NeuronID': this.props.dreamingElement.params.neuron_id,
-      'Activation': this.props.dreamingElement.iterations[
-          iteration].activation.toFixed(4),
+      LayerID: this.props.dreamingElement.params.layer_id,
+      WordID: this.props.dreamingElement.params.word_id,
+      NeuronID: this.props.dreamingElement.params.neuron_id,
+      Activation: this.props.dreamingElement.iterations[
+        iteration
+      ].activation.toFixed(4),
     };
     const target = [...this.props.dreamingElement.params.tokens];
     for (const tokenID in this.props.dreamingElement.params.tokens) {
       if (this.props.dreamingElement.word_id !== parseInt(tokenID)) {
-        target[tokenID] = '';
+        target[tokenID] = "";
       }
     }
     const sentenceParams = {
       headWidth: 30,
-      colors: ['blue', 'black', 'black'],
+      colors: ["blue", "black", "black"],
       target: target,
     };
     const params = {
       tokens: this.props.dreamingElement.params.tokens,
     };
     const maxIterations = this.props.dreamingElement.iterations[
-        this.props.dreamingElement.iterations.length -1].number;
+      this.props.dreamingElement.iterations.length - 1
+    ].number;
     return (
-      <Grid container direction='column' className='fullHeight' wrap='nowrap'>
-        <Grid item className='explanationItem'>
-          <p className='normalText'>
-            <b>Experiment {this.props.dreamID}: </b>{this.props.explanation}
+      <Grid container direction="column" className="fullHeight" wrap="nowrap">
+        <Grid item className="explanationItem">
+          <p className="normalText">
+            <b>Experiment {this.props.dreamID}: </b>
+            {this.props.explanation}
           </p>
         </Grid>
         <ExplanationHead
           topic="Top Words"
           params={headParams}
           elementIndex={this.props.elementIndex}
-          colors={this.props.colors}/>
-        <DreamHead
-          params={params}
-          sentenceParams={sentenceParams}/>
+          colors={this.props.colors}
+        />
+        <DreamHead params={params} sentenceParams={sentenceParams} />
         <TopWordsHead
           maxIterations={maxIterations}
           dreamingElement={this.props.dreamingElement}
           elementIndex={this.props.elementIndex}
-          iteration={iteration}/>
+          iteration={iteration}
+        />
         <Grid item xs>
-          <Paper id='topWordsPaper' className={'dreamPaper fullHeight'}>
+          <Paper id="topWordsPaper" className={"dreamPaper fullHeight"}>
             <TopWordsBody
               dreamingElement={this.props.dreamingElement}
               elementIndex={this.props.elementIndex}
-              iteration={iteration}/>
+              iteration={iteration}
+            />
           </Paper>
         </Grid>
         <SelectionHead
           options={constants.numOptions}
-          clickHandler={this.handleClick.bind(this)}/>
+          clickHandler={this.handleClick.bind(this)}
+        />
       </Grid>
     );
   }
@@ -142,7 +149,7 @@ function mapStateToProps(state, ownProps) {
  * @return {object} all the actions bound to this component.
  */
 function mapDispatchToProps(dispatch) {
-  return {actions: bindActionCreators(actions, dispatch)};
+  return { actions: bindActionCreators(actions, dispatch) };
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(TopWords);

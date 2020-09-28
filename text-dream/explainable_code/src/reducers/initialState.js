@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * =============================================================================
-*/
+ */
 // Set the initial State of the Application
 export default {
   cardDimensions: {
@@ -22,7 +22,7 @@ export default {
   },
   softmaxStatus: {
     values: [2.2, 0.8, 1.4, 1.0, 0.1],
-    labels: ['Dog', 'Cat', 'Monkey', 'Car', 'Truck'],
+    labels: ["Dog", "Cat", "Monkey", "Car", "Truck"],
     temperature: 1.0,
   },
   progress: {

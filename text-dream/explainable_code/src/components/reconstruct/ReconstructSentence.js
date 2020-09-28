@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * =============================================================================
-*/
-import React from 'react';
-import PropTypes from 'prop-types';
+ */
+import React from "react";
+import PropTypes from "prop-types";
 
-import {Grid, Typography} from '@material-ui/core';
+import { Grid, Typography } from "@material-ui/core";
 
 /**
  * Provides a component for displaying sentences in other Components.
@@ -43,14 +43,14 @@ class ReconstructSentence extends React.Component {
     }
 
     return (
-      <Grid container direction='row' spacing={1} className='mainGrid'>
-        {words.map((word, index) =>
+      <Grid container direction="row" spacing={1} className="mainGrid">
+        {words.map((word, index) => (
           <Grid item key={index}>
-            <Typography variant="body2" style={{color: colors[index]}}>
+            <Typography variant="body2" style={{ color: colors[index] }}>
               {word}
             </Typography>
           </Grid>
-        )}
+        ))}
       </Grid>
     );
   }

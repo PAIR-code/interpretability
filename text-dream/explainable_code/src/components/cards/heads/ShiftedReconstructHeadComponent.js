@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * =============================================================================
-*/
-import React from 'react';
-import PropTypes from 'prop-types';
+ */
+import React from "react";
+import PropTypes from "prop-types";
 
-import {Grid, Typography, Tooltip, Paper} from '@material-ui/core';
+import { Grid, Typography, Tooltip, Paper } from "@material-ui/core";
 
-import ReconstructSentence from '../../reconstruct/ReconstructSentence';
+import ReconstructSentence from "../../reconstruct/ReconstructSentence";
 
 /**
  * Providing a header component for shifted Reconstruct results.
@@ -33,11 +33,14 @@ class ShiftedReconstructHead extends React.Component {
   render() {
     return (
       <Grid item>
-        <Paper className='subHeadingPaper' style={{backgroundColor: '#DDDDDD'}}
-          square>
-          <Grid container direction='row' spacing={1} alignItems="center">
+        <Paper
+          className="subHeadingPaper"
+          style={{ backgroundColor: "#DDDDDD" }}
+          square
+        >
+          <Grid container direction="row" spacing={1} alignItems="center">
             <Tooltip title="Reconstruct Input" placement="top">
-              <Grid item style={{width: this.props.sentenceParams.headWidth}}>
+              <Grid item style={{ width: this.props.sentenceParams.headWidth }}>
                 <Typography variant="body1" color="inherit">
                   I
                 </Typography>
@@ -48,15 +51,19 @@ class ShiftedReconstructHead extends React.Component {
                 sentence={this.props.params.tokens}
                 target={this.props.sentenceParams.target}
                 original={this.props.params.tokens}
-                colors={this.props.sentenceParams.colors}/>
+                colors={this.props.sentenceParams.colors}
+              />
             </Grid>
           </Grid>
         </Paper>
-        <Paper className='subHeadingPaper' style={{backgroundColor: '#DDDDDD'}}
-          square>
-          <Grid container direction='row' spacing={1} alignItems="center">
+        <Paper
+          className="subHeadingPaper"
+          style={{ backgroundColor: "#DDDDDD" }}
+          square
+        >
+          <Grid container direction="row" spacing={1} alignItems="center">
             <Tooltip title="Reconstruct Target" placement="top">
-              <Grid item style={{width: this.props.sentenceParams.headWidth}}>
+              <Grid item style={{ width: this.props.sentenceParams.headWidth }}>
                 <Typography variant="body1" color="inherit">
                   T
                 </Typography>
@@ -67,7 +74,8 @@ class ShiftedReconstructHead extends React.Component {
                 sentence={this.props.sentenceParams.changedSentence}
                 target={this.props.sentenceParams.target}
                 original={this.props.params.tokens}
-                colors={this.props.sentenceParams.colors}/>
+                colors={this.props.sentenceParams.colors}
+              />
             </Grid>
           </Grid>
         </Paper>

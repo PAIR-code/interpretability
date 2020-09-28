@@ -13,18 +13,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * =============================================================================
-*/
-import React from 'react';
-import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
-import {bindActionCreators} from 'redux';
+ */
+import React from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { bindActionCreators } from "redux";
 
-import {Grid, Typography, Paper, Tooltip} from '@material-ui/core';
-import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
+import { Grid, Typography, Paper, Tooltip } from "@material-ui/core";
+import HelpOutlineIcon from "@material-ui/icons/HelpOutline";
 
-import * as actions from '../../../actions';
-import getVisExplanation from '../../../data/VisExplanationTexts';
-import Legend from '../../legend/LegendComponent';
+import * as actions from "../../../actions";
+import getVisExplanation from "../../../data/VisExplanationTexts";
+import Legend from "../../legend/LegendComponent";
 
 /**
  * Providing a Header Component for any Card.
@@ -45,35 +45,47 @@ class ExplanationHead extends React.Component {
     }
     keys = Object.keys(filteredParams);
     let topic = this.props.topic;
-    if (topic === 'Top Words') {
-      topic = 'Annealing';
+    if (topic === "Top Words") {
+      topic = "Annealing";
     }
     return (
       <Grid item>
-        <Paper className='headingPaper' square>
-          <Grid container direction='row' spacing={0} alignItems="center"
-            wrap='nowrap'>
-            <Grid item container direction='row' spacing={1}
-              alignItems="center">
+        <Paper className="headingPaper" square>
+          <Grid
+            container
+            direction="row"
+            spacing={0}
+            alignItems="center"
+            wrap="nowrap"
+          >
+            <Grid
+              item
+              container
+              direction="row"
+              spacing={1}
+              alignItems="center"
+            >
               <Grid item>
                 <Typography variant="body1" color="inherit">
                   {topic}
                 </Typography>
               </Grid>
-              {keys.map((key, index) =>
+              {keys.map((key, index) => (
                 <Grid item key={index}>
                   <Typography variant="caption" color="inherit">
                     {key}: {this.props.params[key]}
                   </Typography>
                 </Grid>
-              )}
+              ))}
             </Grid>
-            <Legend colors={this.props.colors ? this.props.colors : []}>
-            </Legend>
+            <Legend
+              colors={this.props.colors ? this.props.colors : []}
+            ></Legend>
             <Grid item>
-              <Tooltip title={
-                getVisExplanation(this.props.topic.replace(' ', ''))}>
-                <HelpOutlineIcon className='tooltipIcon'/>
+              <Tooltip
+                title={getVisExplanation(this.props.topic.replace(" ", ""))}
+              >
+                <HelpOutlineIcon className="tooltipIcon" />
               </Tooltip>
             </Grid>
           </Grid>
@@ -98,7 +110,7 @@ ExplanationHead.propTypes = {
  * @return {object} all the actions bound to this component.
  */
 function mapDispatchToProps(dispatch) {
-  return {actions: bindActionCreators(actions, dispatch)};
+  return { actions: bindActionCreators(actions, dispatch) };
 }
 
 export default connect(null, mapDispatchToProps)(ExplanationHead);

@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * =============================================================================
-*/
-import React from 'react';
-import PropTypes from 'prop-types';
+ */
+import React from "react";
+import PropTypes from "prop-types";
 
-import {Grid, Typography, Tooltip, Paper} from '@material-ui/core';
+import { Grid, Typography, Tooltip, Paper } from "@material-ui/core";
 
-import ReconstructSentence from '../../reconstruct/ReconstructSentence';
+import ReconstructSentence from "../../reconstruct/ReconstructSentence";
 
 /**
  * Providing a Heading Component for Dreaming Cards.
@@ -33,11 +33,20 @@ class DreamHead extends React.Component {
   render() {
     return (
       <Grid item>
-        <Paper className='subHeadingPaper' style={{backgroundColor: '#DDDDDD'}}
-          square>
-          <Grid container direction='row' spacing={1} alignItems="center" wrap='nowrap'>
+        <Paper
+          className="subHeadingPaper"
+          style={{ backgroundColor: "#DDDDDD" }}
+          square
+        >
+          <Grid
+            container
+            direction="row"
+            spacing={1}
+            alignItems="center"
+            wrap="nowrap"
+          >
             <Tooltip title="Input Sentence" placement="top">
-              <Grid item style={{width: this.props.sentenceParams.headWidth}}>
+              <Grid item style={{ width: this.props.sentenceParams.headWidth }}>
                 <Typography variant="body1" color="inherit">
                   I
                 </Typography>
@@ -48,7 +57,8 @@ class DreamHead extends React.Component {
                 sentence={this.props.params.tokens}
                 target={this.props.sentenceParams.target}
                 original={this.props.sentenceParams.target}
-                colors={this.props.sentenceParams.colors}/>
+                colors={this.props.sentenceParams.colors}
+              />
             </Grid>
           </Grid>
         </Paper>

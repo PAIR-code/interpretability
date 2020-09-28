@@ -13,14 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * =============================================================================
-*/
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+ */
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
 
 // eslint-disable-next-line no-undef
-it('renders without crashing', () => {
-  const div = document.createElement('div');
+it("renders without crashing", () => {
+  const div = document.createElement("div");
   ReactDOM.render(<App />, div);
   ReactDOM.unmountComponentAtNode(div);
 });

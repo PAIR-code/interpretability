@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * =============================================================================
-*/
-import * as types from './types';
-import {elementTypes} from '../cardprocessing';
-import DreamApi from '../api/DreamApi';
+ */
+import * as types from "./types";
+import { elementTypes } from "../cardprocessing";
+import DreamApi from "../api/DreamApi";
 
 /**
  * Triggers the addition of a new dreaming element.
@@ -26,9 +26,9 @@ import DreamApi from '../api/DreamApi';
  */
 export function addDreamingElement(element) {
   if (element.type === elementTypes.top_words) {
-    element['iteration'] = 0;
+    element["iteration"] = 0;
   }
-  return {type: types.ADD_DREAMING_ELEMENT, element};
+  return { type: types.ADD_DREAMING_ELEMENT, element };
 }
 
 /**
@@ -38,7 +38,7 @@ export function addDreamingElement(element) {
  * @return {object} the action to be dispatched for this change.
  */
 export function updateDreamingElements(elements) {
-  return {type: types.UPDATE_DREAMING_ELEMENTS, elements};
+  return { type: types.UPDATE_DREAMING_ELEMENTS, elements };
 }
 
 /**
@@ -48,7 +48,7 @@ export function updateDreamingElements(elements) {
  * @return {object} the action to be dispatched for this change.
  */
 export function removeDreamingElement(index) {
-  return {type: types.REMOVE_DREAMING_ELEMENT, index};
+  return { type: types.REMOVE_DREAMING_ELEMENT, index };
 }
 
 /**
@@ -60,7 +60,7 @@ export function removeDreamingElement(index) {
  * @return {object} the action to be dispatched for this change.
  */
 export function changeDreamingElementIteration(iteration, index) {
-  return {type: types.CHANGE_DREAMING_ELEMENT_ITERATION, iteration, index};
+  return { type: types.CHANGE_DREAMING_ELEMENT_ITERATION, iteration, index };
 }
 
 /**
@@ -70,7 +70,7 @@ export function changeDreamingElementIteration(iteration, index) {
  * @return {object} the action to be dispatched for this change.
  */
 export function changeCardDimensions(dimensions) {
-  return {type: types.CHANGE_CARD_DIMENSIONS, dimensions};
+  return { type: types.CHANGE_CARD_DIMENSIONS, dimensions };
 }
 
 /**
@@ -80,7 +80,7 @@ export function changeCardDimensions(dimensions) {
  * @return {object} the action to be dispatched for this change.
  */
 export function changeSoftmaxStatus(status) {
-  return {type: types.CHANGE_SOFTMAX_STATUS, status};
+  return { type: types.CHANGE_SOFTMAX_STATUS, status };
 }
 
 /**
@@ -90,7 +90,7 @@ export function changeSoftmaxStatus(status) {
  * @return {object} the action to be dispatched for this change.
  */
 export function changeProgressPage(page) {
-  return {type: types.CHANGE_PROGRESS_PAGE, page};
+  return { type: types.CHANGE_PROGRESS_PAGE, page };
 }
 
 /**
@@ -100,7 +100,7 @@ export function changeProgressPage(page) {
  * @return {object} the action to be dispatched for this change.
  */
 export function changeTopWordsIteration(iteration) {
-  return {type: types.CHANGE_TOP_WORDS_ITERATION, iteration};
+  return { type: types.CHANGE_TOP_WORDS_ITERATION, iteration };
 }
 
 /**
@@ -110,7 +110,7 @@ export function changeTopWordsIteration(iteration) {
  * @return {object} the action to be dispatched for this change.
  */
 export function changeDreamID(id) {
-  return {type: types.CHANGE_DREAM_ID, id};
+  return { type: types.CHANGE_DREAM_ID, id };
 }
 
 /**
@@ -120,7 +120,7 @@ export function changeDreamID(id) {
  * @return {object} the action to be dispatched for this change.
  */
 export function changeDreamSuccess(results) {
-  return {type: types.LOAD_DREAM_SUCCESS, results};
+  return { type: types.LOAD_DREAM_SUCCESS, results };
 }
 
 /**
@@ -130,7 +130,7 @@ export function changeDreamSuccess(results) {
  * @return {object} the action to be dispatched for this change.
  */
 export function loadDream(id) {
-  return function(dispatch) {
+  return function (dispatch) {
     return DreamApi.getDreamJSON(id).then((results) => {
       dispatch(changeDreamSuccess(results));
     });
@@ -144,7 +144,7 @@ export function loadDream(id) {
  * @return {object} the action to be dispatched for this change.
  */
 export function changeDream(id) {
-  return function(dispatch) {
+  return function (dispatch) {
     return DreamApi.getDreamJSON(id).then((results) => {
       dispatch(changeDreamID(id));
       dispatch(changeDreamSuccess(results));
@@ -159,7 +159,7 @@ export function changeDream(id) {
  * @return {object} the action to be dispatched for this change.
  */
 export function changeAnnealingSuccess(results) {
-  return {type: types.LOAD_ANNEALING_SUCCESS, results};
+  return { type: types.LOAD_ANNEALING_SUCCESS, results };
 }
 
 /**
@@ -169,7 +169,7 @@ export function changeAnnealingSuccess(results) {
  * @return {object} the action to be dispatched for this change.
  */
 export function loadAnnealing(id) {
-  return function(dispatch) {
+  return function (dispatch) {
     return DreamApi.getAnnealingJSON(id).then((results) => {
       dispatch(changeAnnealingSuccess(results));
     });
@@ -183,7 +183,7 @@ export function loadAnnealing(id) {
  * @return {object} the action to be dispatched for this change.
  */
 export function changeAnnealing(id) {
-  return function(dispatch) {
+  return function (dispatch) {
     return DreamApi.getAnnealingJSON(id).then((results) => {
       dispatch(changeDreamID(id));
       dispatch(changeAnnealingSuccess(results));
@@ -198,7 +198,7 @@ export function changeAnnealing(id) {
  * @return {object} the action to be dispatched for this change.
  */
 export function changeTopWordsSuccess(results) {
-  return {type: types.LOAD_TOP_WORDS_SUCCESS, results};
+  return { type: types.LOAD_TOP_WORDS_SUCCESS, results };
 }
 
 /**
@@ -208,7 +208,7 @@ export function changeTopWordsSuccess(results) {
  * @return {object} the action to be dispatched for this change.
  */
 export function loadTopWords(id) {
-  return function(dispatch) {
+  return function (dispatch) {
     return DreamApi.getTopWordsJSON(id).then((results) => {
       dispatch(changeTopWordsSuccess(results));
     });
@@ -222,7 +222,7 @@ export function loadTopWords(id) {
  * @return {object} the action to be dispatched for this change.
  */
 export function changeTopWords(id) {
-  return function(dispatch) {
+  return function (dispatch) {
     return DreamApi.getTopWordsJSON(id).then((results) => {
       dispatch(changeDreamID(id));
       dispatch(changeTopWordsSuccess(results));
@@ -237,7 +237,7 @@ export function changeTopWords(id) {
  * @return {object} the action to be dispatched for this change.
  */
 export function changeSimilarWordsSuccess(results) {
-  return {type: types.LOAD_SIMILAR_WORDS_SUCCESS, results};
+  return { type: types.LOAD_SIMILAR_WORDS_SUCCESS, results };
 }
 
 /**
@@ -247,7 +247,7 @@ export function changeSimilarWordsSuccess(results) {
  * @return {object} the action to be dispatched for this change.
  */
 export function loadSimilarWords(id) {
-  return function(dispatch) {
+  return function (dispatch) {
     return DreamApi.getSimilarWordsJSON(id).then((results) => {
       dispatch(changeSimilarWordsSuccess(results));
     });
@@ -261,7 +261,7 @@ export function loadSimilarWords(id) {
  * @return {object} the action to be dispatched for this change.
  */
 export function changeSimilarWords(id) {
-  return function(dispatch) {
+  return function (dispatch) {
     return DreamApi.getSimilarWordsJSON(id).then((results) => {
       dispatch(changeDreamID(id));
       dispatch(changeSimilarWordsSuccess(results));
@@ -276,7 +276,7 @@ export function changeSimilarWords(id) {
  * @return {object} the action to be dispatched for this change.
  */
 export function changeReconstructionSuccess(results) {
-  return {type: types.LOAD_RECONSTRUCTION_SUCCESS, results};
+  return { type: types.LOAD_RECONSTRUCTION_SUCCESS, results };
 }
 
 /**
@@ -286,7 +286,7 @@ export function changeReconstructionSuccess(results) {
  * @return {object} the action to be dispatched for this change.
  */
 export function loadReconstruction(id) {
-  return function(dispatch) {
+  return function (dispatch) {
     return DreamApi.getReconstructionJSON(id).then((results) => {
       dispatch(changeReconstructionSuccess(results));
     });
@@ -300,7 +300,7 @@ export function loadReconstruction(id) {
  * @return {object} the action to be dispatched for this change.
  */
 export function changeReconstruction(id) {
-  return function(dispatch) {
+  return function (dispatch) {
     return DreamApi.getReconstructionJSON(id).then((results) => {
       dispatch(changeDreamID(id));
       dispatch(changeReconstructionSuccess(results));
@@ -315,7 +315,7 @@ export function changeReconstruction(id) {
  * @return {object} the action to be dispatched for this change.
  */
 export function changeShiftedReconstructionSuccess(results) {
-  return {type: types.LOAD_SHIFTED_RECONSTRUCTION_SUCCESS, results};
+  return { type: types.LOAD_SHIFTED_RECONSTRUCTION_SUCCESS, results };
 }
 
 /**
@@ -325,7 +325,7 @@ export function changeShiftedReconstructionSuccess(results) {
  * @return {object} the action to be dispatched for this change.
  */
 export function loadShiftedReconstruction(id) {
-  return function(dispatch) {
+  return function (dispatch) {
     return DreamApi.getShiftedReconstructionJSON(id).then((results) => {
       dispatch(changeShiftedReconstructionSuccess(results));
     });
@@ -339,7 +339,7 @@ export function loadShiftedReconstruction(id) {
  * @return {object} the action to be dispatched for this change.
  */
 export function changeShiftedReconstruction(id) {
-  return function(dispatch) {
+  return function (dispatch) {
     return DreamApi.getShiftedReconstructionJSON(id).then((results) => {
       dispatch(changeDreamID(id));
       dispatch(changeShiftedReconstructionSuccess(results));

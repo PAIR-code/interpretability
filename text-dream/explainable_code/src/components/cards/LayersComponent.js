@@ -13,24 +13,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * =============================================================================
-*/
-import React from 'react';
-import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
-import {bindActionCreators} from 'redux';
+ */
+import React from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { bindActionCreators } from "redux";
 
-import {Grid, ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails,
-  Typography} from '@material-ui/core';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import {
+  Grid,
+  ExpansionPanel,
+  ExpansionPanelSummary,
+  ExpansionPanelDetails,
+  Typography,
+} from "@material-ui/core";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
-import ReconstructSentence from '../reconstruct/ReconstructSentence';
-import ExplanationHead from './heads/ExplanationHeadComponent';
-import SelectionHead from './heads/SelectionHeadComponent';
+import ReconstructSentence from "../reconstruct/ReconstructSentence";
+import ExplanationHead from "./heads/ExplanationHeadComponent";
+import SelectionHead from "./heads/SelectionHeadComponent";
 
-import {getDreamProps, getReconstructProps,
-  getMagnitudesLayerProps} from '../../cardcontentprocessing';
-import * as actions from '../../actions';
-import * as constants from '../../data/Constants';
+import {
+  getDreamProps,
+  getReconstructProps,
+  getMagnitudesLayerProps,
+} from "../../cardcontentprocessing";
+import * as actions from "../../actions";
+import * as constants from "../../data/Constants";
 
 /**
  * Provides a Card Component to render multiple Layers.
@@ -44,13 +52,13 @@ class Layers extends React.PureComponent {
   render() {
     let props;
     switch (this.props.layers[0].type) {
-      case 'dream':
+      case "dream":
         props = getDreamProps(this.props.layers);
         break;
-      case 'reconstruct':
+      case "reconstruct":
         props = getReconstructProps(this.props.layers);
         break;
-      case 'magnitudes':
+      case "magnitudes":
         props = getMagnitudesLayerProps(this.props.layers);
         break;
       default:
@@ -58,26 +66,38 @@ class Layers extends React.PureComponent {
     }
     props.sentenceParams.headWidth = props.sentenceParams.headWidth + 14;
     return (
-      <Grid container direction='column' className='fullHeight' wrap='nowrap'
-        justify='center'>
-        <Grid item className='explanationItem'>
-          <p className='normalText'>
-            <b>Experiment {this.props.dreamID}: </b>{this.props.explanation}
+      <Grid
+        container
+        direction="column"
+        className="fullHeight"
+        wrap="nowrap"
+        justify="center"
+      >
+        <Grid item className="explanationItem">
+          <p className="normalText">
+            <b>Experiment {this.props.dreamID}: </b>
+            {this.props.explanation}
           </p>
         </Grid>
         <ExplanationHead
           topic={props.topic}
           params={props.headParams}
           elementIndex={this.props.elementIndex}
-          colors={this.props.colors}/>
+          colors={this.props.colors}
+        />
         {props.head}
-        <div className='overflow bottomMargin'>
-          {props.bodies.map((body, index) =>
+        <div className="overflow bottomMargin">
+          {props.bodies.map((body, index) => (
             <ExpansionPanel key={index}>
               <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-                <Grid container direction='row' spacing={1} alignItems="center"
-                  wrap='nowrap'>
-                  <Grid item style={{width: props.sentenceParams.headWidth}}>
+                <Grid
+                  container
+                  direction="row"
+                  spacing={1}
+                  alignItems="center"
+                  wrap="nowrap"
+                >
+                  <Grid item style={{ width: props.sentenceParams.headWidth }}>
                     <Typography variant="body1" color="inherit">
                       {props.layerIDs[index]}
                     </Typography>
@@ -87,19 +107,19 @@ class Layers extends React.PureComponent {
                       sentence={props.sentences[index]}
                       target={props.sentenceParams.target}
                       original={props.sentenceParams.original}
-                      colors={props.sentenceParams.colors}/>
+                      colors={props.sentenceParams.colors}
+                    />
                   </Grid>
                 </Grid>
               </ExpansionPanelSummary>
-              <ExpansionPanelDetails>
-                {body}
-              </ExpansionPanelDetails>
+              <ExpansionPanelDetails>{body}</ExpansionPanelDetails>
             </ExpansionPanel>
-          )}
+          ))}
         </div>
         <SelectionHead
           options={constants.numOptions}
-          clickHandler={this.handleClick.bind(this)}/>
+          clickHandler={this.handleClick.bind(this)}
+        />
       </Grid>
     );
   }
@@ -111,13 +131,13 @@ class Layers extends React.PureComponent {
    */
   handleClick(index) {
     switch (this.props.layers[0].type) {
-      case 'dream':
+      case "dream":
         this.props.actions.changeDream(index);
         break;
-      case 'reconstruct':
+      case "reconstruct":
         this.props.actions.changeReconstruction(index);
         break;
-      case 'magnitudes':
+      case "magnitudes":
         this.props.actions.changeShiftedReconstruction(index);
         break;
       default:
@@ -155,7 +175,7 @@ function mapStateToProps(state, ownProps) {
  * @return {object} all the actions bound to this component.
  */
 function mapDispatchToProps(dispatch) {
-  return {actions: bindActionCreators(actions, dispatch)};
+  return { actions: bindActionCreators(actions, dispatch) };
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Layers);

@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * =============================================================================
-*/
-import * as React from 'react';
-import PropTypes from 'prop-types';
+ */
+import * as React from "react";
+import PropTypes from "prop-types";
 
-import {Grid, Typography} from '@material-ui/core';
+import { Grid, Typography } from "@material-ui/core";
 
-import {getColor} from '../../colors';
+import { getColor } from "../../colors";
 
 /**
  * Providing a Legend to resolve the color scheme.
@@ -32,9 +32,19 @@ class LegendItem extends React.Component {
    */
   render() {
     return (
-      <Grid item container alignItems='center' wrap='nowrap'
-        style={{paddingRight: '15px'}}>
-        <svg width={10} height={10} id='glyphsSVG' style={{marginRight: '5px'}}>
+      <Grid
+        item
+        container
+        alignItems="center"
+        wrap="nowrap"
+        style={{ paddingRight: "15px" }}
+      >
+        <svg
+          width={10}
+          height={10}
+          id="glyphsSVG"
+          style={{ marginRight: "5px" }}
+        >
           <rect width="10" height="10" fill={getColor(this.props.color)} />
         </svg>
         <Typography variant="caption" color="inherit">

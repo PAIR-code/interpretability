@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * =============================================================================
-*/
-import initialState from './initialState';
-import * as types from '../actions/types';
+ */
+import initialState from "./initialState";
+import * as types from "../actions/types";
 
 /**
  * Reducer for updating the softmax trick vis state.
@@ -25,7 +25,9 @@ import * as types from '../actions/types';
  * @return {object} the state after handling the action.
  */
 export default function softmaxStatusReducer(
-    state = initialState.topWordsIteration, action) {
+  state = initialState.topWordsIteration,
+  action
+) {
   switch (action.type) {
     case types.CHANGE_TOP_WORDS_ITERATION:
       return action.iteration;

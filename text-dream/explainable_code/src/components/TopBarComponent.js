@@ -13,16 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * =============================================================================
-*/
-import * as React from 'react';
-import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
-import {bindActionCreators} from 'redux';
+ */
+import * as React from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { bindActionCreators } from "redux";
 
-import {Typography, Toolbar, AppBar, IconButton} from '@material-ui/core';
-import GitHubIcon from '@material-ui/icons/GitHub';
+import { Typography, Toolbar, AppBar, IconButton } from "@material-ui/core";
+import GitHubIcon from "@material-ui/icons/GitHub";
 
-import * as actions from '../actions';
+import * as actions from "../actions";
 
 /**
  * Providing a TopBar for the application with some controls.
@@ -38,8 +38,8 @@ class TopBar extends React.Component {
     for (const file of event.target.files) {
       if (file) {
         const reader = new window.FileReader();
-        reader.onload = (function(action) {
-          return function(e) {
+        reader.onload = (function (action) {
+          return function (e) {
             action(JSON.parse(e.target.result));
           };
         })(this.props.actions.addDreamingElement);
@@ -56,8 +56,8 @@ class TopBar extends React.Component {
    * click on the input element.
    */
   onInputClick = (event) => {
-    event.target.value = '';
-  }
+    event.target.value = "";
+  };
 
   /**
    * Renders the top bar for the app to provide controls.
@@ -67,19 +67,22 @@ class TopBar extends React.Component {
   render() {
     return (
       <AppBar position="fixed" color="primary">
-        <Toolbar variant='dense'>
+        <Toolbar variant="dense">
           <Typography variant="h6" color="inherit">
             What does BERT dream of?
           </Typography>
-          <Typography variant='caption' color="inherit" className="appTitle">
-            &nbsp;&nbsp;&nbsp;- by Alex Bäuerle (<a href="https://twitter.com/a13xba">
-            @a13xba</a>) and James Wexler
-            (<a href="https://twitter.com/bengiswex">@bengiswex</a>)
-            of <a href="https://pair.withgoogle.com/">PAIR</a>.
+          <Typography variant="caption" color="inherit" className="appTitle">
+            &nbsp;&nbsp;&nbsp;- by Alex Bäuerle (
+            <a href="https://twitter.com/a13xba">@a13xba</a>) and James Wexler (
+            <a href="https://twitter.com/bengiswex">@bengiswex</a>) of{" "}
+            <a href="https://pair.withgoogle.com/">PAIR</a>.
           </Typography>
-          <IconButton aria-label="github" style={{color: 'white'}}
-            href="https://github.com/PAIR-code/interpretability/tree/master/text-dream">
-            <GitHubIcon/>
+          <IconButton
+            aria-label="github"
+            style={{ color: "white" }}
+            href="https://github.com/PAIR-code/interpretability/tree/master/text-dream"
+          >
+            <GitHubIcon />
           </IconButton>
         </Toolbar>
       </AppBar>
@@ -99,7 +102,7 @@ TopBar.propTypes = {
  * @return {object} all the actions bound to this component.
  */
 function mapDispatchToProps(dispatch) {
-  return {actions: bindActionCreators(actions, dispatch)};
+  return { actions: bindActionCreators(actions, dispatch) };
 }
 
 export default connect(null, mapDispatchToProps)(TopBar);

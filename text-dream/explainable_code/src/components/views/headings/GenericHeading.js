@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * =============================================================================
-*/
-import React from 'react';
-import PropTypes from 'prop-types';
+ */
+import React from "react";
+import PropTypes from "prop-types";
 
-import {Grid} from '@material-ui/core';
+import { Grid } from "@material-ui/core";
 
 /**
  * Displaying the heading for this step in the explainable.
@@ -30,10 +30,8 @@ class GenericHeading extends React.Component {
    */
   render() {
     return (
-      <Grid item className='explanationItem'>
-        <h1>
-          {this.props.title}
-        </h1>
+      <Grid item className="explanationItem">
+        <h1>{this.props.title}</h1>
       </Grid>
     );
   }

@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * =============================================================================
-*/
-import React from 'react';
-import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
+ */
+import React from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
 
-import {Grid, Button} from '@material-ui/core';
+import { Grid, Button } from "@material-ui/core";
 
 /**
  * Providing a run Selection Component for any Card.
@@ -34,21 +34,27 @@ class SelectionHead extends React.Component {
     for (let i = 0; i < this.props.options; i++) {
       buttons.push(
         <Grid item key={i}>
-          <Button variant='contained' className='runButton'
-            color={(i+1) === this.props.dreamID ? 'primary' : 'secondary'} 
-            onClick={() => this.props.clickHandler(i+1)}>
-            {i+1}
+          <Button
+            variant="contained"
+            className="runButton"
+            color={i + 1 === this.props.dreamID ? "primary" : "secondary"}
+            onClick={() => this.props.clickHandler(i + 1)}
+          >
+            {i + 1}
           </Button>
         </Grid>
-      )
+      );
     }
     return (
-      <Grid item className='selectionHead'>
-        <Grid container direction='row' spacing={2} alignItems="center"
-          justify='center'>
-          {buttons.map((button) => 
-            button
-          )}
+      <Grid item className="selectionHead">
+        <Grid
+          container
+          direction="row"
+          spacing={2}
+          alignItems="center"
+          justify="center"
+        >
+          {buttons.map((button) => button)}
         </Grid>
       </Grid>
     );

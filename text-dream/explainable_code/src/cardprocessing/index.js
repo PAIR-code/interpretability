@@ -13,30 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * =============================================================================
-*/
-import React from 'react';
+ */
+import React from "react";
 
-import Dream from '../components/cards/DreamComponent';
-import Reconstruct from '../components/cards/ReconstructComponent';
-import Layers from '../components/cards/LayersComponent';
-import Magnitudes from '../components/cards/MagnitudesComponent';
-import ShiftedReconstruct from
-  '../components/cards/ShiftedReconstructComponent';
-import TopWordsComponent from '../components/cards/TopWordsComponent';
-import SimilarEmbeddings from
-  '../components/cards/SimilarEmbeddingsComponent';
-import TokenSearch from '../components/cards/TokenSearchComponent';
+import Dream from "../components/cards/DreamComponent";
+import Reconstruct from "../components/cards/ReconstructComponent";
+import Layers from "../components/cards/LayersComponent";
+import Magnitudes from "../components/cards/MagnitudesComponent";
+import ShiftedReconstruct from "../components/cards/ShiftedReconstructComponent";
+import TopWordsComponent from "../components/cards/TopWordsComponent";
+import SimilarEmbeddings from "../components/cards/SimilarEmbeddingsComponent";
+import TokenSearch from "../components/cards/TokenSearchComponent";
 
 export const elementTypes = {
-  dream: 'dream',
-  reconstruct: 'reconstruct',
-  reconstruct_shifted: 'reconstruct_shifted',
-  top_words: 'top_words',
-  similar_embeddings: 'similar_embeddings',
-  token_search: 'token_search',
-  magnitudes: 'magnitudes',
-  layer_magnitudes: 'layer_magnitudes',
-  layers: 'layers',
+  dream: "dream",
+  reconstruct: "reconstruct",
+  reconstruct_shifted: "reconstruct_shifted",
+  top_words: "top_words",
+  similar_embeddings: "similar_embeddings",
+  token_search: "token_search",
+  magnitudes: "magnitudes",
+  layer_magnitudes: "layer_magnitudes",
+  layers: "layers",
 };
 
 /**
@@ -53,58 +51,82 @@ export function getCard(dreamingElement, elementIndex, explanation, colors) {
   let dreamingCard;
   switch (dreamingElement.type) {
     case elementTypes.dream:
-      dreamingCard = <Dream
-        results={dreamingElement.results}
-        params={dreamingElement.params}
-        elementIndex={elementIndex}
-        explanation={explanation}
-        colors={colors}/>;
+      dreamingCard = (
+        <Dream
+          results={dreamingElement.results}
+          params={dreamingElement.params}
+          elementIndex={elementIndex}
+          explanation={explanation}
+          colors={colors}
+        />
+      );
       break;
     case elementTypes.reconstruct:
-      dreamingCard = <Reconstruct
-        results={dreamingElement.results}
-        params={dreamingElement.params}
-        elementIndex={elementIndex}
-        colors={colors}/>;
+      dreamingCard = (
+        <Reconstruct
+          results={dreamingElement.results}
+          params={dreamingElement.params}
+          elementIndex={elementIndex}
+          colors={colors}
+        />
+      );
       break;
     case elementTypes.reconstruct_shifted:
-      dreamingCard = <ShiftedReconstruct
-        results={dreamingElement.results}
-        params={dreamingElement.params}
-        elementIndex={elementIndex}/>;
+      dreamingCard = (
+        <ShiftedReconstruct
+          results={dreamingElement.results}
+          params={dreamingElement.params}
+          elementIndex={elementIndex}
+        />
+      );
       break;
     case elementTypes.top_words:
-      dreamingCard = <TopWordsComponent
-        dreamingElement={dreamingElement}
-        elementIndex={elementIndex}
-        explanation={explanation}
-        colors={colors}/>;
+      dreamingCard = (
+        <TopWordsComponent
+          dreamingElement={dreamingElement}
+          elementIndex={elementIndex}
+          explanation={explanation}
+          colors={colors}
+        />
+      );
       break;
     case elementTypes.similar_embeddings:
-      dreamingCard = <SimilarEmbeddings
-        dreamingElement={dreamingElement}
-        elementIndex={elementIndex}
-        explanation={explanation}
-        colors={colors}/>;
+      dreamingCard = (
+        <SimilarEmbeddings
+          dreamingElement={dreamingElement}
+          elementIndex={elementIndex}
+          explanation={explanation}
+          colors={colors}
+        />
+      );
       break;
     case elementTypes.token_search:
-      dreamingCard = <TokenSearch
-        dreamingElement={dreamingElement}
-        elementIndex={elementIndex}
-        explanation={explanation}
-        colors={colors}/>;
+      dreamingCard = (
+        <TokenSearch
+          dreamingElement={dreamingElement}
+          elementIndex={elementIndex}
+          explanation={explanation}
+          colors={colors}
+        />
+      );
       break;
     case elementTypes.magnitudes:
-      dreamingCard = <Magnitudes
-        magnitudes={dreamingElement.magnitudes}
-        elementIndex={elementIndex}/>;
+      dreamingCard = (
+        <Magnitudes
+          magnitudes={dreamingElement.magnitudes}
+          elementIndex={elementIndex}
+        />
+      );
       break;
     case elementTypes.layers:
-      dreamingCard = <Layers
-        layers={dreamingElement.layers}
-        elementIndex={elementIndex}
-        explanation={explanation}
-        colors={colors}/>;
+      dreamingCard = (
+        <Layers
+          layers={dreamingElement.layers}
+          elementIndex={elementIndex}
+          explanation={explanation}
+          colors={colors}
+        />
+      );
       break;
     default:
       dreamingCard = <div></div>;

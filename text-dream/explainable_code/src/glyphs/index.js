@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * =============================================================================
-*/
-import {getColor} from '../colors';
+ */
+import { getColor } from "../colors";
 
 /**
  * Converts iteration results to glyph parameters.
@@ -24,32 +24,36 @@ import {getColor} from '../colors';
  */
 export function iterationsToGlyphsParams(iterations) {
   const glyphsParams = {};
-  if (Object.prototype.hasOwnProperty.call(iterations[0], 'temperature')) {
-    iterationsToTypeParams(glyphsParams, iterations, 'temperature');
-    glyphsParams['temperature'].color = getColor('temperature');
+  if (Object.prototype.hasOwnProperty.call(iterations[0], "temperature")) {
+    iterationsToTypeParams(glyphsParams, iterations, "temperature");
+    glyphsParams["temperature"].color = getColor("temperature");
   }
-  if (Object.prototype.hasOwnProperty.call(iterations[0], 'loss')) {
-    iterationsToTypeParams(glyphsParams, iterations, 'loss');
-    glyphsParams['loss'].color = getColor('loss');
-    if (Object.prototype.hasOwnProperty.call(iterations[0], 'ids_loss')) {
-      iterationsToTypeParams(glyphsParams, iterations, 'ids_loss');
-      glyphsParams['ids_loss'].color = getColor('ids_loss');
-      const maxLoss = Math.max(glyphsParams['loss'].extremes.max,
-          glyphsParams['ids_loss'].extremes.max);
-      glyphsParams['loss'].extremes.max = maxLoss;
-      glyphsParams['ids_loss'].extremes.max = maxLoss;
+  if (Object.prototype.hasOwnProperty.call(iterations[0], "loss")) {
+    iterationsToTypeParams(glyphsParams, iterations, "loss");
+    glyphsParams["loss"].color = getColor("loss");
+    if (Object.prototype.hasOwnProperty.call(iterations[0], "ids_loss")) {
+      iterationsToTypeParams(glyphsParams, iterations, "ids_loss");
+      glyphsParams["ids_loss"].color = getColor("ids_loss");
+      const maxLoss = Math.max(
+        glyphsParams["loss"].extremes.max,
+        glyphsParams["ids_loss"].extremes.max
+      );
+      glyphsParams["loss"].extremes.max = maxLoss;
+      glyphsParams["ids_loss"].extremes.max = maxLoss;
     }
   }
-  if (Object.prototype.hasOwnProperty.call(iterations[0], 'activation')) {
-    iterationsToTypeParams(glyphsParams, iterations, 'activation');
-    glyphsParams['activation'].color = getColor('activation');
-    if (Object.prototype.hasOwnProperty.call(iterations[0], 'ids_activation')) {
-      iterationsToTypeParams(glyphsParams, iterations, 'ids_activation');
-      glyphsParams['ids_activation'].color = getColor('ids_activation');
-      const maxActivation = Math.max(glyphsParams['activation'].extremes.max,
-          glyphsParams['ids_activation'].extremes.max);
-      glyphsParams['activation'].extremes.max = maxActivation;
-      glyphsParams['ids_activation'].extremes.max = maxActivation;
+  if (Object.prototype.hasOwnProperty.call(iterations[0], "activation")) {
+    iterationsToTypeParams(glyphsParams, iterations, "activation");
+    glyphsParams["activation"].color = getColor("activation");
+    if (Object.prototype.hasOwnProperty.call(iterations[0], "ids_activation")) {
+      iterationsToTypeParams(glyphsParams, iterations, "ids_activation");
+      glyphsParams["ids_activation"].color = getColor("ids_activation");
+      const maxActivation = Math.max(
+        glyphsParams["activation"].extremes.max,
+        glyphsParams["ids_activation"].extremes.max
+      );
+      glyphsParams["activation"].extremes.max = maxActivation;
+      glyphsParams["ids_activation"].extremes.max = maxActivation;
     }
   }
   return glyphsParams;
@@ -66,7 +70,7 @@ export function iterationsToGlyphsParams(iterations) {
 function iterationsToTypeParams(glyphsParams, iterations, type) {
   glyphsParams[type] = {
     iterations: [],
-    extremes: {max: 0, min: 0},
+    extremes: { max: 0, min: 0 },
   };
   for (const iteration of iterations) {
     glyphsParams[type].iterations.push(iteration[type]);
@@ -85,13 +89,13 @@ function iterationsToTypeParams(glyphsParams, iterations, type) {
 export function magnitudesToGlyphsParams(magnitudes) {
   const glyphsParams = {};
   const firstIteration = magnitudes[0].results.iterations[0];
-  if (Object.prototype.hasOwnProperty.call(firstIteration, 'loss')) {
-    magnitudesToTypeParams(glyphsParams, magnitudes, 'loss');
-    glyphsParams['loss'].color = getColor('loss');
+  if (Object.prototype.hasOwnProperty.call(firstIteration, "loss")) {
+    magnitudesToTypeParams(glyphsParams, magnitudes, "loss");
+    glyphsParams["loss"].color = getColor("loss");
   }
-  if (Object.prototype.hasOwnProperty.call(firstIteration, 'ids_loss')) {
-    magnitudesToTypeParams(glyphsParams, magnitudes, 'ids_loss');
-    glyphsParams['ids_loss'].color = getColor('ids_loss');
+  if (Object.prototype.hasOwnProperty.call(firstIteration, "ids_loss")) {
+    magnitudesToTypeParams(glyphsParams, magnitudes, "ids_loss");
+    glyphsParams["ids_loss"].color = getColor("ids_loss");
   }
   return glyphsParams;
 }
@@ -107,11 +111,11 @@ export function magnitudesToGlyphsParams(magnitudes) {
 function magnitudesToTypeParams(glyphsParams, magnitudes, type) {
   glyphsParams[type] = {
     magnitudes: [],
-    extremes: {max: 0, min: 0},
+    extremes: { max: 0, min: 0 },
   };
   for (const magnitude of magnitudes) {
-    const lastIteration = magnitude.results.iterations[
-        magnitude.results.iterations.length - 1];
+    const lastIteration =
+      magnitude.results.iterations[magnitude.results.iterations.length - 1];
     glyphsParams[type].magnitudes.push(lastIteration[type]);
     for (const iteration of magnitude.results.iterations) {
       if (glyphsParams[type].extremes.max < iteration[type]) {

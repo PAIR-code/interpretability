@@ -13,15 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * =============================================================================
-*/
-import React from 'react';
-import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
-import {bindActionCreators} from 'redux';
-import {Grid} from '@material-ui/core';
-import getViewData from '../data/ViewData';
+ */
+import React from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { bindActionCreators } from "redux";
+import { Grid } from "@material-ui/core";
+import getViewData from "../data/ViewData";
 
-import * as actions from '../actions';
+import * as actions from "../actions";
 
 /**
  * Displaying the view for the current step in the explainable.
@@ -42,10 +42,23 @@ class ViewStep extends React.Component {
   render() {
     let content = getViewData(this.props.index);
     return (
-      <Grid container alignItems='center' spacing={2} className='fullHeight'
-        justify='center'>
-        <Grid item xs={6} container direction='column' spacing={2}
-          className='fullHeight' justify='center' wrap='nowrap'>
+      <Grid
+        container
+        alignItems="center"
+        spacing={2}
+        className="fullHeight"
+        justify="center"
+      >
+        <Grid
+          item
+          xs={6}
+          container
+          direction="column"
+          spacing={2}
+          className="fullHeight"
+          justify="center"
+          wrap="nowrap"
+        >
           {content.heading}
           {content.texts}
           {content.buttons}
@@ -68,7 +81,7 @@ ViewStep.propTypes = {
  * @return {object} all the actions bound to this component.
  */
 function mapDispatchToProps(dispatch) {
-  return {actions: bindActionCreators(actions, dispatch)};
+  return { actions: bindActionCreators(actions, dispatch) };
 }
 
 export default connect(null, mapDispatchToProps)(ViewStep);

@@ -1,14 +1,12 @@
-import React from 'react';
-import {Grid} from '@material-ui/core';
-import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
-import {bindActionCreators} from 'redux';
+import React from "react";
+import { Grid } from "@material-ui/core";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { bindActionCreators } from "redux";
 
-import {getCard} from '../../../cardprocessing';
-import * as actions from '../../../actions';
-import {
-  getSimilarExperimentExplanation,
-} from '../../../data/ExperimentExplanationTexts';
+import { getCard } from "../../../cardprocessing";
+import * as actions from "../../../actions";
+import { getSimilarExperimentExplanation } from "../../../data/ExperimentExplanationTexts";
 
 /**
  * Displaying the illustration for this step in the explainable.
@@ -19,11 +17,11 @@ class SimilarVisIllustration extends React.Component {
    */
   componentDidMount() {
     this.props.actions.loadSimilarWords(this.props.dreamID);
-    const cardElement = document.getElementById('cardItem');
+    const cardElement = document.getElementById("cardItem");
     if (cardElement != null) {
       this.props.actions.changeCardDimensions({
-        'width': cardElement.getBoundingClientRect().width,
-        'height': cardElement.getBoundingClientRect().height,
+        width: cardElement.getBoundingClientRect().width,
+        height: cardElement.getBoundingClientRect().height,
       });
     }
   }
@@ -34,11 +32,14 @@ class SimilarVisIllustration extends React.Component {
    * @return {jsx} the component to be rendered.
    */
   render() {
-    const similarCard = getCard(this.props.similarVisJSON, 0,
-        getSimilarExperimentExplanation(this.props.dreamID), ['activation',
-          'distance']);
+    const similarCard = getCard(
+      this.props.similarVisJSON,
+      0,
+      getSimilarExperimentExplanation(this.props.dreamID),
+      ["activation", "distance"]
+    );
     return (
-      <Grid item xs className='fullHeight' id='cardItem'>
+      <Grid item xs className="fullHeight" id="cardItem">
         {similarCard}
       </Grid>
     );
@@ -72,7 +73,10 @@ function mapStateToProps(state, ownProps) {
  * @return {object} all the actions bound to this component.
  */
 function mapDispatchToProps(dispatch) {
-  return {actions: bindActionCreators(actions, dispatch)};
+  return { actions: bindActionCreators(actions, dispatch) };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(SimilarVisIllustration);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(SimilarVisIllustration);
