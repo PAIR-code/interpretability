@@ -1,0 +1,169 @@
+/*
+Copyright 2018 Google LLC. All Rights Reserved.
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+    http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+==============================================================================
+*/
+
+/*
+CSS styling for demo.
+*/
+
+body {
+  font-family: monospace;
+  font-size: 12px;
+  background: #eee;
+}
+
+.clusters {
+  display: flex;
+  margin-top: 34px;
+}
+
+.holder {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 10px solid #ddd;
+  flex-shrink: 0;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.clusterHeader {
+  background-color: #f3f3f3;
+  border-bottom: 1px solid #ddd;
+  height: 55px;
+  padding: 10px 0 3px;
+  text-align: center;
+  width: 100%;
+}
+
+#header {
+  background-color: #f7f7f7;
+  border-bottom: 2px solid #ccc;
+  display: flex;
+  height: 30px;
+  padding: 6px 7px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.legend {
+  display: flex;
+  padding: 0 10px;
+}
+
+.legend-group {
+  margin: 0 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.legend-text {
+  font-size: 9px;
+  margin-bottom: 2px;
+}
+
+.legend-square {
+  background-color: red;
+  height: 10px;
+  width: 10px;
+}
+
+.control {
+  margin: 2px 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+.frequentSequence {
+  align-items: baseline;
+  color: #777;
+  display: flex;
+  margin: 3px 0;
+  overflow: hidden;  
+  padding: 6px 0;
+  justify-content: center;
+}
+
+.sequenceTokens {
+  display: flex;
+  margin-right: 5px;
+  justify-content: center;
+}
+
+.sequenceToken {
+  color: #333;
+  margin: 2px;
+  padding: 2px;
+}
+
+text {
+  cursor: pointer;
+}
+
+.text-holder-no-text {
+  font-size: 0;
+}
+
+.is-seed {
+  background: #efefef;
+}
+
+button, select {
+  margin: 0px 5px;
+}
+
+
+
+/* gratuitous but fun loading code */
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  left: 50vw;
+  top: 25vh;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #8dd3c7;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #8dd3c7 transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

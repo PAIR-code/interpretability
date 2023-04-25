@@ -1,0 +1,26 @@
+{
+  "name": "data-synth-trees",
+  "version": "0.1.0",
+  "description": "",
+  "license": "Apache-2.0",
+  "private": true,
+  "dependencies": {
+    "@adobe/lit-mobx": "^2.2.0",
+    "@types/d3": "^7.4.0",
+    "cross-env": "^7.0.3",
+    "d3": "^7.8.4",
+    "d3-scale": "^3.0.0",
+    "lit": "^2.0.0",
+    "mobx": "^5.15.7",
+    "parcel": "^2.8.3"
+  },
+  "scripts": {
+    "watch": "cross-env NODE_ENV=development parcel index.html --no-hmr --dist-dir=./static",
+    "build": "cross-env NODE_ENV=production parcel build index.html --public-url ./ --dist-dir=./static",
+    "link-local": "yalc link"
+  },
+  "devDependencies": {
+    "process": "^0.11.10",
+    "typescript": "5.0.2"
+  }
+}

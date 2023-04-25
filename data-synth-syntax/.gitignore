@@ -1,0 +1,13 @@
+*.log
+
+.cache
+.DS_Store
+.vscode
+
+dist
+node_modules
+variables
+
+# keep folder for scripts, but not most contents
+static/*.*
+!static/data/*.json

@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "target": "es5",
+    "lib": [
+      "es2017",
+      "dom"
+    ],
+    "outDir": "./static",
+    "noUnusedLocals": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedParameters": false,
+    "pretty": true,
+    "noFallthroughCasesInSwitch": true,
+    "allowUnreachableCode": false,
+    "experimentalDecorators": true,
+    "jsxImportSource": "preact",
+    "resolveJsonModule": true,
+    "declaration": false,
+    "declarationMap": false,
+  }
+}
