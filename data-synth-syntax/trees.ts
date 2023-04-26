@@ -19,15 +19,15 @@
 // tslint:disable:g3-no-void-expression
 
 import * as d3 from 'd3';
-import {html, svg} from 'lit';
-import {customElement} from 'lit/decorators';
-import {classMap} from 'lit/directives/class-map';
-import {repeat} from 'lit/directives/repeat';
-import {styleMap} from 'lit/directives/style-map';
-import {computed, observable} from 'mobx';
-import {MobxLitElement} from '@adobe/lit-mobx';
+import { html, svg } from 'lit';
+import { customElement } from 'lit/decorators';
+import { classMap } from 'lit/directives/class-map';
+import { repeat } from 'lit/directives/repeat';
+import { styleMap } from 'lit/directives/style-map';
+import { computed, observable } from 'mobx';
+import { MobxLitElement } from '@adobe/lit-mobx';
 
-import {COLOR_DEP, COLOR_POS, POS} from './trees_utils';
+import { COLOR_DEP, COLOR_POS, POS } from './trees_utils';
 
 interface ParseData {
   token: string;
@@ -36,11 +36,12 @@ interface ParseData {
   headTokenIdx: number;
   headToken: ParseData;
   offset: number;
+  idx: number;
 }
 
 interface TextData {
-  parseData: {[key: string]: ParseData};
-  clusterIds: {[key: string]: {[key: number]: number}};
+  parseData: { [key: string]: ParseData };
+  clusterIds: { [key: string]: { [key: number]: number } };
   orderIndex: number;
   isSeed: boolean;
 }
@@ -61,19 +62,20 @@ interface ClusterInfo {
   }
 }
 interface Cluster {
-  top_sequence: FrequentSequence|{};
+  top_sequence: FrequentSequence | {};
   colorScheme: any,
 }
 
 const CHAR_HEIGHT = 12;
 const CHAR_WIDTH = 7;
 const CHAR_COLLAPSED_HEIGHT = 3;
+const NUM_CHARS_COLLAPSED = 3;
 const SVG_PAD = 2;
 const PAD = 2;
 const Y = 50;
 const Y_COLLAPSED = 2;
 const Y_TOP = Y - CHAR_HEIGHT + PAD;
-const Y_TOP_COLLAPSED = Y_COLLAPSED - CHAR_COLLAPSED_HEIGHT + PAD;
+const Y_TOP_COLLAPSED = Y_COLLAPSED - CHAR_COLLAPSED_HEIGHT;
 const MAX_VIS_WIDTH = 5000;
 const NUM_TO_SET_WIDTH = 10;
 
@@ -100,20 +102,20 @@ export class TreesComponent extends MobxLitElement {
 
   @observable nClusterIndex = 4;
   @observable similarity = 'pos';
-  @observable datasetName = 'music_queries';
+  @observable datasetName = 'music_new';
 
 
   @computed
   get nClusters(): number {
     return this.numClusterList.length > 0 ?
-        this.numClusterList[this.nClusterIndex] :
-        10;
+      this.numClusterList[this.nClusterIndex] :
+      10;
   }
 
-  @observable highlightedDep: string|null = null;
-  @observable highlightedPos: string|null = null;
-  @observable highlightedTextIndex: number|null = null;
-  @observable highlightedToken: string|null = null;
+  @observable highlightedDep: string | null = null;
+  @observable highlightedPos: string | null = null;
+  @observable highlightedTextIndex: number | null = null;
+  @observable highlightedToken: string | null = null;
 
   constructor() {
     super();
@@ -135,9 +137,8 @@ export class TreesComponent extends MobxLitElement {
               ?disabled=${this.nClusters <= this.numClusterList[0]}>-</button>
             <span><strong>${this.nClusters}</strong> clusters</span>
             <button @click="${() => this.incrementNumberOfClusters()}"
-              ?disabled=${
-        this.nClusters >=
-        this.numClusterList[this.numClusterList.length - 1]}>+</button>
+              ?disabled=${this.nClusters >=
+      this.numClusterList[this.numClusterList.length - 1]}>+</button>
           </div>
           ${this.renderLegend()}
         </div>
@@ -163,25 +164,28 @@ export class TreesComponent extends MobxLitElement {
   private async loadAndPrepData() {
     // Load the data
     const rawResponse =
-        await d3.json(`data/${this.datasetName}.json`) as any;
+      await d3.json(`data/${this.datasetName}.json`) as any;
 
     const rawData = rawResponse.data as any[];
     this.clusterInfo = rawResponse.clusters as ClusterInfo;
     this.numClusterList =
-        Object.keys(this.clusterInfo[this.similarity]).map(k => Number(k));
+      Object.keys(this.clusterInfo[this.similarity]).map(k => Number(k));
     rawData.forEach(d => {
       d.clusterIds = d.cluster_ids;
       d.parseData = d.parse_data;
-      d.orderIndex = d.order_index;
+      d.orderIndex = d.order_index[this.similarity];
       d.isSeed =
-          d['all tags'].includes('User') || d['all tags'].includes('Uploaded');
+        d['all tags'].includes('User') || d['all tags'].includes('Uploaded');
     });
     this.data = rawData as TextData[];
+    this.data.sort((a, b) => a.orderIndex > b.orderIndex? 1 : -1)
     // Calculate offsets and HEAD tokens.
     this.data.forEach((textData: TextData) => {
       let offset = SVG_PAD;
+      let i = 0;
       Object.values(textData.parseData).forEach((d: ParseData) => {
         d.offset = offset;
+        d.idx = i++;
         offset += d.token.length + 1;
         d.headToken = textData.parseData[d.headTokenIdx];
       });
@@ -192,28 +196,26 @@ export class TreesComponent extends MobxLitElement {
 
   private getClusters(similarity: string, nClusters: number) {
     // Organize by cluster.
-    const clusterIdToIndex: {[key: number]: number} = {};
+    const clusterIdToIndex: { [key: number]: number } = {};
 
     this.data.forEach((textData: TextData) => {
       if (!clusterIdToIndex.hasOwnProperty(
-              textData.clusterIds[similarity][nClusters])) {
+        textData.clusterIds[similarity][nClusters])) {
         clusterIdToIndex[textData.clusterIds[similarity][nClusters]] =
-            Object.keys(clusterIdToIndex).length;
+          Object.keys(clusterIdToIndex).length;
       }
     });
 
     const clusters: TextData[][] = [...Array(nClusters)].map(() => []);
     this.data.forEach(
-        d => clusters[clusterIdToIndex[d.clusterIds[similarity][nClusters]]]
-                 .push(d));
+      d => clusters[clusterIdToIndex[d.clusterIds[similarity][nClusters]]]
+        .push(d));
 
     return clusters;
   }
 
   private renderClusters() {
     const clusters = this.getClusters(this.similarity, this.nClusters);
-    clusters.sort((a, b) => b.length - a.length).reverse();
-
     return html`
         ${clusters.map((cluster: TextData[]) => this.renderCluster(cluster))}`;
   }
@@ -222,11 +224,11 @@ export class TreesComponent extends MobxLitElement {
     const tokens = sequence.tokens.map((token: string) => {
       const tokenWithPos = token.startsWith('t:') ? token.split('#') : [];
       const tokenText =
-          token.startsWith('t:') ? tokenWithPos[0].slice(2) : token.slice(4);
+        token.startsWith('t:') ? tokenWithPos[0].slice(2) : token.slice(4);
       const tokenPos =
-          token.startsWith('t:') ? tokenWithPos[1].slice(4) : token.slice(4);
+        token.startsWith('t:') ? tokenWithPos[1].slice(4) : token.slice(4);
 
-      const style = styleMap({'background-color': COLOR_POS(tokenPos)});
+      const style = styleMap({ 'background-color': COLOR_POS(tokenPos) });
 
       return html`
         <div class="sequenceToken" style=${style}>
@@ -243,7 +245,10 @@ export class TreesComponent extends MobxLitElement {
   }
 
   private renderCluster(cluster: TextData[]) {
-    const style = styleMap({'width': `${visWidthAll(cluster)}px`});
+    const style = styleMap({
+      'width': `${this.visWidthAll(cluster)}px`,
+      'align-items': this.enableCollapsed ? '' : 'center'
+    });
 
     const clusterInfo = this.clusterInfo[this.similarity][this.nClusters];
     const clusterIdx = cluster[0].clusterIds[this.similarity][this.nClusters];
@@ -256,10 +261,9 @@ export class TreesComponent extends MobxLitElement {
             ${cluster.length} data point${cluster.length > 1 ? 's' : ''}
           </div>
           <div class="frequentSequence">
-          ${
-        topSequence.hasOwnProperty('tokens') ?
-            this.renderSequence(topSequence as FrequentSequence) :
-            ''}
+          ${topSequence.hasOwnProperty('tokens') ?
+        this.renderSequence(topSequence as FrequentSequence) :
+        ''}
           </div>
         </div>
         ${repeat(cluster, (sentence: TextData, i) => this.renderText(sentence))}
@@ -269,16 +273,15 @@ export class TreesComponent extends MobxLitElement {
   /** Render the tokens of a text. */
   private renderText(d: TextData) {
     const collapseText = !(!this.enableCollapsed ||
-                           (this.highlightedTextIndex !== null &&
-                            this.highlightedTextIndex === d.orderIndex)) ?
-        true :
-        false;
+      (this.highlightedTextIndex !== null &&
+        this.highlightedTextIndex === d.orderIndex)) ?
+      true :
+      false;
 
     const svgStyle = styleMap({
-      'width': `${visWidth(d)}px`,
-      'height': `${
-          collapseText ? Y_COLLAPSED + CHAR_COLLAPSED_HEIGHT :
-                         Y + CHAR_HEIGHT}px`
+      'width': `${this.visWidth(d)}px`,
+      'height': `${collapseText ? Y_COLLAPSED + CHAR_COLLAPSED_HEIGHT :
+          Y + CHAR_HEIGHT}px`
     });
 
     const classList = classMap({
@@ -289,23 +292,22 @@ export class TreesComponent extends MobxLitElement {
 
     const clusterId = d.clusterIds[this.similarity][this.nClusters];
     const cluster =
-        this.clusterInfo[this.similarity][this.nClusters][clusterId];
+      this.clusterInfo[this.similarity][this.nClusters][clusterId];
     return html`
         <div class=${classList}>
           <svg style=${svgStyle}>
-          ${
-        repeat(
-            Object.values(d.parseData),
-            (data: ParseData) =>
-                this.renderToken(data, d.orderIndex, collapseText, cluster))}
+          ${repeat(
+      Object.values(d.parseData),
+      (data: ParseData) =>
+        this.renderToken(data, d.orderIndex, collapseText, cluster))}
           </svg>
         </div>`;
   }
 
   /** Render token including POS color and DEP arcs. */
   private renderToken(
-      d: ParseData, textIndex: number, collapseText: boolean,
-      cluster: Cluster) {
+    d: ParseData, textIndex: number, collapseText: boolean,
+    cluster: Cluster) {
     let colorDep = this.colorDep ? COLOR_DEP(d.dep) : '#ddd';
     let posColor = this.colorPos ? COLOR_POS(d.pos) : 'none';
     let tokenColor = this.colorToken ? cluster.colorScheme(d.token) : 'none';
@@ -337,7 +339,7 @@ export class TreesComponent extends MobxLitElement {
 
     const renderEdges = collapseText ? svg`` : svg`
         <path
-            d=${path(d)}
+            d=${this.path(d)}
             fill=none
             stroke=${colorDep}
             stroke-width=2px
@@ -346,7 +348,7 @@ export class TreesComponent extends MobxLitElement {
           >
           </path>
           <circle
-            cx=${center(d)}
+            cx=${this.center(d)}
             cy=${Y_TOP}
             r=${d.dep === 'ROOT' ? 0 : 4}
             fill=${colorDep}
@@ -358,10 +360,9 @@ export class TreesComponent extends MobxLitElement {
         <g>
           ${renderEdges}
           <rect
-            width=${width(d) + PAD * 2}
-            height=${
-        collapseText ? CHAR_COLLAPSED_HEIGHT + PAD * 2 : CHAR_HEIGHT + PAD * 2}
-            x=${x(d) - PAD}
+            width=${this.width(d) + PAD * 2}
+            height=${collapseText ? CHAR_COLLAPSED_HEIGHT + PAD * 2 : CHAR_HEIGHT + PAD * 2}
+            x=${this.x(d) - PAD}
             y=${collapseText ? Y_TOP_COLLAPSED : Y_TOP}
             fill=${highlightColor}
             @mouseenter=${mouseEnter}
@@ -369,7 +370,7 @@ export class TreesComponent extends MobxLitElement {
           >
           </rect>
           <text class='text'
-            x=${x(d)}
+            x=${this.x(d)}
             y=${collapseText ? Y_COLLAPSED : Y}
             @mouseenter=${mouseEnter}
             @mouseleave=${mouseLeave}
@@ -381,12 +382,12 @@ export class TreesComponent extends MobxLitElement {
 
   private renderCheckboxes() {
     const colorPosCheckbox = this.renderCheckbox(
-        () => this.colorPos = !this.colorPos, 'Color POS', this.colorPos);
+      () => this.colorPos = !this.colorPos, 'Color POS', this.colorPos);
     const colorDepCheckbox = this.renderCheckbox(
-        () => this.colorDep = !this.colorDep, 'Color DEP', this.colorDep);
+      () => this.colorDep = !this.colorDep, 'Color DEP', this.colorDep);
     const enableCollapsedCheckbox = this.renderCheckbox(
-        () => this.enableCollapsed = !this.enableCollapsed, 'Collapse',
-        this.enableCollapsed);
+      () => this.enableCollapsed = !this.enableCollapsed, 'Collapse',
+      this.enableCollapsed);
     return html`
         ${colorPosCheckbox}
         ${colorDepCheckbox}
@@ -395,22 +396,19 @@ export class TreesComponent extends MobxLitElement {
 
   private renderLegend() {
     if (!this.colorPos) return;
-    return html`<div class="legend">${
-        Array.from(Object.keys(POS))
-            .map(
-                (key: string) =>
-                    html`<div class="legend-group"><span class="legend-text">${
-                        key}</span><div class="legend-square" style=${styleMap({
-                      'background-color': COLOR_POS(key)
-                    })}></div></div>`)}</div>`;
+    return html`<div class="legend">${Array.from(Object.keys(POS))
+        .map(
+          (key: string) =>
+            html`<div class="legend-group"><span class="legend-text">${key}</span><div class="legend-square" style=${styleMap({
+              'background-color': COLOR_POS(key)
+            })}></div></div>`)}</div>`;
   }
 
   private renderCheckbox(
-      callback: () => any, label: string, initiallyChecked: boolean) {
+    callback: () => any, label: string, initiallyChecked: boolean) {
     return html`
         <div class="control">
-        <input type=checkbox .checked=${initiallyChecked} @change=${
-        () => callback()}>
+        <input type=checkbox .checked=${initiallyChecked} @change=${() => callback()}>
         <label>${label}</label>
         </div>`;
   }
@@ -418,7 +416,7 @@ export class TreesComponent extends MobxLitElement {
   private renderSimTypeDropdown() {
     const callback = () => {
       const sim =
-          (this.shadowRoot!.getElementById('similarities') as any).value;
+        (document.getElementById('similarities') as any).value;
 
       this.colorDep = false;
       this.colorPos = false;
@@ -428,15 +426,21 @@ export class TreesComponent extends MobxLitElement {
       if (sim === 'token') this.colorToken = true;
 
       this.similarity = sim;
+
+      this.dataLoaded = false;
+      this.loadAndPrepData();
     };
+
+    const selected = (name: string) => this.similarity === name;
+
     return html`
       <div class="control">
       <label for="similarities">Similarity</label>
       <select name="similarities" id="similarities" @change=${() => callback()}>
-        <option value="pos">POS</option>
-        <option value="dep">DEP</option>
-        <option value="token">Token</option>
-        <option value="embedding">Embedding</option>
+        <option value="pos" ?selected=${selected('pos')}>POS</option>
+        <option value="dep" ?selected=${selected('dep')}>DEP</option>
+        <option value="token" ?selected=${selected('token')}>Token</option>
+        <option value="embedding" ?selected=${selected('embedding')}>Embedding</option>
       </select>
       </div>`;
   }
@@ -444,7 +448,7 @@ export class TreesComponent extends MobxLitElement {
 
   private renderDataDropdown() {
     const callback = () => {
-      this.datasetName = (this.shadowRoot!.getElementById('data') as any).value;
+      this.datasetName = (document.getElementById('data') as any).value;
       this.dataLoaded = false;
       this.loadAndPrepData();
     };
@@ -453,11 +457,10 @@ export class TreesComponent extends MobxLitElement {
       <div class="control">
       <label for="data">Data</label>
       <select name="data" id="data" @change=${() => callback()}>
-        <option value="music_queries" ?selected=${selected('music_queries')}>
+        <option value="music_new" ?selected=${selected('music_new')}>
           music (queries)
         </option>
-        <option value="music_suggestions" ?selected=${
-        selected('music_suggestions')}>
+        <option value="music_suggestions" ?selected=${selected('music_suggestions')}>
           music (suggestions)
         </option>
         <option value="dialog" ?selected=${selected('dialog')}>
@@ -507,7 +510,7 @@ export class TreesComponent extends MobxLitElement {
             return 'white';
           };
           this.clusterInfo[similarity][nClusters][idx].colorScheme =
-              colorScheme;
+            colorScheme;
         }
       }
     }
@@ -518,51 +521,56 @@ export class TreesComponent extends MobxLitElement {
     colorScale.domain(tokens).unknown('white');
     return colorScale;
   }
+
+  /** X position of a token, in px. */
+  private x(d: ParseData) {
+    if (this.enableCollapsed) {
+      return CHAR_WIDTH * (NUM_CHARS_COLLAPSED + 1) * d.idx;
+    }
+    return d.offset * CHAR_WIDTH;
+  }
+
+  /** Width of a token, in px. */
+  private width(d: ParseData) {
+    const numTokens = this.enableCollapsed ? NUM_CHARS_COLLAPSED : d.token.length;
+    return CHAR_WIDTH * numTokens;
+  }
+
+  /** Center of a token, in px. */
+  private center(d: ParseData) {
+    return this.x(d) + this.width(d) / 2;
+  }
+
+  /** Approximate the width a single text parse tree. */
+  private visWidth(d: TextData) {
+    const widths = Object.values(d.parseData)
+      .map(d => this.x(d) + this.width(d) + SVG_PAD * CHAR_WIDTH);
+    return Math.min(Math.max(...widths), MAX_VIS_WIDTH);
+  }
+
+  /** Approximate the width for the cluster of text parse trees. */
+  private visWidthAll(textDatas: TextData[]) {
+    const widths = textDatas.slice(0, NUM_TO_SET_WIDTH)
+      .flatMap((d: TextData) => this.visWidth(d));
+    return Math.max(...widths);
+  }
+  /** Make a curved path from the token to the HEAD token. */
+  private path(d: ParseData) {
+    const xStart = this.center(d);
+    const xEnd = this.center(d.headToken);
+    const xMiddle = (xStart + xEnd) / 2;
+
+    const yMiddleUntrunc = Y_TOP - Math.max(Math.abs(xEnd - xStart), 0);
+    const yMiddle = Math.max(yMiddleUntrunc, 0);
+
+    return `M${xStart},${Y_TOP} Q${xMiddle},${yMiddle} ${xEnd},${Y_TOP}`;
+  }
 }
 
-/** X position of a token, in px. */
-function x(d: ParseData) {
-  return d.offset * CHAR_WIDTH;
-}
 
-/** Width of a token, in px. */
-function width(d: ParseData) {
-  return CHAR_WIDTH * d.token.length;
-}
-
-/** Center of a token, in px. */
-function center(d: ParseData) {
-  return x(d) + width(d) / 2;
-}
-
-/** Approximate the width a single text parse tree. */
-function visWidth(d: TextData) {
-  const widths = Object.values(d.parseData)
-                     .map(d => x(d) + width(d) + SVG_PAD * CHAR_WIDTH);
-  return Math.min(Math.max(...widths), MAX_VIS_WIDTH);
-}
-
-/** Approximate the width for the cluster of text parse trees. */
-function visWidthAll(textDatas: TextData[]) {
-  const widths = textDatas.slice(0, NUM_TO_SET_WIDTH)
-                     .flatMap((d: TextData) => visWidth(d));
-  return Math.max(...widths);
-}
-
-/** Make a curved path from the token to the HEAD token. */
-function path(d: ParseData) {
-  const xStart = center(d);
-  const xEnd = center(d.headToken);
-  const xMiddle = (xStart + xEnd) / 2;
-
-  const yMiddleUntrunc = Y_TOP - Math.max(Math.abs(xEnd - xStart), 0);
-  const yMiddle = Math.max(yMiddleUntrunc, 0);
-
-  return `M${xStart},${Y_TOP} Q${xMiddle},${yMiddle} ${xEnd},${Y_TOP}`;
-}
 
 function getTokensForCluster(cluster: TextData[]) {
-  const allTokens: {[token: string]: number} = {};
+  const allTokens: { [token: string]: number } = {};
   for (const d of cluster) {
     for (const parseData of Object.values(d.parseData)) {
       if (!(parseData.token in allTokens)) {
