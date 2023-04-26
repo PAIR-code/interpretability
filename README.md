@@ -14,3 +14,7 @@ This repo contains code and articles on [PAIR](https://ai.google/pair) interpret
 ### Deep dreaming on text
 [text-dream](https://github.com/PAIR-code/interpretability/tree/master/text-dream) contains different experiments and tools to work with deep dreaming
 for text.
+
+
+### LinguisticLens
+[data-synth-syntax](https://github.com/PAIR-code/interpretability/tree/master/data-synth-syntax) contains [LinguisticLens](https://storage.googleapis.com/data-synth-trees/demo/index.html), a tool for visualizing generated text data.
