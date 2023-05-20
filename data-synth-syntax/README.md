@@ -18,7 +18,14 @@ To run a demo locally on the toy datasets, you must have yarn installed.
 and navigate to [http://localhost:1234](http://localhost:1234).
 
 ### Running on your own dataset
-We currently do not support this, but will soon (TODO: ereif.)
+Put your data in a csv in `input_data/`. Update the paths at the bottom of `preprocess_data.py`, and add the column header of the column you want to run the visualization on.
+
+```
+python -m venv env
+source env/bin/activate
+pip install -r requirements.txt
+python preprocess_data.py
+```
 
 ### Deploy (Big picture developers only)
 To deploy the demo to google cloud, you must be a known big-picture developer with gcp permissions for the project. This script will not work for external users.

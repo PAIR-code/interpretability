@@ -9,6 +9,8 @@ dist
 node_modules
 variables
 
+env
+
 # keep folder for scripts, but not most contents
 static/*.*
 !static/data/*.json
