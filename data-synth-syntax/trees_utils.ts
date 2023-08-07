@@ -79,10 +79,10 @@ export const DEP = {
   'RELCL': 'relative clause modifier',
   'SCOMP': 'open clausal complement'
 };
-
-const colors = [...d3.schemeSet3, ...d3.schemePastel1];
+const {schemeSet3, schemePastel1, schemeSet1} = d3;
+const colors = [...schemeSet3, ...schemePastel1];
 export const COLOR_POS = d3.scaleOrdinal(colors);
 COLOR_POS.domain(Object.keys(POS));
 
-export const COLOR_DEP = d3.scaleOrdinal(d3.schemeSet1);
+export const COLOR_DEP = d3.scaleOrdinal(schemeSet1);
 COLOR_DEP.domain(Object.keys(DEP));
