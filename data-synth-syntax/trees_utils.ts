@@ -80,8 +80,8 @@ export const DEP = {
   'SCOMP': 'open clausal complement'
 };
 
-console.log(d3);
-export const COLOR_POS = d3.scaleOrdinal(d3.schemeSet3);
+const colors = [...d3.schemeSet3, ...d3.schemePastel1];
+export const COLOR_POS = d3.scaleOrdinal(colors);
 COLOR_POS.domain(Object.keys(POS));
 
 export const COLOR_DEP = d3.scaleOrdinal(d3.schemeSet1);

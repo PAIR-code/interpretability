@@ -64,6 +64,7 @@ interface ClusterInfo {
 interface Cluster {
   top_sequence: FrequentSequence | {};
   colorScheme: any,
+  width: number;
 }
 
 const CHAR_HEIGHT = 12;
@@ -89,8 +90,9 @@ export class TreesComponent extends MobxLitElement {
   // "head" token) so we can't make it observable. (Instead, use dataLoaded.)
   data: TextData[] = [];
   // dataByCluster: TextData[][] = [];
+  private dragging = false;
 
-  clusterInfo: ClusterInfo = {};
+  @observable clusterInfo: ClusterInfo = {};
   @observable numClusterList: number[] = [];
 
   @observable dataLoaded = false;
@@ -178,7 +180,7 @@ export class TreesComponent extends MobxLitElement {
         d['all tags'].includes('User') || d['all tags'].includes('Uploaded');
     });
     this.data = rawData as TextData[];
-    this.data.sort((a, b) => a.orderIndex > b.orderIndex? 1 : -1)
+    this.data.sort((a, b) => a.orderIndex > b.orderIndex ? 1 : -1)
     // Calculate offsets and HEAD tokens.
     this.data.forEach((textData: TextData) => {
       let offset = SVG_PAD;
@@ -190,6 +192,16 @@ export class TreesComponent extends MobxLitElement {
         d.headToken = textData.parseData[d.headTokenIdx];
       });
     });
+    // Set width info
+    for (const [similarity, dataForSimilarity] of Object.entries(this.clusterInfo)) {
+      for (const [numClusters, dataForNumClusters] of Object.entries(dataForSimilarity)) {
+        const clusters = this.getClusters(this.similarity, this.nClusters);
+        for (const [clusterIdx, dataForCluster] of Object.entries(dataForNumClusters)) {
+          dataForCluster.width = 0;
+        }
+      }
+    }
+
     this.getTokenHighlights();
     this.dataLoaded = true;
   }
@@ -245,18 +257,19 @@ export class TreesComponent extends MobxLitElement {
   }
 
   private renderCluster(cluster: TextData[]) {
-    const style = styleMap({
-      'width': `${this.visWidthAll(cluster)}px`,
-      'align-items': this.enableCollapsed ? '' : 'center'
-    });
 
     const clusterInfo = this.clusterInfo[this.similarity][this.nClusters];
     const clusterIdx = cluster[0].clusterIds[this.similarity][this.nClusters];
     const topSequence = clusterInfo[clusterIdx].top_sequence;
 
+    const style = styleMap({
+      'align-items': this.enableCollapsed ? '' : 'center'
+    });
+    const headerStyle = styleMap({'width': `${this.visWidthAll(cluster)}px`});
+
     return html`
       <div class='holder' style=${style}>
-        <div class="clusterHeader">
+        <div class="clusterHeader" style=${headerStyle}>
           <div class="clusterCount">
             ${cluster.length} data point${cluster.length > 1 ? 's' : ''}
           </div>
@@ -270,6 +283,7 @@ export class TreesComponent extends MobxLitElement {
       </div>`;
   }
 
+
   /** Render the tokens of a text. */
   private renderText(d: TextData) {
     const collapseText = !(!this.enableCollapsed ||
@@ -281,7 +295,7 @@ export class TreesComponent extends MobxLitElement {
     const svgStyle = styleMap({
       'width': `${this.visWidth(d)}px`,
       'height': `${collapseText ? Y_COLLAPSED + CHAR_COLLAPSED_HEIGHT :
-          Y + CHAR_HEIGHT}px`
+        Y + CHAR_HEIGHT}px`
     });
 
     const classList = classMap({
@@ -397,11 +411,11 @@ export class TreesComponent extends MobxLitElement {
   private renderLegend() {
     if (!this.colorPos) return;
     return html`<div class="legend">${Array.from(Object.keys(POS))
-        .map(
-          (key: string) =>
-            html`<div class="legend-group"><span class="legend-text">${key}</span><div class="legend-square" style=${styleMap({
-              'background-color': COLOR_POS(key)
-            })}></div></div>`)}</div>`;
+      .map(
+        (key: string) =>
+          html`<div class="legend-group"><span class="legend-text">${key}</span><div class="legend-square" style=${styleMap({
+            'background-color': COLOR_POS(key)
+          })}></div></div>`)}</div>`;
   }
 
   private renderCheckbox(

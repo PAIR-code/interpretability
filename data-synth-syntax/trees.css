@@ -35,7 +35,8 @@ body {
   flex-shrink: 0;
   overflow: hidden;
   margin-top: 10px;
-  min-width: 175px;
+  position: relative;
+  user-select: none;
 }
 
 .clusterHeader {
@@ -44,7 +45,9 @@ body {
   height: 55px;
   padding: 10px 0 3px;
   text-align: center;
-  width: 100%;
+  resize: horizontal;
+  overflow: hidden;
+  min-width: 100%;
 }
 
 #header {
