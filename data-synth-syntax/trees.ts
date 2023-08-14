@@ -89,8 +89,7 @@ export class TreesComponent extends MobxLitElement {
   // dataByCluster is recursive (tokens have a pointer to their dependency
   // "head" token) so we can't make it observable. (Instead, use dataLoaded.)
   data: TextData[] = [];
-  // dataByCluster: TextData[][] = [];
-  private dragging = false;
+  private hovering = false;
 
   @observable clusterInfo: ClusterInfo = {};
   @observable numClusterList: number[] = [];
@@ -265,7 +264,7 @@ export class TreesComponent extends MobxLitElement {
     const style = styleMap({
       'align-items': this.enableCollapsed ? '' : 'center'
     });
-    const headerStyle = styleMap({'width': `${this.visWidthAll(cluster)}px`});
+    const headerStyle = styleMap({ 'width': `${this.visWidthAll(cluster)}px` });
 
     return html`
       <div class='holder' style=${style}>
@@ -337,6 +336,7 @@ export class TreesComponent extends MobxLitElement {
     }
 
     const mouseEnter = () => {
+      this.hovering = true;
       if (this.enableCollapsed) return;
       this.highlightedDep = d.dep;
       this.highlightedPos = d.pos;
@@ -344,11 +344,17 @@ export class TreesComponent extends MobxLitElement {
       this.highlightedToken = d.token;
     };
     const mouseLeave = () => {
+      this.hovering = false;
       if (this.enableCollapsed) return;
-      this.highlightedDep = null;
-      this.highlightedPos = null;
-      this.highlightedTextIndex = null;
-      this.highlightedToken = null;
+      setTimeout(() => {
+        if (!this.hovering) {
+          this.highlightedDep = null;
+          this.highlightedPos = null;
+          this.highlightedTextIndex = null;
+          this.highlightedToken = null;
+        }
+      }, 1000)
+
     };
 
     const renderEdges = collapseText ? svg`` : svg`
