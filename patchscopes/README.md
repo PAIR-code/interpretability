@@ -1,1 +1,1 @@
-"Patchscopes: A Unifying Framework for Inspecting Hidden Representations of Language Models" Website
+"🩺 Patchscopes: A Unifying Framework for Inspecting Hidden Representations of Language Models" Website
