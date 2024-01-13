@@ -52,7 +52,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title"><samp>Patchscopes</samp>: A Unifying Framework for Inspecting Hidden Representations of Language Models</h1>
+            <h1 class="title is-1 publication-title">🩺 <samp>Patchscopes</samp>: A Unifying Framework for Inspecting Hidden Representations of Language Models</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -120,18 +120,20 @@
       <div class="publication-flipped">
         <div class="content has-text-justified">
             <p style="text-align:center;">
-               <img src="static/images/method-1.png"  style="width: 80%; height: 80%"/>
+               <img src="static/images/method.png"  style="width: 80%; height: 80%"/>
                <br>
             </p>
-            <h3 class="subtitle is-size-5-tablet has-text-left pb-5">
-              Given a representation, we propose to decode specific information from it by “patching” it into a separate inference pass that encourages the extraction of that information, independently of the original context. <span><br>
-              A "<samp>Patchscope</samp>" is a configuration of our framework that can be viewed as an inspection tool geared towards a particular objective. <span><br>
-                For example, this figure shows a <samp>Patchscope</samp> for decoding what is encoded in the representation of “CEO” in the source prompt (left). <span><br>
-                  We use a target prompt (right) comprised of few-shot demonstrations of token repetitions, which encourages decoding the token identity given a hidden representation.<span><br><span><br>
-                    <u>Step 1:</u> Feeding source prompt to source model and running forward computation. <span><br>
-<u>Step 2:</u> Applying an optional transformation to source hidden states at source layer. <span><br>
-<u>Step 3:</u> Feeding target prompt to target model and running forward computation up to target layer. <span><br>
-<u>Step 4:</u> Patching target activations at target layer with the transformed representation, calculated at step 2, and continuing the forward computation from that layer onward. <span><br>
+            <h3 class="subtitle is-size-5-tablet has-text-left pb-5" style="font-weight: normal">
+              Given a representation, we propose to decode specific information from it by “patching” it into a separate inference pass that encourages the extraction of that information, independently of the original context. <span>
+              A "<samp>Patchscope</samp>" is a configuration of our framework that can be viewed as an inspection tool geared towards a particular objective. <span><br><br>
+
+              For example, this figure shows a <samp>Patchscope</samp> for decoding what is encoded in the representation of <i>"CEO"</i> in the source prompt (left). <span>
+              We use a target prompt (right) comprised of few-shot demonstrations of token repetitions, which encourages decoding the token identity given a hidden representation.<span><br><span><br>
+
+              <u>Step 1:</u> Run the forward computation on the source prompt in the source model. <span><br>
+              <u>Step 2:</u> Apply an optional transformation to the source hidden state at source layer. <span><br>
+              <u>Step 3:</u> Run the forward computation on the target prompt up to the target layer in the target model. <span><br>
+              <u>Step 4:</u> Patch the target representation of <i>"?"</i> at the target layer with the transformed representation (from step 2), and continue the forward computation from that layer onward. <span><br>
             </h3>
         </div>
       </div>
@@ -145,86 +147,118 @@
 <!-- Image carousel -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container">
+    <div class="container is-max-desktop">
       <div id="results-carousel" class="carousel results-carousel">
-
-       <div class="item">
-         <h2 class="subtitle is-size-3-tablet has-text-weight-bold has-text-centered has-background-info-light mr-0 pt-3 pb-3">
+        <div class="item">
+          <h2 class="subtitle is-size-3-tablet has-text-weight-bold has-text-centered has-background-info-light mr-0 pt-3 pb-3">
            Abstract
-           </h2>
-         <h3 class="subtitle is-size-4-tablet has-text-left has-background-info-light pr-4 pl-4 pt-3 pb-3">
-         <p>
-           Inspecting the information encoded in hidden representations of large language models (LLMs) can explain models' behavior and verify their alignment with human values. <br>
-           Given the capabilities of LLMs in generating human-understandable text, we propose leveraging the model itself to explain its internal representations in natural language. <br>
-           We introduce a framework called <samp>Patchscopes</samp> and show how it can be used to answer a wide range of questions about an LLM's computation. <br>
-           We show that prior interpretability methods based on projecting representations into the vocabulary space and intervening on the LLM computation can be viewed as instances of this framework. <br>
-           Moreover, several of their shortcomings such as failure in inspecting early layers or lack of expressivity can be mitigated by <samp>Patchscopes</samp>. <br>
-           Beyond unifying prior inspection techniques, <samp>Patchscopes</samp> also opens up <em>new</em> possibilities such as using a more capable model to explain the representations of a smaller model, and unlocks new applications such as self-correction in multi-hop reasoning.
-	 </p>
-         </h3>
-      </div>
-	      
-       <div class="item">
-        <h2 class="subtitle is-size-3-tablet has-text-weight-bold has-text-centered has-background-info-light mr-0 pt-3 pb-3">
-          How is it related to prior work?
-        </h2>
-         <h3 class="subtitle is-size-4-tablet has-text-left pr-4 pl-4 pt-3 pb-3">
-           <p>
-             <samp>Patchscopes</samp> can be configured to answer a wide range of questions about an LLM's computation. Many prominent interpretability methods can be cast as its special instances, and several of their limitations such as failure in inspecting early layers or lack of expressivity can be mitigated with a new <samp>Patchscope</samp>. <br>
-             Additionally, its generality enables novel inspection possibilities and helps address questions that are hard to answer with existing methods. For example how do LLMs contextualize input entity names in early layers? This is where vocabulary projections mostly fail and other methods only provide a binary signal of whether the entity has been resolved, at best. We present a <samp>Patchscope</samp> that verbalizes the gradual entity resolution process.
-           </p>
-         <p style="text-align:center;">
-           <br><br>
-           <img src="static/images/related.png"  style="width: 80%; height: 80%"/>
-         </p>
-         </h3>
-      </div>
+          </h2>
+          <h3 class="subtitle is-size-4-tablet has-text-left has-background-info-light pr-4 pl-4 pt-3 pb-3">
+            <p>
+            Inspecting the information encoded in hidden representations of large language models (LLMs) can explain models' behavior and verify their alignment with human values. 
+            Given the capabilities of LLMs in generating human-understandable text, we propose leveraging the model itself to explain its internal representations in natural language. <br><br>
+            We introduce a framework called <samp>Patchscopes</samp> and show how it can be used to answer a wide range of questions about an LLM's computation. 
+            We show that prior interpretability methods based on projecting representations into the vocabulary space and intervening on the LLM computation can be viewed as instances of this framework.
+            Moreover, several of their shortcomings such as failure in inspecting early layers or lack of expressivity can be mitigated by <samp>Patchscopes</samp>. <br><br>
+            Beyond unifying prior inspection techniques, <samp>Patchscopes</samp> also opens up <em>new</em> possibilities such as using a more capable model to explain the representations of a smaller model, and unlocks new applications such as self-correction in multi-hop reasoning.
+	          </p>
+          </h3>
+        </div>
 
-       <div class="item">
-        <h2 class="subtitle is-size-3-tablet has-text-weight-bold has-text-centered has-background-info-light mr-0 pt-3 pb-3">
-          Results (1) - <samp>Patchscopes</samp> are More robust across layers
-        </h2>
-         <h3 class="subtitle is-size-4-tablet has-text-left pr-4 pl-4 pt-3 pb-3">
-           <p>
-             We show that on next-token prediction from intermediate representations, our token identity method (<em>"cat->cat 135->135 hello->hello ?"</em>) outperforms prior methods, starting from the 10th layer.
-	   </p>
-         <p style="text-align:center;">
-           <br><br>
-           <img src="static/images/ntp.png"  style="width: 70%; height: 70%"/>
-         </p>
-         </h3>
-      </div>
+        <div class="item">
+          <h2 class="subtitle is-size-3-tablet has-text-weight-bold has-text-centered has-background-info-light mr-0 pt-3 pb-3">
+            How is it related to prior work?
+          </h2>
+          <h3 class="subtitle is-size-4-tablet has-text-left pr-4 pl-4 pt-3 pb-3">
+            <p>
+              <samp>Patchscopes</samp> can be configured to answer a wide range of questions about an LLM's computation. Many prominent interpretability methods can be cast as its special instances, and several of their limitations such as failure in inspecting early layers or lack of expressivity can be mitigated with a new <samp>Patchscope</samp>. <br><br>
+              Additionally, its generality enables novel inspection possibilities and helps address questions that are hard to answer with existing methods. For example how do LLMs contextualize input entity names in early layers? This is where vocabulary projections mostly fail and other methods only provide a binary signal of whether the entity has been resolved, at best. We present a <samp>Patchscope</samp> that verbalizes the gradual entity resolution process.
+            </p>
+            <p style="text-align:center;">
+              <br>
+              <img src="static/images/rw_table.png"  style="width: 95%; height: 95%"/>
+            </p>
+          </h3>
+        </div>
 
-       <div class="item">
-        <h2 class="subtitle is-size-3-tablet has-text-weight-bold has-text-centered has-background-info-light mr-0 pt-3 pb-3">
-          Results (2) - <samp>Patchscopes</samp> require no training data
-           </h2>
-         <h3 class="subtitle is-size-4-tablet has-text-left pr-4 pl-4 pt-3 pb-3">
-           <p>
-             We show <samp>Patchscopes</samp> can decode specific attributes of an entity from its LLM representations, when these are detached from the original context. Despite using no training data, it outperforms linear probing in various factual and commonsense reasoning tasks.
-	   </p>
-         <p style="text-align:center;">
-           <br><br>
-           <img src="static/images/resolution.png"  style="width: 80%; height: 80%"/>
-         </p>
-         </h3>
-      </div>
+        <div class="item">
+          <h2 class="subtitle is-size-3-tablet has-text-weight-bold has-text-centered has-background-info-light mr-0 pt-3 pb-3">
+            Results (1) <br> Next token prediction 🩺  is more robust across layers.
+          </h2>
+          <h3 class="subtitle is-size-4-tablet has-text-left pr-4 pl-4 pt-3 pb-3">
+            <p>
+              We show that a simple few-shot token identity <samp>Patchscope</samp> works very well, significantly better than mainstream vocab projection methods across multiple LLMs, from layer 10 onwards.
+            </p>
+          <p style="text-align:center;">
+            <br>
+            <img src="static/images/ntp.png"  style="width: 80%; height:80%"/>
+          </p>
+          </h3>
+        </div>
 
-       <div class="item">
-        <h2 class="subtitle is-size-3-tablet has-text-weight-bold has-text-centered has-background-info-light mr-0 pt-3 pb-3">
-           	Results (3) - <samp>Patchscopes</samp> are more expressive
-        </h2>
-         <h3 class="subtitle is-size-4-tablet has-text-left pr-4 pl-4 pt-3 pb-3">
-           <p>
-             By using our <samp>Patchscopes</samp>, we verbalize how LLMs gradually contextualize input entity names in early layers.
-	   </p>
-         <p style="text-align:center;">
-           <br><br>
-           <img src="static/images/attributes.png"  style="width: 50%; height: 50%"/>
-         </p>
-         </h3>
-      </div>
+        <div class="item">
+          <h2 class="subtitle is-size-3-tablet has-text-weight-bold has-text-centered has-background-info-light mr-0 pt-3 pb-3">
+            Results (2) <br> Attribute-extraction  🩺 requires no training data.
+          </h2>
+          <h3 class="subtitle is-size-4-tablet has-text-left pr-4 pl-4 pt-3 pb-3">
+            <p>
+              With <samp>Patchscopes</samp>, we can decode specific attributes from LLM representations, even when they are detached from their original context.
+              Despite using no training data, a zero-shot feature extraction <samp>Patchscope</samp> significantly outperforms linear probing in 6 out of 12 factual and commonsense reasoning tasks, and works comparably well to all but one of the remaining six.
+            </p>
+            <p style="text-align:center;">
+              <br>
+              <img src="static/images/attribute-extraction.png"  style="width: 70%; height: 70%"/>
+            </p>
+          </h3>
+        </div>
 
+        <div class="item">
+          <h2 class="subtitle is-size-3-tablet has-text-weight-bold has-text-centered has-background-info-light mr-0 pt-3 pb-3">
+            Results (3) <br>  Entity description 🩺 is more expressive than prior methods.
+          </h2>
+          <h3 class="subtitle is-size-4-tablet has-text-left pr-4 pl-4 pt-3 pb-3">
+            <p>
+              How LLMs contextualize input entity names in early layers is hard to answer with existing methods. This is where vocab projection methods mostly fail and other methods only provide a binary signal of whether the entity has been resolved. 
+              However, a few-shot entity description <samp>Patchscopes</samp> can verbalize the gradual entity resolution process in the very early layers.
+            </p>
+            <p style="text-align:center;">
+              <br>
+              <img src="static/images/entity_resolution.png"  style="width: 95%; height: 95%"/>
+            </p>
+          </h3>
+        </div>
+
+        <div class="item">
+          <h2 class="subtitle is-size-3-tablet has-text-weight-bold has-text-centered has-background-info-light mr-0 pt-3 pb-3">
+            Results (4) <br>  Cross-model 🩺 furhter improves expressivity.</samp>
+          </h2>
+          <h3 class="subtitle is-size-4-tablet has-text-left pr-4 pl-4 pt-3 pb-3">
+            <p>
+              We show that you can even get more expressive descriptions using a more capable model of the same family to explain the entity resolution process of a smaller model, e.g., using Vicuna 13B to explain Vicuna 7B.
+            </p>
+            <p style="text-align:center;">
+              <br>
+              <img src="static/images/x-model.png"  style="width: 60%; height: 60%"/>
+            </p>
+          </h3>
+        </div>
+
+        <div class="item">
+          <h2 class="subtitle is-size-3-tablet has-text-weight-bold has-text-centered has-background-info-light mr-0 pt-3 pb-3">
+            Results (5) <br> Chain-of-Thought 🩺 can fix multi-hop reasoning errors.
+          </h2>
+          <h3 class="subtitle is-size-4-tablet has-text-left pr-4 pl-4 pt-3 pb-3">
+            <p>
+              We also show a practical application, fixing latent multi-hop reasoning errors. 
+              Particularly, when the model is correct in each reasoning step, but fails to process their connection in-context, we show that our proposed <samp>Patchscope</samp> improves accuracy from 19.57% to 50%.
+            </p>
+            <p style="text-align:center;">
+              <br>
+              <img src="static/images/multihop_sample.png"  style="width: 90%; height:90%"/>
+            </p>
+          </h3>
+        </div>
+      </div>
   </div>
 </div>
 </div>
@@ -242,7 +276,7 @@
             Conclusions
           </h2>
           </p>
-          <h3 class="subtitle is-size-5-tablet has-text-left pb-5">
+          <h3 class="subtitle is-size-5-tablet has-text-left pb-5" style="font-weight: normal">
             We present <samp>Patchscopes</samp>, a simple and effective framework that leverages the ability of LLMs to generate human-like text for decoding information from intermediate LLM representations. <br><br>
             We show that existing interpretability methods can be cast as specific instances of <samp>Patchscopes</samp>, which cover only a small portion of all the possible configurations of the framework. Moreover, using new underexplored <samp>Patchscopes</samp> substantially improves our ability to decode various types of information from the model's internal computation, such as the output prediction and knowledge attributes, typically outperforming prominent methods that rely on projection to the vocabulary and probing. <br><br>
             Our framework enables new capabilities, such as analyzing the contextualization process of input tokens in the very early layers of the model, and is beneficial for practical applications, such as multi-hop reasoning correction.          </h3>
