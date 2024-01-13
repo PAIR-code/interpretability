@@ -1,1 +1,1 @@
-"Mismatch Quest: Visual and Textual Feedback for Image-Text Misalignment" Website
+"Patchscopes: A Unifying Framework for Inspecting Hidden Representations of Language Models" Website
