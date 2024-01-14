@@ -124,14 +124,14 @@
                <br>
             </p>
             <h3 class="subtitle is-size-5-tablet has-text-left pb-5" style="font-weight: normal">
-              We propose a framework that decodes specific information from a represetion within an LLM by “patching” it into the inference pass on a different prompt that has been designed to encourages the extraction of that information. <span>
+              We propose a framework that decodes specific information from a represetion within an LLM by “patching” it into the inference pass on a different prompt that has been designed to encourage the extraction of that information. <span>
               A "<samp>Patchscope</samp>" is a configuration of our framework that can be viewed as an inspection tool geared towards a particular objective. <span><br><br>
 
               For example, this figure shows a simple <samp>Patchscope</samp> for decoding what is encoded in the representation of <i>"CEO"</i> in the source prompt (left). <span>
               We patch a target prompt (right) comprised of few-shot demonstrations of token repetitions, which encourages decoding the token identity given a hidden representation.<span><br><span><br>
 
               <u>Step 1:</u> Run the forward computation on the source prompt in the source model. <span><br>
-              <u>Step 2:</u> Apply an optional transformation to the source layer's represetion. <span><br>
+              <u>Step 2:</u> Apply an optional transformation to the source layer's representation. <span><br>
               <u>Step 3:</u> Run the forward computation on the target prompt up to the target layer in the target model. <span><br>
               <u>Step 4:</u> Patch the target representation of <i>"?"</i> at the target layer; replacing it with the transformed representation (from step 2), and continue the forward computation from that layer onward. <span><br>
             </h3>
@@ -172,7 +172,7 @@
           <h3 class="subtitle is-size-4-tablet has-text-left pr-4 pl-4 pt-3 pb-3">
             <p>
               <samp>Patchscopes</samp> can be configured to answer a wide range of questions about an LLM's computation. Many prominent interpretability methods can be cast as special instances, and several of their limitations such as failure in inspecting early layers, or lack of expressivity, can be mitigated with a new <samp>Patchscope</samp>. <br><br>
-              Additionally, <samp>Patchscopes</samp> generality enables novel inspection possibilities and helps address questions that are hard to answer with existing methods. For example, how do LLMs contextualize input entity names in early layers? This is where vocabulary projections mostly fail and other methods only provide a binary signal of whether the entity has been resolved; but a <samp>Patchscope</samp> can be easily created to verbalize the gradual entity resolution process and works at early layers.
+              Additionally, <samp>Patchscopes'</samp> generality enables novel inspection possibilities and helps address questions that are hard to answer with existing methods. For example, how do LLMs contextualize input entity names in early layers? This is where vocabulary projections mostly fail and other methods only provide a binary signal of whether the entity has been resolved; but a <samp>Patchscope</samp> can be easily created to verbalize the gradual entity resolution process and works at early layers.
             </p>
             <p style="text-align:center;">
               <br>
@@ -278,7 +278,7 @@
           </p>
           <h3 class="subtitle is-size-5-tablet has-text-left pb-5" style="font-weight: normal">
             <samp>Patchscopes</samp> is a simple and effective framework that leverages the ability of LLMs to generate human-like text to decode information from intermediate LLM representations. <br><br>
-            We show that many existing interpretability methods can be cast as specific configurations of the more general  <samp>Patchscopes</samp> framework. Moreover, using new underexplored <samp>Patchscopes</samp> substantially improves our ability to decode various types of information from a model's internal computation, such as output prediction and knowledge attributes, typically outperforming prominent methods that rely on projection to the vocabulary and probing. <br><br>
+            We show that many existing interpretability methods can be cast as specific configurations of the more general <samp>Patchscopes</samp> framework. Moreover, using new underexplored <samp>Patchscopes</samp> substantially improves our ability to decode various types of information from a model's internal computation, such as output prediction and knowledge attributes, typically outperforming prominent methods that rely on projection to the vocabulary and probing. <br><br>
             Our framework also enables new forms of interpretability, such as analyzing the contextualization process of input tokens in the very early layers of the model, and is beneficial for practical applications, such as multi-hop reasoning correction. </h3>
         </div>
       </div>
