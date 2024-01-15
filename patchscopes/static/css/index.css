@@ -8,9 +8,18 @@ body {
     color: #000;
 }
 
-.link-block a {
-    margin-top: 5px;
-    margin-bottom: 5px;
+.button-space {
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.link-block {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 
 .dnerf {

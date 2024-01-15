@@ -9,27 +9,24 @@
   <meta property="og:description" content="Patchscopes: A Unifying Framework for Inspecting Hidden Representations of Language Models"/>
   <meta property="og:url" content="https://pair-code.github.io/interpretability/patchscopes/"/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image" content="static/image/method.png" />
   <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
-
+  <meta property="og:image:height" content="871"/>
 
   <meta name="twitter:title" content="Patchscopes">
   <meta name="twitter:description" content="Patchscopes: A Unifying Framework for Inspecting Hidden Representations of Language Models">
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/teaser.jpg">
+  <meta name="twitter:image" content="static/images/method.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Keywords for your paper to be indexed by-->
   <meta name="keywords" content="Interpretability, Large Language Models">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
 
   <title>Patchscopes </title>
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <!-- <link rel="stylesheet" href="static/css/bulma-carousel.min.css"> -->
   <link rel="stylesheet" href="static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
   <link rel="stylesheet"
@@ -39,7 +36,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
 </head>
@@ -57,59 +53,44 @@
               <!-- Paper authors -->
               <span class="author-block">
                 <a href="https://web.media.mit.edu/~asma_gh/" target="_blank">Asma Ghandeharioun</a><sup>*1</sup>,&nbsp;</span>
-                <span class="author-block">
-                  <a href="https://aviclu.github.io/" target="_blank">Avi Caciularu</a><sup>*1</sup>,&nbsp;</span><br>
-                  <span class="author-block">
-                    <a href="https://roadtolarissa.com/" target="_blank">Adam Pearce</a><sup>1</sup>,&nbsp;</span>
-                    <span class="author-block">
-                      <a href="https://research.google/people/lucas-dixon/" target="_blank">Lucas Dixon</a><sup>1</sup>,&nbsp;</span>
-                      <span class="author-block">
-                        <a href="https://mega002.github.io/" target="_blank">Mor Geva</a><sup>1,2</sup>&nbsp;</span>
-                  </div>
+              <span class="author-block">
+                <a href="https://aviclu.github.io/" target="_blank">Avi Caciularu</a><sup>*1</sup>,&nbsp;</span><br>
+              <span class="author-block">
+                <a href="https://roadtolarissa.com/" target="_blank">Adam Pearce</a><sup>1</sup>,&nbsp;</span>
+              <span class="author-block">
+                <a href="https://research.google/people/lucas-dixon/" target="_blank">Lucas Dixon</a><sup>1</sup>,&nbsp;</span>
+              <span class="author-block">
+                <a href="https://mega002.github.io/" target="_blank">Mor Geva</a><sup>1,2</sup>&nbsp;</span>
+            </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block"><sup>1</sup>Google Research,&nbsp;&nbsp;</span>
-                    <span class="author-block"><sup>2</sup>Tel Aviv University&nbsp;&nbsp;</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Equal Contribution</small></span>
-                  </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Google Research,&nbsp;&nbsp;</span>
+              <span class="author-block"><sup>2</sup>Tel Aviv University&nbsp;&nbsp;</span>
+              <span class="eql-cntrb"><small><br><sup>*</sup>Equal Contribution</small></span>
+            </div>
 
-<!--                  &lt;!&ndash; Github link &ndash;&gt;-->
-<!--                  <span class="link-block">-->
-<!--                    <a href="https://github.com/YOUR REPO HERE" target="_blank"-->
-<!--                    class="external-link button is-normal is-rounded is-dark">-->
-<!--                    <span class="icon">-->
-<!--                      <i class="fab fa-github"></i>-->
-<!--                    </span>-->
-<!--                    <span>Code</span>-->
-<!--                  </a>-->
-<!--                </span>-->
-
-                <!-- ArXiv abstract Link -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/2401.06102" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
+            <!-- ArXiv abstract Link -->
+            <div class="link-block">
+              <span class="button-space external-link button is-normal is-rounded is-dark">
+                <a href="https://arxiv.org/abs/2401.06102" target="_blank">
+                <span class="icon">
+                  <i class="ai ai-arxiv"></i>
+                </span>
+                <span>arXiv</span>
                 </a>
               </span>
-
-		  <!-- Github Link -->
-	        <span class="link-block">
-                  <a target="_blank"
-                  class="external-link button is-normal is-rounded is-dark"
-		  role="link" aria-disabled="true">
-                  <span class="icon">
-                      <svg class="svg-inline--fa fa-github fa-w-16" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-fa-i2svg=""><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg><!-- <i class="fab fa-github"></i> Font Awesome fontawesome.com -->
-                    </span>
-                  <span>Code (coming soon)</span>
-                </a>
+           
+              <span class="button-space external-link is-normal is-rounded is-dark">
+                <span class="icon">
+                  <svg class="svg-inline--fa fa-github fa-w-16" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-fa-i2svg=""><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg><!-- <i class="fab fa-github"></i> Font Awesome fontawesome.com -->
+                  </span>
+                <span>Code (coming soon)</span>
               </span>
             </div>
           </div>
         </div>
       </div>
+    </div>
 </section>
 
 <!-- Paper abstract -->
@@ -143,126 +124,154 @@
 </section>
 <!-- End paper abstract -->
 
-
-
-<!-- Image carousel -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container is-max-desktop">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item">
-          <h2 class="subtitle is-size-3-tablet has-text-weight-bold has-text-centered has-background-info-light mr-0 pt-3 pb-3">
-           Abstract
-          </h2>
-          <h3 class="subtitle is-size-4-tablet has-text-left has-background-info-light pr-4 pl-4 pt-3 pb-3">
-            <p>
-            Inspecting the information encoded in hidden representations of a large language model (LLM) can help explain the model's behavior and verify its alignment with human values. 
-            Given the capabilities of LLMs in generating human-understandable text, we propose leveraging the model itself to explain its internal representations in natural language. <br><br>
-            We introduce a framework called <samp>Patchscopes</samp> and show how it can be used to answer a wide range of questions about an LLM's computation. 
-            We show that many prior interpretability methods based on projecting representations into the vocabulary space and intervening on the LLM computation can be viewed as instances of this framework.
-            Moreover, several shortcomings of prior methods, such as failure in inspecting early layers or lack of expressivity, can be mitigated by <samp>Patchscopes</samp>. <br><br>
-            Beyond unifying prior inspection techniques, <samp>Patchscopes</samp> also opens up <em>new</em> possibilities such as using a more capable model to explain the representations of a smaller model, and unlocks new applications such as self-correction in multi-hop reasoning.
-	          </p>
-          </h3>
-        </div>
+      <h2 class="subtitle is-size-3-tablet has-text-weight-bold has-text-centered has-background-info-light mr-0 pt-3 pb-3">
+          Abstract
+      </h2>
+      <h3 class="subtitle is-size-4-tablet has-text-left pr-4 pl-4 pt-3 pb-3">
+        <p>
+        Inspecting the information encoded in hidden representations of a large language model (LLM) can help explain the model's behavior and verify its alignment with human values. 
+        Given the capabilities of LLMs in generating human-understandable text, we propose leveraging the model itself to explain its internal representations in natural language. <br><br>
+        We introduce a framework called <samp>Patchscopes</samp> and show how it can be used to answer a wide range of questions about an LLM's computation. 
+        We show that many prior interpretability methods based on projecting representations into the vocabulary space and intervening on the LLM computation can be viewed as instances of this framework.
+        Moreover, several shortcomings of prior methods, such as failure in inspecting early layers or lack of expressivity, can be mitigated by <samp>Patchscopes</samp>. <br><br>
+        Beyond unifying prior inspection techniques, <samp>Patchscopes</samp> also opens up <em>new</em> possibilities such as using a more capable model to explain the representations of a smaller model, and unlocks new applications such as self-correction in multi-hop reasoning.
+        </p>
+      </h3>
+    </div>
+  </div>
+</section>
 
-        <div class="item">
-          <h2 class="subtitle is-size-3-tablet has-text-weight-bold has-text-centered has-background-info-light mr-0 pt-3 pb-3">
-            How is it related to prior work?
-          </h2>
-          <h3 class="subtitle is-size-4-tablet has-text-left pr-4 pl-4 pt-3 pb-3">
-            <p>
-              <samp>Patchscopes</samp> can be configured to answer a wide range of questions about an LLM's computation. Many prominent interpretability methods can be cast as special instances, and several of their limitations such as failure in inspecting early layers, or lack of expressivity, can be mitigated with a new <samp>Patchscope</samp>. <br><br>
-              Additionally, <samp>Patchscopes'</samp> generality enables novel inspection possibilities and helps address questions that are hard to answer with existing methods. For example, how do LLMs contextualize input entity names in early layers? This is where vocabulary projections mostly fail and other methods only provide a binary signal of whether the entity has been resolved; but a <samp>Patchscope</samp> can be easily created to verbalize the gradual entity resolution process and works at early layers.
-            </p>
-            <p style="text-align:center;">
-              <br>
-              <img src="static/images/rw_table.png"  style="width: 95%; height: 95%"/>
-            </p>
-          </h3>
-        </div>
-
-        <div class="item">
-          <h2 class="subtitle is-size-3-tablet has-text-weight-bold has-text-centered has-background-info-light mr-0 pt-3 pb-3">
-            Results (1) <br> Next token prediction 🩺  is more robust across layers.
-          </h2>
-          <h3 class="subtitle is-size-4-tablet has-text-left pr-4 pl-4 pt-3 pb-3">
-            <p>
-              A simple few-shot token identity <samp>Patchscope</samp> works very well from layer 10 onwards, significantly better than mainstream vocab projection methods across multiple LLMs.
-            </p>
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">      
+      <div class="item">
+        <h2 class="subtitle is-size-3-tablet has-text-weight-bold has-text-centered has-background-info-light mr-0 pt-3 pb-3">
+          How is it related to prior work?
+        </h2>
+        <h3 class="subtitle is-size-4-tablet has-text-left pr-4 pl-4 pt-3 pb-3">
+          <p>
+            <samp>Patchscopes</samp> can be configured to answer a wide range of questions about an LLM's computation. Many prominent interpretability methods can be cast as special instances, and several of their limitations such as failure in inspecting early layers, or lack of expressivity, can be mitigated with a new <samp>Patchscope</samp>. <br><br>
+            Additionally, <samp>Patchscopes'</samp> generality enables novel inspection possibilities and helps address questions that are hard to answer with existing methods. For example, how do LLMs contextualize input entity names in early layers? This is where vocabulary projections mostly fail and other methods only provide a binary signal of whether the entity has been resolved; but a <samp>Patchscope</samp> can be easily created to verbalize the gradual entity resolution process and works at early layers.
+          </p>
           <p style="text-align:center;">
             <br>
-            <img src="static/images/ntp.png"  style="width: 80%; height:80%"/>
+            <img src="static/images/rw_table.png"  style="width: 95%; height: 95%"/>
           </p>
-          </h3>
-        </div>
-
-        <div class="item">
-          <h2 class="subtitle is-size-3-tablet has-text-weight-bold has-text-centered has-background-info-light mr-0 pt-3 pb-3">
-            Results (2) <br> Attribute-extraction  🩺 requires no training data.
-          </h2>
-          <h3 class="subtitle is-size-4-tablet has-text-left pr-4 pl-4 pt-3 pb-3">
-            <p>
-              With <samp>Patchscopes</samp>, we can decode specific attributes from LLM representations, even when they are detached from their original context.
-              Despite using no training data, a zero-shot feature extraction <samp>Patchscope</samp> significantly outperforms linear probing in 6 out of 12 factual and commonsense reasoning tasks, and works comparably well to all but one of the remaining six.
-            </p>
-            <p style="text-align:center;">
-              <br>
-              <img src="static/images/attribute-extraction.png"  style="width: 70%; height: 70%"/>
-            </p>
-          </h3>
-        </div>
-
-        <div class="item">
-          <h2 class="subtitle is-size-3-tablet has-text-weight-bold has-text-centered has-background-info-light mr-0 pt-3 pb-3">
-            Results (3) <br>  Entity description 🩺 is more expressive than prior methods.
-          </h2>
-          <h3 class="subtitle is-size-4-tablet has-text-left pr-4 pl-4 pt-3 pb-3">
-            <p>
-              How LLMs contextualize input entity names in early layers is hard to answer with existing methods. This is where vocab projection methods mostly fail and other methods only provide a binary signal of whether the entity has been resolved. 
-              However, a few-shot entity description <samp>Patchscope</samp> can verbalize the gradual entity resolution process in the very early layers.
-            </p>
-            <p style="text-align:center;">
-              <br>
-              <img src="static/images/entity_resolution.png"  style="width: 95%; height: 95%"/>
-            </p>
-          </h3>
-        </div>
-
-        <div class="item">
-          <h2 class="subtitle is-size-3-tablet has-text-weight-bold has-text-centered has-background-info-light mr-0 pt-3 pb-3">
-            Results (4) <br>  Cross-model 🩺 furhter improves expressivity.</samp>
-          </h2>
-          <h3 class="subtitle is-size-4-tablet has-text-left pr-4 pl-4 pt-3 pb-3">
-            <p>
-              You can even get more expressive descriptions using a more capable model of the same family to explain the entity resolution process of a smaller model, e.g., using Vicuna 13B to explain Vicuna 7B.
-            </p>
-            <p style="text-align:center;">
-              <br>
-              <img src="static/images/x-model.png"  style="width: 60%; height: 60%"/>
-            </p>
-          </h3>
-        </div>
-
-        <div class="item">
-          <h2 class="subtitle is-size-3-tablet has-text-weight-bold has-text-centered has-background-info-light mr-0 pt-3 pb-3">
-            Results (5) <br> Chain-of-Thought 🩺 can fix multi-hop reasoning errors.
-          </h2>
-          <h3 class="subtitle is-size-4-tablet has-text-left pr-4 pl-4 pt-3 pb-3">
-            <p>
-              We also show a practical application, fixing latent multi-hop reasoning errors. 
-              Particularly, when the model is correct in each reasoning step, but fails to process their connection in-context, we show that our proposed <samp>Patchscope</samp> improves accuracy from 19.57% to 50%.
-            </p>
-            <p style="text-align:center;">
-              <br>
-              <img src="static/images/multihop_sample.png"  style="width: 90%; height:90%"/>
-            </p>
-          </h3>
-        </div>
+        </h3>
       </div>
+    </div>
   </div>
-</div>
-</div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">        
+      <div class="item">
+        <h2 class="subtitle is-size-3-tablet has-text-weight-bold has-text-centered has-background-info-light mr-0 pt-3 pb-3">
+          Results (1) <br> Next token prediction 🩺  is more robust across layers.
+        </h2>
+        <h3 class="subtitle is-size-4-tablet has-text-left pr-4 pl-4 pt-3 pb-3">
+          <p>
+            A simple few-shot token identity <samp>Patchscope</samp> works very well from layer 10 onwards, significantly better than mainstream vocab projection methods across multiple LLMs.
+          </p>
+        <p style="text-align:center;">
+          <br>
+          <img src="static/images/ntp.png"  style="width: 80%; height:80%"/>
+        </p>
+        </h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="item">
+        <h2 class="subtitle is-size-3-tablet has-text-weight-bold has-text-centered has-background-info-light mr-0 pt-3 pb-3">
+          Results (2) <br> Attribute-extraction  🩺 requires no training data.
+        </h2>
+        <h3 class="subtitle is-size-4-tablet has-text-left pr-4 pl-4 pt-3 pb-3">
+          <p>
+            With <samp>Patchscopes</samp>, we can decode specific attributes from LLM representations, even when they are detached from their original context.
+            Despite using no training data, a zero-shot feature extraction <samp>Patchscope</samp> significantly outperforms linear probing in 6 out of 12 factual and commonsense reasoning tasks, and works comparably well to all but one of the remaining six.
+          </p>
+          <p style="text-align:center;">
+            <br>
+            <img src="static/images/attribute-extraction.png"  style="width: 70%; height: 70%"/>
+          </p>
+        </h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="item">
+        <h2 class="subtitle is-size-3-tablet has-text-weight-bold has-text-centered has-background-info-light mr-0 pt-3 pb-3">
+          Results (3) <br>  Entity description 🩺 is more expressive than prior methods.
+        </h2>
+        <h3 class="subtitle is-size-4-tablet has-text-left pr-4 pl-4 pt-3 pb-3">
+          <p>
+            How LLMs contextualize input entity names in early layers is hard to answer with existing methods. This is where vocab projection methods mostly fail and other methods only provide a binary signal of whether the entity has been resolved. 
+            However, a few-shot entity description <samp>Patchscope</samp> can verbalize the gradual entity resolution process in the very early layers.
+          </p>
+          <p style="text-align:center;">
+            <br>
+            <img src="static/images/entity_resolution.png"  style="width: 95%; height: 95%"/>
+          </p>
+        </h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="item">
+        <h2 class="subtitle is-size-3-tablet has-text-weight-bold has-text-centered has-background-info-light mr-0 pt-3 pb-3">
+          Results (4) <br>  Cross-model 🩺 furhter improves expressivity.</samp>
+        </h2>
+        <h3 class="subtitle is-size-4-tablet has-text-left pr-4 pl-4 pt-3 pb-3">
+          <p>
+            You can even get more expressive descriptions using a more capable model of the same family to explain the entity resolution process of a smaller model, e.g., using Vicuna 13B to explain Vicuna 7B.
+          </p>
+          <p style="text-align:center;">
+            <br>
+            <img src="static/images/x-model.png"  style="width: 60%; height: 60%"/>
+          </p>
+        </h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="item">
+        <h2 class="subtitle is-size-3-tablet has-text-weight-bold has-text-centered has-background-info-light mr-0 pt-3 pb-3">
+          Results (5) <br> Chain-of-Thought 🩺 can fix multi-hop reasoning errors.
+        </h2>
+        <h3 class="subtitle is-size-4-tablet has-text-left pr-4 pl-4 pt-3 pb-3">
+          <p>
+            We also show a practical application, fixing latent multi-hop reasoning errors. 
+            Particularly, when the model is correct in each reasoning step, but fails to process their connection in-context, we show that our proposed <samp>Patchscope</samp> improves accuracy from 19.57% to 50%.
+          </p>
+          <p style="text-align:center;">
+            <br>
+            <img src="static/images/multihop_sample.png"  style="width: 90%; height:90%"/>
+          </p>
+        </h3>
+      </div>
+    </div>
+  </div>
 </section>
 <!-- End image carousel -->
 
