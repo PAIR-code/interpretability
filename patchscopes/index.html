@@ -176,6 +176,7 @@
         <h3 class="subtitle is-size-4-tablet has-text-left pr-4 pl-4 pt-3 pb-3">
           <p>
             A simple few-shot token identity <samp>Patchscope</samp> works very well from layer 10 onwards, significantly better than mainstream vocab projection methods across multiple LLMs.
+            In this experiment, our target prompt is composed of k demonstrations representing an identity-like function, formatted as "<samp>tok<sub>1</sub> → tok<sub>1</sub> ; tok<sub>2</sub> → tok<sub>2</sub> ; . . . ; tok<sub>k</sub></samp>". 
           </p>
         <p style="text-align:center;">
           <br>
@@ -198,6 +199,7 @@
           <p>
             With <samp>Patchscopes</samp>, we can decode specific attributes from LLM representations, even when they are detached from their original context.
             Despite using no training data, a zero-shot feature extraction <samp>Patchscope</samp> significantly outperforms linear probing in 6 out of 12 factual and commonsense reasoning tasks, and works comparably well to all but one of the remaining six.
+            In this experiment, our target prompt is a verbalization of the relation followed by a placeholder for the subject. For example, to extract the official currency of the United States from the representation of <samp>States</samp>, we use the target prompt "<samp>The official currency of x</samp>". 
           </p>
           <p style="text-align:center;">
             <br>
@@ -220,6 +222,7 @@
           <p>
             How LLMs contextualize input entity names in early layers is hard to answer with existing methods. This is where vocab projection methods mostly fail and other methods only provide a binary signal of whether the entity has been resolved. 
             However, a few-shot entity description <samp>Patchscope</samp> can verbalize the gradual entity resolution process in the very early layers.
+            In this experiment, we use the following few-shot target prompt composed of three random entities and their corresponding description obtained from Wikipedia : "<samp>Syria: Country in the Middle East, Leonardo DiCaprio: American actor, Samsung: South Korean multinational major appliance and consumer electronics corporation, x</samp>".
           </p>
           <p style="text-align:center;">
             <br>
@@ -241,6 +244,7 @@
         <h3 class="subtitle is-size-4-tablet has-text-left pr-4 pl-4 pt-3 pb-3">
           <p>
             You can even get more expressive descriptions using a more capable model of the same family to explain the entity resolution process of a smaller model, e.g., using Vicuna 13B to explain Vicuna 7B.
+            The target prompt in this experiment is the same as the target prompt we used above.
           </p>
           <p style="text-align:center;">
             <br>
@@ -263,6 +267,7 @@
           <p>
             We also show a practical application, fixing latent multi-hop reasoning errors. 
             Particularly, when the model is correct in each reasoning step, but fails to process their connection in-context, we show that our proposed <samp>Patchscope</samp> improves accuracy from 19.57% to 50%.
+            The target prompt in this experiment is the same as the source prompt, with a modified attention mask. See the <a href="https://arxiv.org/abs/2401.06102" target="_blank">paper</a> for more details.
           </p>
           <p style="text-align:center;">
             <br>
