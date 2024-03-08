@@ -1,0 +1,779 @@
+	sample_id	prompt_target	position_target	target_baseline	object	subject	generations_baseline	generations_baseline_str	is_correct_baseline	prompt_source	position_source	source_cropped_toks
+0	0	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of water	liquid	water	[' is', ' H', '2', 'O', '.', '\n', '\n', 'Water', ' is', ' a', ' polar', ' molecule', ',', ' which', ' means', ' that', ' it', ' has', ' a', ' positive']	" is  H 2 O . 
+ 
+ Water  is  a  polar  molecule ,  which  means  that  it  has  a  positive"	False	 sometimes in less water than the frigates	3	[' sometimes', ' in', ' less', ' water']
+1	0	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of water	liquid	water	[' is', ' H', '2', 'O', '.', '\n', '\n', 'Water', ' is', ' a', ' polar', ' molecule', ',', ' which', ' means', ' that', ' it', ' has', ' a', ' positive']	" is  H 2 O . 
+ 
+ Water  is  a  polar  molecule ,  which  means  that  it  has  a  positive"	False	 has been subject to water damage, although	4	[' has', ' been', ' subject', ' to', ' water']
+2	0	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of water	liquid	water	[' is', ' H', '2', 'O', '.', '\n', '\n', 'Water', ' is', ' a', ' polar', ' molecule', ',', ' which', ' means', ' that', ' it', ' has', ' a', ' positive']	" is  H 2 O . 
+ 
+ Water  is  a  polar  molecule ,  which  means  that  it  has  a  positive"	False	 improve access to water and sanitation. It	3	[' improve', ' access', ' to', ' water']
+3	0	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of water	liquid	water	[' is', ' H', '2', 'O', '.', '\n', '\n', 'Water', ' is', ' a', ' polar', ' molecule', ',', ' which', ' means', ' that', ' it', ' has', ' a', ' positive']	" is  H 2 O . 
+ 
+ Water  is  a  polar  molecule ,  which  means  that  it  has  a  positive"	False	" the Chinese water torture.""
+"	2	[' the', ' Chinese', ' water']
+4	0	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of water	liquid	water	[' is', ' H', '2', 'O', '.', '\n', '\n', 'Water', ' is', ' a', ' polar', ' molecule', ',', ' which', ' means', ' that', ' it', ' has', ' a', ' positive']	" is  H 2 O . 
+ 
+ Water  is  a  polar  molecule ,  which  means  that  it  has  a  positive"	False	 subtropical and tropical waters, depending mainly	5	[' subt', 'rop', 'ical', ' and', ' tropical', ' water']
+5	1	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of iron	solid	iron	[' is', ' fer', 'rom', 'agnetic', ',', ' which', ' means', ' that', ' the', ' iron', ' atoms', ' are', ' arranged', ' in', ' a', ' regular', ' pattern', '.', ' When', ' the']	 is  fer rom agnetic ,  which  means  that  the  iron  atoms  are  arranged  in  a  regular  pattern .  When  the	False	 the use of cast iron balustrades and brackets,	4	[' the', ' use', ' of', ' cast', ' iron']
+6	1	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of iron	solid	iron	[' is', ' fer', 'rom', 'agnetic', ',', ' which', ' means', ' that', ' the', ' iron', ' atoms', ' are', ' arranged', ' in', ' a', ' regular', ' pattern', '.', ' When', ' the']	 is  fer rom agnetic ,  which  means  that  the  iron  atoms  are  arranged  in  a  regular  pattern .  When  the	False	 composed mostly of iron (32.1 %), oxygen	3	[' composed', ' mostly', ' of', ' iron']
+7	1	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of iron	solid	iron	[' is', ' fer', 'rom', 'agnetic', ',', ' which', ' means', ' that', ' the', ' iron', ' atoms', ' are', ' arranged', ' in', ' a', ' regular', ' pattern', '.', ' When', ' the']	 is  fer rom agnetic ,  which  means  that  the  iron  atoms  are  arranged  in  a  regular  pattern .  When  the	False	 because the necessary iron making and metal	3	[' because', ' the', ' necessary', ' iron']
+8	1	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of iron	solid	iron	[' is', ' fer', 'rom', 'agnetic', ',', ' which', ' means', ' that', ' the', ' iron', ' atoms', ' are', ' arranged', ' in', ' a', ' regular', ' pattern', '.', ' When', ' the']	 is  fer rom agnetic ,  which  means  that  the  iron  atoms  are  arranged  in  a  regular  pattern .  When  the	False	 destination point for iron ore shipped from	3	[' destination', ' point', ' for', ' iron']
+9	1	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of iron	solid	iron	[' is', ' fer', 'rom', 'agnetic', ',', ' which', ' means', ' that', ' the', ' iron', ' atoms', ' are', ' arranged', ' in', ' a', ' regular', ' pattern', '.', ' When', ' the']	 is  fer rom agnetic ,  which  means  that  the  iron  atoms  are  arranged  in  a  regular  pattern .  When  the	False	" from hematite ( iron oxide; Fe
+"	5	[' from', ' he', 'mat', 'ite', ' (', ' iron']
+10	2	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of oxygen	gas	oxygen	[' is', ' a', ' solid', '.', '\n', '\n', 'O', 'xy', 'gen', ' is', ' a', ' di', 'atomic', ' molecule', ' with', ' two', ' atoms', ' of', ' oxygen', '.']	" is  a  solid . 
+ 
+ O xy gen  is  a  di atomic  molecule  with  two  atoms  of  oxygen ."	False	 resulted in dropped oxygen masks and	3	[' resulted', ' in', ' dropped', ' oxygen']
+11	2	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of oxygen	gas	oxygen	[' is', ' a', ' solid', '.', '\n', '\n', 'O', 'xy', 'gen', ' is', ' a', ' di', 'atomic', ' molecule', ' with', ' two', ' atoms', ' of', ' oxygen', '.']	" is  a  solid . 
+ 
+ O xy gen  is  a  di atomic  molecule  with  two  atoms  of  oxygen ."	False	 includes a clinic with oxygen treatment facilities.	4	[' includes', ' a', ' clinic', ' with', ' oxygen']
+12	2	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of oxygen	gas	oxygen	[' is', ' a', ' solid', '.', '\n', '\n', 'O', 'xy', 'gen', ' is', ' a', ' di', 'atomic', ' molecule', ' with', ' two', ' atoms', ' of', ' oxygen', '.']	" is  a  solid . 
+ 
+ O xy gen  is  a  di atomic  molecule  with  two  atoms  of  oxygen ."	False	 published first. The name oxygen was coined	5	[' published', ' first', '.', ' The', ' name', ' oxygen']
+13	2	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of oxygen	gas	oxygen	[' is', ' a', ' solid', '.', '\n', '\n', 'O', 'xy', 'gen', ' is', ' a', ' di', 'atomic', ' molecule', ' with', ' two', ' atoms', ' of', ' oxygen', '.']	" is  a  solid . 
+ 
+ O xy gen  is  a  di atomic  molecule  with  two  atoms  of  oxygen ."	False	 levels of dissolved oxygen and its pH ranges	3	[' levels', ' of', ' dissolved', ' oxygen']
+14	2	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of oxygen	gas	oxygen	[' is', ' a', ' solid', '.', '\n', '\n', 'O', 'xy', 'gen', ' is', ' a', ' di', 'atomic', ' molecule', ' with', ' two', ' atoms', ' of', ' oxygen', '.']	" is  a  solid . 
+ 
+ O xy gen  is  a  di atomic  molecule  with  two  atoms  of  oxygen ."	False	 the diffusion of oxygen into the underlying	3	[' the', ' diffusion', ' of', ' oxygen']
+15	3	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of gold	solid	gold	[' is', ' a', ' solid', '.', '\n', '\n', 'Gold', ' is', ' a', ' soft', ' metal', ',', ' and', ' is', ' easily', ' scratched', '.', '\n', '\n', 'Gold']	" is  a  solid . 
+ 
+ Gold  is  a  soft  metal ,  and  is  easily  scratched . 
+ 
+ Gold"	True	 blue clothes, with a gold laced hat that	5	[' blue', ' clothes', ',', ' with', ' a', ' gold']
+16	3	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of gold	solid	gold	[' is', ' a', ' solid', '.', '\n', '\n', 'Gold', ' is', ' a', ' soft', ' metal', ',', ' and', ' is', ' easily', ' scratched', '.', '\n', '\n', 'Gold']	" is  a  solid . 
+ 
+ Gold  is  a  soft  metal ,  and  is  easily  scratched . 
+ 
+ Gold"	True	 set of twelve gold medallions,	3	[' set', ' of', ' twelve', ' gold']
+17	3	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of gold	solid	gold	[' is', ' a', ' solid', '.', '\n', '\n', 'Gold', ' is', ' a', ' soft', ' metal', ',', ' and', ' is', ' easily', ' scratched', '.', '\n', '\n', 'Gold']	" is  a  solid . 
+ 
+ Gold  is  a  soft  metal ,  and  is  easily  scratched . 
+ 
+ Gold"	True	 Illmatic is the gold standard that	4	[' Ill', 'matic', ' is', ' the', ' gold']
+18	3	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of gold	solid	gold	[' is', ' a', ' solid', '.', '\n', '\n', 'Gold', ' is', ' a', ' soft', ' metal', ',', ' and', ' is', ' easily', ' scratched', '.', '\n', '\n', 'Gold']	" is  a  solid . 
+ 
+ Gold  is  a  soft  metal ,  and  is  easily  scratched . 
+ 
+ Gold"	True	" splendor"". The palaces had gold rafters to support"	7	"[' spl', 'endor', '"".', ' The', ' pal', 'aces', ' had', ' gold']"
+19	3	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of gold	solid	gold	[' is', ' a', ' solid', '.', '\n', '\n', 'Gold', ' is', ' a', ' soft', ' metal', ',', ' and', ' is', ' easily', ' scratched', '.', '\n', '\n', 'Gold']	" is  a  solid . 
+ 
+ Gold  is  a  soft  metal ,  and  is  easily  scratched . 
+ 
+ Gold"	True	 Charlotte were in gold mining regions	3	[' Charlotte', ' were', ' in', ' gold']
+20	4	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of mercury	liquid	mercury	[' is', ' liquid', '.', '\n', '\n', 'Merc', 'ury', ' is', ' a', ' metal', ' that', ' is', ' soft', ',', ' mal', 'le', 'able', ',', ' and', ' duct']	" is  liquid . 
+ 
+ Merc ury  is  a  metal  that  is  soft ,  mal le able ,  and  duct"	True	 (Zn), cadmium (Cd) and mercury (Hg). The further	12	[' (', 'Z', 'n', '),', ' cad', 'm', 'ium', ' (', 'C', 'd', ')', ' and', ' mercury']
+21	4	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of mercury	liquid	mercury	[' is', ' liquid', '.', '\n', '\n', 'Merc', 'ury', ' is', ' a', ' metal', ' that', ' is', ' soft', ',', ' mal', 'le', 'able', ',', ' and', ' duct']	" is  liquid . 
+ 
+ Merc ury  is  a  metal  that  is  soft ,  mal le able ,  and  duct"	True	 with an appropriate mercury halide HgX2, where	3	[' with', ' an', ' appropriate', ' mercury']
+22	4	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of mercury	liquid	mercury	[' is', ' liquid', '.', '\n', '\n', 'Merc', 'ury', ' is', ' a', ' metal', ' that', ' is', ' soft', ',', ' mal', 'le', 'able', ',', ' and', ' duct']	" is  liquid . 
+ 
+ Merc ury  is  a  metal  that  is  soft ,  mal le able ,  and  duct"	True	 liquid, it was used in mercury switches (including	6	[' liquid', ',', ' it', ' was', ' used', ' in', ' mercury']
+23	4	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of mercury	liquid	mercury	[' is', ' liquid', '.', '\n', '\n', 'Merc', 'ury', ' is', ' a', ' metal', ' that', ' is', ' soft', ',', ' mal', 'le', 'able', ',', ' and', ' duct']	" is  liquid . 
+ 
+ Merc ury  is  a  metal  that  is  soft ,  mal le able ,  and  duct"	True	 who suggested mercury be used as a	2	[' who', ' suggested', ' mercury']
+24	4	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of mercury	liquid	mercury	[' is', ' liquid', '.', '\n', '\n', 'Merc', 'ury', ' is', ' a', ' metal', ' that', ' is', ' soft', ',', ' mal', 'le', 'able', ',', ' and', ' duct']	" is  liquid . 
+ 
+ Merc ury  is  a  metal  that  is  soft ,  mal le able ,  and  duct"	True	 substances such as mercury and phosphorus. Habitat	3	[' substances', ' such', ' as', ' mercury']
+25	5	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of aluminum	solid	aluminum	[' is', ' a', ' solid', '.', '\n', '\n', 'Al', 'uminum', ' is', ' a', ' metal', ' that', ' is', ' used', ' in', ' many', ' different', ' applications', '.', ' It']	" is  a  solid . 
+ 
+ Al uminum  is  a  metal  that  is  used  in  many  different  applications .  It"	True	 railway yard and aluminum plant in the	3	[' railway', ' yard', ' and', ' aluminum']
+26	5	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of aluminum	solid	aluminum	[' is', ' a', ' solid', '.', '\n', '\n', 'Al', 'uminum', ' is', ' a', ' metal', ' that', ' is', ' used', ' in', ' many', ' different', ' applications', '.', ' It']	" is  a  solid . 
+ 
+ Al uminum  is  a  metal  that  is  used  in  many  different  applications .  It"	True	 structural use of aluminum in building	3	[' structural', ' use', ' of', ' aluminum']
+27	5	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of aluminum	solid	aluminum	[' is', ' a', ' solid', '.', '\n', '\n', 'Al', 'uminum', ' is', ' a', ' metal', ' that', ' is', ' used', ' in', ' many', ' different', ' applications', '.', ' It']	" is  a  solid . 
+ 
+ Al uminum  is  a  metal  that  is  used  in  many  different  applications .  It"	True	 be left would be aluminum dishwasher parts,	4	[' be', ' left', ' would', ' be', ' aluminum']
+28	5	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of aluminum	solid	aluminum	[' is', ' a', ' solid', '.', '\n', '\n', 'Al', 'uminum', ' is', ' a', ' metal', ' that', ' is', ' used', ' in', ' many', ' different', ' applications', '.', ' It']	" is  a  solid . 
+ 
+ Al uminum  is  a  metal  that  is  used  in  many  different  applications .  It"	True	 or brushed aluminum surface, a solid	2	[' or', ' brushed', ' aluminum']
+29	5	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of aluminum	solid	aluminum	[' is', ' a', ' solid', '.', '\n', '\n', 'Al', 'uminum', ' is', ' a', ' metal', ' that', ' is', ' used', ' in', ' many', ' different', ' applications', '.', ' It']	" is  a  solid . 
+ 
+ Al uminum  is  a  metal  that  is  used  in  many  different  applications .  It"	True	 in the midst of aluminum cans. Nat simultaneously	4	[' in', ' the', ' midst', ' of', ' aluminum']
+30	6	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of nitrogen	gas	nitrogen	[' is', ' a', ' solid', '.', '\n', '\n', 'At', ' higher', ' temperatures', ',', ' nitrogen', ' becomes', ' a', ' gas', '.', '\n', '\n', 'At', ' even', ' higher']	" is  a  solid . 
+ 
+ At  higher  temperatures ,  nitrogen  becomes  a  gas . 
+ 
+ At  even  higher"	True	 dissociation of nitrogen and methane, forming	3	[' diss', 'ociation', ' of', ' nitrogen']
+31	6	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of nitrogen	gas	nitrogen	[' is', ' a', ' solid', '.', '\n', '\n', 'At', ' higher', ' temperatures', ',', ' nitrogen', ' becomes', ' a', ' gas', '.', '\n', '\n', 'At', ' even', ' higher']	" is  a  solid . 
+ 
+ At  higher  temperatures ,  nitrogen  becomes  a  gas . 
+ 
+ At  even  higher"	True	 shot out of a nitrogen gun; James did throw	4	[' shot', ' out', ' of', ' a', ' nitrogen']
+32	6	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of nitrogen	gas	nitrogen	[' is', ' a', ' solid', '.', '\n', '\n', 'At', ' higher', ' temperatures', ',', ' nitrogen', ' becomes', ' a', ' gas', '.', '\n', '\n', 'At', ' even', ' higher']	" is  a  solid . 
+ 
+ At  higher  temperatures ,  nitrogen  becomes  a  gas . 
+ 
+ At  even  higher"	True	 phylogenetically-ancient nitrogenases (discussed above)	5	[' phylogen', 'etically', '-', 'an', 'cient', ' nitrogen']
+33	6	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of nitrogen	gas	nitrogen	[' is', ' a', ' solid', '.', '\n', '\n', 'At', ' higher', ' temperatures', ',', ' nitrogen', ' becomes', ' a', ' gas', '.', '\n', '\n', 'At', ' even', ' higher']	" is  a  solid . 
+ 
+ At  higher  temperatures ,  nitrogen  becomes  a  gas . 
+ 
+ At  even  higher"	True	" prevent oxygen and nitrogen toxicity.
+"	3	[' prevent', ' oxygen', ' and', ' nitrogen']
+34	6	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of nitrogen	gas	nitrogen	[' is', ' a', ' solid', '.', '\n', '\n', 'At', ' higher', ' temperatures', ',', ' nitrogen', ' becomes', ' a', ' gas', '.', '\n', '\n', 'At', ' even', ' higher']	" is  a  solid . 
+ 
+ At  higher  temperatures ,  nitrogen  becomes  a  gas . 
+ 
+ At  even  higher"	True	 ammonia, hydrogen, nitrogen and methane, as opposed	4	[' ammonia', ',', ' hydrogen', ',', ' nitrogen']
+35	7	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of silicon	solid	silicon	[' is', ' a', ' solid', '.', ' At', ' higher', ' temperatures', ',', ' it', ' becomes', ' a', ' liquid', '.', ' At', ' even', ' higher', ' temperatures', ',', ' it', ' becomes']	 is  a  solid .  At  higher  temperatures ,  it  becomes  a  liquid .  At  even  higher  temperatures ,  it  becomes	True	 naturally occurring silicon dioxide found	2	[' naturally', ' occurring', ' silicon']
+36	7	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of silicon	solid	silicon	[' is', ' a', ' solid', '.', ' At', ' higher', ' temperatures', ',', ' it', ' becomes', ' a', ' liquid', '.', ' At', ' even', ' higher', ' temperatures', ',', ' it', ' becomes']	 is  a  solid .  At  higher  temperatures ,  it  becomes  a  liquid .  At  even  higher  temperatures ,  it  becomes	True	 Similar to silicon and aluminum,	2	[' Similar', ' to', ' silicon']
+37	7	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of silicon	solid	silicon	[' is', ' a', ' solid', '.', ' At', ' higher', ' temperatures', ',', ' it', ' becomes', ' a', ' liquid', '.', ' At', ' even', ' higher', ' temperatures', ',', ' it', ' becomes']	 is  a  solid .  At  higher  temperatures ,  it  becomes  a  liquid .  At  even  higher  temperatures ,  it  becomes	True	 heavily doped n-type silicon wafers in the production	6	[' heavily', ' d', 'oped', ' n', '-', 'type', ' silicon']
+38	7	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of silicon	solid	silicon	[' is', ' a', ' solid', '.', ' At', ' higher', ' temperatures', ',', ' it', ' becomes', ' a', ' liquid', '.', ' At', ' even', ' higher', ' temperatures', ',', ' it', ' becomes']	 is  a  solid .  At  higher  temperatures ,  it  becomes  a  liquid .  At  even  higher  temperatures ,  it  becomes	True	 power density than silicon power devices and	3	[' power', ' density', ' than', ' silicon']
+39	7	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of silicon	solid	silicon	[' is', ' a', ' solid', '.', ' At', ' higher', ' temperatures', ',', ' it', ' becomes', ' a', ' liquid', '.', ' At', ' even', ' higher', ' temperatures', ',', ' it', ' becomes']	 is  a  solid .  At  higher  temperatures ,  it  becomes  a  liquid .  At  even  higher  temperatures ,  it  becomes	True	 mass of the silicon-28 atom or should	3	[' mass', ' of', ' the', ' silicon']
+40	8	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of neon	gas	neon	[' is', ' a', ' gas', '.', ' At', ' higher', ' temperatures', ',', ' it', ' becomes', ' a', ' liquid', '.', ' At', ' even', ' higher', ' temperatures', ',', ' it', ' becomes']	 is  a  gas .  At  higher  temperatures ,  it  becomes  a  liquid .  At  even  higher  temperatures ,  it  becomes	True	 mixture of xenon and neon that is converted	5	[' mixture', ' of', ' xen', 'on', ' and', ' neon']
+41	8	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of neon	gas	neon	[' is', ' a', ' gas', '.', ' At', ' higher', ' temperatures', ',', ' it', ' becomes', ' a', ' liquid', '.', ' At', ' even', ' higher', ' temperatures', ',', ' it', ' becomes']	 is  a  gas .  At  higher  temperatures ,  it  becomes  a  liquid .  At  even  higher  temperatures ,  it  becomes	True	" nucleosynthesis and the neon burning process.
+"	5	[' nucle', 'os', 'ynthesis', ' and', ' the', ' neon']
+42	8	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of neon	gas	neon	[' is', ' a', ' gas', '.', ' At', ' higher', ' temperatures', ',', ' it', ' becomes', ' a', ' liquid', '.', ' At', ' even', ' higher', ' temperatures', ',', ' it', ' becomes']	 is  a  gas .  At  higher  temperatures ,  it  becomes  a  liquid .  At  even  higher  temperatures ,  it  becomes	True	 year. X-Flight's neon green track and dark	6	"[' year', '.', ' X', '-', 'Flight', ""'s"", ' neon']"
+43	8	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of neon	gas	neon	[' is', ' a', ' gas', '.', ' At', ' higher', ' temperatures', ',', ' it', ' becomes', ' a', ' liquid', '.', ' At', ' even', ' higher', ' temperatures', ',', ' it', ' becomes']	 is  a  gas .  At  higher  temperatures ,  it  becomes  a  liquid .  At  even  higher  temperatures ,  it  becomes	True	 depletion of neon (see Table),	2	[' depletion', ' of', ' neon']
+44	8	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of neon	gas	neon	[' is', ' a', ' gas', '.', ' At', ' higher', ' temperatures', ',', ' it', ' becomes', ' a', ' liquid', '.', ' At', ' even', ' higher', ' temperatures', ',', ' it', ' becomes']	 is  a  gas .  At  higher  temperatures ,  it  becomes  a  liquid .  At  even  higher  temperatures ,  it  becomes	True		1	['ne', 'on']
+45	9	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of ethanol	liquid	ethanol	[' is', ' a', ' liquid', '.', '\n', '\n', 'E', 'than', 'ol', ' is', ' a', ' color', 'less', ',', ' fl', 'amm', 'able', ',', ' and', ' poisonous']	" is  a  liquid . 
+ 
+ E than ol  is  a  color less ,  fl amm able ,  and  poisonous"	True	 built with an ethanol-ready engine	3	[' built', ' with', ' an', ' ethanol']
+46	9	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of ethanol	liquid	ethanol	[' is', ' a', ' liquid', '.', '\n', '\n', 'E', 'than', 'ol', ' is', ' a', ' color', 'less', ',', ' fl', 'amm', 'able', ',', ' and', ' poisonous']	" is  a  liquid . 
+ 
+ E than ol  is  a  color less ,  fl amm able ,  and  poisonous"	True	 imported oil if E85 ethanol was used instead of	5	[' imported', ' oil', ' if', ' E', '85', ' ethanol']
+47	9	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of ethanol	liquid	ethanol	[' is', ' a', ' liquid', '.', '\n', '\n', 'E', 'than', 'ol', ' is', ' a', ' color', 'less', ',', ' fl', 'amm', 'able', ',', ' and', ' poisonous']	" is  a  liquid . 
+ 
+ E than ol  is  a  color less ,  fl amm able ,  and  poisonous"	True	 neutral water – ethanol solution and be homologous	3	[' neutral', ' water', ' –', ' ethanol']
+48	9	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of ethanol	liquid	ethanol	[' is', ' a', ' liquid', '.', '\n', '\n', 'E', 'than', 'ol', ' is', ' a', ' color', 'less', ',', ' fl', 'amm', 'able', ',', ' and', ' poisonous']	" is  a  liquid . 
+ 
+ E than ol  is  a  color less ,  fl amm able ,  and  poisonous"	True	 tank by warming the ethanol fuel during starting,	4	[' tank', ' by', ' warming', ' the', ' ethanol']
+49	9	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of ethanol	liquid	ethanol	[' is', ' a', ' liquid', '.', '\n', '\n', 'E', 'than', 'ol', ' is', ' a', ' color', 'less', ',', ' fl', 'amm', 'able', ',', ' and', ' poisonous']	" is  a  liquid . 
+ 
+ E than ol  is  a  color less ,  fl amm able ,  and  poisonous"	True	 Volt to operate on ethanol fuel, as most new	4	[' Volt', ' to', ' operate', ' on', ' ethanol']
+50	10	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of sulfur	solid	sulfur	[' is', ' a', ' solid', '.', '\n', '\n', 'S', 'ulf', 'ur', ' is', ' a', ' chemical', ' element', ' with', ' symbol', ' S', ' and', ' atomic', ' number', ' 16']	" is  a  solid . 
+ 
+ S ulf ur  is  a  chemical  element  with  symbol  S  and  atomic  number  16"	True	 staining bright sulfur yellow. It	3	[' st', 'aining', ' bright', ' sulfur']
+51	10	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of sulfur	solid	sulfur	[' is', ' a', ' solid', '.', '\n', '\n', 'S', 'ulf', 'ur', ' is', ' a', ' chemical', ' element', ' with', ' symbol', ' S', ' and', ' atomic', ' number', ' 16']	" is  a  solid . 
+ 
+ S ulf ur  is  a  chemical  element  with  symbol  S  and  atomic  number  16"	True	 the surface with sulfurous and silicate	3	[' the', ' surface', ' with', ' sulfur']
+52	10	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of sulfur	solid	sulfur	[' is', ' a', ' solid', '.', '\n', '\n', 'S', 'ulf', 'ur', ' is', ' a', ' chemical', ' element', ' with', ' symbol', ' S', ' and', ' atomic', ' number', ' 16']	" is  a  solid . 
+ 
+ S ulf ur  is  a  chemical  element  with  symbol  S  and  atomic  number  16"	True	 plateaus, the result of sulfur dioxide sapping	6	[' plate', 'aus', ',', ' the', ' result', ' of', ' sulfur']
+53	10	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of sulfur	solid	sulfur	[' is', ' a', ' solid', '.', '\n', '\n', 'S', 'ulf', 'ur', ' is', ' a', ' chemical', ' element', ' with', ' symbol', ' S', ' and', ' atomic', ' number', ' 16']	" is  a  solid . 
+ 
+ S ulf ur  is  a  chemical  element  with  symbol  S  and  atomic  number  16"	True	 redox reaction, sulfur is oxidized from	4	[' red', 'ox', ' reaction', ',', ' sulfur']
+54	10	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of sulfur	solid	sulfur	[' is', ' a', ' solid', '.', '\n', '\n', 'S', 'ulf', 'ur', ' is', ' a', ' chemical', ' element', ' with', ' symbol', ' S', ' and', ' atomic', ' number', ' 16']	" is  a  solid . 
+ 
+ S ulf ur  is  a  chemical  element  with  symbol  S  and  atomic  number  16"	True	 higher-than-expected potassium and sulfur levels on the	7	[' higher', '-', 'than', '-', 'expected', ' potassium', ' and', ' sulfur']
+55	11	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of helium	gas	helium	[' is', ' a', ' superflu', 'id', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' helium', ' is', ' a', ' superflu', 'id', '.', '\n', '\n']	" is  a  superflu id . 
+ 
+ The  phase  of  matter  of  helium  is  a  superflu id . 
+ 
+"	False	 hydroquinone, but helium and neon do	5	[' hydro', 'quin', 'one', ',', ' but', ' helium']
+56	11	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of helium	gas	helium	[' is', ' a', ' superflu', 'id', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' helium', ' is', ' a', ' superflu', 'id', '.', '\n', '\n']	" is  a  superflu id . 
+ 
+ The  phase  of  matter  of  helium  is  a  superflu id . 
+ 
+"	False	 for the nearby helium line), FeII,	3	[' for', ' the', ' nearby', ' helium']
+57	11	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of helium	gas	helium	[' is', ' a', ' superflu', 'id', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' helium', ' is', ' a', ' superflu', 'id', '.', '\n', '\n']	" is  a  superflu id . 
+ 
+ The  phase  of  matter  of  helium  is  a  superflu id . 
+ 
+"	False	 hydrogen, the helium abundance is about	3	[' hydrogen', ',', ' the', ' helium']
+58	11	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of helium	gas	helium	[' is', ' a', ' superflu', 'id', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' helium', ' is', ' a', ' superflu', 'id', '.', '\n', '\n']	" is  a  superflu id . 
+ 
+ The  phase  of  matter  of  helium  is  a  superflu id . 
+ 
+"	False	 trends down groups, helium can be seen as a	4	[' trends', ' down', ' groups', ',', ' helium']
+59	11	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of helium	gas	helium	[' is', ' a', ' superflu', 'id', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' helium', ' is', ' a', ' superflu', 'id', '.', '\n', '\n']	" is  a  superflu id . 
+ 
+ The  phase  of  matter  of  helium  is  a  superflu id . 
+ 
+"	False	 mixture. However, helium is not narcotic, and	4	[' mixture', '.', ' However', ',', ' helium']
+60	12	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of lead	solid	lead	[' is', ' a', ' solid', '.', ' At', ' higher', ' temperatures', ',', ' it', ' becomes', ' a', ' liquid', '.', ' At', ' even', ' higher', ' temperatures', ',', ' it', ' becomes']	 is  a  solid .  At  higher  temperatures ,  it  becomes  a  liquid .  At  even  higher  temperatures ,  it  becomes	True	 France. He then held the lead until the second stage	6	[' France', '.', ' He', ' then', ' held', ' the', ' lead']
+61	12	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of lead	solid	lead	[' is', ' a', ' solid', '.', ' At', ' higher', ' temperatures', ',', ' it', ' becomes', ' a', ' liquid', '.', ' At', ' even', ' higher', ' temperatures', ',', ' it', ' becomes']	 is  a  solid .  At  higher  temperatures ,  it  becomes  a  liquid .  At  even  higher  temperatures ,  it  becomes	True	 to regain the lead with a late burst	3	[' to', ' regain', ' the', ' lead']
+62	12	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of lead	solid	lead	[' is', ' a', ' solid', '.', ' At', ' higher', ' temperatures', ',', ' it', ' becomes', ' a', ' liquid', '.', ' At', ' even', ' higher', ' temperatures', ',', ' it', ' becomes']	 is  a  solid .  At  higher  temperatures ,  it  becomes  a  liquid .  At  even  higher  temperatures ,  it  becomes	True	 Ramachandran for the lead role. Tirulokchandar	6	[' Ram', 'ach', 'and', 'ran', ' for', ' the', ' lead']
+63	12	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of lead	solid	lead	[' is', ' a', ' solid', '.', ' At', ' higher', ' temperatures', ',', ' it', ' becomes', ' a', ' liquid', '.', ' At', ' even', ' higher', ' temperatures', ',', ' it', ' becomes']	 is  a  solid .  At  higher  temperatures ,  it  becomes  a  liquid .  At  even  higher  temperatures ,  it  becomes	True	 French Navy, the lead ship of her class.	4	[' French', ' Navy', ',', ' the', ' lead']
+64	12	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of lead	solid	lead	[' is', ' a', ' solid', '.', ' At', ' higher', ' temperatures', ',', ' it', ' becomes', ' a', ' liquid', '.', ' At', ' even', ' higher', ' temperatures', ',', ' it', ' becomes']	 is  a  solid .  At  higher  temperatures ,  it  becomes  a  liquid .  At  even  higher  temperatures ,  it  becomes	True	 on February 19 to lead Wichita State against	4	[' on', ' February', ' 19', ' to', ' lead']
+65	13	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of ice cream	solid	ice cream	[' is', ' a', ' solid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' ice', ' cream', ' is', ' a', ' solid', '.', '\n', '\n', 'The']	" is  a  solid . 
+ 
+ The  phase  of  matter  of  ice  cream  is  a  solid . 
+ 
+ The"	True	" ""commandeering an ice cream truck in a frantic"	5	"[' ""', 'command', 'eering', ' an', ' ice', ' cream']"
+66	13	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of ice cream	solid	ice cream	[' is', ' a', ' solid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' ice', ' cream', ' is', ' a', ' solid', '.', '\n', '\n', 'The']	" is  a  solid . 
+ 
+ The  phase  of  matter  of  ice  cream  is  a  solid . 
+ 
+ The"	True	 goes to buy ice cream from an ice cream	4	[' goes', ' to', ' buy', ' ice', ' cream']
+67	13	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of ice cream	solid	ice cream	[' is', ' a', ' solid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' ice', ' cream', ' is', ' a', ' solid', '.', '\n', '\n', 'The']	" is  a  solid . 
+ 
+ The  phase  of  matter  of  ice  cream  is  a  solid . 
+ 
+ The"	True	 as burgers, ice cream floats, milkshakes,	4	[' as', ' burgers', ',', ' ice', ' cream']
+68	13	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of ice cream	solid	ice cream	[' is', ' a', ' solid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' ice', ' cream', ' is', ' a', ' solid', '.', '\n', '\n', 'The']	" is  a  solid . 
+ 
+ The  phase  of  matter  of  ice  cream  is  a  solid . 
+ 
+ The"	True	 be home ... eating ice cream instead of in	5	[' be', ' home', '...', ' eating', ' ice', ' cream']
+69	13	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of ice cream	solid	ice cream	[' is', ' a', ' solid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' ice', ' cream', ' is', ' a', ' solid', '.', '\n', '\n', 'The']	" is  a  solid . 
+ 
+ The  phase  of  matter  of  ice  cream  is  a  solid . 
+ 
+ The"	True	 peanut butter and ice cream as alternative	4	[' peanut', ' butter', ' and', ' ice', ' cream']
+70	14	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of coffee	liquid	coffee	[' is', ' a', ' solid', '.', '\n', '\n', 'The', ' coffee', ' is', ' ground', ' and', ' then', ' brewed', '.', '\n', '\n', 'The', ' coffee', ' is', ' brewed']	" is  a  solid . 
+ 
+ The  coffee  is  ground  and  then  brewed . 
+ 
+ The  coffee  is  brewed"	False	" Pietro"", one of the oldest coffee shops in the city."	7	"[' Piet', 'ro', '"",', ' one', ' of', ' the', ' oldest', ' coffee']"
+71	14	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of coffee	liquid	coffee	[' is', ' a', ' solid', '.', '\n', '\n', 'The', ' coffee', ' is', ' ground', ' and', ' then', ' brewed', '.', '\n', '\n', 'The', ' coffee', ' is', ' brewed']	" is  a  solid . 
+ 
+ The  coffee  is  ground  and  then  brewed . 
+ 
+ The  coffee  is  brewed"	False	 bring him a cup of coffee and say,' Stuart,	5	[' bring', ' him', ' a', ' cup', ' of', ' coffee']
+72	14	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of coffee	liquid	coffee	[' is', ' a', ' solid', '.', '\n', '\n', 'The', ' coffee', ' is', ' ground', ' and', ' then', ' brewed', '.', '\n', '\n', 'The', ' coffee', ' is', ' brewed']	" is  a  solid . 
+ 
+ The  coffee  is  ground  and  then  brewed . 
+ 
+ The  coffee  is  brewed"	False	 restaurant and coffee shop facilities,	2	[' restaurant', ' and', ' coffee']
+73	14	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of coffee	liquid	coffee	[' is', ' a', ' solid', '.', '\n', '\n', 'The', ' coffee', ' is', ' ground', ' and', ' then', ' brewed', '.', '\n', '\n', 'The', ' coffee', ' is', ' brewed']	" is  a  solid . 
+ 
+ The  coffee  is  ground  and  then  brewed . 
+ 
+ The  coffee  is  brewed"	False	 (including tea, green tea, coffee and consommé soup),	7	[' (', 'including', ' tea', ',', ' green', ' tea', ',', ' coffee']
+74	14	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of coffee	liquid	coffee	[' is', ' a', ' solid', '.', '\n', '\n', 'The', ' coffee', ' is', ' ground', ' and', ' then', ' brewed', '.', '\n', '\n', 'The', ' coffee', ' is', ' brewed']	" is  a  solid . 
+ 
+ The  coffee  is  ground  and  then  brewed . 
+ 
+ The  coffee  is  brewed"	False	 only Nicaraguan coffee in solidarity with	3	[' only', ' Nicarag', 'uan', ' coffee']
+75	15	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of wood	solid	wood	[' is', ' called', ' the', ' solid', ' state', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' wood', ' is', ' called', ' the', ' solid', ' state', '.']	" is  called  the  solid  state . 
+ 
+ The  phase  of  matter  of  wood  is  called  the  solid  state ."	True	 dawn, hide in a wood next to which the	5	[' dawn', ',', ' hide', ' in', ' a', ' wood']
+76	15	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of wood	solid	wood	[' is', ' called', ' the', ' solid', ' state', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' wood', ' is', ' called', ' the', ' solid', ' state', '.']	" is  called  the  solid  state . 
+ 
+ The  phase  of  matter  of  wood  is  called  the  solid  state ."	True	 with plenty of wood for construction;	3	[' with', ' plenty', ' of', ' wood']
+77	15	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of wood	solid	wood	[' is', ' called', ' the', ' solid', ' state', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' wood', ' is', ' called', ' the', ' solid', ' state', '.']	" is  called  the  solid  state . 
+ 
+ The  phase  of  matter  of  wood  is  called  the  solid  state ."	True	 Roper used a hickory wood frame built by	7	[' R', 'oper', ' used', ' a', ' h', 'ick', 'ory', ' wood']
+78	15	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of wood	solid	wood	[' is', ' called', ' the', ' solid', ' state', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' wood', ' is', ' called', ' the', ' solid', ' state', '.']	" is  called  the  solid  state . 
+ 
+ The  phase  of  matter  of  wood  is  called  the  solid  state ."	True	 mana. Only wood from trees is	3	[' mana', '.', ' Only', ' wood']
+79	15	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of wood	solid	wood	[' is', ' called', ' the', ' solid', ' state', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' wood', ' is', ' called', ' the', ' solid', ' state', '.']	" is  called  the  solid  state . 
+ 
+ The  phase  of  matter  of  wood  is  called  the  solid  state ."	True		0	['wood']
+80	16	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of plastic	solid	plastic	[' is', ' a', ' solid', '.', ' When', ' heated', ',', ' it', ' becomes', ' a', ' liquid', '.', ' When', ' cooled', ',', ' it', ' becomes', ' a', ' solid', ' again']	 is  a  solid .  When  heated ,  it  becomes  a  liquid .  When  cooled ,  it  becomes  a  solid  again	True	 from molded HDPE plastic with a funnel-like	4	[' from', ' molded', ' HD', 'PE', ' plastic']
+81	16	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of plastic	solid	plastic	[' is', ' a', ' solid', '.', ' When', ' heated', ',', ' it', ' becomes', ' a', ' liquid', '.', ' When', ' cooled', ',', ' it', ' becomes', ' a', ' solid', ' again']	 is  a  solid .  When  heated ,  it  becomes  a  liquid .  When  cooled ,  it  becomes  a  solid  again	True	 with a thick layer of plastic mantle and an	5	[' with', ' a', ' thick', ' layer', ' of', ' plastic']
+82	16	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of plastic	solid	plastic	[' is', ' a', ' solid', '.', ' When', ' heated', ',', ' it', ' becomes', ' a', ' liquid', '.', ' When', ' cooled', ',', ' it', ' becomes', ' a', ' solid', ' again']	 is  a  solid .  When  heated ,  it  becomes  a  liquid .  When  cooled ,  it  becomes  a  solid  again	True	 immortalized in plastic alongside	3	[' immortal', 'ized', ' in', ' plastic']
+83	16	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of plastic	solid	plastic	[' is', ' a', ' solid', '.', ' When', ' heated', ',', ' it', ' becomes', ' a', ' liquid', '.', ' When', ' cooled', ',', ' it', ' becomes', ' a', ' solid', ' again']	 is  a  solid .  When  heated ,  it  becomes  a  liquid .  When  cooled ,  it  becomes  a  solid  again	True	 purchase five tonnes of plastic explosives, 2,000	4	[' purchase', ' five', ' tonnes', ' of', ' plastic']
+84	16	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of plastic	solid	plastic	[' is', ' a', ' solid', '.', ' When', ' heated', ',', ' it', ' becomes', ' a', ' liquid', '.', ' When', ' cooled', ',', ' it', ' becomes', ' a', ' solid', ' again']	 is  a  solid .  When  heated ,  it  becomes  a  liquid .  When  cooled ,  it  becomes  a  solid  again	True	 supermarkets selling it in plastic packages and	4	[' supermarkets', ' selling', ' it', ' in', ' plastic']
+85	17	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of butter	solid	butter	[' is', ' solid', '.', '\n', '\n', 'But', 'ter', ' is', ' a', ' solid', ' at', ' room', ' temperature', '.', '\n', '\n', 'But', 'ter', ' is', ' a']	" is  solid . 
+ 
+ But ter  is  a  solid  at  room  temperature . 
+ 
+ But ter  is  a"	True	 or flickering butter lamps lighting	2	[' or', ' flickering', ' butter']
+86	17	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of butter	solid	butter	[' is', ' solid', '.', '\n', '\n', 'But', 'ter', ' is', ' a', ' solid', ' at', ' room', ' temperature', '.', '\n', '\n', 'But', 'ter', ' is', ' a']	" is  solid . 
+ 
+ But ter  is  a  solid  at  room  temperature . 
+ 
+ But ter  is  a"	True		1	['but', 'ter']
+87	17	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of butter	solid	butter	[' is', ' solid', '.', '\n', '\n', 'But', 'ter', ' is', ' a', ' solid', ' at', ' room', ' temperature', '.', '\n', '\n', 'But', 'ter', ' is', ' a']	" is  solid . 
+ 
+ But ter  is  a  solid  at  room  temperature . 
+ 
+ But ter  is  a"	True	 dairy products like butter. This may	3	[' dairy', ' products', ' like', ' butter']
+88	17	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of butter	solid	butter	[' is', ' solid', '.', '\n', '\n', 'But', 'ter', ' is', ' a', ' solid', ' at', ' room', ' temperature', '.', '\n', '\n', 'But', 'ter', ' is', ' a']	" is  solid . 
+ 
+ But ter  is  a  solid  at  room  temperature . 
+ 
+ But ter  is  a"	True	 deep-fried butter was paired	3	[' deep', '-', 'fried', ' butter']
+89	17	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of butter	solid	butter	[' is', ' solid', '.', '\n', '\n', 'But', 'ter', ' is', ' a', ' solid', ' at', ' room', ' temperature', '.', '\n', '\n', 'But', 'ter', ' is', ' a']	" is  solid . 
+ 
+ But ter  is  a  solid  at  room  temperature . 
+ 
+ But ter  is  a"	True	 steak. The butter is used in the	3	[' steak', '.', ' The', ' butter']
+90	18	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of honey	liquid	honey	[' is', ' a', ' solid', '.', '\n', '\n', 'H', 'oney', ' is', ' a', ' natural', ' sweet', 'ener', ',', ' and', ' it', ' is', ' a', ' natural', ' pres']	" is  a  solid . 
+ 
+ H oney  is  a  natural  sweet ener ,  and  it  is  a  natural  pres"	False	 a charm to keep honey bees from swarming.	4	[' a', ' charm', ' to', ' keep', ' honey']
+91	18	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of honey	liquid	honey	[' is', ' a', ' solid', '.', '\n', '\n', 'H', 'oney', ' is', ' a', ' natural', ' sweet', 'ener', ',', ' and', ' it', ' is', ' a', ' natural', ' pres']	" is  a  solid . 
+ 
+ H oney  is  a  natural  sweet ener ,  and  it  is  a  natural  pres"	False	 and selling honey related products,	2	[' and', ' selling', ' honey']
+92	18	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of honey	liquid	honey	[' is', ' a', ' solid', '.', '\n', '\n', 'H', 'oney', ' is', ' a', ' natural', ' sweet', 'ener', ',', ' and', ' it', ' is', ' a', ' natural', ' pres']	" is  a  solid . 
+ 
+ H oney  is  a  natural  sweet ener ,  and  it  is  a  natural  pres"	False	 widespread death of honey bees. Hives	3	[' widespread', ' death', ' of', ' honey']
+93	18	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of honey	liquid	honey	[' is', ' a', ' solid', '.', '\n', '\n', 'H', 'oney', ' is', ' a', ' natural', ' sweet', 'ener', ',', ' and', ' it', ' is', ' a', ' natural', ' pres']	" is  a  solid . 
+ 
+ H oney  is  a  natural  sweet ener ,  and  it  is  a  natural  pres"	False	 humans by mad honey has been well documented	3	[' humans', ' by', ' mad', ' honey']
+94	18	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of honey	liquid	honey	[' is', ' a', ' solid', '.', '\n', '\n', 'H', 'oney', ' is', ' a', ' natural', ' sweet', 'ener', ',', ' and', ' it', ' is', ' a', ' natural', ' pres']	" is  a  solid . 
+ 
+ H oney  is  a  natural  sweet ener ,  and  it  is  a  natural  pres"	False	 such as fur, hide, honey and wax, but those	6	[' such', ' as', ' fur', ',', ' hide', ',', ' honey']
+95	19	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of wine	liquid	wine	[' is', ' a', ' liquid', '.', '\n', '\n', 'The', ' wine', ' is', ' a', ' liquid', ' because', ' it', ' is', ' composed', ' of', ' molecules', ' that', ' are', ' in']	" is  a  liquid . 
+ 
+ The  wine  is  a  liquid  because  it  is  composed  of  molecules  that  are  in"	True	 detectable in wines with pyrazine levels	2	[' detectable', ' in', ' wine']
+96	19	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of wine	liquid	wine	[' is', ' a', ' liquid', '.', '\n', '\n', 'The', ' wine', ' is', ' a', ' liquid', ' because', ' it', ' is', ' composed', ' of', ' molecules', ' that', ' are', ' in']	" is  a  liquid . 
+ 
+ The  wine  is  a  liquid  because  it  is  composed  of  molecules  that  are  in"	True	 to offer food and wine to the ancestors	4	[' to', ' offer', ' food', ' and', ' wine']
+97	19	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of wine	liquid	wine	[' is', ' a', ' liquid', '.', '\n', '\n', 'The', ' wine', ' is', ' a', ' liquid', ' because', ' it', ' is', ' composed', ' of', ' molecules', ' that', ' are', ' in']	" is  a  liquid . 
+ 
+ The  wine  is  a  liquid  because  it  is  composed  of  molecules  that  are  in"	True	 retrieving the wine and cheese from the	2	[' retrieving', ' the', ' wine']
+98	19	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of wine	liquid	wine	[' is', ' a', ' liquid', '.', '\n', '\n', 'The', ' wine', ' is', ' a', ' liquid', ' because', ' it', ' is', ' composed', ' of', ' molecules', ' that', ' are', ' in']	" is  a  liquid . 
+ 
+ The  wine  is  a  liquid  because  it  is  composed  of  molecules  that  are  in"	True	 as a varietal wine or as a blend	4	[' as', ' a', ' var', 'ietal', ' wine']
+99	19	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of wine	liquid	wine	[' is', ' a', ' liquid', '.', '\n', '\n', 'The', ' wine', ' is', ' a', ' liquid', ' because', ' it', ' is', ' composed', ' of', ' molecules', ' that', ' are', ' in']	" is  a  liquid . 
+ 
+ The  wine  is  a  liquid  because  it  is  composed  of  molecules  that  are  in"	True	 find Carménère wines in France today,	4	[' find', ' Carm', 'én', 'ère', ' wine']
+100	20	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of glass	solid	glass	[' is', ' am', 'orph', 'ous', '.', '\n', '\n', 'The', ' glass', ' is', ' a', ' solid', ',', ' but', ' it', ' is', ' not', ' a', ' crystal', '.']	" is  am orph ous . 
+ 
+ The  glass  is  a  solid ,  but  it  is  not  a  crystal ."	True	 Street NW. (This glass-and-white	5	[' Street', ' NW', '.', ' (', 'This', ' glass']
+101	20	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of glass	solid	glass	[' is', ' am', 'orph', 'ous', '.', '\n', '\n', 'The', ' glass', ' is', ' a', ' solid', ',', ' but', ' it', ' is', ' not', ' a', ' crystal', '.']	" is  am orph ous . 
+ 
+ The  glass  is  a  solid ,  but  it  is  not  a  crystal ."	True	 including nineteen stained glass windows (including	3	[' including', ' nineteen', ' stained', ' glass']
+102	20	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of glass	solid	glass	[' is', ' am', 'orph', 'ous', '.', '\n', '\n', 'The', ' glass', ' is', ' a', ' solid', ',', ' but', ' it', ' is', ' not', ' a', ' crystal', '.']	" is  am orph ous . 
+ 
+ The  glass  is  a  solid ,  but  it  is  not  a  crystal ."	True	 also contain glass tiled ceilings	2	[' also', ' contain', ' glass']
+103	20	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of glass	solid	glass	[' is', ' am', 'orph', 'ous', '.', '\n', '\n', 'The', ' glass', ' is', ' a', ' solid', ',', ' but', ' it', ' is', ' not', ' a', ' crystal', '.']	" is  am orph ous . 
+ 
+ The  glass  is  a  solid ,  but  it  is  not  a  crystal ."	True	 contemporary stained glass panels are similar	2	[' contemporary', ' stained', ' glass']
+104	20	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of glass	solid	glass	[' is', ' am', 'orph', 'ous', '.', '\n', '\n', 'The', ' glass', ' is', ' a', ' solid', ',', ' but', ' it', ' is', ' not', ' a', ' crystal', '.']	" is  am orph ous . 
+ 
+ The  glass  is  a  solid ,  but  it  is  not  a  crystal ."	True	 trimming consisting of glass and colored	4	[' trim', 'ming', ' consisting', ' of', ' glass']
+105	21	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of carbon dioxide	gas	carbon dioxide	[' is', ' a', ' gas', '.', ' At', ' higher', ' temperatures', ',', ' it', ' becomes', ' a', ' liquid', '.', ' At', ' even', ' higher', ' temperatures', ',', ' it', ' becomes']	 is  a  gas .  At  higher  temperatures ,  it  becomes  a  liquid .  At  even  higher  temperatures ,  it  becomes	True	 Additionally, carbon dioxide and ozone gases	3	[' Additionally', ',', ' carbon', ' dioxide']
+106	21	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of carbon dioxide	gas	carbon dioxide	[' is', ' a', ' gas', '.', ' At', ' higher', ' temperatures', ',', ' it', ' becomes', ' a', ' liquid', '.', ' At', ' even', ' higher', ' temperatures', ',', ' it', ' becomes']	 is  a  gas .  At  higher  temperatures ,  it  becomes  a  liquid .  At  even  higher  temperatures ,  it  becomes	True	 absorb and dissolve carbon dioxide from the surrounding	4	[' absorb', ' and', ' dissolve', ' carbon', ' dioxide']
+107	21	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of carbon dioxide	gas	carbon dioxide	[' is', ' a', ' gas', '.', ' At', ' higher', ' temperatures', ',', ' it', ' becomes', ' a', ' liquid', '.', ' At', ' even', ' higher', ' temperatures', ',', ' it', ' becomes']	 is  a  gas .  At  higher  temperatures ,  it  becomes  a  liquid .  At  even  higher  temperatures ,  it  becomes	True	 (with helium). Pure carbon dioxide, on the other	6	[' (', 'with', ' helium', ').', ' Pure', ' carbon', ' dioxide']
+108	21	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of carbon dioxide	gas	carbon dioxide	[' is', ' a', ' gas', '.', ' At', ' higher', ' temperatures', ',', ' it', ' becomes', ' a', ' liquid', '.', ' At', ' even', ' higher', ' temperatures', ',', ' it', ' becomes']	 is  a  gas .  At  higher  temperatures ,  it  becomes  a  liquid .  At  even  higher  temperatures ,  it  becomes	True	 caused by rising carbon dioxide levels, might affect	4	[' caused', ' by', ' rising', ' carbon', ' dioxide']
+109	21	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of carbon dioxide	gas	carbon dioxide	[' is', ' a', ' gas', '.', ' At', ' higher', ' temperatures', ',', ' it', ' becomes', ' a', ' liquid', '.', ' At', ' even', ' higher', ' temperatures', ',', ' it', ' becomes']	 is  a  gas .  At  higher  temperatures ,  it  becomes  a  liquid .  At  even  higher  temperatures ,  it  becomes	True	 glucose to carbon dioxide is known as cellular	3	[' glucose', ' to', ' carbon', ' dioxide']
+110	22	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of paper	solid	paper	[' is', ' called', ' the', ' am', 'orph', 'ous', ' state', '.', '\n', '\n', 'The', ' am', 'orph', 'ous', ' state', ' is', ' a', ' state', ' of', ' matter']	" is  called  the  am orph ous  state . 
+ 
+ The  am orph ous  state  is  a  state  of  matter"	False	" ""world's largest paper clip"". The same article"	4	"[' ""', 'world', ""'s"", ' largest', ' paper']"
+111	22	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of paper	solid	paper	[' is', ' called', ' the', ' am', 'orph', 'ous', ' state', '.', '\n', '\n', 'The', ' am', 'orph', 'ous', ' state', ' is', ' a', ' state', ' of', ' matter']	" is  called  the  am orph ous  state . 
+ 
+ The  am orph ous  state  is  a  state  of  matter"	False	 lime, sand, waste paper or other substance	5	[' lime', ',', ' sand', ',', ' waste', ' paper']
+112	22	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of paper	solid	paper	[' is', ' called', ' the', ' am', 'orph', 'ous', ' state', '.', '\n', '\n', 'The', ' am', 'orph', 'ous', ' state', ' is', ' a', ' state', ' of', ' matter']	" is  called  the  am orph ous  state . 
+ 
+ The  am orph ous  state  is  a  state  of  matter"	False	 accusations on pink paper to hint at communist	3	[' accusations', ' on', ' pink', ' paper']
+113	22	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of paper	solid	paper	[' is', ' called', ' the', ' am', 'orph', 'ous', ' state', '.', '\n', '\n', 'The', ' am', 'orph', 'ous', ' state', ' is', ' a', ' state', ' of', ' matter']	" is  called  the  am orph ous  state . 
+ 
+ The  am orph ous  state  is  a  state  of  matter"	False	 results in a paper entitled Radioactive	3	[' results', ' in', ' a', ' paper']
+114	22	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of paper	solid	paper	[' is', ' called', ' the', ' am', 'orph', 'ous', ' state', '.', '\n', '\n', 'The', ' am', 'orph', 'ous', ' state', ' is', ' a', ' state', ' of', ' matter']	" is  called  the  am orph ous  state . 
+ 
+ The  am orph ous  state  is  a  state  of  matter"	False	 codes and tore the paper to shreds with his	4	[' codes', ' and', ' tore', ' the', ' paper']
+115	23	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of copper	solid	copper	[' is', ' a', ' solid', '.', ' At', ' higher', ' temperatures', ',', ' it', ' becomes', ' a', ' liquid', '.', ' At', ' even', ' higher', ' temperatures', ',', ' it', ' becomes']	 is  a  solid .  At  higher  temperatures ,  it  becomes  a  liquid .  At  even  higher  temperatures ,  it  becomes	True	 aluminium, and copper with an annual	3	[' aluminium', ',', ' and', ' copper']
+116	23	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of copper	solid	copper	[' is', ' a', ' solid', '.', ' At', ' higher', ' temperatures', ',', ' it', ' becomes', ' a', ' liquid', '.', ' At', ' even', ' higher', ' temperatures', ',', ' it', ' becomes']	 is  a  solid .  At  higher  temperatures ,  it  becomes  a  liquid .  At  even  higher  temperatures ,  it  becomes	True	 coating formed on copper during oxygenation.	3	[' coating', ' formed', ' on', ' copper']
+117	23	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of copper	solid	copper	[' is', ' a', ' solid', '.', ' At', ' higher', ' temperatures', ',', ' it', ' becomes', ' a', ' liquid', '.', ' At', ' even', ' higher', ' temperatures', ',', ' it', ' becomes']	 is  a  solid .  At  higher  temperatures ,  it  becomes  a  liquid .  At  even  higher  temperatures ,  it  becomes	True	 axes, and minor copper objects have been	4	[' axes', ',', ' and', ' minor', ' copper']
+118	23	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of copper	solid	copper	[' is', ' a', ' solid', '.', ' At', ' higher', ' temperatures', ',', ' it', ' becomes', ' a', ' liquid', '.', ' At', ' even', ' higher', ' temperatures', ',', ' it', ' becomes']	 is  a  solid .  At  higher  temperatures ,  it  becomes  a  liquid .  At  even  higher  temperatures ,  it  becomes	True	 but aluminium and copper are also used. Most	3	[' but', ' aluminium', ' and', ' copper']
+119	23	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of copper	solid	copper	[' is', ' a', ' solid', '.', ' At', ' higher', ' temperatures', ',', ' it', ' becomes', ' a', ' liquid', '.', ' At', ' even', ' higher', ' temperatures', ',', ' it', ' becomes']	 is  a  solid .  At  higher  temperatures ,  it  becomes  a  liquid .  At  even  higher  temperatures ,  it  becomes	True	 Africa, though the large copper – nickel deposits	5	[' Africa', ',', ' though', ' the', ' large', ' copper']
+120	24	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of chocolate	solid	chocolate	[' is', ' a', ' solid', '.', '\n', '\n', 'Ch', 'ocolate', ' is', ' made', ' from', ' cocoa', ' beans', ',', ' which', ' are', ' the', ' seeds', ' of', ' the']	" is  a  solid . 
+ 
+ Ch ocolate  is  made  from  cocoa  beans ,  which  are  the  seeds  of  the"	True	 manufacturers Ford, chocolate brand Toblerone,	3	[' manufacturers', ' Ford', ',', ' chocolate']
+121	24	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of chocolate	solid	chocolate	[' is', ' a', ' solid', '.', '\n', '\n', 'Ch', 'ocolate', ' is', ' made', ' from', ' cocoa', ' beans', ',', ' which', ' are', ' the', ' seeds', ' of', ' the']	" is  a  solid . 
+ 
+ Ch ocolate  is  made  from  cocoa  beans ,  which  are  the  seeds  of  the"	True	 drinking hot chocolate, as some hot chocolate	2	[' drinking', ' hot', ' chocolate']
+122	24	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of chocolate	solid	chocolate	[' is', ' a', ' solid', '.', '\n', '\n', 'Ch', 'ocolate', ' is', ' made', ' from', ' cocoa', ' beans', ',', ' which', ' are', ' the', ' seeds', ' of', ' the']	" is  a  solid . 
+ 
+ Ch ocolate  is  made  from  cocoa  beans ,  which  are  the  seeds  of  the"	True	 next to a giant chocolate cake in his dress	4	[' next', ' to', ' a', ' giant', ' chocolate']
+123	24	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of chocolate	solid	chocolate	[' is', ' a', ' solid', '.', '\n', '\n', 'Ch', 'ocolate', ' is', ' made', ' from', ' cocoa', ' beans', ',', ' which', ' are', ' the', ' seeds', ' of', ' the']	" is  a  solid . 
+ 
+ Ch ocolate  is  made  from  cocoa  beans ,  which  are  the  seeds  of  the"	True	" deep, sweet chocolate notes"" and bought"	3	[' deep', ',', ' sweet', ' chocolate']
+124	24	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of chocolate	solid	chocolate	[' is', ' a', ' solid', '.', '\n', '\n', 'Ch', 'ocolate', ' is', ' made', ' from', ' cocoa', ' beans', ',', ' which', ' are', ' the', ' seeds', ' of', ' the']	" is  a  solid . 
+ 
+ Ch ocolate  is  made  from  cocoa  beans ,  which  are  the  seeds  of  the"	True	 characterized by a chocolate to reddish-brown	3	[' characterized', ' by', ' a', ' chocolate']
+125	25	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of petroleum	liquid	petroleum	[' is', ' a', ' liquid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' petroleum', ' is', ' a', ' liquid', '.', '\n', '\n', 'The', ' phase']	" is  a  liquid . 
+ 
+ The  phase  of  matter  of  petroleum  is  a  liquid . 
+ 
+ The  phase"	True	 unloaded ammunition and petroleum products over	3	[' unloaded', ' ammunition', ' and', ' petroleum']
+126	25	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of petroleum	liquid	petroleum	[' is', ' a', ' liquid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' petroleum', ' is', ' a', ' liquid', '.', '\n', '\n', 'The', ' phase']	" is  a  liquid . 
+ 
+ The  phase  of  matter  of  petroleum  is  a  liquid . 
+ 
+ The  phase"	True	 handles alumina and petroleum coke; it has a 9.2-metre	4	[' handles', ' alum', 'ina', ' and', ' petroleum']
+127	25	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of petroleum	liquid	petroleum	[' is', ' a', ' liquid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' petroleum', ' is', ' a', ' liquid', '.', '\n', '\n', 'The', ' phase']	" is  a  liquid . 
+ 
+ The  phase  of  matter  of  petroleum  is  a  liquid . 
+ 
+ The  phase"	True	 mineral oil, petroleum jelly, calcipotriol,	3	[' mineral', ' oil', ',', ' petroleum']
+128	25	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of petroleum	liquid	petroleum	[' is', ' a', ' liquid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' petroleum', ' is', ' a', ' liquid', '.', '\n', '\n', 'The', ' phase']	" is  a  liquid . 
+ 
+ The  phase  of  matter  of  petroleum  is  a  liquid . 
+ 
+ The  phase"	True	 exports consist of petroleum products made	3	[' exports', ' consist', ' of', ' petroleum']
+129	25	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of petroleum	liquid	petroleum	[' is', ' a', ' liquid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' petroleum', ' is', ' a', ' liquid', '.', '\n', '\n', 'The', ' phase']	" is  a  liquid . 
+ 
+ The  phase  of  matter  of  petroleum  is  a  liquid . 
+ 
+ The  phase"	True	 paint to Vaseline petroleum jelly to chewing	4	[' paint', ' to', ' Vas', 'eline', ' petroleum']
+130	26	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of steam	gas	steam	[' is', ' a', ' gas', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' water', ' is', ' a', ' liquid', '.', '\n', '\n', 'The', ' phase']	" is  a  gas . 
+ 
+ The  phase  of  matter  of  water  is  a  liquid . 
+ 
+ The  phase"	True	 vehicles without steam power. The	2	[' vehicles', ' without', ' steam']
+131	26	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of steam	gas	steam	[' is', ' a', ' gas', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' water', ' is', ' a', ' liquid', '.', '\n', '\n', 'The', ' phase']	" is  a  gas . 
+ 
+ The  phase  of  matter  of  water  is  a  liquid . 
+ 
+ The  phase"	True	 of exploring the steam tunnels and	3	[' of', ' exploring', ' the', ' steam']
+132	26	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of steam	gas	steam	[' is', ' a', ' gas', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' water', ' is', ' a', ' liquid', '.', '\n', '\n', 'The', ' phase']	" is  a  gas . 
+ 
+ The  phase  of  matter  of  water  is  a  liquid . 
+ 
+ The  phase"	True	 regularity than the steam locomotives.	4	[' regular', 'ity', ' than', ' the', ' steam']
+133	26	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of steam	gas	steam	[' is', ' a', ' gas', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' water', ' is', ' a', ' liquid', '.', '\n', '\n', 'The', ' phase']	" is  a  gas . 
+ 
+ The  phase  of  matter  of  water  is  a  liquid . 
+ 
+ The  phase"	True	 until her steam was exhausted.	2	[' until', ' her', ' steam']
+134	26	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of steam	gas	steam	[' is', ' a', ' gas', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' water', ' is', ' a', ' liquid', '.', '\n', '\n', 'The', ' phase']	" is  a  gas . 
+ 
+ The  phase  of  matter  of  water  is  a  liquid . 
+ 
+ The  phase"	True	 direct acting steam engines, built	2	[' direct', ' acting', ' steam']
+135	27	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of ice	solid	ice	[' is', ' solid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' water', ' is', ' liquid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter']	" is  solid . 
+ 
+ The  phase  of  matter  of  water  is  liquid . 
+ 
+ The  phase  of  matter"	True	 Herald Island; ice limited their approach	3	[' Herald', ' Island', ';', ' ice']
+136	27	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of ice	solid	ice	[' is', ' solid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' water', ' is', ' liquid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter']	" is  solid . 
+ 
+ The  phase  of  matter  of  water  is  liquid . 
+ 
+ The  phase  of  matter"	True	 the volume of the ice blocks that break	4	[' the', ' volume', ' of', ' the', ' ice']
+137	27	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of ice	solid	ice	[' is', ' solid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' water', ' is', ' liquid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter']	" is  solid . 
+ 
+ The  phase  of  matter  of  water  is  liquid . 
+ 
+ The  phase  of  matter"	True	 covered with ice sheets during	2	[' covered', ' with', ' ice']
+138	27	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of ice	solid	ice	[' is', ' solid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' water', ' is', ' liquid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter']	" is  solid . 
+ 
+ The  phase  of  matter  of  water  is  liquid . 
+ 
+ The  phase  of  matter"	True	 skating, and ice hockey events,	3	[' skating', ',', ' and', ' ice']
+139	27	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of ice	solid	ice	[' is', ' solid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' water', ' is', ' liquid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter']	" is  solid . 
+ 
+ The  phase  of  matter  of  water  is  liquid . 
+ 
+ The  phase  of  matter"	True	 drop down to the ice to make saves, so	4	[' drop', ' down', ' to', ' the', ' ice']
+140	28	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of diamond	solid	diamond	[' is', ' a', ' solid', '.', '\n', '\n', 'Diamond', ' is', ' a', ' hard', ',', ' transparent', ',', ' and', ' color', 'less', ' material', '.', ' It', ' is']	" is  a  solid . 
+ 
+ Diamond  is  a  hard ,  transparent ,  and  color less  material .  It  is"	True	 U.S. Route 9 at a diamond interchange. It	8	[' U', '.', 'S', '.', ' Route', ' 9', ' at', ' a', ' diamond']
+141	28	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of diamond	solid	diamond	[' is', ' a', ' solid', '.', '\n', '\n', 'Diamond', ' is', ' a', ' hard', ',', ' transparent', ',', ' and', ' color', 'less', ' material', '.', ' It', ' is']	" is  a  solid . 
+ 
+ Diamond  is  a  hard ,  transparent ,  and  color less  material .  It  is"	True	 community includes diamond traders from	2	[' community', ' includes', ' diamond']
+142	28	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of diamond	solid	diamond	[' is', ' a', ' solid', '.', '\n', '\n', 'Diamond', ' is', ' a', ' hard', ',', ' transparent', ',', ' and', ' color', 'less', ' material', '.', ' It', ' is']	" is  a  solid . 
+ 
+ Diamond  is  a  hard ,  transparent ,  and  color less  material .  It  is"	True	 Switzerland, and diamond certifications in	3	[' Switzerland', ',', ' and', ' diamond']
+143	28	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of diamond	solid	diamond	[' is', ' a', ' solid', '.', '\n', '\n', 'Diamond', ' is', ' a', ' hard', ',', ' transparent', ',', ' and', ' color', 'less', ' material', '.', ' It', ' is']	" is  a  solid . 
+ 
+ Diamond  is  a  hard ,  transparent ,  and  color less  material .  It  is"	True	 a diverging diamond interchange, the	3	[' a', ' diver', 'ging', ' diamond']
+144	28	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of diamond	solid	diamond	[' is', ' a', ' solid', '.', '\n', '\n', 'Diamond', ' is', ' a', ' hard', ',', ' transparent', ',', ' and', ' color', 'less', ' material', '.', ' It', ' is']	" is  a  solid . 
+ 
+ Diamond  is  a  hard ,  transparent ,  and  color less  material .  It  is"	True	 through a diamond interchange	2	[' through', ' a', ' diamond']
+145	29	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of milk	liquid	milk	[' is', ' a', ' solid', '.', ' Milk', ' is', ' a', ' coll', 'oidal', ' suspension', ' of', ' fat', ' glob', 'ules', ' in', ' water', '.', ' The', ' fat', ' glob']	 is  a  solid .  Milk  is  a  coll oidal  suspension  of  fat  glob ules  in  water .  The  fat  glob	False	 branded low-fat milk in its North	4	[' branded', ' low', '-', 'fat', ' milk']
+146	29	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of milk	liquid	milk	[' is', ' a', ' solid', '.', ' Milk', ' is', ' a', ' coll', 'oidal', ' suspension', ' of', ' fat', ' glob', 'ules', ' in', ' water', '.', ' The', ' fat', ' glob']	 is  a  solid .  Milk  is  a  coll oidal  suspension  of  fat  glob ules  in  water .  The  fat  glob	False	 (660 ft), the milk shark favors	5	[' (', '660', ' ft', '),', ' the', ' milk']
+147	29	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of milk	liquid	milk	[' is', ' a', ' solid', '.', ' Milk', ' is', ' a', ' coll', 'oidal', ' suspension', ' of', ' fat', ' glob', 'ules', ' in', ' water', '.', ' The', ' fat', ' glob']	 is  a  solid .  Milk  is  a  coll oidal  suspension  of  fat  glob ules  in  water .  The  fat  glob	False	 compound in the milk of the tammar	3	[' compound', ' in', ' the', ' milk']
+148	29	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of milk	liquid	milk	[' is', ' a', ' solid', '.', ' Milk', ' is', ' a', ' coll', 'oidal', ' suspension', ' of', ' fat', ' glob', 'ules', ' in', ' water', '.', ' The', ' fat', ' glob']	 is  a  solid .  Milk  is  a  coll oidal  suspension  of  fat  glob ules  in  water .  The  fat  glob	False	" infected cow's milk some years previously.
+"	3	"[' infected', ' cow', ""'s"", ' milk']"
+149	29	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of milk	liquid	milk	[' is', ' a', ' solid', '.', ' Milk', ' is', ' a', ' coll', 'oidal', ' suspension', ' of', ' fat', ' glob', 'ules', ' in', ' water', '.', ' The', ' fat', ' glob']	 is  a  solid .  Milk  is  a  coll oidal  suspension  of  fat  glob ules  in  water .  The  fat  glob	False	 production, milk quotas and, more recently,	2	[' production', ',', ' milk']
+150	30	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of olive oil	liquid	olive oil	[' is', ' liquid', '.', '\n', '\n', 'O', 'live', ' oil', ' is', ' a', ' liquid', ' at', ' room', ' temperature', '.', '\n', '\n', 'O', 'live', ' oil']	" is  liquid . 
+ 
+ O live  oil  is  a  liquid  at  room  temperature . 
+ 
+ O live  oil"	True	 figs, garlic, olive oil and saffron, which	6	[' fig', 's', ',', ' garlic', ',', ' olive', ' oil']
+151	30	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of olive oil	liquid	olive oil	[' is', ' liquid', '.', '\n', '\n', 'O', 'live', ' oil', ' is', ' a', ' liquid', ' at', ' room', ' temperature', '.', '\n', '\n', 'O', 'live', ' oil']	" is  liquid . 
+ 
+ O live  oil  is  a  liquid  at  room  temperature . 
+ 
+ O live  oil"	True	 frying food in olive oil in the 5th century	4	[' frying', ' food', ' in', ' olive', ' oil']
+152	30	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of olive oil	liquid	olive oil	[' is', ' liquid', '.', '\n', '\n', 'O', 'live', ' oil', ' is', ' a', ' liquid', ' at', ' room', ' temperature', '.', '\n', '\n', 'O', 'live', ' oil']	" is  liquid . 
+ 
+ O live  oil  is  a  liquid  at  room  temperature . 
+ 
+ O live  oil"	True	 one of these – olive oil was another	5	[' one', ' of', ' these', ' –', ' olive', ' oil']
+153	30	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of olive oil	liquid	olive oil	[' is', ' liquid', '.', '\n', '\n', 'O', 'live', ' oil', ' is', ' a', ' liquid', ' at', ' room', ' temperature', '.', '\n', '\n', 'O', 'live', ' oil']	" is  liquid . 
+ 
+ O live  oil  is  a  liquid  at  room  temperature . 
+ 
+ O live  oil"	True	 soy sauce and olive oil every night. Gaining	4	[' soy', ' sauce', ' and', ' olive', ' oil']
+154	30	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of olive oil	liquid	olive oil	[' is', ' liquid', '.', '\n', '\n', 'O', 'live', ' oil', ' is', ' a', ' liquid', ' at', ' room', ' temperature', '.', '\n', '\n', 'O', 'live', ' oil']	" is  liquid . 
+ 
+ O live  oil  is  a  liquid  at  room  temperature . 
+ 
+ O live  oil"	True	 tours for its rooms, olive oil presses and	6	[' tours', ' for', ' its', ' rooms', ',', ' olive', ' oil']
+155	31	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of soap	solid	soap	[' is', ' a', ' solid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' soap', ' is', ' a', ' solid', '.', '\n', '\n', 'The', ' phase']	" is  a  solid . 
+ 
+ The  phase  of  matter  of  soap  is  a  solid . 
+ 
+ The  phase"	True	 him. He studied soap films intensively,	4	[' him', '.', ' He', ' studied', ' soap']
+156	31	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of soap	solid	soap	[' is', ' a', ' solid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' soap', ' is', ' a', ' solid', '.', '\n', '\n', 'The', ' phase']	" is  a  solid . 
+ 
+ The  phase  of  matter  of  soap  is  a  solid . 
+ 
+ The  phase"	True	 from the Australian soap opera Neighbours, played	3	[' from', ' the', ' Australian', ' soap']
+157	31	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of soap	solid	soap	[' is', ' a', ' solid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' soap', ' is', ' a', ' solid', '.', '\n', '\n', 'The', ' phase']	" is  a  solid . 
+ 
+ The  phase  of  matter  of  soap  is  a  solid . 
+ 
+ The  phase"	True	 have been a weak soap opera into a vibrant	4	[' have', ' been', ' a', ' weak', ' soap']
+158	31	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of soap	solid	soap	[' is', ' a', ' solid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' soap', ' is', ' a', ' solid', '.', '\n', '\n', 'The', ' phase']	" is  a  solid . 
+ 
+ The  phase  of  matter  of  soap  is  a  solid . 
+ 
+ The  phase"	True	 acted on the soap opera One Life to	3	[' acted', ' on', ' the', ' soap']
+159	31	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of soap	solid	soap	[' is', ' a', ' solid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' soap', ' is', ' a', ' solid', '.', '\n', '\n', 'The', ' phase']	" is  a  solid . 
+ 
+ The  phase  of  matter  of  soap  is  a  solid . 
+ 
+ The  phase"	True	 appear on another soap opera for twelve	3	[' appear', ' on', ' another', ' soap']
+160	32	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of rubber	solid	rubber	[' is', ' a', ' solid', '.', ' When', ' heated', ',', ' it', ' becomes', ' a', ' liquid', '.', ' When', ' cooled', ',', ' it', ' becomes', ' a', ' solid', ' again']	 is  a  solid .  When  heated ,  it  becomes  a  liquid .  When  cooled ,  it  becomes  a  solid  again	True	 recently invented rubber suit and metal diving	2	[' recently', ' invented', ' rubber']
+161	32	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of rubber	solid	rubber	[' is', ' a', ' solid', '.', ' When', ' heated', ',', ' it', ' becomes', ' a', ' liquid', '.', ' When', ' cooled', ',', ' it', ' becomes', ' a', ' solid', ' again']	 is  a  solid .  When  heated ,  it  becomes  a  liquid .  When  cooled ,  it  becomes  a  solid  again	True	 to protect a rubber tapping community from	3	[' to', ' protect', ' a', ' rubber']
+162	32	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of rubber	solid	rubber	[' is', ' a', ' solid', '.', ' When', ' heated', ',', ' it', ' becomes', ' a', ' liquid', '.', ' When', ' cooled', ',', ' it', ' becomes', ' a', ' solid', ' again']	 is  a  solid .  When  heated ,  it  becomes  a  liquid .  When  cooled ,  it  becomes  a  solid  again	True	 laid within a rubber jacket to reduce noise.	3	[' laid', ' within', ' a', ' rubber']
+163	32	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of rubber	solid	rubber	[' is', ' a', ' solid', '.', ' When', ' heated', ',', ' it', ' becomes', ' a', ' liquid', '.', ' When', ' cooled', ',', ' it', ' becomes', ' a', ' solid', ' again']	 is  a  solid .  When  heated ,  it  becomes  a  liquid .  When  cooled ,  it  becomes  a  solid  again	True	 those used for rubber injection moulding,	3	[' those', ' used', ' for', ' rubber']
+164	32	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of rubber	solid	rubber	[' is', ' a', ' solid', '.', ' When', ' heated', ',', ' it', ' becomes', ' a', ' liquid', '.', ' When', ' cooled', ',', ' it', ' becomes', ' a', ' solid', ' again']	 is  a  solid .  When  heated ,  it  becomes  a  liquid .  When  cooled ,  it  becomes  a  solid  again	True	 collect the rubber tax and export it.	2	[' collect', ' the', ' rubber']
+165	33	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of glycerin	liquid	glycerin	[' is', ' a', ' solid', '.', ' It', ' is', ' a', ' color', 'less', ',', ' odor', 'less', ',', ' tast', 'eless', ',', ' and', ' non', '-', 't']	 is  a  solid .  It  is  a  color less ,  odor less ,  tast eless ,  and  non - t	False	 cat hair and the glycerin placed on the actors'	6	[' cat', ' hair', ' and', ' the', ' gly', 'cer', 'in']
+166	33	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of glycerin	liquid	glycerin	[' is', ' a', ' solid', '.', ' It', ' is', ' a', ' color', 'less', ',', ' odor', 'less', ',', ' tast', 'eless', ',', ' and', ' non', '-', 't']	 is  a  solid .  It  is  a  color less ,  odor less ,  tast eless ,  and  non - t	False	 of cat hair and the glycerin placed on the actors'	7	[' of', ' cat', ' hair', ' and', ' the', ' gly', 'cer', 'in']
+167	33	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of glycerin	liquid	glycerin	[' is', ' a', ' solid', '.', ' It', ' is', ' a', ' color', 'less', ',', ' odor', 'less', ',', ' tast', 'eless', ',', ' and', ' non', '-', 't']	 is  a  solid .  It  is  a  color less ,  odor less ,  tast eless ,  and  non - t	False	 of cat hair and the glycerin placed on the	7	[' of', ' cat', ' hair', ' and', ' the', ' gly', 'cer', 'in']
+168	33	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of glycerin	liquid	glycerin	[' is', ' a', ' solid', '.', ' It', ' is', ' a', ' color', 'less', ',', ' odor', 'less', ',', ' tast', 'eless', ',', ' and', ' non', '-', 't']	 is  a  solid .  It  is  a  color less ,  odor less ,  tast eless ,  and  non - t	False	 hair and the glycerin placed on the actors'	5	[' hair', ' and', ' the', ' gly', 'cer', 'in']
+169	33	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of glycerin	liquid	glycerin	[' is', ' a', ' solid', '.', ' It', ' is', ' a', ' color', 'less', ',', ' odor', 'less', ',', ' tast', 'eless', ',', ' and', ' non', '-', 't']	 is  a  solid .  It  is  a  color less ,  odor less ,  tast eless ,  and  non - t	False	 cat hair and the glycerin placed on the actors'	6	[' cat', ' hair', ' and', ' the', ' gly', 'cer', 'in']
+170	34	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of tea	liquid	tea	[' is', ' liquid', '.', '\n', '\n', 'Tea', ' is', ' a', ' beverage', ' made', ' from', ' the', ' leaves', ' of', ' the', ' plant', ' Came', 'll', 'ia', ' sin']	" is  liquid . 
+ 
+ Tea  is  a  beverage  made  from  the  leaves  of  the  plant  Came ll ia  sin"	True	 cat, a dog, and a tea party she called Something	7	[' cat', ',', ' a', ' dog', ',', ' and', ' a', ' tea']
+171	34	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of tea	liquid	tea	[' is', ' liquid', '.', '\n', '\n', 'Tea', ' is', ' a', ' beverage', ' made', ' from', ' the', ' leaves', ' of', ' the', ' plant', ' Came', 'll', 'ia', ' sin']	" is  liquid . 
+ 
+ Tea  is  a  beverage  made  from  the  leaves  of  the  plant  Came ll ia  sin"	True	 hosting Sunday tea gatherings at	2	[' hosting', ' Sunday', ' tea']
+172	34	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of tea	liquid	tea	[' is', ' liquid', '.', '\n', '\n', 'Tea', ' is', ' a', ' beverage', ' made', ' from', ' the', ' leaves', ' of', ' the', ' plant', ' Came', 'll', 'ia', ' sin']	" is  liquid . 
+ 
+ Tea  is  a  beverage  made  from  the  leaves  of  the  plant  Came ll ia  sin"	True	 chlorophyll. White tea is produced in lesser	5	[' chlor', 'ophy', 'll', '.', ' White', ' tea']
+173	34	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of tea	liquid	tea	[' is', ' liquid', '.', '\n', '\n', 'Tea', ' is', ' a', ' beverage', ' made', ' from', ' the', ' leaves', ' of', ' the', ' plant', ' Came', 'll', 'ia', ' sin']	" is  liquid . 
+ 
+ Tea  is  a  beverage  made  from  the  leaves  of  the  plant  Came ll ia  sin"	True	 accompanied by tea or coffee. Dishes	2	[' accompanied', ' by', ' tea']
+174	34	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of tea	liquid	tea	[' is', ' liquid', '.', '\n', '\n', 'Tea', ' is', ' a', ' beverage', ' made', ' from', ' the', ' leaves', ' of', ' the', ' plant', ' Came', 'll', 'ia', ' sin']	" is  liquid . 
+ 
+ Tea  is  a  beverage  made  from  the  leaves  of  the  plant  Came ll ia  sin"	True	 play a role in tea cultivation.	4	[' play', ' a', ' role', ' in', ' tea']
+175	35	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of hydrogen	gas	hydrogen	[' is', ' a', ' plasma', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' helium', ' is', ' a', ' plasma', '.', '\n', '\n', 'The', ' phase']	" is  a  plasma . 
+ 
+ The  phase  of  matter  of  helium  is  a  plasma . 
+ 
+ The  phase"	False	 phosphorus, silicon, and hydrogen, are generally	5	[' phosphorus', ',', ' silicon', ',', ' and', ' hydrogen']
+176	35	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of hydrogen	gas	hydrogen	[' is', ' a', ' plasma', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' helium', ' is', ' a', ' plasma', '.', '\n', '\n', 'The', ' phase']	" is  a  plasma . 
+ 
+ The  phase  of  matter  of  helium  is  a  plasma . 
+ 
+ The  phase"	False	 quantum states of hydrogen atom, which should	3	[' quantum', ' states', ' of', ' hydrogen']
+177	35	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of hydrogen	gas	hydrogen	[' is', ' a', ' plasma', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' helium', ' is', ' a', ' plasma', '.', '\n', '\n', 'The', ' phase']	" is  a  plasma . 
+ 
+ The  phase  of  matter  of  helium  is  a  plasma . 
+ 
+ The  phase"	False	 effectively absorbs hydrogen atoms. This could	2	[' effectively', ' absorbs', ' hydrogen']
+178	35	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of hydrogen	gas	hydrogen	[' is', ' a', ' plasma', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' helium', ' is', ' a', ' plasma', '.', '\n', '\n', 'The', ' phase']	" is  a  plasma . 
+ 
+ The  phase  of  matter  of  helium  is  a  plasma . 
+ 
+ The  phase"	False	 the assumption that hydrogen is counted as − 1 as	3	[' the', ' assumption', ' that', ' hydrogen']
+179	35	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of hydrogen	gas	hydrogen	[' is', ' a', ' plasma', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' helium', ' is', ' a', ' plasma', '.', '\n', '\n', 'The', ' phase']	" is  a  plasma . 
+ 
+ The  phase  of  matter  of  helium  is  a  plasma . 
+ 
+ The  phase"	False	 feasibility of the hydrogen bomb, and	3	[' feasibility', ' of', ' the', ' hydrogen']
+180	36	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of salt	solid	salt	[' is', ' solid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' salt', ' is', ' solid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter']	" is  solid . 
+ 
+ The  phase  of  matter  of  salt  is  solid . 
+ 
+ The  phase  of  matter"	True	 coal mining and salt panning, which date	3	[' coal', ' mining', ' and', ' salt']
+181	36	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of salt	solid	salt	[' is', ' solid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' salt', ' is', ' solid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter']	" is  solid . 
+ 
+ The  phase  of  matter  of  salt  is  solid . 
+ 
+ The  phase  of  matter"	True	 sodium chloride salt and sulfuric acid	2	[' sodium', ' chloride', ' salt']
+182	36	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of salt	solid	salt	[' is', ' solid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' salt', ' is', ' solid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter']	" is  solid . 
+ 
+ The  phase  of  matter  of  salt  is  solid . 
+ 
+ The  phase  of  matter"	True	 Virginia to destroy salt and lead mines	3	[' Virginia', ' to', ' destroy', ' salt']
+183	36	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of salt	solid	salt	[' is', ' solid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' salt', ' is', ' solid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter']	" is  solid . 
+ 
+ The  phase  of  matter  of  salt  is  solid . 
+ 
+ The  phase  of  matter"	True	 depending on buffer salt concentrations	3	[' depending', ' on', ' buffer', ' salt']
+184	36	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of salt	solid	salt	[' is', ' solid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' salt', ' is', ' solid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter']	" is  solid . 
+ 
+ The  phase  of  matter  of  salt  is  solid . 
+ 
+ The  phase  of  matter"	True	" royal monopoly on salt trade.
+"	3	[' royal', ' monopoly', ' on', ' salt']
+185	37	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of sugar	solid	sugar	[' is', ' a', ' solid', '.', '\n', '\n', 'S', 'ugar', ' is', ' a', ' sweet', ',', ' sticky', ',', ' crystall', 'ine', ' substance', ' that', ' is', ' made']	" is  a  solid . 
+ 
+ S ugar  is  a  sweet ,  sticky ,  crystall ine  substance  that  is  made"	True	 and winged and sugar kelps, though there	4	[' and', ' wing', 'ed', ' and', ' sugar']
+186	37	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of sugar	solid	sugar	[' is', ' a', ' solid', '.', '\n', '\n', 'S', 'ugar', ' is', ' a', ' sweet', ',', ' sticky', ',', ' crystall', 'ine', ' substance', ' that', ' is', ' made']	" is  a  solid . 
+ 
+ S ugar  is  a  sweet ,  sticky ,  crystall ine  substance  that  is  made"	True	 pygmaeus), and sugar glider (Petaurus	6	[' py', 'g', 'ma', 'eus', '),', ' and', ' sugar']
+187	37	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of sugar	solid	sugar	[' is', ' a', ' solid', '.', '\n', '\n', 'S', 'ugar', ' is', ' a', ' sweet', ',', ' sticky', ',', ' crystall', 'ine', ' substance', ' that', ' is', ' made']	" is  a  solid . 
+ 
+ S ugar  is  a  sweet ,  sticky ,  crystall ine  substance  that  is  made"	True	" found that ""Brazil's sugar-based ethanol did"	5	"[' found', ' that', ' ""', 'Brazil', ""'s"", ' sugar']"
+188	37	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of sugar	solid	sugar	[' is', ' a', ' solid', '.', '\n', '\n', 'S', 'ugar', ' is', ' a', ' sweet', ',', ' sticky', ',', ' crystall', 'ine', ' substance', ' that', ' is', ' made']	" is  a  solid . 
+ 
+ S ugar  is  a  sweet ,  sticky ,  crystall ine  substance  that  is  made"	True	 of 2008; poor sugarcane harvests	4	[' of', ' 2008', ';', ' poor', ' sugar']
+189	37	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of sugar	solid	sugar	[' is', ' a', ' solid', '.', '\n', '\n', 'S', 'ugar', ' is', ' a', ' sweet', ',', ' sticky', ',', ' crystall', 'ine', ' substance', ' that', ' is', ' made']	" is  a  solid . 
+ 
+ S ugar  is  a  sweet ,  sticky ,  crystall ine  substance  that  is  made"	True	 in cities within the sugarcane's fields	4	[' in', ' cities', ' within', ' the', ' sugar']
+190	38	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of vinegar	liquid	vinegar	[' is', ' a', ' liquid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' vinegar', ' is', ' a', ' liquid', '.', '\n', '\n', 'The', ' phase']	" is  a  liquid . 
+ 
+ The  phase  of  matter  of  vinegar  is  a  liquid . 
+ 
+ The  phase"	True	" to prepare vinegar from months to weeks.
+"	2	[' to', ' prepare', ' vinegar']
+191	38	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of vinegar	liquid	vinegar	[' is', ' a', ' liquid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' vinegar', ' is', ' a', ' liquid', '.', '\n', '\n', 'The', ' phase']	" is  a  liquid . 
+ 
+ The  phase  of  matter  of  vinegar  is  a  liquid . 
+ 
+ The  phase"	True	 of water in vinegar has such a profound	3	[' of', ' water', ' in', ' vinegar']
+192	38	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of vinegar	liquid	vinegar	[' is', ' a', ' liquid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' vinegar', ' is', ' a', ' liquid', '.', '\n', '\n', 'The', ' phase']	" is  a  liquid . 
+ 
+ The  phase  of  matter  of  vinegar  is  a  liquid . 
+ 
+ The  phase"	True	 poutine gravy and vinegar for its French fries,	4	[' p', 'outine', ' gravy', ' and', ' vinegar']
+193	38	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of vinegar	liquid	vinegar	[' is', ' a', ' liquid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' vinegar', ' is', ' a', ' liquid', '.', '\n', '\n', 'The', ' phase']	" is  a  liquid . 
+ 
+ The  phase  of  matter  of  vinegar  is  a  liquid . 
+ 
+ The  phase"	True	" or steeping in vinegar was ""the onely use"	4	[' or', ' ste', 'eping', ' in', ' vinegar']
+194	38	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of vinegar	liquid	vinegar	[' is', ' a', ' liquid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' vinegar', ' is', ' a', ' liquid', '.', '\n', '\n', 'The', ' phase']	" is  a  liquid . 
+ 
+ The  phase  of  matter  of  vinegar  is  a  liquid . 
+ 
+ The  phase"	True	 consisting of vinegar or some other weak	2	[' consisting', ' of', ' vinegar']
+195	39	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of silver	solid	silver	[' is', ' a', ' solid', '.', ' At', ' higher', ' temperatures', ',', ' it', ' becomes', ' a', ' liquid', '.', ' At', ' even', ' higher', ' temperatures', ',', ' it', ' becomes']	 is  a  solid .  At  higher  temperatures ,  it  becomes  a  liquid .  At  even  higher  temperatures ,  it  becomes	True	 the pair took the silver medal both individually	4	[' the', ' pair', ' took', ' the', ' silver']
+196	39	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of silver	solid	silver	[' is', ' a', ' solid', '.', ' At', ' higher', ' temperatures', ',', ' it', ' becomes', ' a', ' liquid', '.', ' At', ' even', ' higher', ' temperatures', ',', ' it', ' becomes']	 is  a  solid .  At  higher  temperatures ,  it  becomes  a  liquid .  At  even  higher  temperatures ,  it  becomes	True	 the eventual silver medalist, in the quarterfinals.	2	[' the', ' eventual', ' silver']
+197	39	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of silver	solid	silver	[' is', ' a', ' solid', '.', ' At', ' higher', ' temperatures', ',', ' it', ' becomes', ' a', ' liquid', '.', ' At', ' even', ' higher', ' temperatures', ',', ' it', ' becomes']	 is  a  solid .  At  higher  temperatures ,  it  becomes  a  liquid .  At  even  higher  temperatures ,  it  becomes	True	 gold medals and no silver medals were	4	[' gold', ' medals', ' and', ' no', ' silver']
+198	39	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of silver	solid	silver	[' is', ' a', ' solid', '.', ' At', ' higher', ' temperatures', ',', ' it', ' becomes', ' a', ' liquid', '.', ' At', ' even', ' higher', ' temperatures', ',', ' it', ' becomes']	 is  a  solid .  At  higher  temperatures ,  it  becomes  a  liquid .  At  even  higher  temperatures ,  it  becomes	True	 car is the silver grey Aston Martin	3	[' car', ' is', ' the', ' silver']
+199	39	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of silver	solid	silver	[' is', ' a', ' solid', '.', ' At', ' higher', ' temperatures', ',', ' it', ' becomes', ' a', ' liquid', '.', ' At', ' even', ' higher', ' temperatures', ',', ' it', ' becomes']	 is  a  solid .  At  higher  temperatures ,  it  becomes  a  liquid .  At  even  higher  temperatures ,  it  becomes	True	 Congress had authorized a silver three-cent piece	4	[' Congress', ' had', ' authorized', ' a', ' silver']
+200	40	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of leather	solid	leather	"[' is', ' called', ' the', ' ""', 'f', 'ib', 'rous', '""', ' phase', '.', ' When', ' leather', ' is', ' heated', ',', ' the', ' fib', 'rous', ' phase', ' is']"	" is  called  the  "" f ib rous ""  phase .  When  leather  is  heated ,  the  fib rous  phase  is"	False	 windscreen wipers, a leather and chrome	6	[' wind', 'screen', ' wip', 'ers', ',', ' a', ' leather']
+201	40	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of leather	solid	leather	"[' is', ' called', ' the', ' ""', 'f', 'ib', 'rous', '""', ' phase', '.', ' When', ' leather', ' is', ' heated', ',', ' the', ' fib', 'rous', ' phase', ' is']"	" is  called  the  "" f ib rous ""  phase .  When  leather  is  heated ,  the  fib rous  phase  is"	False	 brewing, textiles, and leather manufacturing,	6	[' brewing', ',', ' text', 'iles', ',', ' and', ' leather']
+202	40	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of leather	solid	leather	"[' is', ' called', ' the', ' ""', 'f', 'ib', 'rous', '""', ' phase', '.', ' When', ' leather', ' is', ' heated', ',', ' the', ' fib', 'rous', ' phase', ' is']"	" is  called  the  "" f ib rous ""  phase .  When  leather  is  heated ,  the  fib rous  phase  is"	False	 always dressed in a leather jacket and skirt,	4	[' always', ' dressed', ' in', ' a', ' leather']
+203	40	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of leather	solid	leather	"[' is', ' called', ' the', ' ""', 'f', 'ib', 'rous', '""', ' phase', '.', ' When', ' leather', ' is', ' heated', ',', ' the', ' fib', 'rous', ' phase', ' is']"	" is  called  the  "" f ib rous ""  phase .  When  leather  is  heated ,  the  fib rous  phase  is"	False	 place using a leather strap attached from	3	[' place', ' using', ' a', ' leather']
+204	40	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of leather	solid	leather	"[' is', ' called', ' the', ' ""', 'f', 'ib', 'rous', '""', ' phase', '.', ' When', ' leather', ' is', ' heated', ',', ' the', ' fib', 'rous', ' phase', ' is']"	" is  called  the  "" f ib rous ""  phase .  When  leather  is  heated ,  the  fib rous  phase  is"	False	 of wood and leather working. Artwork	3	[' of', ' wood', ' and', ' leather']
+205	41	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of argon	gas	argon	[' is', ' a', ' solid', '.', '\n', '\n', 'Ar', 'gon', ' is', ' a', ' noble', ' gas', ',', ' which', ' means', ' that', ' it', ' is', ' chemically', ' inert']	" is  a  solid . 
+ 
+ Ar gon  is  a  noble  gas ,  which  means  that  it  is  chemically  inert"	True	 the dead bird, argon also enhances shelf	5	[' the', ' dead', ' bird', ',', ' arg', 'on']
+206	41	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of argon	gas	argon	[' is', ' a', ' solid', '.', '\n', '\n', 'Ar', 'gon', ' is', ' a', ' noble', ' gas', ',', ' which', ' means', ' that', ' it', ' is', ' chemically', ' inert']	" is  a  solid . 
+ 
+ Ar gon  is  a  noble  gas ,  which  means  that  it  is  chemically  inert"	True	 affected by loss of argon due to low-grade	5	[' affected', ' by', ' loss', ' of', ' arg', 'on']
+207	41	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of argon	gas	argon	[' is', ' a', ' solid', '.', '\n', '\n', 'Ar', 'gon', ' is', ' a', ' noble', ' gas', ',', ' which', ' means', ' that', ' it', ' is', ' chemically', ' inert']	" is  a  solid . 
+ 
+ Ar gon  is  a  noble  gas ,  which  means  that  it  is  chemically  inert"	True		0	['argon']
+208	41	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of argon	gas	argon	[' is', ' a', ' solid', '.', '\n', '\n', 'Ar', 'gon', ' is', ' a', ' noble', ' gas', ',', ' which', ' means', ' that', ' it', ' is', ' chemically', ' inert']	" is  a  solid . 
+ 
+ Ar gon  is  a  noble  gas ,  which  means  that  it  is  chemically  inert"	True	 source of purified argon products. Argon is	4	[' source', ' of', ' purified', ' arg', 'on']
+209	41	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of argon	gas	argon	[' is', ' a', ' solid', '.', '\n', '\n', 'Ar', 'gon', ' is', ' a', ' noble', ' gas', ',', ' which', ' means', ' that', ' it', ' is', ' chemically', ' inert']	" is  a  solid . 
+ 
+ Ar gon  is  a  noble  gas ,  which  means  that  it  is  chemically  inert"	True	 (He), neon (Ne), argon (Ar), krypton (Kr),	8	[' (', 'He', '),', ' neon', ' (', 'Ne', '),', ' arg', 'on']
+210	42	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of wax	solid	wax	[' is', ' solid', '.', '\n', '\n', 'W', 'ax', ' is', ' a', ' solid', ' at', ' room', ' temperature', '.', '\n', '\n', 'W', 'ax', ' is', ' a']	" is  solid . 
+ 
+ W ax  is  a  solid  at  room  temperature . 
+ 
+ W ax  is  a"	True	 Paris Spectacular wax museum, an	3	[' Paris', ' Spect', 'acular', ' wax']
+211	42	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of wax	solid	wax	[' is', ' solid', '.', '\n', '\n', 'W', 'ax', ' is', ' a', ' solid', ' at', ' room', ' temperature', '.', '\n', '\n', 'W', 'ax', ' is', ' a']	" is  solid . 
+ 
+ W ax  is  a  solid  at  room  temperature . 
+ 
+ W ax  is  a"	True	 (1925) about a wax figure display at	6	[' (', '19', '25', ')', ' about', ' a', ' wax']
+212	42	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of wax	solid	wax	[' is', ' solid', '.', '\n', '\n', 'W', 'ax', ' is', ' a', ' solid', ' at', ' room', ' temperature', '.', '\n', '\n', 'W', 'ax', ' is', ' a']	" is  solid . 
+ 
+ W ax  is  a  solid  at  room  temperature . 
+ 
+ W ax  is  a"	True	 island where we could wax philosophical and kind	4	[' island', ' where', ' we', ' could', ' wax']
+213	42	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of wax	solid	wax	[' is', ' solid', '.', '\n', '\n', 'W', 'ax', ' is', ' a', ' solid', ' at', ' room', ' temperature', '.', '\n', '\n', 'W', 'ax', ' is', ' a']	" is  solid . 
+ 
+ W ax  is  a  solid  at  room  temperature . 
+ 
+ W ax  is  a"	True	 placed directly into wax ring moulds for	3	[' placed', ' directly', ' into', ' wax']
+214	42	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of wax	solid	wax	[' is', ' solid', '.', '\n', '\n', 'W', 'ax', ' is', ' a', ' solid', ' at', ' room', ' temperature', '.', '\n', '\n', 'W', 'ax', ' is', ' a']	" is  solid . 
+ 
+ W ax  is  a  solid  at  room  temperature . 
+ 
+ W ax  is  a"	True	 redrawn using hot wax, usually made	4	[' red', 'rawn', ' using', ' hot', ' wax']
+215	43	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of beer	liquid	beer	[' is', ' a', ' liquid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' beer', ' is', ' a', ' liquid', '.', '\n', '\n', 'The', ' phase']	" is  a  liquid . 
+ 
+ The  phase  of  matter  of  beer  is  a  liquid . 
+ 
+ The  phase"	True	 Palace Ale, a beer on sale in the ground,	4	[' Palace', ' Ale', ',', ' a', ' beer']
+216	43	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of beer	liquid	beer	[' is', ' a', ' liquid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' beer', ' is', ' a', ' liquid', '.', '\n', '\n', 'The', ' phase']	" is  a  liquid . 
+ 
+ The  phase  of  matter  of  beer  is  a  liquid . 
+ 
+ The  phase"	True	 gave speeches at a beer hall rally.	4	[' gave', ' speeches', ' at', ' a', ' beer']
+217	43	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of beer	liquid	beer	[' is', ' a', ' liquid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' beer', ' is', ' a', ' liquid', '.', '\n', '\n', 'The', ' phase']	" is  a  liquid . 
+ 
+ The  phase  of  matter  of  beer  is  a  liquid . 
+ 
+ The  phase"	True	 their homes with neon beer signs and	4	[' their', ' homes', ' with', ' neon', ' beer']
+218	43	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of beer	liquid	beer	[' is', ' a', ' liquid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' beer', ' is', ' a', ' liquid', '.', '\n', '\n', 'The', ' phase']	" is  a  liquid . 
+ 
+ The  phase  of  matter  of  beer  is  a  liquid . 
+ 
+ The  phase"	True	 and asked for empty beer bottles and labels	4	[' and', ' asked', ' for', ' empty', ' beer']
+219	43	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of beer	liquid	beer	[' is', ' a', ' liquid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' beer', ' is', ' a', ' liquid', '.', '\n', '\n', 'The', ' phase']	" is  a  liquid . 
+ 
+ The  phase  of  matter  of  beer  is  a  liquid . 
+ 
+ The  phase"	True	" ""something between beer and sauerkraut""."	3	"[' ""', 'something', ' between', ' beer']"
+220	44	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of radium	solid	radium	"[' is', ' a', ' solid', '.', '\n', '\n', 'R', 'adium', ' is', ' a', ' radioactive', ' element', ' that', ' is', ' found', ' in', ' the', ' earth', ""'s"", ' crust']"	" is  a  solid . 
+ 
+ R adium  is  a  radioactive  element  that  is  found  in  the  earth 's  crust"	True	 carrying test tubes of radium in her pockets	5	[' carrying', ' test', ' tubes', ' of', ' rad', 'ium']
+221	44	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of radium	solid	radium	"[' is', ' a', ' solid', '.', '\n', '\n', 'R', 'adium', ' is', ' a', ' radioactive', ' element', ' that', ' is', ' found', ' in', ' the', ' earth', ""'s"", ' crust']"	" is  a  solid . 
+ 
+ R adium  is  a  radioactive  element  that  is  found  in  the  earth 's  crust"	True	 74 MBq of radium (assumed to be	5	[' 74', ' MB', 'q', ' of', ' rad', 'ium']
+222	44	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of radium	solid	radium	"[' is', ' a', ' solid', '.', '\n', '\n', 'R', 'adium', ' is', ' a', ' radioactive', ' element', ' that', ' is', ' found', ' in', ' the', ' earth', ""'s"", ' crust']"	" is  a  solid . 
+ 
+ R adium  is  a  radioactive  element  that  is  found  in  the  earth 's  crust"	True	 measuring the amount of radium in seawater	5	[' measuring', ' the', ' amount', ' of', ' rad', 'ium']
+223	44	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of radium	solid	radium	"[' is', ' a', ' solid', '.', '\n', '\n', 'R', 'adium', ' is', ' a', ' radioactive', ' element', ' that', ' is', ' found', ' in', ' the', ' earth', ""'s"", ' crust']"	" is  a  solid . 
+ 
+ R adium  is  a  radioactive  element  that  is  found  in  the  earth 's  crust"	True	 uranium, thorium, radium and polonium.	6	[' uranium', ',', ' thor', 'ium', ',', ' rad', 'ium']
+224	44	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of radium	solid	radium	"[' is', ' a', ' solid', '.', '\n', '\n', 'R', 'adium', ' is', ' a', ' radioactive', ' element', ' that', ' is', ' found', ' in', ' the', ' earth', ""'s"", ' crust']"	" is  a  solid . 
+ 
+ R adium  is  a  radioactive  element  that  is  found  in  the  earth 's  crust"	True	 hafnium, and radium and rutherfordium,	6	[' ha', 'fn', 'ium', ',', ' and', ' rad', 'ium']
+225	45	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of platinum	solid	platinum	[' is', ' a', ' solid', '.', '\n', '\n', 'Pl', 'atinum', ' is', ' a', ' very', ' hard', ' metal', ',', ' and', ' is', ' used', ' in', ' jew', 'ellery']	" is  a  solid . 
+ 
+ Pl atinum  is  a  very  hard  metal ,  and  is  used  in  jew ellery"	True	 certified triple platinum by the Recording	2	[' certified', ' triple', ' platinum']
+226	45	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of platinum	solid	platinum	[' is', ' a', ' solid', '.', '\n', '\n', 'Pl', 'atinum', ' is', ' a', ' very', ' hard', ' metal', ',', ' and', ' is', ' used', ' in', ' jew', 'ellery']	" is  a  solid . 
+ 
+ Pl atinum  is  a  very  hard  metal ,  and  is  used  in  jew ellery"	True	 four 90 % platinum / 10 % iridium	3	[' four', ' 90', ' %', ' platinum']
+227	45	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of platinum	solid	platinum	[' is', ' a', ' solid', '.', '\n', '\n', 'Pl', 'atinum', ' is', ' a', ' very', ' hard', ' metal', ',', ' and', ' is', ' used', ' in', ' jew', 'ellery']	" is  a  solid . 
+ 
+ Pl atinum  is  a  very  hard  metal ,  and  is  used  in  jew ellery"	True	 was later certified platinum by the Syndicat National	3	[' was', ' later', ' certified', ' platinum']
+228	45	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of platinum	solid	platinum	[' is', ' a', ' solid', '.', '\n', '\n', 'Pl', 'atinum', ' is', ' a', ' very', ' hard', ' metal', ',', ' and', ' is', ' used', ' in', ' jew', 'ellery']	" is  a  solid . 
+ 
+ Pl atinum  is  a  very  hard  metal ,  and  is  used  in  jew ellery"	True	 track for the platinum edition of the	3	[' track', ' for', ' the', ' platinum']
+229	45	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of platinum	solid	platinum	[' is', ' a', ' solid', '.', '\n', '\n', 'Pl', 'atinum', ' is', ' a', ' very', ' hard', ' metal', ',', ' and', ' is', ' used', ' in', ' jew', 'ellery']	" is  a  solid . 
+ 
+ Pl atinum  is  a  very  hard  metal ,  and  is  used  in  jew ellery"	True	 was certified platinum by the Recording	2	[' was', ' certified', ' platinum']
+230	46	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of juice	liquid	juice	[' is', ' liquid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' milk', ' is', ' solid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter']	" is  liquid . 
+ 
+ The  phase  of  matter  of  milk  is  solid . 
+ 
+ The  phase  of  matter"	True	 and model of lemon juice being contained	4	[' and', ' model', ' of', ' lemon', ' juice']
+231	46	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of juice	liquid	juice	[' is', ' liquid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' milk', ' is', ' solid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter']	" is  liquid . 
+ 
+ The  phase  of  matter  of  milk  is  solid . 
+ 
+ The  phase  of  matter"	True	 midazolam. Grapefruit juice reduces intestinal	7	[' mid', 'az', 'ol', 'am', '.', ' Grape', 'fruit', ' juice']
+232	46	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of juice	liquid	juice	[' is', ' liquid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' milk', ' is', ' solid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter']	" is  liquid . 
+ 
+ The  phase  of  matter  of  milk  is  solid . 
+ 
+ The  phase  of  matter"	True	 of marketing lemon juice in this manner was	3	[' of', ' marketing', ' lemon', ' juice']
+233	46	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of juice	liquid	juice	[' is', ' liquid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' milk', ' is', ' solid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter']	" is  liquid . 
+ 
+ The  phase  of  matter  of  milk  is  solid . 
+ 
+ The  phase  of  matter"	True	 is cooked with lemon juice and water,	4	[' is', ' cooked', ' with', ' lemon', ' juice']
+234	46	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of juice	liquid	juice	[' is', ' liquid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter', ' of', ' milk', ' is', ' solid', '.', '\n', '\n', 'The', ' phase', ' of', ' matter']	" is  liquid . 
+ 
+ The  phase  of  matter  of  milk  is  solid . 
+ 
+ The  phase  of  matter"	True	 Maid orange juice and was sold to The	2	[' Maid', ' orange', ' juice']
+235	47	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of tungsten	solid	tungsten	[' is', ' a', ' hex', 'agonal', ' close', '-', 'packed', ' (', 'h', 'cp', ')', ' structure', '.', ' At', ' higher', ' temperatures', ',', ' the', ' t', 'ung']	 is  a  hex agonal  close - packed  ( h cp )  structure .  At  higher  temperatures ,  the  t ung	False	" welding =
+"	4	[' welding', ' =', 't', 'ung', 'sten']
+236	47	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of tungsten	solid	tungsten	[' is', ' a', ' hex', 'agonal', ' close', '-', 'packed', ' (', 'h', 'cp', ')', ' structure', '.', ' At', ' higher', ' temperatures', ',', ' the', ' t', 'ung']	 is  a  hex agonal  close - packed  ( h cp )  structure .  At  higher  temperatures ,  the  t ung	False	 story, Soderbergh used tungsten film with no filter	9	[' story', ',', ' S', 'oder', 'ber', 'gh', ' used', ' t', 'ung', 'sten']
+237	47	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of tungsten	solid	tungsten	[' is', ' a', ' hex', 'agonal', ' close', '-', 'packed', ' (', 'h', 'cp', ')', ' structure', '.', ' At', ' higher', ' temperatures', ',', ' the', ' t', 'ung']	 is  a  hex agonal  close - packed  ( h cp )  structure .  At  higher  temperatures ,  the  t ung	False	 that mixing tungsten with chromium, steel	4	[' that', ' mixing', ' t', 'ung', 'sten']
+238	47	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of tungsten	solid	tungsten	[' is', ' a', ' hex', 'agonal', ' close', '-', 'packed', ' (', 'h', 'cp', ')', ' structure', '.', ' At', ' higher', ' temperatures', ',', ' the', ' t', 'ung']	 is  a  hex agonal  close - packed  ( h cp )  structure .  At  higher  temperatures ,  the  t ung	False	 iodide; at a tungsten filament of 1700°C	7	[' iod', 'ide', ';', ' at', ' a', ' t', 'ung', 'sten']
+239	47	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of tungsten	solid	tungsten	[' is', ' a', ' hex', 'agonal', ' close', '-', 'packed', ' (', 'h', 'cp', ')', ' structure', '.', ' At', ' higher', ' temperatures', ',', ' the', ' t', 'ung']	 is  a  hex agonal  close - packed  ( h cp )  structure .  At  higher  temperatures ,  the  t ung	False	 was a 1,500 watt tungsten bulb 15 inches in	8	[' was', ' a', ' 1', ',', '500', ' watt', ' t', 'ung', 'sten']
+240	48	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of kerosene	liquid	kerosene	[' is', ' a', ' mixture', ' of', ' liquid', ' and', ' gas', '.', ' The', ' liquid', ' is', ' a', ' mixture', ' of', ' hydro', 'car', 'bons', ',', ' and', ' the']	 is  a  mixture  of  liquid  and  gas .  The  liquid  is  a  mixture  of  hydro car bons ,  and  the	True	 petrol (gasoline), kerosene and / or diesel, and	7	[' petrol', ' (', 'gas', 'oline', '),', ' k', 'eros', 'ene']
+241	48	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of kerosene	liquid	kerosene	[' is', ' a', ' mixture', ' of', ' liquid', ' and', ' gas', '.', ' The', ' liquid', ' is', ' a', ' mixture', ' of', ' hydro', 'car', 'bons', ',', ' and', ' the']	 is  a  mixture  of  liquid  and  gas .  The  liquid  is  a  mixture  of  hydro car bons ,  and  the	True	 cricket bat and a kerosene tin for a wicket.	6	[' cricket', ' bat', ' and', ' a', ' k', 'eros', 'ene']
+242	48	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of kerosene	liquid	kerosene	[' is', ' a', ' mixture', ' of', ' liquid', ' and', ' gas', '.', ' The', ' liquid', ' is', ' a', ' mixture', ' of', ' hydro', 'car', 'bons', ',', ' and', ' the']	 is  a  mixture  of  liquid  and  gas .  The  liquid  is  a  mixture  of  hydro car bons ,  and  the	True	 power (25.5 %), and kerosene (16.5 %). Most	10	[' power', ' (', '25', '.', '5', ' %', '),', ' and', ' k', 'eros', 'ene']
+243	48	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of kerosene	liquid	kerosene	[' is', ' a', ' mixture', ' of', ' liquid', ' and', ' gas', '.', ' The', ' liquid', ' is', ' a', ' mixture', ' of', ' hydro', 'car', 'bons', ',', ' and', ' the']	 is  a  mixture  of  liquid  and  gas .  The  liquid  is  a  mixture  of  hydro car bons ,  and  the	True	 candles, and kerosene to stranded	5	[' candles', ',', ' and', ' k', 'eros', 'ene']
+244	48	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of kerosene	liquid	kerosene	[' is', ' a', ' mixture', ' of', ' liquid', ' and', ' gas', '.', ' The', ' liquid', ' is', ' a', ' mixture', ' of', ' hydro', 'car', 'bons', ',', ' and', ' the']	 is  a  mixture  of  liquid  and  gas .  The  liquid  is  a  mixture  of  hydro car bons ,  and  the	True	 also known as a kerosene cut. The boiling	6	[' also', ' known', ' as', ' a', ' k', 'eros', 'ene']
+245	49	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of champagne	liquid	champagne	[' is', ' a', ' gas', '.', ' As', ' the', ' temperature', ' is', ' raised', ',', ' the', ' gas', ' becomes', ' a', ' liquid', '.', ' The', ' temperature', ' at', ' which']	 is  a  gas .  As  the  temperature  is  raised ,  the  gas  becomes  a  liquid .  The  temperature  at  which	True	" began drinking champagne each morning, ""to"	2	[' began', ' drinking', ' champagne']
+246	49	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of champagne	liquid	champagne	[' is', ' a', ' gas', '.', ' As', ' the', ' temperature', ' is', ' raised', ',', ' the', ' gas', ' becomes', ' a', ' liquid', '.', ' The', ' temperature', ' at', ' which']	 is  a  gas .  As  the  temperature  is  raised ,  the  gas  becomes  a  liquid .  The  temperature  at  which	True	 with a bottle of champagne which he had purchased	4	[' with', ' a', ' bottle', ' of', ' champagne']
+247	49	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of champagne	liquid	champagne	[' is', ' a', ' gas', '.', ' As', ' the', ' temperature', ' is', ' raised', ',', ' the', ' gas', ' becomes', ' a', ' liquid', '.', ' The', ' temperature', ' at', ' which']	 is  a  gas .  As  the  temperature  is  raised ,  the  gas  becomes  a  liquid .  The  temperature  at  which	True	 dancing and sipping champagne whilst singing	4	[' dancing', ' and', ' s', 'ipping', ' champagne']
+248	49	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of champagne	liquid	champagne	[' is', ' a', ' gas', '.', ' As', ' the', ' temperature', ' is', ' raised', ',', ' the', ' gas', ' becomes', ' a', ' liquid', '.', ' The', ' temperature', ' at', ' which']	 is  a  gas .  As  the  temperature  is  raised ,  the  gas  becomes  a  liquid .  The  temperature  at  which	True	 rings and jewelry, champagne and brandy, Maxim	4	[' rings', ' and', ' jewelry', ',', ' champagne']
+249	49	At room temperature, the phase of matter of x	-1	At room temperature, the phase of matter of champagne	liquid	champagne	[' is', ' a', ' gas', '.', ' As', ' the', ' temperature', ' is', ' raised', ',', ' the', ' gas', ' becomes', ' a', ' liquid', '.', ' The', ' temperature', ' at', ' which']	 is  a  gas .  As  the  temperature  is  raised ,  the  gas  becomes  a  liquid .  The  temperature  at  which	True	 brewers have used champagne yeasts to increase	3	[' brewers', ' have', ' used', ' champagne']
