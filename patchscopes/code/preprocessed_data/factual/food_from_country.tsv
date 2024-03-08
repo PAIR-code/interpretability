@@ -1,0 +1,206 @@
+	sample_id	prompt_target	position_target	target_baseline	object	subject	generations_baseline	generations_baseline_str	is_correct_baseline	prompt_source	position_source	source_cropped_toks
+0	0	The country of origin for x	-1	The country of origin for Pizza	Italy	Pizza	[' Hut', ' is', ' Italy', '.', '\n', '\n', 'P', 'izza', ' Hut', ' is', ' a', ' global', ' pizza', ' chain', ' that', ' was', ' founded', ' in', ' 1958', ' in']	" Hut  is  Italy . 
+ 
+ P izza  Hut  is  a  global  pizza  chain  that  was  founded  in  1958  in"	True	 after moving into Pizza Hut Park in 2005.	3	[' after', ' moving', ' into', ' Pizza']
+1	0	The country of origin for x	-1	The country of origin for Pizza	Italy	Pizza	[' Hut', ' is', ' Italy', '.', '\n', '\n', 'P', 'izza', ' Hut', ' is', ' a', ' global', ' pizza', ' chain', ' that', ' was', ' founded', ' in', ' 1958', ' in']	" Hut  is  Italy . 
+ 
+ P izza  Hut  is  a  global  pizza  chain  that  was  founded  in  1958  in"	True	 MOSPEADA or Samurai Pizza Cats, despite	6	[' M', 'OS', 'PE', 'ADA', ' or', ' Samurai', ' Pizza']
+2	0	The country of origin for x	-1	The country of origin for Pizza	Italy	Pizza	[' Hut', ' is', ' Italy', '.', '\n', '\n', 'P', 'izza', ' Hut', ' is', ' a', ' global', ' pizza', ' chain', ' that', ' was', ' founded', ' in', ' 1958', ' in']	" Hut  is  Italy . 
+ 
+ P izza  Hut  is  a  global  pizza  chain  that  was  founded  in  1958  in"	True	 campaigns by Sony and Pizza Hut. The Japanese version	4	[' campaigns', ' by', ' Sony', ' and', ' Pizza']
+3	0	The country of origin for x	-1	The country of origin for Pizza	Italy	Pizza	[' Hut', ' is', ' Italy', '.', '\n', '\n', 'P', 'izza', ' Hut', ' is', ' a', ' global', ' pizza', ' chain', ' that', ' was', ' founded', ' in', ' 1958', ' in']	" Hut  is  Italy . 
+ 
+ P izza  Hut  is  a  global  pizza  chain  that  was  founded  in  1958  in"	True	 Ozzfest at the Pizza Hut Park on 9 August.	5	[' O', 'zz', 'fest', ' at', ' the', ' Pizza']
+4	0	The country of origin for x	-1	The country of origin for Pizza	Italy	Pizza	[' Hut', ' is', ' Italy', '.', '\n', '\n', 'P', 'izza', ' Hut', ' is', ' a', ' global', ' pizza', ' chain', ' that', ' was', ' founded', ' in', ' 1958', ' in']	" Hut  is  Italy . 
+ 
+ P izza  Hut  is  a  global  pizza  chain  that  was  founded  in  1958  in"	True	 Richmond Kickers at Pizza Hut Park in Frisco,	4	[' Richmond', ' Kick', 'ers', ' at', ' Pizza']
+5	1	The country of origin for x	-1	The country of origin for Sushi	Japan	Sushi	[' is', ' Japan', '.', '\n', '\n', 'S', 'ushi', ' is', ' a', ' Japanese', ' dish', ' that', ' is', ' made', ' from', ' raw', ' fish', ',', ' usually', ' raw']	" is  Japan . 
+ 
+ S ushi  is  a  Japanese  dish  that  is  made  from  raw  fish ,  usually  raw"	True	 Jon Ledford of Sushi Arcade included her	5	[' Jon', ' Led', 'ford', ' of', ' S', 'ushi']
+6	1	The country of origin for x	-1	The country of origin for Sushi	Japan	Sushi	[' is', ' Japan', '.', '\n', '\n', 'S', 'ushi', ' is', ' a', ' Japanese', ' dish', ' that', ' is', ' made', ' from', ' raw', ' fish', ',', ' usually', ' raw']	" is  Japan . 
+ 
+ S ushi  is  a  Japanese  dish  that  is  made  from  raw  fish ,  usually  raw"	True	 2013, Jon Ledford of Sushi Arcade included	7	[' 2013', ',', ' Jon', ' Led', 'ford', ' of', ' S', 'ushi']
+7	1	The country of origin for x	-1	The country of origin for Sushi	Japan	Sushi	[' is', ' Japan', '.', '\n', '\n', 'S', 'ushi', ' is', ' a', ' Japanese', ' dish', ' that', ' is', ' made', ' from', ' raw', ' fish', ',', ' usually', ' raw']	" is  Japan . 
+ 
+ S ushi  is  a  Japanese  dish  that  is  made  from  raw  fish ,  usually  raw"	True	" Ledford of Arcade Sushi opined that ""in"	5	[' Led', 'ford', ' of', ' Arcade', ' S', 'ushi']
+8	2	The country of origin for x	-1	The country of origin for Tacos	Mexico	Tacos	[' is', ' Mexico', '.', '\n', '\n', 'The', ' country', ' of', ' origin', ' for', ' Tac', 'os', ' is', ' Mexico', '.', '\n', '\n', 'The', ' country', ' of']	" is  Mexico . 
+ 
+ The  country  of  origin  for  Tac os  is  Mexico . 
+ 
+ The  country  of"	True	 at Ricky's Tacos speaks to Michael,	4	"[' at', ' Ricky', ""'s"", ' Tac', 'os']"
+9	2	The country of origin for x	-1	The country of origin for Tacos	Mexico	Tacos	[' is', ' Mexico', '.', '\n', '\n', 'The', ' country', ' of', ' origin', ' for', ' Tac', 'os', ' is', ' Mexico', '.', '\n', '\n', 'The', ' country', ' of']	" is  Mexico . 
+ 
+ The  country  of  origin  for  Tac os  is  Mexico . 
+ 
+ The  country  of"	True	 microphone at Ricky's Tacos speaks to Michael,	5	"[' microphone', ' at', ' Ricky', ""'s"", ' Tac', 'os']"
+10	2	The country of origin for x	-1	The country of origin for Tacos	Mexico	Tacos	[' is', ' Mexico', '.', '\n', '\n', 'The', ' country', ' of', ' origin', ' for', ' Tac', 'os', ' is', ' Mexico', '.', '\n', '\n', 'The', ' country', ' of']	" is  Mexico . 
+ 
+ The  country  of  origin  for  Tac os  is  Mexico . 
+ 
+ The  country  of"	True	 microphone at Ricky's Tacos speaks to	5	"[' microphone', ' at', ' Ricky', ""'s"", ' Tac', 'os']"
+11	3	The country of origin for x	-1	The country of origin for Baguette	France	Baguette	[' is', ' France', '.', '\n', '\n', 'B', 'agu', 'ette', ' is', ' a', ' French', ' bread', ' that', ' is', ' made', ' with', ' a', ' long', ',', ' thin']	" is  France . 
+ 
+ B agu ette  is  a  French  bread  that  is  made  with  a  long ,  thin"	True		2	['B', 'agu', 'ette']
+12	3	The country of origin for x	-1	The country of origin for Baguette	France	Baguette	[' is', ' France', '.', '\n', '\n', 'B', 'agu', 'ette', ' is', ' a', ' French', ' bread', ' that', ' is', ' made', ' with', ' a', ' long', ',', ' thin']	" is  France . 
+ 
+ B agu ette  is  a  French  bread  that  is  made  with  a  long ,  thin"	True	 that the Chicken BLT Baguette sandwich,	7	[' that', ' the', ' Chicken', ' BL', 'T', ' B', 'agu', 'ette']
+13	3	The country of origin for x	-1	The country of origin for Baguette	France	Baguette	[' is', ' France', '.', '\n', '\n', 'B', 'agu', 'ette', ' is', ' a', ' French', ' bread', ' that', ' is', ' made', ' with', ' a', ' long', ',', ' thin']	" is  France . 
+ 
+ B agu ette  is  a  French  bread  that  is  made  with  a  long ,  thin"	True	 BK introduced its BK Baguette line of sandwiches	8	[' B', 'K', ' introduced', ' its', ' B', 'K', ' B', 'agu', 'ette']
+14	3	The country of origin for x	-1	The country of origin for Baguette	France	Baguette	[' is', ' France', '.', '\n', '\n', 'B', 'agu', 'ette', ' is', ' a', ' French', ' bread', ' that', ' is', ' made', ' with', ' a', ' long', ',', ' thin']	" is  France . 
+ 
+ B agu ette  is  a  French  bread  that  is  made  with  a  long ,  thin"	True	 introduced its BK Baguette line of sandwiches	6	[' introduced', ' its', ' B', 'K', ' B', 'agu', 'ette']
+15	3	The country of origin for x	-1	The country of origin for Baguette	France	Baguette	[' is', ' France', '.', '\n', '\n', 'B', 'agu', 'ette', ' is', ' a', ' French', ' bread', ' that', ' is', ' made', ' with', ' a', ' long', ',', ' thin']	" is  France . 
+ 
+ B agu ette  is  a  French  bread  that  is  made  with  a  long ,  thin"	True	 introduced its BK Baguette line of sandwiches	6	[' introduced', ' its', ' B', 'K', ' B', 'agu', 'ette']
+16	5	The country of origin for x	-1	The country of origin for Paella	Spain	Paella	[' is', ' Spain', '.', '\n', '\n', 'The', ' Spanish', ' word', ' for', ' pa', 'ella', ' is', ' pa', 'ella', '.', '\n', '\n', 'The', ' Spanish', ' word']	" is  Spain . 
+ 
+ The  Spanish  word  for  pa ella  is  pa ella . 
+ 
+ The  Spanish  word"	True	 Balearic islands. Paella is a characteristic	6	[' Bal', 'ear', 'ic', ' islands', '.', ' Pa', 'ella']
+17	5	The country of origin for x	-1	The country of origin for Paella	Spain	Paella	[' is', ' Spain', '.', '\n', '\n', 'The', ' Spanish', ' word', ' for', ' pa', 'ella', ' is', ' pa', 'ella', '.', '\n', '\n', 'The', ' Spanish', ' word']	" is  Spain . 
+ 
+ The  Spanish  word  for  pa ella  is  pa ella . 
+ 
+ The  Spanish  word"	True	 Balearic islands. Paella is a characteristic	6	[' Bal', 'ear', 'ic', ' islands', '.', ' Pa', 'ella']
+18	5	The country of origin for x	-1	The country of origin for Paella	Spain	Paella	[' is', ' Spain', '.', '\n', '\n', 'The', ' Spanish', ' word', ' for', ' pa', 'ella', ' is', ' pa', 'ella', '.', '\n', '\n', 'The', ' Spanish', ' word']	" is  Spain . 
+ 
+ The  Spanish  word  for  pa ella  is  pa ella . 
+ 
+ The  Spanish  word"	True	 Balearic islands. Paella is a characteristic	6	[' Bal', 'ear', 'ic', ' islands', '.', ' Pa', 'ella']
+19	5	The country of origin for x	-1	The country of origin for Paella	Spain	Paella	[' is', ' Spain', '.', '\n', '\n', 'The', ' Spanish', ' word', ' for', ' pa', 'ella', ' is', ' pa', 'ella', '.', '\n', '\n', 'The', ' Spanish', ' word']	" is  Spain . 
+ 
+ The  Spanish  word  for  pa ella  is  pa ella . 
+ 
+ The  Spanish  word"	True	 Balearic islands. Paella is a characteristic	6	[' Bal', 'ear', 'ic', ' islands', '.', ' Pa', 'ella']
+20	7	The country of origin for x	-1	The country of origin for Baklava	Turkey	Baklava	"[' is', ' Greece', '.', ' The', ' name', ' Bak', 'l', 'ava', ' comes', ' from', ' the', ' Turkish', ' word', ' ""', 'b', 'ak', 'l', 'ava', '""', ' which']"	" is  Greece .  The  name  Bak l ava  comes  from  the  Turkish  word  "" b ak l ava ""  which"	False		3	['B', 'ak', 'l', 'ava']
+21	8	The country of origin for x	-1	The country of origin for Feijoada	Brazil	Feijoada	[' is', ' Brazil', ',', ' but', ' it', ' is', ' a', ' dish', ' that', ' has', ' been', ' adopted', ' by', ' many', ' other', ' countries', '.', ' It', ' is', ' a']	 is  Brazil ,  but  it  is  a  dish  that  has  been  adopted  by  many  other  countries .  It  is  a	True	 Other dishes include Feijoada Poveira, made with	6	[' Other', ' dishes', ' include', ' Fe', 'ij', 'oad', 'a']
+22	8	The country of origin for x	-1	The country of origin for Feijoada	Brazil	Feijoada	[' is', ' Brazil', ',', ' but', ' it', ' is', ' a', ' dish', ' that', ' has', ' been', ' adopted', ' by', ' many', ' other', ' countries', '.', ' It', ' is', ' a']	 is  Brazil ,  but  it  is  a  dish  that  has  been  adopted  by  many  other  countries .  It  is  a	True	 Other dishes include Feijoada Poveira, made	6	[' Other', ' dishes', ' include', ' Fe', 'ij', 'oad', 'a']
+23	8	The country of origin for x	-1	The country of origin for Feijoada	Brazil	Feijoada	[' is', ' Brazil', ',', ' but', ' it', ' is', ' a', ' dish', ' that', ' has', ' been', ' adopted', ' by', ' many', ' other', ' countries', '.', ' It', ' is', ' a']	 is  Brazil ,  but  it  is  a  dish  that  has  been  adopted  by  many  other  countries .  It  is  a	True	 dishes include Feijoada Poveira, made	5	[' dishes', ' include', ' Fe', 'ij', 'oad', 'a']
+24	8	The country of origin for x	-1	The country of origin for Feijoada	Brazil	Feijoada	[' is', ' Brazil', ',', ' but', ' it', ' is', ' a', ' dish', ' that', ' has', ' been', ' adopted', ' by', ' many', ' other', ' countries', '.', ' It', ' is', ' a']	 is  Brazil ,  but  it  is  a  dish  that  has  been  adopted  by  many  other  countries .  It  is  a	True	 Other dishes include Feijoada Poveira, made with	6	[' Other', ' dishes', ' include', ' Fe', 'ij', 'oad', 'a']
+25	9	The country of origin for x	-1	The country of origin for Borscht	Ukraine	Borscht	[' is', ' Russia', ',', ' and', ' the', ' name', ' is', ' derived', ' from', ' the', ' Russian', ' word', ' for', ' beet', 'root', '.', ' The', ' beet', 'root', ' is']	 is  Russia ,  and  the  name  is  derived  from  the  Russian  word  for  beet root .  The  beet root  is	False	 borscht garnishes. Borscht based on bone	8	[' b', 'ors', 'cht', ' garn', 'ishes', '.', ' B', 'ors', 'cht']
+26	9	The country of origin for x	-1	The country of origin for Borscht	Ukraine	Borscht	[' is', ' Russia', ',', ' and', ' the', ' name', ' is', ' derived', ' from', ' the', ' Russian', ' word', ' for', ' beet', 'root', '.', ' The', ' beet', 'root', ' is']	 is  Russia ,  and  the  name  is  derived  from  the  Russian  word  for  beet root .  The  beet root  is	False		2	['B', 'ors', 'cht']
+27	9	The country of origin for x	-1	The country of origin for Borscht	Ukraine	Borscht	[' is', ' Russia', ',', ' and', ' the', ' name', ' is', ' derived', ' from', ' the', ' Russian', ' word', ' for', ' beet', 'root', '.', ' The', ' beet', 'root', ' is']	 is  Russia ,  and  the  name  is  derived  from  the  Russian  word  for  beet root .  The  beet root  is	False	 borscht garnishes. Borscht based on bone	8	[' b', 'ors', 'cht', ' garn', 'ishes', '.', ' B', 'ors', 'cht']
+28	9	The country of origin for x	-1	The country of origin for Borscht	Ukraine	Borscht	[' is', ' Russia', ',', ' and', ' the', ' name', ' is', ' derived', ' from', ' the', ' Russian', ' word', ' for', ' beet', 'root', '.', ' The', ' beet', 'root', ' is']	 is  Russia ,  and  the  name  is  derived  from  the  Russian  word  for  beet root .  The  beet root  is	False		2	['B', 'ors', 'cht']
+29	9	The country of origin for x	-1	The country of origin for Borscht	Ukraine	Borscht	[' is', ' Russia', ',', ' and', ' the', ' name', ' is', ' derived', ' from', ' the', ' Russian', ' word', ' for', ' beet', 'root', '.', ' The', ' beet', 'root', ' is']	 is  Russia ,  and  the  name  is  derived  from  the  Russian  word  for  beet root .  The  beet root  is	False	" = Borscht =
+"	3	[' =', ' B', 'ors', 'cht']
+30	11	The country of origin for x	-1	The country of origin for Dim Sum	China	Dim Sum	[' is', ' China', '.', '\n', '\n', 'Dim', ' Sum', ' is', ' a', ' type', ' of', ' Chinese', ' food', ' that', ' is', ' usually', ' served', ' in', ' small', ' portions']	" is  China . 
+ 
+ Dim  Sum  is  a  type  of  Chinese  food  that  is  usually  served  in  small  portions"	True	" Fairy Wine and Dim Sum ’ s.
+"	4	[' Fairy', ' Wine', ' and', ' Dim', ' Sum']
+31	15	The country of origin for x	-1	The country of origin for Pho	Vietnam	Pho	['ebus', ' is', ' unknown', '.', '\n', '\n', 'The', ' Ph', 'o', 'ebus', ' is', ' a', ' very', ' rare', ' breed', ' of', ' dog', '.', ' It', ' is']	"ebus  is  unknown . 
+ 
+ The  Ph o ebus  is  a  very  rare  breed  of  dog .  It  is"	False	 confluence of the Pho Chhu (father) and Mo	5	[' conf', 'luence', ' of', ' the', ' Ph', 'o']
+32	15	The country of origin for x	-1	The country of origin for Pho	Vietnam	Pho	['ebus', ' is', ' unknown', '.', '\n', '\n', 'The', ' Ph', 'o', 'ebus', ' is', ' a', ' very', ' rare', ' breed', ' of', ' dog', '.', ' It', ' is']	"ebus  is  unknown . 
+ 
+ The  Ph o ebus  is  a  very  rare  breed  of  dog .  It  is"	False	 Mo Chu and Pho Chu rivers, and in	4	[' Mo', ' Chu', ' and', ' Ph', 'o']
+33	15	The country of origin for x	-1	The country of origin for Pho	Vietnam	Pho	['ebus', ' is', ' unknown', '.', '\n', '\n', 'The', ' Ph', 'o', 'ebus', ' is', ' a', ' very', ' rare', ' breed', ' of', ' dog', '.', ' It', ' is']	"ebus  is  unknown . 
+ 
+ The  Ph o ebus  is  a  very  rare  breed  of  dog .  It  is"	False	 delta region, Pho Duc Chinh fled and	4	[' delta', ' region', ',', ' Ph', 'o']
+34	15	The country of origin for x	-1	The country of origin for Pho	Vietnam	Pho	['ebus', ' is', ' unknown', '.', '\n', '\n', 'The', ' Ph', 'o', 'ebus', ' is', ' a', ' very', ' rare', ' breed', ' of', ' dog', '.', ' It', ' is']	"ebus  is  unknown . 
+ 
+ The  Ph o ebus  is  a  very  rare  breed  of  dog .  It  is"	False	 in the Mo Chu and Pho Chu rivers, and in	6	[' in', ' the', ' Mo', ' Chu', ' and', ' Ph', 'o']
+35	15	The country of origin for x	-1	The country of origin for Pho	Vietnam	Pho	['ebus', ' is', ' unknown', '.', '\n', '\n', 'The', ' Ph', 'o', 'ebus', ' is', ' a', ' very', ' rare', ' breed', ' of', ' dog', '.', ' It', ' is']	"ebus  is  unknown . 
+ 
+ The  Ph o ebus  is  a  very  rare  breed  of  dog .  It  is"	False	 Battalion conceded Pho Lai to the VPA	3	[' Battalion', ' conceded', ' Ph', 'o']
+36	16	The country of origin for x	-1	The country of origin for Hummus	Lebanon	Hummus	[' is', ' Lebanon', '.', '\n', '\n', 'H', 'umm', 'us', ' is', ' a', ' Middle', ' Eastern', ' dip', ' made', ' from', ' chick', 'pe', 'as', ',', ' t']	" is  Lebanon . 
+ 
+ H umm us  is  a  Middle  Eastern  dip  made  from  chick pe as ,  t"	True		2	['H', 'umm', 'us']
+37	16	The country of origin for x	-1	The country of origin for Hummus	Lebanon	Hummus	[' is', ' Lebanon', '.', '\n', '\n', 'H', 'umm', 'us', ' is', ' a', ' Middle', ' Eastern', ' dip', ' made', ' from', ' chick', 'pe', 'as', ',', ' t']	" is  Lebanon . 
+ 
+ H umm us  is  a  Middle  Eastern  dip  made  from  chick pe as ,  t"	True	 za 'atar, or jams. Hummus bi tahini is also eaten	9	"[' z', 'a', "" '"", 'atar', ',', ' or', ' jams', '.', ' Hum', 'mus']"
+38	16	The country of origin for x	-1	The country of origin for Hummus	Lebanon	Hummus	[' is', ' Lebanon', '.', '\n', '\n', 'H', 'umm', 'us', ' is', ' a', ' Middle', ' Eastern', ' dip', ' made', ' from', ' chick', 'pe', 'as', ',', ' t']	" is  Lebanon . 
+ 
+ H umm us  is  a  Middle  Eastern  dip  made  from  chick pe as ,  t"	True		2	['H', 'umm', 'us']
+39	16	The country of origin for x	-1	The country of origin for Hummus	Lebanon	Hummus	[' is', ' Lebanon', '.', '\n', '\n', 'H', 'umm', 'us', ' is', ' a', ' Middle', ' Eastern', ' dip', ' made', ' from', ' chick', 'pe', 'as', ',', ' t']	" is  Lebanon . 
+ 
+ H umm us  is  a  Middle  Eastern  dip  made  from  chick pe as ,  t"	True		2	['H', 'umm', 'us']
+40	16	The country of origin for x	-1	The country of origin for Hummus	Lebanon	Hummus	[' is', ' Lebanon', '.', '\n', '\n', 'H', 'umm', 'us', ' is', ' a', ' Middle', ' Eastern', ' dip', ' made', ' from', ' chick', 'pe', 'as', ',', ' t']	" is  Lebanon . 
+ 
+ H umm us  is  a  Middle  Eastern  dip  made  from  chick pe as ,  t"	True		2	['H', 'umm', 'us']
+41	17	The country of origin for x	-1	The country of origin for Gyro	Greece	Gyro	['-', 'M', 'atic', ' is', ' the', ' United', ' States', '.', '\n', '\n', 'Gy', 'ro', '-', 'M', 'atic', ' is', ' a', ' registered', ' trademark', ' of']	"- M atic  is  the  United  States . 
+ 
+ Gy ro - M atic  is  a  registered  trademark  of"	False	" pioneered the use of the Gyro Rate Unit.
+"	6	[' pioneered', ' the', ' use', ' of', ' the', ' Gy', 'ro']
+42	17	The country of origin for x	-1	The country of origin for Gyro	Greece	Gyro	['-', 'M', 'atic', ' is', ' the', ' United', ' States', '.', '\n', '\n', 'Gy', 'ro', '-', 'M', 'atic', ' is', ' a', ' registered', ' trademark', ' of']	"- M atic  is  the  United  States . 
+ 
+ Gy ro - M atic  is  a  registered  trademark  of"	False	" pioneered the use of the Gyro Rate Unit.
+"	6	[' pioneered', ' the', ' use', ' of', ' the', ' Gy', 'ro']
+43	17	The country of origin for x	-1	The country of origin for Gyro	Greece	Gyro	['-', 'M', 'atic', ' is', ' the', ' United', ' States', '.', '\n', '\n', 'Gy', 'ro', '-', 'M', 'atic', ' is', ' a', ' registered', ' trademark', ' of']	"- M atic  is  the  United  States . 
+ 
+ Gy ro - M atic  is  a  registered  trademark  of"	False	" the use of the Gyro Rate Unit.
+"	5	[' the', ' use', ' of', ' the', ' Gy', 'ro']
+44	17	The country of origin for x	-1	The country of origin for Gyro	Greece	Gyro	['-', 'M', 'atic', ' is', ' the', ' United', ' States', '.', '\n', '\n', 'Gy', 'ro', '-', 'M', 'atic', ' is', ' a', ' registered', ' trademark', ' of']	"- M atic  is  the  United  States . 
+ 
+ Gy ro - M atic  is  a  registered  trademark  of"	False	" pioneered the use of the Gyro Rate Unit.
+"	6	[' pioneered', ' the', ' use', ' of', ' the', ' Gy', 'ro']
+45	20	The country of origin for x	-1	The country of origin for Moussaka	Greece	Moussaka	"[' is', ' Greece', ',', ' and', ' the', ' name', ' is', ' derived', ' from', ' the', ' Greek', ' word', ' for', ' ""', 'au', 'berg', 'ine', '""', ' (', 'egg']"	" is  Greece ,  and  the  name  is  derived  from  the  Greek  word  for  "" au berg ine ""  ( egg"	True		3	['M', 'ous', 's', 'aka']
+46	20	The country of origin for x	-1	The country of origin for Moussaka	Greece	Moussaka	"[' is', ' Greece', ',', ' and', ' the', ' name', ' is', ' derived', ' from', ' the', ' Greek', ' word', ' for', ' ""', 'au', 'berg', 'ine', '""', ' (', 'egg']"	" is  Greece ,  and  the  name  is  derived  from  the  Greek  word  for  "" au berg ine ""  ( egg"	True		3	['M', 'ous', 's', 'aka']
+47	21	The country of origin for x	-1	The country of origin for Pavlova	New Zealand	Pavlova	"[' is', ' Russia', '.', '\n', '\n', 'The', ' name', ' Pav', 'l', 'ova', ' is', ' derived', ' from', ' the', ' Russian', ' word', ' for', ' ""', 'pe', 'ach']"	" is  Russia . 
+ 
+ The  name  Pav l ova  is  derived  from  the  Russian  word  for  "" pe ach"	False	 Russian ballerina Anna Pavlova and Mrs. Patrick Campbell.	7	[' Russian', ' ball', 'er', 'ina', ' Anna', ' Pav', 'l', 'ova']
+48	21	The country of origin for x	-1	The country of origin for Pavlova	New Zealand	Pavlova	"[' is', ' Russia', '.', '\n', '\n', 'The', ' name', ' Pav', 'l', 'ova', ' is', ' derived', ' from', ' the', ' Russian', ' word', ' for', ' ""', 'pe', 'ach']"	" is  Russia . 
+ 
+ The  name  Pav l ova  is  derived  from  the  Russian  word  for  "" pe ach"	False	 first performed by Pavlova at a gala in the	5	[' first', ' performed', ' by', ' Pav', 'l', 'ova']
+49	21	The country of origin for x	-1	The country of origin for Pavlova	New Zealand	Pavlova	"[' is', ' Russia', '.', '\n', '\n', 'The', ' name', ' Pav', 'l', 'ova', ' is', ' derived', ' from', ' the', ' Russian', ' word', ' for', ' ""', 'pe', 'ach']"	" is  Russia . 
+ 
+ The  name  Pav l ova  is  derived  from  the  Russian  word  for  "" pe ach"	False		3	['P', 'av', 'l', 'ova']
+50	21	The country of origin for x	-1	The country of origin for Pavlova	New Zealand	Pavlova	"[' is', ' Russia', '.', '\n', '\n', 'The', ' name', ' Pav', 'l', 'ova', ' is', ' derived', ' from', ' the', ' Russian', ' word', ' for', ' ""', 'pe', 'ach']"	" is  Russia . 
+ 
+ The  name  Pav l ova  is  derived  from  the  Russian  word  for  "" pe ach"	False	 considered one of Pavlova's trademarks.	5	[' considered', ' one', ' of', ' Pav', 'l', 'ova']
+51	21	The country of origin for x	-1	The country of origin for Pavlova	New Zealand	Pavlova	"[' is', ' Russia', '.', '\n', '\n', 'The', ' name', ' Pav', 'l', 'ova', ' is', ' derived', ' from', ' the', ' Russian', ' word', ' for', ' ""', 'pe', 'ach']"	" is  Russia . 
+ 
+ The  name  Pav l ova  is  derived  from  the  Russian  word  for  "" pe ach"	False		3	['P', 'av', 'l', 'ova']
+52	22	The country of origin for x	-1	The country of origin for Shawarma	Middle East	Shawarma	[' is', ' Turkey', '.', '\n', '\n', 'Sh', 'aw', 'arma', ' is', ' a', ' type', ' of', ' Middle', ' Eastern', ' food', ' that', ' is', ' made', ' from', ' a']	" is  Turkey . 
+ 
+ Sh aw arma  is  a  type  of  Middle  Eastern  food  that  is  made  from  a"	True	 the world premiere. Shawarma sales in Los Angeles,	5	[' the', ' world', ' premiere', '.', ' Shaw', 'arma']
+53	22	The country of origin for x	-1	The country of origin for Shawarma	Middle East	Shawarma	[' is', ' Turkey', '.', '\n', '\n', 'Sh', 'aw', 'arma', ' is', ' a', ' type', ' of', ' Middle', ' Eastern', ' food', ' that', ' is', ' made', ' from', ' a']	" is  Turkey . 
+ 
+ Sh aw arma  is  a  type  of  Middle  Eastern  food  that  is  made  from  a"	True	 khubz, such as Shawarma and Falafel are also	7	[' k', 'hub', 'z', ',', ' such', ' as', ' Shaw', 'arma']
+54	22	The country of origin for x	-1	The country of origin for Shawarma	Middle East	Shawarma	[' is', ' Turkey', '.', '\n', '\n', 'Sh', 'aw', 'arma', ' is', ' a', ' type', ' of', ' Middle', ' Eastern', ' food', ' that', ' is', ' made', ' from', ' a']	" is  Turkey . 
+ 
+ Sh aw arma  is  a  type  of  Middle  Eastern  food  that  is  made  from  a"	True	 khubz, such as Shawarma and Falafel	7	[' k', 'hub', 'z', ',', ' such', ' as', ' Shaw', 'arma']
+55	23	The country of origin for x	-1	The country of origin for Falafel	Middle East	Falafel	[' is', ' Israel', '.', '\n', '\n', 'Fal', 'af', 'el', ' is', ' a', ' traditional', ' Middle', ' Eastern', ' dish', ' made', ' from', ' chick', 'pe', 'as', ',']	" is  Israel . 
+ 
+ Fal af el  is  a  traditional  Middle  Eastern  dish  made  from  chick pe as ,"	True		2	['Fal', 'af', 'el']
+56	23	The country of origin for x	-1	The country of origin for Falafel	Middle East	Falafel	[' is', ' Israel', '.', '\n', '\n', 'Fal', 'af', 'el', ' is', ' a', ' traditional', ' Middle', ' Eastern', ' dish', ' made', ' from', ' chick', 'pe', 'as', ',']	" is  Israel . 
+ 
+ Fal af el  is  a  traditional  Middle  Eastern  dish  made  from  chick pe as ,"	True	" = Falafel =
+"	3	[' =', ' Fal', 'af', 'el']
+57	23	The country of origin for x	-1	The country of origin for Falafel	Middle East	Falafel	[' is', ' Israel', '.', '\n', '\n', 'Fal', 'af', 'el', ' is', ' a', ' traditional', ' Middle', ' Eastern', ' dish', ' made', ' from', ' chick', 'pe', 'as', ',']	" is  Israel . 
+ 
+ Fal af el  is  a  traditional  Middle  Eastern  dish  made  from  chick pe as ,"	True		2	['Fal', 'af', 'el']
+58	23	The country of origin for x	-1	The country of origin for Falafel	Middle East	Falafel	[' is', ' Israel', '.', '\n', '\n', 'Fal', 'af', 'el', ' is', ' a', ' traditional', ' Middle', ' Eastern', ' dish', ' made', ' from', ' chick', 'pe', 'as', ',']	" is  Israel . 
+ 
+ Fal af el  is  a  traditional  Middle  Eastern  dish  made  from  chick pe as ,"	True	 regarding the origins of Falafel, and reassert the	6	[' regarding', ' the', ' origins', ' of', ' Fal', 'af', 'el']
+59	23	The country of origin for x	-1	The country of origin for Falafel	Middle East	Falafel	[' is', ' Israel', '.', '\n', '\n', 'Fal', 'af', 'el', ' is', ' a', ' traditional', ' Middle', ' Eastern', ' dish', ' made', ' from', ' chick', 'pe', 'as', ',']	" is  Israel . 
+ 
+ Fal af el  is  a  traditional  Middle  Eastern  dish  made  from  chick pe as ,"	True		2	['Fal', 'af', 'el']
+60	25	The country of origin for x	-1	The country of origin for Biryani	India	Biryani	[' is', ' India', '.', '\n', '\n', 'The', ' country', ' of', ' origin', ' for', ' B', 'iry', 'ani', ' is', ' India', '.', '\n', '\n', 'The', ' country']	" is  India . 
+ 
+ The  country  of  origin  for  B iry ani  is  India . 
+ 
+ The  country"	True		2	['B', 'iry', 'ani']
+61	25	The country of origin for x	-1	The country of origin for Biryani	India	Biryani	[' is', ' India', '.', '\n', '\n', 'The', ' country', ' of', ' origin', ' for', ' B', 'iry', 'ani', ' is', ' India', '.', '\n', '\n', 'The', ' country']	" is  India . 
+ 
+ The  country  of  origin  for  B iry ani  is  India . 
+ 
+ The  country"	True	 chicken pakoras. Biryani and murgh pilao	7	[' chicken', ' p', 'ak', 'oras', '.', ' B', 'iry', 'ani']
+62	25	The country of origin for x	-1	The country of origin for Biryani	India	Biryani	[' is', ' India', '.', '\n', '\n', 'The', ' country', ' of', ' origin', ' for', ' B', 'iry', 'ani', ' is', ' India', '.', '\n', '\n', 'The', ' country']	" is  India . 
+ 
+ The  country  of  origin  for  B iry ani  is  India . 
+ 
+ The  country"	True		2	['B', 'iry', 'ani']
+63	25	The country of origin for x	-1	The country of origin for Biryani	India	Biryani	[' is', ' India', '.', '\n', '\n', 'The', ' country', ' of', ' origin', ' for', ' B', 'iry', 'ani', ' is', ' India', '.', '\n', '\n', 'The', ' country']	" is  India . 
+ 
+ The  country  of  origin  for  B iry ani  is  India . 
+ 
+ The  country"	True	 chicken pakoras. Biryani and murgh pilao	7	[' chicken', ' p', 'ak', 'oras', '.', ' B', 'iry', 'ani']
+64	27	The country of origin for x	-1	The country of origin for Fondue	Switzerland	Fondue	[' is', ' Switzerland', '.', '\n', '\n', 'F', 'ond', 'ue', ' is', ' a', ' Swiss', ' dish', ' that', ' is', ' made', ' with', ' a', ' cheese', ' and', ' wine']	" is  Switzerland . 
+ 
+ F ond ue  is  a  Swiss  dish  that  is  made  with  a  cheese  and  wine"	True	" for Brittany's ""Fondue for Two"" segments"	6	"[' for', ' Brittany', ""'s"", ' ""', 'F', 'ond', 'ue']"
+65	27	The country of origin for x	-1	The country of origin for Fondue	Switzerland	Fondue	[' is', ' Switzerland', '.', '\n', '\n', 'F', 'ond', 'ue', ' is', ' a', ' Swiss', ' dish', ' that', ' is', ' made', ' with', ' a', ' cheese', ' and', ' wine']	" is  Switzerland . 
+ 
+ F ond ue  is  a  Swiss  dish  that  is  made  with  a  cheese  and  wine"	True	" for Brittany's ""Fondue for Two"" segments"	6	"[' for', ' Brittany', ""'s"", ' ""', 'F', 'ond', 'ue']"
+66	29	The country of origin for x	-1	The country of origin for Miso Soup	Japan	Miso Soup	[' is', ' Japan', '.', ' It', ' is', ' a', ' traditional', ' Japanese', ' soup', ' made', ' from', ' fermented', ' soy', 'beans', ',', ' rice', ',', ' and', ' salt', '.']	 is  Japan .  It  is  a  traditional  Japanese  soup  made  from  fermented  soy beans ,  rice ,  and  salt .	True	 Hana-chan no Miso Soup (30 August 2014,	7	[' H', 'ana', '-', 'chan', ' no', ' Mis', 'o', ' Soup']
+67	29	The country of origin for x	-1	The country of origin for Miso Soup	Japan	Miso Soup	[' is', ' Japan', '.', ' It', ' is', ' a', ' traditional', ' Japanese', ' soup', ' made', ' from', ' fermented', ' soy', 'beans', ',', ' rice', ',', ' and', ' salt', '.']	 is  Japan .  It  is  a  traditional  Japanese  soup  made  from  fermented  soy beans ,  rice ,  and  salt .	True	 Hana-chan no Miso Soup (30 August 2014, NTV)	7	[' H', 'ana', '-', 'chan', ' no', ' Mis', 'o', ' Soup']
