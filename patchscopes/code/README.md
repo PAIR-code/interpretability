@@ -8,7 +8,7 @@ For example, this figure shows a simple Patchscope for decoding what is encoded 
 
 [**[Paper]**](https://arxiv.org/abs/2401.06102) [**[Project Website]**](https://pair-code.github.io/interpretability/patchscopes/)
 
-![Alt text](images/patchscopes.png?raw=true "Patchscope example")
+<p align="left"><img width="80%" src="images/patchscopes.png" /></p>
 
 ### 💾 Download textual data
 The script is provided [**here**](download_the_pile_text_data.py). Use the following command to run it:
