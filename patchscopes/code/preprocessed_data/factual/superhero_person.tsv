@@ -1,0 +1,1340 @@
+	sample_id	prompt_target	position_target	target_baseline	object	subject	generations_baseline	generations_baseline_str	is_correct_baseline	prompt_source	position_source	source_cropped_toks
+0	0	Secret identity of x	-1	Secret identity of Superman	Clark Kent	Superman	['\n', '\n', 'The', ' secret', ' identity', ' of', ' Superman', ' is', ' Clark', ' Kent', ',', ' a', ' mild', '-', 'man', 'nered', ' reporter', ' for', ' the', ' Daily']	"
+ 
+ The  secret  identity  of  Superman  is  Clark  Kent ,  a  mild - man nered  reporter  for  the  Daily"	True	 the traditional Superman costume, and	2	[' the', ' traditional', ' Superman']
+1	0	Secret identity of x	-1	Secret identity of Superman	Clark Kent	Superman	['\n', '\n', 'The', ' secret', ' identity', ' of', ' Superman', ' is', ' Clark', ' Kent', ',', ' a', ' mild', '-', 'man', 'nered', ' reporter', ' for', ' the', ' Daily']	"
+ 
+ The  secret  identity  of  Superman  is  Clark  Kent ,  a  mild - man nered  reporter  for  the  Daily"	True	 Vendetta and Singer's Superman Returns. Chris	5	"[' Vend', 'etta', ' and', ' Singer', ""'s"", ' Superman']"
+2	0	Secret identity of x	-1	Secret identity of Superman	Clark Kent	Superman	['\n', '\n', 'The', ' secret', ' identity', ' of', ' Superman', ' is', ' Clark', ' Kent', ',', ' a', ' mild', '-', 'man', 'nered', ' reporter', ' for', ' the', ' Daily']	"
+ 
+ The  secret  identity  of  Superman  is  Clark  Kent ,  a  mild - man nered  reporter  for  the  Daily"	True	 Bros. announced that Superman and Batman will unite	4	[' Bros', '.', ' announced', ' that', ' Superman']
+3	0	Secret identity of x	-1	Secret identity of Superman	Clark Kent	Superman	['\n', '\n', 'The', ' secret', ' identity', ' of', ' Superman', ' is', ' Clark', ' Kent', ',', ' a', ' mild', '-', 'man', 'nered', ' reporter', ' for', ' the', ' Daily']	"
+ 
+ The  secret  identity  of  Superman  is  Clark  Kent ,  a  mild - man nered  reporter  for  the  Daily"	True	" been dubbed Superman by the masses.
+"	2	[' been', ' dubbed', ' Superman']
+4	0	Secret identity of x	-1	Secret identity of Superman	Clark Kent	Superman	['\n', '\n', 'The', ' secret', ' identity', ' of', ' Superman', ' is', ' Clark', ' Kent', ',', ' a', ' mild', '-', 'man', 'nered', ' reporter', ' for', ' the', ' Daily']	"
+ 
+ The  secret  identity  of  Superman  is  Clark  Kent ,  a  mild - man nered  reporter  for  the  Daily"	True	 DVD box set titled Superman Ultimate Collector's	4	[' DVD', ' box', ' set', ' titled', ' Superman']
+5	1	Secret identity of x	-1	Secret identity of Batman	Bruce Wayne	Batman	['\n', '\n', 'Batman', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' created', ' by', ' Bob', ' Kane', ' and', ' Bill', ' Finger', '.', ' He', ' first']	"
+ 
+ Batman  is  a  fictional  character ,  a  superhero  created  by  Bob  Kane  and  Bill  Finger .  He  first"	False	 crime-fighting partner to Batman and ward of Bruce	5	[' crime', '-', 'fighting', ' partner', ' to', ' Batman']
+6	1	Secret identity of x	-1	Secret identity of Batman	Bruce Wayne	Batman	['\n', '\n', 'Batman', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' created', ' by', ' Bob', ' Kane', ' and', ' Bill', ' Finger', '.', ' He', ' first']	"
+ 
+ Batman  is  a  fictional  character ,  a  superhero  created  by  Bob  Kane  and  Bill  Finger .  He  first"	False	 Robin (1997)	3	[' Robin', ' (', '1997', 'Batman']
+7	1	Secret identity of x	-1	Secret identity of Batman	Bruce Wayne	Batman	['\n', '\n', 'Batman', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' created', ' by', ' Bob', ' Kane', ' and', ' Bill', ' Finger', '.', ' He', ' first']	"
+ 
+ Batman  is  a  fictional  character ,  a  superhero  created  by  Bob  Kane  and  Bill  Finger .  He  first"	False	 with alternate Batman outfits based	2	[' with', ' alternate', ' Batman']
+8	1	Secret identity of x	-1	Secret identity of Batman	Bruce Wayne	Batman	['\n', '\n', 'Batman', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' created', ' by', ' Bob', ' Kane', ' and', ' Bill', ' Finger', '.', ' He', ' first']	"
+ 
+ Batman  is  a  fictional  character ,  a  superhero  created  by  Bob  Kane  and  Bill  Finger .  He  first"	False	 limited to the Batman Family, serving a	3	[' limited', ' to', ' the', ' Batman']
+9	1	Secret identity of x	-1	Secret identity of Batman	Bruce Wayne	Batman	['\n', '\n', 'Batman', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' created', ' by', ' Bob', ' Kane', ' and', ' Bill', ' Finger', '.', ' He', ' first']	"
+ 
+ Batman  is  a  fictional  character ,  a  superhero  created  by  Bob  Kane  and  Bill  Finger .  He  first"	False	 dumping ground for Batman's psychotic	3	[' dumping', ' ground', ' for', ' Batman']
+10	2	Secret identity of x	-1	Secret identity of Wonder Woman	Diana Prince	Wonder Woman	['\n', '\n', 'Wonder', ' Woman', ' is', ' a', ' fictional', ' superhero', 'ine', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' DC', ' Comics', '.', ' Created']	"
+ 
+ Wonder  Woman  is  a  fictional  superhero ine  appearing  in  American  comic  books  published  by  DC  Comics .  Created"	False	 with Zatanna and Wonder Woman struggling	6	[' with', ' Z', 'at', 'anna', ' and', ' Wonder', ' Woman']
+11	2	Secret identity of x	-1	Secret identity of Wonder Woman	Diana Prince	Wonder Woman	['\n', '\n', 'Wonder', ' Woman', ' is', ' a', ' fictional', ' superhero', 'ine', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' DC', ' Comics', '.', ' Created']	"
+ 
+ Wonder  Woman  is  a  fictional  superhero ine  appearing  in  American  comic  books  published  by  DC  Comics .  Created"	False	" Beyoncé is seen wearing a Wonder Woman T-shirt.
+"	7	[' Beyon', 'cé', ' is', ' seen', ' wearing', ' a', ' Wonder', ' Woman']
+12	2	Secret identity of x	-1	Secret identity of Wonder Woman	Diana Prince	Wonder Woman	['\n', '\n', 'Wonder', ' Woman', ' is', ' a', ' fictional', ' superhero', 'ine', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' DC', ' Comics', '.', ' Created']	"
+ 
+ Wonder  Woman  is  a  fictional  superhero ine  appearing  in  American  comic  books  published  by  DC  Comics .  Created"	False	 Comics production Wonder Woman: Amazonia	3	[' Comics', ' production', ' Wonder', ' Woman']
+13	2	Secret identity of x	-1	Secret identity of Wonder Woman	Diana Prince	Wonder Woman	['\n', '\n', 'Wonder', ' Woman', ' is', ' a', ' fictional', ' superhero', 'ine', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' DC', ' Comics', '.', ' Created']	"
+ 
+ Wonder  Woman  is  a  fictional  superhero ine  appearing  in  American  comic  books  published  by  DC  Comics .  Created"	False	 Superman, Batman, and Wonder Woman — were still	6	[' Superman', ',', ' Batman', ',', ' and', ' Wonder', ' Woman']
+14	2	Secret identity of x	-1	Secret identity of Wonder Woman	Diana Prince	Wonder Woman	['\n', '\n', 'Wonder', ' Woman', ' is', ' a', ' fictional', ' superhero', 'ine', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' DC', ' Comics', '.', ' Created']	"
+ 
+ Wonder  Woman  is  a  fictional  superhero ine  appearing  in  American  comic  books  published  by  DC  Comics .  Created"	False	 Gadot was cast as Wonder Woman in December 2013.	6	[' Gad', 'ot', ' was', ' cast', ' as', ' Wonder', ' Woman']
+15	3	Secret identity of x	-1	Secret identity of Spider-Man	Peter Parker	Spider-Man	['\n', '\n', 'The', ' Spider', '-', 'Man', ' of', ' the', ' Marvel', ' Universe', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' appearing', ' in', ' American']	"
+ 
+ The  Spider - Man  of  the  Marvel  Universe  is  a  fictional  character ,  a  superhero  appearing  in  American"	False	 Friends, the 1967 Spider-Man cartoon and	6	[' Friends', ',', ' the', ' 1967', ' Spider', '-', 'Man']
+16	3	Secret identity of x	-1	Secret identity of Spider-Man	Peter Parker	Spider-Man	['\n', '\n', 'The', ' Spider', '-', 'Man', ' of', ' the', ' Marvel', ' Universe', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' appearing', ' in', ' American']	"
+ 
+ The  Spider - Man  of  the  Marvel  Universe  is  a  fictional  character ,  a  superhero  appearing  in  American"	False	 to The Amazing Spider-Man ‍ — ‌ her sole	5	[' to', ' The', ' Amazing', ' Spider', '-', 'Man']
+17	3	Secret identity of x	-1	Secret identity of Spider-Man	Peter Parker	Spider-Man	['\n', '\n', 'The', ' Spider', '-', 'Man', ' of', ' the', ' Marvel', ' Universe', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' appearing', ' in', ' American']	"
+ 
+ The  Spider - Man  of  the  Marvel  Universe  is  a  fictional  character ,  a  superhero  appearing  in  American"	False		2	['Spider', '-', 'Man']
+18	3	Secret identity of x	-1	Secret identity of Spider-Man	Peter Parker	Spider-Man	['\n', '\n', 'The', ' Spider', '-', 'Man', ' of', ' the', ' Marvel', ' Universe', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' appearing', ' in', ' American']	"
+ 
+ The  Spider - Man  of  the  Marvel  Universe  is  a  fictional  character ,  a  superhero  appearing  in  American"	False	 and wind effects. Spider-Man attempts to pull	6	[' and', ' wind', ' effects', '.', ' Spider', '-', 'Man']
+19	3	Secret identity of x	-1	Secret identity of Spider-Man	Peter Parker	Spider-Man	['\n', '\n', 'The', ' Spider', '-', 'Man', ' of', ' the', ' Marvel', ' Universe', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' appearing', ' in', ' American']	"
+ 
+ The  Spider - Man  of  the  Marvel  Universe  is  a  fictional  character ,  a  superhero  appearing  in  American"	False		2	['Spider', '-', 'Man']
+20	4	Secret identity of x	-1	Secret identity of Iron Man	Tony Stark	Iron Man	['\n', '\n', 'The', ' Iron', ' Man', ' suit', ' is', ' a', ' fictional', ' superhero', ' costume', ' worn', ' by', ' Tony', ' Stark', ',', ' a', '.', 'k', '.']	"
+ 
+ The  Iron  Man  suit  is  a  fictional  superhero  costume  worn  by  Tony  Stark ,  a . k ."	True	 Hayter, and pitted Iron Man against his	6	[' Hay', 'ter', ',', ' and', ' pitted', ' Iron', ' Man']
+21	4	Secret identity of x	-1	Secret identity of Iron Man	Tony Stark	Iron Man	['\n', '\n', 'The', ' Iron', ' Man', ' suit', ' is', ' a', ' fictional', ' superhero', ' costume', ' worn', ' by', ' Tony', ' Stark', ',', ' a', '.', 'k', '.']	"
+ 
+ The  Iron  Man  suit  is  a  fictional  superhero  costume  worn  by  Tony  Stark ,  a . k ."	True	" Stark build the first Iron Man suit.
+"	5	[' Stark', ' build', ' the', ' first', ' Iron', ' Man']
+22	4	Secret identity of x	-1	Secret identity of Iron Man	Tony Stark	Iron Man	['\n', '\n', 'The', ' Iron', ' Man', ' suit', ' is', ' a', ' fictional', ' superhero', ' costume', ' worn', ' by', ' Tony', ' Stark', ',', ' a', '.', 'k', '.']	"
+ 
+ The  Iron  Man  suit  is  a  fictional  superhero  costume  worn  by  Tony  Stark ,  a . k ."	True	 Orton in a 60-minute Iron Man match. Cena successfully	8	[' Or', 'ton', ' in', ' a', ' 60', '-', 'minute', ' Iron', ' Man']
+23	4	Secret identity of x	-1	Secret identity of Iron Man	Tony Stark	Iron Man	['\n', '\n', 'The', ' Iron', ' Man', ' suit', ' is', ' a', ' fictional', ' superhero', ' costume', ' worn', ' by', ' Tony', ' Stark', ',', ' a', '.', 'k', '.']	"
+ 
+ The  Iron  Man  suit  is  a  fictional  superhero  costume  worn  by  Tony  Stark ,  a . k ."	True	 premiere of Iron Man 3 on April 24.	3	[' premiere', ' of', ' Iron', ' Man']
+24	4	Secret identity of x	-1	Secret identity of Iron Man	Tony Stark	Iron Man	['\n', '\n', 'The', ' Iron', ' Man', ' suit', ' is', ' a', ' fictional', ' superhero', ' costume', ' worn', ' by', ' Tony', ' Stark', ',', ' a', '.', 'k', '.']	"
+ 
+ The  Iron  Man  suit  is  a  fictional  superhero  costume  worn  by  Tony  Stark ,  a . k ."	True	 because Favreau felt Iron Man's archnemesis, the	5	[' because', ' Fav', 'reau', ' felt', ' Iron', ' Man']
+25	5	Secret identity of x	-1	Secret identity of Captain America	Steve Rogers	Captain America	[':', ' The', ' Winter', ' Soldier', '\n', '\n', 'The', ' Winter', ' Soldier', ' is', ' a', ' fictional', ' character', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by']	":  The  Winter  Soldier 
+ 
+ The  Winter  Soldier  is  a  fictional  character  appearing  in  American  comic  books  published  by"	False	 2, Thor and Captain America: The First	5	[' 2', ',', ' Thor', ' and', ' Captain', ' America']
+26	5	Secret identity of x	-1	Secret identity of Captain America	Steve Rogers	Captain America	[':', ' The', ' Winter', ' Soldier', '\n', '\n', 'The', ' Winter', ' Soldier', ' is', ' a', ' fictional', ' character', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by']	":  The  Winter  Soldier 
+ 
+ The  Winter  Soldier  is  a  fictional  character  appearing  in  American  comic  books  published  by"	False	" year to watch Captain America save the day.""
+"	4	[' year', ' to', ' watch', ' Captain', ' America']
+27	5	Secret identity of x	-1	Secret identity of Captain America	Steve Rogers	Captain America	[':', ' The', ' Winter', ' Soldier', '\n', '\n', 'The', ' Winter', ' Soldier', ' is', ' a', ' fictional', ' character', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by']	":  The  Winter  Soldier 
+ 
+ The  Winter  Soldier  is  a  fictional  character  appearing  in  American  comic  books  published  by"	False		1	['Captain', ' America']
+28	5	Secret identity of x	-1	Secret identity of Captain America	Steve Rogers	Captain America	[':', ' The', ' Winter', ' Soldier', '\n', '\n', 'The', ' Winter', ' Soldier', ' is', ' a', ' fictional', ' character', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by']	":  The  Winter  Soldier 
+ 
+ The  Winter  Soldier  is  a  fictional  character  appearing  in  American  comic  books  published  by"	False	 Man, Thor, Captain America with neo-noir attitude.	5	[' Man', ',', ' Thor', ',', ' Captain', ' America']
+29	5	Secret identity of x	-1	Secret identity of Captain America	Steve Rogers	Captain America	[':', ' The', ' Winter', ' Soldier', '\n', '\n', 'The', ' Winter', ' Soldier', ' is', ' a', ' fictional', ' character', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by']	":  The  Winter  Soldier 
+ 
+ The  Winter  Soldier  is  a  fictional  character  appearing  in  American  comic  books  published  by"	False	 around the fictional Captain America Adventure Program radio	4	[' around', ' the', ' fictional', ' Captain', ' America']
+30	6	Secret identity of x	-1	Secret identity of The Flash	Barry Allen	The Flash	[':', ' Barry', ' Allen', '\n', '\n', 'The', ' Flash', ' is', ' a', ' fictional', ' superhero', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' DC', ' Comics']	":  Barry  Allen 
+ 
+ The  Flash  is  a  fictional  superhero  appearing  in  American  comic  books  published  by  DC  Comics"	True	 in complexity. The Flash version was much	4	[' in', ' complexity', '.', ' The', ' Flash']
+31	6	Secret identity of x	-1	Secret identity of The Flash	Barry Allen	The Flash	[':', ' Barry', ' Allen', '\n', '\n', 'The', ' Flash', ' is', ' a', ' fictional', ' superhero', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' DC', ' Comics']	":  Barry  Allen 
+ 
+ The  Flash  is  a  fictional  superhero  appearing  in  American  comic  books  published  by  DC  Comics"	True	 the season. The Flash finished first during	4	[' the', ' season', '.', ' The', ' Flash']
+32	6	Secret identity of x	-1	Secret identity of The Flash	Barry Allen	The Flash	[':', ' Barry', ' Allen', '\n', '\n', 'The', ' Flash', ' is', ' a', ' fictional', ' superhero', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' DC', ' Comics']	":  Barry  Allen 
+ 
+ The  Flash  is  a  fictional  superhero  appearing  in  American  comic  books  published  by  DC  Comics"	True	 Comics,	2	[' Comics', 'The', ' Flash']
+33	6	Secret identity of x	-1	Secret identity of The Flash	Barry Allen	The Flash	[':', ' Barry', ' Allen', '\n', '\n', 'The', ' Flash', ' is', ' a', ' fictional', ' superhero', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' DC', ' Comics']	":  Barry  Allen 
+ 
+ The  Flash  is  a  fictional  superhero  appearing  in  American  comic  books  published  by  DC  Comics"	True	 care is needed. The Flash is used for yacht	5	[' care', ' is', ' needed', '.', ' The', ' Flash']
+34	6	Secret identity of x	-1	Secret identity of The Flash	Barry Allen	The Flash	[':', ' Barry', ' Allen', '\n', '\n', 'The', ' Flash', ' is', ' a', ' fictional', ' superhero', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' DC', ' Comics']	":  Barry  Allen 
+ 
+ The  Flash  is  a  fictional  superhero  appearing  in  American  comic  books  published  by  DC  Comics"	True	 Portal, titled Portal: The Flash Version, just prior	6	[' Portal', ',', ' titled', ' Portal', ':', ' The', ' Flash']
+35	7	Secret identity of x	-1	Secret identity of Green Lantern	Hal Jordan	Green Lantern	[':', ' The', ' Animated', ' Series', '\n', '\n', 'Green', ' Lantern', ':', ' The', ' Animated', ' Series', ' is', ' a', ' television', ' series', ' based', ' on', ' the', ' DC']	":  The  Animated  Series 
+ 
+ Green  Lantern :  The  Animated  Series  is  a  television  series  based  on  the  DC"	False		1	['Green', ' Lantern']
+36	7	Secret identity of x	-1	Secret identity of Green Lantern	Hal Jordan	Green Lantern	[':', ' The', ' Animated', ' Series', '\n', '\n', 'Green', ' Lantern', ':', ' The', ' Animated', ' Series', ' is', ' a', ' television', ' series', ' based', ' on', ' the', ' DC']	":  The  Animated  Series 
+ 
+ Green  Lantern :  The  Animated  Series  is  a  television  series  based  on  the  DC"	False		1	['Green', ' Lantern']
+37	7	Secret identity of x	-1	Secret identity of Green Lantern	Hal Jordan	Green Lantern	[':', ' The', ' Animated', ' Series', '\n', '\n', 'Green', ' Lantern', ':', ' The', ' Animated', ' Series', ' is', ' a', ' television', ' series', ' based', ' on', ' the', ' DC']	":  The  Animated  Series 
+ 
+ Green  Lantern :  The  Animated  Series  is  a  television  series  based  on  the  DC"	False		1	['Green', ' Lantern']
+38	7	Secret identity of x	-1	Secret identity of Green Lantern	Hal Jordan	Green Lantern	[':', ' The', ' Animated', ' Series', '\n', '\n', 'Green', ' Lantern', ':', ' The', ' Animated', ' Series', ' is', ' a', ' television', ' series', ' based', ' on', ' the', ' DC']	":  The  Animated  Series 
+ 
+ Green  Lantern :  The  Animated  Series  is  a  television  series  based  on  the  DC"	False	 by DC Comics in its Green Lantern and Green Lantern	6	[' by', ' DC', ' Comics', ' in', ' its', ' Green', ' Lantern']
+39	7	Secret identity of x	-1	Secret identity of Green Lantern	Hal Jordan	Green Lantern	[':', ' The', ' Animated', ' Series', '\n', '\n', 'Green', ' Lantern', ':', ' The', ' Animated', ' Series', ' is', ' a', ' television', ' series', ' based', ' on', ' the', ' DC']	":  The  Animated  Series 
+ 
+ Green  Lantern :  The  Animated  Series  is  a  television  series  based  on  the  DC"	False		1	['Green', ' Lantern']
+40	8	Secret identity of x	-1	Secret identity of Green Arrow	Oliver Queen	Green Arrow	[':', ' The', ' Arrow', ' of', ' the', ' Year', '\n', '\n', 'The', ' Green', ' Arrow', ' of', ' the', ' Year', ' is', ' the', ' Green', ' Arrow', ' of', ' the']	":  The  Arrow  of  the  Year 
+ 
+ The  Green  Arrow  of  the  Year  is  the  Green  Arrow  of  the"	False	 of Oliver Queen's Green Arrow persona in the season	5	"[' of', ' Oliver', ' Queen', ""'s"", ' Green', ' Arrow']"
+41	8	Secret identity of x	-1	Secret identity of Green Arrow	Oliver Queen	Green Arrow	[':', ' The', ' Arrow', ' of', ' the', ' Year', '\n', '\n', 'The', ' Green', ' Arrow', ' of', ' the', ' Year', ' is', ' the', ' Green', ' Arrow', ' of', ' the']	":  The  Arrow  of  the  Year 
+ 
+ The  Green  Arrow  of  the  Year  is  the  Green  Arrow  of  the"	False	 begins assisting Green Arrow (Justin Hartley)	3	[' begins', ' assisting', ' Green', ' Arrow']
+42	8	Secret identity of x	-1	Secret identity of Green Arrow	Oliver Queen	Green Arrow	[':', ' The', ' Arrow', ' of', ' the', ' Year', '\n', '\n', 'The', ' Green', ' Arrow', ' of', ' the', ' Year', ' is', ' the', ' Green', ' Arrow', ' of', ' the']	":  The  Arrow  of  the  Year 
+ 
+ The  Green  Arrow  of  the  Year  is  the  Green  Arrow  of  the"	False	 creating Oliver's Green Arrow costume, Cranstoun	4	"[' creating', ' Oliver', ""'s"", ' Green', ' Arrow']"
+43	8	Secret identity of x	-1	Secret identity of Green Arrow	Oliver Queen	Green Arrow	[':', ' The', ' Arrow', ' of', ' the', ' Year', '\n', '\n', 'The', ' Green', ' Arrow', ' of', ' the', ' Year', ' is', ' the', ' Green', ' Arrow', ' of', ' the']	":  The  Arrow  of  the  Year 
+ 
+ The  Green  Arrow  of  the  Year  is  the  Green  Arrow  of  the"	False	 debut in the Green Arrow television	4	[' debut', ' in', ' the', ' Green', ' Arrow']
+44	8	Secret identity of x	-1	Secret identity of Green Arrow	Oliver Queen	Green Arrow	[':', ' The', ' Arrow', ' of', ' the', ' Year', '\n', '\n', 'The', ' Green', ' Arrow', ' of', ' the', ' Year', ' is', ' the', ' Green', ' Arrow', ' of', ' the']	":  The  Arrow  of  the  Year 
+ 
+ The  Green  Arrow  of  the  Year  is  the  Green  Arrow  of  the"	False	 and his alter ego Green Arrow. Oliver was	5	[' and', ' his', ' alter', ' ego', ' Green', ' Arrow']
+45	9	Secret identity of x	-1	Secret identity of Aquaman	Arthur Curry	Aquaman	['\n', '\n', 'A', 'qu', 'aman', ' is', ' the', ' king', ' of', ' the', ' sea', '.', ' He', ' is', ' the', ' ruler', ' of', ' Atlantis', ',', ' a']	"
+ 
+ A qu aman  is  the  king  of  the  sea .  He  is  the  ruler  of  Atlantis ,  a"	False	 mentions that Aquaman is pretty	3	[' mentions', ' that', ' Aqu', 'aman']
+46	9	Secret identity of x	-1	Secret identity of Aquaman	Arthur Curry	Aquaman	['\n', '\n', 'A', 'qu', 'aman', ' is', ' the', ' king', ' of', ' the', ' sea', '.', ' He', ' is', ' the', ' ruler', ' of', ' Atlantis', ',', ' a']	"
+ 
+ A qu aman  is  the  king  of  the  sea .  He  is  the  ruler  of  Atlantis ,  a"	False	" to work on the Aquaman pilot.
+"	5	[' to', ' work', ' on', ' the', ' Aqu', 'aman']
+47	9	Secret identity of x	-1	Secret identity of Aquaman	Arthur Curry	Aquaman	['\n', '\n', 'A', 'qu', 'aman', ' is', ' the', ' king', ' of', ' the', ' sea', '.', ' He', ' is', ' the', ' ruler', ' of', ' Atlantis', ',', ' a']	"
+ 
+ A qu aman  is  the  king  of  the  sea .  He  is  the  ruler  of  Atlantis ,  a"	False	 The concept of Aquaman stemmed from a fifth	4	[' The', ' concept', ' of', ' Aqu', 'aman']
+48	9	Secret identity of x	-1	Secret identity of Aquaman	Arthur Curry	Aquaman	['\n', '\n', 'A', 'qu', 'aman', ' is', ' the', ' king', ' of', ' the', ' sea', '.', ' He', ' is', ' the', ' ruler', ' of', ' Atlantis', ',', ' a']	"
+ 
+ A qu aman  is  the  king  of  the  sea .  He  is  the  ruler  of  Atlantis ,  a"	False	" he discovered that Aquaman had a ""serious ..."	4	[' he', ' discovered', ' that', ' Aqu', 'aman']
+49	9	Secret identity of x	-1	Secret identity of Aquaman	Arthur Curry	Aquaman	['\n', '\n', 'A', 'qu', 'aman', ' is', ' the', ' king', ' of', ' the', ' sea', '.', ' He', ' is', ' the', ' ruler', ' of', ' Atlantis', ',', ' a']	"
+ 
+ A qu aman  is  the  king  of  the  sea .  He  is  the  ruler  of  Atlantis ,  a"	False	 (DC Comics,	5	[' (', 'DC', ' Comics', 'A', 'qu', 'aman']
+50	10	Secret identity of x	-1	Secret identity of Daredevil	Matt Murdock	Daredevil	[':', ' The', ' Man', ' Without', ' Fear', '\n', '\n', 'The', ' Man', ' Without', ' Fear', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' appearing', ' in']	":  The  Man  Without  Fear 
+ 
+ The  Man  Without  Fear  is  a  fictional  character ,  a  superhero  appearing  in"	False	 (Matt Murdock / Daredevil in Daredevil)	5	[' (', 'Matt', ' Murd', 'ock', ' /', ' Daredevil']
+51	10	Secret identity of x	-1	Secret identity of Daredevil	Matt Murdock	Daredevil	[':', ' The', ' Man', ' Without', ' Fear', '\n', '\n', 'The', ' Man', ' Without', ' Fear', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' appearing', ' in']	":  The  Man  Without  Fear 
+ 
+ The  Man  Without  Fear  is  a  fictional  character ,  a  superhero  appearing  in"	False	 streaming with Marvel's Daredevil on Netflix in 2015,	4	"[' streaming', ' with', ' Marvel', ""'s"", ' Daredevil']"
+52	10	Secret identity of x	-1	Secret identity of Daredevil	Matt Murdock	Daredevil	[':', ' The', ' Man', ' Without', ' Fear', '\n', '\n', 'The', ' Man', ' Without', ' Fear', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' appearing', ' in']	":  The  Man  Without  Fear 
+ 
+ The  Man  Without  Fear  is  a  fictional  character ,  a  superhero  appearing  in"	False	 Charles Xavier and Daredevil — are introduced	3	[' Charles', ' Xavier', ' and', ' Daredevil']
+53	10	Secret identity of x	-1	Secret identity of Daredevil	Matt Murdock	Daredevil	[':', ' The', ' Man', ' Without', ' Fear', '\n', '\n', 'The', ' Man', ' Without', ' Fear', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' appearing', ' in']	":  The  Man  Without  Fear 
+ 
+ The  Man  Without  Fear  is  a  fictional  character ,  a  superhero  appearing  in"	False	 director's cut of Daredevil was released, reincorporating	4	"[' director', ""'s"", ' cut', ' of', ' Daredevil']"
+54	10	Secret identity of x	-1	Secret identity of Daredevil	Matt Murdock	Daredevil	[':', ' The', ' Man', ' Without', ' Fear', '\n', '\n', 'The', ' Man', ' Without', ' Fear', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' appearing', ' in']	":  The  Man  Without  Fear 
+ 
+ The  Man  Without  Fear  is  a  fictional  character ,  a  superhero  appearing  in"	False	 2015 TV series Daredevil and the costume	3	[' 2015', ' TV', ' series', ' Daredevil']
+55	11	Secret identity of x	-1	Secret identity of Cyclops	Scott Summers	Cyclops	['\n', '\n', 'The', ' X', '-', 'Men', ' are', ' a', ' team', ' of', ' mutants', ',', ' each', ' with', ' their', ' own', ' unique', ' powers', '.', ' They']	"
+ 
+ The  X - Men  are  a  team  of  mutants ,  each  with  their  own  unique  powers .  They"	False	 conclusion when Cyclops officially closes	3	[' conclusion', ' when', ' Cycl', 'ops']
+56	11	Secret identity of x	-1	Secret identity of Cyclops	Scott Summers	Cyclops	['\n', '\n', 'The', ' X', '-', 'Men', ' are', ' a', ' team', ' of', ' mutants', ',', ' each', ' with', ' their', ' own', ' unique', ' powers', '.', ' They']	"
+ 
+ The  X - Men  are  a  team  of  mutants ,  each  with  their  own  unique  powers .  They"	False	 Professor X and Cyclops go to see Magneto.	4	[' Professor', ' X', ' and', ' Cycl', 'ops']
+57	11	Secret identity of x	-1	Secret identity of Cyclops	Scott Summers	Cyclops	['\n', '\n', 'The', ' X', '-', 'Men', ' are', ' a', ' team', ' of', ' mutants', ',', ' each', ' with', ' their', ' own', ' unique', ' powers', '.', ' They']	"
+ 
+ The  X - Men  are  a  team  of  mutants ,  each  with  their  own  unique  powers .  They"	False	 brainwashed Cyclops while trying to	3	[' brain', 'washed', ' Cycl', 'ops']
+58	11	Secret identity of x	-1	Secret identity of Cyclops	Scott Summers	Cyclops	['\n', '\n', 'The', ' X', '-', 'Men', ' are', ' a', ' team', ' of', ' mutants', ',', ' each', ' with', ' their', ' own', ' unique', ' powers', '.', ' They']	"
+ 
+ The  X - Men  are  a  team  of  mutants ,  each  with  their  own  unique  powers .  They"	False	 her shock. Meanwhile, Cyclops, still distraught	6	[' her', ' shock', '.', ' Meanwhile', ',', ' Cycl', 'ops']
+59	11	Secret identity of x	-1	Secret identity of Cyclops	Scott Summers	Cyclops	['\n', '\n', 'The', ' X', '-', 'Men', ' are', ' a', ' team', ' of', ' mutants', ',', ' each', ' with', ' their', ' own', ' unique', ' powers', '.', ' They']	"
+ 
+ The  X - Men  are  a  team  of  mutants ,  each  with  their  own  unique  powers .  They"	False	 shock. Meanwhile, Cyclops, still distraught	5	[' shock', '.', ' Meanwhile', ',', ' Cycl', 'ops']
+60	12	Secret identity of x	-1	Secret identity of Storm	Ororo Munroe	Storm	['y', ' Daniels', '\n', '\n', 'The', ' porn', ' star', ' who', ' claims', ' she', ' had', ' an', ' affair', ' with', ' Donald', ' Trump', ' in', ' 2006', ' has', ' been']	"y  Daniels 
+ 
+ The  porn  star  who  claims  she  had  an  affair  with  Donald  Trump  in  2006  has  been"	False	 between it and Tropical Storm Humberto to its northeast.	4	[' between', ' it', ' and', ' Tropical', ' Storm']
+61	12	Secret identity of x	-1	Secret identity of Storm	Ororo Munroe	Storm	['y', ' Daniels', '\n', '\n', 'The', ' porn', ' star', ' who', ' claims', ' she', ' had', ' an', ' affair', ' with', ' Donald', ' Trump', ' in', ' 2006', ' has', ' been']	"y  Daniels 
+ 
+ The  porn  star  who  claims  she  had  an  affair  with  Donald  Trump  in  2006  has  been"	False	 the Gathering Storm by the National	2	[' the', ' Gathering', ' Storm']
+62	12	Secret identity of x	-1	Secret identity of Storm	Ororo Munroe	Storm	['y', ' Daniels', '\n', '\n', 'The', ' porn', ' star', ' who', ' claims', ' she', ' had', ' an', ' affair', ' with', ' Donald', ' Trump', ' in', ' 2006', ' has', ' been']	"y  Daniels 
+ 
+ The  porn  star  who  claims  she  had  an  affair  with  Donald  Trump  in  2006  has  been"	False	" === Cyclonic Storm BOB 06 ===
+"	3	[' ===', ' Cycl', 'onic', ' Storm']
+63	12	Secret identity of x	-1	Secret identity of Storm	Ororo Munroe	Storm	['y', ' Daniels', '\n', '\n', 'The', ' porn', ' star', ' who', ' claims', ' she', ' had', ' an', ' affair', ' with', ' Donald', ' Trump', ' in', ' 2006', ' has', ' been']	"y  Daniels 
+ 
+ The  porn  star  who  claims  she  had  an  affair  with  Donald  Trump  in  2006  has  been"	False	" into Tropical Storm Estelle.
+"	2	[' into', ' Tropical', ' Storm']
+64	12	Secret identity of x	-1	Secret identity of Storm	Ororo Munroe	Storm	['y', ' Daniels', '\n', '\n', 'The', ' porn', ' star', ' who', ' claims', ' she', ' had', ' an', ' affair', ' with', ' Donald', ' Trump', ' in', ' 2006', ' has', ' been']	"y  Daniels 
+ 
+ The  porn  star  who  claims  she  had  an  affair  with  Donald  Trump  in  2006  has  been"	False	 intensified into Tropical Storm Kammuri off the	3	[' intensified', ' into', ' Tropical', ' Storm']
+65	14	Secret identity of x	-1	Secret identity of Invisible Woman	Sue Storm	Invisible Woman	['\n', '\n', 'The', ' Invisible', ' Woman', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', 'ine', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by']	"
+ 
+ The  Invisible  Woman  is  a  fictional  character ,  a  superhero ine  appearing  in  American  comic  books  published  by"	False	 (published as Invisible Woman in English), discusses	4	[' (', 'published', ' as', ' Invisible', ' Woman']
+66	14	Secret identity of x	-1	Secret identity of Invisible Woman	Sue Storm	Invisible Woman	['\n', '\n', 'The', ' Invisible', ' Woman', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', 'ine', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by']	"
+ 
+ The  Invisible  Woman  is  a  fictional  character ,  a  superhero ine  appearing  in  American  comic  books  published  by"	False	 (published as Invisible Woman in English), discusses	4	[' (', 'published', ' as', ' Invisible', ' Woman']
+67	14	Secret identity of x	-1	Secret identity of Invisible Woman	Sue Storm	Invisible Woman	['\n', '\n', 'The', ' Invisible', ' Woman', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', 'ine', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by']	"
+ 
+ The  Invisible  Woman  is  a  fictional  character ,  a  superhero ine  appearing  in  American  comic  books  published  by"	False	 (published as Invisible Woman in English), discusses	4	[' (', 'published', ' as', ' Invisible', ' Woman']
+68	14	Secret identity of x	-1	Secret identity of Invisible Woman	Sue Storm	Invisible Woman	['\n', '\n', 'The', ' Invisible', ' Woman', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', 'ine', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by']	"
+ 
+ The  Invisible  Woman  is  a  fictional  character ,  a  superhero ine  appearing  in  American  comic  books  published  by"	False	 unterwegs (published as Invisible Woman in English), discusses	8	[' un', 'ter', 'we', 'gs', ' (', 'published', ' as', ' Invisible', ' Woman']
+69	14	Secret identity of x	-1	Secret identity of Invisible Woman	Sue Storm	Invisible Woman	['\n', '\n', 'The', ' Invisible', ' Woman', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', 'ine', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by']	"
+ 
+ The  Invisible  Woman  is  a  fictional  character ,  a  superhero ine  appearing  in  American  comic  books  published  by"	False	 unterwegs (published as Invisible Woman in English),	8	[' un', 'ter', 'we', 'gs', ' (', 'published', ' as', ' Invisible', ' Woman']
+70	15	Secret identity of x	-1	Secret identity of Human Torch	Johnny Storm	Human Torch	[' and', ' the', ' Fantastic', ' Four', '\n', '\n', 'The', ' Fantastic', ' Four', ' are', ' a', ' fictional', ' superhero', ' team', ' appearing', ' in', ' American', ' comic', ' books', ' published']	" and  the  Fantastic  Four 
+ 
+ The  Fantastic  Four  are  a  fictional  superhero  team  appearing  in  American  comic  books  published"	False	 with Marvel as the Human Torch in the Fantastic	5	[' with', ' Marvel', ' as', ' the', ' Human', ' Torch']
+71	16	Secret identity of x	-1	Secret identity of The Thing	Ben Grimm	The Thing	['\n', '\n', 'The', ' Thing', ' is', ' a', ' fictional', ' character', ',', ' a', ' fictional', ' alien', ',', ' and', ' a', ' fictional', ' alien', ' from', ' the', ' Marvel']	"
+ 
+ The  Thing  is  a  fictional  character ,  a  fictional  alien ,  and  a  fictional  alien  from  the  Marvel"	False	 from the ending of The Thing from Another World,	5	[' from', ' the', ' ending', ' of', ' The', ' Thing']
+72	16	Secret identity of x	-1	Secret identity of The Thing	Ben Grimm	The Thing	['\n', '\n', 'The', ' Thing', ' is', ' a', ' fictional', ' character', ',', ' a', ' fictional', ' alien', ',', ' and', ' a', ' fictional', ' alien', ' from', ' the', ' Marvel']	"
+ 
+ The  Thing  is  a  fictional  character ,  a  fictional  alien ,  and  a  fictional  alien  from  the  Marvel"	False	 its debt to The Thing, and Juliette	4	[' its', ' debt', ' to', ' The', ' Thing']
+73	16	Secret identity of x	-1	Secret identity of The Thing	Ben Grimm	The Thing	['\n', '\n', 'The', ' Thing', ' is', ' a', ' fictional', ' character', ',', ' a', ' fictional', ' alien', ',', ' and', ' a', ' fictional', ' alien', ' from', ' the', ' Marvel']	"
+ 
+ The  Thing  is  a  fictional  character ,  a  fictional  alien ,  and  a  fictional  alien  from  the  Marvel"	False	 occupant, was filmed as The Thing from Another World	6	[' occupant', ',', ' was', ' filmed', ' as', ' The', ' Thing']
+74	16	Secret identity of x	-1	Secret identity of The Thing	Ben Grimm	The Thing	['\n', '\n', 'The', ' Thing', ' is', ' a', ' fictional', ' character', ',', ' a', ' fictional', ' alien', ',', ' and', ' a', ' fictional', ' alien', ' from', ' the', ' Marvel']	"
+ 
+ The  Thing  is  a  fictional  character ,  a  fictional  alien ,  and  a  fictional  alien  from  the  Marvel"	False	 horror formula. The Thing from 2002 has been	4	[' horror', ' formula', '.', ' The', ' Thing']
+75	16	Secret identity of x	-1	Secret identity of The Thing	Ben Grimm	The Thing	['\n', '\n', 'The', ' Thing', ' is', ' a', ' fictional', ' character', ',', ' a', ' fictional', ' alien', ',', ' and', ' a', ' fictional', ' alien', ' from', ' the', ' Marvel']	"
+ 
+ The  Thing  is  a  fictional  character ,  a  fictional  alien ,  and  a  fictional  alien  from  the  Marvel"	False	 Dead (1968) and The Thing (1982) in the plot	6	[' Dead', ' (', '1968', ')', ' and', ' The', ' Thing']
+76	18	Secret identity of x	-1	Secret identity of Nightwing	Dick Grayson	Nightwing	[':', ' Dick', ' Grayson', '\n', '\n', 'The', ' first', ' time', ' I', ' saw', ' Night', 'wing', ',', ' I', ' was', ' in', ' the', ' audience', ' of', ' a']	":  Dick  Grayson 
+ 
+ The  first  time  I  saw  Night wing ,  I  was  in  the  audience  of  a"	True	 is restored as Nightwing with Wayne serving	4	[' is', ' restored', ' as', ' Night', 'wing']
+77	18	Secret identity of x	-1	Secret identity of Nightwing	Dick Grayson	Nightwing	[':', ' Dick', ' Grayson', '\n', '\n', 'The', ' first', ' time', ' I', ' saw', ' Night', 'wing', ',', ' I', ' was', ' in', ' the', ' audience', ' of', ' a']	":  Dick  Grayson 
+ 
+ The  first  time  I  saw  Night wing ,  I  was  in  the  audience  of  a"	True	 summon them to help Nightwing and Robin deal	5	[' summon', ' them', ' to', ' help', ' Night', 'wing']
+78	18	Secret identity of x	-1	Secret identity of Nightwing	Dick Grayson	Nightwing	[':', ' Dick', ' Grayson', '\n', '\n', 'The', ' first', ' time', ' I', ' saw', ' Night', 'wing', ',', ' I', ' was', ' in', ' the', ' audience', ' of', ' a']	":  Dick  Grayson 
+ 
+ The  first  time  I  saw  Night wing ,  I  was  in  the  audience  of  a"	True	" released. The ""Nightwing"" pack, released"	5	"[' released', '.', ' The', ' ""', 'Night', 'wing']"
+79	18	Secret identity of x	-1	Secret identity of Nightwing	Dick Grayson	Nightwing	[':', ' Dick', ' Grayson', '\n', '\n', 'The', ' first', ' time', ' I', ' saw', ' Night', 'wing', ',', ' I', ' was', ' in', ' the', ' audience', ' of', ' a']	":  Dick  Grayson 
+ 
+ The  first  time  I  saw  Night wing ,  I  was  in  the  audience  of  a"	True	 returns to the mantle of Nightwing and appears in his	6	[' returns', ' to', ' the', ' mantle', ' of', ' Night', 'wing']
+80	18	Secret identity of x	-1	Secret identity of Nightwing	Dick Grayson	Nightwing	[':', ' Dick', ' Grayson', '\n', '\n', 'The', ' first', ' time', ' I', ' saw', ' Night', 'wing', ',', ' I', ' was', ' in', ' the', ' audience', ' of', ' a']	":  Dick  Grayson 
+ 
+ The  first  time  I  saw  Night wing ,  I  was  in  the  audience  of  a"	True	 Batman's partner Nightwing (Barbara Gordon).	4	"[' Batman', ""'s"", ' partner', ' Night', 'wing']"
+81	19	Secret identity of x	-1	Secret identity of Shazam	Billy Batson	Shazam	['!', '\n', '\n', 'The', ' DC', ' Universe', ' is', ' a', ' vast', ',', ' interconnected', ' world', ' of', ' heroes', ',', ' villains', ',', ' and', ' everything', ' in']	"! 
+ 
+ The  DC  Universe  is  a  vast ,  interconnected  world  of  heroes ,  villains ,  and  everything  in"	False	" ""first listen"" on Shazam and the official"	7	"[' ""', 'first', ' listen', '""', ' on', ' Sh', 'az', 'am']"
+82	19	Secret identity of x	-1	Secret identity of Shazam	Billy Batson	Shazam	['!', '\n', '\n', 'The', ' DC', ' Universe', ' is', ' a', ' vast', ',', ' interconnected', ' world', ' of', ' heroes', ',', ' villains', ',', ' and', ' everything', ' in']	"! 
+ 
+ The  DC  Universe  is  a  vast ,  interconnected  world  of  heroes ,  villains ,  and  everything  in"	False	" listen"" on Shazam and the official"	5	"[' listen', '""', ' on', ' Sh', 'az', 'am']"
+83	19	Secret identity of x	-1	Secret identity of Shazam	Billy Batson	Shazam	['!', '\n', '\n', 'The', ' DC', ' Universe', ' is', ' a', ' vast', ',', ' interconnected', ' world', ' of', ' heroes', ',', ' villains', ',', ' and', ' everything', ' in']	"! 
+ 
+ The  DC  Universe  is  a  vast ,  interconnected  world  of  heroes ,  villains ,  and  everything  in"	False	 villain, in a film about Shazam as a part of	8	[' villain', ',', ' in', ' a', ' film', ' about', ' Sh', 'az', 'am']
+84	19	Secret identity of x	-1	Secret identity of Shazam	Billy Batson	Shazam	['!', '\n', '\n', 'The', ' DC', ' Universe', ' is', ' a', ' vast', ',', ' interconnected', ' world', ' of', ' heroes', ',', ' villains', ',', ' and', ' everything', ' in']	"! 
+ 
+ The  DC  Universe  is  a  vast ,  interconnected  world  of  heroes ,  villains ,  and  everything  in"	False	 Daniels (Grandad). The Shazam Productions	8	[' Daniels', ' (', 'Grand', 'ad', ').', ' The', ' Sh', 'az', 'am']
+85	19	Secret identity of x	-1	Secret identity of Shazam	Billy Batson	Shazam	['!', '\n', '\n', 'The', ' DC', ' Universe', ' is', ' a', ' vast', ',', ' interconnected', ' world', ' of', ' heroes', ',', ' villains', ',', ' and', ' everything', ' in']	"! 
+ 
+ The  DC  Universe  is  a  vast ,  interconnected  world  of  heroes ,  villains ,  and  everything  in"	False	 production company, Shazam Productions.	5	[' production', ' company', ',', ' Sh', 'az', 'am']
+86	20	Secret identity of x	-1	Secret identity of Green Lantern	Kyle Rayner	Green Lantern	[':', ' The', ' Animated', ' Series', '\n', '\n', 'Green', ' Lantern', ':', ' The', ' Animated', ' Series', ' is', ' a', ' television', ' series', ' based', ' on', ' the', ' DC']	":  The  Animated  Series 
+ 
+ Green  Lantern :  The  Animated  Series  is  a  television  series  based  on  the  DC"	False	 releasing a series of Green Lantern Movie Prequel	5	[' releasing', ' a', ' series', ' of', ' Green', ' Lantern']
+87	20	Secret identity of x	-1	Secret identity of Green Lantern	Kyle Rayner	Green Lantern	[':', ' The', ' Animated', ' Series', '\n', '\n', 'Green', ' Lantern', ':', ' The', ' Animated', ' Series', ' is', ' a', ' television', ' series', ' based', ' on', ' the', ' DC']	":  The  Animated  Series 
+ 
+ Green  Lantern :  The  Animated  Series  is  a  television  series  based  on  the  DC"	False	 one-shot and co-write Green Lantern / Sinestro	8	[' one', '-', 'shot', ' and', ' co', '-', 'write', ' Green', ' Lantern']
+88	20	Secret identity of x	-1	Secret identity of Green Lantern	Kyle Rayner	Green Lantern	[':', ' The', ' Animated', ' Series', '\n', '\n', 'Green', ' Lantern', ':', ' The', ' Animated', ' Series', ' is', ' a', ' television', ' series', ' based', ' on', ' the', ' DC']	":  The  Animated  Series 
+ 
+ Green  Lantern :  The  Animated  Series  is  a  television  series  based  on  the  DC"	False	 through the Green Lantern and Green Lantern	3	[' through', ' the', ' Green', ' Lantern']
+89	20	Secret identity of x	-1	Secret identity of Green Lantern	Kyle Rayner	Green Lantern	[':', ' The', ' Animated', ' Series', '\n', '\n', 'Green', ' Lantern', ':', ' The', ' Animated', ' Series', ' is', ' a', ' television', ' series', ' based', ' on', ' the', ' DC']	":  The  Animated  Series 
+ 
+ Green  Lantern :  The  Animated  Series  is  a  television  series  based  on  the  DC"	False	 upper body; Green Lantern creates pressure	4	[' upper', ' body', ';', ' Green', ' Lantern']
+90	20	Secret identity of x	-1	Secret identity of Green Lantern	Kyle Rayner	Green Lantern	[':', ' The', ' Animated', ' Series', '\n', '\n', 'Green', ' Lantern', ':', ' The', ' Animated', ' Series', ' is', ' a', ' television', ' series', ' based', ' on', ' the', ' DC']	":  The  Animated  Series 
+ 
+ Green  Lantern :  The  Animated  Series  is  a  television  series  based  on  the  DC"	False		1	['Green', ' Lantern']
+91	21	Secret identity of x	-1	Secret identity of Red Robin	Tim Drake	Red Robin	['\n', '\n', 'The', ' Red', ' Robin', ' is', ' a', ' fictional', ' character', ' in', ' the', ' DC', ' Comics', ' universe', '.', ' He', ' is', ' the', ' alter', ' ego']	"
+ 
+ The  Red  Robin  is  a  fictional  character  in  the  DC  Comics  universe .  He  is  the  alter  ego"	False	" ""When the Red, Red Robin (Comes Bob,"	6	"[' ""', 'When', ' the', ' Red', ',', ' Red', ' Robin']"
+92	21	Secret identity of x	-1	Secret identity of Red Robin	Tim Drake	Red Robin	['\n', '\n', 'The', ' Red', ' Robin', ' is', ' a', ' fictional', ' character', ' in', ' the', ' DC', ' Comics', ' universe', '.', ' He', ' is', ' the', ' alter', ' ego']	"
+ 
+ The  Red  Robin  is  a  fictional  character  in  the  DC  Comics  universe .  He  is  the  alter  ego"	False	 commissioned by Red Robin and released	3	[' commissioned', ' by', ' Red', ' Robin']
+93	21	Secret identity of x	-1	Secret identity of Red Robin	Tim Drake	Red Robin	['\n', '\n', 'The', ' Red', ' Robin', ' is', ' a', ' fictional', ' character', ' in', ' the', ' DC', ' Comics', ' universe', '.', ' He', ' is', ' the', ' alter', ' ego']	"
+ 
+ The  Red  Robin  is  a  fictional  character  in  the  DC  Comics  universe .  He  is  the  alter  ego"	False	 costumes, his Red Robin costume, the designs	4	[' costumes', ',', ' his', ' Red', ' Robin']
+94	21	Secret identity of x	-1	Secret identity of Red Robin	Tim Drake	Red Robin	['\n', '\n', 'The', ' Red', ' Robin', ' is', ' a', ' fictional', ' character', ' in', ' the', ' DC', ' Comics', ' universe', '.', ' He', ' is', ' the', ' alter', ' ego']	"
+ 
+ The  Red  Robin  is  a  fictional  character  in  the  DC  Comics  universe .  He  is  the  alter  ego"	False	 character in a new Red Robin series. However,	5	[' character', ' in', ' a', ' new', ' Red', ' Robin']
+95	21	Secret identity of x	-1	Secret identity of Red Robin	Tim Drake	Red Robin	['\n', '\n', 'The', ' Red', ' Robin', ' is', ' a', ' fictional', ' character', ' in', ' the', ' DC', ' Comics', ' universe', '.', ' He', ' is', ' the', ' alter', ' ego']	"
+ 
+ The  Red  Robin  is  a  fictional  character  in  the  DC  Comics  universe .  He  is  the  alter  ego"	False	 character in a new Red Robin series. However,	5	[' character', ' in', ' a', ' new', ' Red', ' Robin']
+96	22	Secret identity of x	-1	Secret identity of Red Hood	Jason Todd	Red Hood	[' and', ' the', ' Out', 'laws', '\n', '\n', 'The', ' Red', ' Hood', ' and', ' the', ' Out', 'laws', ' is', ' a', ' fictional', ' superhero', ' team', ' appearing', ' in']	" and  the  Out laws 
+ 
+ The  Red  Hood  and  the  Out laws  is  a  fictional  superhero  team  appearing  in"	False	 Robin, Red Robin, Red Hood and Batgirl,	6	[' Robin', ',', ' Red', ' Robin', ',', ' Red', ' Hood']
+97	22	Secret identity of x	-1	Secret identity of Red Hood	Jason Todd	Red Hood	[' and', ' the', ' Out', 'laws', '\n', '\n', 'The', ' Red', ' Hood', ' and', ' the', ' Out', 'laws', ' is', ' a', ' fictional', ' superhero', ' team', ' appearing', ' in']	" and  the  Out laws 
+ 
+ The  Red  Hood  and  the  Out laws  is  a  fictional  superhero  team  appearing  in"	False	 the helmet of the Red Hood is revealed. In addition	5	[' the', ' helmet', ' of', ' the', ' Red', ' Hood']
+98	22	Secret identity of x	-1	Secret identity of Red Hood	Jason Todd	Red Hood	[' and', ' the', ' Out', 'laws', '\n', '\n', 'The', ' Red', ' Hood', ' and', ' the', ' Out', 'laws', ' is', ' a', ' fictional', ' superhero', ' team', ' appearing', ' in']	" and  the  Out laws 
+ 
+ The  Red  Hood  and  the  Out laws  is  a  fictional  superhero  team  appearing  in"	False	 Harley Quinn and Red Hood story packs,	4	[' Harley', ' Quinn', ' and', ' Red', ' Hood']
+99	22	Secret identity of x	-1	Secret identity of Red Hood	Jason Todd	Red Hood	[' and', ' the', ' Out', 'laws', '\n', '\n', 'The', ' Red', ' Hood', ' and', ' the', ' Out', 'laws', ' is', ' a', ' fictional', ' superhero', ' team', ' appearing', ' in']	" and  the  Out laws 
+ 
+ The  Red  Hood  and  the  Out laws  is  a  fictional  superhero  team  appearing  in"	False	 Jason Todd as Red Hood is also a playable	4	[' Jason', ' Todd', ' as', ' Red', ' Hood']
+100	22	Secret identity of x	-1	Secret identity of Red Hood	Jason Todd	Red Hood	[' and', ' the', ' Out', 'laws', '\n', '\n', 'The', ' Red', ' Hood', ' and', ' the', ' Out', 'laws', ' is', ' a', ' fictional', ' superhero', ' team', ' appearing', ' in']	" and  the  Out laws 
+ 
+ The  Red  Hood  and  the  Out laws  is  a  fictional  superhero  team  appearing  in"	False	 the identity of Red Hood to support	4	[' the', ' identity', ' of', ' Red', ' Hood']
+101	23	Secret identity of x	-1	Secret identity of Catwoman	Selina Kyle	Catwoman	['\n', '\n', 'Cat', 'woman', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', 'ine', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' DC']	"
+ 
+ Cat woman  is  a  fictional  character ,  a  superhero ine  appearing  in  American  comic  books  published  by  DC"	False	" Michelle Pfeiffer as Catwoman / Selina Kyle
+"	7	[' Michelle', ' P', 'fe', 'iff', 'er', ' as', ' Cat', 'woman']
+102	23	Secret identity of x	-1	Secret identity of Catwoman	Selina Kyle	Catwoman	['\n', '\n', 'Cat', 'woman', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', 'ine', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' DC']	"
+ 
+ Cat woman  is  a  fictional  character ,  a  superhero ine  appearing  in  American  comic  books  published  by  DC"	False	 Aguilera as Catwoman and performing	5	[' Agu', 'iler', 'a', ' as', ' Cat', 'woman']
+103	23	Secret identity of x	-1	Secret identity of Catwoman	Selina Kyle	Catwoman	['\n', '\n', 'Cat', 'woman', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', 'ine', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' DC']	"
+ 
+ Cat woman  is  a  fictional  character ,  a  superhero ine  appearing  in  American  comic  books  published  by  DC"	False		1	['Cat', 'woman']
+104	23	Secret identity of x	-1	Secret identity of Catwoman	Selina Kyle	Catwoman	['\n', '\n', 'Cat', 'woman', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', 'ine', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' DC']	"
+ 
+ Cat woman  is  a  fictional  character ,  a  superhero ine  appearing  in  American  comic  books  published  by  DC"	False	 the feature in the Catwoman soundtrack.	5	[' the', ' feature', ' in', ' the', ' Cat', 'woman']
+105	23	Secret identity of x	-1	Secret identity of Catwoman	Selina Kyle	Catwoman	['\n', '\n', 'Cat', 'woman', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', 'ine', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' DC']	"
+ 
+ Cat woman  is  a  fictional  character ,  a  superhero ine  appearing  in  American  comic  books  published  by  DC"	False	 ones such as Catwoman. In Catwoman	4	[' ones', ' such', ' as', ' Cat', 'woman']
+106	24	Secret identity of x	-1	Secret identity of Phoenix	Jean Grey	Phoenix	[' Wright', ':', ' Ace', ' Attorney', '\n', '\n', 'The', ' game', ' is', ' a', ' spin', '-', 'off', ' of', ' the', ' Ace', ' Attorney', ' series', ',', ' which']	" Wright :  Ace  Attorney 
+ 
+ The  game  is  a  spin - off  of  the  Ace  Attorney  series ,  which"	False	 Hensley died in Phoenix on June 21, 2000.	5	[' H', 'ens', 'ley', ' died', ' in', ' Phoenix']
+107	24	Secret identity of x	-1	Secret identity of Phoenix	Jean Grey	Phoenix	[' Wright', ':', ' Ace', ' Attorney', '\n', '\n', 'The', ' game', ' is', ' a', ' spin', '-', 'off', ' of', ' the', ' Ace', ' Attorney', ' series', ',', ' which']	" Wright :  Ace  Attorney 
+ 
+ The  game  is  a  spin - off  of  the  Ace  Attorney  series ,  which"	False	 British destroyer Phoenix at 09: 18	2	[' British', ' destroyer', ' Phoenix']
+108	24	Secret identity of x	-1	Secret identity of Phoenix	Jean Grey	Phoenix	[' Wright', ':', ' Ace', ' Attorney', '\n', '\n', 'The', ' game', ' is', ' a', ' spin', '-', 'off', ' of', ' the', ' Ace', ' Attorney', ' series', ',', ' which']	" Wright :  Ace  Attorney 
+ 
+ The  game  is  a  spin - off  of  the  Ace  Attorney  series ,  which"	False	 society. Both Joaquin Phoenix and John Cusack	5	[' society', '.', ' Both', ' Jo', 'aquin', ' Phoenix']
+109	24	Secret identity of x	-1	Secret identity of Phoenix	Jean Grey	Phoenix	[' Wright', ':', ' Ace', ' Attorney', '\n', '\n', 'The', ' game', ' is', ' a', ' spin', '-', 'off', ' of', ' the', ' Ace', ' Attorney', ' series', ',', ' which']	" Wright :  Ace  Attorney 
+ 
+ The  game  is  a  spin - off  of  the  Ace  Attorney  series ,  which"	False	 Qwark on the Phoenix, Ratchet goes to	4	[' Q', 'wark', ' on', ' the', ' Phoenix']
+110	24	Secret identity of x	-1	Secret identity of Phoenix	Jean Grey	Phoenix	[' Wright', ':', ' Ace', ' Attorney', '\n', '\n', 'The', ' game', ' is', ' a', ' spin', '-', 'off', ' of', ' the', ' Ace', ' Attorney', ' series', ',', ' which']	" Wright :  Ace  Attorney 
+ 
+ The  game  is  a  spin - off  of  the  Ace  Attorney  series ,  which"	False	 experienced in Phoenix and the surrounding	2	[' experienced', ' in', ' Phoenix']
+111	25	Secret identity of x	-1	Secret identity of Wolverine	Logan Howlett	Wolverine	['\n', '\n', 'The', ' Wolverine', ' is', ' a', ' fictional', ' character', ',', ' a', ' mutant', ' superhero', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' Marvel']	"
+ 
+ The  Wolverine  is  a  fictional  character ,  a  mutant  superhero  appearing  in  American  comic  books  published  by  Marvel"	False	 following the Death of Wolverine comic book,	4	[' following', ' the', ' Death', ' of', ' Wolverine']
+112	25	Secret identity of x	-1	Secret identity of Wolverine	Logan Howlett	Wolverine	['\n', '\n', 'The', ' Wolverine', ' is', ' a', ' fictional', ' character', ',', ' a', ' mutant', ' superhero', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' Marvel']	"
+ 
+ The  Wolverine  is  a  fictional  character ,  a  mutant  superhero  appearing  in  American  comic  books  published  by  Marvel"	False	 the depiction of Wolverine as an Army veteran	3	[' the', ' depiction', ' of', ' Wolverine']
+113	25	Secret identity of x	-1	Secret identity of Wolverine	Logan Howlett	Wolverine	['\n', '\n', 'The', ' Wolverine', ' is', ' a', ' fictional', ' character', ',', ' a', ' mutant', ' superhero', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' Marvel']	"
+ 
+ The  Wolverine  is  a  fictional  character ,  a  mutant  superhero  appearing  in  American  comic  books  published  by  Marvel"	False	" way: ""[The] Wolverine halfback skidded"	5	"[' way', ':', ' ""[', 'The', ']', ' Wolverine']"
+114	25	Secret identity of x	-1	Secret identity of Wolverine	Logan Howlett	Wolverine	['\n', '\n', 'The', ' Wolverine', ' is', ' a', ' fictional', ' character', ',', ' a', ' mutant', ' superhero', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' Marvel']	"
+ 
+ The  Wolverine  is  a  fictional  character ,  a  mutant  superhero  appearing  in  American  comic  books  published  by  Marvel"	False	" release of a third Wolverine film in 2017.
+"	4	[' release', ' of', ' a', ' third', ' Wolverine']
+115	25	Secret identity of x	-1	Secret identity of Wolverine	Logan Howlett	Wolverine	['\n', '\n', 'The', ' Wolverine', ' is', ' a', ' fictional', ' character', ',', ' a', ' mutant', ' superhero', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' Marvel']	"
+ 
+ The  Wolverine  is  a  fictional  character ,  a  mutant  superhero  appearing  in  American  comic  books  published  by  Marvel"	False	 gruff loner, Wolverine is also a	5	[' gru', 'ff', ' l', 'oner', ',', ' Wolverine']
+116	26	Secret identity of x	-1	Secret identity of Supergirl	Kara Zor-El	Supergirl	['\n', '\n', 'Super', 'girl', ' is', ' Kara', ' Z', 'or', '-', 'El', ',', ' a', ' Krypt', 'onian', ' from', ' the', ' planet', ' Krypt', 'on', '.']	"
+ 
+ Super girl  is  Kara  Z or - El ,  a  Krypt onian  from  the  planet  Krypt on ."	True	 starred alongside Supergirl and Wonder	3	[' starred', ' alongside', ' Super', 'girl']
+117	26	Secret identity of x	-1	Secret identity of Supergirl	Kara Zor-El	Supergirl	['\n', '\n', 'Super', 'girl', ' is', ' Kara', ' Z', 'or', '-', 'El', ',', ' a', ' Krypt', 'onian', ' from', ' the', ' planet', ' Krypt', 'on', '.']	"
+ 
+ Super girl  is  Kara  Z or - El ,  a  Krypt onian  from  the  planet  Krypt on ."	True	 1984 spin-off Supergirl before selling	5	[' 1984', ' spin', '-', 'off', ' Super', 'girl']
+118	26	Secret identity of x	-1	Secret identity of Supergirl	Kara Zor-El	Supergirl	['\n', '\n', 'Super', 'girl', ' is', ' Kara', ' Z', 'or', '-', 'El', ',', ' a', ' Krypt', 'onian', ' from', ' the', ' planet', ' Krypt', 'on', '.']	"
+ 
+ Super girl  is  Kara  Z or - El ,  a  Krypt onian  from  the  planet  Krypt on ."	True	 Superman / Batman: The Supergirl from Krypton with	6	[' Superman', ' /', ' Batman', ':', ' The', ' Super', 'girl']
+119	26	Secret identity of x	-1	Secret identity of Supergirl	Kara Zor-El	Supergirl	['\n', '\n', 'Super', 'girl', ' is', ' Kara', ' Z', 'or', '-', 'El', ',', ' a', ' Krypt', 'onian', ' from', ' the', ' planet', ' Krypt', 'on', '.']	"
+ 
+ Super girl  is  Kara  Z or - El ,  a  Krypt onian  from  the  planet  Krypt on ."	True	" Supergirl (1984) ===
+"	1	[' Super', 'girl']
+120	26	Secret identity of x	-1	Secret identity of Supergirl	Kara Zor-El	Supergirl	['\n', '\n', 'Super', 'girl', ' is', ' Kara', ' Z', 'or', '-', 'El', ',', ' a', ' Krypt', 'onian', ' from', ' the', ' planet', ' Krypt', 'on', '.']	"
+ 
+ Super girl  is  Kara  Z or - El ,  a  Krypt onian  from  the  planet  Krypt on ."	True	" Elseworld's Finest: Supergirl & Batgirl (1998).
+"	7	"[' Else', 'world', ""'s"", ' Fin', 'est', ':', ' Super', 'girl']"
+121	27	Secret identity of x	-1	Secret identity of Black Widow	Natasha Romanoff	Black Widow	[':', '\n', '\n', 'Black', ' Widow', ' is', ' a', ' fictional', ' character', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' Marvel', ' Comics', '.', ' The']	": 
+ 
+ Black  Widow  is  a  fictional  character  appearing  in  American  comic  books  published  by  Marvel  Comics .  The"	False	 Avengers like Black Widow and Nick Fury, because	3	[' Avengers', ' like', ' Black', ' Widow']
+122	27	Secret identity of x	-1	Secret identity of Black Widow	Natasha Romanoff	Black Widow	[':', '\n', '\n', 'Black', ' Widow', ' is', ' a', ' fictional', ' character', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' Marvel', ' Comics', '.', ' The']	": 
+ 
+ Black  Widow  is  a  fictional  character  appearing  in  American  comic  books  published  by  Marvel  Comics .  The"	False	 featuring Gail “ Black Widow ” McIntyre and her	6	[' featuring', ' G', 'ail', ' �', '�', ' Black', ' Widow']
+123	27	Secret identity of x	-1	Secret identity of Black Widow	Natasha Romanoff	Black Widow	[':', '\n', '\n', 'Black', ' Widow', ' is', ' a', ' fictional', ' character', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' Marvel', ' Comics', '.', ' The']	": 
+ 
+ Black  Widow  is  a  fictional  character  appearing  in  American  comic  books  published  by  Marvel  Comics .  The"	False		1	['Black', ' Widow']
+124	27	Secret identity of x	-1	Secret identity of Black Widow	Natasha Romanoff	Black Widow	[':', '\n', '\n', 'Black', ' Widow', ' is', ' a', ' fictional', ' character', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' Marvel', ' Comics', '.', ' The']	": 
+ 
+ Black  Widow  is  a  fictional  character  appearing  in  American  comic  books  published  by  Marvel  Comics .  The"	False		1	['Black', ' Widow']
+125	27	Secret identity of x	-1	Secret identity of Black Widow	Natasha Romanoff	Black Widow	[':', '\n', '\n', 'Black', ' Widow', ' is', ' a', ' fictional', ' character', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' Marvel', ' Comics', '.', ' The']	": 
+ 
+ Black  Widow  is  a  fictional  character  appearing  in  American  comic  books  published  by  Marvel  Comics .  The"	False		1	['Black', ' Widow']
+126	28	Secret identity of x	-1	Secret identity of Hawkeye	Clint Barton	Hawkeye	[':', ' The', ' identity', ' of', ' Haw', 'keye', ' is', ' a', ' secret', '.', ' He', ' is', ' a', ' member', ' of', ' the', ' Avengers', '.', '\n', '\n']	":  The  identity  of  Haw keye  is  a  secret .  He  is  a  member  of  the  Avengers . 
+ 
+"	False	 the signal to E2C Hawkeye aircraft orbiting	7	[' the', ' signal', ' to', ' E', '2', 'C', ' Haw', 'keye']
+127	28	Secret identity of x	-1	Secret identity of Hawkeye	Clint Barton	Hawkeye	[':', ' The', ' identity', ' of', ' Haw', 'keye', ' is', ' a', ' secret', '.', ' He', ' is', ' a', ' member', ' of', ' the', ' Avengers', '.', '\n', '\n']	":  The  identity  of  Haw keye  is  a  secret .  He  is  a  member  of  the  Avengers . 
+ 
+"	False	 Whedon said that Hawkeye interacts more	4	[' Whedon', ' said', ' that', ' Haw', 'keye']
+128	28	Secret identity of x	-1	Secret identity of Hawkeye	Clint Barton	Hawkeye	[':', ' The', ' identity', ' of', ' Haw', 'keye', ' is', ' a', ' secret', '.', ' He', ' is', ' a', ' member', ' of', ' the', ' Avengers', '.', '\n', '\n']	":  The  identity  of  Haw keye  is  a  secret .  He  is  a  member  of  the  Avengers . 
+ 
+"	False	 uniform and unshaven Hawkeye and Trapper	6	[' uniform', ' and', ' un', 'sh', 'aven', ' Haw', 'keye']
+129	28	Secret identity of x	-1	Secret identity of Hawkeye	Clint Barton	Hawkeye	[':', ' The', ' identity', ' of', ' Haw', 'keye', ' is', ' a', ' secret', '.', ' He', ' is', ' a', ' member', ' of', ' the', ' Avengers', '.', '\n', '\n']	":  The  identity  of  Haw keye  is  a  secret .  He  is  a  member  of  the  Avengers . 
+ 
+"	False	 known for his role as Hawkeye Pierce from	6	[' known', ' for', ' his', ' role', ' as', ' Haw', 'keye']
+130	28	Secret identity of x	-1	Secret identity of Hawkeye	Clint Barton	Hawkeye	[':', ' The', ' identity', ' of', ' Haw', 'keye', ' is', ' a', ' secret', '.', ' He', ' is', ' a', ' member', ' of', ' the', ' Avengers', '.', '\n', '\n']	":  The  identity  of  Haw keye  is  a  secret .  He  is  a  member  of  the  Avengers . 
+ 
+"	False	 about this Hawkeye character,	3	[' about', ' this', ' Haw', 'keye']
+131	29	Secret identity of x	-1	Secret identity of Captain Marvel	Carol Danvers	Captain Marvel	['\n', '\n', 'The', ' Marvel', ' Cinem', 'atic', ' Universe', ' has', ' been', ' a', ' huge', ' success', ' for', ' the', ' company', ',', ' and', ' it', '�', '�']	"
+ 
+ The  Marvel  Cinem atic  Universe  has  been  a  huge  success  for  the  company ,  and  it � �"	False	 reprints of the Captain Marvel stories after	5	[' re', 'prints', ' of', ' the', ' Captain', ' Marvel']
+132	29	Secret identity of x	-1	Secret identity of Captain Marvel	Carol Danvers	Captain Marvel	['\n', '\n', 'The', ' Marvel', ' Cinem', 'atic', ' Universe', ' has', ' been', ' a', ' huge', ' success', ' for', ' the', ' company', ',', ' and', ' it', '�', '�']	"
+ 
+ The  Marvel  Cinem atic  Universe  has  been  a  huge  success  for  the  company ,  and  it � �"	False	 wanted to include Captain Marvel and Spider-Man	4	[' wanted', ' to', ' include', ' Captain', ' Marvel']
+133	29	Secret identity of x	-1	Secret identity of Captain Marvel	Carol Danvers	Captain Marvel	['\n', '\n', 'The', ' Marvel', ' Cinem', 'atic', ' Universe', ' has', ' been', ' a', ' huge', ' success', ' for', ' the', ' company', ',', ' and', ' it', '�', '�']	"
+ 
+ The  Marvel  Cinem atic  Universe  has  been  a  huge  success  for  the  company ,  and  it � �"	False	 revealed that Captain Marvel, who is scheduled	3	[' revealed', ' that', ' Captain', ' Marvel']
+134	29	Secret identity of x	-1	Secret identity of Captain Marvel	Carol Danvers	Captain Marvel	['\n', '\n', 'The', ' Marvel', ' Cinem', 'atic', ' Universe', ' has', ' been', ' a', ' huge', ' success', ' for', ' the', ' company', ',', ' and', ' it', '�', '�']	"
+ 
+ The  Marvel  Cinem atic  Universe  has  been  a  huge  success  for  the  company ,  and  it � �"	False	 restrictions. Captain Marvel and Bulletman	3	[' restrictions', '.', ' Captain', ' Marvel']
+135	29	Secret identity of x	-1	Secret identity of Captain Marvel	Carol Danvers	Captain Marvel	['\n', '\n', 'The', ' Marvel', ' Cinem', 'atic', ' Universe', ' has', ' been', ' a', ' huge', ' success', ' for', ' the', ' company', ',', ' and', ' it', '�', '�']	"
+ 
+ The  Marvel  Cinem atic  Universe  has  been  a  huge  success  for  the  company ,  and  it � �"	False	 wanted to include Captain Marvel and Spider-Man at	4	[' wanted', ' to', ' include', ' Captain', ' Marvel']
+136	31	Secret identity of x	-1	Secret identity of Spider-Woman	Jessica Drew	Spider-Woman	[' (', 'Jessica', ' Drew', ')', '\n', '\n', 'Jessica', ' Drew', ' is', ' a', ' fictional', ' character', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' Marvel']	" ( Jessica  Drew ) 
+ 
+ Jessica  Drew  is  a  fictional  character  appearing  in  American  comic  books  published  by  Marvel"	True	 mother had voiced Spider-Woman in the original	5	[' mother', ' had', ' voiced', ' Spider', '-', 'Woman']
+137	31	Secret identity of x	-1	Secret identity of Spider-Woman	Jessica Drew	Spider-Woman	[' (', 'Jessica', ' Drew', ')', '\n', '\n', 'Jessica', ' Drew', ' is', ' a', ' fictional', ' character', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' Marvel']	" ( Jessica  Drew ) 
+ 
+ Jessica  Drew  is  a  fictional  character  appearing  in  American  comic  books  published  by  Marvel"	True		2	['Spider', '-', 'Woman']
+138	31	Secret identity of x	-1	Secret identity of Spider-Woman	Jessica Drew	Spider-Woman	[' (', 'Jessica', ' Drew', ')', '\n', '\n', 'Jessica', ' Drew', ' is', ' a', ' fictional', ' character', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' Marvel']	" ( Jessica  Drew ) 
+ 
+ Jessica  Drew  is  a  fictional  character  appearing  in  American  comic  books  published  by  Marvel"	True	 Ganke and Spider-Woman convinces him	5	[' Gan', 'ke', ' and', ' Spider', '-', 'Woman']
+139	31	Secret identity of x	-1	Secret identity of Spider-Woman	Jessica Drew	Spider-Woman	[' (', 'Jessica', ' Drew', ')', '\n', '\n', 'Jessica', ' Drew', ' is', ' a', ' fictional', ' character', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' Marvel']	" ( Jessica  Drew ) 
+ 
+ Jessica  Drew  is  a  fictional  character  appearing  in  American  comic  books  published  by  Marvel"	True		2	['Spider', '-', 'Woman']
+140	31	Secret identity of x	-1	Secret identity of Spider-Woman	Jessica Drew	Spider-Woman	[' (', 'Jessica', ' Drew', ')', '\n', '\n', 'Jessica', ' Drew', ' is', ' a', ' fictional', ' character', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' Marvel']	" ( Jessica  Drew ) 
+ 
+ Jessica  Drew  is  a  fictional  character  appearing  in  American  comic  books  published  by  Marvel"	True	 mother had voiced Spider-Woman in the original	5	[' mother', ' had', ' voiced', ' Spider', '-', 'Woman']
+141	32	Secret identity of x	-1	Secret identity of Spider-Man	Miles Morales	Spider-Man	['\n', '\n', 'The', ' Spider', '-', 'Man', ' of', ' the', ' Marvel', ' Universe', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' appearing', ' in', ' American']	"
+ 
+ The  Spider - Man  of  the  Marvel  Universe  is  a  fictional  character ,  a  superhero  appearing  in  American"	False		2	['Spider', '-', 'Man']
+142	32	Secret identity of x	-1	Secret identity of Spider-Man	Miles Morales	Spider-Man	['\n', '\n', 'The', ' Spider', '-', 'Man', ' of', ' the', ' Marvel', ' Universe', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' appearing', ' in', ' American']	"
+ 
+ The  Spider - Man  of  the  Marvel  Universe  is  a  fictional  character ,  a  superhero  appearing  in  American"	False	 chase scene in Spider-Man 3 (2007), though	5	[' chase', ' scene', ' in', ' Spider', '-', 'Man']
+143	32	Secret identity of x	-1	Secret identity of Spider-Man	Miles Morales	Spider-Man	['\n', '\n', 'The', ' Spider', '-', 'Man', ' of', ' the', ' Marvel', ' Universe', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' appearing', ' in', ' American']	"
+ 
+ The  Spider - Man  of  the  Marvel  Universe  is  a  fictional  character ,  a  superhero  appearing  in  American"	False	 herself on Spider-Man, admitting she	4	[' herself', ' on', ' Spider', '-', 'Man']
+144	32	Secret identity of x	-1	Secret identity of Spider-Man	Miles Morales	Spider-Man	['\n', '\n', 'The', ' Spider', '-', 'Man', ' of', ' the', ' Marvel', ' Universe', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' appearing', ' in', ' American']	"
+ 
+ The  Spider - Man  of  the  Marvel  Universe  is  a  fictional  character ,  a  superhero  appearing  in  American"	False	 The Amazing Spider-Man # 573, October	4	[' The', ' Amazing', ' Spider', '-', 'Man']
+145	32	Secret identity of x	-1	Secret identity of Spider-Man	Miles Morales	Spider-Man	['\n', '\n', 'The', ' Spider', '-', 'Man', ' of', ' the', ' Marvel', ' Universe', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' appearing', ' in', ' American']	"
+ 
+ The  Spider - Man  of  the  Marvel  Universe  is  a  fictional  character ,  a  superhero  appearing  in  American"	False		2	['Spider', '-', 'Man']
+146	33	Secret identity of x	-1	Secret identity of Ms. Marvel	Kamala Khan	Ms. Marvel	[':', ' She', ' is', ' a', ' member', ' of', ' the', ' Avengers', '.', '\n', '\n', 'Ms', '.', ' Marvel', ' is', ' a', ' member', ' of', ' the', ' Avengers']	":  She  is  a  member  of  the  Avengers . 
+ 
+ Ms .  Marvel  is  a  member  of  the  Avengers"	False	 takes the name Ms. Marvel from Carol Danvers,	5	[' takes', ' the', ' name', ' Ms', '.', ' Marvel']
+147	33	Secret identity of x	-1	Secret identity of Ms. Marvel	Kamala Khan	Ms. Marvel	[':', ' She', ' is', ' a', ' member', ' of', ' the', ' Avengers', '.', '\n', '\n', 'Ms', '.', ' Marvel', ' is', ' a', ' member', ' of', ' the', ' Avengers']	":  She  is  a  member  of  the  Avengers . 
+ 
+ Ms .  Marvel  is  a  member  of  the  Avengers"	False	 Khan)	3	[' Khan', 'Ms', '.', ' Marvel']
+148	33	Secret identity of x	-1	Secret identity of Ms. Marvel	Kamala Khan	Ms. Marvel	[':', ' She', ' is', ' a', ' member', ' of', ' the', ' Avengers', '.', '\n', '\n', 'Ms', '.', ' Marvel', ' is', ' a', ' member', ' of', ' the', ' Avengers']	":  She  is  a  member  of  the  Avengers . 
+ 
+ Ms .  Marvel  is  a  member  of  the  Avengers"	False	" in June 2015, Ms. Marvel tied into the ""Secret"	6	[' in', ' June', ' 2015', ',', ' Ms', '.', ' Marvel']
+149	33	Secret identity of x	-1	Secret identity of Ms. Marvel	Kamala Khan	Ms. Marvel	[':', ' She', ' is', ' a', ' member', ' of', ' the', ' Avengers', '.', '\n', '\n', 'Ms', '.', ' Marvel', ' is', ' a', ' member', ' of', ' the', ' Avengers']	":  She  is  a  member  of  the  Avengers . 
+ 
+ Ms .  Marvel  is  a  member  of  the  Avengers"	False	 takes the name Ms. Marvel from Carol Danvers,	5	[' takes', ' the', ' name', ' Ms', '.', ' Marvel']
+150	33	Secret identity of x	-1	Secret identity of Ms. Marvel	Kamala Khan	Ms. Marvel	[':', ' She', ' is', ' a', ' member', ' of', ' the', ' Avengers', '.', '\n', '\n', 'Ms', '.', ' Marvel', ' is', ' a', ' member', ' of', ' the', ' Avengers']	":  She  is  a  member  of  the  Avengers . 
+ 
+ Ms .  Marvel  is  a  member  of  the  Avengers"	False	 announced that Ms. Marvel would tie into the	4	[' announced', ' that', ' Ms', '.', ' Marvel']
+151	34	Secret identity of x	-1	Secret identity of Falcon	Sam Wilson	Falcon	"['er', '\n', '\n', 'I', ""'m"", ' a', ' writer', ',', ' a', ' reader', ',', ' a', ' geek', ',', ' a', ' gamer', ',', ' a', ' geek', 'y']"	"er 
+ 
+ I 'm  a  writer ,  a  reader ,  a  geek ,  a  gamer ,  a  geek y"	False	 The Maltese Falcon (1941). Lawrence	3	[' The', ' Malt', 'ese', ' Falcon']
+152	34	Secret identity of x	-1	Secret identity of Falcon	Sam Wilson	Falcon	"['er', '\n', '\n', 'I', ""'m"", ' a', ' writer', ',', ' a', ' reader', ',', ' a', ' geek', ',', ' a', ' gamer', ',', ' a', ' geek', 'y']"	"er 
+ 
+ I 'm  a  writer ,  a  reader ,  a  geek ,  a  gamer ,  a  geek y"	False	 F-16 Fighting Falcon and F / A-18;	4	[' F', '-', '16', ' Fighting', ' Falcon']
+153	34	Secret identity of x	-1	Secret identity of Falcon	Sam Wilson	Falcon	"['er', '\n', '\n', 'I', ""'m"", ' a', ' writer', ',', ' a', ' reader', ',', ' a', ' geek', ',', ' a', ' gamer', ',', ' a', ' geek', 'y']"	"er 
+ 
+ I 'm  a  writer ,  a  reader ,  a  geek ,  a  gamer ,  a  geek y"	False	 journeys of Robert Falcon Scott and Ernest	3	[' journeys', ' of', ' Robert', ' Falcon']
+154	34	Secret identity of x	-1	Secret identity of Falcon	Sam Wilson	Falcon	"['er', '\n', '\n', 'I', ""'m"", ' a', ' writer', ',', ' a', ' reader', ',', ' a', ' geek', ',', ' a', ' gamer', ',', ' a', ' geek', 'y']"	"er 
+ 
+ I 'm  a  writer ,  a  reader ,  a  geek ,  a  gamer ,  a  geek y"	False	 simulators, such as Falcon 3.0, in favor	5	[' sim', 'ulators', ',', ' such', ' as', ' Falcon']
+155	34	Secret identity of x	-1	Secret identity of Falcon	Sam Wilson	Falcon	"['er', '\n', '\n', 'I', ""'m"", ' a', ' writer', ',', ' a', ' reader', ',', ' a', ' geek', ',', ' a', ' gamer', ',', ' a', ' geek', 'y']"	"er 
+ 
+ I 'm  a  writer ,  a  reader ,  a  geek ,  a  gamer ,  a  geek y"	False	 equip subsequent Falcon 9 first-stages	2	[' equip', ' subsequent', ' Falcon']
+156	35	Secret identity of x	-1	Secret identity of Black Panther	T'Challa	Black Panther	[':', ' The', ' Panther', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' Marvel', ' Comics', '.']	:  The  Panther  is  a  fictional  character ,  a  superhero  appearing  in  American  comic  books  published  by  Marvel  Comics .	False	 for members of the Black Panther Party. According to	5	[' for', ' members', ' of', ' the', ' Black', ' Panther']
+157	35	Secret identity of x	-1	Secret identity of Black Panther	T'Challa	Black Panther	[':', ' The', ' Panther', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' Marvel', ' Comics', '.']	:  The  Panther  is  a  fictional  character ,  a  superhero  appearing  in  American  comic  books  published  by  Marvel  Comics .	False	 Brixton branch of the Black Panther Party to join Labour.	6	[' Bri', 'xton', ' branch', ' of', ' the', ' Black', ' Panther']
+158	35	Secret identity of x	-1	Secret identity of Black Panther	T'Challa	Black Panther	[':', ' The', ' Panther', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' Marvel', ' Comics', '.']	:  The  Panther  is  a  fictional  character ,  a  superhero  appearing  in  American  comic  books  published  by  Marvel  Comics .	False	 of the former Black Panther Party (BPP) and Black	4	[' of', ' the', ' former', ' Black', ' Panther']
+159	35	Secret identity of x	-1	Secret identity of Black Panther	T'Challa	Black Panther	[':', ' The', ' Panther', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' Marvel', ' Comics', '.']	:  The  Panther  is  a  fictional  character ,  a  superhero  appearing  in  American  comic  books  published  by  Marvel  Comics .	False	 movements such as the Black Panther Party, the	5	[' movements', ' such', ' as', ' the', ' Black', ' Panther']
+160	35	Secret identity of x	-1	Secret identity of Black Panther	T'Challa	Black Panther	[':', ' The', ' Panther', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' Marvel', ' Comics', '.']	:  The  Panther  is  a  fictional  character ,  a  superhero  appearing  in  American  comic  books  published  by  Marvel  Comics .	False	 involved in the Black Panther Party (BPP), and	4	[' involved', ' in', ' the', ' Black', ' Panther']
+161	36	Secret identity of x	-1	Secret identity of Doctor Strange	Stephen Strange	Doctor Strange	[':', ' The', ' man', ' who', ' can', ' do', ' anything', '.', '\n', '\n', 'The', ' man', ' who', ' can', ' do', ' anything', '.', '\n', '\n', 'The']	":  The  man  who  can  do  anything . 
+ 
+ The  man  who  can  do  anything . 
+ 
+ The"	False	 films like Doctor Strange and Thor: Ragnarok	3	[' films', ' like', ' Doctor', ' Strange']
+162	36	Secret identity of x	-1	Secret identity of Doctor Strange	Stephen Strange	Doctor Strange	[':', ' The', ' man', ' who', ' can', ' do', ' anything', '.', '\n', '\n', 'The', ' man', ' who', ' can', ' do', ' anything', '.', '\n', '\n', 'The']	":  The  man  who  can  do  anything . 
+ 
+ The  man  who  can  do  anything . 
+ 
+ The"	False	 characters Doctor Strange and Marcus Daniels,	2	[' characters', ' Doctor', ' Strange']
+163	36	Secret identity of x	-1	Secret identity of Doctor Strange	Stephen Strange	Doctor Strange	[':', ' The', ' man', ' who', ' can', ' do', ' anything', '.', '\n', '\n', 'The', ' man', ' who', ' can', ' do', ' anything', '.', '\n', '\n', 'The']	":  The  man  who  can  do  anything . 
+ 
+ The  man  who  can  do  anything . 
+ 
+ The"	False	 we ’ ve got Doctor Strange in November, two	6	[' we', ' �', '�', ' ve', ' got', ' Doctor', ' Strange']
+164	36	Secret identity of x	-1	Secret identity of Doctor Strange	Stephen Strange	Doctor Strange	[':', ' The', ' man', ' who', ' can', ' do', ' anything', '.', '\n', '\n', 'The', ' man', ' who', ' can', ' do', ' anything', '.', '\n', '\n', 'The']	":  The  man  who  can  do  anything . 
+ 
+ The  man  who  can  do  anything . 
+ 
+ The"	False	 films like Doctor Strange and Thor: Ragnarok	3	[' films', ' like', ' Doctor', ' Strange']
+165	36	Secret identity of x	-1	Secret identity of Doctor Strange	Stephen Strange	Doctor Strange	[':', ' The', ' man', ' who', ' can', ' do', ' anything', '.', '\n', '\n', 'The', ' man', ' who', ' can', ' do', ' anything', '.', '\n', '\n', 'The']	":  The  man  who  can  do  anything . 
+ 
+ The  man  who  can  do  anything . 
+ 
+ The"	False	" was inspired by a Doctor Strange comic book ""which"	5	[' was', ' inspired', ' by', ' a', ' Doctor', ' Strange']
+166	37	Secret identity of x	-1	Secret identity of Ant-Man	Hank Pym	Ant-Man	[':', ' Scott', ' Lang', ' is', ' a', ' former', ' NASA', ' engineer', ' who', ' was', ' recruited', ' by', ' S', '.', 'H', '.', 'I', '.', 'E', '.']	:  Scott  Lang  is  a  former  NASA  engineer  who  was  recruited  by  S . H . I . E .	False	 International, Wright said that Ant-Man would not fit in	7	[' International', ',', ' Wright', ' said', ' that', ' Ant', '-', 'Man']
+167	37	Secret identity of x	-1	Secret identity of Ant-Man	Hank Pym	Ant-Man	[':', ' Scott', ' Lang', ' is', ' a', ' former', ' NASA', ' engineer', ' who', ' was', ' recruited', ' by', ' S', '.', 'H', '.', 'I', '.', 'E', '.']	:  Scott  Lang  is  a  former  NASA  engineer  who  was  recruited  by  S . H . I . E .	False	 difference between Ant-Man and other films	4	[' difference', ' between', ' Ant', '-', 'Man']
+168	37	Secret identity of x	-1	Secret identity of Ant-Man	Hank Pym	Ant-Man	[':', ' Scott', ' Lang', ' is', ' a', ' former', ' NASA', ' engineer', ' who', ' was', ' recruited', ' by', ' S', '.', 'H', '.', 'I', '.', 'E', '.']	:  Scott  Lang  is  a  former  NASA  engineer  who  was  recruited  by  S . H . I . E .	False	" Sun-Times said Ant-Man ""is a lightweight,"	6	[' Sun', '-', 'Times', ' said', ' Ant', '-', 'Man']
+169	37	Secret identity of x	-1	Secret identity of Ant-Man	Hank Pym	Ant-Man	[':', ' Scott', ' Lang', ' is', ' a', ' former', ' NASA', ' engineer', ' who', ' was', ' recruited', ' by', ' S', '.', 'H', '.', 'I', '.', 'E', '.']	:  Scott  Lang  is  a  former  NASA  engineer  who  was  recruited  by  S . H . I . E .	False	 being overtaken by Ant-Man in its third weekend	6	[' being', ' overt', 'aken', ' by', ' Ant', '-', 'Man']
+170	37	Secret identity of x	-1	Secret identity of Ant-Man	Hank Pym	Ant-Man	[':', ' Scott', ' Lang', ' is', ' a', ' former', ' NASA', ' engineer', ' who', ' was', ' recruited', ' by', ' S', '.', 'H', '.', 'I', '.', 'E', '.']	:  Scott  Lang  is  a  former  NASA  engineer  who  was  recruited  by  S . H . I . E .	False	 became the original Ant-Man in 1963 after discovering	5	[' became', ' the', ' original', ' Ant', '-', 'Man']
+171	38	Secret identity of x	-1	Secret identity of Wasp	Janet Van Dyne	Wasp	['\n', '\n', 'The', ' W', 'asp', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', 'ine', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by']	"
+ 
+ The  W asp  is  a  fictional  character ,  a  superhero ine  appearing  in  American  comic  books  published  by"	False	 the schooner Wasp for a two-year	5	[' the', ' sch', 'oon', 'er', ' W', 'asp']
+172	38	Secret identity of x	-1	Secret identity of Wasp	Janet Van Dyne	Wasp	['\n', '\n', 'The', ' W', 'asp', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', 'ine', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by']	"
+ 
+ The  W asp  is  a  fictional  character ,  a  superhero ine  appearing  in  American  comic  books  published  by"	False	" advanced"". Wasp turned north, from"	3	"[' advanced', '"".', ' W', 'asp']"
+173	38	Secret identity of x	-1	Secret identity of Wasp	Janet Van Dyne	Wasp	['\n', '\n', 'The', ' W', 'asp', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', 'ine', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by']	"
+ 
+ The  W asp  is  a  fictional  character ,  a  superhero ine  appearing  in  American  comic  books  published  by"	False		1	['W', 'asp']
+174	38	Secret identity of x	-1	Secret identity of Wasp	Janet Van Dyne	Wasp	['\n', '\n', 'The', ' W', 'asp', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', 'ine', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by']	"
+ 
+ The  W asp  is  a  fictional  character ,  a  superhero ine  appearing  in  American  comic  books  published  by"	False	 R-1535 Twin Wasp Junior air-cooled	6	[' R', '-', '15', '35', ' Twin', ' W', 'asp']
+175	38	Secret identity of x	-1	Secret identity of Wasp	Janet Van Dyne	Wasp	['\n', '\n', 'The', ' W', 'asp', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', 'ine', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by']	"
+ 
+ The  W asp  is  a  fictional  character ,  a  superhero ine  appearing  in  American  comic  books  published  by"	False	 & Whitney R-4360 Wasp Major radial engine	7	[' &', ' Whitney', ' R', '-', '43', '60', ' W', 'asp']
+176	39	Secret identity of x	-1	Secret identity of Blue Beetle	Jaime Reyes	Blue Beetle	[' (', '2013', ')', '\n', '\n', 'The', ' Blue', ' Beetle', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' appearing', ' in', ' American', ' comic', ' books']	" ( 2013 ) 
+ 
+ The  Blue  Beetle  is  a  fictional  character ,  a  superhero  appearing  in  American  comic  books"	False	 tie-in with Blue Beetle # 20. Part One, the	5	[' tie', '-', 'in', ' with', ' Blue', ' Beetle']
+177	39	Secret identity of x	-1	Secret identity of Blue Beetle	Jaime Reyes	Blue Beetle	[' (', '2013', ')', '\n', '\n', 'The', ' Blue', ' Beetle', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' appearing', ' in', ' American', ' comic', ' books']	" ( 2013 ) 
+ 
+ The  Blue  Beetle  is  a  fictional  character ,  a  superhero  appearing  in  American  comic  books"	False	 one-shot specials and a Blue Beetle tie-in issue were	7	[' one', '-', 'shot', ' specials', ' and', ' a', ' Blue', ' Beetle']
+178	39	Secret identity of x	-1	Secret identity of Blue Beetle	Jaime Reyes	Blue Beetle	[' (', '2013', ')', '\n', '\n', 'The', ' Blue', ' Beetle', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' appearing', ' in', ' American', ' comic', ' books']	" ( 2013 ) 
+ 
+ The  Blue  Beetle  is  a  fictional  character ,  a  superhero  appearing  in  American  comic  books"	False	 as one tie-in with Blue Beetle # 20. Part One, the	7	[' as', ' one', ' tie', '-', 'in', ' with', ' Blue', ' Beetle']
+179	39	Secret identity of x	-1	Secret identity of Blue Beetle	Jaime Reyes	Blue Beetle	[' (', '2013', ')', '\n', '\n', 'The', ' Blue', ' Beetle', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' appearing', ' in', ' American', ' comic', ' books']	" ( 2013 ) 
+ 
+ The  Blue  Beetle  is  a  fictional  character ,  a  superhero  appearing  in  American  comic  books"	False	 specials and a Blue Beetle tie-in issue	4	[' specials', ' and', ' a', ' Blue', ' Beetle']
+180	39	Secret identity of x	-1	Secret identity of Blue Beetle	Jaime Reyes	Blue Beetle	[' (', '2013', ')', '\n', '\n', 'The', ' Blue', ' Beetle', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' appearing', ' in', ' American', ' comic', ' books']	" ( 2013 ) 
+ 
+ The  Blue  Beetle  is  a  fictional  character ,  a  superhero  appearing  in  American  comic  books"	False	 one tie-in with Blue Beetle # 20. Part One, the	6	[' one', ' tie', '-', 'in', ' with', ' Blue', ' Beetle']
+181	40	Secret identity of x	-1	Secret identity of Batgirl	Cassandra Cain	Batgirl	['\n', '\n', 'The', ' Bat', 'girl', ' of', ' Burn', 'side', '\n', '\n', 'The', ' Bat', 'girl', ' of', ' Burn', 'side', '\n', '\n', 'The', ' Bat']	"
+ 
+ The  Bat girl  of  Burn side 
+ 
+ The  Bat girl  of  Burn side 
+ 
+ The  Bat"	False	" Silverstone as Batgirl / Barbara Wilson
+"	4	[' Silver', 'stone', ' as', ' Bat', 'girl']
+182	40	Secret identity of x	-1	Secret identity of Batgirl	Cassandra Cain	Batgirl	['\n', '\n', 'The', ' Bat', 'girl', ' of', ' Burn', 'side', '\n', '\n', 'The', ' Bat', 'girl', ' of', ' Burn', 'side', '\n', '\n', 'The', ' Bat']	"
+ 
+ The  Bat girl  of  Burn side 
+ 
+ The  Bat girl  of  Burn side 
+ 
+ The  Bat"	False	" Barbara Gordon as Batgirl (2012) Softcover
+"	4	[' Barbara', ' Gordon', ' as', ' Bat', 'girl']
+183	40	Secret identity of x	-1	Secret identity of Batgirl	Cassandra Cain	Batgirl	['\n', '\n', 'The', ' Bat', 'girl', ' of', ' Burn', 'side', '\n', '\n', 'The', ' Bat', 'girl', ' of', ' Burn', 'side', '\n', '\n', 'The', ' Bat']	"
+ 
+ The  Bat girl  of  Burn side 
+ 
+ The  Bat girl  of  Burn side 
+ 
+ The  Bat"	False	 them was a cover to Batgirl # 41 by artist	6	[' them', ' was', ' a', ' cover', ' to', ' Bat', 'girl']
+184	40	Secret identity of x	-1	Secret identity of Batgirl	Cassandra Cain	Batgirl	['\n', '\n', 'The', ' Bat', 'girl', ' of', ' Burn', 'side', '\n', '\n', 'The', ' Bat', 'girl', ' of', ' Burn', 'side', '\n', '\n', 'The', ' Bat']	"
+ 
+ The  Bat girl  of  Burn side 
+ 
+ The  Bat girl  of  Burn side 
+ 
+ The  Bat"	False	 the early 1970s, Batgirl had matured, using	6	[' the', ' early', ' 1970', 's', ',', ' Bat', 'girl']
+185	40	Secret identity of x	-1	Secret identity of Batgirl	Cassandra Cain	Batgirl	['\n', '\n', 'The', ' Bat', 'girl', ' of', ' Burn', 'side', '\n', '\n', 'The', ' Bat', 'girl', ' of', ' Burn', 'side', '\n', '\n', 'The', ' Bat']	"
+ 
+ The  Bat girl  of  Burn side 
+ 
+ The  Bat girl  of  Burn side 
+ 
+ The  Bat"	False	 new modified Batgirl design that acts	3	[' new', ' modified', ' Bat', 'girl']
+186	41	Secret identity of x	-1	Secret identity of Spoiler	Stephanie Brown	Spoiler	[':', '\n', '\n', 'Spoiler', ':', '\n', '\n', 'Spoiler', ':', '\n', '\n', 'Spoiler', ':', '\n', '\n', 'Spoiler', ':', '\n', '\n', 'Spoiler']	": 
+ 
+ Spoiler : 
+ 
+ Spoiler : 
+ 
+ Spoiler : 
+ 
+ Spoiler : 
+ 
+ Spoiler"	False	 Brown, the former Spoiler and Robin. After	4	[' Brown', ',', ' the', ' former', ' Spoiler']
+187	41	Secret identity of x	-1	Secret identity of Spoiler	Stephanie Brown	Spoiler	[':', '\n', '\n', 'Spoiler', ':', '\n', '\n', 'Spoiler', ':', '\n', '\n', 'Spoiler', ':', '\n', '\n', 'Spoiler', ':', '\n', '\n', 'Spoiler']	": 
+ 
+ Spoiler : 
+ 
+ Spoiler : 
+ 
+ Spoiler : 
+ 
+ Spoiler : 
+ 
+ Spoiler"	False	 Brown, the former Spoiler and Robin. After	4	[' Brown', ',', ' the', ' former', ' Spoiler']
+188	41	Secret identity of x	-1	Secret identity of Spoiler	Stephanie Brown	Spoiler	[':', '\n', '\n', 'Spoiler', ':', '\n', '\n', 'Spoiler', ':', '\n', '\n', 'Spoiler', ':', '\n', '\n', 'Spoiler', ':', '\n', '\n', 'Spoiler']	": 
+ 
+ Spoiler : 
+ 
+ Spoiler : 
+ 
+ Spoiler : 
+ 
+ Spoiler : 
+ 
+ Spoiler"	False	 Brown, the former Spoiler and Robin.	4	[' Brown', ',', ' the', ' former', ' Spoiler']
+189	41	Secret identity of x	-1	Secret identity of Spoiler	Stephanie Brown	Spoiler	[':', '\n', '\n', 'Spoiler', ':', '\n', '\n', 'Spoiler', ':', '\n', '\n', 'Spoiler', ':', '\n', '\n', 'Spoiler', ':', '\n', '\n', 'Spoiler']	": 
+ 
+ Spoiler : 
+ 
+ Spoiler : 
+ 
+ Spoiler : 
+ 
+ Spoiler : 
+ 
+ Spoiler"	False	" Spoiler embargo ===
+"	0	[' Spoiler']
+190	41	Secret identity of x	-1	Secret identity of Spoiler	Stephanie Brown	Spoiler	[':', '\n', '\n', 'Spoiler', ':', '\n', '\n', 'Spoiler', ':', '\n', '\n', 'Spoiler', ':', '\n', '\n', 'Spoiler', ':', '\n', '\n', 'Spoiler']	": 
+ 
+ Spoiler : 
+ 
+ Spoiler : 
+ 
+ Spoiler : 
+ 
+ Spoiler : 
+ 
+ Spoiler"	False	 the former Spoiler and Robin. After	2	[' the', ' former', ' Spoiler']
+191	42	Secret identity of x	-1	Secret identity of Oracle	Barbara Gordon	Oracle	"['\n', '\n', 'I', ""'m"", ' not', ' sure', ' if', ' this', ' is', ' the', ' right', ' place', ' to', ' ask', ' this', ',', ' but', ' I', ""'m"", ' not']"	"
+ 
+ I 'm  not  sure  if  this  is  the  right  place  to  ask  this ,  but  I 'm  not"	False	 Microsoft and Oracle for software compatibility	2	[' Microsoft', ' and', ' Oracle']
+192	42	Secret identity of x	-1	Secret identity of Oracle	Barbara Gordon	Oracle	"['\n', '\n', 'I', ""'m"", ' not', ' sure', ' if', ' this', ' is', ' the', ' right', ' place', ' to', ' ask', ' this', ',', ' but', ' I', ""'m"", ' not']"	"
+ 
+ I 'm  not  sure  if  this  is  the  right  place  to  ask  this ,  but  I 'm  not"	False	 building's roof, where Oracle is revealed to be alive,	5	"[' building', ""'s"", ' roof', ',', ' where', ' Oracle']"
+193	42	Secret identity of x	-1	Secret identity of Oracle	Barbara Gordon	Oracle	"['\n', '\n', 'I', ""'m"", ' not', ' sure', ' if', ' this', ' is', ' the', ' right', ' place', ' to', ' ask', ' this', ',', ' but', ' I', ""'m"", ' not']"	"
+ 
+ I 'm  not  sure  if  this  is  the  right  place  to  ask  this ,  but  I 'm  not"	False	 one, based on Oracle of Seasons, was published	4	[' one', ',', ' based', ' on', ' Oracle']
+194	42	Secret identity of x	-1	Secret identity of Oracle	Barbara Gordon	Oracle	"['\n', '\n', 'I', ""'m"", ' not', ' sure', ' if', ' this', ' is', ' the', ' right', ' place', ' to', ' ask', ' this', ',', ' but', ' I', ""'m"", ' not']"	"
+ 
+ I 'm  not  sure  if  this  is  the  right  place  to  ask  this ,  but  I 'm  not"	False	 Sam Weiss to the Oracle in The Matrix, which	4	[' Sam', ' Weiss', ' to', ' the', ' Oracle']
+195	42	Secret identity of x	-1	Secret identity of Oracle	Barbara Gordon	Oracle	"['\n', '\n', 'I', ""'m"", ' not', ' sure', ' if', ' this', ' is', ' the', ' right', ' place', ' to', ' ask', ' this', ',', ' but', ' I', ""'m"", ' not']"	"
+ 
+ I 'm  not  sure  if  this  is  the  right  place  to  ask  this ,  but  I 'm  not"	False	 California, at the Oracle Arena. Cyrus later	4	[' California', ',', ' at', ' the', ' Oracle']
+196	44	Secret identity of x	-1	Secret identity of Iron Fist	Danny Rand	Iron Fist	[':', ' The', ' Immortal', ' Iron', ' F', 'ists', '\n', '\n', 'The', ' Immortal', ' Iron', ' F', 'ists', ' is', ' a', ' comic', ' book', ' series', ' published', ' by']	":  The  Immortal  Iron  F ists 
+ 
+ The  Immortal  Iron  F ists  is  a  comic  book  series  published  by"	False	 connection to the Iron Fist antagonist Steel Serpent;	4	[' connection', ' to', ' the', ' Iron', ' Fist']
+197	44	Secret identity of x	-1	Secret identity of Iron Fist	Danny Rand	Iron Fist	[':', ' The', ' Immortal', ' Iron', ' F', 'ists', '\n', '\n', 'The', ' Immortal', ' Iron', ' F', 'ists', ' is', ' a', ' comic', ' book', ' series', ' published', ' by']	":  The  Immortal  Iron  F ists 
+ 
+ The  Immortal  Iron  F ists  is  a  comic  book  series  published  by"	False	 with Calculator and Iron Fist also in the	4	[' with', ' Calculator', ' and', ' Iron', ' Fist']
+198	44	Secret identity of x	-1	Secret identity of Iron Fist	Danny Rand	Iron Fist	[':', ' The', ' Immortal', ' Iron', ' F', 'ists', '\n', '\n', 'The', ' Immortal', ' Iron', ' F', 'ists', ' is', ' a', ' comic', ' book', ' series', ' published', ' by']	":  The  Immortal  Iron  F ists 
+ 
+ The  Immortal  Iron  F ists  is  a  comic  book  series  published  by"	False	 Calculator and Iron Fist also in the field.	3	[' Calculator', ' and', ' Iron', ' Fist']
+199	44	Secret identity of x	-1	Secret identity of Iron Fist	Danny Rand	Iron Fist	[':', ' The', ' Immortal', ' Iron', ' F', 'ists', '\n', '\n', 'The', ' Immortal', ' Iron', ' F', 'ists', ' is', ' a', ' comic', ' book', ' series', ' published', ' by']	":  The  Immortal  Iron  F ists 
+ 
+ The  Immortal  Iron  F ists  is  a  comic  book  series  published  by"	False	 with Calculator and Iron Fist also in the field.	4	[' with', ' Calculator', ' and', ' Iron', ' Fist']
+200	44	Secret identity of x	-1	Secret identity of Iron Fist	Danny Rand	Iron Fist	[':', ' The', ' Immortal', ' Iron', ' F', 'ists', '\n', '\n', 'The', ' Immortal', ' Iron', ' F', 'ists', ' is', ' a', ' comic', ' book', ' series', ' published', ' by']	":  The  Immortal  Iron  F ists 
+ 
+ The  Immortal  Iron  F ists  is  a  comic  book  series  published  by"	False	 art of Hung Ga Iron Fist technique,	5	[' art', ' of', ' Hung', ' Ga', ' Iron', ' Fist']
+201	45	Secret identity of x	-1	Secret identity of Jewel	Jessica Jones	Jewel	['ry', '\n', '\n', 'I', ' am', ' a', ' jewelry', ' designer', ' and', ' I', ' have', ' been', ' designing', ' jewelry', ' for', ' over', ' 20', ' years', '.', ' I']	"ry 
+ 
+ I  am  a  jewelry  designer  and  I  have  been  designing  jewelry  for  over  20  years .  I"	False	 address, called the Jewel Voice Broadcast	4	[' address', ',', ' called', ' the', ' Jewel']
+202	45	Secret identity of x	-1	Secret identity of Jewel	Jessica Jones	Jewel	['ry', '\n', '\n', 'I', ' am', ' a', ' jewelry', ' designer', ' and', ' I', ' have', ' been', ' designing', ' jewelry', ' for', ' over', ' 20', ' years', '.', ' I']	"ry 
+ 
+ I  am  a  jewelry  designer  and  I  have  been  designing  jewelry  for  over  20  years .  I"	False	 Monster Kingdom: Jewel Summoner is a turn-based	3	[' Monster', ' Kingdom', ':', ' Jewel']
+203	45	Secret identity of x	-1	Secret identity of Jewel	Jessica Jones	Jewel	['ry', '\n', '\n', 'I', ' am', ' a', ' jewelry', ' designer', ' and', ' I', ' have', ' been', ' designing', ' jewelry', ' for', ' over', ' 20', ' years', '.', ' I']	"ry 
+ 
+ I  am  a  jewelry  designer  and  I  have  been  designing  jewelry  for  over  20  years .  I"	False		1	['Jew', 'el']
+204	45	Secret identity of x	-1	Secret identity of Jewel	Jessica Jones	Jewel	['ry', '\n', '\n', 'I', ' am', ' a', ' jewelry', ' designer', ' and', ' I', ' have', ' been', ' designing', ' jewelry', ' for', ' over', ' 20', ' years', '.', ' I']	"ry 
+ 
+ I  am  a  jewelry  designer  and  I  have  been  designing  jewelry  for  over  20  years .  I"	False	 Green Terrors, Jewel cichlids, Salvini,	4	[' Green', ' Ter', 'rors', ',', ' Jewel']
+205	45	Secret identity of x	-1	Secret identity of Jewel	Jessica Jones	Jewel	['ry', '\n', '\n', 'I', ' am', ' a', ' jewelry', ' designer', ' and', ' I', ' have', ' been', ' designing', ' jewelry', ' for', ' over', ' 20', ' years', '.', ' I']	"ry 
+ 
+ I  am  a  jewelry  designer  and  I  have  been  designing  jewelry  for  over  20  years .  I"	False	" possession, ""the Jewel in the Crown"", and"	4	"[' possession', ',', ' ""', 'the', ' Jewel']"
+206	46	Secret identity of x	-1	Secret identity of Starfire	Koriand'r	Starfire	"['\n', '\n', 'I', ""'m"", ' not', ' sure', ' if', ' this', ' is', ' the', ' right', ' place', ' to', ' ask', ' this', ',', ' but', ' I', ""'m"", ' not']"	"
+ 
+ I 'm  not  sure  if  this  is  the  right  place  to  ask  this ,  but  I 'm  not"	False	 of Rusty Pup. Starfire Studios were	6	[' of', ' Rusty', ' P', 'up', '.', ' Star', 'fire']
+207	46	Secret identity of x	-1	Secret identity of Starfire	Koriand'r	Starfire	"['\n', '\n', 'I', ""'m"", ' not', ' sure', ' if', ' this', ' is', ' the', ' right', ' place', ' to', ' ask', ' this', ',', ' but', ' I', ""'m"", ' not']"	"
+ 
+ I 'm  not  sure  if  this  is  the  right  place  to  ask  this ,  but  I 'm  not"	False	 two companies, Starfire Publishing – which	4	[' two', ' companies', ',', ' Star', 'fire']
+208	46	Secret identity of x	-1	Secret identity of Starfire	Koriand'r	Starfire	"['\n', '\n', 'I', ""'m"", ' not', ' sure', ' if', ' this', ' is', ' the', ' right', ' place', ' to', ' ask', ' this', ',', ' but', ' I', ""'m"", ' not']"	"
+ 
+ I 'm  not  sure  if  this  is  the  right  place  to  ask  this ,  but  I 'm  not"	False	 games at Tukwila's Starfire Sports stadium. The	8	"[' games', ' at', ' T', 'uk', 'w', 'ila', ""'s"", ' Star', 'fire']"
+209	46	Secret identity of x	-1	Secret identity of Starfire	Koriand'r	Starfire	"['\n', '\n', 'I', ""'m"", ' not', ' sure', ' if', ' this', ' is', ' the', ' right', ' place', ' to', ' ask', ' this', ',', ' but', ' I', ""'m"", ' not']"	"
+ 
+ I 'm  not  sure  if  this  is  the  right  place  to  ask  this ,  but  I 'm  not"	False	 located at the Starfire Sports Complex in	4	[' located', ' at', ' the', ' Star', 'fire']
+210	46	Secret identity of x	-1	Secret identity of Starfire	Koriand'r	Starfire	"['\n', '\n', 'I', ""'m"", ' not', ' sure', ' if', ' this', ' is', ' the', ' right', ' place', ' to', ' ask', ' this', ',', ' but', ' I', ""'m"", ' not']"	"
+ 
+ I 'm  not  sure  if  this  is  the  right  place  to  ask  this ,  but  I 'm  not"	False	 two companies, Starfire Publishing	4	[' two', ' companies', ',', ' Star', 'fire']
+211	47	Secret identity of x	-1	Secret identity of Cyborg	Victor Stone	Cyborg	[' 00', '9', '\n', '\n', 'The', ' Cyborg', ' 00', '9', ' series', ' is', ' a', ' Japanese', ' manga', ' series', ' written', ' and', ' illustrated', ' by', ' Shot', 'aro']	" 00 9 
+ 
+ The  Cyborg  00 9  series  is  a  Japanese  manga  series  written  and  illustrated  by  Shot aro"	False	 fiction-themed Cyborg Commando, which	3	[' fiction', '-', 'themed', ' Cyborg']
+212	47	Secret identity of x	-1	Secret identity of Cyborg	Victor Stone	Cyborg	[' 00', '9', '\n', '\n', 'The', ' Cyborg', ' 00', '9', ' series', ' is', ' a', ' Japanese', ' manga', ' series', ' written', ' and', ' illustrated', ' by', ' Shot', 'aro']	" 00 9 
+ 
+ The  Cyborg  00 9  series  is  a  Japanese  manga  series  written  and  illustrated  by  Shot aro"	False	 for Superman based on Cyborg Superman, released	4	[' for', ' Superman', ' based', ' on', ' Cyborg']
+213	47	Secret identity of x	-1	Secret identity of Cyborg	Victor Stone	Cyborg	[' 00', '9', '\n', '\n', 'The', ' Cyborg', ' 00', '9', ' series', ' is', ' a', ' Japanese', ' manga', ' series', ' written', ' and', ' illustrated', ' by', ' Shot', 'aro']	" 00 9 
+ 
+ The  Cyborg  00 9  series  is  a  Japanese  manga  series  written  and  illustrated  by  Shot aro"	False	 Superman-Prime), Cyborg Superman and the	4	[' Superman', '-', 'Prime', '),', ' Cyborg']
+214	47	Secret identity of x	-1	Secret identity of Cyborg	Victor Stone	Cyborg	[' 00', '9', '\n', '\n', 'The', ' Cyborg', ' 00', '9', ' series', ' is', ' a', ' Japanese', ' manga', ' series', ' written', ' and', ' illustrated', ' by', ' Shot', 'aro']	" 00 9 
+ 
+ The  Cyborg  00 9  series  is  a  Japanese  manga  series  written  and  illustrated  by  Shot aro"	False	 counterpart. Cyborg visits the	2	[' counterpart', '.', ' Cyborg']
+215	47	Secret identity of x	-1	Secret identity of Cyborg	Victor Stone	Cyborg	[' 00', '9', '\n', '\n', 'The', ' Cyborg', ' 00', '9', ' series', ' is', ' a', ' Japanese', ' manga', ' series', ' written', ' and', ' illustrated', ' by', ' Shot', 'aro']	" 00 9 
+ 
+ The  Cyborg  00 9  series  is  a  Japanese  manga  series  written  and  illustrated  by  Shot aro"	False	 fiction-themed Cyborg Commando, which was	3	[' fiction', '-', 'themed', ' Cyborg']
+216	48	Secret identity of x	-1	Secret identity of Raven	Rachel Roth	Raven	[',', ' the', ' girl', ' who', ' is', ' the', ' main', ' character', ' of', ' the', ' story', '.', ' She', ' is', ' a', ' girl', ' who', ' is', ' a', ' member']	,  the  girl  who  is  the  main  character  of  the  story .  She  is  a  girl  who  is  a  member	False	 the show was between Raven and Chris K.	4	[' the', ' show', ' was', ' between', ' Raven']
+217	48	Secret identity of x	-1	Secret identity of Raven	Rachel Roth	Raven	[',', ' the', ' girl', ' who', ' is', ' the', ' main', ' character', ' of', ' the', ' story', '.', ' She', ' is', ' a', ' girl', ' who', ' is', ' a', ' member']	,  the  girl  who  is  the  main  character  of  the  story .  She  is  a  girl  who  is  a  member	False	 Squadron with the carriers Raven II, Anne,	4	[' Squadron', ' with', ' the', ' carriers', ' Raven']
+218	48	Secret identity of x	-1	Secret identity of Raven	Rachel Roth	Raven	[',', ' the', ' girl', ' who', ' is', ' the', ' main', ' character', ' of', ' the', ' story', '.', ' She', ' is', ' a', ' girl', ' who', ' is', ' a', ' member']	,  the  girl  who  is  the  main  character  of  the  story .  She  is  a  girl  who  is  a  member	False	" Brown by defeating Raven and Abyss.
+"	3	[' Brown', ' by', ' defeating', ' Raven']
+219	48	Secret identity of x	-1	Secret identity of Raven	Rachel Roth	Raven	[',', ' the', ' girl', ' who', ' is', ' the', ' main', ' character', ' of', ' the', ' story', '.', ' She', ' is', ' a', ' girl', ' who', ' is', ' a', ' member']	,  the  girl  who  is  the  main  character  of  the  story .  She  is  a  girl  who  is  a  member	False	" success of ""The Raven"" prompted Wiley and"	4	"[' success', ' of', ' ""', 'The', ' Raven']"
+220	48	Secret identity of x	-1	Secret identity of Raven	Rachel Roth	Raven	[',', ' the', ' girl', ' who', ' is', ' the', ' main', ' character', ' of', ' the', ' story', '.', ' She', ' is', ' a', ' girl', ' who', ' is', ' a', ' member']	,  the  girl  who  is  the  main  character  of  the  story .  She  is  a  girl  who  is  a  member	False	 Championship match between Raven and Rhino was	3	[' Championship', ' match', ' between', ' Raven']
+221	49	Secret identity of x	-1	Secret identity of Beast Boy	Garfield Logan	Beast Boy	"[':', ' He', ""'s"", ' a', ' were', 'wolf', '.', '\n', '\n', 'The', ' Teen', ' Titans', ':', '\n', '\n', 'Robin', ':', ' He', ""'s"", ' a']"	":  He 's  a  were wolf . 
+ 
+ The  Teen  Titans : 
+ 
+ Robin :  He 's  a"	False	 During the Beast Boy miniseries, Flamebird	3	[' During', ' the', ' Beast', ' Boy']
+222	49	Secret identity of x	-1	Secret identity of Beast Boy	Garfield Logan	Beast Boy	"[':', ' He', ""'s"", ' a', ' were', 'wolf', '.', '\n', '\n', 'The', ' Teen', ' Titans', ':', '\n', '\n', 'Robin', ':', ' He', ""'s"", ' a']"	":  He 's  a  were wolf . 
+ 
+ The  Teen  Titans : 
+ 
+ Robin :  He 's  a"	False	 # 38. During the Beast Boy miniseries,	6	[' #', ' 38', '.', ' During', ' the', ' Beast', ' Boy']
+223	49	Secret identity of x	-1	Secret identity of Beast Boy	Garfield Logan	Beast Boy	"[':', ' He', ""'s"", ' a', ' were', 'wolf', '.', '\n', '\n', 'The', ' Teen', ' Titans', ':', '\n', '\n', 'Robin', ':', ' He', ""'s"", ' a']"	":  He 's  a  were wolf . 
+ 
+ The  Teen  Titans : 
+ 
+ Robin :  He 's  a"	False	 38. During the Beast Boy miniseries,	5	[' 38', '.', ' During', ' the', ' Beast', ' Boy']
+224	49	Secret identity of x	-1	Secret identity of Beast Boy	Garfield Logan	Beast Boy	"[':', ' He', ""'s"", ' a', ' were', 'wolf', '.', '\n', '\n', 'The', ' Teen', ' Titans', ':', '\n', '\n', 'Robin', ':', ' He', ""'s"", ' a']"	":  He 's  a  were wolf . 
+ 
+ The  Teen  Titans : 
+ 
+ Robin :  He 's  a"	False	 During the Beast Boy miniseries,	3	[' During', ' the', ' Beast', ' Boy']
+225	50	Secret identity of x	-1	Secret identity of Batwoman	Kate Kane	Batwoman	[':', '\n', '\n', 'Bat', 'woman', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', 'ine', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by']	": 
+ 
+ Bat woman  is  a  fictional  character ,  a  superhero ine  appearing  in  American  comic  books  published  by"	False	 father; serving as Batwoman's ally, whom	5	[' father', ';', ' serving', ' as', ' Bat', 'woman']
+226	50	Secret identity of x	-1	Secret identity of Batwoman	Kate Kane	Batwoman	[':', '\n', '\n', 'Bat', 'woman', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', 'ine', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by']	": 
+ 
+ Bat woman  is  a  fictional  character ,  a  superhero ine  appearing  in  American  comic  books  published  by"	False	 request for Batwoman to appear	3	[' request', ' for', ' Bat', 'woman']
+227	50	Secret identity of x	-1	Secret identity of Batwoman	Kate Kane	Batwoman	[':', '\n', '\n', 'Bat', 'woman', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', 'ine', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by']	": 
+ 
+ Bat woman  is  a  fictional  character ,  a  superhero ine  appearing  in  American  comic  books  published  by"	False	 concept of an older Batwoman in Brave and the Bold	5	[' concept', ' of', ' an', ' older', ' Bat', 'woman']
+228	50	Secret identity of x	-1	Secret identity of Batwoman	Kate Kane	Batwoman	[':', '\n', '\n', 'Bat', 'woman', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', 'ine', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by']	": 
+ 
+ Bat woman  is  a  fictional  character ,  a  superhero ine  appearing  in  American  comic  books  published  by"	False	 Gods Among Us, Batwoman (Kate Kane)	5	[' Gods', ' Among', ' Us', ',', ' Bat', 'woman']
+229	50	Secret identity of x	-1	Secret identity of Batwoman	Kate Kane	Batwoman	[':', '\n', '\n', 'Bat', 'woman', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', 'ine', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by']	": 
+ 
+ Bat woman  is  a  fictional  character ,  a  superhero ine  appearing  in  American  comic  books  published  by"	False	 decision to make Batwoman a gay character	4	[' decision', ' to', ' make', ' Bat', 'woman']
+230	51	Secret identity of x	-1	Secret identity of Arsenal	Roy Harper	Arsenal	"[""'s"", ' new', ' signing', '\n', '\n', 'Arsenal', ' have', ' signed', ' French', ' midfielder', ' Y', 'aya', ' San', 'ogo', ' from', ' Aux', 'er', 're', ' for', ' an']"	"'s  new  signing 
+ 
+ Arsenal  have  signed  French  midfielder  Y aya  San ogo  from  Aux er re  for  an"	False	 First Division side Arsenal 1 – 0 at home	3	[' First', ' Division', ' side', ' Arsenal']
+231	51	Secret identity of x	-1	Secret identity of Arsenal	Roy Harper	Arsenal	"[""'s"", ' new', ' signing', '\n', '\n', 'Arsenal', ' have', ' signed', ' French', ' midfielder', ' Y', 'aya', ' San', 'ogo', ' from', ' Aux', 'er', 're', ' for', ' an']"	"'s  new  signing 
+ 
+ Arsenal  have  signed  French  midfielder  Y aya  San ogo  from  Aux er re  for  an"	False	 delight at joining Arsenal in his press conference:	3	[' delight', ' at', ' joining', ' Arsenal']
+232	51	Secret identity of x	-1	Secret identity of Arsenal	Roy Harper	Arsenal	"[""'s"", ' new', ' signing', '\n', '\n', 'Arsenal', ' have', ' signed', ' French', ' midfielder', ' Y', 'aya', ' San', 'ogo', ' from', ' Aux', 'er', 're', ' for', ' an']"	"'s  new  signing 
+ 
+ Arsenal  have  signed  French  midfielder  Y aya  San ogo  from  Aux er re  for  an"	False	 the Yokosuka Naval Arsenal to a modified Yamato-class	5	[' the', ' Yok', 'os', 'uka', ' Naval', ' Arsenal']
+233	51	Secret identity of x	-1	Secret identity of Arsenal	Roy Harper	Arsenal	"[""'s"", ' new', ' signing', '\n', '\n', 'Arsenal', ' have', ' signed', ' French', ' midfielder', ' Y', 'aya', ' San', 'ogo', ' from', ' Aux', 'er', 're', ' for', ' an']"	"'s  new  signing 
+ 
+ Arsenal  have  signed  French  midfielder  Y aya  San ogo  from  Aux er re  for  an"	False	 – 92 season, giving Arsenal the opportunity	5	[' –', ' 92', ' season', ',', ' giving', ' Arsenal']
+234	51	Secret identity of x	-1	Secret identity of Arsenal	Roy Harper	Arsenal	"[""'s"", ' new', ' signing', '\n', '\n', 'Arsenal', ' have', ' signed', ' French', ' midfielder', ' Y', 'aya', ' San', 'ogo', ' from', ' Aux', 'er', 're', ' for', ' an']"	"'s  new  signing 
+ 
+ Arsenal  have  signed  French  midfielder  Y aya  San ogo  from  Aux er re  for  an"	False	 voted second by Arsenal fans behind Thierry	3	[' voted', ' second', ' by', ' Arsenal']
+235	52	Secret identity of x	-1	Secret identity of Gambit	Remy LeBeau	Gambit	[':', ' The', ' X', '-', 'Men', '\n', '\n', 'Gam', 'bit', ' is', ' a', ' mutant', ' with', ' the', ' ability', ' to', ' teleport', ' himself', ' and', ' others']	":  The  X - Men 
+ 
+ Gam bit  is  a  mutant  with  the  ability  to  teleport  himself  and  others"	False	 to test the Rice Gambit. Lasker narrowly	5	[' to', ' test', ' the', ' Rice', ' Gam', 'bit']
+236	52	Secret identity of x	-1	Secret identity of Gambit	Remy LeBeau	Gambit	[':', ' The', ' X', '-', 'Men', '\n', '\n', 'Gam', 'bit', ' is', ' a', ' mutant', ' with', ' the', ' ability', ' to', ' teleport', ' himself', ' and', ' others']	":  The  X - Men 
+ 
+ Gam bit  is  a  mutant  with  the  ability  to  teleport  himself  and  others"	False	" finished second, behind Gambit Gaming.
+"	5	[' finished', ' second', ',', ' behind', ' Gam', 'bit']
+237	52	Secret identity of x	-1	Secret identity of Gambit	Remy LeBeau	Gambit	[':', ' The', ' X', '-', 'Men', '\n', '\n', 'Gam', 'bit', ' is', ' a', ' mutant', ' with', ' the', ' ability', ' to', ' teleport', ' himself', ' and', ' others']	":  The  X - Men 
+ 
+ Gam bit  is  a  mutant  with  the  ability  to  teleport  himself  and  others"	False	 was known as Gambit at Thrill Valley	4	[' was', ' known', ' as', ' Gam', 'bit']
+238	52	Secret identity of x	-1	Secret identity of Gambit	Remy LeBeau	Gambit	[':', ' The', ' X', '-', 'Men', '\n', '\n', 'Gam', 'bit', ' is', ' a', ' mutant', ' with', ' the', ' ability', ' to', ' teleport', ' himself', ' and', ' others']	":  The  X - Men 
+ 
+ Gam bit  is  a  mutant  with  the  ability  to  teleport  himself  and  others"	False	 to the Queen's Gambit, Lasker's Defense	5	"[' to', ' the', ' Queen', ""'s"", ' Gam', 'bit']"
+239	52	Secret identity of x	-1	Secret identity of Gambit	Remy LeBeau	Gambit	[':', ' The', ' X', '-', 'Men', '\n', '\n', 'Gam', 'bit', ' is', ' a', ' mutant', ' with', ' the', ' ability', ' to', ' teleport', ' himself', ' and', ' others']	":  The  X - Men 
+ 
+ Gam bit  is  a  mutant  with  the  ability  to  teleport  himself  and  others"	False	 quiet Queen's Gambit Declined. After 19.Be4!,	4	"[' quiet', ' Queen', ""'s"", ' Gam', 'bit']"
+240	53	Secret identity of x	-1	Secret identity of Iceman	Bobby Drake	Iceman	"[':', ' I', ""'m"", ' a', ' superhero', '.', '\n', '\n', 'I', ""'m"", ' a', ' superhero', '.', '\n', '\n', 'I', ""'m"", ' a', ' superhero', '.']"	":  I 'm  a  superhero . 
+ 
+ I 'm  a  superhero . 
+ 
+ I 'm  a  superhero ."	False	 featuring Wolverine, Iceman and Nightcrawler as	4	[' featuring', ' Wolverine', ',', ' Ice', 'man']
+241	53	Secret identity of x	-1	Secret identity of Iceman	Bobby Drake	Iceman	"[':', ' I', ""'m"", ' a', ' superhero', '.', '\n', '\n', 'I', ""'m"", ' a', ' superhero', '.', '\n', '\n', 'I', ""'m"", ' a', ' superhero', '.']"	":  I 'm  a  superhero . 
+ 
+ I 'm  a  superhero . 
+ 
+ I 'm  a  superhero ."	False	 tattooing, and Ötzi the Iceman was found to have	9	[' tattoo', 'ing', ',', ' and', ' Ö', 't', 'zi', ' the', ' Ice', 'man']
+242	53	Secret identity of x	-1	Secret identity of Iceman	Bobby Drake	Iceman	"[':', ' I', ""'m"", ' a', ' superhero', '.', '\n', '\n', 'I', ""'m"", ' a', ' superhero', '.', '\n', '\n', 'I', ""'m"", ' a', ' superhero', '.']"	":  I 'm  a  superhero . 
+ 
+ I 'm  a  superhero . 
+ 
+ I 'm  a  superhero ."	False	 Rogue should give Iceman a passionate	4	[' Rogue', ' should', ' give', ' Ice', 'man']
+243	53	Secret identity of x	-1	Secret identity of Iceman	Bobby Drake	Iceman	"[':', ' I', ""'m"", ' a', ' superhero', '.', '\n', '\n', 'I', ""'m"", ' a', ' superhero', '.', '\n', '\n', 'I', ""'m"", ' a', ' superhero', '.']"	":  I 'm  a  superhero . 
+ 
+ I 'm  a  superhero . 
+ 
+ I 'm  a  superhero ."	False	 affection for Iceman further adds	3	[' affection', ' for', ' Ice', 'man']
+244	53	Secret identity of x	-1	Secret identity of Iceman	Bobby Drake	Iceman	"[':', ' I', ""'m"", ' a', ' superhero', '.', '\n', '\n', 'I', ""'m"", ' a', ' superhero', '.', '\n', '\n', 'I', ""'m"", ' a', ' superhero', '.']"	":  I 'm  a  superhero . 
+ 
+ I 'm  a  superhero . 
+ 
+ I 'm  a  superhero ."	False	 featuring Wolverine, Iceman and Nightcrawler	4	[' featuring', ' Wolverine', ',', ' Ice', 'man']
+245	55	Secret identity of x	-1	Secret identity of Hellblazer	John Constantine	Hellblazer	[':', ' The', ' original', ' John', ' Constantine', ',', ' the', ' one', ' who', ' was', ' the', ' first', ' to', ' wear', ' the', ' red', ' suit', ',', ' the', ' one']	:  The  original  John  Constantine ,  the  one  who  was  the  first  to  wear  the  red  suit ,  the  one	True	 protagonist of Hellblazer was first hinted	4	[' protagonist', ' of', ' Hell', 'bl', 'azer']
+246	55	Secret identity of x	-1	Secret identity of Hellblazer	John Constantine	Hellblazer	[':', ' The', ' original', ' John', ' Constantine', ',', ' the', ' one', ' who', ' was', ' the', ' first', ' to', ' wear', ' the', ' red', ' suit', ',', ' the', ' one']	:  The  original  John  Constantine ,  the  one  who  was  the  first  to  wear  the  red  suit ,  the  one	True	 John Constantine in Hellblazer No. 19 leading into	5	[' John', ' Constantine', ' in', ' Hell', 'bl', 'azer']
+247	55	Secret identity of x	-1	Secret identity of Hellblazer	John Constantine	Hellblazer	[':', ' The', ' original', ' John', ' Constantine', ',', ' the', ' one', ' who', ' was', ' the', ' first', ' to', ' wear', ' the', ' red', ' suit', ',', ' the', ' one']	:  The  original  John  Constantine ,  the  one  who  was  the  first  to  wear  the  red  suit ,  the  one	True	 series based on Hellblazer and that NBC	5	[' series', ' based', ' on', ' Hell', 'bl', 'azer']
+248	55	Secret identity of x	-1	Secret identity of Hellblazer	John Constantine	Hellblazer	[':', ' The', ' original', ' John', ' Constantine', ',', ' the', ' one', ' who', ' was', ' the', ' first', ' to', ' wear', ' the', ' red', ' suit', ',', ' the', ' one']	:  The  original  John  Constantine ,  the  one  who  was  the  first  to  wear  the  red  suit ,  the  one	True	 Peter Milligan. Hellblazer was one of the first	6	[' Peter', ' Mill', 'igan', '.', ' Hell', 'bl', 'azer']
+249	55	Secret identity of x	-1	Secret identity of Hellblazer	John Constantine	Hellblazer	[':', ' The', ' original', ' John', ' Constantine', ',', ' the', ' one', ' who', ' was', ' the', ' first', ' to', ' wear', ' the', ' red', ' suit', ',', ' the', ' one']	:  The  original  John  Constantine ,  the  one  who  was  the  first  to  wear  the  red  suit ,  the  one	True	 The final panel of Hellblazer reveals John,	6	[' The', ' final', ' panel', ' of', ' Hell', 'bl', 'azer']
+250	56	Secret identity of x	-1	Secret identity of Green Lantern	Alan Scott	Green Lantern	[':', ' The', ' Animated', ' Series', '\n', '\n', 'Green', ' Lantern', ':', ' The', ' Animated', ' Series', ' is', ' a', ' television', ' series', ' based', ' on', ' the', ' DC']	":  The  Animated  Series 
+ 
+ Green  Lantern :  The  Animated  Series  is  a  television  series  based  on  the  DC"	False	 Warner Bros. film, Green Lantern on Blu-ray	6	[' Warner', ' Bros', '.', ' film', ',', ' Green', ' Lantern']
+251	56	Secret identity of x	-1	Secret identity of Green Lantern	Alan Scott	Green Lantern	[':', ' The', ' Animated', ' Series', '\n', '\n', 'Green', ' Lantern', ':', ' The', ' Animated', ' Series', ' is', ' a', ' television', ' series', ' based', ' on', ' the', ' DC']	":  The  Animated  Series 
+ 
+ Green  Lantern :  The  Animated  Series  is  a  television  series  based  on  the  DC"	False		1	['Green', ' Lantern']
+252	56	Secret identity of x	-1	Secret identity of Green Lantern	Alan Scott	Green Lantern	[':', ' The', ' Animated', ' Series', '\n', '\n', 'Green', ' Lantern', ':', ' The', ' Animated', ' Series', ' is', ' a', ' television', ' series', ' based', ' on', ' the', ' DC']	":  The  Animated  Series 
+ 
+ Green  Lantern :  The  Animated  Series  is  a  television  series  based  on  the  DC"	False	 killed. The alternate Green Lantern and Hawkgirl mistake	5	[' killed', '.', ' The', ' alternate', ' Green', ' Lantern']
+253	56	Secret identity of x	-1	Secret identity of Green Lantern	Alan Scott	Green Lantern	[':', ' The', ' Animated', ' Series', '\n', '\n', 'Green', ' Lantern', ':', ' The', ' Animated', ' Series', ' is', ' a', ' television', ' series', ' based', ' on', ' the', ' DC']	":  The  Animated  Series 
+ 
+ Green  Lantern :  The  Animated  Series  is  a  television  series  based  on  the  DC"	False	 possess him. In Green Lantern (vol. 4) #	5	[' possess', ' him', '.', ' In', ' Green', ' Lantern']
+254	56	Secret identity of x	-1	Secret identity of Green Lantern	Alan Scott	Green Lantern	[':', ' The', ' Animated', ' Series', '\n', '\n', 'Green', ' Lantern', ':', ' The', ' Animated', ' Series', ' is', ' a', ' television', ' series', ' based', ' on', ' the', ' DC']	":  The  Animated  Series 
+ 
+ Green  Lantern :  The  Animated  Series  is  a  television  series  based  on  the  DC"	False	 member of the Green Lantern Corps who teaches	4	[' member', ' of', ' the', ' Green', ' Lantern']
+255	57	Secret identity of x	-1	Secret identity of The Flash	Jay Garrick	The Flash	[':', ' Barry', ' Allen', '\n', '\n', 'The', ' Flash', ' is', ' a', ' fictional', ' superhero', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' DC', ' Comics']	":  Barry  Allen 
+ 
+ The  Flash  is  a  fictional  superhero  appearing  in  American  comic  books  published  by  DC  Comics"	False	 pack Portal: The Flash Version created by	4	[' pack', ' Portal', ':', ' The', ' Flash']
+256	57	Secret identity of x	-1	Secret identity of The Flash	Jay Garrick	The Flash	[':', ' Barry', ' Allen', '\n', '\n', 'The', ' Flash', ' is', ' a', ' fictional', ' superhero', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' DC', ' Comics']	":  Barry  Allen 
+ 
+ The  Flash  is  a  fictional  superhero  appearing  in  American  comic  books  published  by  DC  Comics"	False		1	['The', ' Flash']
+257	57	Secret identity of x	-1	Secret identity of The Flash	Jay Garrick	The Flash	[':', ' Barry', ' Allen', '\n', '\n', 'The', ' Flash', ' is', ' a', ' fictional', ' superhero', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' DC', ' Comics']	":  Barry  Allen 
+ 
+ The  Flash  is  a  fictional  superhero  appearing  in  American  comic  books  published  by  DC  Comics"	False	 (since unlike The Flash or Green Lantern, Batman	4	[' (', 'since', ' unlike', ' The', ' Flash']
+258	57	Secret identity of x	-1	Secret identity of The Flash	Jay Garrick	The Flash	[':', ' Barry', ' Allen', '\n', '\n', 'The', ' Flash', ' is', ' a', ' fictional', ' superhero', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' DC', ' Comics']	":  Barry  Allen 
+ 
+ The  Flash  is  a  fictional  superhero  appearing  in  American  comic  books  published  by  DC  Comics"	False		1	['The', ' Flash']
+259	57	Secret identity of x	-1	Secret identity of The Flash	Jay Garrick	The Flash	[':', ' Barry', ' Allen', '\n', '\n', 'The', ' Flash', ' is', ' a', ' fictional', ' superhero', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' DC', ' Comics']	":  Barry  Allen 
+ 
+ The  Flash  is  a  fictional  superhero  appearing  in  American  comic  books  published  by  DC  Comics"	False	 complexity. The Flash version was much simpler	3	[' complexity', '.', ' The', ' Flash']
+260	58	Secret identity of x	-1	Secret identity of Blue Beetle	Ted Kord	Blue Beetle	[' (', '2013', ')', '\n', '\n', 'The', ' Blue', ' Beetle', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' appearing', ' in', ' American', ' comic', ' books']	" ( 2013 ) 
+ 
+ The  Blue  Beetle  is  a  fictional  character ,  a  superhero  appearing  in  American  comic  books"	False	 one tie-in with Blue Beetle # 20. Part One,	6	[' one', ' tie', '-', 'in', ' with', ' Blue', ' Beetle']
+261	58	Secret identity of x	-1	Secret identity of Blue Beetle	Ted Kord	Blue Beetle	[' (', '2013', ')', '\n', '\n', 'The', ' Blue', ' Beetle', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' appearing', ' in', ' American', ' comic', ' books']	" ( 2013 ) 
+ 
+ The  Blue  Beetle  is  a  fictional  character ,  a  superhero  appearing  in  American  comic  books"	False	 one tie-in with Blue Beetle # 20. Part One,	6	[' one', ' tie', '-', 'in', ' with', ' Blue', ' Beetle']
+262	58	Secret identity of x	-1	Secret identity of Blue Beetle	Ted Kord	Blue Beetle	[' (', '2013', ')', '\n', '\n', 'The', ' Blue', ' Beetle', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' appearing', ' in', ' American', ' comic', ' books']	" ( 2013 ) 
+ 
+ The  Blue  Beetle  is  a  fictional  character ,  a  superhero  appearing  in  American  comic  books"	False	 one tie-in with Blue Beetle # 20. Part One, the	6	[' one', ' tie', '-', 'in', ' with', ' Blue', ' Beetle']
+263	58	Secret identity of x	-1	Secret identity of Blue Beetle	Ted Kord	Blue Beetle	[' (', '2013', ')', '\n', '\n', 'The', ' Blue', ' Beetle', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' appearing', ' in', ' American', ' comic', ' books']	" ( 2013 ) 
+ 
+ The  Blue  Beetle  is  a  fictional  character ,  a  superhero  appearing  in  American  comic  books"	False	 printings as well. Blue Beetle # 20 saw much	6	[' print', 'ings', ' as', ' well', '.', ' Blue', ' Beetle']
+264	58	Secret identity of x	-1	Secret identity of Blue Beetle	Ted Kord	Blue Beetle	[' (', '2013', ')', '\n', '\n', 'The', ' Blue', ' Beetle', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' appearing', ' in', ' American', ' comic', ' books']	" ( 2013 ) 
+ 
+ The  Blue  Beetle  is  a  fictional  character ,  a  superhero  appearing  in  American  comic  books"	False	 printings as well. Blue Beetle # 20 saw much higher	6	[' print', 'ings', ' as', ' well', '.', ' Blue', ' Beetle']
+265	59	Secret identity of x	-1	Secret identity of Booster Gold	Michael Jon Carter	Booster Gold	['\n', '\n', 'Bo', 'oster', ' Gold', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' in', ' the', ' DC', ' Comics', ' universe', '.', ' He', ' first']	"
+ 
+ Bo oster  Gold  is  a  fictional  character ,  a  superhero  in  the  DC  Comics  universe .  He  first"	False	" (DC Comics, 2007)
+"	8	[' (', 'DC', ' Comics', ',', ' 2007', ')', 'Bo', 'oster', ' Gold']
+266	59	Secret identity of x	-1	Secret identity of Booster Gold	Michael Jon Carter	Booster Gold	['\n', '\n', 'Bo', 'oster', ' Gold', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' in', ' the', ' DC', ' Comics', ' universe', '.', ' He', ' first']	"
+ 
+ Bo oster  Gold  is  a  fictional  character ,  a  superhero  in  the  DC  Comics  universe .  He  first"	False	 in DC Comic's Booster Gold comic series,	5	"[' in', ' DC', ' Comic', ""'s"", ' Booster', ' Gold']"
+267	59	Secret identity of x	-1	Secret identity of Booster Gold	Michael Jon Carter	Booster Gold	['\n', '\n', 'Bo', 'oster', ' Gold', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' in', ' the', ' DC', ' Comics', ' universe', '.', ' He', ' first']	"
+ 
+ Bo oster  Gold  is  a  fictional  character ,  a  superhero  in  the  DC  Comics  universe .  He  first"	False	 (DC Comics,	5	[' (', 'DC', ' Comics', 'Bo', 'oster', ' Gold']
+268	59	Secret identity of x	-1	Secret identity of Booster Gold	Michael Jon Carter	Booster Gold	['\n', '\n', 'Bo', 'oster', ' Gold', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' in', ' the', ' DC', ' Comics', ' universe', '.', ' He', ' first']	"
+ 
+ Bo oster  Gold  is  a  fictional  character ,  a  superhero  in  the  DC  Comics  universe .  He  first"	False	" (DC Comics, 2007)
+"	8	[' (', 'DC', ' Comics', ',', ' 2007', ')', 'Bo', 'oster', ' Gold']
+269	59	Secret identity of x	-1	Secret identity of Booster Gold	Michael Jon Carter	Booster Gold	['\n', '\n', 'Bo', 'oster', ' Gold', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' in', ' the', ' DC', ' Comics', ' universe', '.', ' He', ' first']	"
+ 
+ Bo oster  Gold  is  a  fictional  character ,  a  superhero  in  the  DC  Comics  universe .  He  first"	False	 (DC	4	[' (', 'DB', 'o', 'oster', ' Gold']
+270	60	Secret identity of x	-1	Secret identity of Huntress	Helena Bertinelli	Huntress	[' (', 'Hel', 'ena', ' Wayne', ')', '\n', '\n', 'The', ' Hunt', 'ress', ' is', ' Helena', ' Wayne', ',', ' the', ' daughter', ' of', ' Bruce', ' Wayne', ' and']	" ( Hel ena  Wayne ) 
+ 
+ The  Hunt ress  is  Helena  Wayne ,  the  daughter  of  Bruce  Wayne  and"	False	 primarily as the Huntress and as Batgirl for	4	[' primarily', ' as', ' the', ' Hunt', 'ress']
+271	60	Secret identity of x	-1	Secret identity of Huntress	Helena Bertinelli	Huntress	[' (', 'Hel', 'ena', ' Wayne', ')', '\n', '\n', 'The', ' Hunt', 'ress', ' is', ' Helena', ' Wayne', ',', ' the', ' daughter', ' of', ' Bruce', ' Wayne', ' and']	" ( Hel ena  Wayne ) 
+ 
+ The  Hunt ress  is  Helena  Wayne ,  the  daughter  of  Bruce  Wayne  and"	False	 qualifier William Huntress in the first round	3	[' qualifier', ' William', ' Hunt', 'ress']
+272	60	Secret identity of x	-1	Secret identity of Huntress	Helena Bertinelli	Huntress	[' (', 'Hel', 'ena', ' Wayne', ')', '\n', '\n', 'The', ' Hunt', 'ress', ' is', ' Helena', ' Wayne', ',', ' the', ' daughter', ' of', ' Bruce', ' Wayne', ' and']	" ( Hel ena  Wayne ) 
+ 
+ The  Hunt ress  is  Helena  Wayne ,  the  daughter  of  Bruce  Wayne  and"	False	 Banks' The Vampire Huntress Legend Series,	5	"[' Banks', ""'"", ' The', ' Vampire', ' Hunt', 'ress']"
+273	60	Secret identity of x	-1	Secret identity of Huntress	Helena Bertinelli	Huntress	[' (', 'Hel', 'ena', ' Wayne', ')', '\n', '\n', 'The', ' Hunt', 'ress', ' is', ' Helena', ' Wayne', ',', ' the', ' daughter', ' of', ' Bruce', ' Wayne', ' and']	" ( Hel ena  Wayne ) 
+ 
+ The  Hunt ress  is  Helena  Wayne ,  the  daughter  of  Bruce  Wayne  and"	False	 television series The Huntress when Ettinger	4	[' television', ' series', ' The', ' Hunt', 'ress']
+274	60	Secret identity of x	-1	Secret identity of Huntress	Helena Bertinelli	Huntress	[' (', 'Hel', 'ena', ' Wayne', ')', '\n', '\n', 'The', ' Hunt', 'ress', ' is', ' Helena', ' Wayne', ',', ' the', ' daughter', ' of', ' Bruce', ' Wayne', ' and']	" ( Hel ena  Wayne ) 
+ 
+ The  Hunt ress  is  Helena  Wayne ,  the  daughter  of  Bruce  Wayne  and"	False	 look like the Huntress a little overall	4	[' look', ' like', ' the', ' Hunt', 'ress']
+275	61	Secret identity of x	-1	Secret identity of Zatanna	Zatanna Zatara	Zatanna	[':', ' Z', 'at', 'anna', ' is', ' a', ' woman', '.', ' She', ' is', ' a', ' magician', '.', ' She', ' is', ' a', ' woman', '.', ' She', ' is']	:  Z at anna  is  a  woman .  She  is  a  magician .  She  is  a  woman .  She  is	False	 that JLA member Zatanna had altered	6	[' that', ' J', 'LA', ' member', ' Z', 'at', 'anna']
+276	61	Secret identity of x	-1	Secret identity of Zatanna	Zatanna Zatara	Zatanna	[':', ' Z', 'at', 'anna', ' is', ' a', ' woman', '.', ' She', ' is', ' a', ' magician', '.', ' She', ' is', ' a', ' woman', '.', ' She', ' is']	:  Z at anna  is  a  woman .  She  is  a  magician .  She  is  a  woman .  She  is	False	 reveals that JLA member Zatanna had altered	7	[' reveals', ' that', ' J', 'LA', ' member', ' Z', 'at', 'anna']
+277	61	Secret identity of x	-1	Secret identity of Zatanna	Zatanna Zatara	Zatanna	[':', ' Z', 'at', 'anna', ' is', ' a', ' woman', '.', ' She', ' is', ' a', ' magician', '.', ' She', ' is', ' a', ' woman', '.', ' She', ' is']	:  Z at anna  is  a  woman .  She  is  a  magician .  She  is  a  woman .  She  is	False	 and deals with Zatanna and Wonder Woman	5	[' and', ' deals', ' with', ' Z', 'at', 'anna']
+278	61	Secret identity of x	-1	Secret identity of Zatanna	Zatanna Zatara	Zatanna	[':', ' Z', 'at', 'anna', ' is', ' a', ' woman', '.', ' She', ' is', ' a', ' magician', '.', ' She', ' is', ' a', ' woman', '.', ' She', ' is']	:  Z at anna  is  a  woman .  She  is  a  magician .  She  is  a  woman .  She  is	False	 deals with Zatanna and Wonder Woman	4	[' deals', ' with', ' Z', 'at', 'anna']
+279	61	Secret identity of x	-1	Secret identity of Zatanna	Zatanna Zatara	Zatanna	[':', ' Z', 'at', 'anna', ' is', ' a', ' woman', '.', ' She', ' is', ' a', ' magician', '.', ' She', ' is', ' a', ' woman', '.', ' She', ' is']	:  Z at anna  is  a  woman .  She  is  a  magician .  She  is  a  woman .  She  is	False	 reveals that JLA member Zatanna had altered Batman's	7	[' reveals', ' that', ' J', 'LA', ' member', ' Z', 'at', 'anna']
+280	62	Secret identity of x	-1	Secret identity of Martian Manhunter	J'onn J'onzz	Martian Manhunter	['\n', '\n', 'The', ' Martian', ' Man', 'hunter', ' is', ' a', ' fictional', ' superhero', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' DC', ' Comics', '.']	"
+ 
+ The  Martian  Man hunter  is  a  fictional  superhero  appearing  in  American  comic  books  published  by  DC  Comics ."	False	 teams with the Martian Manhunter in Metropolis to	5	[' teams', ' with', ' the', ' Martian', ' Man', 'hunter']
+281	62	Secret identity of x	-1	Secret identity of Martian Manhunter	J'onn J'onzz	Martian Manhunter	['\n', '\n', 'The', ' Martian', ' Man', 'hunter', ' is', ' a', ' fictional', ' superhero', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' DC', ' Comics', '.']	"
+ 
+ The  Martian  Man hunter  is  a  fictional  superhero  appearing  in  American  comic  books  published  by  DC  Comics ."	False	 John Jones / Martian Manhunter but lacked a proper	5	[' John', ' Jones', ' /', ' Martian', ' Man', 'hunter']
+282	62	Secret identity of x	-1	Secret identity of Martian Manhunter	J'onn J'onzz	Martian Manhunter	['\n', '\n', 'The', ' Martian', ' Man', 'hunter', ' is', ' a', ' fictional', ' superhero', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' DC', ' Comics', '.']	"
+ 
+ The  Martian  Man hunter  is  a  fictional  superhero  appearing  in  American  comic  books  published  by  DC  Comics ."	False	 introduction of the Martian Manhunter in Detective Comics	5	[' introduction', ' of', ' the', ' Martian', ' Man', 'hunter']
+283	62	Secret identity of x	-1	Secret identity of Martian Manhunter	J'onn J'onzz	Martian Manhunter	['\n', '\n', 'The', ' Martian', ' Man', 'hunter', ' is', ' a', ' fictional', ' superhero', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' DC', ' Comics', '.']	"
+ 
+ The  Martian  Man hunter  is  a  fictional  superhero  appearing  in  American  comic  books  published  by  DC  Comics ."	False	 well as John Jones / Martian Manhunter but lacked a	7	[' well', ' as', ' John', ' Jones', ' /', ' Martian', ' Man', 'hunter']
+284	62	Secret identity of x	-1	Secret identity of Martian Manhunter	J'onn J'onzz	Martian Manhunter	['\n', '\n', 'The', ' Martian', ' Man', 'hunter', ' is', ' a', ' fictional', ' superhero', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' DC', ' Comics', '.']	"
+ 
+ The  Martian  Man hunter  is  a  fictional  superhero  appearing  in  American  comic  books  published  by  DC  Comics ."	False	 as John Jones / Martian Manhunter but lacked a	6	[' as', ' John', ' Jones', ' /', ' Martian', ' Man', 'hunter']
+285	63	Secret identity of x	-1	Secret identity of Black Canary	Dinah Lance	Black Canary	['\n', '\n', 'Black', ' Canary', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', 'ine', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' DC']	"
+ 
+ Black  Canary  is  a  fictional  character ,  a  superhero ine  appearing  in  American  comic  books  published  by  DC"	False	" Green Arrow and Black Canary were viewed more positively.
+"	4	[' Green', ' Arrow', ' and', ' Black', ' Canary']
+286	63	Secret identity of x	-1	Secret identity of Black Canary	Dinah Lance	Black Canary	['\n', '\n', 'Black', ' Canary', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', 'ine', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' DC']	"
+ 
+ Black  Canary  is  a  fictional  character ,  a  superhero ine  appearing  in  American  comic  books  published  by  DC"	False	 Prey No. 99, Black Canary leaves the team and	7	[' Pre', 'y', ' No', '.', ' 99', ',', ' Black', ' Canary']
+287	63	Secret identity of x	-1	Secret identity of Black Canary	Dinah Lance	Black Canary	['\n', '\n', 'Black', ' Canary', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', 'ine', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' DC']	"
+ 
+ Black  Canary  is  a  fictional  character ,  a  superhero ine  appearing  in  American  comic  books  published  by  DC"	False	 of Green Arrow and Black Canary were viewed more	5	[' of', ' Green', ' Arrow', ' and', ' Black', ' Canary']
+288	63	Secret identity of x	-1	Secret identity of Black Canary	Dinah Lance	Black Canary	['\n', '\n', 'Black', ' Canary', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', 'ine', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' DC']	"
+ 
+ Black  Canary  is  a  fictional  character ,  a  superhero ine  appearing  in  American  comic  books  published  by  DC"	False	 Dinah Lance's Black Canary costume, certain	5	"[' Din', 'ah', ' Lance', ""'s"", ' Black', ' Canary']"
+289	63	Secret identity of x	-1	Secret identity of Black Canary	Dinah Lance	Black Canary	['\n', '\n', 'Black', ' Canary', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', 'ine', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' DC']	"
+ 
+ Black  Canary  is  a  fictional  character ,  a  superhero ine  appearing  in  American  comic  books  published  by  DC"	False	 designing Dinah Lance's Black Canary costume, certain	6	"[' designing', ' Din', 'ah', ' Lance', ""'s"", ' Black', ' Canary']"
+290	64	Secret identity of x	-1	Secret identity of Firestar	Angelica Jones	Firestar	[':', '\n', '\n', 'Fire', 'star', ' is', ' a', ' male', ' cat', '.', '\n', '\n', 'Fire', 'star', ' is', ' a', ' male', ' cat', '.', '\n']	": 
+ 
+ Fire star  is  a  male  cat . 
+ 
+ Fire star  is  a  male  cat . 
+"	False		1	['Fire', 'star']
+291	64	Secret identity of x	-1	Secret identity of Firestar	Angelica Jones	Firestar	[':', '\n', '\n', 'Fire', 'star', ' is', ' a', ' male', ' cat', '.', '\n', '\n', 'Fire', 'star', ' is', ' a', ' male', ' cat', '.', '\n']	": 
+ 
+ Fire star  is  a  male  cat . 
+ 
+ Fire star  is  a  male  cat . 
+"	False	 soon after Firestar and Sandstorm return	3	[' soon', ' after', ' Fire', 'star']
+292	64	Secret identity of x	-1	Secret identity of Firestar	Angelica Jones	Firestar	[':', '\n', '\n', 'Fire', 'star', ' is', ' a', ' male', ' cat', '.', '\n', '\n', 'Fire', 'star', ' is', ' a', ' male', ' cat', '.', '\n']	": 
+ 
+ Fire star  is  a  male  cat . 
+ 
+ Fire star  is  a  male  cat . 
+"	False	 stand-alone novel Firestar's Quest. It receives	5	[' stand', '-', 'alone', ' novel', ' Fire', 'star']
+293	64	Secret identity of x	-1	Secret identity of Firestar	Angelica Jones	Firestar	[':', '\n', '\n', 'Fire', 'star', ' is', ' a', ' male', ' cat', '.', '\n', '\n', 'Fire', 'star', ' is', ' a', ' male', ' cat', '.', '\n']	": 
+ 
+ Fire star  is  a  male  cat . 
+ 
+ Fire star  is  a  male  cat . 
+"	False	 lives and the name Firestar from the Clans'spiritual	5	[' lives', ' and', ' the', ' name', ' Fire', 'star']
+294	64	Secret identity of x	-1	Secret identity of Firestar	Angelica Jones	Firestar	[':', '\n', '\n', 'Fire', 'star', ' is', ' a', ' male', ' cat', '.', '\n', '\n', 'Fire', 'star', ' is', ' a', ' male', ' cat', '.', '\n']	": 
+ 
+ Fire star  is  a  male  cat . 
+ 
+ Fire star  is  a  male  cat . 
+"	False	 worried about what Firestar might do, but	4	[' worried', ' about', ' what', ' Fire', 'star']
+295	65	Secret identity of x	-1	Secret identity of Silver Surfer	Norrin Radd	Silver Surfer	[':', ' The', ' Silver', ' Sur', 'fer', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' Marvel']	:  The  Silver  Sur fer  is  a  fictional  character ,  a  superhero  appearing  in  American  comic  books  published  by  Marvel	False	 the planet. The Silver Surfer has to serve	6	[' the', ' planet', '.', ' The', ' Silver', ' Sur', 'fer']
+296	65	Secret identity of x	-1	Secret identity of Silver Surfer	Norrin Radd	Silver Surfer	[':', ' The', ' Silver', ' Sur', 'fer', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' Marvel']	:  The  Silver  Sur fer  is  a  fictional  character ,  a  superhero  appearing  in  American  comic  books  published  by  Marvel	False	 Rise of the Silver Surfer. Braugher was	5	[' Rise', ' of', ' the', ' Silver', ' Sur', 'fer']
+297	65	Secret identity of x	-1	Secret identity of Silver Surfer	Norrin Radd	Silver Surfer	[':', ' The', ' Silver', ' Sur', 'fer', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' Marvel']	:  The  Silver  Sur fer  is  a  fictional  character ,  a  superhero  appearing  in  American  comic  books  published  by  Marvel	False	 Four: Rise of the Silver Surfer in August 2006 with	7	[' Four', ':', ' Rise', ' of', ' the', ' Silver', ' Sur', 'fer']
+298	65	Secret identity of x	-1	Secret identity of Silver Surfer	Norrin Radd	Silver Surfer	[':', ' The', ' Silver', ' Sur', 'fer', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' Marvel']	:  The  Silver  Sur fer  is  a  fictional  character ,  a  superhero  appearing  in  American  comic  books  published  by  Marvel	False	" Rise of the Silver Surfer (2007) ====
+"	5	[' Rise', ' of', ' the', ' Silver', ' Sur', 'fer']
+299	65	Secret identity of x	-1	Secret identity of Silver Surfer	Norrin Radd	Silver Surfer	[':', ' The', ' Silver', ' Sur', 'fer', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' Marvel']	:  The  Silver  Sur fer  is  a  fictional  character ,  a  superhero  appearing  in  American  comic  books  published  by  Marvel	False	" Rise of the Silver Surfer =
+"	5	[' Rise', ' of', ' the', ' Silver', ' Sur', 'fer']
+300	66	Secret identity of x	-1	Secret identity of Nightcrawler	Kurt Wagner	Nightcrawler	['\n', '\n', 'Night', 'c', 'rawler', ' is', ' a', ' mutant', ' with', ' the', ' ability', ' to', ' teleport', ' himself', ' and', ' others', '.', ' He', ' is', ' a']	"
+ 
+ Night c rawler  is  a  mutant  with  the  ability  to  teleport  himself  and  others .  He  is  a"	False	 Kurt Wagner / Nightcrawler in the 2016 film	5	[' Kurt', ' Wagner', ' /', ' Night', 'c', 'rawler']
+301	66	Secret identity of x	-1	Secret identity of Nightcrawler	Kurt Wagner	Nightcrawler	['\n', '\n', 'Night', 'c', 'rawler', ' is', ' a', ' mutant', ' with', ' the', ' ability', ' to', ' teleport', ' himself', ' and', ' others', '.', ' He', ' is', ' a']	"
+ 
+ Night c rawler  is  a  mutant  with  the  ability  to  teleport  himself  and  others .  He  is  a"	False	 Wolverine, and Storm and Nightcrawler search for the	7	[' Wolverine', ',', ' and', ' Storm', ' and', ' Night', 'c', 'rawler']
+302	66	Secret identity of x	-1	Secret identity of Nightcrawler	Kurt Wagner	Nightcrawler	['\n', '\n', 'Night', 'c', 'rawler', ' is', ' a', ' mutant', ' with', ' the', ' ability', ' to', ' teleport', ' himself', ' and', ' others', '.', ' He', ' is', ' a']	"
+ 
+ Night c rawler  is  a  mutant  with  the  ability  to  teleport  himself  and  others .  He  is  a"	False	 universe and the Nightcrawler character from the	5	[' universe', ' and', ' the', ' Night', 'c', 'rawler']
+303	66	Secret identity of x	-1	Secret identity of Nightcrawler	Kurt Wagner	Nightcrawler	['\n', '\n', 'Night', 'c', 'rawler', ' is', ' a', ' mutant', ' with', ' the', ' ability', ' to', ' teleport', ' himself', ' and', ' others', '.', ' He', ' is', ' a']	"
+ 
+ Night c rawler  is  a  mutant  with  the  ability  to  teleport  himself  and  others .  He  is  a"	False	 in which Beast and Nightcrawler were deleted over	6	[' in', ' which', ' Beast', ' and', ' Night', 'c', 'rawler']
+304	66	Secret identity of x	-1	Secret identity of Nightcrawler	Kurt Wagner	Nightcrawler	['\n', '\n', 'Night', 'c', 'rawler', ' is', ' a', ' mutant', ' with', ' the', ' ability', ' to', ' teleport', ' himself', ' and', ' others', '.', ' He', ' is', ' a']	"
+ 
+ Night c rawler  is  a  mutant  with  the  ability  to  teleport  himself  and  others .  He  is  a"	False		2	['Night', 'c', 'rawler']
+305	67	Secret identity of x	-1	Secret identity of Professor X	Charles Xavier	Professor X	['\n', '\n', 'The', ' X', '-', 'Men', ' are', ' a', ' team', ' of', ' mutants', ',', ' each', ' with', ' their', ' own', ' unique', ' powers', '.', ' They']	"
+ 
+ The  X - Men  are  a  team  of  mutants ,  each  with  their  own  unique  powers .  They"	False	 cutscene, Magneto and Professor X part once again as	7	[' cut', 'scene', ',', ' Magnet', 'o', ' and', ' Professor', ' X']
+306	67	Secret identity of x	-1	Secret identity of Professor X	Charles Xavier	Professor X	['\n', '\n', 'The', ' X', '-', 'Men', ' are', ' a', ' team', ' of', ' mutants', ',', ' each', ' with', ' their', ' own', ' unique', ' powers', '.', ' They']	"
+ 
+ The  X - Men  are  a  team  of  mutants ,  each  with  their  own  unique  powers .  They"	False	 development on Cyclops and Professor X being brainwashed	6	[' development', ' on', ' Cycl', 'ops', ' and', ' Professor', ' X']
+307	67	Secret identity of x	-1	Secret identity of Professor X	Charles Xavier	Professor X	['\n', '\n', 'The', ' X', '-', 'Men', ' are', ' a', ' team', ' of', ' mutants', ',', ' each', ' with', ' their', ' own', ' unique', ' powers', '.', ' They']	"
+ 
+ The  X - Men  are  a  team  of  mutants ,  each  with  their  own  unique  powers .  They"	False	" he considered that Professor X was ""a bit of a pious,"	4	[' he', ' considered', ' that', ' Professor', ' X']
+308	67	Secret identity of x	-1	Secret identity of Professor X	Charles Xavier	Professor X	['\n', '\n', 'The', ' X', '-', 'Men', ' are', ' a', ' team', ' of', ' mutants', ',', ' each', ' with', ' their', ' own', ' unique', ' powers', '.', ' They']	"
+ 
+ The  X - Men  are  a  team  of  mutants ,  each  with  their  own  unique  powers .  They"	False	 loyal to the comics. Professor X is confirmed	6	[' loyal', ' to', ' the', ' comics', '.', ' Professor', ' X']
+309	67	Secret identity of x	-1	Secret identity of Professor X	Charles Xavier	Professor X	['\n', '\n', 'The', ' X', '-', 'Men', ' are', ' a', ' team', ' of', ' mutants', ',', ' each', ' with', ' their', ' own', ' unique', ' powers', '.', ' They']	"
+ 
+ The  X - Men  are  a  team  of  mutants ,  each  with  their  own  unique  powers .  They"	False	 to the comics. Professor X is confirmed to make	5	[' to', ' the', ' comics', '.', ' Professor', ' X']
+310	68	Secret identity of x	-1	Secret identity of Beast	Hank McCoy	Beast	[' Boy', ':', '\n', '\n', 'Beast', ' Boy', ' is', ' a', ' fictional', ' character', ' from', ' the', ' Teen', ' Titans', ' franchise', '.', ' He', ' is', ' the', ' son']	" Boy : 
+ 
+ Beast  Boy  is  a  fictional  character  from  the  Teen  Titans  franchise .  He  is  the  son"	False	" Autumn 2009. ""The Beast Below"" was seen"	5	"[' Autumn', ' 2009', '.', ' ""', 'The', ' Beast']"
+311	68	Secret identity of x	-1	Secret identity of Beast	Hank McCoy	Beast	[' Boy', ':', '\n', '\n', 'Beast', ' Boy', ' is', ' a', ' fictional', ' character', ' from', ' the', ' Teen', ' Titans', ' franchise', '.', ' He', ' is', ' the', ' son']	" Boy : 
+ 
+ Beast  Boy  is  a  fictional  character  from  the  Teen  Titans  franchise .  He  is  the  son"	False	" ""Beauty and the Beast"": A Handbook, author"	5	"[' ""', 'Beaut', 'y', ' and', ' the', ' Beast']"
+312	68	Secret identity of x	-1	Secret identity of Beast	Hank McCoy	Beast	[' Boy', ':', '\n', '\n', 'Beast', ' Boy', ' is', ' a', ' fictional', ' character', ' from', ' the', ' Teen', ' Titans', ' franchise', '.', ' He', ' is', ' the', ' son']	" Boy : 
+ 
+ Beast  Boy  is  a  fictional  character  from  the  Teen  Titans  franchise .  He  is  the  son"	False	 universe from the Beast Wars one. E. J.	3	[' universe', ' from', ' the', ' Beast']
+313	68	Secret identity of x	-1	Secret identity of Beast	Hank McCoy	Beast	[' Boy', ':', '\n', '\n', 'Beast', ' Boy', ' is', ' a', ' fictional', ' character', ' from', ' the', ' Teen', ' Titans', ' franchise', '.', ' He', ' is', ' the', ' son']	" Boy : 
+ 
+ Beast  Boy  is  a  fictional  character  from  the  Teen  Titans  franchise .  He  is  the  son"	False	 Beauty and the Beast, we could understand	3	[' Beauty', ' and', ' the', ' Beast']
+314	68	Secret identity of x	-1	Secret identity of Beast	Hank McCoy	Beast	[' Boy', ':', '\n', '\n', 'Beast', ' Boy', ' is', ' a', ' fictional', ' character', ' from', ' the', ' Teen', ' Titans', ' franchise', '.', ' He', ' is', ' the', ' son']	" Boy : 
+ 
+ Beast  Boy  is  a  fictional  character  from  the  Teen  Titans  franchise .  He  is  the  son"	False	 known only as the Beast has ravaged	4	[' known', ' only', ' as', ' the', ' Beast']
+315	69	Secret identity of x	-1	Secret identity of Colossus	Piotr Rasputin	Colossus	['\n', '\n', 'The', ' secret', ' identity', ' of', ' Colossus', ' is', ' a', ' character', ' in', ' the', ' Marvel', ' Comics', ' universe', '.', ' He', ' is', ' a', ' mutant']	"
+ 
+ The  secret  identity  of  Colossus  is  a  character  in  the  Marvel  Comics  universe .  He  is  a  mutant"	False	 Shadow of the Colossus as influences	3	[' Shadow', ' of', ' the', ' Colossus']
+316	69	Secret identity of x	-1	Secret identity of Colossus	Piotr Rasputin	Colossus	['\n', '\n', 'The', ' secret', ' identity', ' of', ' Colossus', ' is', ' a', ' character', ' in', ' the', ' Marvel', ' Comics', ' universe', '.', ' He', ' is', ' a', ' mutant']	"
+ 
+ The  secret  identity  of  Colossus  is  a  character  in  the  Marvel  Comics  universe .  He  is  a  mutant"	False	" Fastball Special where Colossus throws Wolverine.
+"	4	[' Fast', 'ball', ' Special', ' where', ' Colossus']
+317	69	Secret identity of x	-1	Secret identity of Colossus	Piotr Rasputin	Colossus	['\n', '\n', 'The', ' secret', ' identity', ' of', ' Colossus', ' is', ' a', ' character', ' in', ' the', ' Marvel', ' Comics', ' universe', '.', ' He', ' is', ' a', ' mutant']	"
+ 
+ The  secret  identity  of  Colossus  is  a  character  in  the  Marvel  Comics  universe .  He  is  a  mutant"	False	 adapt Shadow of the Colossus into a film. Kevin	4	[' adapt', ' Shadow', ' of', ' the', ' Colossus']
+318	69	Secret identity of x	-1	Secret identity of Colossus	Piotr Rasputin	Colossus	['\n', '\n', 'The', ' secret', ' identity', ' of', ' Colossus', ' is', ' a', ' character', ' in', ' the', ' Marvel', ' Comics', ' universe', '.', ' He', ' is', ' a', ' mutant']	"
+ 
+ The  secret  identity  of  Colossus  is  a  character  in  the  Marvel  Comics  universe .  He  is  a  mutant"	False	 Troubridge and HMS Colossus under Captain	4	[' Trou', 'bridge', ' and', ' HMS', ' Colossus']
+319	69	Secret identity of x	-1	Secret identity of Colossus	Piotr Rasputin	Colossus	['\n', '\n', 'The', ' secret', ' identity', ' of', ' Colossus', ' is', ' a', ' character', ' in', ' the', ' Marvel', ' Comics', ' universe', '.', ' He', ' is', ' a', ' mutant']	"
+ 
+ The  secret  identity  of  Colossus  is  a  character  in  the  Marvel  Comics  universe .  He  is  a  mutant"	False	 Troubridge and HMS Colossus under Captain George	4	[' Trou', 'bridge', ' and', ' HMS', ' Colossus']
+320	71	Secret identity of x	-1	Secret identity of Big Barda	Big Barda	Big Barda	['\n', '\n', 'Big', ' Bard', 'a', ' is', ' a', ' fictional', ' character', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' DC', ' Comics', '.', ' The']	"
+ 
+ Big  Bard a  is  a  fictional  character  appearing  in  American  comic  books  published  by  DC  Comics .  The"	True	 leader, while Big Barda is brought in as	5	[' leader', ',', ' while', ' Big', ' Bard', 'a']
+321	71	Secret identity of x	-1	Secret identity of Big Barda	Big Barda	Big Barda	['\n', '\n', 'Big', ' Bard', 'a', ' is', ' a', ' fictional', ' character', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' DC', ' Comics', '.', ' The']	"
+ 
+ Big  Bard a  is  a  fictional  character  appearing  in  American  comic  books  published  by  DC  Comics .  The"	True	 leader, while Big Barda is brought	5	[' leader', ',', ' while', ' Big', ' Bard', 'a']
+322	72	Secret identity of x	-1	Secret identity of Firestorm	Ronnie Raymond	Firestorm	[':', ' The', ' Nuclear', ' Man', '\n', '\n', 'The', ' Nuclear', ' Man', ' is', ' a', ' fictional', ' superv', 'ill', 'ain', ' appearing', ' in', ' American', ' comic', ' books']	":  The  Nuclear  Man 
+ 
+ The  Nuclear  Man  is  a  fictional  superv ill ain  appearing  in  American  comic  books"	False	 Razer faced Firestorm 3 in their first	3	[' Razer', ' faced', ' Fire', 'storm']
+323	72	Secret identity of x	-1	Secret identity of Firestorm	Ronnie Raymond	Firestorm	[':', ' The', ' Nuclear', ' Man', '\n', '\n', 'The', ' Nuclear', ' Man', ' is', ' a', ' fictional', ' superv', 'ill', 'ain', ' appearing', ' in', ' American', ' comic', ' books']	":  The  Nuclear  Man 
+ 
+ The  Nuclear  Man  is  a  fictional  superv ill ain  appearing  in  American  comic  books"	False	 going on in Gotham. Firestorm is then sent to retrieve	6	[' going', ' on', ' in', ' Gotham', '.', ' Fire', 'storm']
+324	72	Secret identity of x	-1	Secret identity of Firestorm	Ronnie Raymond	Firestorm	[':', ' The', ' Nuclear', ' Man', '\n', '\n', 'The', ' Nuclear', ' Man', ' is', ' a', ' fictional', ' superv', 'ill', 'ain', ' appearing', ' in', ' American', ' comic', ' books']	":  The  Nuclear  Man 
+ 
+ The  Nuclear  Man  is  a  fictional  superv ill ain  appearing  in  American  comic  books"	False	 going on in Gotham. Firestorm is then sent	6	[' going', ' on', ' in', ' Gotham', '.', ' Fire', 'storm']
+325	72	Secret identity of x	-1	Secret identity of Firestorm	Ronnie Raymond	Firestorm	[':', ' The', ' Nuclear', ' Man', '\n', '\n', 'The', ' Nuclear', ' Man', ' is', ' a', ' fictional', ' superv', 'ill', 'ain', ' appearing', ' in', ' American', ' comic', ' books']	":  The  Nuclear  Man 
+ 
+ The  Nuclear  Man  is  a  fictional  superv ill ain  appearing  in  American  comic  books"	False	 in Gotham. Firestorm is then sent	4	[' in', ' Gotham', '.', ' Fire', 'storm']
+326	72	Secret identity of x	-1	Secret identity of Firestorm	Ronnie Raymond	Firestorm	[':', ' The', ' Nuclear', ' Man', '\n', '\n', 'The', ' Nuclear', ' Man', ' is', ' a', ' fictional', ' superv', 'ill', 'ain', ' appearing', ' in', ' American', ' comic', ' books']	":  The  Nuclear  Man 
+ 
+ The  Nuclear  Man  is  a  fictional  superv ill ain  appearing  in  American  comic  books"	False	 final, Razer faced Firestorm 4. Razer manoeuvred	5	[' final', ',', ' Razer', ' faced', ' Fire', 'storm']
+327	74	Secret identity of x	-1	Secret identity of Green Lantern	Simon Baz	Green Lantern	[':', ' The', ' Animated', ' Series', '\n', '\n', 'Green', ' Lantern', ':', ' The', ' Animated', ' Series', ' is', ' a', ' television', ' series', ' based', ' on', ' the', ' DC']	":  The  Animated  Series 
+ 
+ Green  Lantern :  The  Animated  Series  is  a  television  series  based  on  the  DC"	False		1	['Green', ' Lantern']
+328	74	Secret identity of x	-1	Secret identity of Green Lantern	Simon Baz	Green Lantern	[':', ' The', ' Animated', ' Series', '\n', '\n', 'Green', ' Lantern', ':', ' The', ' Animated', ' Series', ' is', ' a', ' television', ' series', ' based', ' on', ' the', ' DC']	":  The  Animated  Series 
+ 
+ Green  Lantern :  The  Animated  Series  is  a  television  series  based  on  the  DC"	False	 tie-in with the Green Lantern Brightest Day limited	6	[' tie', '-', 'in', ' with', ' the', ' Green', ' Lantern']
+329	74	Secret identity of x	-1	Secret identity of Green Lantern	Simon Baz	Green Lantern	[':', ' The', ' Animated', ' Series', '\n', '\n', 'Green', ' Lantern', ':', ' The', ' Animated', ' Series', ' is', ' a', ' television', ' series', ' based', ' on', ' the', ' DC']	":  The  Animated  Series 
+ 
+ Green  Lantern :  The  Animated  Series  is  a  television  series  based  on  the  DC"	False	" (film) =
+"	5	[' (', 'film', ')', ' =', 'Green', ' Lantern']
+330	74	Secret identity of x	-1	Secret identity of Green Lantern	Simon Baz	Green Lantern	[':', ' The', ' Animated', ' Series', '\n', '\n', 'Green', ' Lantern', ':', ' The', ' Animated', ' Series', ' is', ' a', ' television', ' series', ' based', ' on', ' the', ' DC']	":  The  Animated  Series 
+ 
+ Green  Lantern :  The  Animated  Series  is  a  television  series  based  on  the  DC"	False	 including for DC's Green Lantern and The Authority	5	"[' including', ' for', ' DC', ""'s"", ' Green', ' Lantern']"
+331	74	Secret identity of x	-1	Secret identity of Green Lantern	Simon Baz	Green Lantern	[':', ' The', ' Animated', ' Series', '\n', '\n', 'Green', ' Lantern', ':', ' The', ' Animated', ' Series', ' is', ' a', ' television', ' series', ' based', ' on', ' the', ' DC']	":  The  Animated  Series 
+ 
+ Green  Lantern :  The  Animated  Series  is  a  television  series  based  on  the  DC"	False	 charting above Green Lantern to finish first	4	[' chart', 'ing', ' above', ' Green', ' Lantern']
+332	75	Secret identity of x	-1	Secret identity of Green Lantern	Jessica Cruz	Green Lantern	[':', ' The', ' Animated', ' Series', '\n', '\n', 'Green', ' Lantern', ':', ' The', ' Animated', ' Series', ' is', ' a', ' television', ' series', ' based', ' on', ' the', ' DC']	":  The  Animated  Series 
+ 
+ Green  Lantern :  The  Animated  Series  is  a  television  series  based  on  the  DC"	False	" analysts felt that Green Lantern ""failed to perform"	4	[' analysts', ' felt', ' that', ' Green', ' Lantern']
+333	75	Secret identity of x	-1	Secret identity of Green Lantern	Jessica Cruz	Green Lantern	[':', ' The', ' Animated', ' Series', '\n', '\n', 'Green', ' Lantern', ':', ' The', ' Animated', ' Series', ' is', ' a', ' television', ' series', ' based', ' on', ' the', ' DC']	":  The  Animated  Series 
+ 
+ Green  Lantern :  The  Animated  Series  is  a  television  series  based  on  the  DC"	False	 Green Arrow, and Green Lantern into their world	5	[' Green', ' Arrow', ',', ' and', ' Green', ' Lantern']
+334	75	Secret identity of x	-1	Secret identity of Green Lantern	Jessica Cruz	Green Lantern	[':', ' The', ' Animated', ' Series', '\n', '\n', 'Green', ' Lantern', ':', ' The', ' Animated', ' Series', ' is', ' a', ' television', ' series', ' based', ' on', ' the', ' DC']	":  The  Animated  Series 
+ 
+ Green  Lantern :  The  Animated  Series  is  a  television  series  based  on  the  DC"	False	 The first section of Green Lantern is basically a mirrored	5	[' The', ' first', ' section', ' of', ' Green', ' Lantern']
+335	75	Secret identity of x	-1	Secret identity of Green Lantern	Jessica Cruz	Green Lantern	[':', ' The', ' Animated', ' Series', '\n', '\n', 'Green', ' Lantern', ':', ' The', ' Animated', ' Series', ' is', ' a', ' television', ' series', ' based', ' on', ' the', ' DC']	":  The  Animated  Series 
+ 
+ Green  Lantern :  The  Animated  Series  is  a  television  series  based  on  the  DC"	False	 reference to a 1994 Green Lantern story where	5	[' reference', ' to', ' a', ' 1994', ' Green', ' Lantern']
+336	75	Secret identity of x	-1	Secret identity of Green Lantern	Jessica Cruz	Green Lantern	[':', ' The', ' Animated', ' Series', '\n', '\n', 'Green', ' Lantern', ':', ' The', ' Animated', ' Series', ' is', ' a', ' television', ' series', ' based', ' on', ' the', ' DC']	":  The  Animated  Series 
+ 
+ Green  Lantern :  The  Animated  Series  is  a  television  series  based  on  the  DC"	False	 1, Flash # 1, Green Lantern # 1, and Superman	7	[' 1', ',', ' Flash', ' #', ' 1', ',', ' Green', ' Lantern']
+337	76	Secret identity of x	-1	Secret identity of Wildcat	Ted Grant	Wildcat	['\n', '\n', 'The', ' Wild', 'cat', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' Marvel']	"
+ 
+ The  Wild cat  is  a  fictional  character ,  a  superhero  appearing  in  American  comic  books  published  by  Marvel"	False	 replacement F4F-4 Wildcat aircraft and	7	[' replacement', ' F', '4', 'F', '-', '4', ' Wild', 'cat']
+338	76	Secret identity of x	-1	Secret identity of Wildcat	Ted Grant	Wildcat	['\n', '\n', 'The', ' Wild', 'cat', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' Marvel']	"
+ 
+ The  Wild cat  is  a  fictional  character ,  a  superhero  appearing  in  American  comic  books  published  by  Marvel"	False	 eight Grumman F4F Wildcat fighters,	8	[' eight', ' Gr', 'um', 'man', ' F', '4', 'F', ' Wild', 'cat']
+339	76	Secret identity of x	-1	Secret identity of Wildcat	Ted Grant	Wildcat	['\n', '\n', 'The', ' Wild', 'cat', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' Marvel']	"
+ 
+ The  Wild cat  is  a  fictional  character ,  a  superhero  appearing  in  American  comic  books  published  by  Marvel"	False	" ====
+"	3	[' =', '===', 'Wild', 'cat']
+340	76	Secret identity of x	-1	Secret identity of Wildcat	Ted Grant	Wildcat	['\n', '\n', 'The', ' Wild', 'cat', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' Marvel']	"
+ 
+ The  Wild cat  is  a  fictional  character ,  a  superhero  appearing  in  American  comic  books  published  by  Marvel"	False	 Enterprise) whose Wildcat fighter escorts also	4	[' Enterprise', ')', ' whose', ' Wild', 'cat']
+341	76	Secret identity of x	-1	Secret identity of Wildcat	Ted Grant	Wildcat	['\n', '\n', 'The', ' Wild', 'cat', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' Marvel']	"
+ 
+ The  Wild cat  is  a  fictional  character ,  a  superhero  appearing  in  American  comic  books  published  by  Marvel"	False	 became the first Wildcat freshman to score 25	4	[' became', ' the', ' first', ' Wild', 'cat']
+342	77	Secret identity of x	-1	Secret identity of Hawkman	Carter Hall	Hawkman	['\n', '\n', 'The', ' Hawk', 'man', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' DC']	"
+ 
+ The  Hawk man  is  a  fictional  character ,  a  superhero  appearing  in  American  comic  books  published  by  DC"	False	 Lee liked the name Hawkman from DC Comics,	5	[' Lee', ' liked', ' the', ' name', ' Hawk', 'man']
+343	77	Secret identity of x	-1	Secret identity of Hawkman	Carter Hall	Hawkman	['\n', '\n', 'The', ' Hawk', 'man', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' DC']	"
+ 
+ The  Hawk man  is  a  fictional  character ,  a  superhero  appearing  in  American  comic  books  published  by  DC"	False	 Wesley Dodds and Hawkman (Carter Hall) appear	5	[' Wesley', ' Dodd', 's', ' and', ' Hawk', 'man']
+344	77	Secret identity of x	-1	Secret identity of Hawkman	Carter Hall	Hawkman	['\n', '\n', 'The', ' Hawk', 'man', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' DC']	"
+ 
+ The  Hawk man  is  a  fictional  character ,  a  superhero  appearing  in  American  comic  books  published  by  DC"	False	 Wesley Dodds and Hawkman (Carter Hall)	5	[' Wesley', ' Dodd', 's', ' and', ' Hawk', 'man']
+345	77	Secret identity of x	-1	Secret identity of Hawkman	Carter Hall	Hawkman	['\n', '\n', 'The', ' Hawk', 'man', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' DC']	"
+ 
+ The  Hawk man  is  a  fictional  character ,  a  superhero  appearing  in  American  comic  books  published  by  DC"	False	 Dodds and Hawkman (Carter Hall) appear	4	[' Dodd', 's', ' and', ' Hawk', 'man']
+346	77	Secret identity of x	-1	Secret identity of Hawkman	Carter Hall	Hawkman	['\n', '\n', 'The', ' Hawk', 'man', ' is', ' a', ' fictional', ' character', ',', ' a', ' superhero', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' DC']	"
+ 
+ The  Hawk man  is  a  fictional  character ,  a  superhero  appearing  in  American  comic  books  published  by  DC"	False	 Wesley Dodds and Hawkman (Carter Hall) appear	5	[' Wesley', ' Dodd', 's', ' and', ' Hawk', 'man']
+347	78	Secret identity of x	-1	Secret identity of Hawkgirl	Kendra Saunders	Hawkgirl	"[':', '**', ' The', ' Hawk', ' is', ' a', ' member', ' of', ' the', ' Hawk', 'man', ""'s"", ' team', ' of', ' superheroes', '.', ' She', ' is', ' a', ' beautiful']"	: **  The  Hawk  is  a  member  of  the  Hawk man 's  team  of  superheroes .  She  is  a  beautiful	False	 Lantern and Hawkgirl mistake Batman for	4	[' Lantern', ' and', ' Haw', 'kg', 'irl']
+348	78	Secret identity of x	-1	Secret identity of Hawkgirl	Kendra Saunders	Hawkgirl	"[':', '**', ' The', ' Hawk', ' is', ' a', ' member', ' of', ' the', ' Hawk', 'man', ""'s"", ' team', ' of', ' superheroes', '.', ' She', ' is', ' a', ' beautiful']"	: **  The  Hawk  is  a  member  of  the  Hawk man 's  team  of  superheroes .  She  is  a  beautiful	False	 Green Lantern and Hawkgirl mistake Batman	5	[' Green', ' Lantern', ' and', ' Haw', 'kg', 'irl']
+349	80	Secret identity of x	-1	Secret identity of Green Arrow	Connor Hawke	Green Arrow	[':', ' The', ' Arrow', ' of', ' the', ' Year', '\n', '\n', 'The', ' Green', ' Arrow', ' of', ' the', ' Year', ' is', ' the', ' Green', ' Arrow', ' of', ' the']	":  The  Arrow  of  the  Year 
+ 
+ The  Green  Arrow  of  the  Year  is  the  Green  Arrow  of  the"	False	 identity as Green Arrow as mirroring	3	[' identity', ' as', ' Green', ' Arrow']
+350	80	Secret identity of x	-1	Secret identity of Green Arrow	Connor Hawke	Green Arrow	[':', ' The', ' Arrow', ' of', ' the', ' Year', '\n', '\n', 'The', ' Green', ' Arrow', ' of', ' the', ' Year', ' is', ' the', ' Green', ' Arrow', ' of', ' the']	":  The  Arrow  of  the  Year 
+ 
+ The  Green  Arrow  of  the  Year  is  the  Green  Arrow  of  the"	False	 comic book character Green Arrow. Costume designer	4	[' comic', ' book', ' character', ' Green', ' Arrow']
+351	80	Secret identity of x	-1	Secret identity of Green Arrow	Connor Hawke	Green Arrow	[':', ' The', ' Arrow', ' of', ' the', ' Year', '\n', '\n', 'The', ' Green', ' Arrow', ' of', ' the', ' Year', ' is', ' the', ' Green', ' Arrow', ' of', ' the']	":  The  Arrow  of  the  Year 
+ 
+ The  Green  Arrow  of  the  Year  is  the  Green  Arrow  of  the"	False	 exception of Green Arrow / Oliver Queen,	3	[' exception', ' of', ' Green', ' Arrow']
+352	80	Secret identity of x	-1	Secret identity of Green Arrow	Connor Hawke	Green Arrow	[':', ' The', ' Arrow', ' of', ' the', ' Year', '\n', '\n', 'The', ' Green', ' Arrow', ' of', ' the', ' Year', ' is', ' the', ' Green', ' Arrow', ' of', ' the']	":  The  Arrow  of  the  Year 
+ 
+ The  Green  Arrow  of  the  Year  is  the  Green  Arrow  of  the"	False	 introduction of Green Arrow (Justin Hartley)	3	[' introduction', ' of', ' Green', ' Arrow']
+353	80	Secret identity of x	-1	Secret identity of Green Arrow	Connor Hawke	Green Arrow	[':', ' The', ' Arrow', ' of', ' the', ' Year', '\n', '\n', 'The', ' Green', ' Arrow', ' of', ' the', ' Year', ' is', ' the', ' Green', ' Arrow', ' of', ' the']	":  The  Arrow  of  the  Year 
+ 
+ The  Green  Arrow  of  the  Year  is  the  Green  Arrow  of  the"	False	 exception of Green Arrow / Oliver Queen,	3	[' exception', ' of', ' Green', ' Arrow']
+354	81	Secret identity of x	-1	Secret identity of Ravager	Rose Wilson	Ravager	"['\n', '\n', 'I', ""'m"", ' a', ' big', ' fan', ' of', ' the', ' Rav', 'ager', ',', ' and', ' I', ""'m"", ' glad', ' to', ' see', ' that', ' you']"	"
+ 
+ I 'm  a  big  fan  of  the  Rav ager ,  and  I 'm  glad  to  see  that  you"	False	 mate in the Ravagers. Alexis Denisof	4	[' mate', ' in', ' the', ' Rav', 'ager']
+355	81	Secret identity of x	-1	Secret identity of Ravager	Rose Wilson	Ravager	"['\n', '\n', 'I', ""'m"", ' a', ' big', ' fan', ' of', ' the', ' Rav', 'ager', ',', ' and', ' I', ""'m"", ' glad', ' to', ' see', ' that', ' you']"	"
+ 
+ I 'm  a  big  fan  of  the  Rav ager ,  and  I 'm  glad  to  see  that  you"	False	 first mate in the Ravagers. Alexis Denisof	5	[' first', ' mate', ' in', ' the', ' Rav', 'ager']
+356	81	Secret identity of x	-1	Secret identity of Ravager	Rose Wilson	Ravager	"['\n', '\n', 'I', ""'m"", ' a', ' big', ' fan', ' of', ' the', ' Rav', 'ager', ',', ' and', ' I', ""'m"", ' glad', ' to', ' see', ' that', ' you']"	"
+ 
+ I 'm  a  big  fan  of  the  Rav ager ,  and  I 'm  glad  to  see  that  you"	False	 mate in the Ravagers. Alexis Denisof	4	[' mate', ' in', ' the', ' Rav', 'ager']
+357	81	Secret identity of x	-1	Secret identity of Ravager	Rose Wilson	Ravager	"['\n', '\n', 'I', ""'m"", ' a', ' big', ' fan', ' of', ' the', ' Rav', 'ager', ',', ' and', ' I', ""'m"", ' glad', ' to', ' see', ' that', ' you']"	"
+ 
+ I 'm  a  big  fan  of  the  Rav ager ,  and  I 'm  glad  to  see  that  you"	False	 first mate in the Ravagers. Alexis Denisof reprises	5	[' first', ' mate', ' in', ' the', ' Rav', 'ager']
+358	82	Secret identity of x	-1	Secret identity of Wonder Girl	Cassandra Sandsmark	Wonder Girl	['\n', '\n', 'Wonder', ' Woman', ' is', ' a', ' fictional', ' superhero', 'ine', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' DC', ' Comics', '.', ' Created']	"
+ 
+ Wonder  Woman  is  a  fictional  superhero ine  appearing  in  American  comic  books  published  by  DC  Comics .  Created"	False	 Supergirl and Wonder Girl in Super Best	4	[' Super', 'girl', ' and', ' Wonder', ' Girl']
+359	82	Secret identity of x	-1	Secret identity of Wonder Girl	Cassandra Sandsmark	Wonder Girl	['\n', '\n', 'Wonder', ' Woman', ' is', ' a', ' fictional', ' superhero', 'ine', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' DC', ' Comics', '.', ' Created']	"
+ 
+ Wonder  Woman  is  a  fictional  superhero ine  appearing  in  American  comic  books  published  by  DC  Comics .  Created"	False	 Supergirl and Wonder Girl in Super Best	4	[' Super', 'girl', ' and', ' Wonder', ' Girl']
+360	82	Secret identity of x	-1	Secret identity of Wonder Girl	Cassandra Sandsmark	Wonder Girl	['\n', '\n', 'Wonder', ' Woman', ' is', ' a', ' fictional', ' superhero', 'ine', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' DC', ' Comics', '.', ' Created']	"
+ 
+ Wonder  Woman  is  a  fictional  superhero ine  appearing  in  American  comic  books  published  by  DC  Comics .  Created"	False	 alongside Supergirl and Wonder Girl in Super Best Friends	5	[' alongside', ' Super', 'girl', ' and', ' Wonder', ' Girl']
+361	83	Secret identity of x	-1	Secret identity of Tim Hunter	Tim Hunter	Tim Hunter	"['\n', '\n', 'I', ""'m"", ' a', ' writer', ',', ' a', ' reader', ',', ' a', ' geek', ',', ' a', ' husband', ',', ' a', ' father', ',', ' and']"	"
+ 
+ I 'm  a  writer ,  a  reader ,  a  geek ,  a  husband ,  a  father ,  and"	False	 Thompson and Tim Hunter note that Eastwood's	3	[' Thompson', ' and', ' Tim', ' Hunter']
+362	83	Secret identity of x	-1	Secret identity of Tim Hunter	Tim Hunter	Tim Hunter	"['\n', '\n', 'I', ""'m"", ' a', ' writer', ',', ' a', ' reader', ',', ' a', ' geek', ',', ' a', ' husband', ',', ' a', ' father', ',', ' and']"	"
+ 
+ I 'm  a  writer ,  a  reader ,  a  geek ,  a  husband ,  a  father ,  and"	False	 Riggin and Tim Hunter – who would ultimately	4	[' Rig', 'gin', ' and', ' Tim', ' Hunter']
+363	83	Secret identity of x	-1	Secret identity of Tim Hunter	Tim Hunter	Tim Hunter	"['\n', '\n', 'I', ""'m"", ' a', ' writer', ',', ' a', ' reader', ',', ' a', ' geek', ',', ' a', ' husband', ',', ' a', ' father', ',', ' and']"	"
+ 
+ I 'm  a  writer ,  a  reader ,  a  geek ,  a  husband ,  a  father ,  and"	False	 Peplinski, Pat Riggin and Tim Hunter – who would ultimately	9	[' Pe', 'pl', 'inski', ',', ' Pat', ' Rig', 'gin', ' and', ' Tim', ' Hunter']
+364	83	Secret identity of x	-1	Secret identity of Tim Hunter	Tim Hunter	Tim Hunter	"['\n', '\n', 'I', ""'m"", ' a', ' writer', ',', ' a', ' reader', ',', ' a', ' geek', ',', ' a', ' husband', ',', ' a', ' father', ',', ' and']"	"
+ 
+ I 'm  a  writer ,  a  reader ,  a  geek ,  a  husband ,  a  father ,  and"	False	 Riggin and Tim Hunter – who would ultimately	4	[' Rig', 'gin', ' and', ' Tim', ' Hunter']
+365	83	Secret identity of x	-1	Secret identity of Tim Hunter	Tim Hunter	Tim Hunter	"['\n', '\n', 'I', ""'m"", ' a', ' writer', ',', ' a', ' reader', ',', ' a', ' geek', ',', ' a', ' husband', ',', ' a', ' father', ',', ' and']"	"
+ 
+ I 'm  a  writer ,  a  reader ,  a  geek ,  a  husband ,  a  father ,  and"	False	 Pat Riggin and Tim Hunter – who would	5	[' Pat', ' Rig', 'gin', ' and', ' Tim', ' Hunter']
+366	84	Secret identity of x	-1	Secret identity of Winter Soldier	Bucky Barnes	Winter Soldier	[':', ' The', ' Winter', ' Soldier', ' is', ' a', ' fictional', ' character', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' Marvel', ' Comics', '.', ' The', ' character']	:  The  Winter  Soldier  is  a  fictional  character  appearing  in  American  comic  books  published  by  Marvel  Comics .  The  character	False	 roles from The Winter Soldier and they are joined	4	[' roles', ' from', ' The', ' Winter', ' Soldier']
+367	84	Secret identity of x	-1	Secret identity of Winter Soldier	Bucky Barnes	Winter Soldier	[':', ' The', ' Winter', ' Soldier', ' is', ' a', ' fictional', ' character', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' Marvel', ' Comics', '.', ' The', ' character']	:  The  Winter  Soldier  is  a  fictional  character  appearing  in  American  comic  books  published  by  Marvel  Comics .  The  character	False	 Captain America: The Winter Soldier earned $ 259.8 million	5	[' Captain', ' America', ':', ' The', ' Winter', ' Soldier']
+368	84	Secret identity of x	-1	Secret identity of Winter Soldier	Bucky Barnes	Winter Soldier	[':', ' The', ' Winter', ' Soldier', ' is', ' a', ' fictional', ' character', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' Marvel', ' Comics', '.', ' The', ' character']	:  The  Winter  Soldier  is  a  fictional  character  appearing  in  American  comic  books  published  by  Marvel  Comics .  The  character	False	 Black Widow and Winter Soldier programs, which both	4	[' Black', ' Widow', ' and', ' Winter', ' Soldier']
+369	84	Secret identity of x	-1	Secret identity of Winter Soldier	Bucky Barnes	Winter Soldier	[':', ' The', ' Winter', ' Soldier', ' is', ' a', ' fictional', ' character', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' Marvel', ' Comics', '.', ' The', ' character']	:  The  Winter  Soldier  is  a  fictional  character  appearing  in  American  comic  books  published  by  Marvel  Comics .  The  character	False	 changed once the Winter Soldier tie-in took place.	4	[' changed', ' once', ' the', ' Winter', ' Soldier']
+370	84	Secret identity of x	-1	Secret identity of Winter Soldier	Bucky Barnes	Winter Soldier	[':', ' The', ' Winter', ' Soldier', ' is', ' a', ' fictional', ' character', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' Marvel', ' Comics', '.', ' The', ' character']	:  The  Winter  Soldier  is  a  fictional  character  appearing  in  American  comic  books  published  by  Marvel  Comics .  The  character	False	 leading up to The Winter Soldier crossover were marketed	5	[' leading', ' up', ' to', ' The', ' Winter', ' Soldier']
+371	86	Secret identity of x	-1	Secret identity of Pixie	Megan Gwynn	Pixie	"[' Dust', '\n', '\n', 'I', ""'m"", ' a', ' mom', ' of', ' two', ',', ' a', ' wife', ',', ' a', ' daughter', ',', ' a', ' sister', ',', ' a']"	" Dust 
+ 
+ I 'm  a  mom  of  two ,  a  wife ,  a  daughter ,  a  sister ,  a"	False	 guests and won the 2010 Pixie Gold Award from	5	[' guests', ' and', ' won', ' the', ' 2010', ' Pixie']
+372	86	Secret identity of x	-1	Secret identity of Pixie	Megan Gwynn	Pixie	"[' Dust', '\n', '\n', 'I', ""'m"", ' a', ' mom', ' of', ' two', ',', ' a', ' wife', ',', ' a', ' daughter', ',', ' a', ' sister', ',', ' a']"	" Dust 
+ 
+ I 'm  a  mom  of  two ,  a  wife ,  a  daughter ,  a  sister ,  a"	False	 Katy Perry, Pixie Lott and Nicole	3	[' Katy', ' Perry', ',', ' Pixie']
+373	86	Secret identity of x	-1	Secret identity of Pixie	Megan Gwynn	Pixie	"[' Dust', '\n', '\n', 'I', ""'m"", ' a', ' mom', ' of', ' two', ',', ' a', ' wife', ',', ' a', ' daughter', ',', ' a', ' sister', ',', ' a']"	" Dust 
+ 
+ I 'm  a  mom  of  two ,  a  wife ,  a  daughter ,  a  sister ,  a"	False	 Poncherello Pegone Pixiefrog (voiced	6	[' Pon', 'c', 'here', 'llo', ' Peg', 'one', ' Pixie']
+374	86	Secret identity of x	-1	Secret identity of Pixie	Megan Gwynn	Pixie	"[' Dust', '\n', '\n', 'I', ""'m"", ' a', ' mom', ' of', ' two', ',', ' a', ' wife', ',', ' a', ' daughter', ',', ' a', ' sister', ',', ' a']"	" Dust 
+ 
+ I 'm  a  mom  of  two ,  a  wife ,  a  daughter ,  a  sister ,  a"	False	 have included Pixie Lott, JLS and	2	[' have', ' included', ' Pixie']
+375	86	Secret identity of x	-1	Secret identity of Pixie	Megan Gwynn	Pixie	"[' Dust', '\n', '\n', 'I', ""'m"", ' a', ' mom', ' of', ' two', ',', ' a', ' wife', ',', ' a', ' daughter', ',', ' a', ' sister', ',', ' a']"	" Dust 
+ 
+ I 'm  a  mom  of  two ,  a  wife ,  a  daughter ,  a  sister ,  a"	False	" were inspired by ""Pixie and Dixie"","	5	"[' were', ' inspired', ' by', ' ""', 'P', 'ixie']"
+376	87	Secret identity of x	-1	Secret identity of X-23	Laura Kinney	X-23	[':', ' Laura', ' Kin', 'ney', '.', '\n', '\n', 'Laura', ' Kin', 'ney', ' is', ' a', ' mutant', ' who', ' was', ' created', ' by', ' the', ' X', '-']	":  Laura  Kin ney . 
+ 
+ Laura  Kin ney  is  a  mutant  who  was  created  by  the  X -"	True		2	['X', '-', '23']
+377	87	Secret identity of x	-1	Secret identity of X-23	Laura Kinney	X-23	[':', ' Laura', ' Kin', 'ney', '.', '\n', '\n', 'Laura', ' Kin', 'ney', ' is', ' a', ' mutant', ' who', ' was', ' created', ' by', ' the', ' X', '-']	":  Laura  Kin ney . 
+ 
+ Laura  Kin ney  is  a  mutant  who  was  created  by  the  X -"	True	 the Red Hulk, X-23 and the new Ghost	6	[' the', ' Red', ' Hulk', ',', ' X', '-', '23']
+378	88	Secret identity of x	-1	Secret identity of Spider-Girl	Anya Corazon	Spider-Girl	['\n', '\n', 'Spider', '-', 'Girl', ' is', ' a', ' fictional', ' character', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' Marvel', ' Comics', '.', ' The']	"
+ 
+ Spider - Girl  is  a  fictional  character  appearing  in  American  comic  books  published  by  Marvel  Comics .  The"	False	" ""Mayday"" Parker (Spider-Girl). May ""Mayday"""	8	"[' ""', 'May', 'day', '""', ' Parker', ' (', 'Spider', '-', 'Girl']"
+379	88	Secret identity of x	-1	Secret identity of Spider-Girl	Anya Corazon	Spider-Girl	['\n', '\n', 'Spider', '-', 'Girl', ' is', ' a', ' fictional', ' character', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' Marvel', ' Comics', '.', ' The']	"
+ 
+ Spider - Girl  is  a  fictional  character  appearing  in  American  comic  books  published  by  Marvel  Comics .  The"	False	" May ""Mayday"" Parker (Spider-Girl). May ""Mayday"" Parker"	9	"[' May', ' ""', 'May', 'day', '""', ' Parker', ' (', 'Spider', '-', 'Girl']"
+380	88	Secret identity of x	-1	Secret identity of Spider-Girl	Anya Corazon	Spider-Girl	['\n', '\n', 'Spider', '-', 'Girl', ' is', ' a', ' fictional', ' character', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' Marvel', ' Comics', '.', ' The']	"
+ 
+ Spider - Girl  is  a  fictional  character  appearing  in  American  comic  books  published  by  Marvel  Comics .  The"	False	" ""Mayday"" Parker (Spider-Girl). May ""Mayday"""	8	"[' ""', 'May', 'day', '""', ' Parker', ' (', 'Spider', '-', 'Girl']"
+381	89	Secret identity of x	-1	Secret identity of Robin	Damian Wayne	Robin	[' Hood', '\n', '\n', 'The', ' Robin', ' Hood', ' of', ' Sher', 'wood', ' Forest', ' is', ' a', ' legendary', ' outlaw', ' who', ' lived', ' in', ' the', ' 12', 'th']	" Hood 
+ 
+ The  Robin  Hood  of  Sher wood  Forest  is  a  legendary  outlaw  who  lived  in  the  12 th"	False	 Roehampton Gate and Robin Hood Gate. The Capital	5	[' Roe', 'ham', 'pton', ' Gate', ' and', ' Robin']
+382	89	Secret identity of x	-1	Secret identity of Robin	Damian Wayne	Robin	[' Hood', '\n', '\n', 'The', ' Robin', ' Hood', ' of', ' Sher', 'wood', ' Forest', ' is', ' a', ' legendary', ' outlaw', ' who', ' lived', ' in', ' the', ' 12', 'th']	" Hood 
+ 
+ The  Robin  Hood  of  Sher wood  Forest  is  a  legendary  outlaw  who  lived  in  the  12 th"	False	" stages as a ""modern day Robin Hood"", as he would"	6	"[' stages', ' as', ' a', ' ""', 'modern', ' day', ' Robin']"
+383	89	Secret identity of x	-1	Secret identity of Robin	Damian Wayne	Robin	[' Hood', '\n', '\n', 'The', ' Robin', ' Hood', ' of', ' Sher', 'wood', ' Forest', ' is', ' a', ' legendary', ' outlaw', ' who', ' lived', ' in', ' the', ' 12', 'th']	" Hood 
+ 
+ The  Robin  Hood  of  Sher wood  Forest  is  a  legendary  outlaw  who  lived  in  the  12 th"	False	 formation of Wigan Robin Park. However,	4	[' formation', ' of', ' W', 'igan', ' Robin']
+384	89	Secret identity of x	-1	Secret identity of Robin	Damian Wayne	Robin	[' Hood', '\n', '\n', 'The', ' Robin', ' Hood', ' of', ' Sher', 'wood', ' Forest', ' is', ' a', ' legendary', ' outlaw', ' who', ' lived', ' in', ' the', ' 12', 'th']	" Hood 
+ 
+ The  Robin  Hood  of  Sher wood  Forest  is  a  legendary  outlaw  who  lived  in  the  12 th"	False	 Everything Express writer Robin Catling described	3	[' Everything', ' Express', ' writer', ' Robin']
+385	89	Secret identity of x	-1	Secret identity of Robin	Damian Wayne	Robin	[' Hood', '\n', '\n', 'The', ' Robin', ' Hood', ' of', ' Sher', 'wood', ' Forest', ' is', ' a', ' legendary', ' outlaw', ' who', ' lived', ' in', ' the', ' 12', 'th']	" Hood 
+ 
+ The  Robin  Hood  of  Sher wood  Forest  is  a  legendary  outlaw  who  lived  in  the  12 th"	False	 the second series of Robin Hood, for which	4	[' the', ' second', ' series', ' of', ' Robin']
+386	90	Secret identity of x	-1	Secret identity of Nightwing	Kyle Higgins	Nightwing	[':', ' Dick', ' Grayson', '\n', '\n', 'The', ' first', ' time', ' I', ' saw', ' Night', 'wing', ',', ' I', ' was', ' in', ' the', ' audience', ' of', ' a']	":  Dick  Grayson 
+ 
+ The  first  time  I  saw  Night wing ,  I  was  in  the  audience  of  a"	False	" released. The ""Nightwing"" pack, released on"	5	"[' released', '.', ' The', ' ""', 'Night', 'wing']"
+387	90	Secret identity of x	-1	Secret identity of Nightwing	Kyle Higgins	Nightwing	[':', ' Dick', ' Grayson', '\n', '\n', 'The', ' first', ' time', ' I', ' saw', ' Night', 'wing', ',', ' I', ' was', ' in', ' the', ' audience', ' of', ' a']	":  Dick  Grayson 
+ 
+ The  first  time  I  saw  Night wing ,  I  was  in  the  audience  of  a"	False	 restored as Nightwing with Wayne serving	3	[' restored', ' as', ' Night', 'wing']
+388	90	Secret identity of x	-1	Secret identity of Nightwing	Kyle Higgins	Nightwing	[':', ' Dick', ' Grayson', '\n', '\n', 'The', ' first', ' time', ' I', ' saw', ' Night', 'wing', ',', ' I', ' was', ' in', ' the', ' audience', ' of', ' a']	":  Dick  Grayson 
+ 
+ The  first  time  I  saw  Night wing ,  I  was  in  the  audience  of  a"	False	 Batman's partner Nightwing (Barbara Gordon).	4	"[' Batman', ""'s"", ' partner', ' Night', 'wing']"
+389	90	Secret identity of x	-1	Secret identity of Nightwing	Kyle Higgins	Nightwing	[':', ' Dick', ' Grayson', '\n', '\n', 'The', ' first', ' time', ' I', ' saw', ' Night', 'wing', ',', ' I', ' was', ' in', ' the', ' audience', ' of', ' a']	":  Dick  Grayson 
+ 
+ The  first  time  I  saw  Night wing ,  I  was  in  the  audience  of  a"	False	" ""Arkham Episode"" for Nightwing set after the events"	7	"[' ""', 'Ark', 'ham', ' Episode', '""', ' for', ' Night', 'wing']"
+390	90	Secret identity of x	-1	Secret identity of Nightwing	Kyle Higgins	Nightwing	[':', ' Dick', ' Grayson', '\n', '\n', 'The', ' first', ' time', ' I', ' saw', ' Night', 'wing', ',', ' I', ' was', ' in', ' the', ' audience', ' of', ' a']	":  Dick  Grayson 
+ 
+ The  first  time  I  saw  Night wing ,  I  was  in  the  audience  of  a"	False	 allies Robin and Nightwing are also playable	4	[' allies', ' Robin', ' and', ' Night', 'wing']
+391	91	Secret identity of x	-1	Secret identity of Brawn	Amadeus Cho	Brawn	['y', ' the', ' Bear', '\n', '\n', 'B', 'rawn', 'y', ' the', ' Bear', ' is', ' a', ' fictional', ' character', ' in', ' the', ' DC', ' Comics', ' universe', '.']	"y  the  Bear 
+ 
+ B rawn y  the  Bear  is  a  fictional  character  in  the  DC  Comics  universe ."	False	 director Ross Brawn said that Sehli's actions	3	[' director', ' Ross', ' B', 'rawn']
+392	91	Secret identity of x	-1	Secret identity of Brawn	Amadeus Cho	Brawn	['y', ' the', ' Bear', '\n', '\n', 'B', 'rawn', 'y', ' the', ' Bear', ' is', ' a', ' fictional', ' character', ' in', ' the', ' DC', ' Comics', ' universe', '.']	"y  the  Bear 
+ 
+ B rawn y  the  Bear  is  a  fictional  character  in  the  DC  Comics  universe ."	False	 start when he hit the Brawn GP of Rubens	6	[' start', ' when', ' he', ' hit', ' the', ' B', 'rawn']
+393	91	Secret identity of x	-1	Secret identity of Brawn	Amadeus Cho	Brawn	['y', ' the', ' Bear', '\n', '\n', 'B', 'rawn', 'y', ' the', ' Bear', ' is', ' a', ' fictional', ' character', ' in', ' the', ' DC', ' Comics', ' universe', '.']	"y  the  Bear 
+ 
+ B rawn y  the  Bear  is  a  fictional  character  in  the  DC  Comics  universe ."	False	 (designer) and Ross Brawn (Technical Director)	7	[' (', 'design', 'er', ')', ' and', ' Ross', ' B', 'rawn']
+394	91	Secret identity of x	-1	Secret identity of Brawn	Amadeus Cho	Brawn	['y', ' the', ' Bear', '\n', '\n', 'B', 'rawn', 'y', ' the', ' Bear', ' is', ' a', ' fictional', ' character', ' in', ' the', ' DC', ' Comics', ' universe', '.']	"y  the  Bear 
+ 
+ B rawn y  the  Bear  is  a  fictional  character  in  the  DC  Comics  universe ."	False	 technical director Ross Brawn that it would	4	[' technical', ' director', ' Ross', ' B', 'rawn']
+395	91	Secret identity of x	-1	Secret identity of Brawn	Amadeus Cho	Brawn	['y', ' the', ' Bear', '\n', '\n', 'B', 'rawn', 'y', ' the', ' Bear', ' is', ' a', ' fictional', ' character', ' in', ' the', ' DC', ' Comics', ' universe', '.']	"y  the  Bear 
+ 
+ B rawn y  the  Bear  is  a  fictional  character  in  the  DC  Comics  universe ."	False	 team principal Ross Brawn explained the distinctive	4	[' team', ' principal', ' Ross', ' B', 'rawn']
+396	92	Secret identity of x	-1	Secret identity of Ghost Rider	Robbie Reyes	Ghost Rider	[':', '\n', '\n', 'The', ' Ghost', ' Rider', ' is', ' Johnny', ' Blaze', ',', ' a', ' man', ' who', ' was', ' cursed', ' with', ' the', ' power', ' of', ' the']	": 
+ 
+ The  Ghost  Rider  is  Johnny  Blaze ,  a  man  who  was  cursed  with  the  power  of  the"	False	 were penned in Ghost Rider: Travels on	4	[' were', ' penned', ' in', ' Ghost', ' Rider']
+397	92	Secret identity of x	-1	Secret identity of Ghost Rider	Robbie Reyes	Ghost Rider	[':', '\n', '\n', 'The', ' Ghost', ' Rider', ' is', ' Johnny', ' Blaze', ',', ' a', ' man', ' who', ' was', ' cursed', ' with', ' the', ' power', ' of', ' the']	": 
+ 
+ The  Ghost  Rider  is  Johnny  Blaze ,  a  man  who  was  cursed  with  the  power  of  the"	False	 trailer was shown with Ghost Rider on February 16,	5	[' trailer', ' was', ' shown', ' with', ' Ghost', ' Rider']
+398	92	Secret identity of x	-1	Secret identity of Ghost Rider	Robbie Reyes	Ghost Rider	[':', '\n', '\n', 'The', ' Ghost', ' Rider', ' is', ' Johnny', ' Blaze', ',', ' a', ' man', ' who', ' was', ' cursed', ' with', ' the', ' power', ' of', ' the']	": 
+ 
+ The  Ghost  Rider  is  Johnny  Blaze ,  a  man  who  was  cursed  with  the  power  of  the"	False	 was shown with Ghost Rider on February 16, 2007,	4	[' was', ' shown', ' with', ' Ghost', ' Rider']
+399	92	Secret identity of x	-1	Secret identity of Ghost Rider	Robbie Reyes	Ghost Rider	[':', '\n', '\n', 'The', ' Ghost', ' Rider', ' is', ' Johnny', ' Blaze', ',', ' a', ' man', ' who', ' was', ' cursed', ' with', ' the', ' power', ' of', ' the']	": 
+ 
+ The  Ghost  Rider  is  Johnny  Blaze ,  a  man  who  was  cursed  with  the  power  of  the"	False	 in the pages of Ghost Rider, portrayed her as	5	[' in', ' the', ' pages', ' of', ' Ghost', ' Rider']
+400	92	Secret identity of x	-1	Secret identity of Ghost Rider	Robbie Reyes	Ghost Rider	[':', '\n', '\n', 'The', ' Ghost', ' Rider', ' is', ' Johnny', ' Blaze', ',', ' a', ' man', ' who', ' was', ' cursed', ' with', ' the', ' power', ' of', ' the']	": 
+ 
+ The  Ghost  Rider  is  Johnny  Blaze ,  a  man  who  was  cursed  with  the  power  of  the"	False	 the pages of Ghost Rider, portrayed her as	4	[' the', ' pages', ' of', ' Ghost', ' Rider']
+401	93	Secret identity of x	-1	Secret identity of The Atom	Ray Palmer	The Atom	['\n', '\n', 'The', ' Atom', ' is', ' a', ' fictional', ' superhero', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' DC', ' Comics', '.', ' The', ' character']	"
+ 
+ The  Atom  is  a  fictional  superhero  appearing  in  American  comic  books  published  by  DC  Comics .  The  character"	False	 Boddie Williams' The Atom Curtain), Samuel R.	6	"[' B', 'odd', 'ie', ' Williams', ""'"", ' The', ' Atom']"
+402	93	Secret identity of x	-1	Secret identity of The Atom	Ray Palmer	The Atom	['\n', '\n', 'The', ' Atom', ' is', ' a', ' fictional', ' superhero', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' DC', ' Comics', '.', ' The', ' character']	"
+ 
+ The  Atom  is  a  fictional  superhero  appearing  in  American  comic  books  published  by  DC  Comics .  The  character"	False	 Magilla Gorilla Show, The Atom Ant / Secret	7	[' Mag', 'illa', ' Gor', 'illa', ' Show', ',', ' The', ' Atom']
+403	94	Secret identity of x	-1	Secret identity of The Atom	Ryan Choi	The Atom	['\n', '\n', 'The', ' Atom', ' is', ' a', ' fictional', ' superhero', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' DC', ' Comics', '.', ' The', ' character']	"
+ 
+ The  Atom  is  a  fictional  superhero  appearing  in  American  comic  books  published  by  DC  Comics .  The  character"	False	 Gorilla Show, The Atom Ant / Secret Squirrel	5	[' Gor', 'illa', ' Show', ',', ' The', ' Atom']
+404	94	Secret identity of x	-1	Secret identity of The Atom	Ryan Choi	The Atom	['\n', '\n', 'The', ' Atom', ' is', ' a', ' fictional', ' superhero', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' DC', ' Comics', '.', ' The', ' character']	"
+ 
+ The  Atom  is  a  fictional  superhero  appearing  in  American  comic  books  published  by  DC  Comics .  The  character"	False	 Gorilla Show, The Atom Ant / Secret Squirrel	5	[' Gor', 'illa', ' Show', ',', ' The', ' Atom']
+405	94	Secret identity of x	-1	Secret identity of The Atom	Ryan Choi	The Atom	['\n', '\n', 'The', ' Atom', ' is', ' a', ' fictional', ' superhero', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' DC', ' Comics', '.', ' The', ' character']	"
+ 
+ The  Atom  is  a  fictional  superhero  appearing  in  American  comic  books  published  by  DC  Comics .  The  character"	False	 Boddie Williams' The Atom Curtain), Samuel R.	6	"[' B', 'odd', 'ie', ' Williams', ""'"", ' The', ' Atom']"
+406	94	Secret identity of x	-1	Secret identity of The Atom	Ryan Choi	The Atom	['\n', '\n', 'The', ' Atom', ' is', ' a', ' fictional', ' superhero', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' DC', ' Comics', '.', ' The', ' character']	"
+ 
+ The  Atom  is  a  fictional  superhero  appearing  in  American  comic  books  published  by  DC  Comics .  The  character"	False	 Gorilla Show, The Atom Ant / Secret	5	[' Gor', 'illa', ' Show', ',', ' The', ' Atom']
+407	94	Secret identity of x	-1	Secret identity of The Atom	Ryan Choi	The Atom	['\n', '\n', 'The', ' Atom', ' is', ' a', ' fictional', ' superhero', ' appearing', ' in', ' American', ' comic', ' books', ' published', ' by', ' DC', ' Comics', '.', ' The', ' character']	"
+ 
+ The  Atom  is  a  fictional  superhero  appearing  in  American  comic  books  published  by  DC  Comics .  The  character"	False	 Magilla Gorilla Show, The Atom Ant / Secret	7	[' Mag', 'illa', ' Gor', 'illa', ' Show', ',', ' The', ' Atom']
+408	96	Secret identity of x	-1	Secret identity of Groot	Groot	Groot	[':', '\n', '\n', 'G', 'root', ' is', ' a', ' fictional', ' character', ' in', ' the', ' Marvel', ' Cinem', 'atic', ' Universe', '.', ' He', ' is', ' a', ' sentient']	": 
+ 
+ G root  is  a  fictional  character  in  the  Marvel  Cinem atic  Universe .  He  is  a  sentient"	True	 historian Hofstede de Groot said of Dune Landscape:	6	[' historian', ' Hof', 'st', 'ede', ' de', ' Gro', 'ot']
+409	96	Secret identity of x	-1	Secret identity of Groot	Groot	Groot	[':', '\n', '\n', 'G', 'root', ' is', ' a', ' fictional', ' character', ' in', ' the', ' Marvel', ' Cinem', 'atic', ' Universe', '.', ' He', ' is', ' a', ' sentient']	": 
+ 
+ G root  is  a  fictional  character  in  the  Marvel  Cinem atic  Universe .  He  is  a  sentient"	True	 behind the Groot Schijn stream	3	[' behind', ' the', ' Gro', 'ot']
+410	96	Secret identity of x	-1	Secret identity of Groot	Groot	Groot	[':', '\n', '\n', 'G', 'root', ' is', ' a', ' fictional', ' character', ' in', ' the', ' Marvel', ' Cinem', 'atic', ' Universe', '.', ' He', ' is', ' a', ' sentient']	": 
+ 
+ G root  is  a  fictional  character  in  the  Marvel  Cinem atic  Universe .  He  is  a  sentient"	True	 Rocket Raccoon and Groot would be created through	6	[' Rocket', ' R', 'acco', 'on', ' and', ' Gro', 'ot']
+411	96	Secret identity of x	-1	Secret identity of Groot	Groot	Groot	[':', '\n', '\n', 'G', 'root', ' is', ' a', ' fictional', ' character', ' in', ' the', ' Marvel', ' Cinem', 'atic', ' Universe', '.', ' He', ' is', ' a', ' sentient']	": 
+ 
+ G root  is  a  fictional  character  in  the  Marvel  Cinem atic  Universe .  He  is  a  sentient"	True	 Deurne behind the Groot Schijn stream and	6	[' De', 'urn', 'e', ' behind', ' the', ' Gro', 'ot']
+412	96	Secret identity of x	-1	Secret identity of Groot	Groot	Groot	[':', '\n', '\n', 'G', 'root', ' is', ' a', ' fictional', ' character', ' in', ' the', ' Marvel', ' Cinem', 'atic', ' Universe', '.', ' He', ' is', ' a', ' sentient']	": 
+ 
+ G root  is  a  fictional  character  in  the  Marvel  Cinem atic  Universe .  He  is  a  sentient"	True	 through Henk Groot to win the match 5	4	[' through', ' Hen', 'k', ' Gro', 'ot']
+413	97	Secret identity of x	-1	Secret identity of Rocket	Rocket Raccoon	Rocket	[' R', 'acco', 'on', '\n', '\n', 'The', ' first', ' time', ' I', ' saw', ' the', ' trailer', ' for', ' Guardians', ' of', ' the', ' Galaxy', ',', ' I', ' was']	" R acco on 
+ 
+ The  first  time  I  saw  the  trailer  for  Guardians  of  the  Galaxy ,  I  was"	False	 the Saturn V Rocket utilized by NASA's	3	[' the', ' Saturn', ' V', ' Rocket']
+414	97	Secret identity of x	-1	Secret identity of Rocket	Rocket Raccoon	Rocket	[' R', 'acco', 'on', '\n', '\n', 'The', ' first', ' time', ' I', ' saw', ' the', ' trailer', ' for', ' Guardians', ' of', ' the', ' Galaxy', ',', ' I', ' was']	" R acco on 
+ 
+ The  first  time  I  saw  the  trailer  for  Guardians  of  the  Galaxy ,  I  was"	False	" Rocket Pods
+"	0	[' Rocket']
+415	97	Secret identity of x	-1	Secret identity of Rocket	Rocket Raccoon	Rocket	[' R', 'acco', 'on', '\n', '\n', 'The', ' first', ' time', ' I', ' saw', ' the', ' trailer', ' for', ' Guardians', ' of', ' the', ' Galaxy', ',', ' I', ' was']	" R acco on 
+ 
+ The  first  time  I  saw  the  trailer  for  Guardians  of  the  Galaxy ,  I  was"	False	 helicopter, Multiple Launch Rocket System, and	4	[' helicopter', ',', ' Multiple', ' Launch', ' Rocket']
+416	97	Secret identity of x	-1	Secret identity of Rocket	Rocket Raccoon	Rocket	[' R', 'acco', 'on', '\n', '\n', 'The', ' first', ' time', ' I', ' saw', ' the', ' trailer', ' for', ' Guardians', ' of', ' the', ' Galaxy', ',', ' I', ' was']	" R acco on 
+ 
+ The  first  time  I  saw  the  trailer  for  Guardians  of  the  Galaxy ,  I  was"	False	 Godlewski portray Rocket and Groot on set,	5	[' God', 'le', 'ws', 'ki', ' portray', ' Rocket']
+417	97	Secret identity of x	-1	Secret identity of Rocket	Rocket Raccoon	Rocket	[' R', 'acco', 'on', '\n', '\n', 'The', ' first', ' time', ' I', ' saw', ' the', ' trailer', ' for', ' Guardians', ' of', ' the', ' Galaxy', ',', ' I', ' was']	" R acco on 
+ 
+ The  first  time  I  saw  the  trailer  for  Guardians  of  the  Galaxy ,  I  was"	False	 plant. Back at the Rocket Group, Leo and	5	[' plant', '.', ' Back', ' at', ' the', ' Rocket']
+418	98	Secret identity of x	-1	Secret identity of Gamora	Gamora	Gamora	[':', '\n', '\n', 'Gam', 'ora', ' is', ' a', ' member', ' of', ' the', ' Guardians', ' of', ' the', ' Galaxy', '.', ' She', ' is', ' a', ' member', ' of']	": 
+ 
+ Gam ora  is  a  member  of  the  Guardians  of  the  Galaxy .  She  is  a  member  of"	True	 world, Xandar, Gamora ambushes him and	7	[' world', ',', ' X', 'and', 'ar', ',', ' Gam', 'ora']
+419	98	Secret identity of x	-1	Secret identity of Gamora	Gamora	Gamora	[':', '\n', '\n', 'Gam', 'ora', ' is', ' a', ' member', ' of', ' the', ' Guardians', ' of', ' the', ' Galaxy', '.', ' She', ' is', ' a', ' member', ' of']	": 
+ 
+ Gam ora  is  a  member  of  the  Guardians  of  the  Galaxy .  She  is  a  member  of"	True	 was raised with Gamora as siblings and is	4	[' was', ' raised', ' with', ' Gam', 'ora']
+420	98	Secret identity of x	-1	Secret identity of Gamora	Gamora	Gamora	[':', '\n', '\n', 'Gam', 'ora', ' is', ' a', ' member', ' of', ' the', ' Guardians', ' of', ' the', ' Galaxy', '.', ' She', ' is', ' a', ' member', ' of']	": 
+ 
+ Gam ora  is  a  member  of  the  Guardians  of  the  Galaxy .  She  is  a  member  of"	True	" sends the assassin Gamora after the orb.
+"	4	[' sends', ' the', ' assassin', ' Gam', 'ora']
+421	98	Secret identity of x	-1	Secret identity of Gamora	Gamora	Gamora	[':', '\n', '\n', 'Gam', 'ora', ' is', ' a', ' member', ' of', ' the', ' Guardians', ' of', ' the', ' Galaxy', '.', ' She', ' is', ' a', ' member', ' of']	": 
+ 
+ Gam ora  is  a  member  of  the  Guardians  of  the  Galaxy .  She  is  a  member  of"	True	 was raised with Gamora as siblings	4	[' was', ' raised', ' with', ' Gam', 'ora']
+422	98	Secret identity of x	-1	Secret identity of Gamora	Gamora	Gamora	[':', '\n', '\n', 'Gam', 'ora', ' is', ' a', ' member', ' of', ' the', ' Guardians', ' of', ' the', ' Galaxy', '.', ' She', ' is', ' a', ' member', ' of']	": 
+ 
+ Gam ora  is  a  member  of  the  Guardians  of  the  Galaxy .  She  is  a  member  of"	True	 Aster, after Gamora defeats Nebula (who	4	[' Aster', ',', ' after', ' Gam', 'ora']
+423	99	Secret identity of x	-1	Secret identity of Star-Lord	Peter Quill	Star-Lord	[':', ' Peter', ' Qu', 'ill', '.', '\n', '\n', 'The', ' Guardians', ' of', ' the', ' Galaxy', ' are', ' a', ' group', ' of', ' inter', 'gal', 'actic', ' heroes']	":  Peter  Qu ill . 
+ 
+ The  Guardians  of  the  Galaxy  are  a  group  of  inter gal actic  heroes"	True	 Pratt dressed as Star-Lord to entertain	5	[' Pratt', ' dressed', ' as', ' Star', '-', 'Lord']
+424	99	Secret identity of x	-1	Secret identity of Star-Lord	Peter Quill	Star-Lord	[':', ' Peter', ' Qu', 'ill', '.', '\n', '\n', 'The', ' Guardians', ' of', ' the', ' Galaxy', ' are', ' a', ' group', ' of', ' inter', 'gal', 'actic', ' heroes']	":  Peter  Qu ill . 
+ 
+ The  Guardians  of  the  Galaxy  are  a  group  of  inter gal actic  heroes"	True	 Pratt dressed as Star-Lord to entertain the	5	[' Pratt', ' dressed', ' as', ' Star', '-', 'Lord']
+425	99	Secret identity of x	-1	Secret identity of Star-Lord	Peter Quill	Star-Lord	[':', ' Peter', ' Qu', 'ill', '.', '\n', '\n', 'The', ' Guardians', ' of', ' the', ' Galaxy', ' are', ' a', ' group', ' of', ' inter', 'gal', 'actic', ' heroes']	":  Peter  Qu ill . 
+ 
+ The  Guardians  of  the  Galaxy  are  a  group  of  inter gal actic  heroes"	True	 dressed as Star-Lord to entertain	4	[' dressed', ' as', ' Star', '-', 'Lord']
+426	99	Secret identity of x	-1	Secret identity of Star-Lord	Peter Quill	Star-Lord	[':', ' Peter', ' Qu', 'ill', '.', '\n', '\n', 'The', ' Guardians', ' of', ' the', ' Galaxy', ' are', ' a', ' group', ' of', ' inter', 'gal', 'actic', ' heroes']	":  Peter  Qu ill . 
+ 
+ The  Guardians  of  the  Galaxy  are  a  group  of  inter gal actic  heroes"	True	 Peter Quill / Star-Lord in Guardians of	6	[' Peter', ' Qu', 'ill', ' /', ' Star', '-', 'Lord']
+427	99	Secret identity of x	-1	Secret identity of Star-Lord	Peter Quill	Star-Lord	[':', ' Peter', ' Qu', 'ill', '.', '\n', '\n', 'The', ' Guardians', ' of', ' the', ' Galaxy', ' are', ' a', ' group', ' of', ' inter', 'gal', 'actic', ' heroes']	":  Peter  Qu ill . 
+ 
+ The  Guardians  of  the  Galaxy  are  a  group  of  inter gal actic  heroes"	True	 older demographics; Star-Lord ’ s obsession	5	[' older', ' demographics', ';', ' Star', '-', 'Lord']
