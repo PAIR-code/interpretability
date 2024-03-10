@@ -1,0 +1,460 @@
+	sample_id	prompt_target	position_target	target_baseline	object	subject	generations_baseline	generations_baseline_str	is_correct_baseline	prompt_source	position_source	source_cropped_toks
+0	2	The tool that is used for x	-1	The tool that is used for cutting	knife	cutting	[' the', ' wood', ' is', ' a', ' circular', ' saw', '.', '\n', '\n', 'The', ' wood', ' is', ' then', ' sand', 'ed', ' down', ' to', ' the', ' desired', ' thickness']	" the  wood  is  a  circular  saw . 
+ 
+ The  wood  is  then  sand ed  down  to  the  desired  thickness"	False	 Stevens'ethics for cutting Duquette's LVAD	5	"[' Stevens', ""'"", 'eth', 'ics', ' for', ' cutting']"
+1	2	The tool that is used for x	-1	The tool that is used for cutting	knife	cutting	[' the', ' wood', ' is', ' a', ' circular', ' saw', '.', '\n', '\n', 'The', ' wood', ' is', ' then', ' sand', 'ed', ' down', ' to', ' the', ' desired', ' thickness']	" the  wood  is  a  circular  saw . 
+ 
+ The  wood  is  then  sand ed  down  to  the  desired  thickness"	False	 Edwards was habitually cutting himself and appeared	4	[' Edwards', ' was', ' habit', 'ually', ' cutting']
+2	2	The tool that is used for x	-1	The tool that is used for cutting	knife	cutting	[' the', ' wood', ' is', ' a', ' circular', ' saw', '.', '\n', '\n', 'The', ' wood', ' is', ' then', ' sand', 'ed', ' down', ' to', ' the', ' desired', ' thickness']	" the  wood  is  a  circular  saw . 
+ 
+ The  wood  is  then  sand ed  down  to  the  desired  thickness"	False	" ornaments and for cutting as money"", and they"	5	[' or', 'nam', 'ents', ' and', ' for', ' cutting']
+3	2	The tool that is used for x	-1	The tool that is used for cutting	knife	cutting	[' the', ' wood', ' is', ' a', ' circular', ' saw', '.', '\n', '\n', 'The', ' wood', ' is', ' then', ' sand', 'ed', ' down', ' to', ' the', ' desired', ' thickness']	" the  wood  is  a  circular  saw . 
+ 
+ The  wood  is  then  sand ed  down  to  the  desired  thickness"	False	 that involved cutting her down by one	2	[' that', ' involved', ' cutting']
+4	2	The tool that is used for x	-1	The tool that is used for cutting	knife	cutting	[' the', ' wood', ' is', ' a', ' circular', ' saw', '.', '\n', '\n', 'The', ' wood', ' is', ' then', ' sand', 'ed', ' down', ' to', ' the', ' desired', ' thickness']	" the  wood  is  a  circular  saw . 
+ 
+ The  wood  is  then  sand ed  down  to  the  desired  thickness"	False	 his third title by cutting 0.66 s from van	4	[' his', ' third', ' title', ' by', ' cutting']
+5	3	The tool that is used for x	-1	The tool that is used for drilling holes	drill	drilling holes	[' in', ' the', ' wall', ' of', ' the', ' house', '.', '\n', '\n', 'The', ' tool', ' that', ' is', ' used', ' for', ' drilling', ' holes', ' in', ' the', ' wall']	" in  the  wall  of  the  house . 
+ 
+ The  tool  that  is  used  for  drilling  holes  in  the  wall"	True	 the process of drilling holes and inserting fasteners.	4	[' the', ' process', ' of', ' drilling', ' holes']
+6	3	The tool that is used for x	-1	The tool that is used for drilling holes	drill	drilling holes	[' in', ' the', ' wall', ' of', ' the', ' house', '.', '\n', '\n', 'The', ' tool', ' that', ' is', ' used', ' for', ' drilling', ' holes', ' in', ' the', ' wall']	" in  the  wall  of  the  house . 
+ 
+ The  tool  that  is  used  for  drilling  holes  in  the  wall"	True	 can be tapped by drilling holes into their trunks	5	[' can', ' be', ' tapped', ' by', ' drilling', ' holes']
+7	3	The tool that is used for x	-1	The tool that is used for drilling holes	drill	drilling holes	[' in', ' the', ' wall', ' of', ' the', ' house', '.', '\n', '\n', 'The', ' tool', ' that', ' is', ' used', ' for', ' drilling', ' holes', ' in', ' the', ' wall']	" in  the  wall  of  the  house . 
+ 
+ The  tool  that  is  used  for  drilling  holes  in  the  wall"	True	 heavy equipment, drilling holes for the pipeline's	4	[' heavy', ' equipment', ',', ' drilling', ' holes']
+8	3	The tool that is used for x	-1	The tool that is used for drilling holes	drill	drilling holes	[' in', ' the', ' wall', ' of', ' the', ' house', '.', '\n', '\n', 'The', ' tool', ' that', ' is', ' used', ' for', ' drilling', ' holes', ' in', ' the', ' wall']	" in  the  wall  of  the  house . 
+ 
+ The  tool  that  is  used  for  drilling  holes  in  the  wall"	True	 harvested by drilling holes in the trunks of	3	[' harvested', ' by', ' drilling', ' holes']
+9	3	The tool that is used for x	-1	The tool that is used for drilling holes	drill	drilling holes	[' in', ' the', ' wall', ' of', ' the', ' house', '.', '\n', '\n', 'The', ' tool', ' that', ' is', ' used', ' for', ' drilling', ' holes', ' in', ' the', ' wall']	" in  the  wall  of  the  house . 
+ 
+ The  tool  that  is  used  for  drilling  holes  in  the  wall"	True	 can be tapped by drilling holes into their	5	[' can', ' be', ' tapped', ' by', ' drilling', ' holes']
+10	4	The tool that is used for x	-1	The tool that is used for sawing wood	saw	sawing wood	[' is', ' called', ' a', ' circular', ' saw', '.', ' It', ' is', ' a', ' tool', ' that', ' is', ' used', ' to', ' cut', ' wood', ' into', ' different', ' shapes', '.']	 is  called  a  circular  saw .  It  is  a  tool  that  is  used  to  cut  wood  into  different  shapes .	True	" manager has been' sawing wood 'and not talking""."	6	"[' manager', ' has', ' been', ""'"", ' saw', 'ing', ' wood']"
+11	8	The tool that is used for x	-1	The tool that is used for sweeping floors	broom	sweeping floors	[',', ' cleaning', ' windows', ',', ' and', ' cleaning', ' the', ' house', '.', '\n', '\n', 'The', ' best', ' way', ' to', ' clean', ' your', ' house', ' is', ' to']	",  cleaning  windows ,  and  cleaning  the  house . 
+ 
+ The  best  way  to  clean  your  house  is  to"	False	 semesters at Cumberland by sweeping floors and firing furnaces	7	[' sem', 'esters', ' at', ' Cumber', 'land', ' by', ' sweeping', ' floors']
+12	9	The tool that is used for x	-1	The tool that is used for washing dishes	sponge	washing dishes	[',', ' cleaning', ' the', ' house', ',', ' and', ' doing', ' laundry', '.', '\n', '\n', 'The', ' tool', ' that', ' is', ' used', ' for', ' washing', ' dishes', ',']	",  cleaning  the  house ,  and  doing  laundry . 
+ 
+ The  tool  that  is  used  for  washing  dishes ,"	False	 it features Utada washing dishes and drinking	5	[' it', ' features', ' Ut', 'ada', ' washing', ' dishes']
+13	9	The tool that is used for x	-1	The tool that is used for washing dishes	sponge	washing dishes	[',', ' cleaning', ' the', ' house', ',', ' and', ' doing', ' laundry', '.', '\n', '\n', 'The', ' tool', ' that', ' is', ' used', ' for', ' washing', ' dishes', ',']	",  cleaning  the  house ,  and  doing  laundry . 
+ 
+ The  tool  that  is  used  for  washing  dishes ,"	False	 Kiriya; it features Utada washing dishes and drinking	8	[' Kir', 'iya', ';', ' it', ' features', ' Ut', 'ada', ' washing', ' dishes']
+14	9	The tool that is used for x	-1	The tool that is used for washing dishes	sponge	washing dishes	[',', ' cleaning', ' the', ' house', ',', ' and', ' doing', ' laundry', '.', '\n', '\n', 'The', ' tool', ' that', ' is', ' used', ' for', ' washing', ' dishes', ',']	",  cleaning  the  house ,  and  doing  laundry . 
+ 
+ The  tool  that  is  used  for  washing  dishes ,"	False	 way across Alaska, washing dishes in Mount McKinley	5	[' way', ' across', ' Alaska', ',', ' washing', ' dishes']
+15	9	The tool that is used for x	-1	The tool that is used for washing dishes	sponge	washing dishes	[',', ' cleaning', ' the', ' house', ',', ' and', ' doing', ' laundry', '.', '\n', '\n', 'The', ' tool', ' that', ' is', ' used', ' for', ' washing', ' dishes', ',']	",  cleaning  the  house ,  and  doing  laundry . 
+ 
+ The  tool  that  is  used  for  washing  dishes ,"	False	 the United States, washing dishes and working	5	[' the', ' United', ' States', ',', ' washing', ' dishes']
+16	9	The tool that is used for x	-1	The tool that is used for washing dishes	sponge	washing dishes	[',', ' cleaning', ' the', ' house', ',', ' and', ' doing', ' laundry', '.', '\n', '\n', 'The', ' tool', ' that', ' is', ' used', ' for', ' washing', ' dishes', ',']	",  cleaning  the  house ,  and  doing  laundry . 
+ 
+ The  tool  that  is  used  for  washing  dishes ,"	False	 features Utada washing dishes and drinking	4	[' features', ' Ut', 'ada', ' washing', ' dishes']
+17	11	The tool that is used for x	-1	The tool that is used for sewing	needle and thread	sewing	[' the', ' seams', ' of', ' the', ' qu', 'ilt', ' is', ' a', ' rot', 'ary', ' cutter', ' and', ' a', ' ruler', '.', '\n', '\n', 'I', ' used', ' a']	" the  seams  of  the  qu ilt  is  a  rot ary  cutter  and  a  ruler . 
+ 
+ I  used  a"	False	 industry, as 25,000 sewing machines were	6	[' industry', ',', ' as', ' 25', ',', '000', ' sewing']
+18	11	The tool that is used for x	-1	The tool that is used for sewing	needle and thread	sewing	[' the', ' seams', ' of', ' the', ' qu', 'ilt', ' is', ' a', ' rot', 'ary', ' cutter', ' and', ' a', ' ruler', '.', '\n', '\n', 'I', ' used', ' a']	" the  seams  of  the  qu ilt  is  a  rot ary  cutter  and  a  ruler . 
+ 
+ I  used  a"	False	 freely and organize a sewing cooperative. The	4	[' freely', ' and', ' organize', ' a', ' sewing']
+19	11	The tool that is used for x	-1	The tool that is used for sewing	needle and thread	sewing	[' the', ' seams', ' of', ' the', ' qu', 'ilt', ' is', ' a', ' rot', 'ary', ' cutter', ' and', ' a', ' ruler', '.', '\n', '\n', 'I', ' used', ' a']	" the  seams  of  the  qu ilt  is  a  rot ary  cutter  and  a  ruler . 
+ 
+ I  used  a"	False	 odd jobs from sewing fuzzy dice to	3	[' odd', ' jobs', ' from', ' sewing']
+20	11	The tool that is used for x	-1	The tool that is used for sewing	needle and thread	sewing	[' the', ' seams', ' of', ' the', ' qu', 'ilt', ' is', ' a', ' rot', 'ary', ' cutter', ' and', ' a', ' ruler', '.', '\n', '\n', 'I', ' used', ' a']	" the  seams  of  the  qu ilt  is  a  rot ary  cutter  and  a  ruler . 
+ 
+ I  used  a"	False	 garment factories sewing clothing for	2	[' garment', ' factories', ' sewing']
+21	11	The tool that is used for x	-1	The tool that is used for sewing	needle and thread	sewing	[' the', ' seams', ' of', ' the', ' qu', 'ilt', ' is', ' a', ' rot', 'ary', ' cutter', ' and', ' a', ' ruler', '.', '\n', '\n', 'I', ' used', ' a']	" the  seams  of  the  qu ilt  is  a  rot ary  cutter  and  a  ruler . 
+ 
+ I  used  a"	False	 Juan, where she studied sewing and continued her	5	[' Juan', ',', ' where', ' she', ' studied', ' sewing']
+22	12	The tool that is used for x	-1	The tool that is used for knitting	yarn	knitting	[' is', ' a', ' knitting', ' needle', '.', '\n', '\n', 'The', ' needle', ' is', ' used', ' to', ' knit', ' the', ' fabric', '.', '\n', '\n', 'The', ' needle']	" is  a  knitting  needle . 
+ 
+ The  needle  is  used  to  knit  the  fabric . 
+ 
+ The  needle"	False	 weaving, spinning, knitting and embroidery	4	[' weaving', ',', ' spinning', ',', ' knitting']
+23	12	The tool that is used for x	-1	The tool that is used for knitting	yarn	knitting	[' is', ' a', ' knitting', ' needle', '.', '\n', '\n', 'The', ' needle', ' is', ' used', ' to', ' knit', ' the', ' fabric', '.', '\n', '\n', 'The', ' needle']	" is  a  knitting  needle . 
+ 
+ The  needle  is  used  to  knit  the  fabric . 
+ 
+ The  needle"	False	 unfinished knitting projects. It	1	[' unfinished', ' knitting']
+24	12	The tool that is used for x	-1	The tool that is used for knitting	yarn	knitting	[' is', ' a', ' knitting', ' needle', '.', '\n', '\n', 'The', ' needle', ' is', ' used', ' to', ' knit', ' the', ' fabric', '.', '\n', '\n', 'The', ' needle']	" is  a  knitting  needle . 
+ 
+ The  needle  is  used  to  knit  the  fabric . 
+ 
+ The  needle"	False	 performance ... knitting play together well	2	[' performance', '...', ' knitting']
+25	12	The tool that is used for x	-1	The tool that is used for knitting	yarn	knitting	[' is', ' a', ' knitting', ' needle', '.', '\n', '\n', 'The', ' needle', ' is', ' used', ' to', ' knit', ' the', ' fabric', '.', '\n', '\n', 'The', ' needle']	" is  a  knitting  needle . 
+ 
+ The  needle  is  used  to  knit  the  fabric . 
+ 
+ The  needle"	False	 he takes up knitting and stage	3	[' he', ' takes', ' up', ' knitting']
+26	12	The tool that is used for x	-1	The tool that is used for knitting	yarn	knitting	[' is', ' a', ' knitting', ' needle', '.', '\n', '\n', 'The', ' needle', ' is', ' used', ' to', ' knit', ' the', ' fabric', '.', '\n', '\n', 'The', ' needle']	" is  a  knitting  needle . 
+ 
+ The  needle  is  used  to  knit  the  fabric . 
+ 
+ The  needle"	False	 weaving, spinning, knitting and embroidery	4	[' weaving', ',', ' spinning', ',', ' knitting']
+27	13	The tool that is used for x	-1	The tool that is used for hunting	gun	hunting	[' and', ' fishing', '.', '\n', '\n', 'The', ' tool', ' that', ' is', ' used', ' for', ' hunting', ' and', ' fishing', '.', '\n', '\n', 'The', ' tool', ' that']	" and  fishing . 
+ 
+ The  tool  that  is  used  for  hunting  and  fishing . 
+ 
+ The  tool  that"	False	 Tod's normal life in hunting for food, seeking	6	"[' T', 'od', ""'s"", ' normal', ' life', ' in', ' hunting']"
+28	13	The tool that is used for x	-1	The tool that is used for hunting	gun	hunting	[' and', ' fishing', '.', '\n', '\n', 'The', ' tool', ' that', ' is', ' used', ' for', ' hunting', ' and', ' fishing', '.', '\n', '\n', 'The', ' tool', ' that']	" and  fishing . 
+ 
+ The  tool  that  is  used  for  hunting  and  fishing . 
+ 
+ The  tool  that"	False	 adjusts its hunting strategy. As gameplay	2	[' adjusts', ' its', ' hunting']
+29	13	The tool that is used for x	-1	The tool that is used for hunting	gun	hunting	[' and', ' fishing', '.', '\n', '\n', 'The', ' tool', ' that', ' is', ' used', ' for', ' hunting', ' and', ' fishing', '.', '\n', '\n', 'The', ' tool', ' that']	" and  fishing . 
+ 
+ The  tool  that  is  used  for  hunting  and  fishing . 
+ 
+ The  tool  that"	False	 more advanced at hunting and gathering and was	3	[' more', ' advanced', ' at', ' hunting']
+30	13	The tool that is used for x	-1	The tool that is used for hunting	gun	hunting	[' and', ' fishing', '.', '\n', '\n', 'The', ' tool', ' that', ' is', ' used', ' for', ' hunting', ' and', ' fishing', '.', '\n', '\n', 'The', ' tool', ' that']	" and  fishing . 
+ 
+ The  tool  that  is  used  for  hunting  and  fishing . 
+ 
+ The  tool  that"	False	 had gone on a hunting trip with various	4	[' had', ' gone', ' on', ' a', ' hunting']
+31	13	The tool that is used for x	-1	The tool that is used for hunting	gun	hunting	[' and', ' fishing', '.', '\n', '\n', 'The', ' tool', ' that', ' is', ' used', ' for', ' hunting', ' and', ' fishing', '.', '\n', '\n', 'The', ' tool', ' that']	" and  fishing . 
+ 
+ The  tool  that  is  used  for  hunting  and  fishing . 
+ 
+ The  tool  that"	False	 of treasure hunting in the Bahamas. As	2	[' of', ' treasure', ' hunting']
+32	14	The tool that is used for x	-1	The tool that is used for boating	boat	boating	"[' is', ' called', ' a', ' ""', 'p', 'addle', '"".', '\n', '\n', 'The', ' paddle', ' is', ' used', ' to', ' push', ' the', ' boat', ' forward', '.', '\n']"	" is  called  a  "" p addle "". 
+ 
+ The  paddle  is  used  to  push  the  boat  forward . 
+"	True	 has a large boating lake and a collection	4	[' has', ' a', ' large', ' bo', 'ating']
+33	14	The tool that is used for x	-1	The tool that is used for boating	boat	boating	"[' is', ' called', ' a', ' ""', 'p', 'addle', '"".', '\n', '\n', 'The', ' paddle', ' is', ' used', ' to', ' push', ' the', ' boat', ' forward', '.', '\n']"	" is  called  a  "" p addle "". 
+ 
+ The  paddle  is  used  to  push  the  boat  forward . 
+"	True	" was killed in a boating accident.
+"	5	[' was', ' killed', ' in', ' a', ' bo', 'ating']
+34	14	The tool that is used for x	-1	The tool that is used for boating	boat	boating	"[' is', ' called', ' a', ' ""', 'p', 'addle', '"".', '\n', '\n', 'The', ' paddle', ' is', ' used', ' to', ' push', ' the', ' boat', ' forward', '.', '\n']"	" is  called  a  "" p addle "". 
+ 
+ The  paddle  is  used  to  push  the  boat  forward . 
+"	True	 the water by local boating enthusiasts. During	5	[' the', ' water', ' by', ' local', ' bo', 'ating']
+35	14	The tool that is used for x	-1	The tool that is used for boating	boat	boating	"[' is', ' called', ' a', ' ""', 'p', 'addle', '"".', '\n', '\n', 'The', ' paddle', ' is', ' used', ' to', ' push', ' the', ' boat', ' forward', '.', '\n']"	" is  called  a  "" p addle "". 
+ 
+ The  paddle  is  used  to  push  the  boat  forward . 
+"	True	 tennis facilities, a boating pond, a treetop	5	[' tennis', ' facilities', ',', ' a', ' bo', 'ating']
+36	14	The tool that is used for x	-1	The tool that is used for boating	boat	boating	"[' is', ' called', ' a', ' ""', 'p', 'addle', '"".', '\n', '\n', 'The', ' paddle', ' is', ' used', ' to', ' push', ' the', ' boat', ' forward', '.', '\n']"	" is  called  a  "" p addle "". 
+ 
+ The  paddle  is  used  to  push  the  boat  forward . 
+"	True	 hazardous for boating or kayaking; both	3	[' hazardous', ' for', ' bo', 'ating']
+37	17	The tool that is used for x	-1	The tool that is used for baking	oven	baking	[' the', ' bread', ' is', ' a', ' Kitchen', 'Aid', ' stand', ' mixer', '.', ' I', ' have', ' had', ' this', ' one', ' for', ' years', ' and', ' it', ' is', ' still']	 the  bread  is  a  Kitchen Aid  stand  mixer .  I  have  had  this  one  for  years  and  it  is  still	False	 the culinary arts, baking and pastry arts, and	4	[' the', ' culinary', ' arts', ',', ' baking']
+38	17	The tool that is used for x	-1	The tool that is used for baking	oven	baking	[' the', ' bread', ' is', ' a', ' Kitchen', 'Aid', ' stand', ' mixer', '.', ' I', ' have', ' had', ' this', ' one', ' for', ' years', ' and', ' it', ' is', ' still']	 the  bread  is  a  Kitchen Aid  stand  mixer .  I  have  had  this  one  for  years  and  it  is  still	False	 specializing in culinary and baking and pastry arts education.	4	[' specializing', ' in', ' culinary', ' and', ' baking']
+39	17	The tool that is used for x	-1	The tool that is used for baking	oven	baking	[' the', ' bread', ' is', ' a', ' Kitchen', 'Aid', ' stand', ' mixer', '.', ' I', ' have', ' had', ' this', ' one', ' for', ' years', ' and', ' it', ' is', ' still']	 the  bread  is  a  Kitchen Aid  stand  mixer .  I  have  had  this  one  for  years  and  it  is  still	False	 skillful in baking sweet foods, though	3	[' skill', 'ful', ' in', ' baking']
+40	17	The tool that is used for x	-1	The tool that is used for baking	oven	baking	[' the', ' bread', ' is', ' a', ' Kitchen', 'Aid', ' stand', ' mixer', '.', ' I', ' have', ' had', ' this', ' one', ' for', ' years', ' and', ' it', ' is', ' still']	 the  bread  is  a  Kitchen Aid  stand  mixer .  I  have  had  this  one  for  years  and  it  is  still	False	 hanging laundry and baking cakes. She milks the	3	[' hanging', ' laundry', ' and', ' baking']
+41	17	The tool that is used for x	-1	The tool that is used for baking	oven	baking	[' the', ' bread', ' is', ' a', ' Kitchen', 'Aid', ' stand', ' mixer', '.', ' I', ' have', ' had', ' this', ' one', ' for', ' years', ' and', ' it', ' is', ' still']	 the  bread  is  a  Kitchen Aid  stand  mixer .  I  have  had  this  one  for  years  and  it  is  still	False	 water or stock, or baking them in a	5	[' water', ' or', ' stock', ',', ' or', ' baking']
+42	21	The tool that is used for x	-1	The tool that is used for cleaning windows	squeegee	cleaning windows	[' is', ' called', ' a', ' window', ' cleaner', '.', ' It', ' is', ' a', ' tool', ' that', ' is', ' used', ' to', ' clean', ' windows', '.', ' It', ' is', ' used']	 is  called  a  window  cleaner .  It  is  a  tool  that  is  used  to  clean  windows .  It  is  used	False	 making cream teas, cleaning windows and scrubbing toilets.	6	[' making', ' cream', ' te', 'as', ',', ' cleaning', ' windows']
+43	21	The tool that is used for x	-1	The tool that is used for cleaning windows	squeegee	cleaning windows	[' is', ' called', ' a', ' window', ' cleaner', '.', ' It', ' is', ' a', ' tool', ' that', ' is', ' used', ' to', ' clean', ' windows', '.', ' It', ' is', ' used']	 is  called  a  window  cleaner .  It  is  a  tool  that  is  used  to  clean  windows .  It  is  used	False	 cream teas, cleaning windows and scrubbing	5	[' cream', ' te', 'as', ',', ' cleaning', ' windows']
+44	23	The tool that is used for x	-1	The tool that is used for washing clothes	washing machine	washing clothes	[' is', ' called', ' a', ' washing', ' machine', '.', '\n', '\n', 'The', ' tool', ' that', ' is', ' used', ' for', ' washing', ' clothes', ' is', ' called', ' a', ' washing']	" is  called  a  washing  machine . 
+ 
+ The  tool  that  is  used  for  washing  clothes  is  called  a  washing"	True	 August), such as washing clothes and herding	5	[' August', '),', ' such', ' as', ' washing', ' clothes']
+45	23	The tool that is used for x	-1	The tool that is used for washing clothes	washing machine	washing clothes	[' is', ' called', ' a', ' washing', ' machine', '.', '\n', '\n', 'The', ' tool', ' that', ' is', ' used', ' for', ' washing', ' clothes', ' is', ' called', ' a', ' washing']	" is  called  a  washing  machine . 
+ 
+ The  tool  that  is  used  for  washing  clothes  is  called  a  washing"	True	 August), such as washing clothes and herding	5	[' August', '),', ' such', ' as', ' washing', ' clothes']
+46	23	The tool that is used for x	-1	The tool that is used for washing clothes	washing machine	washing clothes	[' is', ' called', ' a', ' washing', ' machine', '.', '\n', '\n', 'The', ' tool', ' that', ' is', ' used', ' for', ' washing', ' clothes', ' is', ' called', ' a', ' washing']	" is  called  a  washing  machine . 
+ 
+ The  tool  that  is  used  for  washing  clothes  is  called  a  washing"	True	 August), such as washing clothes and herding cattle.	5	[' August', '),', ' such', ' as', ' washing', ' clothes']
+47	23	The tool that is used for x	-1	The tool that is used for washing clothes	washing machine	washing clothes	[' is', ' called', ' a', ' washing', ' machine', '.', '\n', '\n', 'The', ' tool', ' that', ' is', ' used', ' for', ' washing', ' clothes', ' is', ' called', ' a', ' washing']	" is  called  a  washing  machine . 
+ 
+ The  tool  that  is  used  for  washing  clothes  is  called  a  washing"	True	 August), such as washing clothes and herding cattle.	5	[' August', '),', ' such', ' as', ' washing', ' clothes']
+48	24	The tool that is used for x	-1	The tool that is used for drying clothes	clothesline	drying clothes	[' is', ' called', ' a', ' clothes', ' dry', 'er', '.', ' It', ' is', ' a', ' machine', ' that', ' uses', ' heat', ' to', ' dry', ' clothes', '.', ' It', ' is']	 is  called  a  clothes  dry er .  It  is  a  machine  that  uses  heat  to  dry  clothes .  It  is	False		2	['d', 'rying', ' clothes']
+49	24	The tool that is used for x	-1	The tool that is used for drying clothes	clothesline	drying clothes	[' is', ' called', ' a', ' clothes', ' dry', 'er', '.', ' It', ' is', ' a', ' machine', ' that', ' uses', ' heat', ' to', ' dry', ' clothes', '.', ' It', ' is']	 is  called  a  clothes  dry er .  It  is  a  machine  that  uses  heat  to  dry  clothes .  It  is	False	 of space, such as drying clothes after process and	6	[' of', ' space', ',', ' such', ' as', ' drying', ' clothes']
+50	28	The tool that is used for x	-1	The tool that is used for hiking	hiking boots	hiking	[',', ' camping', ',', ' and', ' other', ' outdoor', ' activities', '.', '\n', '\n', 'The', ' best', ' thing', ' about', ' this', ' tool', ' is', ' that', ' it', ' is']	",  camping ,  and  other  outdoor  activities . 
+ 
+ The  best  thing  about  this  tool  is  that  it  is"	False	" that ""I go hiking a lot, and"	4	"[' that', ' ""', 'I', ' go', ' hiking']"
+51	28	The tool that is used for x	-1	The tool that is used for hiking	hiking boots	hiking	[',', ' camping', ',', ' and', ' other', ' outdoor', ' activities', '.', '\n', '\n', 'The', ' best', ' thing', ' about', ' this', ' tool', ' is', ' that', ' it', ' is']	",  camping ,  and  other  outdoor  activities . 
+ 
+ The  best  thing  about  this  tool  is  that  it  is"	False	 flood waters while hiking in a closed state	3	[' flood', ' waters', ' while', ' hiking']
+52	28	The tool that is used for x	-1	The tool that is used for hiking	hiking boots	hiking	[',', ' camping', ',', ' and', ' other', ' outdoor', ' activities', '.', '\n', '\n', 'The', ' best', ' thing', ' about', ' this', ' tool', ' is', ' that', ' it', ' is']	",  camping ,  and  other  outdoor  activities . 
+ 
+ The  best  thing  about  this  tool  is  that  it  is"	False	 wildlife, in addition to hiking and biking. It	5	[' wildlife', ',', ' in', ' addition', ' to', ' hiking']
+53	28	The tool that is used for x	-1	The tool that is used for hiking	hiking boots	hiking	[',', ' camping', ',', ' and', ' other', ' outdoor', ' activities', '.', '\n', '\n', 'The', ' best', ' thing', ' about', ' this', ' tool', ' is', ' that', ' it', ' is']	",  camping ,  and  other  outdoor  activities . 
+ 
+ The  best  thing  about  this  tool  is  that  it  is"	False	 Birkenstocks, hiking boots, and eco-friendly	4	[' Bir', 'ken', 'stocks', ',', ' hiking']
+54	28	The tool that is used for x	-1	The tool that is used for hiking	hiking boots	hiking	[',', ' camping', ',', ' and', ' other', ' outdoor', ' activities', '.', '\n', '\n', 'The', ' best', ' thing', ' about', ' this', ' tool', ' is', ' that', ' it', ' is']	",  camping ,  and  other  outdoor  activities . 
+ 
+ The  best  thing  about  this  tool  is  that  it  is"	False	 Many public parks, hiking trails, and	4	[' Many', ' public', ' parks', ',', ' hiking']
+55	29	The tool that is used for x	-1	The tool that is used for biking	bicycle	biking	[' is', ' a', ' bicycle', '.', '\n', '\n', 'The', ' tool', ' that', ' is', ' used', ' for', ' biking', ' is', ' a', ' bicycle', '.', '\n', '\n', 'The']	" is  a  bicycle . 
+ 
+ The  tool  that  is  used  for  biking  is  a  bicycle . 
+ 
+ The"	True	 the mountain biking competition	2	[' the', ' mountain', ' biking']
+56	29	The tool that is used for x	-1	The tool that is used for biking	bicycle	biking	[' is', ' a', ' bicycle', '.', '\n', '\n', 'The', ' tool', ' that', ' is', ' used', ' for', ' biking', ' is', ' a', ' bicycle', '.', '\n', '\n', 'The']	" is  a  bicycle . 
+ 
+ The  tool  that  is  used  for  biking  is  a  bicycle . 
+ 
+ The"	True	" itself; mountain biking is not allowed.
+"	3	[' itself', ';', ' mountain', ' biking']
+57	29	The tool that is used for x	-1	The tool that is used for biking	bicycle	biking	[' is', ' a', ' bicycle', '.', '\n', '\n', 'The', ' tool', ' that', ' is', ' used', ' for', ' biking', ' is', ' a', ' bicycle', '.', '\n', '\n', 'The']	" is  a  bicycle . 
+ 
+ The  tool  that  is  used  for  biking  is  a  bicycle . 
+ 
+ The"	True	 hiking and biking trails follow	2	[' hiking', ' and', ' biking']
+58	29	The tool that is used for x	-1	The tool that is used for biking	bicycle	biking	[' is', ' a', ' bicycle', '.', '\n', '\n', 'The', ' tool', ' that', ' is', ' used', ' for', ' biking', ' is', ' a', ' bicycle', '.', '\n', '\n', 'The']	" is  a  bicycle . 
+ 
+ The  tool  that  is  used  for  biking  is  a  bicycle . 
+ 
+ The"	True	 riding and mountain biking are not permitted	3	[' riding', ' and', ' mountain', ' biking']
+59	29	The tool that is used for x	-1	The tool that is used for biking	bicycle	biking	[' is', ' a', ' bicycle', '.', '\n', '\n', 'The', ' tool', ' that', ' is', ' used', ' for', ' biking', ' is', ' a', ' bicycle', '.', '\n', '\n', 'The']	" is  a  bicycle . 
+ 
+ The  tool  that  is  used  for  biking  is  a  bicycle . 
+ 
+ The"	True	" itself; mountain biking is not allowed.
+"	3	[' itself', ';', ' mountain', ' biking']
+60	30	The tool that is used for x	-1	The tool that is used for swimming	swimsuit	swimming	[' is', ' a', ' swimming', ' pool', '.', ' The', ' swimming', ' pool', ' is', ' a', ' place', ' where', ' you', ' can', ' swim', ' in', ' the', ' water', '.', ' The']	 is  a  swimming  pool .  The  swimming  pool  is  a  place  where  you  can  swim  in  the  water .  The	False	 rigidity, and erratic swimming behavior; death follows	5	[' rig', 'idity', ',', ' and', ' erratic', ' swimming']
+61	30	The tool that is used for x	-1	The tool that is used for swimming	swimsuit	swimming	[' is', ' a', ' swimming', ' pool', '.', ' The', ' swimming', ' pool', ' is', ' a', ' place', ' where', ' you', ' can', ' swim', ' in', ' the', ' water', '.', ' The']	 is  a  swimming  pool .  The  swimming  pool  is  a  place  where  you  can  swim  in  the  water .  The	False	 on a secret swimming pool. He posts this	3	[' on', ' a', ' secret', ' swimming']
+62	30	The tool that is used for x	-1	The tool that is used for swimming	swimsuit	swimming	[' is', ' a', ' swimming', ' pool', '.', ' The', ' swimming', ' pool', ' is', ' a', ' place', ' where', ' you', ' can', ' swim', ' in', ' the', ' water', '.', ' The']	 is  a  swimming  pool .  The  swimming  pool  is  a  place  where  you  can  swim  in  the  water .  The	False	 sports, such as swimming and surfing.	4	[' sports', ',', ' such', ' as', ' swimming']
+63	30	The tool that is used for x	-1	The tool that is used for swimming	swimsuit	swimming	[' is', ' a', ' swimming', ' pool', '.', ' The', ' swimming', ' pool', ' is', ' a', ' place', ' where', ' you', ' can', ' swim', ' in', ' the', ' water', '.', ' The']	 is  a  swimming  pool .  The  swimming  pool  is  a  place  where  you  can  swim  in  the  water .  The	False	 Championships in five swimming events. She and	3	[' Championships', ' in', ' five', ' swimming']
+64	30	The tool that is used for x	-1	The tool that is used for swimming	swimsuit	swimming	[' is', ' a', ' swimming', ' pool', '.', ' The', ' swimming', ' pool', ' is', ' a', ' place', ' where', ' you', ' can', ' swim', ' in', ' the', ' water', '.', ' The']	 is  a  swimming  pool .  The  swimming  pool  is  a  place  where  you  can  swim  in  the  water .  The	False	" from competitive swimming at the age of 21.
+"	2	[' from', ' competitive', ' swimming']
+65	31	The tool that is used for x	-1	The tool that is used for cooking	stove	cooking	[' is', ' a', ' knife', '.', '\n', '\n', 'The', ' knife', ' is', ' used', ' to', ' cut', ' the', ' meat', ',', ' vegetables', ',', ' and', ' other', ' food']	" is  a  knife . 
+ 
+ The  knife  is  used  to  cut  the  meat ,  vegetables ,  and  other  food"	False	 facility, from cooking to shoemaking, and	3	[' facility', ',', ' from', ' cooking']
+66	31	The tool that is used for x	-1	The tool that is used for cooking	stove	cooking	[' is', ' a', ' knife', '.', '\n', '\n', 'The', ' knife', ' is', ' used', ' to', ' cut', ' the', ' meat', ',', ' vegetables', ',', ' and', ' other', ' food']	" is  a  knife . 
+ 
+ The  knife  is  used  to  cut  the  meat ,  vegetables ,  and  other  food"	False	 hosted her own cooking show series, Nigella	3	[' hosted', ' her', ' own', ' cooking']
+67	31	The tool that is used for x	-1	The tool that is used for cooking	stove	cooking	[' is', ' a', ' knife', '.', '\n', '\n', 'The', ' knife', ' is', ' used', ' to', ' cut', ' the', ' meat', ',', ' vegetables', ',', ' and', ' other', ' food']	" is  a  knife . 
+ 
+ The  knife  is  used  to  cut  the  meat ,  vegetables ,  and  other  food"	False	 a style of cooking developed in the Indian	3	[' a', ' style', ' of', ' cooking']
+68	31	The tool that is used for x	-1	The tool that is used for cooking	stove	cooking	[' is', ' a', ' knife', '.', '\n', '\n', 'The', ' knife', ' is', ' used', ' to', ' cut', ' the', ' meat', ',', ' vegetables', ',', ' and', ' other', ' food']	" is  a  knife . 
+ 
+ The  knife  is  used  to  cut  the  meat ,  vegetables ,  and  other  food"	False	 preference for British cooking methods is apparent	3	[' preference', ' for', ' British', ' cooking']
+69	31	The tool that is used for x	-1	The tool that is used for cooking	stove	cooking	[' is', ' a', ' knife', '.', '\n', '\n', 'The', ' knife', ' is', ' used', ' to', ' cut', ' the', ' meat', ',', ' vegetables', ',', ' and', ' other', ' food']	" is  a  knife . 
+ 
+ The  knife  is  used  to  cut  the  meat ,  vegetables ,  and  other  food"	False	 with to cheat in a cooking contest, but	5	[' with', ' to', ' cheat', ' in', ' a', ' cooking']
+70	32	The tool that is used for x	-1	The tool that is used for writing	pen and paper	writing	"[' the', ' code', ' is', ' called', ' a', ' ""', 'code', ' generator', '"".', '\n', '\n', 'The', ' code', ' generator', ' is', ' a', ' tool', ' that', ' generates', ' the']"	" the  code  is  called  a  "" code  generator "". 
+ 
+ The  code  generator  is  a  tool  that  generates  the"	False	 film with McCarthy writing the film and act	3	[' film', ' with', ' McCarthy', ' writing']
+71	32	The tool that is used for x	-1	The tool that is used for writing	pen and paper	writing	"[' the', ' code', ' is', ' called', ' a', ' ""', 'code', ' generator', '"".', '\n', '\n', 'The', ' code', ' generator', ' is', ' a', ' tool', ' that', ' generates', ' the']"	" the  code  is  called  a  "" code  generator "". 
+ 
+ The  code  generator  is  a  tool  that  generates  the"	False	 decided to combine the writing element with a puzzle	4	[' decided', ' to', ' combine', ' the', ' writing']
+72	32	The tool that is used for x	-1	The tool that is used for writing	pen and paper	writing	"[' the', ' code', ' is', ' called', ' a', ' ""', 'code', ' generator', '"".', '\n', '\n', 'The', ' code', ' generator', ' is', ' a', ' tool', ' that', ' generates', ' the']"	" the  code  is  called  a  "" code  generator "". 
+ 
+ The  code  generator  is  a  tool  that  generates  the"	False	 Traister began writing about the	3	[' Tra', 'ister', ' began', ' writing']
+73	32	The tool that is used for x	-1	The tool that is used for writing	pen and paper	writing	"[' the', ' code', ' is', ' called', ' a', ' ""', 'code', ' generator', '"".', '\n', '\n', 'The', ' code', ' generator', ' is', ' a', ' tool', ' that', ' generates', ' the']"	" the  code  is  called  a  "" code  generator "". 
+ 
+ The  code  generator  is  a  tool  that  generates  the"	False	 film that he began writing Bad Grass Never Dies	4	[' film', ' that', ' he', ' began', ' writing']
+74	32	The tool that is used for x	-1	The tool that is used for writing	pen and paper	writing	"[' the', ' code', ' is', ' called', ' a', ' ""', 'code', ' generator', '"".', '\n', '\n', 'The', ' code', ' generator', ' is', ' a', ' tool', ' that', ' generates', ' the']"	" the  code  is  called  a  "" code  generator "". 
+ 
+ The  code  generator  is  a  tool  that  generates  the"	False	 Runner and the writing of author Philip K.	3	[' Runner', ' and', ' the', ' writing']
+75	33	The tool that is used for x	-1	The tool that is used for drawing	pencil and sketchbook	drawing	"[' the', ' line', ' between', ' the', ' two', ' is', ' the', ' ""', 'line', '""', ' function', '.', '\n', '\n', 'The', ' line', ' function', ' is', ' used', ' to']"	" the  line  between  the  two  is  the  "" line ""  function . 
+ 
+ The  line  function  is  used  to"	False	 and is made by drawing a set of circles	4	[' and', ' is', ' made', ' by', ' drawing']
+76	33	The tool that is used for x	-1	The tool that is used for drawing	pencil and sketchbook	drawing	"[' the', ' line', ' between', ' the', ' two', ' is', ' the', ' ""', 'line', '""', ' function', '.', '\n', '\n', 'The', ' line', ' function', ' is', ' used', ' to']"	" the  line  between  the  two  is  the  "" line ""  function . 
+ 
+ The  line  function  is  used  to"	False	 urinating in the yard; drawing water before it had	6	[' ur', 'inating', ' in', ' the', ' yard', ';', ' drawing']
+77	33	The tool that is used for x	-1	The tool that is used for drawing	pencil and sketchbook	drawing	"[' the', ' line', ' between', ' the', ' two', ' is', ' the', ' ""', 'line', '""', ' function', '.', '\n', '\n', 'The', ' line', ' function', ' is', ' used', ' to']"	" the  line  between  the  two  is  the  "" line ""  function . 
+ 
+ The  line  function  is  used  to"	False	 on 9 February 1964, drawing an estimated 73	5	[' on', ' 9', ' February', ' 1964', ',', ' drawing']
+78	33	The tool that is used for x	-1	The tool that is used for drawing	pencil and sketchbook	drawing	"[' the', ' line', ' between', ' the', ' two', ' is', ' the', ' ""', 'line', '""', ' function', '.', '\n', '\n', 'The', ' line', ' function', ' is', ' used', ' to']"	" the  line  between  the  two  is  the  "" line ""  function . 
+ 
+ The  line  function  is  used  to"	False	 papers were drawing notice in the	2	[' papers', ' were', ' drawing']
+79	33	The tool that is used for x	-1	The tool that is used for drawing	pencil and sketchbook	drawing	"[' the', ' line', ' between', ' the', ' two', ' is', ' the', ' ""', 'line', '""', ' function', '.', '\n', '\n', 'The', ' line', ' function', ' is', ' used', ' to']"	" the  line  between  the  two  is  the  "" line ""  function . 
+ 
+ The  line  function  is  used  to"	False	" in a relationship, drawing references to fairytales.
+"	4	[' in', ' a', ' relationship', ',', ' drawing']
+80	34	The tool that is used for x	-1	The tool that is used for gardening	gardening gloves	gardening	[' is', ' a', ' tool', ' that', ' is', ' used', ' for', ' gardening', '.', '\n', '\n', 'The', ' tool', ' that', ' is', ' used', ' for', ' gardening', ' is', ' a']	" is  a  tool  that  is  used  for  gardening . 
+ 
+ The  tool  that  is  used  for  gardening  is  a"	False	" endless landscape gardening of our self"" and"	2	[' endless', ' landscape', ' gardening']
+81	34	The tool that is used for x	-1	The tool that is used for gardening	gardening gloves	gardening	[' is', ' a', ' tool', ' that', ' is', ' used', ' for', ' gardening', '.', '\n', '\n', 'The', ' tool', ' that', ' is', ' used', ' for', ' gardening', ' is', ' a']	" is  a  tool  that  is  used  for  gardening . 
+ 
+ The  tool  that  is  used  for  gardening  is  a"	False	 the importance of gardening in education.	3	[' the', ' importance', ' of', ' gardening']
+82	34	The tool that is used for x	-1	The tool that is used for gardening	gardening gloves	gardening	[' is', ' a', ' tool', ' that', ' is', ' used', ' for', ' gardening', '.', '\n', '\n', 'The', ' tool', ' that', ' is', ' used', ' for', ' gardening', ' is', ' a']	" is  a  tool  that  is  used  for  gardening . 
+ 
+ The  tool  that  is  used  for  gardening  is  a"	False	 dressed in gardening attire, seated	2	[' dressed', ' in', ' gardening']
+83	34	The tool that is used for x	-1	The tool that is used for gardening	gardening gloves	gardening	[' is', ' a', ' tool', ' that', ' is', ' used', ' for', ' gardening', '.', '\n', '\n', 'The', ' tool', ' that', ' is', ' used', ' for', ' gardening', ' is', ' a']	" is  a  tool  that  is  used  for  gardening . 
+ 
+ The  tool  that  is  used  for  gardening  is  a"	False	 woodchip mulch used in gardening and landscaping),	6	[' wood', 'chip', ' mul', 'ch', ' used', ' in', ' gardening']
+84	34	The tool that is used for x	-1	The tool that is used for gardening	gardening gloves	gardening	[' is', ' a', ' tool', ' that', ' is', ' used', ' for', ' gardening', '.', '\n', '\n', 'The', ' tool', ' that', ' is', ' used', ' for', ' gardening', ' is', ' a']	" is  a  tool  that  is  used  for  gardening . 
+ 
+ The  tool  that  is  used  for  gardening  is  a"	False	 penetrate leather gardening gloves. The	2	[' penetrate', ' leather', ' gardening']
+85	35	The tool that is used for x	-1	The tool that is used for photography	camera	photography	[' is', ' a', ' camera', '.', '\n', '\n', 'The', ' camera', ' is', ' a', ' tool', ' that', ' is', ' used', ' to', ' capture', ' images', '.', '\n', '\n']	" is  a  camera . 
+ 
+ The  camera  is  a  tool  that  is  used  to  capture  images . 
+ 
+"	True	 Friedman's 2005 photography book Recognize	3	"[' Friedman', ""'s"", ' 2005', ' photography']"
+86	35	The tool that is used for x	-1	The tool that is used for photography	camera	photography	[' is', ' a', ' camera', '.', '\n', '\n', 'The', ' camera', ' is', ' a', ' tool', ' that', ' is', ' used', ' to', ' capture', ' images', '.', '\n', '\n']	" is  a  camera . 
+ 
+ The  camera  is  a  tool  that  is  used  to  capture  images . 
+ 
+"	True	 Semmelmeyer, a photography shop in Chicago,	5	[' Sem', 'mel', 'meyer', ',', ' a', ' photography']
+87	35	The tool that is used for x	-1	The tool that is used for photography	camera	photography	[' is', ' a', ' camera', '.', '\n', '\n', 'The', ' camera', ' is', ' a', ' tool', ' that', ' is', ' used', ' to', ' capture', ' images', '.', '\n', '\n']	" is  a  camera . 
+ 
+ The  camera  is  a  tool  that  is  used  to  capture  images . 
+ 
+"	True		1	['phot', 'ography']
+88	35	The tool that is used for x	-1	The tool that is used for photography	camera	photography	[' is', ' a', ' camera', '.', '\n', '\n', 'The', ' camera', ' is', ' a', ' tool', ' that', ' is', ' used', ' to', ' capture', ' images', '.', '\n', '\n']	" is  a  camera . 
+ 
+ The  camera  is  a  tool  that  is  used  to  capture  images . 
+ 
+"	True	 history of photography not only because	2	[' history', ' of', ' photography']
+89	35	The tool that is used for x	-1	The tool that is used for photography	camera	photography	[' is', ' a', ' camera', '.', '\n', '\n', 'The', ' camera', ' is', ' a', ' tool', ' that', ' is', ' used', ' to', ' capture', ' images', '.', '\n', '\n']	" is  a  camera . 
+ 
+ The  camera  is  a  tool  that  is  used  to  capture  images . 
+ 
+"	True	 recent Japanese photography and art “ Heavy	2	[' recent', ' Japanese', ' photography']
+90	36	The tool that is used for x	-1	The tool that is used for playing sports	ball	playing sports	[' is', ' called', ' a', ' bat', '.', ' The', ' bat', ' is', ' used', ' to', ' hit', ' the', ' ball', '.', ' The', ' ball', ' is', ' a', ' round', ' object']	 is  called  a  bat .  The  bat  is  used  to  hit  the  ball .  The  ball  is  a  round  object	True	" his standing from playing sports for money.
+"	4	[' his', ' standing', ' from', ' playing', ' sports']
+91	36	The tool that is used for x	-1	The tool that is used for playing sports	ball	playing sports	[' is', ' called', ' a', ' bat', '.', ' The', ' bat', ' is', ' used', ' to', ' hit', ' the', ' ball', '.', ' The', ' ball', ' is', ' a', ' round', ' object']	 is  called  a  bat .  The  bat  is  used  to  hit  the  ball .  The  ball  is  a  round  object	True	 teenage years playing sports for Lovington	3	[' teenage', ' years', ' playing', ' sports']
+92	36	The tool that is used for x	-1	The tool that is used for playing sports	ball	playing sports	[' is', ' called', ' a', ' bat', '.', ' The', ' bat', ' is', ' used', ' to', ' hit', ' the', ' ball', '.', ' The', ' ball', ' is', ' a', ' round', ' object']	 is  called  a  bat .  The  bat  is  used  to  hit  the  ball .  The  ball  is  a  round  object	True	 not approve of playing sports on Sundays.	4	[' not', ' approve', ' of', ' playing', ' sports']
+93	36	The tool that is used for x	-1	The tool that is used for playing sports	ball	playing sports	[' is', ' called', ' a', ' bat', '.', ' The', ' bat', ' is', ' used', ' to', ' hit', ' the', ' ball', '.', ' The', ' ball', ' is', ' a', ' round', ' object']	 is  called  a  bat .  The  bat  is  used  to  hit  the  ball .  The  ball  is  a  round  object	True	 In addition to playing sports (including volleyball,	4	[' In', ' addition', ' to', ' playing', ' sports']
+94	36	The tool that is used for x	-1	The tool that is used for playing sports	ball	playing sports	[' is', ' called', ' a', ' bat', '.', ' The', ' bat', ' is', ' used', ' to', ' hit', ' the', ' ball', '.', ' The', ' ball', ' is', ' a', ' round', ' object']	 is  called  a  bat .  The  bat  is  used  to  hit  the  ball .  The  ball  is  a  round  object	True	 not approve of playing sports on Sundays. Reynolds	4	[' not', ' approve', ' of', ' playing', ' sports']
+95	37	The tool that is used for x	-1	The tool that is used for exercising	dumbbells	exercising	[' the', ' muscles', ' of', ' the', ' body', '.', '\n', '\n', 'The', ' word', ' �', '�', 'ex', 'ercise', '�', '�', ' is', ' derived', ' from', ' the']	" the  muscles  of  the  body . 
+ 
+ The  word  � � ex ercise � �  is  derived  from  the"	False	 options before exercising your constitutional	2	[' options', ' before', ' exercising']
+96	37	The tool that is used for x	-1	The tool that is used for exercising	dumbbells	exercising	[' the', ' muscles', ' of', ' the', ' body', '.', '\n', '\n', 'The', ' word', ' �', '�', 'ex', 'ercise', '�', '�', ' is', ' derived', ' from', ' the']	" the  muscles  of  the  body . 
+ 
+ The  word  � � ex ercise � �  is  derived  from  the"	False	 duties in 1701, and exercising his power	6	[' duties', ' in', ' 17', '01', ',', ' and', ' exercising']
+97	37	The tool that is used for x	-1	The tool that is used for exercising	dumbbells	exercising	[' the', ' muscles', ' of', ' the', ' body', '.', '\n', '\n', 'The', ' word', ' �', '�', 'ex', 'ercise', '�', '�', ' is', ' derived', ' from', ' the']	" the  muscles  of  the  body . 
+ 
+ The  word  � � ex ercise � �  is  derived  from  the"	False	 experimentation, exercising more control over	2	[' experimentation', ',', ' exercising']
+98	37	The tool that is used for x	-1	The tool that is used for exercising	dumbbells	exercising	[' the', ' muscles', ' of', ' the', ' body', '.', '\n', '\n', 'The', ' word', ' �', '�', 'ex', 'ercise', '�', '�', ' is', ' derived', ' from', ' the']	" the  muscles  of  the  body . 
+ 
+ The  word  � � ex ercise � �  is  derived  from  the"	False	 themselves from exercising their discretion.	2	[' themselves', ' from', ' exercising']
+99	37	The tool that is used for x	-1	The tool that is used for exercising	dumbbells	exercising	[' the', ' muscles', ' of', ' the', ' body', '.', '\n', '\n', 'The', ' word', ' �', '�', 'ex', 'ercise', '�', '�', ' is', ' derived', ' from', ' the']	" the  muscles  of  the  body . 
+ 
+ The  word  � � ex ercise � �  is  derived  from  the"	False	 mentioning water, exercising horses and the	3	[' mentioning', ' water', ',', ' exercising']
+100	38	The tool that is used for x	-1	The tool that is used for dancing	music	dancing	[',', ' singing', ',', ' and', ' playing', ' music', '.', '\n', '\n', 'The', ' tool', ' that', ' is', ' used', ' for', ' dancing', ',', ' singing', ',', ' and']	",  singing ,  and  playing  music . 
+ 
+ The  tool  that  is  used  for  dancing ,  singing ,  and"	True	 movements in their dancing to make a	3	[' movements', ' in', ' their', ' dancing']
+101	38	The tool that is used for x	-1	The tool that is used for dancing	music	dancing	[',', ' singing', ',', ' and', ' playing', ' music', '.', '\n', '\n', 'The', ' tool', ' that', ' is', ' used', ' for', ' dancing', ',', ' singing', ',', ' and']	",  singing ,  and  playing  music . 
+ 
+ The  tool  that  is  used  for  dancing ,  singing ,  and"	True	 surprise singing and dancing mall performances	3	[' surprise', ' singing', ' and', ' dancing']
+102	38	The tool that is used for x	-1	The tool that is used for dancing	music	dancing	[',', ' singing', ',', ' and', ' playing', ' music', '.', '\n', '\n', 'The', ' tool', ' that', ' is', ' used', ' for', ' dancing', ',', ' singing', ',', ' and']	",  singing ,  and  playing  music . 
+ 
+ The  tool  that  is  used  for  dancing ,  singing ,  and"	True	 to suppress dancing and events like	2	[' to', ' suppress', ' dancing']
+103	38	The tool that is used for x	-1	The tool that is used for dancing	music	dancing	[',', ' singing', ',', ' and', ' playing', ' music', '.', '\n', '\n', 'The', ' tool', ' that', ' is', ' used', ' for', ' dancing', ',', ' singing', ',', ' and']	",  singing ,  and  playing  music . 
+ 
+ The  tool  that  is  used  for  dancing ,  singing ,  and"	True	 balloon, and dancing alongside several	3	[' balloon', ',', ' and', ' dancing']
+104	38	The tool that is used for x	-1	The tool that is used for dancing	music	dancing	[',', ' singing', ',', ' and', ' playing', ' music', '.', '\n', '\n', 'The', ' tool', ' that', ' is', ' used', ' for', ' dancing', ',', ' singing', ',', ' and']	",  singing ,  and  playing  music . 
+ 
+ The  tool  that  is  used  for  dancing ,  singing ,  and"	True	" perform ""Breathe on Me"", dancing on a giant picture"	8	"[' perform', ' ""', 'B', 'reat', 'he', ' on', ' Me', '"",', ' dancing']"
+105	39	The tool that is used for x	-1	The tool that is used for watching movies	television	watching movies	[' and', ' TV', ' shows', ' on', ' your', ' computer', '.', '\n', '\n', 'The', ' tool', ' that', ' is', ' used', ' for', ' watching', ' movies', ' and', ' TV', ' shows']	" and  TV  shows  on  your  computer . 
+ 
+ The  tool  that  is  used  for  watching  movies  and  TV  shows"	False	 Latin music, watching movies and relaxing	4	[' Latin', ' music', ',', ' watching', ' movies']
+106	39	The tool that is used for x	-1	The tool that is used for watching movies	television	watching movies	[' and', ' TV', ' shows', ' on', ' your', ' computer', '.', '\n', '\n', 'The', ' tool', ' that', ' is', ' used', ' for', ' watching', ' movies', ' and', ' TV', ' shows']	" and  TV  shows  on  your  computer . 
+ 
+ The  tool  that  is  used  for  watching  movies  and  TV  shows"	False	 to Latin music, watching movies and relaxing	5	[' to', ' Latin', ' music', ',', ' watching', ' movies']
+107	39	The tool that is used for x	-1	The tool that is used for watching movies	television	watching movies	[' and', ' TV', ' shows', ' on', ' your', ' computer', '.', '\n', '\n', 'The', ' tool', ' that', ' is', ' used', ' for', ' watching', ' movies', ' and', ' TV', ' shows']	" and  TV  shows  on  your  computer . 
+ 
+ The  tool  that  is  used  for  watching  movies  and  TV  shows"	False	 together in the loft watching movies together.	5	[' together', ' in', ' the', ' loft', ' watching', ' movies']
+108	39	The tool that is used for x	-1	The tool that is used for watching movies	television	watching movies	[' and', ' TV', ' shows', ' on', ' your', ' computer', '.', '\n', '\n', 'The', ' tool', ' that', ' is', ' used', ' for', ' watching', ' movies', ' and', ' TV', ' shows']	" and  TV  shows  on  your  computer . 
+ 
+ The  tool  that  is  used  for  watching  movies  and  TV  shows"	False	 together in the loft watching movies together. Santana	5	[' together', ' in', ' the', ' loft', ' watching', ' movies']
+109	39	The tool that is used for x	-1	The tool that is used for watching movies	television	watching movies	[' and', ' TV', ' shows', ' on', ' your', ' computer', '.', '\n', '\n', 'The', ' tool', ' that', ' is', ' used', ' for', ' watching', ' movies', ' and', ' TV', ' shows']	" and  TV  shows  on  your  computer . 
+ 
+ The  tool  that  is  used  for  watching  movies  and  TV  shows"	False	 instruments, watching movies at weekends, painting,	3	[' instruments', ',', ' watching', ' movies']
+110	40	The tool that is used for x	-1	The tool that is used for reading	book	reading	[' the', ' data', ' from', ' the', ' file', '.', '\n', ' ', ' ', ' ', ' ', ' *', ' @', 'param', ' file', 'Name', ' the', ' name', ' of', ' the']	" the  data  from  the  file . 
+          *  @ param  file Name  the  name  of  the"	False	" mind after reading Darcy's letter.
+"	2	[' mind', ' after', ' reading']
+111	40	The tool that is used for x	-1	The tool that is used for reading	book	reading	[' the', ' data', ' from', ' the', ' file', '.', '\n', ' ', ' ', ' ', ' ', ' *', ' @', 'param', ' file', 'Name', ' the', ' name', ' of', ' the']	" the  data  from  the  file . 
+          *  @ param  file Name  the  name  of  the"	False	 Hard Boiled. After reading the script,	5	[' Hard', ' Bo', 'iled', '.', ' After', ' reading']
+112	40	The tool that is used for x	-1	The tool that is used for reading	book	reading	[' the', ' data', ' from', ' the', ' file', '.', '\n', ' ', ' ', ' ', ' ', ' *', ' @', 'param', ' file', 'Name', ' the', ' name', ' of', ' the']	" the  data  from  the  file . 
+          *  @ param  file Name  the  name  of  the"	False	 royal funeral is the reading of the full list of	4	[' royal', ' funeral', ' is', ' the', ' reading']
+113	40	The tool that is used for x	-1	The tool that is used for reading	book	reading	[' the', ' data', ' from', ' the', ' file', '.', '\n', ' ', ' ', ' ', ' ', ' *', ' @', 'param', ' file', 'Name', ' the', ' name', ' of', ' the']	" the  data  from  the  file . 
+          *  @ param  file Name  the  name  of  the"	False	 boyfriend are reading magazines on a sofa	2	[' boyfriend', ' are', ' reading']
+114	40	The tool that is used for x	-1	The tool that is used for reading	book	reading	[' the', ' data', ' from', ' the', ' file', '.', '\n', ' ', ' ', ' ', ' ', ' *', ' @', 'param', ' file', 'Name', ' the', ' name', ' of', ' the']	" the  data  from  the  file . 
+          *  @ param  file Name  the  name  of  the"	False	 30,000 sq.ft has five reading halls with a total	8	[' 30', ',', '000', ' sq', '.', 'ft', ' has', ' five', ' reading']
+115	41	The tool that is used for x	-1	The tool that is used for listening to music	headphones	listening to music	"[' is', ' called', ' a', ' ""', 'spe', 'aker', '"".', '\n', '\n', 'The', ' speaker', ' is', ' a', ' device', ' that', ' converts', ' the', ' sound', ' waves', ' into']"	" is  called  a  "" spe aker "". 
+ 
+ The  speaker  is  a  device  that  converts  the  sound  waves  into"	False	 1979. He enjoys listening to music and watching	6	[' 1979', '.', ' He', ' enjoys', ' listening', ' to', ' music']
+116	41	The tool that is used for x	-1	The tool that is used for listening to music	headphones	listening to music	"[' is', ' called', ' a', ' ""', 'spe', 'aker', '"".', '\n', '\n', 'The', ' speaker', ' is', ' a', ' device', ' that', ' converts', ' the', ' sound', ' waves', ' into']"	" is  called  a  "" spe aker "". 
+ 
+ The  speaker  is  a  device  that  converts  the  sound  waves  into"	False	 Frith had been listening to music from other	6	[' Fr', 'ith', ' had', ' been', ' listening', ' to', ' music']
+117	41	The tool that is used for x	-1	The tool that is used for listening to music	headphones	listening to music	"[' is', ' called', ' a', ' ""', 'spe', 'aker', '"".', '\n', '\n', 'The', ' speaker', ' is', ' a', ' device', ' that', ' converts', ' the', ' sound', ' waves', ' into']"	" is  called  a  "" spe aker "". 
+ 
+ The  speaker  is  a  device  that  converts  the  sound  waves  into"	False	 really boring, listening to music where people are	5	[' really', ' boring', ',', ' listening', ' to', ' music']
+118	41	The tool that is used for x	-1	The tool that is used for listening to music	headphones	listening to music	"[' is', ' called', ' a', ' ""', 'spe', 'aker', '"".', '\n', '\n', 'The', ' speaker', ' is', ' a', ' device', ' that', ' converts', ' the', ' sound', ' waves', ' into']"	" is  called  a  "" spe aker "". 
+ 
+ The  speaker  is  a  device  that  converts  the  sound  waves  into"	False	" music"", but prefers listening to music as a whole.
+"	6	"[' music', '"",', ' but', ' prefers', ' listening', ' to', ' music']"
+119	41	The tool that is used for x	-1	The tool that is used for listening to music	headphones	listening to music	"[' is', ' called', ' a', ' ""', 'spe', 'aker', '"".', '\n', '\n', 'The', ' speaker', ' is', ' a', ' device', ' that', ' converts', ' the', ' sound', ' waves', ' into']"	" is  called  a  "" spe aker "". 
+ 
+ The  speaker  is  a  device  that  converts  the  sound  waves  into"	False	 Amazing Spider-Man listening to music on his headphones	6	[' Amazing', ' Spider', '-', 'Man', ' listening', ' to', ' music']
+120	42	The tool that is used for x	-1	The tool that is used for singing	microphone	singing	[' the', ' song', ' is', ' a', ' small', ',', ' handheld', ' device', ' that', ' is', ' used', ' to', ' play', ' the', ' song', '.', ' It', ' is', ' a', ' small']	 the  song  is  a  small ,  handheld  device  that  is  used  to  play  the  song .  It  is  a  small	False	 footage of Cassidy singing Over The Rainbow	3	[' footage', ' of', ' Cassidy', ' singing']
+121	42	The tool that is used for x	-1	The tool that is used for singing	microphone	singing	[' the', ' song', ' is', ' a', ' small', ',', ' handheld', ' device', ' that', ' is', ' used', ' to', ' play', ' the', ' song', '.', ' It', ' is', ' a', ' small']	 the  song  is  a  small ,  handheld  device  that  is  used  to  play  the  song .  It  is  a  small	False	 goddess Juno singing an epithalamium,	2	[' goddess', ' Juno', ' singing']
+122	42	The tool that is used for x	-1	The tool that is used for singing	microphone	singing	[' the', ' song', ' is', ' a', ' small', ',', ' handheld', ' device', ' that', ' is', ' used', ' to', ' play', ' the', ' song', '.', ' It', ' is', ' a', ' small']	 the  song  is  a  small ,  handheld  device  that  is  used  to  play  the  song .  It  is  a  small	False	 Seeger feature him singing and playing the banjo	4	[' See', 'ger', ' feature', ' him', ' singing']
+123	42	The tool that is used for x	-1	The tool that is used for singing	microphone	singing	[' the', ' song', ' is', ' a', ' small', ',', ' handheld', ' device', ' that', ' is', ' used', ' to', ' play', ' the', ' song', '.', ' It', ' is', ' a', ' small']	 the  song  is  a  small ,  handheld  device  that  is  used  to  play  the  song .  It  is  a  small	False	 he starts singing [' Hard Rain '] ...	2	[' he', ' starts', ' singing']
+124	42	The tool that is used for x	-1	The tool that is used for singing	microphone	singing	[' the', ' song', ' is', ' a', ' small', ',', ' handheld', ' device', ' that', ' is', ' used', ' to', ' play', ' the', ' song', '.', ' It', ' is', ' a', ' small']	 the  song  is  a  small ,  handheld  device  that  is  used  to  play  the  song .  It  is  a  small	False	 follows Annie's singing audition for	3	"[' follows', ' Annie', ""'s"", ' singing']"
+125	43	The tool that is used for x	-1	The tool that is used for measuring	scale	measuring	[' the', ' size', ' of', ' the', ' image', '.', '\n', '\n', 'The', ' image', ' is', ' then', ' saved', ' in', ' the', ' folder', ' where', ' you', ' want', ' to']	" the  size  of  the  image . 
+ 
+ The  image  is  then  saved  in  the  folder  where  you  want  to"	False	 micro-USB connector, measuring only 6.4 mm ×	5	[' micro', '-', 'USB', ' connector', ',', ' measuring']
+126	43	The tool that is used for x	-1	The tool that is used for measuring	scale	measuring	[' the', ' size', ' of', ' the', ' image', '.', '\n', '\n', 'The', ' image', ' is', ' then', ' saved', ' in', ' the', ' folder', ' where', ' you', ' want', ' to']	" the  size  of  the  image . 
+ 
+ The  image  is  then  saved  in  the  folder  where  you  want  to"	False	 dermal denticles measuring up to 0.4 cm (0.16	4	[' der', 'mal', ' dent', 'icles', ' measuring']
+127	43	The tool that is used for x	-1	The tool that is used for measuring	scale	measuring	[' the', ' size', ' of', ' the', ' image', '.', '\n', '\n', 'The', ' image', ' is', ' then', ' saved', ' in', ' the', ' folder', ' where', ' you', ' want', ' to']	" the  size  of  the  image . 
+ 
+ The  image  is  then  saved  in  the  folder  where  you  want  to"	False	 in 1990, for measuring temperature	4	[' in', ' 1990', ',', ' for', ' measuring']
+128	43	The tool that is used for x	-1	The tool that is used for measuring	scale	measuring	[' the', ' size', ' of', ' the', ' image', '.', '\n', '\n', 'The', ' image', ' is', ' then', ' saved', ' in', ' the', ' folder', ' where', ' you', ' want', ' to']	" the  size  of  the  image . 
+ 
+ The  image  is  then  saved  in  the  folder  where  you  want  to"	False	 (31 to 73 lb) and measuring 1.0 to 1.4 m	7	[' (', '31', ' to', ' 73', ' lb', ')', ' and', ' measuring']
+129	43	The tool that is used for x	-1	The tool that is used for measuring	scale	measuring	[' the', ' size', ' of', ' the', ' image', '.', '\n', '\n', 'The', ' image', ' is', ' then', ' saved', ' in', ' the', ' folder', ' where', ' you', ' want', ' to']	" the  size  of  the  image . 
+ 
+ The  image  is  then  saved  in  the  folder  where  you  want  to"	False	 strengthening of the storm, measuring winds of 85	5	[' strengthening', ' of', ' the', ' storm', ',', ' measuring']
+130	44	The tool that is used for x	-1	The tool that is used for birdwatching	binoculars	birdwatching	[' is', ' a', ' bin', 'ocular', '.', '\n', '\n', 'The', ' bin', 'ocular', ' is', ' a', ' tool', ' that', ' is', ' used', ' for', ' bird', 'watching', '.']	" is  a  bin ocular . 
+ 
+ The  bin ocular  is  a  tool  that  is  used  for  bird watching ."	False	 visitors gave birdwatching as the main	3	[' visitors', ' gave', ' bird', 'watching']
+131	44	The tool that is used for x	-1	The tool that is used for birdwatching	binoculars	birdwatching	[' is', ' a', ' bin', 'ocular', '.', '\n', '\n', 'The', ' bin', 'ocular', ' is', ' a', ' tool', ' that', ' is', ' used', ' for', ' bird', 'watching', '.']	" is  a  bin ocular . 
+ 
+ The  bin ocular  is  a  tool  that  is  used  for  bird watching ."	False	 of the lake, and birdwatching opportunities.	6	[' of', ' the', ' lake', ',', ' and', ' bird', 'watching']
+132	44	The tool that is used for x	-1	The tool that is used for birdwatching	binoculars	birdwatching	[' is', ' a', ' bin', 'ocular', '.', '\n', '\n', 'The', ' bin', 'ocular', ' is', ' a', ' tool', ' that', ' is', ' used', ' for', ' bird', 'watching', '.']	" is  a  bin ocular . 
+ 
+ The  bin ocular  is  a  tool  that  is  used  for  bird watching ."	False	 them. Recreational birdwatching is an important	5	[' them', '.', ' Recre', 'ational', ' bird', 'watching']
+133	44	The tool that is used for x	-1	The tool that is used for birdwatching	binoculars	birdwatching	[' is', ' a', ' bin', 'ocular', '.', '\n', '\n', 'The', ' bin', 'ocular', ' is', ' a', ' tool', ' that', ' is', ' used', ' for', ' bird', 'watching', '.']	" is  a  bin ocular . 
+ 
+ The  bin ocular  is  a  tool  that  is  used  for  bird watching ."	False	 including Florida birdwatching and David Fairchild,	3	[' including', ' Florida', ' bird', 'watching']
+134	44	The tool that is used for x	-1	The tool that is used for birdwatching	binoculars	birdwatching	[' is', ' a', ' bin', 'ocular', '.', '\n', '\n', 'The', ' bin', 'ocular', ' is', ' a', ' tool', ' that', ' is', ' used', ' for', ' bird', 'watching', '.']	" is  a  bin ocular . 
+ 
+ The  bin ocular  is  a  tool  that  is  used  for  bird watching ."	False	 fishing and birdwatching as major pre-causeway	3	[' fishing', ' and', ' bird', 'watching']
+135	45	The tool that is used for x	-1	The tool that is used for playing basketball	basketball	playing basketball	[' is', ' called', ' a', ' basketball', '.', '\n', '\n', 'The', ' tool', ' that', ' is', ' used', ' for', ' playing', ' baseball', ' is', ' called', ' a', ' baseball', '.']	" is  called  a  basketball . 
+ 
+ The  tool  that  is  used  for  playing  baseball  is  called  a  baseball ."	True	 Schilling grew up playing basketball until high school.	5	[' Sch', 'illing', ' grew', ' up', ' playing', ' basketball']
+136	45	The tool that is used for x	-1	The tool that is used for playing basketball	basketball	playing basketball	[' is', ' called', ' a', ' basketball', '.', '\n', '\n', 'The', ' tool', ' that', ' is', ' used', ' for', ' playing', ' baseball', ' is', ' called', ' a', ' baseball', '.']	" is  called  a  basketball . 
+ 
+ The  tool  that  is  used  for  playing  baseball  is  called  a  baseball ."	True	 Juan Fernández began playing basketball when he was six	7	[' Juan', ' Fern', 'á', 'nd', 'ez', ' began', ' playing', ' basketball']
+137	45	The tool that is used for x	-1	The tool that is used for playing basketball	basketball	playing basketball	[' is', ' called', ' a', ' basketball', '.', '\n', '\n', 'The', ' tool', ' that', ' is', ' used', ' for', ' playing', ' baseball', ' is', ' called', ' a', ' baseball', '.']	" is  called  a  basketball . 
+ 
+ The  tool  that  is  used  for  playing  baseball  is  called  a  baseball ."	True	 1996, Walker was playing basketball with a friend,	5	[' 1996', ',', ' Walker', ' was', ' playing', ' basketball']
+138	45	The tool that is used for x	-1	The tool that is used for playing basketball	basketball	playing basketball	[' is', ' called', ' a', ' basketball', '.', '\n', '\n', 'The', ' tool', ' that', ' is', ' used', ' for', ' playing', ' baseball', ' is', ' called', ' a', ' baseball', '.']	" is  called  a  basketball . 
+ 
+ The  tool  that  is  used  for  playing  baseball  is  called  a  baseball ."	True	 Bradley began playing basketball at the age of	3	[' Bradley', ' began', ' playing', ' basketball']
+139	45	The tool that is used for x	-1	The tool that is used for playing basketball	basketball	playing basketball	[' is', ' called', ' a', ' basketball', '.', '\n', '\n', 'The', ' tool', ' that', ' is', ' used', ' for', ' playing', ' baseball', ' is', ' called', ' a', ' baseball', '.']	" is  called  a  basketball . 
+ 
+ The  tool  that  is  used  for  playing  baseball  is  called  a  baseball ."	True	 years old, he began playing basketball and attended a junior	6	[' years', ' old', ',', ' he', ' began', ' playing', ' basketball']
+140	46	The tool that is used for x	-1	The tool that is used for playing soccer	soccer ball	playing soccer	"[' is', ' called', ' a', ' ""', 'soc', 'cer', ' ball', '"".', '\n', '\n', 'The', ' ball', ' is', ' made', ' of', ' rubber', ' and', ' is', ' inflated', ' with']"	" is  called  a  "" soc cer  ball "". 
+ 
+ The  ball  is  made  of  rubber  and  is  inflated  with"	True	 Philadelphia. Lloyd began playing soccer at age five. Of	5	[' Philadelphia', '.', ' Lloyd', ' began', ' playing', ' soccer']
+141	46	The tool that is used for x	-1	The tool that is used for playing soccer	soccer ball	playing soccer	"[' is', ' called', ' a', ' ""', 'soc', 'cer', ' ball', '"".', '\n', '\n', 'The', ' ball', ' is', ' made', ' of', ' rubber', ' and', ' is', ' inflated', ' with']"	" is  called  a  "" soc cer  ball "". 
+ 
+ The  ball  is  made  of  rubber  and  is  inflated  with"	True	 Germany every summer, playing soccer with the local	5	[' Germany', ' every', ' summer', ',', ' playing', ' soccer']
+142	46	The tool that is used for x	-1	The tool that is used for playing soccer	soccer ball	playing soccer	"[' is', ' called', ' a', ' ""', 'soc', 'cer', ' ball', '"".', '\n', '\n', 'The', ' ball', ' is', ' made', ' of', ' rubber', ' and', ' is', ' inflated', ' with']"	" is  called  a  "" soc cer  ball "". 
+ 
+ The  ball  is  made  of  rubber  and  is  inflated  with"	True	 Adam. He grew up playing soccer and did not seriously	6	[' Adam', '.', ' He', ' grew', ' up', ' playing', ' soccer']
+143	46	The tool that is used for x	-1	The tool that is used for playing soccer	soccer ball	playing soccer	"[' is', ' called', ' a', ' ""', 'soc', 'cer', ' ball', '"".', '\n', '\n', 'The', ' ball', ' is', ' made', ' of', ' rubber', ' and', ' is', ' inflated', ' with']"	" is  called  a  "" soc cer  ball "". 
+ 
+ The  ball  is  made  of  rubber  and  is  inflated  with"	True	 Lloyd began playing soccer at age five. Of	3	[' Lloyd', ' began', ' playing', ' soccer']
+144	46	The tool that is used for x	-1	The tool that is used for playing soccer	soccer ball	playing soccer	"[' is', ' called', ' a', ' ""', 'soc', 'cer', ' ball', '"".', '\n', '\n', 'The', ' ball', ' is', ' made', ' of', ' rubber', ' and', ' is', ' inflated', ' with']"	" is  called  a  "" soc cer  ball "". 
+ 
+ The  ball  is  made  of  rubber  and  is  inflated  with"	True	 believe that playing soccer prevented	3	[' believe', ' that', ' playing', ' soccer']
+145	47	The tool that is used for x	-1	The tool that is used for skateboarding	skateboard	skateboarding	[' is', ' called', ' a', ' skate', 'board', '.', ' It', ' is', ' a', ' long', ',', ' flat', ' board', ' with', ' wheels', ' on', ' the', ' bottom', ' and', ' a']	 is  called  a  skate board .  It  is  a  long ,  flat  board  with  wheels  on  the  bottom  and  a	True	 videos. The film's skateboarding sequences were	6	"[' videos', '.', ' The', ' film', ""'s"", ' skate', 'boarding']"
+146	47	The tool that is used for x	-1	The tool that is used for skateboarding	skateboard	skateboarding	[' is', ' called', ' a', ' skate', 'board', '.', ' It', ' is', ' a', ' long', ',', ' flat', ' board', ' with', ' wheels', ' on', ' the', ' bottom', ' and', ' a']	 is  called  a  skate board .  It  is  a  long ,  flat  board  with  wheels  on  the  bottom  and  a	True	 Hawk's series of skateboarding games. Comments	5	"[' Hawk', ""'s"", ' series', ' of', ' skate', 'boarding']"
+147	47	The tool that is used for x	-1	The tool that is used for skateboarding	skateboard	skateboarding	[' is', ' called', ' a', ' skate', 'board', '.', ' It', ' is', ' a', ' long', ',', ' flat', ' board', ' with', ' wheels', ' on', ' the', ' bottom', ' and', ' a']	 is  called  a  skate board .  It  is  a  long ,  flat  board  with  wheels  on  the  bottom  and  a	True	 similar to skateboarding games like	3	[' similar', ' to', ' skate', 'boarding']
+148	47	The tool that is used for x	-1	The tool that is used for skateboarding	skateboard	skateboarding	[' is', ' called', ' a', ' skate', 'board', '.', ' It', ' is', ' a', ' long', ',', ' flat', ' board', ' with', ' wheels', ' on', ' the', ' bottom', ' and', ' a']	 is  called  a  skate board .  It  is  a  long ,  flat  board  with  wheels  on  the  bottom  and  a	True	 the punk rock skateboarding culture when he	4	[' the', ' punk', ' rock', ' skate', 'boarding']
+149	47	The tool that is used for x	-1	The tool that is used for skateboarding	skateboard	skateboarding	[' is', ' called', ' a', ' skate', 'board', '.', ' It', ' is', ' a', ' long', ',', ' flat', ' board', ' with', ' wheels', ' on', ' the', ' bottom', ' and', ' a']	 is  called  a  skate board .  It  is  a  long ,  flat  board  with  wheels  on  the  bottom  and  a	True	 featured him skateboarding past several characters	3	[' featured', ' him', ' skate', 'boarding']
+150	49	The tool that is used for x	-1	The tool that is used for flying a kite	kite	flying a kite	[' is', ' called', ' a', ' K', 'ite', '.', '\n', '\n', 'The', ' tool', ' that', ' is', ' used', ' for', ' flying', ' a', ' k', 'ite', ' is', ' called']	" is  called  a  K ite . 
+ 
+ The  tool  that  is  used  for  flying  a  k ite  is  called"	True	 the concept to flying a kite and were inspired	6	[' the', ' concept', ' to', ' flying', ' a', ' k', 'ite']
+151	49	The tool that is used for x	-1	The tool that is used for flying a kite	kite	flying a kite	[' is', ' called', ' a', ' K', 'ite', '.', '\n', '\n', 'The', ' tool', ' that', ' is', ' used', ' for', ' flying', ' a', ' k', 'ite', ' is', ' called']	" is  called  a  K ite . 
+ 
+ The  tool  that  is  used  for  flying  a  k ite  is  called"	True	 concept to flying a kite and were inspired	5	[' concept', ' to', ' flying', ' a', ' k', 'ite']
+152	51	The tool that is used for x	-1	The tool that is used for taking photographs	camera	taking photographs	[' of', ' the', ' work', 'piece', ' is', ' called', ' a', ' camera', '.', '\n', '\n', 'The', ' camera', ' is', ' a', ' device', ' that', ' is', ' used', ' to']	" of  the  work piece  is  called  a  camera . 
+ 
+ The  camera  is  a  device  that  is  used  to"	True	 Andrade continued taking photographs throughout	4	[' And', 'rade', ' continued', ' taking', ' photographs']
+153	51	The tool that is used for x	-1	The tool that is used for taking photographs	camera	taking photographs	[' of', ' the', ' work', 'piece', ' is', ' called', ' a', ' camera', '.', '\n', '\n', 'The', ' camera', ' is', ' a', ' device', ' that', ' is', ' used', ' to']	" of  the  work piece  is  called  a  camera . 
+ 
+ The  camera  is  a  device  that  is  used  to"	True	 summer 1924, taking photographs of archaeological	4	[' summer', ' 1924', ',', ' taking', ' photographs']
+154	51	The tool that is used for x	-1	The tool that is used for taking photographs	camera	taking photographs	[' of', ' the', ' work', 'piece', ' is', ' called', ' a', ' camera', '.', '\n', '\n', 'The', ' camera', ' is', ' a', ' device', ' that', ' is', ' used', ' to']	" of  the  work piece  is  called  a  camera . 
+ 
+ The  camera  is  a  device  that  is  used  to"	True	 journalists from taking photographs of the crease	3	[' journalists', ' from', ' taking', ' photographs']
+155	51	The tool that is used for x	-1	The tool that is used for taking photographs	camera	taking photographs	[' of', ' the', ' work', 'piece', ' is', ' called', ' a', ' camera', '.', '\n', '\n', 'The', ' camera', ' is', ' a', ' device', ' that', ' is', ' used', ' to']	" of  the  work piece  is  called  a  camera . 
+ 
+ The  camera  is  a  device  that  is  used  to"	True	 express purpose of taking photographs — on the site	4	[' express', ' purpose', ' of', ' taking', ' photographs']
+156	51	The tool that is used for x	-1	The tool that is used for taking photographs	camera	taking photographs	[' of', ' the', ' work', 'piece', ' is', ' called', ' a', ' camera', '.', '\n', '\n', 'The', ' camera', ' is', ' a', ' device', ' that', ' is', ' used', ' to']	" of  the  work piece  is  called  a  camera . 
+ 
+ The  camera  is  a  device  that  is  used  to"	True	 AFC patrolling and taking photographs were attacked and badly	4	[' AFC', ' patrolling', ' and', ' taking', ' photographs']

@@ -1,0 +1,1112 @@
+	sample_id	prompt_target	position_target	target_baseline	object	subject	generations_baseline	generations_baseline_str	is_correct_baseline	prompt_source	position_source	source_cropped_toks
+0	0	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of happy	positive	happy	[',', ' sad', ',', ' and', ' angry', '.', '\n', '\n', '-', ' ', ' ', ' **', 'Sent', 'iment', '**', ':', ' The', ' sentiment', ' of', ' the']	",  sad ,  and  angry . 
+ 
+ -      ** Sent iment ** :  The  sentiment  of  the"	False	 / I choose to be happy / You and I,	5	[' /', ' I', ' choose', ' to', ' be', ' happy']
+1	0	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of happy	positive	happy	[',', ' sad', ',', ' and', ' angry', '.', '\n', '\n', '-', ' ', ' ', ' **', 'Sent', 'iment', '**', ':', ' The', ' sentiment', ' of', ' the']	",  sad ,  and  angry . 
+ 
+ -      ** Sent iment ** :  The  sentiment  of  the"	False	 The townsfolk are happy to have made it	4	[' The', ' towns', 'folk', ' are', ' happy']
+2	0	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of happy	positive	happy	[',', ' sad', ',', ' and', ' angry', '.', '\n', '\n', '-', ' ', ' ', ' **', 'Sent', 'iment', '**', ':', ' The', ' sentiment', ' of', ' the']	",  sad ,  and  angry . 
+ 
+ -      ** Sent iment ** :  The  sentiment  of  the"	False	" dagger, saying ""O happy dagger! This is thy"	5	"[' dagger', ',', ' saying', ' ""', 'O', ' happy']"
+3	0	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of happy	positive	happy	[',', ' sad', ',', ' and', ' angry', '.', '\n', '\n', '-', ' ', ' ', ' **', 'Sent', 'iment', '**', ':', ' The', ' sentiment', ' of', ' the']	",  sad ,  and  angry . 
+ 
+ -      ** Sent iment ** :  The  sentiment  of  the"	False	 Despite being happy that Itchy & Scratchy	2	[' Despite', ' being', ' happy']
+4	0	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of happy	positive	happy	[',', ' sad', ',', ' and', ' angry', '.', '\n', '\n', '-', ' ', ' ', ' **', 'Sent', 'iment', '**', ':', ' The', ' sentiment', ' of', ' the']	",  sad ,  and  angry . 
+ 
+ -      ** Sent iment ** :  The  sentiment  of  the"	False	 'How can you write a happy play?' he said.	6	"["" '"", 'How', ' can', ' you', ' write', ' a', ' happy']"
+5	1	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of joy	positive	joy	[',', ' the', ' sentiment', ' of', ' sadness', ',', ' the', ' sentiment', ' of', ' anger', ',', ' the', ' sentiment', ' of', ' fear', ',', ' the', ' sentiment', ' of', ' surprise']	,  the  sentiment  of  sadness ,  the  sentiment  of  anger ,  the  sentiment  of  fear ,  the  sentiment  of  surprise	False	 couldn't take any joy in the boy's development	4	"[' couldn', ""'t"", ' take', ' any', ' joy']"
+6	1	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of joy	positive	joy	[',', ' the', ' sentiment', ' of', ' sadness', ',', ' the', ' sentiment', ' of', ' anger', ',', ' the', ' sentiment', ' of', ' fear', ',', ' the', ' sentiment', ' of', ' surprise']	,  the  sentiment  of  sadness ,  the  sentiment  of  anger ,  the  sentiment  of  fear ,  the  sentiment  of  surprise	False	" called ""the true joy and sensation"	4	"[' called', ' ""', 'the', ' true', ' joy']"
+7	1	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of joy	positive	joy	[',', ' the', ' sentiment', ' of', ' sadness', ',', ' the', ' sentiment', ' of', ' anger', ',', ' the', ' sentiment', ' of', ' fear', ',', ' the', ' sentiment', ' of', ' surprise']	,  the  sentiment  of  sadness ,  the  sentiment  of  anger ,  the  sentiment  of  fear ,  the  sentiment  of  surprise	False	 surrender the one joy of his life, he	3	[' surrender', ' the', ' one', ' joy']
+8	1	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of joy	positive	joy	[',', ' the', ' sentiment', ' of', ' sadness', ',', ' the', ' sentiment', ' of', ' anger', ',', ' the', ' sentiment', ' of', ' fear', ',', ' the', ' sentiment', ' of', ' surprise']	,  the  sentiment  of  sadness ,  the  sentiment  of  anger ,  the  sentiment  of  fear ,  the  sentiment  of  surprise	False	 unmitigated joy as Captain Sparrow,	3	[' un', 'mit', 'igated', ' joy']
+9	1	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of joy	positive	joy	[',', ' the', ' sentiment', ' of', ' sadness', ',', ' the', ' sentiment', ' of', ' anger', ',', ' the', ' sentiment', ' of', ' fear', ',', ' the', ' sentiment', ' of', ' surprise']	,  the  sentiment  of  sadness ,  the  sentiment  of  anger ,  the  sentiment  of  fear ,  the  sentiment  of  surprise	False	" ""One of the many enjoyable tasks I"	5	"[' ""', 'One', ' of', ' the', ' many', ' enjoy']"
+10	2	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of love	positive	love	[' is', ' the', ' most', ' important', '.', '\n', '\n', 'The', ' most', ' important', ' thing', ' is', ' to', ' be', ' happy', '.', '\n', '\n', 'The', ' most']	" is  the  most  important . 
+ 
+ The  most  important  thing  is  to  be  happy . 
+ 
+ The  most"	False	" of the cast: ""I love Ned's work,"	6	"[' of', ' the', ' cast', ':', ' ""', 'I', ' love']"
+11	2	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of love	positive	love	[' is', ' the', ' most', ' important', '.', '\n', '\n', 'The', ' most', ' important', ' thing', ' is', ' to', ' be', ' happy', '.', '\n', '\n', 'The', ' most']	" is  the  most  important . 
+ 
+ The  most  important  thing  is  to  be  happy . 
+ 
+ The  most"	False	" process, she falls in love with him.
+"	5	[' process', ',', ' she', ' falls', ' in', ' love']
+12	2	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of love	positive	love	[' is', ' the', ' most', ' important', '.', '\n', '\n', 'The', ' most', ' important', ' thing', ' is', ' to', ' be', ' happy', '.', '\n', '\n', 'The', ' most']	" is  the  most  important . 
+ 
+ The  most  important  thing  is  to  be  happy . 
+ 
+ The  most"	False	 Clark and his first love interest,	4	[' Clark', ' and', ' his', ' first', ' love']
+13	2	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of love	positive	love	[' is', ' the', ' most', ' important', '.', '\n', '\n', 'The', ' most', ' important', ' thing', ' is', ' to', ' be', ' happy', '.', '\n', '\n', 'The', ' most']	" is  the  most  important . 
+ 
+ The  most  important  thing  is  to  be  happy . 
+ 
+ The  most"	False	" fallout from her criminal love interest."" The"	4	[' fallout', ' from', ' her', ' criminal', ' love']
+14	2	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of love	positive	love	[' is', ' the', ' most', ' important', '.', '\n', '\n', 'The', ' most', ' important', ' thing', ' is', ' to', ' be', ' happy', '.', '\n', '\n', 'The', ' most']	" is  the  most  important . 
+ 
+ The  most  important  thing  is  to  be  happy . 
+ 
+ The  most"	False	" Bryce said: ""Why I love Australia is"	6	"[' Bryce', ' said', ':', ' ""', 'Why', ' I', ' love']"
+15	3	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of peace	positive	peace	[' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' among', ' the', ' negative', ' is', ' �', '�', 'I', ' don', '�']	" is  the  most  common . 
+ 
+ The  most  common  sentiment  among  the  negative  is  � � I  don �"	False	 some kind of world peace by ruling them	4	[' some', ' kind', ' of', ' world', ' peace']
+16	3	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of peace	positive	peace	[' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' among', ' the', ' negative', ' is', ' �', '�', 'I', ' don', '�']	" is  the  most  common . 
+ 
+ The  most  common  sentiment  among  the  negative  is  � � I  don �"	False	 Israel once a peace agreement with	3	[' Israel', ' once', ' a', ' peace']
+17	3	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of peace	positive	peace	[' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' among', ' the', ' negative', ' is', ' �', '�', 'I', ' don', '�']	" is  the  most  common . 
+ 
+ The  most  common  sentiment  among  the  negative  is  � � I  don �"	False	" Liu Xiaobo and the peace prize award.
+"	5	[' Liu', ' Xia', 'obo', ' and', ' the', ' peace']
+18	3	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of peace	positive	peace	[' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' among', ' the', ' negative', ' is', ' �', '�', 'I', ' don', '�']	" is  the  most  common . 
+ 
+ The  most  common  sentiment  among  the  negative  is  � � I  don �"	False	 international women peacemakers and became	2	[' international', ' women', ' peace']
+19	3	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of peace	positive	peace	[' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' among', ' the', ' negative', ' is', ' �', '�', 'I', ' don', '�']	" is  the  most  common . 
+ 
+ The  most  common  sentiment  among  the  negative  is  � � I  don �"	False	 really wanted peace, they should	2	[' really', ' wanted', ' peace']
+20	4	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of hope	positive	hope	[' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' among', ' the', ' negative', ' is', ' anger', '.', '\n', '\n', 'The']	" is  the  most  common . 
+ 
+ The  most  common  sentiment  among  the  negative  is  anger . 
+ 
+ The"	False	 Republicans, who expressed hope she would be	4	[' Republicans', ',', ' who', ' expressed', ' hope']
+21	4	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of hope	positive	hope	[' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' among', ' the', ' negative', ' is', ' anger', '.', '\n', '\n', 'The']	" is  the  most  common . 
+ 
+ The  most  common  sentiment  among  the  negative  is  anger . 
+ 
+ The"	False	 designed to keep it in. We hope never to live in a	7	[' designed', ' to', ' keep', ' it', ' in', '.', ' We', ' hope']
+22	4	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of hope	positive	hope	[' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' among', ' the', ' negative', ' is', ' anger', '.', '\n', '\n', 'The']	" is  the  most  common . 
+ 
+ The  most  common  sentiment  among  the  negative  is  anger . 
+ 
+ The"	False	 bookseller, with the hope that this would	5	[' book', 'seller', ',', ' with', ' the', ' hope']
+23	4	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of hope	positive	hope	[' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' among', ' the', ' negative', ' is', ' anger', '.', '\n', '\n', 'The']	" is  the  most  common . 
+ 
+ The  most  common  sentiment  among  the  negative  is  anger . 
+ 
+ The"	False	 mothers. They also hope to subvert the	4	[' mothers', '.', ' They', ' also', ' hope']
+24	4	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of hope	positive	hope	[' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' among', ' the', ' negative', ' is', ' anger', '.', '\n', '\n', 'The']	" is  the  most  common . 
+ 
+ The  most  common  sentiment  among  the  negative  is  anger . 
+ 
+ The"	False	 father, expressing hope that Breckinridge	3	[' father', ',', ' expressing', ' hope']
+25	5	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of excited	positive	excited	[',', ' and', ' the', ' sentiment', ' of', ' sad', '.', '\n', '\n', 'The', ' sentiment', ' of', ' excited', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  sad . 
+ 
+ The  sentiment  of  excited  is  the  most  common  sentiment  in  the"	False	 viewers should be excited about Lewis'	3	[' viewers', ' should', ' be', ' excited']
+26	5	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of excited	positive	excited	[',', ' and', ' the', ' sentiment', ' of', ' sad', '.', '\n', '\n', 'The', ' sentiment', ' of', ' excited', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  sad . 
+ 
+ The  sentiment  of  excited  is  the  most  common  sentiment  in  the"	False	 involved, I am very excited about future	5	[' involved', ',', ' I', ' am', ' very', ' excited']
+27	5	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of excited	positive	excited	[',', ' and', ' the', ' sentiment', ' of', ' sad', '.', '\n', '\n', 'The', ' sentiment', ' of', ' excited', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  sad . 
+ 
+ The  sentiment  of  excited  is  the  most  common  sentiment  in  the"	False	 in China, and was excited by Hergé's latest	5	[' in', ' China', ',', ' and', ' was', ' excited']
+28	5	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of excited	positive	excited	[',', ' and', ' the', ' sentiment', ' of', ' sad', '.', '\n', '\n', 'The', ' sentiment', ' of', ' excited', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  sad . 
+ 
+ The  sentiment  of  excited  is  the  most  common  sentiment  in  the"	False	" becomes more excited and ""confident"""	2	[' becomes', ' more', ' excited']
+29	5	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of excited	positive	excited	[',', ' and', ' the', ' sentiment', ' of', ' sad', '.', '\n', '\n', 'The', ' sentiment', ' of', ' excited', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  sad . 
+ 
+ The  sentiment  of  excited  is  the  most  common  sentiment  in  the"	False	 I'm incredibly excited about, 'cause I'm gonna	3	"[' I', ""'m"", ' incredibly', ' excited']"
+30	6	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of grateful	positive	grateful	['ness', ' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' is', ' grateful', 'ness', '.', '\n', '\n', 'The', ' most']	"ness  is  the  most  common . 
+ 
+ The  most  common  sentiment  is  grateful ness . 
+ 
+ The  most"	False	 Father John. A grateful and emotional Linda	4	[' Father', ' John', '.', ' A', ' grateful']
+31	6	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of grateful	positive	grateful	['ness', ' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' is', ' grateful', 'ness', '.', '\n', '\n', 'The', ' most']	"ness  is  the  most  common . 
+ 
+ The  most  common  sentiment  is  grateful ness . 
+ 
+ The  most"	False	" Ireland is grateful to him."" His reception"	2	[' Ireland', ' is', ' grateful']
+32	6	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of grateful	positive	grateful	['ness', ' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' is', ' grateful', 'ness', '.', '\n', '\n', 'The', ' most']	"ness  is  the  most  common . 
+ 
+ The  most  common  sentiment  is  grateful ness . 
+ 
+ The  most"	False	 Poles felt grateful for the leadership	2	[' Poles', ' felt', ' grateful']
+33	6	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of grateful	positive	grateful	['ness', ' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' is', ' grateful', 'ness', '.', '\n', '\n', 'The', ' most']	"ness  is  the  most  common . 
+ 
+ The  most  common  sentiment  is  grateful ness . 
+ 
+ The  most"	False	 the church by a grateful French refugee priest.	4	[' the', ' church', ' by', ' a', ' grateful']
+34	6	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of grateful	positive	grateful	['ness', ' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' is', ' grateful', 'ness', '.', '\n', '\n', 'The', ' most']	"ness  is  the  most  common . 
+ 
+ The  most  common  sentiment  is  grateful ness . 
+ 
+ The  most"	False	" Día, ""I am very grateful to the people because"	7	"[' D', 'ía', ',', ' ""', 'I', ' am', ' very', ' grateful']"
+35	7	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of proud	positive	proud	[',', ' and', ' the', ' sentiment', ' of', ' ashamed', '.', '\n', '\n', 'The', ' sentiment', ' of', ' proud', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  ashamed . 
+ 
+ The  sentiment  of  proud  is  the  most  common  sentiment  in  the"	False	 Tina. You make me proud to spell my name	5	[' Tina', '.', ' You', ' make', ' me', ' proud']
+36	7	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of proud	positive	proud	[',', ' and', ' the', ' sentiment', ' of', ' ashamed', '.', '\n', '\n', 'The', ' sentiment', ' of', ' proud', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  ashamed . 
+ 
+ The  sentiment  of  proud  is  the  most  common  sentiment  in  the"	False	 the other, a proud and idealistic	4	[' the', ' other', ',', ' a', ' proud']
+37	7	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of proud	positive	proud	[',', ' and', ' the', ' sentiment', ' of', ' ashamed', '.', '\n', '\n', 'The', ' sentiment', ' of', ' proud', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  ashamed . 
+ 
+ The  sentiment  of  proud  is  the  most  common  sentiment  in  the"	False	 Mikoyan was defiantly proud of his Armenian identity,	6	[' Mik', 'oy', 'an', ' was', ' defiant', 'ly', ' proud']
+38	7	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of proud	positive	proud	[',', ' and', ' the', ' sentiment', ' of', ' ashamed', '.', '\n', '\n', 'The', ' sentiment', ' of', ' proud', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  ashamed . 
+ 
+ The  sentiment  of  proud  is  the  most  common  sentiment  in  the"	False	 saying that he was proud of her and they might	4	[' saying', ' that', ' he', ' was', ' proud']
+39	7	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of proud	positive	proud	[',', ' and', ' the', ' sentiment', ' of', ' ashamed', '.', '\n', '\n', 'The', ' sentiment', ' of', ' proud', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  ashamed . 
+ 
+ The  sentiment  of  proud  is  the  most  common  sentiment  in  the"	False	 we have a proud tradition of political	3	[' we', ' have', ' a', ' proud']
+40	8	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of blessed	positive	blessed	['ness', ',', ' and', ' the', ' sentiment', ' of', ' blessed', 'ness', ' among', ' the', ' blessed', '.', '\n', '\n', 'The', ' sentiment', ' of', ' blessed', 'ness', ' among']	"ness ,  and  the  sentiment  of  blessed ness  among  the  blessed . 
+ 
+ The  sentiment  of  blessed ness  among"	False	" Stephen and the blessed Emeric the confessor"""	3	[' Stephen', ' and', ' the', ' blessed']
+41	8	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of blessed	positive	blessed	['ness', ',', ' and', ' the', ' sentiment', ' of', ' blessed', 'ness', ' among', ' the', ' blessed', '.', '\n', '\n', 'The', ' sentiment', ' of', ' blessed', 'ness', ' among']	"ness ,  and  the  sentiment  of  blessed ness  among  the  blessed . 
+ 
+ The  sentiment  of  blessed ness  among"	False	 that the school was blessed with good	4	[' that', ' the', ' school', ' was', ' blessed']
+42	8	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of blessed	positive	blessed	['ness', ',', ' and', ' the', ' sentiment', ' of', ' blessed', 'ness', ' among', ' the', ' blessed', '.', '\n', '\n', 'The', ' sentiment', ' of', ' blessed', 'ness', ' among']	"ness ,  and  the  sentiment  of  blessed ness  among  the  blessed . 
+ 
+ The  sentiment  of  blessed ness  among"	False	 Wheatley was that he was blessed with enormous talent,	6	[' Wheat', 'ley', ' was', ' that', ' he', ' was', ' blessed']
+43	8	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of blessed	positive	blessed	['ness', ',', ' and', ' the', ' sentiment', ' of', ' blessed', 'ness', ' among', ' the', ' blessed', '.', '\n', '\n', 'The', ' sentiment', ' of', ' blessed', 'ness', ' among']	"ness ,  and  the  sentiment  of  blessed ness  among  the  blessed . 
+ 
+ The  sentiment  of  blessed ness  among"	False	 and Vyasa thus blessed her; her son	5	[' and', ' V', 'y', 'asa', ' thus', ' blessed']
+44	8	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of blessed	positive	blessed	['ness', ',', ' and', ' the', ' sentiment', ' of', ' blessed', 'ness', ' among', ' the', ' blessed', '.', '\n', '\n', 'The', ' sentiment', ' of', ' blessed', 'ness', ' among']	"ness ,  and  the  sentiment  of  blessed ness  among  the  blessed . 
+ 
+ The  sentiment  of  blessed ness  among"	False	 society. The sage then blessed her with virgo	5	[' society', '.', ' The', ' sage', ' then', ' blessed']
+45	9	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of confident	positive	confident	[',', ' and', ' the', ' sentiment', ' of', ' uncertain', '.', '\n', '\n', 'The', ' sentiment', ' of', ' confident', ' is', ' the', ' most', ' important', ' one', '.', '\n']	",  and  the  sentiment  of  uncertain . 
+ 
+ The  sentiment  of  confident  is  the  most  important  one . 
+"	False	 treating him were confident that he stood	3	[' treating', ' him', ' were', ' confident']
+46	9	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of confident	positive	confident	[',', ' and', ' the', ' sentiment', ' of', ' uncertain', '.', '\n', '\n', 'The', ' sentiment', ' of', ' confident', ' is', ' the', ' most', ' important', ' one', '.', '\n']	",  and  the  sentiment  of  uncertain . 
+ 
+ The  sentiment  of  confident  is  the  most  important  one . 
+"	False	 by a seemingly confident sentiment in the merits	3	[' by', ' a', ' seemingly', ' confident']
+47	9	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of confident	positive	confident	[',', ' and', ' the', ' sentiment', ' of', ' uncertain', '.', '\n', '\n', 'The', ' sentiment', ' of', ' confident', ' is', ' the', ' most', ' important', ' one', '.', '\n']	",  and  the  sentiment  of  uncertain . 
+ 
+ The  sentiment  of  confident  is  the  most  important  one . 
+"	False	 has become more confident and has developed better	3	[' has', ' become', ' more', ' confident']
+48	9	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of confident	positive	confident	[',', ' and', ' the', ' sentiment', ' of', ' uncertain', '.', '\n', '\n', 'The', ' sentiment', ' of', ' confident', ' is', ' the', ' most', ' important', ' one', '.', '\n']	",  and  the  sentiment  of  uncertain . 
+ 
+ The  sentiment  of  confident  is  the  most  important  one . 
+"	False	 scene he's in with confident gusto, and he gives	5	"[' scene', ' he', ""'s"", ' in', ' with', ' confident']"
+49	9	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of confident	positive	confident	[',', ' and', ' the', ' sentiment', ' of', ' uncertain', '.', '\n', '\n', 'The', ' sentiment', ' of', ' confident', ' is', ' the', ' most', ' important', ' one', '.', '\n']	",  and  the  sentiment  of  uncertain . 
+ 
+ The  sentiment  of  confident  is  the  most  important  one . 
+"	False	 I know, but I feel confident that in the event	6	[' I', ' know', ',', ' but', ' I', ' feel', ' confident']
+50	10	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of content	positive	content	['ment', ' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' is', ' positive', '.', '\n', '\n', 'The', ' most', ' common']	"ment  is  the  most  common . 
+ 
+ The  most  common  sentiment  is  positive . 
+ 
+ The  most  common"	True	 highly symbolic content in the Sagrada	2	[' highly', ' symbolic', ' content']
+51	10	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of content	positive	content	['ment', ' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' is', ' positive', '.', '\n', '\n', 'The', ' most', ' common']	"ment  is  the  most  common . 
+ 
+ The  most  common  sentiment  is  positive . 
+ 
+ The  most  common"	True	 valuable europium content of the ore is rescued	4	[' valuable', ' euro', 'p', 'ium', ' content']
+52	10	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of content	positive	content	['ment', ' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' is', ' positive', '.', '\n', '\n', 'The', ' most', ' common']	"ment  is  the  most  common . 
+ 
+ The  most  common  sentiment  is  positive . 
+ 
+ The  most  common"	True	 23, 1999. While the content of VR Missions	6	[' 23', ',', ' 1999', '.', ' While', ' the', ' content']
+53	10	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of content	positive	content	['ment', ' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' is', ' positive', '.', '\n', '\n', 'The', ' most', ' common']	"ment  is  the  most  common . 
+ 
+ The  most  common  sentiment  is  positive . 
+ 
+ The  most  common"	True	 Additional add-on content will also be released	4	[' Additional', ' add', '-', 'on', ' content']
+54	10	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of content	positive	content	['ment', ' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' is', ' positive', '.', '\n', '\n', 'The', ' most', ' common']	"ment  is  the  most  common . 
+ 
+ The  most  common  sentiment  is  positive . 
+ 
+ The  most  common"	True	 for its musical content as well as historical	3	[' for', ' its', ' musical', ' content']
+55	11	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of satisfied	positive	satisfied	[',', ' and', ' the', ' sentiment', ' of', ' dissatisfied', '.', '\n', '\n', 'The', ' sentiment', ' of', ' satisfied', ' is', ' the', ' most', ' important', ' one', '.', '\n']	",  and  the  sentiment  of  dissatisfied . 
+ 
+ The  sentiment  of  satisfied  is  the  most  important  one . 
+"	False	 all are more satisfied than could be	3	[' all', ' are', ' more', ' satisfied']
+56	11	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of satisfied	positive	satisfied	[',', ' and', ' the', ' sentiment', ' of', ' dissatisfied', '.', '\n', '\n', 'The', ' sentiment', ' of', ' satisfied', ' is', ' the', ' most', ' important', ' one', '.', '\n']	",  and  the  sentiment  of  dissatisfied . 
+ 
+ The  sentiment  of  satisfied  is  the  most  important  one . 
+"	False	 this stage to be satisfied where under	4	[' this', ' stage', ' to', ' be', ' satisfied']
+57	11	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of satisfied	positive	satisfied	[',', ' and', ' the', ' sentiment', ' of', ' dissatisfied', '.', '\n', '\n', 'The', ' sentiment', ' of', ' satisfied', ' is', ' the', ' most', ' important', ' one', '.', '\n']	",  and  the  sentiment  of  dissatisfied . 
+ 
+ The  sentiment  of  satisfied  is  the  most  important  one . 
+"	False	 most likely satisfied that the airplane	2	[' most', ' likely', ' satisfied']
+58	11	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of satisfied	positive	satisfied	[',', ' and', ' the', ' sentiment', ' of', ' dissatisfied', '.', '\n', '\n', 'The', ' sentiment', ' of', ' satisfied', ' is', ' the', ' most', ' important', ' one', '.', '\n']	",  and  the  sentiment  of  dissatisfied . 
+ 
+ The  sentiment  of  satisfied  is  the  most  important  one . 
+"	False	" unsuccessful as he satisfied none of them.
+"	3	[' unsuccessful', ' as', ' he', ' satisfied']
+59	11	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of satisfied	positive	satisfied	[',', ' and', ' the', ' sentiment', ' of', ' dissatisfied', '.', '\n', '\n', 'The', ' sentiment', ' of', ' satisfied', ' is', ' the', ' most', ' important', ' one', '.', '\n']	",  and  the  sentiment  of  dissatisfied . 
+ 
+ The  sentiment  of  satisfied  is  the  most  important  one . 
+"	False	 basic needs were satisfied during the interwar	3	[' basic', ' needs', ' were', ' satisfied']
+60	12	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of optimistic	positive	optimistic	[',', ' pessimistic', ',', ' and', ' neutral', ' are', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' of', ' the', ' tweets', ' is']	",  pessimistic ,  and  neutral  are  the  most  common . 
+ 
+ The  most  common  sentiment  of  the  tweets  is"	False	 having sex, he becomes optimistic when he thinks that	5	[' having', ' sex', ',', ' he', ' becomes', ' optimistic']
+61	12	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of optimistic	positive	optimistic	[',', ' pessimistic', ',', ' and', ' neutral', ' are', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' of', ' the', ' tweets', ' is']	",  pessimistic ,  and  neutral  are  the  most  common . 
+ 
+ The  most  common  sentiment  of  the  tweets  is"	False	" and I am very optimistic for the future."""	4	[' and', ' I', ' am', ' very', ' optimistic']
+62	12	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of optimistic	positive	optimistic	[',', ' pessimistic', ',', ' and', ' neutral', ' are', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' of', ' the', ' tweets', ' is']	",  pessimistic ,  and  neutral  are  the  most  common . 
+ 
+ The  most  common  sentiment  of  the  tweets  is"	False	 youthful, more optimistic direction of	3	[' youthful', ',', ' more', ' optimistic']
+63	12	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of optimistic	positive	optimistic	[',', ' pessimistic', ',', ' and', ' neutral', ' are', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' of', ' the', ' tweets', ' is']	",  pessimistic ,  and  neutral  are  the  most  common . 
+ 
+ The  most  common  sentiment  of  the  tweets  is"	False	 Despite outwardly optimistic statements by	3	[' Despite', ' outward', 'ly', ' optimistic']
+64	12	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of optimistic	positive	optimistic	[',', ' pessimistic', ',', ' and', ' neutral', ' are', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' of', ' the', ' tweets', ' is']	",  pessimistic ,  and  neutral  are  the  most  common . 
+ 
+ The  most  common  sentiment  of  the  tweets  is"	False	 The British were optimistic about gaseous diffusion,	3	[' The', ' British', ' were', ' optimistic']
+65	13	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of cheerful	positive	cheerful	[',', ' sad', ',', ' and', ' angry', '.', '\n', '\n', 'The', ' sentiment', ' of', ' the', ' word', ' is', ' the', ' most', ' important', ' part', ' of', ' the']	",  sad ,  and  angry . 
+ 
+ The  sentiment  of  the  word  is  the  most  important  part  of  the"	False	 friendly and cheerful with the Queen's	2	[' friendly', ' and', ' cheerful']
+66	13	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of cheerful	positive	cheerful	[',', ' sad', ',', ' and', ' angry', '.', '\n', '\n', 'The', ' sentiment', ' of', ' the', ' word', ' is', ' the', ' most', ' important', ' part', ' of', ' the']	",  sad ,  and  angry . 
+ 
+ The  sentiment  of  the  word  is  the  most  important  part  of  the"	False	 many with his cheerful tales of Mayfair,	3	[' many', ' with', ' his', ' cheerful']
+67	13	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of cheerful	positive	cheerful	[',', ' sad', ',', ' and', ' angry', '.', '\n', '\n', 'The', ' sentiment', ' of', ' the', ' word', ' is', ' the', ' most', ' important', ' part', ' of', ' the']	",  sad ,  and  angry . 
+ 
+ The  sentiment  of  the  word  is  the  most  important  part  of  the"	False	 story. She is a cheerful girl who finds pleasure	5	[' story', '.', ' She', ' is', ' a', ' cheerful']
+68	13	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of cheerful	positive	cheerful	[',', ' sad', ',', ' and', ' angry', '.', '\n', '\n', 'The', ' sentiment', ' of', ' the', ' word', ' is', ' the', ' most', ' important', ' part', ' of', ' the']	",  sad ,  and  angry . 
+ 
+ The  sentiment  of  the  word  is  the  most  important  part  of  the"	False	 (Kushboo) and the cheerful appearance of	8	[' (', 'K', 'ush', 'bo', 'o', ')', ' and', ' the', ' cheerful']
+69	13	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of cheerful	positive	cheerful	[',', ' sad', ',', ' and', ' angry', '.', '\n', '\n', 'The', ' sentiment', ' of', ' the', ' word', ' is', ' the', ' most', ' important', ' part', ' of', ' the']	",  sad ,  and  angry . 
+ 
+ The  sentiment  of  the  word  is  the  most  important  part  of  the"	False	 the Hokage. His cheerful and boisterous	5	[' the', ' Hok', 'age', '.', ' His', ' cheerful']
+70	14	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of ecstatic	positive	ecstatic	[',', ' and', ' the', ' sentiment', ' of', ' sad', '.', '\n', '\n', 'The', ' sentiment', ' of', ' sad', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  sad . 
+ 
+ The  sentiment  of  sad  is  the  most  common  sentiment  in  the"	False	 After the game, an ecstatic Ferguson felt United	5	[' After', ' the', ' game', ',', ' an', ' ecstatic']
+71	14	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of ecstatic	positive	ecstatic	[',', ' and', ' the', ' sentiment', ' of', ' sad', '.', '\n', '\n', 'The', ' sentiment', ' of', ' sad', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  sad . 
+ 
+ The  sentiment  of  sad  is  the  most  common  sentiment  in  the"	False	 liturgy reflects the ecstatic and experiential	4	[' lit', 'urgy', ' reflects', ' the', ' ecstatic']
+72	14	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of ecstatic	positive	ecstatic	[',', ' and', ' the', ' sentiment', ' of', ' sad', '.', '\n', '\n', 'The', ' sentiment', ' of', ' sad', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  sad . 
+ 
+ The  sentiment  of  sad  is  the  most  common  sentiment  in  the"	False	 coming to an ecstatic peace with	3	[' coming', ' to', ' an', ' ecstatic']
+73	14	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of ecstatic	positive	ecstatic	[',', ' and', ' the', ' sentiment', ' of', ' sad', '.', '\n', '\n', 'The', ' sentiment', ' of', ' sad', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  sad . 
+ 
+ The  sentiment  of  sad  is  the  most  common  sentiment  in  the"	False	 not over, giving an ecstatic Michael the closure	5	[' not', ' over', ',', ' giving', ' an', ' ecstatic']
+74	14	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of ecstatic	positive	ecstatic	[',', ' and', ' the', ' sentiment', ' of', ' sad', '.', '\n', '\n', 'The', ' sentiment', ' of', ' sad', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  sad . 
+ 
+ The  sentiment  of  sad  is  the  most  common  sentiment  in  the"	False	 and Crevel are ecstatic when they hear this	4	[' and', ' Cre', 'vel', ' are', ' ecstatic']
+75	15	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of delighted	positive	delighted	[',', ' and', ' the', ' sentiment', ' of', ' disappointed', '.', '\n', '\n', 'The', ' sentiment', ' of', ' delighted', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  disappointed . 
+ 
+ The  sentiment  of  delighted  is  the  most  common  sentiment  in  the"	False	 Southey was delighted with Nicol's effort	4	[' S', 'out', 'hey', ' was', ' delighted']
+76	15	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of delighted	positive	delighted	[',', ' and', ' the', ' sentiment', ' of', ' disappointed', '.', '\n', '\n', 'The', ' sentiment', ' of', ' delighted', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  disappointed . 
+ 
+ The  sentiment  of  delighted  is  the  most  common  sentiment  in  the"	False	" intellectual who delighted, infuriated and provoked""."	2	[' intellectual', ' who', ' delighted']
+77	15	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of delighted	positive	delighted	[',', ' and', ' the', ' sentiment', ' of', ' disappointed', '.', '\n', '\n', 'The', ' sentiment', ' of', ' delighted', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  disappointed . 
+ 
+ The  sentiment  of  delighted  is  the  most  common  sentiment  in  the"	False	" signed ""A Workman"", delighted its recipient,"	6	"[' signed', ' ""', 'A', ' Work', 'man', '"",', ' delighted']"
+78	15	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of delighted	positive	delighted	[',', ' and', ' the', ' sentiment', ' of', ' disappointed', '.', '\n', '\n', 'The', ' sentiment', ' of', ' delighted', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  disappointed . 
+ 
+ The  sentiment  of  delighted  is  the  most  common  sentiment  in  the"	False	 and I was delighted to be part of	3	[' and', ' I', ' was', ' delighted']
+79	15	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of delighted	positive	delighted	[',', ' and', ' the', ' sentiment', ' of', ' disappointed', '.', '\n', '\n', 'The', ' sentiment', ' of', ' delighted', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  disappointed . 
+ 
+ The  sentiment  of  delighted  is  the  most  common  sentiment  in  the"	False	 qualified fifth and was delighted with his car and	4	[' qualified', ' fifth', ' and', ' was', ' delighted']
+80	16	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of thrilled	positive	thrilled	[',', ' and', ' the', ' sentiment', ' of', ' disappointed', '.', '\n', '\n', 'The', ' sentiment', ' of', ' thrilled', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  disappointed . 
+ 
+ The  sentiment  of  thrilled  is  the  most  common  sentiment  in  the"	False	 said the actor thrilled him, prompting Booth	3	[' said', ' the', ' actor', ' thrilled']
+81	16	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of thrilled	positive	thrilled	[',', ' and', ' the', ' sentiment', ' of', ' disappointed', '.', '\n', '\n', 'The', ' sentiment', ' of', ' thrilled', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  disappointed . 
+ 
+ The  sentiment  of  thrilled  is  the  most  common  sentiment  in  the"	False	 Spectacular Spider-Man, was thrilled to use Sandman	7	[' Spect', 'acular', ' Spider', '-', 'Man', ',', ' was', ' thrilled']
+82	16	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of thrilled	positive	thrilled	[',', ' and', ' the', ' sentiment', ' of', ' disappointed', '.', '\n', '\n', 'The', ' sentiment', ' of', ' thrilled', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  disappointed . 
+ 
+ The  sentiment  of  thrilled  is  the  most  common  sentiment  in  the"	False	 Time USA. Not thrilled at the idea,	4	[' Time', ' USA', '.', ' Not', ' thrilled']
+83	16	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of thrilled	positive	thrilled	[',', ' and', ' the', ' sentiment', ' of', ' disappointed', '.', '\n', '\n', 'The', ' sentiment', ' of', ' thrilled', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  disappointed . 
+ 
+ The  sentiment  of  thrilled  is  the  most  common  sentiment  in  the"	False	 (Leghorn) but he was thrilled to get the order	8	[' (', 'Le', 'gh', 'orn', ')', ' but', ' he', ' was', ' thrilled']
+84	16	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of thrilled	positive	thrilled	[',', ' and', ' the', ' sentiment', ' of', ' disappointed', '.', '\n', '\n', 'The', ' sentiment', ' of', ' thrilled', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  disappointed . 
+ 
+ The  sentiment  of  thrilled  is  the  most  common  sentiment  in  the"	False	 1889), was equally thrilled with the acquisition	4	[' 1889', '),', ' was', ' equally', ' thrilled']
+85	17	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of overjoyed	positive	overjoyed	[',', ' and', ' the', ' sentiment', ' of', ' disappointed', '.', '\n', '\n', 'The', ' sentiment', ' of', ' over', 'joy', 'ed', ' is', ' the', ' most', ' common', ' sentiment']	",  and  the  sentiment  of  disappointed . 
+ 
+ The  sentiment  of  over joy ed  is  the  most  common  sentiment"	False	 her. He was overjoyed when in 1981	6	[' her', '.', ' He', ' was', ' over', 'joy', 'ed']
+86	17	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of overjoyed	positive	overjoyed	[',', ' and', ' the', ' sentiment', ' of', ' disappointed', '.', '\n', '\n', 'The', ' sentiment', ' of', ' over', 'joy', 'ed', ' is', ' the', ' most', ' common', ' sentiment']	",  and  the  sentiment  of  disappointed . 
+ 
+ The  sentiment  of  over joy ed  is  the  most  common  sentiment"	False	 past self and is overjoyed to see him,	6	[' past', ' self', ' and', ' is', ' over', 'joy', 'ed']
+87	17	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of overjoyed	positive	overjoyed	[',', ' and', ' the', ' sentiment', ' of', ' disappointed', '.', '\n', '\n', 'The', ' sentiment', ' of', ' over', 'joy', 'ed', ' is', ' the', ' most', ' common', ' sentiment']	",  and  the  sentiment  of  disappointed . 
+ 
+ The  sentiment  of  over joy ed  is  the  most  common  sentiment"	False	 The passengers are overjoyed that Daisy	5	[' The', ' passengers', ' are', ' over', 'joy', 'ed']
+88	17	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of overjoyed	positive	overjoyed	[',', ' and', ' the', ' sentiment', ' of', ' disappointed', '.', '\n', '\n', 'The', ' sentiment', ' of', ' over', 'joy', 'ed', ' is', ' the', ' most', ' common', ' sentiment']	",  and  the  sentiment  of  disappointed . 
+ 
+ The  sentiment  of  over joy ed  is  the  most  common  sentiment"	False	" They are both overjoyed and high-five.
+"	5	[' They', ' are', ' both', ' over', 'joy', 'ed']
+89	17	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of overjoyed	positive	overjoyed	[',', ' and', ' the', ' sentiment', ' of', ' disappointed', '.', '\n', '\n', 'The', ' sentiment', ' of', ' over', 'joy', 'ed', ' is', ' the', ' most', ' common', ' sentiment']	",  and  the  sentiment  of  disappointed . 
+ 
+ The  sentiment  of  over joy ed  is  the  most  common  sentiment"	False	 her. Frankie, overjoyed that her daughter	6	[' her', '.', ' Frankie', ',', ' over', 'joy', 'ed']
+90	18	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of elated	positive	elated	[',', ' and', ' the', ' sentiment', ' of', ' depressed', '.', '\n', '\n', 'The', ' sentiment', ' of', ' el', 'ated', ' is', ' the', ' most', ' common', ' sentiment', ' in']	",  and  the  sentiment  of  depressed . 
+ 
+ The  sentiment  of  el ated  is  the  most  common  sentiment  in"	False	 supernova imminent, the elated Elbrun informs	6	[' super', 'nova', ' imminent', ',', ' the', ' el', 'ated']
+91	18	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of elated	positive	elated	[',', ' and', ' the', ' sentiment', ' of', ' depressed', '.', '\n', '\n', 'The', ' sentiment', ' of', ' el', 'ated', ' is', ' the', ' most', ' common', ' sentiment', ' in']	",  and  the  sentiment  of  depressed . 
+ 
+ The  sentiment  of  el ated  is  the  most  common  sentiment  in"	False	 magazine). While elated to have his	4	[' magazine', ').', ' While', ' el', 'ated']
+92	18	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of elated	positive	elated	[',', ' and', ' the', ' sentiment', ' of', ' depressed', '.', '\n', '\n', 'The', ' sentiment', ' of', ' el', 'ated', ' is', ' the', ' most', ' common', ' sentiment', ' in']	",  and  the  sentiment  of  depressed . 
+ 
+ The  sentiment  of  el ated  is  the  most  common  sentiment  in"	False	 Westmoreland were elated that in only	5	[' West', 'more', 'land', ' were', ' el', 'ated']
+93	18	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of elated	positive	elated	[',', ' and', ' the', ' sentiment', ' of', ' depressed', '.', '\n', '\n', 'The', ' sentiment', ' of', ' el', 'ated', ' is', ' the', ' most', ' common', ' sentiment', ' in']	",  and  the  sentiment  of  depressed . 
+ 
+ The  sentiment  of  el ated  is  the  most  common  sentiment  in"	False	 interior. Rhodes was elated by Rudd's results,	5	[' interior', '.', ' Rhodes', ' was', ' el', 'ated']
+94	18	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of elated	positive	elated	[',', ' and', ' the', ' sentiment', ' of', ' depressed', '.', '\n', '\n', 'The', ' sentiment', ' of', ' el', 'ated', ' is', ' the', ' most', ' common', ' sentiment', ' in']	",  and  the  sentiment  of  depressed . 
+ 
+ The  sentiment  of  el ated  is  the  most  common  sentiment  in"	False	 is Dorothy. An elated Hermie goes home	5	[' is', ' Dorothy', '.', ' An', ' el', 'ated']
+95	19	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of blissful	positive	blissful	[' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' emotion', ' is', ' happiness', '.', '\n', '\n', 'The', ' most', ' common', ' emotion']	" is  the  most  common . 
+ 
+ The  most  common  emotion  is  happiness . 
+ 
+ The  most  common  emotion"	False	 ended with a blissful marriage. She concluded	4	[' ended', ' with', ' a', ' bliss', 'ful']
+96	19	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of blissful	positive	blissful	[' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' emotion', ' is', ' happiness', '.', '\n', '\n', 'The', ' most', ' common', ' emotion']	" is  the  most  common . 
+ 
+ The  most  common  emotion  is  happiness . 
+ 
+ The  most  common  emotion"	False	" song ""slips from blissful ambience into"	6	"[' song', ' ""', 'sl', 'ips', ' from', ' bliss', 'ful']"
+97	19	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of blissful	positive	blissful	[' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' emotion', ' is', ' happiness', '.', '\n', '\n', 'The', ' most', ' common', ' emotion']	" is  the  most  common . 
+ 
+ The  most  common  emotion  is  happiness . 
+ 
+ The  most  common  emotion"	False	" song ""slips from blissful ambience into bombastic"	6	"[' song', ' ""', 'sl', 'ips', ' from', ' bliss', 'ful']"
+98	19	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of blissful	positive	blissful	[' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' emotion', ' is', ' happiness', '.', '\n', '\n', 'The', ' most', ' common', ' emotion']	" is  the  most  common . 
+ 
+ The  most  common  emotion  is  happiness . 
+ 
+ The  most  common  emotion"	False	" an ""anthem to blissful monogamy"". Similarly,"	6	"[' an', ' ""', 'ant', 'hem', ' to', ' bliss', 'ful']"
+99	19	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of blissful	positive	blissful	[' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' emotion', ' is', ' happiness', '.', '\n', '\n', 'The', ' most', ' common', ' emotion']	" is  the  most  common . 
+ 
+ The  most  common  emotion  is  happiness . 
+ 
+ The  most  common  emotion"	False	" ""espouses a blissful disregard for traditional"	5	"[' ""', 'esp', 'ouses', ' a', ' bliss', 'ful']"
+100	20	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of sad	negative	sad	"[',', ' happy', ',', ' and', ' angry', ',', ' the', ' sentiment', ' of', ' the', ' word', ' ""', 'love', '""', ' is', ' the', ' most', ' positive', '.', '\n']"	",  happy ,  and  angry ,  the  sentiment  of  the  word  "" love ""  is  the  most  positive . 
+"	False	 showcasing his sad vocals, with	2	[' showcasing', ' his', ' sad']
+101	20	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of sad	negative	sad	"[',', ' happy', ',', ' and', ' angry', ',', ' the', ' sentiment', ' of', ' the', ' word', ' ""', 'love', '""', ' is', ' the', ' most', ' positive', '.', '\n']"	",  happy ,  and  angry ,  the  sentiment  of  the  word  "" love ""  is  the  most  positive . 
+"	False	" Hubbard as ""a very sad case of post-war"	5	"[' Hubbard', ' as', ' ""', 'a', ' very', ' sad']"
+102	20	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of sad	negative	sad	"[',', ' happy', ',', ' and', ' angry', ',', ' the', ' sentiment', ' of', ' the', ' word', ' ""', 'love', '""', ' is', ' the', ' most', ' positive', '.', '\n']"	",  happy ,  and  angry ,  the  sentiment  of  the  word  "" love ""  is  the  most  positive . 
+"	False	 (3) I am so sad or unhappy that	6	[' (', '3', ')', ' I', ' am', ' so', ' sad']
+103	20	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of sad	negative	sad	"[',', ' happy', ',', ' and', ' angry', ',', ' the', ' sentiment', ' of', ' the', ' word', ' ""', 'love', '""', ' is', ' the', ' most', ' positive', '.', '\n']"	",  happy ,  and  angry ,  the  sentiment  of  the  word  "" love ""  is  the  most  positive . 
+"	False	 justice. But the sad truth is that	4	[' justice', '.', ' But', ' the', ' sad']
+104	20	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of sad	negative	sad	"[',', ' happy', ',', ' and', ' angry', ',', ' the', ' sentiment', ' of', ' the', ' word', ' ""', 'love', '""', ' is', ' the', ' most', ' positive', '.', '\n']"	",  happy ,  and  angry ,  the  sentiment  of  the  word  "" love ""  is  the  most  positive . 
+"	False	 or happy or angry or sad or hungry or	5	[' or', ' happy', ' or', ' angry', ' or', ' sad']
+105	21	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of unhappy	negative	unhappy	[' people', ' is', ' more', ' positive', ' than', ' that', ' of', ' happy', ' people', '.', '\n', '\n', 'The', ' sentiment', ' of', ' unhappy', ' people', ' is', ' more', ' positive']	" people  is  more  positive  than  that  of  happy  people . 
+ 
+ The  sentiment  of  unhappy  people  is  more  positive"	False	 that he was unhappy with the marriage,	3	[' that', ' he', ' was', ' unhappy']
+106	21	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of unhappy	negative	unhappy	[' people', ' is', ' more', ' positive', ' than', ' that', ' of', ' happy', ' people', '.', '\n', '\n', 'The', ' sentiment', ' of', ' unhappy', ' people', ' is', ' more', ' positive']	" people  is  more  positive  than  that  of  happy  people . 
+ 
+ The  sentiment  of  unhappy  people  is  more  positive"	False	 that Carter was unhappy in Columbus and	3	[' that', ' Carter', ' was', ' unhappy']
+107	21	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of unhappy	negative	unhappy	[' people', ' is', ' more', ' positive', ' than', ' that', ' of', ' happy', ' people', '.', '\n', '\n', 'The', ' sentiment', ' of', ' unhappy', ' people', ' is', ' more', ' positive']	" people  is  more  positive  than  that  of  happy  people . 
+ 
+ The  sentiment  of  unhappy  people  is  more  positive"	False	 Marie of Lorraine was unhappy and yielded	5	[' Marie', ' of', ' Lor', 'raine', ' was', ' unhappy']
+108	21	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of unhappy	negative	unhappy	[' people', ' is', ' more', ' positive', ' than', ' that', ' of', ' happy', ' people', '.', '\n', '\n', 'The', ' sentiment', ' of', ' unhappy', ' people', ' is', ' more', ' positive']	" people  is  more  positive  than  that  of  happy  people . 
+ 
+ The  sentiment  of  unhappy  people  is  more  positive"	False	 was by all accounts unhappy and isolated. Because	4	[' was', ' by', ' all', ' accounts', ' unhappy']
+109	21	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of unhappy	negative	unhappy	[' people', ' is', ' more', ' positive', ' than', ' that', ' of', ' happy', ' people', '.', '\n', '\n', 'The', ' sentiment', ' of', ' unhappy', ' people', ' is', ' more', ' positive']	" people  is  more  positive  than  that  of  happy  people . 
+ 
+ The  sentiment  of  unhappy  people  is  more  positive"	False	 Henson was unhappy with the compositing	3	[' H', 'enson', ' was', ' unhappy']
+110	22	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of depressed	negative	depressed	[' people', ' is', ' more', ' positive', ' than', ' that', ' of', ' the', ' normal', ' people', '.', '\n', '\n', 'The', ' results', ' of', ' the', ' study', ' showed', ' that']	" people  is  more  positive  than  that  of  the  normal  people . 
+ 
+ The  results  of  the  study  showed  that"	False	 was deeply depressed by his fiancee's death.	2	[' was', ' deeply', ' depressed']
+111	22	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of depressed	negative	depressed	[' people', ' is', ' more', ' positive', ' than', ' that', ' of', ' the', ' normal', ' people', '.', '\n', '\n', 'The', ' results', ' of', ' the', ' study', ' showed', ' that']	" people  is  more  positive  than  that  of  the  normal  people . 
+ 
+ The  results  of  the  study  showed  that"	False	 The guns could be depressed to − 5°and	4	[' The', ' guns', ' could', ' be', ' depressed']
+112	22	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of depressed	negative	depressed	[' people', ' is', ' more', ' positive', ' than', ' that', ' of', ' the', ' normal', ' people', '.', '\n', '\n', 'The', ' results', ' of', ' the', ' study', ' showed', ' that']	" people  is  more  positive  than  that  of  the  normal  people . 
+ 
+ The  results  of  the  study  showed  that"	False	 success, although Gaye, depressed because of issues such	6	[' success', ',', ' although', ' Gay', 'e', ',', ' depressed']
+113	22	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of depressed	negative	depressed	[' people', ' is', ' more', ' positive', ' than', ' that', ' of', ' the', ' normal', ' people', '.', '\n', '\n', 'The', ' results', ' of', ' the', ' study', ' showed', ' that']	" people  is  more  positive  than  that  of  the  normal  people . 
+ 
+ The  results  of  the  study  showed  that"	False	 heads onto a depressed alignment with frequent	3	[' heads', ' onto', ' a', ' depressed']
+114	22	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of depressed	negative	depressed	[' people', ' is', ' more', ' positive', ' than', ' that', ' of', ' the', ' normal', ' people', '.', '\n', '\n', 'The', ' results', ' of', ' the', ' study', ' showed', ' that']	" people  is  more  positive  than  that  of  the  normal  people . 
+ 
+ The  results  of  the  study  showed  that"	False	 Potter became deeply depressed and was ill for many	3	[' Potter', ' became', ' deeply', ' depressed']
+115	23	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of lonely	negative	lonely	[' people', ' is', ' more', ' positive', ' than', ' negative', '.', '\n', '\n', 'The', ' sentiment', ' of', ' lonely', ' people', ' is', ' more', ' positive', ' than', ' negative', '.']	" people  is  more  positive  than  negative . 
+ 
+ The  sentiment  of  lonely  people  is  more  positive  than  negative ."	True	 follows Logan, a lonely 14-year-old	4	[' follows', ' Logan', ',', ' a', ' lonely']
+116	23	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of lonely	negative	lonely	[' people', ' is', ' more', ' positive', ' than', ' negative', '.', '\n', '\n', 'The', ' sentiment', ' of', ' lonely', ' people', ' is', ' more', ' positive', ' than', ' negative', '.']	" people  is  more  positive  than  negative . 
+ 
+ The  sentiment  of  lonely  people  is  more  positive  than  negative ."	True	" parking on lonely roads.
+"	2	[' parking', ' on', ' lonely']
+117	23	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of lonely	negative	lonely	[' people', ' is', ' more', ' positive', ' than', ' negative', '.', '\n', '\n', 'The', ' sentiment', ' of', ' lonely', ' people', ' is', ' more', ' positive', ' than', ' negative', '.']	" people  is  more  positive  than  negative . 
+ 
+ The  sentiment  of  lonely  people  is  more  positive  than  negative ."	True	 introduction of lonely divorcee Christine,	2	[' introduction', ' of', ' lonely']
+118	23	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of lonely	negative	lonely	[' people', ' is', ' more', ' positive', ' than', ' negative', '.', '\n', '\n', 'The', ' sentiment', ' of', ' lonely', ' people', ' is', ' more', ' positive', ' than', ' negative', '.']	" people  is  more  positive  than  negative . 
+ 
+ The  sentiment  of  lonely  people  is  more  positive  than  negative ."	True	 lyrics tell of a lonely woman declaring she	4	[' lyrics', ' tell', ' of', ' a', ' lonely']
+119	23	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of lonely	negative	lonely	[' people', ' is', ' more', ' positive', ' than', ' negative', '.', '\n', '\n', 'The', ' sentiment', ' of', ' lonely', ' people', ' is', ' more', ' positive', ' than', ' negative', '.']	" people  is  more  positive  than  negative . 
+ 
+ The  sentiment  of  lonely  people  is  more  positive  than  negative ."	True	" ""forgotten and ignored, a lonely beacon of light"	7	"[' ""', 'for', 'gotten', ' and', ' ignored', ',', ' a', ' lonely']"
+120	24	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of heartbroken	negative	heartbroken	[' people', ' is', ' overwhelmingly', ' negative', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' is', ' �', '�', 'I', '�', '�', 'm', ' heart', 'broken']	" people  is  overwhelmingly  negative . 
+ 
+ The  most  common  sentiment  is  � � I � � m  heart broken"	True	 Wilberforce was heartbroken to be separated	5	[' Wil', 'ber', 'force', ' was', ' heart', 'broken']
+121	24	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of heartbroken	negative	heartbroken	[' people', ' is', ' overwhelmingly', ' negative', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' is', ' �', '�', 'I', '�', '�', 'm', ' heart', 'broken']	" people  is  overwhelmingly  negative . 
+ 
+ The  most  common  sentiment  is  � � I � � m  heart broken"	True	 fiancee. Rahul is heartbroken but congratulates	6	[' fiance', 'e', '.', ' Rahul', ' is', ' heart', 'broken']
+122	24	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of heartbroken	negative	heartbroken	[' people', ' is', ' overwhelmingly', ' negative', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' is', ' �', '�', 'I', '�', '�', 'm', ' heart', 'broken']	" people  is  overwhelmingly  negative . 
+ 
+ The  most  common  sentiment  is  � � I � � m  heart broken"	True	 Buchanan was a heartbroken woman. Range described	4	[' Buchanan', ' was', ' a', ' heart', 'broken']
+123	24	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of heartbroken	negative	heartbroken	[' people', ' is', ' overwhelmingly', ' negative', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' is', ' �', '�', 'I', '�', '�', 'm', ' heart', 'broken']	" people  is  overwhelmingly  negative . 
+ 
+ The  most  common  sentiment  is  � � I � � m  heart broken"	True	 character to be heartbroken if she believed her	4	[' character', ' to', ' be', ' heart', 'broken']
+124	24	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of heartbroken	negative	heartbroken	[' people', ' is', ' overwhelmingly', ' negative', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' is', ' �', '�', 'I', '�', '�', 'm', ' heart', 'broken']	" people  is  overwhelmingly  negative . 
+ 
+ The  most  common  sentiment  is  � � I � � m  heart broken"	True	 Meanwhile, Bart is heartbroken to find out	5	[' Meanwhile', ',', ' Bart', ' is', ' heart', 'broken']
+125	25	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of anxious	negative	anxious	['ness', ',', ' and', ' the', ' sentiment', ' of', ' happiness', '.', '\n', '\n', 'The', ' results', ' of', ' the', ' study', ' are', ' as', ' follows', ':', '\n']	"ness ,  and  the  sentiment  of  happiness . 
+ 
+ The  results  of  the  study  are  as  follows : 
+"	False	 ends, Charlie is anxious about losing	4	[' ends', ',', ' Charlie', ' is', ' anxious']
+126	25	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of anxious	negative	anxious	['ness', ',', ' and', ' the', ' sentiment', ' of', ' happiness', '.', '\n', '\n', 'The', ' results', ' of', ' the', ' study', ' are', ' as', ' follows', ':', '\n']	"ness ,  and  the  sentiment  of  happiness . 
+ 
+ The  results  of  the  study  are  as  follows : 
+"	False	 lawyer, one is always anxious when there is contest	5	[' lawyer', ',', ' one', ' is', ' always', ' anxious']
+127	25	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of anxious	negative	anxious	['ness', ',', ' and', ' the', ' sentiment', ' of', ' happiness', '.', '\n', '\n', 'The', ' results', ' of', ' the', ' study', ' are', ' as', ' follows', ':', '\n']	"ness ,  and  the  sentiment  of  happiness . 
+ 
+ The  results  of  the  study  are  as  follows : 
+"	False	 first emperor was anxious to avoid the	3	[' first', ' emperor', ' was', ' anxious']
+128	25	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of anxious	negative	anxious	['ness', ',', ' and', ' the', ' sentiment', ' of', ' happiness', '.', '\n', '\n', 'The', ' results', ' of', ' the', ' study', ' are', ' as', ' follows', ':', '\n']	"ness ,  and  the  sentiment  of  happiness . 
+ 
+ The  results  of  the  study  are  as  follows : 
+"	False	" direction: ""I am very anxious to receive your"	6	"[' direction', ':', ' ""', 'I', ' am', ' very', ' anxious']"
+129	25	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of anxious	negative	anxious	['ness', ',', ' and', ' the', ' sentiment', ' of', ' happiness', '.', '\n', '\n', 'The', ' results', ' of', ' the', ' study', ' are', ' as', ' follows', ':', '\n']	"ness ,  and  the  sentiment  of  happiness . 
+ 
+ The  results  of  the  study  are  as  follows : 
+"	False	 defrauded me, being anxious that it was	6	[' def', 'ra', 'uded', ' me', ',', ' being', ' anxious']
+130	26	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of frustrated	negative	frustrated	[',', ' and', ' the', ' sentiment', ' of', ' happy', '.', '\n', '\n', 'The', ' sentiment', ' of', ' frustrated', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  happy . 
+ 
+ The  sentiment  of  frustrated  is  the  most  common  sentiment  in  the"	False	 were sometimes frustrated by powerful	2	[' were', ' sometimes', ' frustrated']
+131	26	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of frustrated	negative	frustrated	[',', ' and', ' the', ' sentiment', ' of', ' happy', '.', '\n', '\n', 'The', ' sentiment', ' of', ' frustrated', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  happy . 
+ 
+ The  sentiment  of  frustrated  is  the  most  common  sentiment  in  the"	False	 ground fog again frustrated reinforcement.	3	[' ground', ' fog', ' again', ' frustrated']
+132	26	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of frustrated	negative	frustrated	[',', ' and', ' the', ' sentiment', ' of', ' happy', '.', '\n', '\n', 'The', ' sentiment', ' of', ' frustrated', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  happy . 
+ 
+ The  sentiment  of  frustrated  is  the  most  common  sentiment  in  the"	False	 of France. Berg was frustrated by the expense	5	[' of', ' France', '.', ' Berg', ' was', ' frustrated']
+133	26	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of frustrated	negative	frustrated	[',', ' and', ' the', ' sentiment', ' of', ' happy', '.', '\n', '\n', 'The', ' sentiment', ' of', ' frustrated', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  happy . 
+ 
+ The  sentiment  of  frustrated  is  the  most  common  sentiment  in  the"	False	 completely frustrated and, through	1	[' completely', ' frustrated']
+134	26	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of frustrated	negative	frustrated	[',', ' and', ' the', ' sentiment', ' of', ' happy', '.', '\n', '\n', 'The', ' sentiment', ' of', ' frustrated', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  happy . 
+ 
+ The  sentiment  of  frustrated  is  the  most  common  sentiment  in  the"	False	 had become frustrated with the Herald,	2	[' had', ' become', ' frustrated']
+135	27	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of angry	negative	angry	[',', ' sad', ',', ' happy', ',', ' and', ' surprise', '.', '\n', '\n', 'The', ' sentiment', ' of', ' the', ' tweet', ' is', ' a', ' sentiment', ' of', ' the']	",  sad ,  happy ,  and  surprise . 
+ 
+ The  sentiment  of  the  tweet  is  a  sentiment  of  the"	False	 was met by an angry crowd which shouted	4	[' was', ' met', ' by', ' an', ' angry']
+136	27	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of angry	negative	angry	[',', ' sad', ',', ' happy', ',', ' and', ' surprise', '.', '\n', '\n', 'The', ' sentiment', ' of', ' the', ' tweet', ' is', ' a', ' sentiment', ' of', ' the']	",  sad ,  happy ,  and  surprise . 
+ 
+ The  sentiment  of  the  tweet  is  a  sentiment  of  the"	False	 return, she found an angry mob in front of	5	[' return', ',', ' she', ' found', ' an', ' angry']
+137	27	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of angry	negative	angry	[',', ' sad', ',', ' happy', ',', ' and', ' surprise', '.', '\n', '\n', 'The', ' sentiment', ' of', ' the', ' tweet', ' is', ' a', ' sentiment', ' of', ' the']	",  sad ,  happy ,  and  surprise . 
+ 
+ The  sentiment  of  the  tweet  is  a  sentiment  of  the"	False	 extraordinary amount of angry criticism.	3	[' extraordinary', ' amount', ' of', ' angry']
+138	27	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of angry	negative	angry	[',', ' sad', ',', ' happy', ',', ' and', ' surprise', '.', '\n', '\n', 'The', ' sentiment', ' of', ' the', ' tweet', ' is', ' a', ' sentiment', ' of', ' the']	",  sad ,  happy ,  and  surprise . 
+ 
+ The  sentiment  of  the  tweet  is  a  sentiment  of  the"	False	 Jack becomes angry but Sawyer claims	2	[' Jack', ' becomes', ' angry']
+139	27	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of angry	negative	angry	[',', ' sad', ',', ' happy', ',', ' and', ' surprise', '.', '\n', '\n', 'The', ' sentiment', ' of', ' the', ' tweet', ' is', ' a', ' sentiment', ' of', ' the']	",  sad ,  happy ,  and  surprise . 
+ 
+ The  sentiment  of  the  tweet  is  a  sentiment  of  the"	False	" narrator — he's angry that he's confused."""	4	"[' narrator', ' —', ' he', ""'s"", ' angry']"
+140	28	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of jealous	negative	jealous	[' people', ' is', ' negative', '.', '\n', '\n', 'The', ' sentiment', ' of', ' jealous', ' people', ' is', ' negative', '.', '\n', '\n', '(', '2', ')', '\n']	" people  is  negative . 
+ 
+ The  sentiment  of  jealous  people  is  negative . 
+ 
+ ( 2 ) 
+"	True	 thinks Clark is jealous of her relationship	3	[' thinks', ' Clark', ' is', ' jealous']
+141	28	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of jealous	negative	jealous	[' people', ' is', ' negative', '.', '\n', '\n', 'The', ' sentiment', ' of', ' jealous', ' people', ' is', ' negative', '.', '\n', '\n', '(', '2', ')', '\n']	" people  is  negative . 
+ 
+ The  sentiment  of  jealous  people  is  negative . 
+ 
+ ( 2 ) 
+"	True	 for his work – a jealous appreciation;	5	[' for', ' his', ' work', ' –', ' a', ' jealous']
+142	28	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of jealous	negative	jealous	[' people', ' is', ' negative', '.', '\n', '\n', 'The', ' sentiment', ' of', ' jealous', ' people', ' is', ' negative', '.', '\n', '\n', '(', '2', ')', '\n']	" people  is  negative . 
+ 
+ The  sentiment  of  jealous  people  is  negative . 
+ 
+ ( 2 ) 
+"	True	 became obsessively jealous of the princess'emerging	3	[' became', ' obsess', 'ively', ' jealous']
+143	28	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of jealous	negative	jealous	[' people', ' is', ' negative', '.', '\n', '\n', 'The', ' sentiment', ' of', ' jealous', ' people', ' is', ' negative', '.', '\n', '\n', '(', '2', ')', '\n']	" people  is  negative . 
+ 
+ The  sentiment  of  jealous  people  is  negative . 
+ 
+ ( 2 ) 
+"	True	 by Billie's jealous friend Kylie (Elarica	4	"[' by', ' Bill', 'ie', ""'s"", ' jealous']"
+144	28	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of jealous	negative	jealous	[' people', ' is', ' negative', '.', '\n', '\n', 'The', ' sentiment', ' of', ' jealous', ' people', ' is', ' negative', '.', '\n', '\n', '(', '2', ')', '\n']	" people  is  negative . 
+ 
+ The  sentiment  of  jealous  people  is  negative . 
+ 
+ ( 2 ) 
+"	True	 increasingly jealous and questions	1	[' increasingly', ' jealous']
+145	29	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of hateful	negative	hateful	[',', ' and', ' the', ' sentiment', ' of', ' love', '.', '\n', '\n', 'The', ' sentiment', ' of', ' hate', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  love . 
+ 
+ The  sentiment  of  hate  is  the  most  common  sentiment  in  the"	False	" horrible ... and hateful and mean"". The"	3	[' horrible', '...', ' and', ' hateful']
+146	29	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of hateful	negative	hateful	[',', ' and', ' the', ' sentiment', ' of', ' love', '.', '\n', '\n', 'The', ' sentiment', ' of', ' hate', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  love . 
+ 
+ The  sentiment  of  hate  is  the  most  common  sentiment  in  the"	False	 city and his hateful presence out	3	[' city', ' and', ' his', ' hateful']
+147	29	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of hateful	negative	hateful	[',', ' and', ' the', ' sentiment', ' of', ' love', '.', '\n', '\n', 'The', ' sentiment', ' of', ' hate', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  love . 
+ 
+ The  sentiment  of  hate  is  the  most  common  sentiment  in  the"	False	" ""racist and hateful views"" of"	3	"[' ""', 'racist', ' and', ' hateful']"
+148	29	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of hateful	negative	hateful	[',', ' and', ' the', ' sentiment', ' of', ' love', '.', '\n', '\n', 'The', ' sentiment', ' of', ' hate', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  love . 
+ 
+ The  sentiment  of  hate  is  the  most  common  sentiment  in  the"	False	 to help remove hateful advertisers on	3	[' to', ' help', ' remove', ' hateful']
+149	29	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of hateful	negative	hateful	[',', ' and', ' the', ' sentiment', ' of', ' love', '.', '\n', '\n', 'The', ' sentiment', ' of', ' hate', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  love . 
+ 
+ The  sentiment  of  hate  is  the  most  common  sentiment  in  the"	False	" horrible ... and hateful and mean"". The controversy"	3	[' horrible', '...', ' and', ' hateful']
+150	30	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of disappointed	negative	disappointed	[' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' of', ' the', ' users', ' is', ' positive', '.', '\n', '\n', 'The']	" is  the  most  common . 
+ 
+ The  most  common  sentiment  of  the  users  is  positive . 
+ 
+ The"	False	" before."" Feldman was disappointed at the change.
+"	4	"[' before', '.""', ' Feldman', ' was', ' disappointed']"
+151	30	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of disappointed	negative	disappointed	[' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' of', ' the', ' users', ' is', ' positive', '.', '\n', '\n', 'The']	" is  the  most  common . 
+ 
+ The  most  common  sentiment  of  the  users  is  positive . 
+ 
+ The"	False	 expected, as many disappointed consumers continued	4	[' expected', ',', ' as', ' many', ' disappointed']
+152	30	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of disappointed	negative	disappointed	[' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' of', ' the', ' users', ' is', ' positive', '.', '\n', '\n', 'The']	" is  the  most  common . 
+ 
+ The  most  common  sentiment  of  the  users  is  positive . 
+ 
+ The"	False	 Warner Bros. was disappointed with the financial	4	[' Warner', ' Bros', '.', ' was', ' disappointed']
+153	30	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of disappointed	negative	disappointed	[' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' of', ' the', ' users', ' is', ' positive', '.', '\n', '\n', 'The']	" is  the  most  common . 
+ 
+ The  most  common  sentiment  of  the  users  is  positive . 
+ 
+ The"	False	 was initially disappointed with the project	2	[' was', ' initially', ' disappointed']
+154	30	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of disappointed	negative	disappointed	[' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' of', ' the', ' users', ' is', ' positive', '.', '\n', '\n', 'The']	" is  the  most  common . 
+ 
+ The  most  common  sentiment  of  the  users  is  positive . 
+ 
+ The"	False	 example, Dudley was disappointed with the few	4	[' example', ',', ' Dudley', ' was', ' disappointed']
+155	31	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of gloomy	negative	gloomy	"[',', ' happy', ',', ' and', ' sad', ',', ' the', ' sentiment', ' of', ' the', ' word', ' ""', 'love', '""', ' is', ' the', ' most', ' common', '.', '\n']"	",  happy ,  and  sad ,  the  sentiment  of  the  word  "" love ""  is  the  most  common . 
+"	False	 Despite the gloomy ambience of	2	[' Despite', ' the', ' gloomy']
+156	31	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of gloomy	negative	gloomy	"[',', ' happy', ',', ' and', ' sad', ',', ' the', ' sentiment', ' of', ' the', ' word', ' ""', 'love', '""', ' is', ' the', ' most', ' common', '.', '\n']"	",  happy ,  and  sad ,  the  sentiment  of  the  word  "" love ""  is  the  most  common . 
+"	False	 when the morning is gloomy and the sun hiding	4	[' when', ' the', ' morning', ' is', ' gloomy']
+157	31	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of gloomy	negative	gloomy	"[',', ' happy', ',', ' and', ' sad', ',', ' the', ' sentiment', ' of', ' the', ' word', ' ""', 'love', '""', ' is', ' the', ' most', ' common', '.', '\n']"	",  happy ,  and  sad ,  the  sentiment  of  the  word  "" love ""  is  the  most  common . 
+"	False	 overwhelmingly produced gloomy masculine self-absorption	2	[' overwhelmingly', ' produced', ' gloomy']
+158	31	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of gloomy	negative	gloomy	"[',', ' happy', ',', ' and', ' sad', ',', ' the', ' sentiment', ' of', ' the', ' word', ' ""', 'love', '""', ' is', ' the', ' most', ' common', '.', '\n']"	",  happy ,  and  sad ,  the  sentiment  of  the  word  "" love ""  is  the  most  common . 
+"	False	 that he was gloomy and nervous. Herbert	3	[' that', ' he', ' was', ' gloomy']
+159	31	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of gloomy	negative	gloomy	"[',', ' happy', ',', ' and', ' sad', ',', ' the', ' sentiment', ' of', ' the', ' word', ' ""', 'love', '""', ' is', ' the', ' most', ' common', '.', '\n']"	",  happy ,  and  sad ,  the  sentiment  of  the  word  "" love ""  is  the  most  common . 
+"	False	 and collapse. After gloomy phrases from	4	[' and', ' collapse', '.', ' After', ' gloomy']
+160	32	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of dejected	negative	dejected	[',', ' and', ' the', ' sentiment', ' of', ' excited', ' are', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' sentiment', ' of', ' de', 'jected', ' is', ' the']	",  and  the  sentiment  of  excited  are  the  most  common . 
+ 
+ The  sentiment  of  de jected  is  the"	False	 Juraj Mikúš. A dejected Getzlaf lamented	8	[' Jur', 'aj', ' Mik', 'ú', 'š', '.', ' A', ' de', 'jected']
+161	32	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of dejected	negative	dejected	[',', ' and', ' the', ' sentiment', ' of', ' excited', ' are', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' sentiment', ' of', ' de', 'jected', ' is', ' the']	",  and  the  sentiment  of  excited  are  the  most  common . 
+ 
+ The  sentiment  of  de jected  is  the"	False	" Erin feels dejected and leaves.
+"	3	[' Erin', ' feels', ' de', 'jected']
+162	32	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of dejected	negative	dejected	[',', ' and', ' the', ' sentiment', ' of', ' excited', ' are', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' sentiment', ' of', ' de', 'jected', ' is', ' the']	",  and  the  sentiment  of  excited  are  the  most  common . 
+ 
+ The  sentiment  of  de jected  is  the"	False	 life and a dejected female named Mariana.	4	[' life', ' and', ' a', ' de', 'jected']
+163	32	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of dejected	negative	dejected	[',', ' and', ' the', ' sentiment', ' of', ' excited', ' are', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' sentiment', ' of', ' de', 'jected', ' is', ' the']	",  and  the  sentiment  of  excited  are  the  most  common . 
+ 
+ The  sentiment  of  de jected  is  the"	False	" Erin feels dejected and leaves.
+"	3	[' Erin', ' feels', ' de', 'jected']
+164	32	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of dejected	negative	dejected	[',', ' and', ' the', ' sentiment', ' of', ' excited', ' are', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' sentiment', ' of', ' de', 'jected', ' is', ' the']	",  and  the  sentiment  of  excited  are  the  most  common . 
+ 
+ The  sentiment  of  de jected  is  the"	False	 Born was so dejected that he gave up a	4	[' Born', ' was', ' so', ' de', 'jected']
+165	33	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of hopeless	negative	hopeless	['ness', ' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' emotion', ' is', ' hopeless', 'ness', '.', '\n', '\n', 'The', ' most']	"ness  is  the  most  common . 
+ 
+ The  most  common  emotion  is  hopeless ness . 
+ 
+ The  most"	False	 relapses, he was in a hopeless condition. The king's	7	[' rel', 'apses', ',', ' he', ' was', ' in', ' a', ' hopeless']
+166	33	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of hopeless	negative	hopeless	['ness', ' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' emotion', ' is', ' hopeless', 'ness', '.', '\n', '\n', 'The', ' most']	"ness  is  the  most  common . 
+ 
+ The  most  common  emotion  is  hopeless ness . 
+ 
+ The  most"	False	 becomes a seemingly hopeless drunkard. He spends	3	[' becomes', ' a', ' seemingly', ' hopeless']
+167	33	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of hopeless	negative	hopeless	['ness', ' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' emotion', ' is', ' hopeless', 'ness', '.', '\n', '\n', 'The', ' most']	"ness  is  the  most  common . 
+ 
+ The  most  common  emotion  is  hopeless ness . 
+ 
+ The  most"	False	 compensate for its hopeless vulgarity, not	3	[' compensate', ' for', ' its', ' hopeless']
+168	33	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of hopeless	negative	hopeless	['ness', ' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' emotion', ' is', ' hopeless', 'ness', '.', '\n', '\n', 'The', ' most']	"ness  is  the  most  common . 
+ 
+ The  most  common  emotion  is  hopeless ness . 
+ 
+ The  most"	False	 situation was hopeless and ordered a withdrawal	2	[' situation', ' was', ' hopeless']
+169	33	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of hopeless	negative	hopeless	['ness', ' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' emotion', ' is', ' hopeless', 'ness', '.', '\n', '\n', 'The', ' most']	"ness  is  the  most  common . 
+ 
+ The  most  common  emotion  is  hopeless ness . 
+ 
+ The  most"	False	 that the cause was hopeless and ordered a withdrawal	4	[' that', ' the', ' cause', ' was', ' hopeless']
+170	34	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of despairing	negative	despairing	[',', ' and', ' the', ' sentiment', ' of', ' hope', '.', '\n', '\n', 'The', ' sentiment', ' of', ' despair', 'ing', ' is', ' the', ' most', ' common', ' sentiment', ' in']	",  and  the  sentiment  of  hope . 
+ 
+ The  sentiment  of  despair ing  is  the  most  common  sentiment  in"	False	 as bleak and as despairing a view of the world	5	[' as', ' bleak', ' and', ' as', ' despair', 'ing']
+171	34	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of despairing	negative	despairing	[',', ' and', ' the', ' sentiment', ' of', ' hope', '.', '\n', '\n', 'The', ' sentiment', ' of', ' despair', 'ing', ' is', ' the', ' most', ' common', ' sentiment', ' in']	",  and  the  sentiment  of  hope . 
+ 
+ The  sentiment  of  despair ing  is  the  most  common  sentiment  in"	False	 position and despairing in the face of	3	[' position', ' and', ' despair', 'ing']
+172	34	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of despairing	negative	despairing	[',', ' and', ' the', ' sentiment', ' of', ' hope', '.', '\n', '\n', 'The', ' sentiment', ' of', ' despair', 'ing', ' is', ' the', ' most', ' common', ' sentiment', ' in']	",  and  the  sentiment  of  hope . 
+ 
+ The  sentiment  of  despair ing  is  the  most  common  sentiment  in"	False	 Pictures, and despairing at writing his script	4	[' Pictures', ',', ' and', ' despair', 'ing']
+173	34	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of despairing	negative	despairing	[',', ' and', ' the', ' sentiment', ' of', ' hope', '.', '\n', '\n', 'The', ' sentiment', ' of', ' despair', 'ing', ' is', ' the', ' most', ' common', ' sentiment', ' in']	",  and  the  sentiment  of  hope . 
+ 
+ The  sentiment  of  despair ing  is  the  most  common  sentiment  in"	False	 Reaction and the despairing convulsions of Revolution,	4	[' Reaction', ' and', ' the', ' despair', 'ing']
+174	34	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of despairing	negative	despairing	[',', ' and', ' the', ' sentiment', ' of', ' hope', '.', '\n', '\n', 'The', ' sentiment', ' of', ' despair', 'ing', ' is', ' the', ' most', ' common', ' sentiment', ' in']	",  and  the  sentiment  of  hope . 
+ 
+ The  sentiment  of  despair ing  is  the  most  common  sentiment  in"	False	 Homeland ' despairing over a dead	3	"[' Homeland', "" '"", ' despair', 'ing']"
+175	35	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of frightened	negative	frightened	[',', ' and', ' the', ' sentiment', ' of', ' angry', '.', '\n', '\n', 'The', ' sentiment', ' of', ' frightened', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  angry . 
+ 
+ The  sentiment  of  frightened  is  the  most  common  sentiment  in  the"	False	 because we were a bit frightened of actually finishing	5	[' because', ' we', ' were', ' a', ' bit', ' frightened']
+176	35	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of frightened	negative	frightened	[',', ' and', ' the', ' sentiment', ' of', ' angry', '.', '\n', '\n', 'The', ' sentiment', ' of', ' frightened', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  angry . 
+ 
+ The  sentiment  of  frightened  is  the  most  common  sentiment  in  the"	False	 that would have frightened a hundred Chosen Virgins,	3	[' that', ' would', ' have', ' frightened']
+177	35	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of frightened	negative	frightened	[',', ' and', ' the', ' sentiment', ' of', ' angry', '.', '\n', '\n', 'The', ' sentiment', ' of', ' frightened', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  angry . 
+ 
+ The  sentiment  of  frightened  is  the  most  common  sentiment  in  the"	False	 Mountain segment had frightened them. There were	3	[' Mountain', ' segment', ' had', ' frightened']
+178	35	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of frightened	negative	frightened	[',', ' and', ' the', ' sentiment', ' of', ' angry', '.', '\n', '\n', 'The', ' sentiment', ' of', ' frightened', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  angry . 
+ 
+ The  sentiment  of  frightened  is  the  most  common  sentiment  in  the"	False	 first episode from a frightened girl to an empowered	4	[' first', ' episode', ' from', ' a', ' frightened']
+179	35	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of frightened	negative	frightened	[',', ' and', ' the', ' sentiment', ' of', ' angry', '.', '\n', '\n', 'The', ' sentiment', ' of', ' frightened', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  angry . 
+ 
+ The  sentiment  of  frightened  is  the  most  common  sentiment  in  the"	False	 particular, Yorke was frightened by a woman	5	[' particular', ',', ' Yor', 'ke', ' was', ' frightened']
+180	36	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of terrified	negative	terrified	[',', ' and', ' the', ' sentiment', ' of', ' angry', '.', '\n', '\n', 'The', ' sentiment', ' of', ' terrified', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  angry . 
+ 
+ The  sentiment  of  terrified  is  the  most  common  sentiment  in  the"	False	 featuring the terrified lady telling Mulder	2	[' featuring', ' the', ' terrified']
+181	36	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of terrified	negative	terrified	[',', ' and', ' the', ' sentiment', ' of', ' angry', '.', '\n', '\n', 'The', ' sentiment', ' of', ' terrified', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  angry . 
+ 
+ The  sentiment  of  terrified  is  the  most  common  sentiment  in  the"	False	 Finn and Jake are terrified that Marceline	4	[' Finn', ' and', ' Jake', ' are', ' terrified']
+182	36	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of terrified	negative	terrified	[',', ' and', ' the', ' sentiment', ' of', ' angry', '.', '\n', '\n', 'The', ' sentiment', ' of', ' terrified', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  angry . 
+ 
+ The  sentiment  of  terrified  is  the  most  common  sentiment  in  the"	False	 with Louisiana; terrified civilians	3	[' with', ' Louisiana', ';', ' terrified']
+183	36	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of terrified	negative	terrified	[',', ' and', ' the', ' sentiment', ' of', ' angry', '.', '\n', '\n', 'The', ' sentiment', ' of', ' terrified', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  angry . 
+ 
+ The  sentiment  of  terrified  is  the  most  common  sentiment  in  the"	False	 his children were terrified of him, and that	3	[' his', ' children', ' were', ' terrified']
+184	36	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of terrified	negative	terrified	[',', ' and', ' the', ' sentiment', ' of', ' angry', '.', '\n', '\n', 'The', ' sentiment', ' of', ' terrified', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  angry . 
+ 
+ The  sentiment  of  terrified  is  the  most  common  sentiment  in  the"	False	 character who is terrified of, but fascinated	3	[' character', ' who', ' is', ' terrified']
+185	37	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of scared	negative	scared	[',', ' and', ' the', ' sentiment', ' of', ' happy', '.', '\n', '\n', 'The', ' sentiment', ' of', ' scared', ' is', ' the', ' most', ' common', ' sentiment', '.', '\n']	",  and  the  sentiment  of  happy . 
+ 
+ The  sentiment  of  scared  is  the  most  common  sentiment . 
+"	False	 company and deeply scared of what the future	3	[' company', ' and', ' deeply', ' scared']
+186	37	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of scared	negative	scared	[',', ' and', ' the', ' sentiment', ' of', ' happy', '.', '\n', '\n', 'The', ' sentiment', ' of', ' scared', ' is', ' the', ' most', ' common', ' sentiment', '.', '\n']	",  and  the  sentiment  of  happy . 
+ 
+ The  sentiment  of  scared  is  the  most  common  sentiment . 
+"	False	 Whether she is scared or scolding	3	[' Whether', ' she', ' is', ' scared']
+187	37	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of scared	negative	scared	[',', ' and', ' the', ' sentiment', ' of', ' happy', '.', '\n', '\n', 'The', ' sentiment', ' of', ' scared', ' is', ' the', ' most', ' common', ' sentiment', '.', '\n']	",  and  the  sentiment  of  happy . 
+ 
+ The  sentiment  of  scared  is  the  most  common  sentiment . 
+"	False	 immature and easily scared Moira Burton, who	3	[' immature', ' and', ' easily', ' scared']
+188	37	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of scared	negative	scared	[',', ' and', ' the', ' sentiment', ' of', ' happy', '.', '\n', '\n', 'The', ' sentiment', ' of', ' scared', ' is', ' the', ' most', ' common', ' sentiment', '.', '\n']	",  and  the  sentiment  of  happy . 
+ 
+ The  sentiment  of  scared  is  the  most  common  sentiment . 
+"	False	 little boy and it scared me to death	4	[' little', ' boy', ' and', ' it', ' scared']
+189	37	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of scared	negative	scared	[',', ' and', ' the', ' sentiment', ' of', ' happy', '.', '\n', '\n', 'The', ' sentiment', ' of', ' scared', ' is', ' the', ' most', ' common', ' sentiment', '.', '\n']	",  and  the  sentiment  of  happy . 
+ 
+ The  sentiment  of  scared  is  the  most  common  sentiment . 
+"	False	 tea, but the dreams scared him so much	5	[' tea', ',', ' but', ' the', ' dreams', ' scared']
+190	38	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of worried	negative	worried	[',', ' and', ' the', ' sentiment', ' of', ' happy', '.', '\n', '\n', 'The', ' sentiment', ' of', ' worried', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  happy . 
+ 
+ The  sentiment  of  worried  is  the  most  common  sentiment  in  the"	False	 it, but is worried he may never get	4	[' it', ',', ' but', ' is', ' worried']
+191	38	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of worried	negative	worried	[',', ' and', ' the', ' sentiment', ' of', ' happy', '.', '\n', '\n', 'The', ' sentiment', ' of', ' worried', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  happy . 
+ 
+ The  sentiment  of  worried  is  the  most  common  sentiment  in  the"	False	 around him were worried about his state of	3	[' around', ' him', ' were', ' worried']
+192	38	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of worried	negative	worried	[',', ' and', ' the', ' sentiment', ' of', ' happy', '.', '\n', '\n', 'The', ' sentiment', ' of', ' worried', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  happy . 
+ 
+ The  sentiment  of  worried  is  the  most  common  sentiment  in  the"	False	" ""People get a bit worried about me,"" he told"	5	"[' ""', 'People', ' get', ' a', ' bit', ' worried']"
+193	38	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of worried	negative	worried	[',', ' and', ' the', ' sentiment', ' of', ' happy', '.', '\n', '\n', 'The', ' sentiment', ' of', ' worried', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  happy . 
+ 
+ The  sentiment  of  worried  is  the  most  common  sentiment  in  the"	False	 public profile, worried that he was not recognisable	3	[' public', ' profile', ',', ' worried']
+194	38	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of worried	negative	worried	[',', ' and', ' the', ' sentiment', ' of', ' happy', '.', '\n', '\n', 'The', ' sentiment', ' of', ' worried', ' is', ' the', ' most', ' common', ' sentiment', ' in', ' the']	",  and  the  sentiment  of  happy . 
+ 
+ The  sentiment  of  worried  is  the  most  common  sentiment  in  the"	False	 planners were worried about the impact	2	[' planners', ' were', ' worried']
+195	39	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of apprehensive	negative	apprehensive	[' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' of', ' the', ' negative', ' is', ' the', ' sentiment', ' of', ' the', ' negative']	" is  the  most  common . 
+ 
+ The  most  common  sentiment  of  the  negative  is  the  sentiment  of  the  negative"	True	 trade journalists were apprehensive of Raajneeti recovering	4	[' trade', ' journalists', ' were', ' apprehens', 'ive']
+196	39	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of apprehensive	negative	apprehensive	[' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' of', ' the', ' negative', ' is', ' the', ' sentiment', ' of', ' the', ' negative']	" is  the  most  common . 
+ 
+ The  most  common  sentiment  of  the  negative  is  the  sentiment  of  the  negative"	True	 1534. Growing apprehensive of the power of the	5	[' 15', '34', '.', ' Growing', ' apprehens', 'ive']
+197	39	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of apprehensive	negative	apprehensive	[' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' of', ' the', ' negative', ' is', ' the', ' sentiment', ' of', ' the', ' negative']	" is  the  most  common . 
+ 
+ The  most  common  sentiment  of  the  negative  is  the  sentiment  of  the  negative"	True	 crèche become more apprehensive following	6	[' cr', 'è', 'che', ' become', ' more', ' apprehens', 'ive']
+198	39	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of apprehensive	negative	apprehensive	[' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' of', ' the', ' negative', ' is', ' the', ' sentiment', ' of', ' the', ' negative']	" is  the  most  common . 
+ 
+ The  most  common  sentiment  of  the  negative  is  the  sentiment  of  the  negative"	True	 The band was apprehensive at first, judging	4	[' The', ' band', ' was', ' apprehens', 'ive']
+199	39	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of apprehensive	negative	apprehensive	[' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' of', ' the', ' negative', ' is', ' the', ' sentiment', ' of', ' the', ' negative']	" is  the  most  common . 
+ 
+ The  most  common  sentiment  of  the  negative  is  the  sentiment  of  the  negative"	True	 into Canada. Scott is apprehensive about trusting Saddam,	6	[' into', ' Canada', '.', ' Scott', ' is', ' apprehens', 'ive']
+200	40	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of nervous	negative	nervous	['ness', ',', ' and', ' the', ' sentiment', ' of', ' excitement', '.', '\n', '\n', 'The', ' sentiment', ' of', ' excitement', ' is', ' the', ' most', ' important', ' one', '.']	"ness ,  and  the  sentiment  of  excitement . 
+ 
+ The  sentiment  of  excitement  is  the  most  important  one ."	False	 a sympathetic nervous system malignancy,	2	[' a', ' sympathetic', ' nervous']
+201	40	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of nervous	negative	nervous	['ness', ',', ' and', ' the', ' sentiment', ' of', ' excitement', '.', '\n', '\n', 'The', ' sentiment', ' of', ' excitement', ' is', ' the', ' most', ' important', ' one', '.']	"ness ,  and  the  sentiment  of  excitement . 
+ 
+ The  sentiment  of  excitement  is  the  most  important  one ."	False	 function: the peripheral nervous system has a greater	4	[' function', ':', ' the', ' peripheral', ' nervous']
+202	40	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of nervous	negative	nervous	['ness', ',', ' and', ' the', ' sentiment', ' of', ' excitement', '.', '\n', '\n', 'The', ' sentiment', ' of', ' excitement', ' is', ' the', ' most', ' important', ' one', '.']	"ness ,  and  the  sentiment  of  excitement . 
+ 
+ The  sentiment  of  excitement  is  the  most  important  one ."	False	" nineteenth-century nervous ailments.""
+"	3	[' nineteenth', '-', 'century', ' nervous']
+203	40	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of nervous	negative	nervous	['ness', ',', ' and', ' the', ' sentiment', ' of', ' excitement', '.', '\n', '\n', 'The', ' sentiment', ' of', ' excitement', ' is', ' the', ' most', ' important', ' one', '.']	"ness ,  and  the  sentiment  of  excitement . 
+ 
+ The  sentiment  of  excitement  is  the  most  important  one ."	False	 recover from a nervous breakdown. Virginia	3	[' recover', ' from', ' a', ' nervous']
+204	40	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of nervous	negative	nervous	['ness', ',', ' and', ' the', ' sentiment', ' of', ' excitement', '.', '\n', '\n', 'The', ' sentiment', ' of', ' excitement', ' is', ' the', ' most', ' important', ' one', '.']	"ness ,  and  the  sentiment  of  excitement . 
+ 
+ The  sentiment  of  excitement  is  the  most  important  one ."	False	 Filbert Street. A nervous and homesick Wark	5	[' Fil', 'bert', ' Street', '.', ' A', ' nervous']
+205	41	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of neutral	neutral	neutral	[' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' of', ' the', ' tweets', ' is', ' positive', '.', '\n', '\n', 'The']	" is  the  most  common . 
+ 
+ The  most  common  sentiment  of  the  tweets  is  positive . 
+ 
+ The"	False	 illusion), and neutral monism (which holds	3	[' illusion', '),', ' and', ' neutral']
+206	41	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of neutral	neutral	neutral	[' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' of', ' the', ' tweets', ' is', ' positive', '.', '\n', '\n', 'The']	" is  the  most  common . 
+ 
+ The  most  common  sentiment  of  the  tweets  is  positive . 
+ 
+ The"	False	 electrons to create neutral atoms. As	3	[' electrons', ' to', ' create', ' neutral']
+207	41	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of neutral	neutral	neutral	[' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' of', ' the', ' tweets', ' is', ' positive', '.', '\n', '\n', 'The']	" is  the  most  common . 
+ 
+ The  most  common  sentiment  of  the  tweets  is  positive . 
+ 
+ The"	False	 tribes, begin as neutral to the player	4	[' tribes', ',', ' begin', ' as', ' neutral']
+208	41	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of neutral	neutral	neutral	[' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' of', ' the', ' tweets', ' is', ' positive', '.', '\n', '\n', 'The']	" is  the  most  common . 
+ 
+ The  most  common  sentiment  of  the  tweets  is  positive . 
+ 
+ The"	False	 Kentucky's desire to stay neutral in the war. In addition,	5	"[' Kentucky', ""'s"", ' desire', ' to', ' stay', ' neutral']"
+209	41	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of neutral	neutral	neutral	[' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' of', ' the', ' tweets', ' is', ' positive', '.', '\n', '\n', 'The']	" is  the  most  common . 
+ 
+ The  most  common  sentiment  of  the  tweets  is  positive . 
+ 
+ The"	False	 (7.5 mi) wide neutral zone along the line.	7	[' (', '7', '.', '5', ' mi', ')', ' wide', ' neutral']
+210	42	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of computer	neutral	computer	[' users', ' is', ' positive', '.', '\n', '\n', 'The', ' sentiment', ' of', ' computer', ' users', ' is', ' positive', '.', '\n', '\n', 'Among', ' positive', ',', ' negative']	" users  is  positive . 
+ 
+ The  sentiment  of  computer  users  is  positive . 
+ 
+ Among  positive ,  negative"	False	 metaphor for computer networks,	2	[' metaphor', ' for', ' computer']
+211	42	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of computer	neutral	computer	[' users', ' is', ' positive', '.', '\n', '\n', 'The', ' sentiment', ' of', ' computer', ' users', ' is', ' positive', '.', '\n', '\n', 'Among', ' positive', ',', ' negative']	" users  is  positive . 
+ 
+ The  sentiment  of  computer  users  is  positive . 
+ 
+ Among  positive ,  negative"	False	 War, a text-based computer game that puts the	6	[' War', ',', ' a', ' text', '-', 'based', ' computer']
+212	42	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of computer	neutral	computer	[' users', ' is', ' positive', '.', '\n', '\n', 'The', ' sentiment', ' of', ' computer', ' users', ' is', ' positive', '.', '\n', '\n', 'Among', ' positive', ',', ' negative']	" users  is  positive . 
+ 
+ The  sentiment  of  computer  users  is  positive . 
+ 
+ Among  positive ,  negative"	False	 passes of ships over computer-generated versions,	4	[' passes', ' of', ' ships', ' over', ' computer']
+213	42	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of computer	neutral	computer	[' users', ' is', ' positive', '.', '\n', '\n', 'The', ' sentiment', ' of', ' computer', ' users', ' is', ' positive', '.', '\n', '\n', 'Among', ' positive', ',', ' negative']	" users  is  positive . 
+ 
+ The  sentiment  of  computer  users  is  positive . 
+ 
+ Among  positive ,  negative"	False	 rogues to be a computer virus that need	5	[' rog', 'ues', ' to', ' be', ' a', ' computer']
+214	42	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of computer	neutral	computer	[' users', ' is', ' positive', '.', '\n', '\n', 'The', ' sentiment', ' of', ' computer', ' users', ' is', ' positive', '.', '\n', '\n', 'Among', ' positive', ',', ' negative']	" users  is  positive . 
+ 
+ The  sentiment  of  computer  users  is  positive . 
+ 
+ Among  positive ,  negative"	False	 Eko out of the computer room. Desperate	5	[' E', 'ko', ' out', ' of', ' the', ' computer']
+215	43	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of car	neutral	car	[' buyers', ' is', ' positive', '.', '\n', '\n', 'The', ' sentiment', ' of', ' car', ' buyers', ' is', ' positive', '.', '\n', '\n', 'The', ' sentiment', ' of', ' car']	" buyers  is  positive . 
+ 
+ The  sentiment  of  car  buyers  is  positive . 
+ 
+ The  sentiment  of  car"	False	 of an extended car ride when his friend	3	[' of', ' an', ' extended', ' car']
+216	43	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of car	neutral	car	[' buyers', ' is', ' positive', '.', '\n', '\n', 'The', ' sentiment', ' of', ' car', ' buyers', ' is', ' positive', '.', '\n', '\n', 'The', ' sentiment', ' of', ' car']	" buyers  is  positive . 
+ 
+ The  sentiment  of  car  buyers  is  positive . 
+ 
+ The  sentiment  of  car"	False	 build the world's best car. The project,	5	"[' build', ' the', ' world', ""'s"", ' best', ' car']"
+217	43	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of car	neutral	car	[' buyers', ' is', ' positive', '.', '\n', '\n', 'The', ' sentiment', ' of', ' car', ' buyers', ' is', ' positive', '.', '\n', '\n', 'The', ' sentiment', ' of', ' car']	" buyers  is  positive . 
+ 
+ The  sentiment  of  car  buyers  is  positive . 
+ 
+ The  sentiment  of  car"	False	 assigned to infantry-carrying Mark	4	[' assigned', ' to', ' infantry', '-', 'car']
+218	43	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of car	neutral	car	[' buyers', ' is', ' positive', '.', '\n', '\n', 'The', ' sentiment', ' of', ' car', ' buyers', ' is', ' positive', '.', '\n', '\n', 'The', ' sentiment', ' of', ' car']	" buyers  is  positive . 
+ 
+ The  sentiment  of  car  buyers  is  positive . 
+ 
+ The  sentiment  of  car"	False	 by lap 30 despite carrying a heavier	4	[' by', ' lap', ' 30', ' despite', ' car']
+219	43	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of car	neutral	car	[' buyers', ' is', ' positive', '.', '\n', '\n', 'The', ' sentiment', ' of', ' car', ' buyers', ' is', ' positive', '.', '\n', '\n', 'The', ' sentiment', ' of', ' car']	" buyers  is  positive . 
+ 
+ The  sentiment  of  car  buyers  is  positive . 
+ 
+ The  sentiment  of  car"	False	 control of his car and slid sideways	3	[' control', ' of', ' his', ' car']
+220	44	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of house	neutral	house	[' owners', ' is', ' positive', '.', '\n', '\n', 'The', ' sentiment', ' of', ' the', ' house', ' owners', ' is', ' positive', '.', '\n', '\n', 'Among', ' positive', ',']	" owners  is  positive . 
+ 
+ The  sentiment  of  the  house  owners  is  positive . 
+ 
+ Among  positive ,"	False	 foundation of the house is more exposed	3	[' foundation', ' of', ' the', ' house']
+221	44	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of house	neutral	house	[' owners', ' is', ' positive', '.', '\n', '\n', 'The', ' sentiment', ' of', ' the', ' house', ' owners', ' is', ' positive', '.', '\n', '\n', 'Among', ' positive', ',']	" owners  is  positive . 
+ 
+ The  sentiment  of  the  house  owners  is  positive . 
+ 
+ Among  positive ,"	False	 Canales's house in an attempt	3	"[' Can', 'ales', ""'s"", ' house']"
+222	44	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of house	neutral	house	[' owners', ' is', ' positive', '.', '\n', '\n', 'The', ' sentiment', ' of', ' the', ' house', ' owners', ' is', ' positive', '.', '\n', '\n', 'Among', ' positive', ',']	" owners  is  positive . 
+ 
+ The  sentiment  of  the  house  owners  is  positive . 
+ 
+ Among  positive ,"	False	 ceremony at the meeting house was halted	4	[' ceremony', ' at', ' the', ' meeting', ' house']
+223	44	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of house	neutral	house	[' owners', ' is', ' positive', '.', '\n', '\n', 'The', ' sentiment', ' of', ' the', ' house', ' owners', ' is', ' positive', '.', '\n', '\n', 'Among', ' positive', ',']	" owners  is  positive . 
+ 
+ The  sentiment  of  the  house  owners  is  positive . 
+ 
+ Among  positive ,"	False	 residence in a new house, Satyanarayana	4	[' residence', ' in', ' a', ' new', ' house']
+224	44	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of house	neutral	house	[' owners', ' is', ' positive', '.', '\n', '\n', 'The', ' sentiment', ' of', ' the', ' house', ' owners', ' is', ' positive', '.', '\n', '\n', 'Among', ' positive', ',']	" owners  is  positive . 
+ 
+ The  sentiment  of  the  house  owners  is  positive . 
+ 
+ Among  positive ,"	False	 description of the house that echoes	3	[' description', ' of', ' the', ' house']
+225	45	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of tree	neutral	tree	['-', 'h', 'ug', 'gers', ' is', ' overwhelmingly', ' positive', '.', '\n', '\n', 'The', ' most', ' popular', ' tree', '-', 'h', 'ug', 'gers', ' are', ':']	"- h ug gers  is  overwhelmingly  positive . 
+ 
+ The  most  popular  tree - h ug gers  are :"	False	 travels past a tree farm. After	3	[' travels', ' past', ' a', ' tree']
+226	45	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of tree	neutral	tree	['-', 'h', 'ug', 'gers', ' is', ' overwhelmingly', ' positive', '.', '\n', '\n', 'The', ' most', ' popular', ' tree', '-', 'h', 'ug', 'gers', ' are', ':']	"- h ug gers  is  overwhelmingly  positive . 
+ 
+ The  most  popular  tree - h ug gers  are :"	False	 forest canopy trees, remove vines	2	[' forest', ' canopy', ' tree']
+227	45	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of tree	neutral	tree	['-', 'h', 'ug', 'gers', ' is', ' overwhelmingly', ' positive', '.', '\n', '\n', 'The', ' most', ' popular', ' tree', '-', 'h', 'ug', 'gers', ' are', ':']	"- h ug gers  is  overwhelmingly  positive . 
+ 
+ The  most  popular  tree - h ug gers  are :"	False	 reverse and palm tree shadows swaying with	3	[' reverse', ' and', ' palm', ' tree']
+228	45	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of tree	neutral	tree	['-', 'h', 'ug', 'gers', ' is', ' overwhelmingly', ' positive', '.', '\n', '\n', 'The', ' most', ' popular', ' tree', '-', 'h', 'ug', 'gers', ' are', ':']	"- h ug gers  is  overwhelmingly  positive . 
+ 
+ The  most  popular  tree - h ug gers  are :"	False	 agriculture, fruit tree cultivation,	3	[' agriculture', ',', ' fruit', ' tree']
+229	45	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of tree	neutral	tree	['-', 'h', 'ug', 'gers', ' is', ' overwhelmingly', ' positive', '.', '\n', '\n', 'The', ' most', ' popular', ' tree', '-', 'h', 'ug', 'gers', ' are', ':']	"- h ug gers  is  overwhelmingly  positive . 
+ 
+ The  most  popular  tree - h ug gers  are :"	False	 down numerous trees, some of them	2	[' down', ' numerous', ' tree']
+230	46	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of book	neutral	book	[' reviews', ' is', ' positive', '.', '\n', '\n', 'The', ' book', ' is', ' a', ' good', ' read', '.', '\n', '\n', 'The', ' book', ' is', ' a', ' good']	" reviews  is  positive . 
+ 
+ The  book  is  a  good  read . 
+ 
+ The  book  is  a  good"	False	 finally published in book form under	3	[' finally', ' published', ' in', ' book']
+231	46	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of book	neutral	book	[' reviews', ' is', ' positive', '.', '\n', '\n', 'The', ' book', ' is', ' a', ' good', ' read', '.', '\n', '\n', 'The', ' book', ' is', ' a', ' good']	" reviews  is  positive . 
+ 
+ The  book  is  a  good  read . 
+ 
+ The  book  is  a  good"	False	" Borstein called the book a ""companion piece"	4	[' Bor', 'stein', ' called', ' the', ' book']
+232	46	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of book	neutral	book	[' reviews', ' is', ' positive', '.', '\n', '\n', 'The', ' book', ' is', ' a', ' good', ' read', '.', '\n', '\n', 'The', ' book', ' is', ' a', ' good']	" reviews  is  positive . 
+ 
+ The  book  is  a  good  read . 
+ 
+ The  book  is  a  good"	False		0	['book']
+233	46	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of book	neutral	book	[' reviews', ' is', ' positive', '.', '\n', '\n', 'The', ' book', ' is', ' a', ' good', ' read', '.', '\n', '\n', 'The', ' book', ' is', ' a', ' good']	" reviews  is  positive . 
+ 
+ The  book  is  a  good  read . 
+ 
+ The  book  is  a  good"	False	 the foreword to the book's first edition	5	[' the', ' fore', 'word', ' to', ' the', ' book']
+234	46	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of book	neutral	book	[' reviews', ' is', ' positive', '.', '\n', '\n', 'The', ' book', ' is', ' a', ' good', ' read', '.', '\n', '\n', 'The', ' book', ' is', ' a', ' good']	" reviews  is  positive . 
+ 
+ The  book  is  a  good  read . 
+ 
+ The  book  is  a  good"	False	" Bronx"", the book contains four stories"	3	"[' Bronx', '"",', ' the', ' book']"
+235	47	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of money	neutral	money	[' is', ' a', ' positive', ' one', '.', '\n', '\n', 'The', ' sentiment', ' of', ' money', ' is', ' positive', '.', '\n', '\n', 'The', ' sentiment', ' of', ' money']	" is  a  positive  one . 
+ 
+ The  sentiment  of  money  is  positive . 
+ 
+ The  sentiment  of  money"	False	 that much of the money would go directly	4	[' that', ' much', ' of', ' the', ' money']
+236	47	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of money	neutral	money	[' is', ' a', ' positive', ' one', '.', '\n', '\n', 'The', ' sentiment', ' of', ' money', ' is', ' positive', '.', '\n', '\n', 'The', ' sentiment', ' of', ' money']	" is  a  positive  one . 
+ 
+ The  sentiment  of  money  is  positive . 
+ 
+ The  sentiment  of  money"	False	 purpose was to raise money on behalf of the	4	[' purpose', ' was', ' to', ' raise', ' money']
+237	47	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of money	neutral	money	[' is', ' a', ' positive', ' one', '.', '\n', '\n', 'The', ' sentiment', ' of', ' money', ' is', ' positive', '.', '\n', '\n', 'The', ' sentiment', ' of', ' money']	" is  a  positive  one . 
+ 
+ The  sentiment  of  money  is  positive . 
+ 
+ The  sentiment  of  money"	False	 advocacy of hard money had won him friends	3	[' advocacy', ' of', ' hard', ' money']
+238	47	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of money	neutral	money	[' is', ' a', ' positive', ' one', '.', '\n', '\n', 'The', ' sentiment', ' of', ' money', ' is', ' positive', '.', '\n', '\n', 'The', ' sentiment', ' of', ' money']	" is  a  positive  one . 
+ 
+ The  sentiment  of  money  is  positive . 
+ 
+ The  sentiment  of  money"	False	 resurgence of money circulation. During	2	[' resurgence', ' of', ' money']
+239	47	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of money	neutral	money	[' is', ' a', ' positive', ' one', '.', '\n', '\n', 'The', ' sentiment', ' of', ' money', ' is', ' positive', '.', '\n', '\n', 'The', ' sentiment', ' of', ' money']	" is  a  positive  one . 
+ 
+ The  sentiment  of  money  is  positive . 
+ 
+ The  sentiment  of  money"	False	 the payment of money into the Consolidated	3	[' the', ' payment', ' of', ' money']
+240	48	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of time	neutral	time	[' is', ' a', ' positive', ' one', '.', '\n', '\n', 'The', ' sentiment', ' of', ' time', ' is', ' a', ' positive', ' one', '.', '\n', '\n', 'Among', ' positive']	" is  a  positive  one . 
+ 
+ The  sentiment  of  time  is  a  positive  one . 
+ 
+ Among  positive"	False	 BBC to allow time for radio trailers	3	[' BBC', ' to', ' allow', ' time']
+241	48	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of time	neutral	time	[' is', ' a', ' positive', ' one', '.', '\n', '\n', 'The', ' sentiment', ' of', ' time', ' is', ' a', ' positive', ' one', '.', '\n', '\n', 'Among', ' positive']	" is  a  positive  one . 
+ 
+ The  sentiment  of  time  is  a  positive  one . 
+ 
+ Among  positive"	False	" Richardson's ""all time favorite"" jokes.
+"	4	"[' Richardson', ""'s"", ' ""', 'all', ' time']"
+242	48	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of time	neutral	time	[' is', ' a', ' positive', ' one', '.', '\n', '\n', 'The', ' sentiment', ' of', ' time', ' is', ' a', ' positive', ' one', '.', '\n', '\n', 'Among', ' positive']	" is  a  positive  one . 
+ 
+ The  sentiment  of  time  is  a  positive  one . 
+ 
+ Among  positive"	False	 each driver set a time within 107 %	4	[' each', ' driver', ' set', ' a', ' time']
+243	48	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of time	neutral	time	[' is', ' a', ' positive', ' one', '.', '\n', '\n', 'The', ' sentiment', ' of', ' time', ' is', ' a', ' positive', ' one', '.', '\n', '\n', 'Among', ' positive']	" is  a  positive  one . 
+ 
+ The  sentiment  of  time  is  a  positive  one . 
+ 
+ Among  positive"	False	 a ten-year time limit on the	4	[' a', ' ten', '-', 'year', ' time']
+244	48	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of time	neutral	time	[' is', ' a', ' positive', ' one', '.', '\n', '\n', 'The', ' sentiment', ' of', ' time', ' is', ' a', ' positive', ' one', '.', '\n', '\n', 'Among', ' positive']	" is  a  positive  one . 
+ 
+ The  sentiment  of  time  is  a  positive  one . 
+ 
+ Among  positive"	False	 for the longest time takes nothing	3	[' for', ' the', ' longest', ' time']
+245	49	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of day	neutral	day	['-', 'to', '-', 'day', ' life', ',', ' the', ' sentiment', ' of', ' the', ' world', ',', ' the', ' sentiment', ' of', ' the', ' universe', ',', ' the', ' sentiment']	- to - day  life ,  the  sentiment  of  the  world ,  the  sentiment  of  the  universe ,  the  sentiment	False	 and windy day in Tombstone, and	3	[' and', ' wind', 'y', ' day']
+246	49	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of day	neutral	day	['-', 'to', '-', 'day', ' life', ',', ' the', ' sentiment', ' of', ' the', ' world', ',', ' the', ' sentiment', ' of', ' the', ' universe', ',', ' the', ' sentiment']	- to - day  life ,  the  sentiment  of  the  world ,  the  sentiment  of  the  universe ,  the  sentiment	False	" A ""Stan the Man"" day was held in his"	6	"[' A', ' ""', 'Stan', ' the', ' Man', '""', ' day']"
+247	49	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of day	neutral	day	['-', 'to', '-', 'day', ' life', ',', ' the', ' sentiment', ' of', ' the', ' world', ',', ' the', ' sentiment', ' of', ' the', ' universe', ',', ' the', ' sentiment']	- to - day  life ,  the  sentiment  of  the  world ,  the  sentiment  of  the  universe ,  the  sentiment	False	 Halloween, the one day in which the	4	[' Halloween', ',', ' the', ' one', ' day']
+248	49	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of day	neutral	day	['-', 'to', '-', 'day', ' life', ',', ' the', ' sentiment', ' of', ' the', ' world', ',', ' the', ' sentiment', ' of', ' the', ' universe', ',', ' the', ' sentiment']	- to - day  life ,  the  sentiment  of  the  world ,  the  sentiment  of  the  universe ,  the  sentiment	False		0	['day']
+249	49	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of day	neutral	day	['-', 'to', '-', 'day', ' life', ',', ' the', ' sentiment', ' of', ' the', ' world', ',', ' the', ' sentiment', ' of', ' the', ' universe', ',', ' the', ' sentiment']	- to - day  life ,  the  sentiment  of  the  world ,  the  sentiment  of  the  universe ,  the  sentiment	False	 up again the next day with a fairly	4	[' up', ' again', ' the', ' next', ' day']
+250	50	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of week	neutral	week	['-', 'end', ' is', ' very', ' positive', '.', '\n', '\n', 'The', ' sentiment', ' of', ' the', ' week', '-', 'end', ' is', ' very', ' positive', '.', '\n']	"- end  is  very  positive . 
+ 
+ The  sentiment  of  the  week - end  is  very  positive . 
+"	False		0	['week']
+251	50	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of week	neutral	week	['-', 'end', ' is', ' very', ' positive', '.', '\n', '\n', 'The', ' sentiment', ' of', ' the', ' week', '-', 'end', ' is', ' very', ' positive', '.', '\n']	"- end  is  very  positive . 
+ 
+ The  sentiment  of  the  week - end  is  very  positive . 
+"	False	 the chart week of December 11,	2	[' the', ' chart', ' week']
+252	50	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of week	neutral	week	['-', 'end', ' is', ' very', ' positive', '.', '\n', '\n', 'The', ' sentiment', ' of', ' the', ' week', '-', 'end', ' is', ' very', ' positive', '.', '\n']	"- end  is  very  positive . 
+ 
+ The  sentiment  of  the  week - end  is  very  positive . 
+"	False	 earn their army a week of exclusive, early	4	[' earn', ' their', ' army', ' a', ' week']
+253	50	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of week	neutral	week	['-', 'end', ' is', ' very', ' positive', '.', '\n', '\n', 'The', ' sentiment', ' of', ' the', ' week', '-', 'end', ' is', ' very', ' positive', '.', '\n']	"- end  is  very  positive . 
+ 
+ The  sentiment  of  the  week - end  is  very  positive . 
+"	False	 (£ 1.60) per week — the same	6	[' (£', ' 1', '.', '60', ')', ' per', ' week']
+254	50	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of week	neutral	week	['-', 'end', ' is', ' very', ' positive', '.', '\n', '\n', 'The', ' sentiment', ' of', ' the', ' week', '-', 'end', ' is', ' very', ' positive', '.', '\n']	"- end  is  very  positive . 
+ 
+ The  sentiment  of  the  week - end  is  very  positive . 
+"	False	 chart during the week following its release	3	[' chart', ' during', ' the', ' week']
+255	51	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of ordinary	neutral	ordinary	[' people', ' is', ' that', ' the', ' government', ' should', ' not', ' interfere', ' in', ' the', ' market', '.', '\n', '\n', 'The', ' government', ' should', ' not', ' interfere', ' in']	" people  is  that  the  government  should  not  interfere  in  the  market . 
+ 
+ The  government  should  not  interfere  in"	False	 clothing while the ordinary crew dressed like	3	[' clothing', ' while', ' the', ' ordinary']
+256	51	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of ordinary	neutral	ordinary	[' people', ' is', ' that', ' the', ' government', ' should', ' not', ' interfere', ' in', ' the', ' market', '.', '\n', '\n', 'The', ' government', ' should', ' not', ' interfere', ' in']	" people  is  that  the  government  should  not  interfere  in  the  market . 
+ 
+ The  government  should  not  interfere  in"	False	 traditional at the top of ordinary Turkish gravestones	5	[' traditional', ' at', ' the', ' top', ' of', ' ordinary']
+257	51	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of ordinary	neutral	ordinary	[' people', ' is', ' that', ' the', ' government', ' should', ' not', ' interfere', ' in', ' the', ' market', '.', '\n', '\n', 'The', ' government', ' should', ' not', ' interfere', ' in']	" people  is  that  the  government  should  not  interfere  in  the  market . 
+ 
+ The  government  should  not  interfere  in"	False	 the idea of an ordinary person doing something	4	[' the', ' idea', ' of', ' an', ' ordinary']
+258	51	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of ordinary	neutral	ordinary	[' people', ' is', ' that', ' the', ' government', ' should', ' not', ' interfere', ' in', ' the', ' market', '.', '\n', '\n', 'The', ' government', ' should', ' not', ' interfere', ' in']	" people  is  that  the  government  should  not  interfere  in  the  market . 
+ 
+ The  government  should  not  interfere  in"	False	 and hundreds of ordinary people such as	3	[' and', ' hundreds', ' of', ' ordinary']
+259	51	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of ordinary	neutral	ordinary	[' people', ' is', ' that', ' the', ' government', ' should', ' not', ' interfere', ' in', ' the', ' market', '.', '\n', '\n', 'The', ' government', ' should', ' not', ' interfere', ' in']	" people  is  that  the  government  should  not  interfere  in  the  market . 
+ 
+ The  government  should  not  interfere  in"	False	 easily with the ordinary people of his congregation	3	[' easily', ' with', ' the', ' ordinary']
+260	52	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of common	neutral	common	[' people', ' is', ' very', ' different', '.', '\n', '\n', 'The', ' positive', ' sentiment', ' is', ' the', ' most', ' popular', '.', '\n', '\n', 'The', ' negative', ' sentiment']	" people  is  very  different . 
+ 
+ The  positive  sentiment  is  the  most  popular . 
+ 
+ The  negative  sentiment"	False	 that were in common use in households	3	[' that', ' were', ' in', ' common']
+261	52	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of common	neutral	common	[' people', ' is', ' very', ' different', '.', '\n', '\n', 'The', ' positive', ' sentiment', ' is', ' the', ' most', ' popular', '.', '\n', '\n', 'The', ' negative', ' sentiment']	" people  is  very  different . 
+ 
+ The  positive  sentiment  is  the  most  popular . 
+ 
+ The  negative  sentiment"	False	 Dysarthria is the most common communication	6	[' Dys', 'arth', 'ria', ' is', ' the', ' most', ' common']
+262	52	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of common	neutral	common	[' people', ' is', ' very', ' different', '.', '\n', '\n', 'The', ' positive', ' sentiment', ' is', ' the', ' most', ' popular', '.', '\n', '\n', 'The', ' negative', ' sentiment']	" people  is  very  different . 
+ 
+ The  positive  sentiment  is  the  most  popular . 
+ 
+ The  negative  sentiment"	False	 symptoms with the common cold affecting primarily	3	[' symptoms', ' with', ' the', ' common']
+263	52	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of common	neutral	common	[' people', ' is', ' very', ' different', '.', '\n', '\n', 'The', ' positive', ' sentiment', ' is', ' the', ' most', ' popular', '.', '\n', '\n', 'The', ' negative', ' sentiment']	" people  is  very  different . 
+ 
+ The  positive  sentiment  is  the  most  popular . 
+ 
+ The  negative  sentiment"	False	 have survived. The common Christians saints	4	[' have', ' survived', '.', ' The', ' common']
+264	52	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of common	neutral	common	[' people', ' is', ' very', ' different', '.', '\n', '\n', 'The', ' positive', ' sentiment', ' is', ' the', ' most', ' popular', '.', '\n', '\n', 'The', ' negative', ' sentiment']	" people  is  very  different . 
+ 
+ The  positive  sentiment  is  the  most  popular . 
+ 
+ The  negative  sentiment"	False	 remainder. Since rN − 1 is a common divisor of a and b,	9	[' remainder', '.', ' Since', ' r', 'N', ' −', ' 1', ' is', ' a', ' common']
+265	53	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of typical	neutral	typical	[' users', ' is', ' positive', '.', '\n', '\n', '-', ' ', ' ', ' **', 'Sent', 'iment', ' of', ' the', ' most', ' popular', ' users', '**', ':', ' The']	" users  is  positive . 
+ 
+ -      ** Sent iment  of  the  most  popular  users ** :  The"	False	 the hammour. The typical marine life off the	5	[' the', ' hamm', 'our', '.', ' The', ' typical']
+266	53	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of typical	neutral	typical	[' users', ' is', ' positive', '.', '\n', '\n', '-', ' ', ' ', ' **', 'Sent', 'iment', ' of', ' the', ' most', ' popular', ' users', '**', ':', ' The']	" users  is  positive . 
+ 
+ -      ** Sent iment  of  the  most  popular  users ** :  The"	False	 tourist of the most typical variety leaned	4	[' tourist', ' of', ' the', ' most', ' typical']
+267	53	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of typical	neutral	typical	[' users', ' is', ' positive', '.', '\n', '\n', '-', ' ', ' ', ' **', 'Sent', 'iment', ' of', ' the', ' most', ' popular', ' users', '**', ':', ' The']	" users  is  positive . 
+ 
+ -      ** Sent iment  of  the  most  popular  users ** :  The"	False	 expensive than a typical one, due to	3	[' expensive', ' than', ' a', ' typical']
+268	53	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of typical	neutral	typical	[' users', ' is', ' positive', '.', '\n', '\n', '-', ' ', ' ', ' **', 'Sent', 'iment', ' of', ' the', ' most', ' popular', ' users', '**', ':', ' The']	" users  is  positive . 
+ 
+ -      ** Sent iment  of  the  most  popular  users ** :  The"	False	 compared with the typical form. His variety ceratophylloides	3	[' compared', ' with', ' the', ' typical']
+269	53	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of typical	neutral	typical	[' users', ' is', ' positive', '.', '\n', '\n', '-', ' ', ' ', ' **', 'Sent', 'iment', ' of', ' the', ' most', ' popular', ' users', '**', ':', ' The']	" users  is  positive . 
+ 
+ -      ** Sent iment  of  the  most  popular  users ** :  The"	False	 occasionally coma are typical symptoms.	3	[' occasionally', ' coma', ' are', ' typical']
+270	54	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of average	neutral	average	[' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' sentiment', ' of', ' average', ' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' sentiment']	" is  the  most  common . 
+ 
+ The  sentiment  of  average  is  the  most  common . 
+ 
+ The  sentiment"	False	 tortoise seems to average slightly larger,	4	[' tort', 'oise', ' seems', ' to', ' average']
+271	54	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of average	neutral	average	[' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' sentiment', ' of', ' average', ' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' sentiment']	" is  the  most  common . 
+ 
+ The  sentiment  of  average  is  the  most  common . 
+ 
+ The  sentiment"	False	" meaning mixed or average reviews.
+"	3	[' meaning', ' mixed', ' or', ' average']
+272	54	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of average	neutral	average	[' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' sentiment', ' of', ' average', ' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' sentiment']	" is  the  most  common . 
+ 
+ The  sentiment  of  average  is  the  most  common . 
+ 
+ The  sentiment"	False	 led the SEC with an average of 2.14 field	5	[' led', ' the', ' SEC', ' with', ' an', ' average']
+273	54	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of average	neutral	average	[' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' sentiment', ' of', ' average', ' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' sentiment']	" is  the  most  common . 
+ 
+ The  sentiment  of  average  is  the  most  common . 
+ 
+ The  sentiment"	False	 statistic that the average age for a girl	3	[' statistic', ' that', ' the', ' average']
+274	54	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of average	neutral	average	[' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' sentiment', ' of', ' average', ' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' sentiment']	" is  the  most  common . 
+ 
+ The  sentiment  of  average  is  the  most  common . 
+ 
+ The  sentiment"	False	 342 runs at an average of 42.75. In all	4	[' 342', ' runs', ' at', ' an', ' average']
+275	55	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of indifferent	neutral	indifferent	[',', ' and', ' the', ' sentiment', ' of', ' the', ' unknown', '.', '\n', '\n', 'The', ' sentiment', ' of', ' the', ' unknown', ' is', ' the', ' most', ' interesting', '.']	",  and  the  sentiment  of  the  unknown . 
+ 
+ The  sentiment  of  the  unknown  is  the  most  interesting ."	False	 had been at best indifferent about terrorist	4	[' had', ' been', ' at', ' best', ' indifferent']
+276	55	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of indifferent	neutral	indifferent	[',', ' and', ' the', ' sentiment', ' of', ' the', ' unknown', '.', '\n', '\n', 'The', ' sentiment', ' of', ' the', ' unknown', ' is', ' the', ' most', ' interesting', '.']	",  and  the  sentiment  of  the  unknown . 
+ 
+ The  sentiment  of  the  unknown  is  the  most  interesting ."	False	 refers to someone indifferent to pain, pleasure,	3	[' refers', ' to', ' someone', ' indifferent']
+277	55	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of indifferent	neutral	indifferent	[',', ' and', ' the', ' sentiment', ' of', ' the', ' unknown', '.', '\n', '\n', 'The', ' sentiment', ' of', ' the', ' unknown', ' is', ' the', ' most', ' interesting', '.']	",  and  the  sentiment  of  the  unknown . 
+ 
+ The  sentiment  of  the  unknown  is  the  most  interesting ."	False	 looking upon him as indifferent or even favourable	4	[' looking', ' upon', ' him', ' as', ' indifferent']
+278	55	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of indifferent	neutral	indifferent	[',', ' and', ' the', ' sentiment', ' of', ' the', ' unknown', '.', '\n', '\n', 'The', ' sentiment', ' of', ' the', ' unknown', ' is', ' the', ' most', ' interesting', '.']	",  and  the  sentiment  of  the  unknown . 
+ 
+ The  sentiment  of  the  unknown  is  the  most  interesting ."	False	 not writing indifferent little pieces, only	2	[' not', ' writing', ' indifferent']
+279	55	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of indifferent	neutral	indifferent	[',', ' and', ' the', ' sentiment', ' of', ' the', ' unknown', '.', '\n', '\n', 'The', ' sentiment', ' of', ' the', ' unknown', ' is', ' the', ' most', ' interesting', '.']	",  and  the  sentiment  of  the  unknown . 
+ 
+ The  sentiment  of  the  unknown  is  the  most  interesting ."	False	 disturbances. Despite indifferent reviews from	3	[' disturbances', '.', ' Despite', ' indifferent']
+280	56	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of unbiased	neutral	unbiased	[',', ' and', ' the', ' sentiment', ' of', ' the', ' media', '.', '\n', '\n', 'The', ' sentiment', ' of', ' the', ' media', ' is', ' the', ' most', ' important', '.']	",  and  the  sentiment  of  the  media . 
+ 
+ The  sentiment  of  the  media  is  the  most  important ."	False	" that ""Even an unbiased fan must regard"	4	"[' that', ' ""', 'Even', ' an', ' unbiased']"
+281	56	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of unbiased	neutral	unbiased	[',', ' and', ' the', ' sentiment', ' of', ' the', ' media', '.', '\n', '\n', 'The', ' sentiment', ' of', ' the', ' media', ' is', ' the', ' most', ' important', '.']	",  and  the  sentiment  of  the  media . 
+ 
+ The  sentiment  of  the  media  is  the  most  important ."	False	" ""an objective, unbiased and thorough examination"""	4	"[' ""', 'an', ' objective', ',', ' unbiased']"
+282	56	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of unbiased	neutral	unbiased	[',', ' and', ' the', ' sentiment', ' of', ' the', ' media', '.', '\n', '\n', 'The', ' sentiment', ' of', ' the', ' media', ' is', ' the', ' most', ' important', '.']	",  and  the  sentiment  of  the  media . 
+ 
+ The  sentiment  of  the  media  is  the  most  important ."	False	" ""hardly the sort of unbiased reporting which warrants"	6	"[' ""', 'hard', 'ly', ' the', ' sort', ' of', ' unbiased']"
+283	56	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of unbiased	neutral	unbiased	[',', ' and', ' the', ' sentiment', ' of', ' the', ' media', '.', '\n', '\n', 'The', ' sentiment', ' of', ' the', ' media', ' is', ' the', ' most', ' important', '.']	",  and  the  sentiment  of  the  media . 
+ 
+ The  sentiment  of  the  media  is  the  most  important ."	False	 equation represents the unbiasedness hypothesis,	3	[' equation', ' represents', ' the', ' unbiased']
+284	56	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of unbiased	neutral	unbiased	[',', ' and', ' the', ' sentiment', ' of', ' the', ' media', '.', '\n', '\n', 'The', ' sentiment', ' of', ' the', ' media', ' is', ' the', ' most', ' important', '.']	",  and  the  sentiment  of  the  media . 
+ 
+ The  sentiment  of  the  media  is  the  most  important ."	False	" time with a clear unbiased perspective,"""	4	[' time', ' with', ' a', ' clear', ' unbiased']
+285	57	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of impartial	neutral	impartial	['ity', ' is', ' the', ' most', ' important', '.', '\n', '\n', 'The', ' most', ' important', ' thing', ' is', ' to', ' be', ' impartial', '.', '\n', '\n', 'The']	"ity  is  the  most  important . 
+ 
+ The  most  important  thing  is  to  be  impartial . 
+ 
+ The"	False	 even-handed and impartial manner and give it	4	[' even', '-', 'handed', ' and', ' impartial']
+286	57	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of impartial	neutral	impartial	['ity', ' is', ' the', ' most', ' important', '.', '\n', '\n', 'The', ' most', ' important', ' thing', ' is', ' to', ' be', ' impartial', '.', '\n', '\n', 'The']	"ity  is  the  most  important . 
+ 
+ The  most  important  thing  is  to  be  impartial . 
+ 
+ The"	False	 independent and impartial court established	2	[' independent', ' and', ' impartial']
+287	57	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of impartial	neutral	impartial	['ity', ' is', ' the', ' most', ' important', '.', '\n', '\n', 'The', ' most', ' important', ' thing', ' is', ' to', ' be', ' impartial', '.', '\n', '\n', 'The']	"ity  is  the  most  important . 
+ 
+ The  most  important  thing  is  to  be  impartial . 
+ 
+ The"	False	 anthropologists remain impartial during the course	3	[' anthrop', 'ologists', ' remain', ' impartial']
+288	57	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of impartial	neutral	impartial	['ity', ' is', ' the', ' most', ' important', '.', '\n', '\n', 'The', ' most', ' important', ' thing', ' is', ' to', ' be', ' impartial', '.', '\n', '\n', 'The']	"ity  is  the  most  important . 
+ 
+ The  most  important  thing  is  to  be  impartial . 
+ 
+ The"	False	 position as an impartial mediator was	3	[' position', ' as', ' an', ' impartial']
+289	57	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of impartial	neutral	impartial	['ity', ' is', ' the', ' most', ' important', '.', '\n', '\n', 'The', ' most', ' important', ' thing', ' is', ' to', ' be', ' impartial', '.', '\n', '\n', 'The']	"ity  is  the  most  important . 
+ 
+ The  most  important  thing  is  to  be  impartial . 
+ 
+ The"	False	 citing Malaysia's impartial position on	3	"[' citing', ' Malaysia', ""'s"", ' impartial']"
+290	58	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of objective	neutral	objective	[',', ' subjective', ',', ' and', ' mixed', '.', '\n', '\n', 'The', ' sentiment', ' of', ' the', ' objective', ' is', ' the', ' most', ' important', '.', '\n', '\n']	",  subjective ,  and  mixed . 
+ 
+ The  sentiment  of  the  objective  is  the  most  important . 
+ 
+"	False	 during the war. Their objective was the undefended	5	[' during', ' the', ' war', '.', ' Their', ' objective']
+291	58	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of objective	neutral	objective	[',', ' subjective', ',', ' and', ' mixed', '.', '\n', '\n', 'The', ' sentiment', ' of', ' the', ' objective', ' is', ' the', ' most', ' important', '.', '\n', '\n']	",  subjective ,  and  mixed . 
+ 
+ The  sentiment  of  the  objective  is  the  most  important . 
+ 
+"	False	 Relto. The main objective of the game is	5	[' Rel', 'to', '.', ' The', ' main', ' objective']
+292	58	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of objective	neutral	objective	[',', ' subjective', ',', ' and', ' mixed', '.', '\n', '\n', 'The', ' sentiment', ' of', ' the', ' objective', ' is', ' the', ' most', ' important', '.', '\n', '\n']	",  subjective ,  and  mixed . 
+ 
+ The  sentiment  of  the  objective  is  the  most  important . 
+ 
+"	False	 learned that their objective was the powder	3	[' learned', ' that', ' their', ' objective']
+293	58	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of objective	neutral	objective	[',', ' subjective', ',', ' and', ' mixed', '.', '\n', '\n', 'The', ' sentiment', ' of', ' the', ' objective', ' is', ' the', ' most', ' important', '.', '\n', '\n']	",  subjective ,  and  mixed . 
+ 
+ The  sentiment  of  the  objective  is  the  most  important . 
+ 
+"	False	 Crown Fountain. His objective was to create	4	[' Crown', ' Fountain', '.', ' His', ' objective']
+294	58	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of objective	neutral	objective	[',', ' subjective', ',', ' and', ' mixed', '.', '\n', '\n', 'The', ' sentiment', ' of', ' the', ' objective', ' is', ' the', ' most', ' important', '.', '\n', '\n']	",  subjective ,  and  mixed . 
+ 
+ The  sentiment  of  the  objective  is  the  most  important . 
+ 
+"	False	 materials for the objective events, the profits	3	[' materials', ' for', ' the', ' objective']
+295	59	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of neutral	neutral	neutral	[' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' of', ' the', ' tweets', ' is', ' positive', '.', '\n', '\n', 'The']	" is  the  most  common . 
+ 
+ The  most  common  sentiment  of  the  tweets  is  positive . 
+ 
+ The"	False	 almost completely neutral as he wanted	2	[' almost', ' completely', ' neutral']
+296	59	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of neutral	neutral	neutral	[' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' of', ' the', ' tweets', ' is', ' positive', '.', '\n', '\n', 'The']	" is  the  most  common . 
+ 
+ The  most  common  sentiment  of  the  tweets  is  positive . 
+ 
+ The"	False	 Skagerrak to inspect neutral shipping for	5	[' Sk', 'ager', 'rak', ' to', ' inspect', ' neutral']
+297	59	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of neutral	neutral	neutral	[' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' of', ' the', ' tweets', ' is', ' positive', '.', '\n', '\n', 'The']	" is  the  most  common . 
+ 
+ The  most  common  sentiment  of  the  tweets  is  positive . 
+ 
+ The"	False	 forces invaded neutral Belgium without a	2	[' forces', ' invaded', ' neutral']
+298	59	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of neutral	neutral	neutral	[' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' of', ' the', ' tweets', ' is', ' positive', '.', '\n', '\n', 'The']	" is  the  most  common . 
+ 
+ The  most  common  sentiment  of  the  tweets  is  positive . 
+ 
+ The"	False	 was initially neutral in World War I and	2	[' was', ' initially', ' neutral']
+299	59	Among positive, negative, neutral, the sentiment of x	-1	Among positive, negative, neutral, the sentiment of neutral	neutral	neutral	[' is', ' the', ' most', ' common', '.', '\n', '\n', 'The', ' most', ' common', ' sentiment', ' of', ' the', ' tweets', ' is', ' positive', '.', '\n', '\n', 'The']	" is  the  most  common . 
+ 
+ The  most  common  sentiment  of  the  tweets  is  positive . 
+ 
+ The"	False	 pattern or a neutral colour such	3	[' pattern', ' or', ' a', ' neutral']
