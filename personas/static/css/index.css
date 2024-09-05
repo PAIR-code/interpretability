@@ -1,0 +1,287 @@
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+
+.footer .icon-link {
+    font-size: 25px;
+    color: #000;
+}
+
+.button-space {
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.link-block {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.dnerf {
+  font-variant: small-caps;
+}
+
+
+.teaser .hero-body {
+  padding-top: 0;
+  padding-bottom: 3rem;
+}
+
+.teaser {
+  font-family: 'Google Sans', sans-serif;
+}
+
+
+.publication-title {
+}
+
+.publication-banner {
+  max-height: parent;
+
+}
+
+.publication-banner video {
+  position: relative;
+  left: auto;
+  top: auto;
+  transform: none;
+  object-fit: fit;
+}
+
+.publication-header .hero-body {
+}
+
+.publication-title {
+    font-family: 'Google Sans', sans-serif;
+}
+
+.publication-authors {
+    font-family: 'Google Sans', sans-serif;
+}
+
+.publication-venue {
+    color: #555;
+    width: fit-content;
+    font-weight: bold;
+}
+
+.publication-awards {
+    color: #ff3860;
+    width: fit-content;
+    font-weight: bolder;
+}
+
+.publication-authors {
+}
+
+.publication-authors a {
+   color: hsl(204, 86%, 53%) !important;
+}
+
+.publication-authors a:hover {
+    text-decoration: underline;
+}
+
+.author-block {
+  display: inline-block;
+}
+
+.publication-banner img {
+}
+
+.publication-authors {
+  /*color: #4286f4;*/
+}
+
+.publication-video {
+    position: relative;
+    /*width: 100%;*/
+    margin: auto;
+    width: 1500px;
+    height: 0;
+    padding-bottom: 50%;
+    /*overflow: hidden;*/
+    border-radius: 10px !important;
+    overflow:scroll;
+}
+
+.publication-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.publication-body img {
+}
+
+.results-carousel {
+  overflow: hidden;
+}
+
+.results-carousel .item {
+  margin: 5px;
+  overflow: hidden;
+  padding: 20px;
+  font-size: 0;
+}
+
+.results-carousel video {
+  margin: 0;
+}
+
+.slider-pagination .slider-page {
+  background: #000000;
+}
+
+.eql-cntrb { 
+  font-size: smaller;
+}
+
+/*img {*/
+/*  border-radius: 50%;*/
+/*}*/
+
+/*#####*/
+
+/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.publication-flipped {
+    position: relative;
+    /*width: 100%;*/
+    margin: auto;
+    width: 900px;
+    height: 0;
+    padding-bottom: 45%;
+    /*overflow: hidden;*/
+    border-radius: 10px !important;
+    /*overflow:scroll;*/
+    font-family: 'Google Sans', sans-serif;
+}
+
+
+
+.flip-box-container{
+    display: table;
+}
+.flip-box {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    display: table-cell;
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-box-front {
+    /*text-align: center;*/
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-box-back {
+    /*text-align: center;*/
+  background-color: #bbb;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+
+
+/*box for tasks*/
+.task-title-box {
+    position: relative;
+      left: auto;
+  top: auto;
+  background-color: #bbb;
+  width: 600px;
+  height: 50px;
+    border-radius: 10px !important;
+  /*border: 1px solid #f1f1f1;*/
+  /*perspective: 1000px; !* Remove this if you don't want the 3D effect *!*/
+  /*  display: table-cell;*/
+}
+
+.item1 { grid-area: header1; }
+.item2 { grid-area: header2; }
+.item3 { grid-area: header3; }
+.item4 { grid-area: header4; }
+.item51 { grid-area: score11; }
+.item52 { grid-area: score12; }
+.item53 { grid-area: score13; }
+.item54 { grid-area: score14; }
+.item61 { grid-area: auto11; }
+.item62 { grid-area: auto12; }
+.item63 { grid-area: auto13; }
+.item64 { grid-area: auto14; }
+.item71 { grid-area: score21; }
+.item72 { grid-area: score22; }
+.item73 { grid-area: score23; }
+.item74 { grid-area: score24; }
+.item81 { grid-area: auto21; }
+.item82 { grid-area: auto22; }
+.item83 { grid-area: auto23; }
+.item84 { grid-area: auto24; }
+.item91 { grid-area: score31; }
+.item92 { grid-area: score32; }
+.item93 { grid-area: score33; }
+.item94 { grid-area: score34; }
+.item101 { grid-area: auto31; }
+.item102 { grid-area: auto32; }
+.item103 { grid-area: auto33; }
+.item104 { grid-area: auto34; }
+/*.item2 { grid-area: auto; }*/
+.grid-container {
+  display: grid;
+  grid-template-areas:    'header1 header1 header1 header2 header2 header2 header3 header3 header3 header4 header4 header4'
+                            'auto11 auto11 score11 auto12 auto12 score12 auto13 auto13 score13 auto14 auto14 score14'
+                            'auto21 auto21 score21 auto22 auto22 score22 auto23 auto23 score23 auto24 auto24 score24'
+                            'auto31 auto31 score31 auto32 auto32 score32 auto33 auto33 score33 auto34 auto34 score34';
+  /*background-color: #2196F3;*/
+  padding: 10px;
+}
+/*.grid-item-container {*/
+/*  display: grid;*/
+/*  grid-template-columns: auto auto;*/
+/*  !*background-color: #2196F3;*!*/
+/*  !*padding: 10px;*!*/
+/*}*/
+/*.grid-item {*/
+/*  background-color: white;*/
+/*  !*border: 5px solid white;*!*/
+/*  padding: 5px;*/
+/*  font-size: 30px;*/
+/*  text-align: center;*/
+/*  !*border-radius: 10px !important;*!*/
+/*}*/

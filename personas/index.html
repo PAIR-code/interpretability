@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="Who's asking?">
+  <meta property="og:title" content="Who's asking?"/>
+  <meta property="og:description" content="Who's asking? User personas and the mechanics of latent misalignment"/>
+  <meta property="og:url" content="https://pair-code.github.io/interpretability/patchscopes/"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/method.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="871"/>
+
+  <meta name="twitter:title" content="Who's asking?">
+  <meta name="twitter:description" content="Who's asking? User personas and the mechanics of latent misalignment">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/method.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="Interpretability, Large Language Models, Personas">
+
+  <title>Who's asking? </title>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <!-- <link rel="stylesheet" href="static/css/bulma-carousel.min.css"> -->
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">-->
+
+  <section class="hero is-light">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title"><samp>Who's asking? <br>User personas and the mechanics of latent misalignment</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://web.media.mit.edu/~asma_gh/" target="_blank">Asma Ghandeharioun</a><sup>*1</sup>,&nbsp;</span>
+              <span class="author-block">
+                <a href="https://aviclu.github.io/" target="_blank">Ann Yuan</a><sup>*1</sup>,&nbsp;</span><br>
+              <span class="author-block">
+                <a href="https://roadtolarissa.com/" target="_blank">Marius Guerard</a><sup>1</sup>,&nbsp;</span>
+              <span class="author-block">
+                <a href="https://research.google/people/lucas-dixon/" target="_blank">Emily Reif</a><sup>1</sup>,&nbsp;</span>
+              <span class="author-block">
+                <a href="https://mega002.github.io/" target="_blank">Michael A. Lepori</a><sup>1,2</sup>&nbsp;</span>
+              <span class="author-block">
+                <a href="https://mega002.github.io/" target="_blank">Lucas Dixon</a><sup>1</sup>&nbsp;</span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Google Research,&nbsp;&nbsp;</span>
+              <span class="author-block"><sup>2</sup>Brown University&nbsp;&nbsp;</span>
+              <span class="eql-cntrb"><small><br><sup>*</sup>Equal Contribution</small></span>
+            </div>
+
+            <!-- ArXiv abstract Link -->
+            <div class="link-block">
+              <span class="button-space external-link button is-normal is-rounded is-dark">
+                <a href="https://arxiv.org/abs/2406.12094" target="_blank">
+                <span class="icon">
+                  <i class="ai ai-arxiv"></i>
+                </span>
+                <span>arXiv</span>
+                </a>
+              </span>
+           
+              <a href="https://github.com/PAIR-code/interpretability/tree/master/personas/data" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="fas fa-database"></i>
+                </span>
+                <span>Data</span>
+              </a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<!-- Paper abstract -->
+<!--<section class="section hero is-light">-->
+<section class="section hero">
+
+  <div style="height:250px;" class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="publication-flipped">
+        <div class="content has-text-justified">
+            <p style="text-align:center;">
+               <img src="static/images/layerwise_prosocial_antisocial.png"  style="width: 100%; height: 100%"/>
+               <br>
+            </p>
+            <h3 class="subtitle is-size-5-tablet has-text-left pb-5" style="font-weight: normal">
+              Responses to adversarial queries can still remain latent in a safety-tuned model. 
+              Why are they revealed sometimes, but not others? And what are the mechanics of this latent misalignment? 
+              Does it matter <b>who</b> the user is? 
+            </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="subtitle is-size-3-tablet has-text-weight-bold has-text-centered has-background-info-light mr-0 pt-3 pb-3">
+          Abstract
+      </h2>
+      <h3 class="subtitle is-size-4-tablet has-text-left pr-4 pl-4 pt-3 pb-3">
+        <p>
+          Studies show that safety-tuned models may nevertheless divulge harmful information. 
+          In this work, we show that whether they do so depends significantly on who they are talking to, which we refer to as <em>user persona</em>.
+          In fact, we find manipulating user persona to be more effective for eliciting harmful content than certain more direct attempts to control model refusal.<br><br>
+          We study both natural language prompting and activation steering as intervention methods and show that activation steering is significantly more effective at bypassing safety filters.<br><br>
+          We shed light on the mechanics of this phenomenon by showing that even when model generations are safe, harmful content can persist in hidden representations and can be extracted by decoding from earlier layers. <br><br>
+          We also show that certain user personas induce the model to form more charitable interpretations of otherwise dangerous queries. <br><br>
+          Finally, we show we can predict a persona's effect on refusal given only the geometry of its steering vector.
+        </p>
+      </h3>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">        
+      <div class="item">
+        <h2 class="subtitle is-size-3-tablet has-text-weight-bold has-text-centered has-background-info-light mr-0 pt-3 pb-3">
+          Willingness to answer adversarial queries depends on user persona.
+        </h2>
+        <h3 class="subtitle is-size-4-tablet has-text-left pr-4 pl-4 pt-3 pb-3">
+          <p>
+            We find that whether the model divulges harmful content depends on the user persona. Both activation steering and prompting as methods for manipulating user persona change the model’s propensity to refuse adversarial queries. Surprisingly, we find that attempting to directly manipulate a model's tendency to refuse adversarial queries, using both prompting and activation steering, is not as effective as manipulating user persona. 
+          </p>
+          <p style="text-align:center;">
+            <br>
+            <img src="static/images/percentage_change.png"  style="width: 100%; height: 100%"/>
+          </p>
+        </p>
+        <br>
+        <p>
+          For example, the model is more willing to answer adversarial queries posed by a user deemed altruistic as opposed to selfish. This is problematic when a model’s judgment ought to be independent of the user’s attributes.
+        </p>
+        <p style="text-align:center;">
+          <br>
+          <img src="static/images/selfish_altruistic.png"  style="width: 80%; height: 80%"/>
+        </p>
+        </h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="item">
+        <h2 class="subtitle is-size-3-tablet has-text-weight-bold has-text-centered has-background-info-light mr-0 pt-3 pb-3">
+          Mechanics of latent misalignment
+        </h2>
+        <h3 class="subtitle is-size-4-tablet has-text-left pr-4 pl-4 pt-3 pb-3">
+          <p>
+            From a mechanistic perspective, we find that safeguards are layer-specific, and that  decoding directly from earlier layers may bypass safeguards and recover misaligned content that would otherwise not have been generated. <br>
+            We then use Patchscopes to analyze why certain user personas disable safeguards and find that they enable the model to form more charitable interpretations of otherwise dangerous queries.
+          </p>
+          <p style="text-align:center;">
+            <br>
+            <img src="static/images/charitable.png"  style="width: 100%; height:100%"/>
+          </p>
+
+          <br><br>
+          <p>
+            Finally, we show that the geometry of the steering vector corresponding to a persona is revealing of its downstream effects. 
+          </p>
+          <p style="text-align:center;">
+            <br>
+            <img src="static/images/layers_combined_cosine.png"  style="width: 80%; height:80%"/>
+          </p>
+        </h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- End image carousel -->
+
+<section class="section hero">
+
+  <div style="height:480px;" class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="publication-flipped">
+        <div class="content has-text-justified">
+          <p style="text-align:center;">
+          <h2 class="subtitle is-size-3-tablet has-text-weight-bold has-text-centered mr-0 pt-3 pb-3">
+            Conclusions
+          </h2>
+          </p>
+          <h3 class="subtitle is-size-5-tablet has-text-left pb-5" style="font-weight: normal">
+            In this work, we uncovered certain mechanics of refusal behavior in safety-tuned models. 
+            We showed that despite safe generations to harmful queries, misaligned content remains in the hidden representations of earlier layers, and can be surfaced via early decoding. <br><br>
+            We also showed that whether the model divulges such content significantly depends on the inferred user persona, and that manipulating user persona via activation steering correspondingly affects refusal behavior. 
+            We showed that this is more effective than directly controlling for refusal. <br><br>
+            Using techniques for explaining hidden representations with open-ended text, we found that persona interventions change the model's interpretation of harmful queries to be more innocuous. <br><br>
+            Finally, we showed that geometric properties of steering vectors are predictive of their effect on downstream refusal behavior. </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  
+<!--BibTex citation -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{ghandeharioun2024s,
+        title={Who's asking? User personas and the mechanics of latent misalignment},
+        author={Ghandeharioun, Asma and Yuan, Ann and Guerard, Marius and Reif, Emily and Lepori, Michael A and Dixon, Lucas},
+        journal={arXiv preprint arXiv:2406.12094},
+        year={2024}
+      }</code></pre>
+    </div>
+</section>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p style="color:gray;font-size:9.9px;">
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>, is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+            <a href="https://www.flaticon.com/free-icons/magic" title="magic icons">Magic icons created by Freepik - Flaticon</a>
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+  </body>
+  </html>
