@@ -1,5 +1,5 @@
 # Python 3.10.13
-torch==1.12.1+cu113
+torch==2.2.0
 pandas==2.0.3
 numpy==1.25.2
 datasets==2.14.7
