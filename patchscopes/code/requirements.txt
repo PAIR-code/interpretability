@@ -5,7 +5,7 @@ numpy==1.25.2
 datasets==2.14.7
 zstandard==0.22.0
 transformers==4.34.1
-nltk==3.8.1
+nltk==3.9
 rouge_score==0.1.2
 sentencepiece==0.1.99
 huggingface_hub==0.17.3
