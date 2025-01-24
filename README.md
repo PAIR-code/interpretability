@@ -4,7 +4,7 @@ This repo contains code and articles on [PAIR](https://ai.google/pair) interpret
 
 ### Scalable Influence and Fact Tracing for Large Language Model Pretraining (ICLR'25)
 
-See [the demo](https://github.com/PAIR-code/pretraining-tda/blob/main/demo/README.md), and the dedicated [github repo](https://github.com/PAIR-code/pretraining-tda) for more about [Scalable Influence and Fact Tracing for Large Language Model Pretraining] -- Tyler Chang, Dheeraj Rajagopal, Tolga Bolukbasi, Lucas Dixon, Ian Tenney (RH)
+See [blog post](https://medium.com/people-ai-research/scaling-training-data-attribution-f7d1eddd85da), for a light introduction to the paper. There is also [a public demo](https://github.com/PAIR-code/pretraining-tda/blob/main/demo/README.md), and the dedicated [github repo](https://github.com/PAIR-code/pretraining-tda). The full paper is [Scalable Influence and Fact Tracing for Large Language Model Pretraining] -- Tyler Chang, Dheeraj Rajagopal, Tolga Bolukbasi, Lucas Dixon, Ian Tenney (RH)
 
 ### Racing Thoughts: Explaining Large Language Model Contextualization Errors (NAACL'25)
 
