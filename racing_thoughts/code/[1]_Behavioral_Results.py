@@ -295,6 +295,6 @@ if __name__ == "__main__":
   
   # To save results from xcloud to gbucket
   # XCLOUD
-  # gsutil -m rsync -r /workdir/results gs://patchscopes/workdir/main/racing_thoughts
+  # gcloud storage rsync --recursive /workdir/results gs://patchscopes/workdir/main/racing_thoughts
   # To cloudtop
-  # gsutil -m cp -R gs://patchscopes/workdir/main/racing_thoughts /usr/local/google/home/mlepori/racing_thoughts
+  # gcloud storage cp --recursive gs://patchscopes/workdir/main/racing_thoughts /usr/local/google/home/mlepori/racing_thoughts

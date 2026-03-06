@@ -21,4 +21,4 @@
 
 echo "Downloading..."
 mkdir -p static/jsons
-gsutil -m cp gs://bert-wsd-vis/demo/jsons/* static/jsons
+gcloud storage cp gs://bert-wsd-vis/demo/jsons/* static/jsons
