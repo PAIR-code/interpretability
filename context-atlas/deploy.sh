@@ -25,16 +25,14 @@ yarn
 yarn build
 
 echo "Deploying..."
-gsutil mkdir -p gs://bert-wsd-vis/demo
-gsutil -m cp static/* gs://bert-wsd-vis/demo
+gcloud storage cp -r static/* gs://bert-wsd-vis/demo
 
-gsutil -m setmeta -h "Cache-Control:private" "gs://bert-wsd-vis/**.html"
-gsutil -m setmeta -h "Cache-Control:private" "gs://bert-wsd-vis/**.css"
-gsutil -m setmeta -h "Cache-Control:private" "gs://bert-wsd-vis/**.js"
+gcloud storage objects update "gs://bert-wsd-vis/**.html" --cache-control="private"
+gcloud storage objects update "gs://bert-wsd-vis/**.css" --cache-control="private"
+gcloud storage objects update "gs://bert-wsd-vis/**.js" --cache-control="private"
 
 if [[ $* == *--upload_jsons* ]]; then
   echo 'Uploading jsons data'
-  gsutil mkdir -p gs://bert-wsd-vis/demo/jsons
-  gsutil -m cp static/jsons/* gs://bert-wsd-vis/demo/jsons
+  gcloud storage cp -r static/jsons/* gs://bert-wsd-vis/demo/jsons
 fi
 

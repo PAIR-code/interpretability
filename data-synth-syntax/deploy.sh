@@ -25,20 +25,19 @@ yarn
 yarn build
 
 echo "Deploying..."
-gsutil mkdir -p gs://data-synth-trees/demo
-gsutil rm -f gs://data-synth-trees/demo/*.html
-gsutil rm -f gs://data-synth-trees/demo/*.css
-gsutil rm -f gs://data-synth-trees/demo/*.js
+touch empty_file | gcloud storage cp gs://data-synth-trees/demo
+gcloud storage rm -f gs://data-synth-trees/demo/*.html
+gcloud storage rm -f gs://data-synth-trees/demo/*.css
+gcloud storage rm -f gs://data-synth-trees/demo/*.js
 
-gsutil -m cp static/* gs://data-synth-trees/demo
+gcloud storage cp -r static/* gs://data-synth-trees/demo
 
-gsutil -m setmeta -h "Cache-Control:private" "gs://data-synth-trees/**.html"
-gsutil -m setmeta -h "Cache-Control:private" "gs://data-synth-trees/**.css"
-gsutil -m setmeta -h "Cache-Control:private" "gs://data-synth-trees/**.js"
+gcloud storage objects update "gs://data-synth-trees/**.html" --cache-control="private"
+gcloud storage objects update "gs://data-synth-trees/**.css" --cache-control="private"
+gcloud storage objects update "gs://data-synth-trees/**.js" --cache-control="private"
 
 if [[ $* == *--upload_jsons* ]]; then
   echo 'Uploading jsons data'
-  gsutil mkdir -p gs://data-synth-trees/demo/data
-  gsutil -m cp static/data/* gs://data-synth-trees/demo/data
+  gcloud storage cp -r static/data/* gs://data-synth-trees/demo/data
 fi
 
