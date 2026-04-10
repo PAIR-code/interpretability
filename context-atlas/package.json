@@ -20,7 +20,7 @@
     "js-yaml": "^3.13.1",
     "material-design-lite": "^1.3.0",
     "math": "^0.0.3",
-    "mathjs": "^6.0.3",
+    "mathjs": "^15.2.0",
     "tensorflow": "^0.7.0",
     "trie-prefix-tree": "^1.5.1",
     "umap-js": "^1.0.3"
